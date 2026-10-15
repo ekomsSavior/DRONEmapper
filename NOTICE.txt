@@ -1,0 +1,8 @@
+DRONE MAPPER
+Copyright (C) 2026 Church of Malware and its research branch, saviorSEC.
+
+Original application code is licensed under AGPL-3.0-or-later (see LICENSE).
+Leaflet is BSD-2-Clause; see public/vendor/LICENSE-leaflet.txt.
+Third-party data retains its own terms and licenses; see docs/data-methods.txt
+and the application's Credits page. These data licenses are separate from the
+software license. No external datasets or runtime caches are bundled here.

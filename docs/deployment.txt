@@ -1,0 +1,27 @@
+DRONE MAPPER — production architecture
+
+Public address: https://dronemapper.churchofmalware.org/
+Hosting: Cloudflare Worker drone-mapper with SQLite Durable Object ActivityStore.
+Collection: Cloudflare Cron Trigger every five minutes (UTC).
+Browser refresh: reads our cached feed every 15 seconds.
+Source: /source.zip, AGPL-3.0-or-later; data licenses remain separate.
+
+Main-site integration uses a service binding to the original dry-heart-c633
+Worker, preserving the existing original deployment. Only the homepage,
+/work pages and promotion assets pass through the new Worker. News and Codex
+routes remain independent. No stale full-site mirror is uploaded.
+
+Rollback: remove drone-mapper's churchofmalware.org homepage/work/promo routes
+to reveal the unchanged original main site. Remove its custom domain to take
+DRONE MAPPER offline. Preserve the SQLite object when rolling back code; do not
+delete its migration or storage. Redeploy the last verified Worker for an app
+rollback. Do not remove routes belonging to other applications.
+
+RECOVERY: If collection is more than one minute overdue, a cached map read
+starts one shared background refresh. A concurrency guard and persisted retry
+deadlines prevent duplicate visitor-triggered requests and respect backoff.
+Cron continues collecting without visitors or a local computer.
+
+Church maintainers deploy with:
+  npx wrangler deploy --config deploy/church.jsonc
+The root wrangler.jsonc is a standalone configuration for community installs.

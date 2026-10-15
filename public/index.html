@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="An open map of drones, robots and autonomous vehicles across air, ground and water. Free knowledge. Real observations. A saviorSEC project.">
+  <title>DRONE MAPPER — saviorSEC</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css">
+  <script defer src="vendor/leaflet.js"></script><script type="module" src="app.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#feed">Skip to observations</a>
+<header class="masthead">
+  <a class="brand" href="./" aria-label="Drone Mapper home"><img src="icon.svg" width="38" height="38" alt=""><span>DRONE<span class="brand-light">MAPPER</span><small>A SAVIORSEC PROJECT</small></span></a>
+  <nav aria-label="Workspace"><button class="nav-active" data-view="map">Map <span>01</span></button><button data-view="about">About <span>02</span></button></nav>
+  <a class="church-link" href="https://churchofmalware.org/work/">FREE KNOWLEDGE.<br><strong>CHURCH OF MALWARE ↗</strong></a>
+</header>
+<main class="workspace">
+  <aside class="sidebar" id="feed" tabindex="-1">
+    <div class="sidebar-head"><span class="eyebrow">GLOBAL ACTIVITY</span><span class="connection" id="connection">CONNECTING</span></div>
+    <div class="metrics"><div><strong id="active-count">—</strong><span>LIVE ≤ 2 MIN</span></div><div><strong id="drone-count">—</strong><span>DRONE RECORDS</span></div><div><strong id="robot-count">—</strong><span>ROBOTS / VEHICLES</span></div></div>
+    <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search model, place, operator" aria-label="Search observations" autocomplete="off"><kbd>/</kbd></label>
+    <div class="layer-filters" aria-label="Record layer"><button data-layer="all" aria-pressed="true">All activity</button><button data-layer="positions" aria-pressed="false">Positions</button><button data-layer="activity" aria-pressed="false">Deployments</button><button data-layer="historical" aria-pressed="false">History</button></div>
+    <div class="kind-filters" aria-label="Object type"><button data-kind="all" aria-pressed="true">All</button><button data-kind="air" aria-pressed="false">Air</button><button data-kind="ground" aria-pressed="false">Ground</button><button data-kind="water" aria-pressed="false">Water</button><button data-kind="robot-dog" aria-pressed="false">Robot dogs</button></div>
+    <div class="select-row"><label>OPERATOR TYPE<select id="purpose"><option value="all">All operators</option><option value="unknown">Unknown</option><option value="personal">Personal</option><option value="delivery">Delivery</option><option value="public-safety">Public safety</option><option value="commercial">Commercial</option><option value="research">Research</option><option value="defense">Defense</option></select></label><label class="viewport-toggle"><input id="in-view" type="checkbox"> In map view</label></div>
+    <div class="list-caption"><span id="result-caption">OBSERVATIONS</span><span id="result-count">—</span></div>
+    <div class="observations" id="observations" aria-live="polite"><div class="empty"><div class="empty-symbol" aria-hidden="true">⌁</div><h1>Loading worldwide activity</h1><p>Collecting published activity and recent measured positions.</p></div></div>
+    <div class="sidebar-bottom"><div><span class="small-square" aria-hidden="true"></span><span id="collection-summary">Loading activity</span><button id="refresh-view" aria-label="Refresh map">↻</button></div><p>Automatically collected every 5 min. Records are not vehicle counts.</p></div>
+  </aside>
+  <section class="map-workspace" aria-label="Observation map">
+    <div id="map" aria-label="Interactive map of drone and robot activity"></div>
+    <div class="map-top"><div class="map-title"><span class="eyebrow">AIR + GROUND + WATER</span><h2>Map the autonomous world.</h2></div><div class="time-window" aria-label="Observation time window"><span>POSITIONS</span><button data-hours="0.25" aria-pressed="false">15m</button><button data-hours="1" aria-pressed="false">1h</button><button data-hours="6" aria-pressed="false">6h</button><button data-hours="24" aria-pressed="true">24h</button></div></div>
+    <div class="map-tools"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button><span></span><button id="locate" aria-label="Center map on my location" title="Center on my location">⌖</button><button id="reset-view" aria-label="Reset map view" title="Reset map view">◎</button></div>
+    <div class="map-status" id="map-status" role="status"><span class="status-mark" aria-hidden="true">◌</span><div><strong id="map-status-title">Connecting</strong><p id="map-status-body">Collecting worldwide activity.</p></div><button id="reset-filters">Reset filters</button></div>
+    <div class="map-legend"><span><i class="legend-live"></i> Recent position</span><span><i class="legend-activity"></i> Deployment area</span><span><i class="legend-history"></i> Historical area</span><span class="age-key">Circles group records</span></div>
+    <div class="detail-panel" id="detail" hidden></div>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </section>
+</main>
+<footer class="statusbar"><span><i aria-hidden="true"></i><span id="server-status">CHECKING CONNECTION</span></span><span id="map-coordinate">—</span><span id="last-check">—</span><span class="footer-links"><a href="source.html">Open source</a><a href="credits.html">Credits</a></span></footer>
+<dialog id="info-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow" id="dialog-kicker">DRONE MAPPER</span><button id="close-dialog" aria-label="Close panel">×</button></div><div id="dialog-content"></div></dialog>
+<noscript><div class="noscript">JavaScript is needed to display the interactive map. No installation or account is required.</div></noscript>
+</body></html>

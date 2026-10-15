@@ -1,0 +1,2 @@
+# Preserve the upstream vendored files without whitespace diagnostics.
+public/vendor/* -whitespace

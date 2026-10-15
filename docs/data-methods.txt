@@ -1,0 +1,117 @@
+DRONE MAPPER — collection methods, 2026-10-15
+Internal/source-distribution documentation. Not a public research panel.
+
+DATA CLASSIFICATION
+Never merge deployment areas or historical authorization locations into moving
+tracks. Only timestamped measured positions enter the position layer. No random
+coordinates, estimated RF coverage, interpolated locations or fabricated tracks.
+Record totals count published records, not unique vehicles. The same operator
+can have multiple records, and records from different periods can overlap.
+Manufacturer or model alone does not prove delivery, personal or police use.
+
+DEPLOY
+https://registry.deploy.report/v1/map/deployments
+https://registry.deploy.report/methodology
+https://registry.deploy.report/terms
+GeoJSON advertised with a five-minute public cache. Reviewed 6,028 features;
+1,563 passed current inclusion rules. Accept explicit robot/unmanned form
+factors in operational, scaled or pilot states; exclude announced/future records,
+infrastructure, wearables, global-only locations, invalid coordinates and known
+piloted aircraft misclassified as drones. Purpose is unknown except explicitly categorized sidewalk-delivery robots and
+reviewed Amazon Prime Air MK30, Wing Delivery Aircraft and Zipline delivery
+programs. These specific delivery programs are confirmed by primary operator
+publications; this rule never classifies generic drone brands by model alone.
+Operator is set to the manufacturer only where upstream explicitly reports
+maker_operated; all other operator names remain unknown.
+All coordinates are labeled approximate deployment areas, including records
+whose upstream precision claims are stronger. Some are city/country centroids.
+No independent field verification of all entries is claimed. No editorial prose,
+images, inferred vehicle counts or claimed live locations are reproduced.
+Canonical entity URLs are retained for attribution. Empty/example upstream feed
+catalog entries are not used as sources. Public data reuse has separate terms.
+
+ADSB.LOL
+https://api.adsb.lol/v2/type/Q1,Q4,Q9,Q25
+https://api.adsb.lol/docs
+https://www.adsb.lol/docs/open-data/api/
+https://www.faa.gov/air_traffic/publications/atpubs/cnt_html/
+Explicit unmanned aircraft type families Q1, Q4, Q9, Q25 only; Q5 is excluded.
+A shared type code identifies a family, not an exact subtype or ownership.
+Accept actual lat/lon or lastPosition with seen_pos relative to source time.
+Never use rr_lat/rr_lon registration approximations. A lastPosition does not
+inherit current altitude, heading or speed. Simulated/test flags are excluded.
+Observed age is preserved; no more than 24 hours retained. Live <=120 seconds.
+Aircraft database subset distributed separately under ODbL 1.0 with credit.
+The provider requests contact to avoid compatibility breakage in production.
+The current public API specification states that the free data is ODbL; no
+explicit prior-approval requirement was found. This is a reading of the published
+terms, not individual provider approval. No message has been sent.
+https://api.adsb.lol/api/openapi.json
+
+NOAA AOML / PMEL
+https://www.pmel.noaa.gov/usv-hurricane/
+https://data.pmel.noaa.gov/pmel/erddap/info/oshenPD11_hurricane_2026/index.html
+23 reviewed 2026 hurricane-mission datasets: Oshen PD11 through PD23 and
+Saildrone 1030, 1040, 1045, 1057, 1068, 1069, 1074, 1083, 1084, 1091.
+Query each table for time, latitude, longitude and orderByMax("time"). Verify
+UTC/degree units, finite WGS84 coordinates, plausible time and <=24-hour age.
+At initial collection 22 datasets had recent positions; one was stale and was
+excluded. Source values were measured today, generally minutes to an hour old;
+these are not all live within the application's two-minute threshold.
+No altitude, movement speed or heading is invented. Four request workers,
+15-second timeouts and 64-KiB response limits. Dataset-specific attribution and
+CC0 license metadata are preserved. The fixed mission list is intentionally
+reviewed, not an assertion of global ocean-fleet coverage; update it seasonally.
+
+CLIMATEVIEWER — USER-PROVIDED MAP
+https://climateviewer.org/history-and-science/government/maps/uav-drones-over-usa/
+https://climateviewer.org/layers/geojson/2018/UAV-Drones-over-USA-ClimateViewer-3D.geojson
+Jim Lee / ClimateViewer, CC BY-NC-SA 4.0. Adaptation remains under that license
+in /data/history.json; the software is separately AGPL. Archive path is 2018,
+while many underlying authorization dates are 2010–2012 or earlier.
+Downloaded 214 features. Accept 127 structured historical entries: 69 detailed
+agency authorization records and 58 base records marked Current at the time of
+the archive. Exclude tutorial markers, undocumented UAV pins, a data-center pin,
+future/planned bases and thin Active/Expired summary pins that duplicate detailed
+records. "Current" in this old source is NEVER current activity in our map.
+Extract factual agency/model/location/date fields as plain text, not source HTML
+or narrative descriptions. Explicit police/sheriff/fire/emergency agency names
+can support the historical Public safety label; explicit military branch names
+support Defense. Keep remaining purposes unknown. No current-use claim.
+
+COLLECTOR AND PUBLIC FEED
+Collection interval 300 seconds. Independent bounded provider requests; no
+repeated upstream requests per visitor. The first empty-cache read initializes
+the store; subsequent collection runs server-side every five minutes. Cloudflare
+Cron invokes a SQLite Durable Object, with atomic persistent updates. The Python
+reference service instead uses an atomic private cache file. Preserve
+last good records after failures; respect 429 Retry-After. Main /feed strips
+source URLs, attribution and verification internals. Required provider credits
+remain on /credits.html; attributed subsets have separate export endpoints.
+No receiver pairing, receiver ingestion, generic radio/device scanning, login
+scraping or third-party account credential collection is present.
+
+NEXT SOURCES TO EVALUATE (NOT CONNECTED)
+- IOOS underwater glider position tables: accessible; need a reviewed dataset
+  inventory, license/operator metadata and distinction between surfaced GPS and
+  interpolated underwater coordinates before importing.
+- EFF Atlas of Surveillance CSV: discovery URL returned an access error during
+  this review. Not imported; do not imply current UAV coordinates from agency
+  technology-use records.
+- Consumer Remote ID networks: an explicitly redistributable public feed has not
+  been established. No DroneAware restricted endpoint or paywall was bypassed.
+
+No API billing, accounts or keys are required for the currently connected reads.
+These sources do not establish complete coverage of all unmanned systems.
+
+DELIVERY PROGRAM ENRICHMENT
+https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages
+https://wing.com/technology
+https://www.zipline.com/about/zipline-fact-sheet
+These support delivery-purpose labels for the named deployment programs, not
+individual flight activity or every aircraft made by the same manufacturers.
+
+RECOVERY: If collection is more than one minute overdue, a cached map read
+starts one shared background refresh. A concurrency guard and persisted retry
+deadlines prevent duplicate visitor-triggered requests and respect backoff.
+Cron continues collecting without visitors or a local computer.
