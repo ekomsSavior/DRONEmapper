@@ -3,7 +3,8 @@ Internal/source-distribution documentation. Not a public research panel.
 
 DATA CLASSIFICATION
 Never merge deployment areas or historical authorization locations into moving
-tracks. Only timestamped measured positions enter the position layer. No random
+tracks. Only timestamped provider-reported positions enter the position layer.
+Positioning methods are labeled; reported glider locations are not certified GPS fixes. No random
 coordinates, estimated RF coverage, interpolated locations or fabricated tracks.
 Record totals count published records, not unique vehicles. The same operator
 can have multiple records, and records from different periods can overlap.
@@ -91,15 +92,59 @@ remain on /credits.html; attributed subsets have separate export endpoints.
 No receiver pairing, receiver ingestion, generic radio/device scanning, login
 scraping or third-party account credential collection is present.
 
+EFF ATLAS OF SURVEILLANCE — CONNECTED
+https://www.atlasofsurveillance.org/atlas
+https://www.atlasofsurveillance.org/methodology
+https://www.eff.org/copyright
+Public map -> ArcGIS app adab41ac3fb049c18898bd1e04ea9368 -> webmap
+dbe09b179d24483d9626614ce2998163 -> public AOS_CITY FeatureServer layer:
+https://services8.arcgis.com/0emesQkjyT7tJv3q/arcgis/rest/services/AOS_CITY/FeatureServer/0
+The official map layer contains 1,817 geolocated Drones records at review; the
+separate newer CSV contains 1,828 but does not include coordinates. Use only the
+actual map-layer coordinates, never guessed geocoding for missing records.
+Select Technology=Drones and request WGS84; paginate up to ten 1,999-row pages.
+Fail an incomplete pagination attempt so the last good cache is retained.
+Normalize factual agency/location/date fields, omit editorial summaries and
+model guesses. Conservative planning/discontinuation filter omits seven ambiguous
+records, leaving 1,810 documented program areas in this review. These are agency
+areas, not observed drones, vehicle counts, flight paths or proof of current use.
+Dates come from supporting source dates, not collection time or installation date.
+Original EFF material CC BY 4.0; attributed adapted subset /data/programs.json.
+
+NOAA AOML COASTWATCH GLIDERS — CONNECTED
+https://cwcgom.aoml.noaa.gov/erddap/tabledap/GLIDERS_LAST_10_DAYS_LOCATIONS.html
+https://cwcgom.aoml.noaa.gov/erddap/info/GLIDERS_LAST_10_DAYS_LOCATIONS/index.html
+Public last-ten-days table; request platform_name,time,latitude,longitude and
+orderByMax("platform_name,time") to obtain one newest report per platform.
+Keep valid seven-digit platform IDs, UTC time, WGS84 degree units and positions
+within the last 24 hours. Source table currently has 31 platform IDs; older
+reports are deliberately excluded. Deduplicate by platform and preserve real
+timestamps. Model, manufacturer and operator are not supplied and remain unknown.
+The provider describes locations but does not specify the positioning method.
+Label these Reported position with method unspecified; never claim measured GPS,
+actual underwater navigation or invent speed/heading. No interpolation is added.
+License metadata expressly permits free use and redistribution without warranty;
+it does not declare CC0. Attribution and terms retained in /data/gliders.json.
+Both new providers join the existing shared five-minute collector.
+
 NEXT SOURCES TO EVALUATE (NOT CONNECTED)
-- IOOS underwater glider position tables: accessible; need a reviewed dataset
-  inventory, license/operator metadata and distinction between surfaced GPS and
-  interpolated underwater coordinates before importing.
-- EFF Atlas of Surveillance CSV: discovery URL returned an access error during
-  this review. Not imported; do not imply current UAV coordinates from agency
-  technology-use records.
-- Consumer Remote ID networks: an explicitly redistributable public feed has not
-  been established. No DroneAware restricted endpoint or paywall was bypassed.
+- AV Map, UC Berkeley ITS: MIT open events and service-area geometry; dated global
+  robotaxi/autonomous freight deployments. Requires chronological event replay,
+  ended-service handling and supervision filters before import.
+  https://github.com/path-avmap/av-map-data
+- IMOS/AODN Australian gliders: CC BY 4.0 observations and mission inventory.
+  Validate WFS responses and exclude interpolated underwater coordinates (QC=8)
+  from measured positions. Actual surface fixes need explicit quality checks.
+  https://oceancurrent.aodn.org.au/gliders/
+  https://content.aodn.org.au/Documents/IMOS/Facilities/Ocean_glider/glider_data_management.pdf
+- OpenAerialMap: dated UAV survey footprints, historical areas only. Validate
+  current response, platform and per-item license; metadata license varies.
+  https://api.openaerialmap.org/meta
+  https://github.com/hotosm/oam-api
+- IOOS profile tables: many positions are interpolated. Need explicit surfaced
+  GPS fields and dataset-specific license/operator review before adding them.
+- Consumer Remote ID: no explicitly redistributable public network feed has been
+  established. No restricted endpoint or paywall was bypassed.
 
 No API billing, accounts or keys are required for the currently connected reads.
 These sources do not establish complete coverage of all unmanned systems.

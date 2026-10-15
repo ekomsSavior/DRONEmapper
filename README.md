@@ -21,8 +21,10 @@ Open **http://127.0.0.1:8780**. Allow a moment for the first collection. Data re
 - [DEPLOY](https://registry.deploy.report/map): documented drone and robot deployments.
 - [ADSB.lol](https://www.adsb.lol/docs/open-data/api/): identified unmanned aircraft positions.
 - [NOAA](https://www.pmel.noaa.gov/usv-hurricane/): uncrewed ocean vehicle measurements.
+- [EFF Atlas](https://www.atlasofsurveillance.org/atlas): documented public-safety drone programs.
+- [NOAA CoastWatch](https://cwcgom.aoml.noaa.gov/erddap/tabledap/GLIDERS_LAST_10_DAYS_LOCATIONS.html): reported underwater glider locations.
 - [ClimateViewer](https://climateviewer.org/history-and-science/government/maps/uav-drones-over-usa/): historical UAV records.
 
-Coverage varies. Deployment areas and historical records are labeled separately from measured positions; this is not universal live tracking.
+Coverage varies. Deployment areas and historical records are labeled separately from timestamped positions; this is not universal live tracking.
 
 **[AGPL-3.0-or-later](LICENSE)** for our code. Third-party data keeps its own licenses. [Data details](docs/data-methods.txt) · [Advanced setup](docs/setup.md).

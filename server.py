@@ -19,6 +19,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, unquote, urlsplit
 from data_sources import fetch_json, normalize_deploy, normalize_adsb, DEPLOY_URL, ADSB_URL, finite
 from climateviewer_source import fetch_climateviewer
+from additional_sources import fetch_atlas, fetch_gliders
 from build_review import build_archive
 
 ROOT = Path(__file__).resolve().parent
@@ -48,7 +49,8 @@ class Collector:
         self.adapters = adapters if adapters is not None else {
             'deploy': lambda: normalize_deploy(fetch_json(DEPLOY_URL)),
             'adsb': lambda: normalize_adsb(fetch_json(ADSB_URL)),
-            'climateviewer': fetch_climateviewer}
+            'climateviewer': fetch_climateviewer,
+            'atlas': fetch_atlas, 'gliders': fetch_gliders}
         if adapters is None:
             try:
                 from noaa_source import fetch_noaa
@@ -184,6 +186,7 @@ class Collector:
                 'The noncommercial restriction applies to this data, not our AGPL software.</p>'
                 '<p>Ocean vehicle measurements: NOAA AOML / PMEL and contributing operators. Dataset-specific credit and '
                 'license details are included in <a href="data/ocean.json">the ocean measurement export</a>.</p>'
+                '<p>Documented public-safety drone programs: <a href="https://www.atlasofsurveillance.org/atlas">Electronic Frontier Foundation / Atlas of Surveillance</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Adapted by selecting drone-program records and approximate agency areas, omitting ambiguous planning records and editorial summaries. Continued operation is unverified. <a href="/data/programs.json">Attributed program export</a>.</p><p>Reported underwater glider locations: <a href="https://cwcgom.aoml.noaa.gov/erddap/info/GLIDERS_LAST_10_DAYS_LOCATIONS/index.html">NOAA AOML CoastWatch and contributing operators</a>. The provider permits free use and redistribution without warranty. Positioning method is unspecified; reports older than 24 hours are omitted. <a href="/data/gliders.json">Attributed glider export and terms</a>.</p>'
                 '<details><summary>Deployment record acknowledgments</summary><ul>'+links+'</ul></details></main>').encode()
 
 
@@ -226,11 +229,12 @@ class Handler(BaseHTTPRequestHandler):
             return self.json(200, self.server.collector.snapshot(hours), head)
         if path == '/credits.html':
             return self.respond(200, self.server.collector.credits(), 'text/html; charset=utf-8', head)
-        if path in {'/data/aircraft.json', '/data/ocean.json', '/data/history.json'}:
-            key = {'/data/aircraft.json': 'adsb', '/data/ocean.json': 'noaa', '/data/history.json': 'climateviewer'}[path]
+        if path in {'/data/aircraft.json', '/data/ocean.json', '/data/history.json', '/data/programs.json', '/data/gliders.json'}:
+            key = {'/data/aircraft.json': 'adsb', '/data/ocean.json': 'noaa', '/data/history.json': 'climateviewer', '/data/programs.json': 'atlas', '/data/gliders.json': 'gliders'}[path]
             with self.server.collector.lock:
-                data = self.server.collector.providers.get(key, {}).get('records', [])
-                return self.json(200, {'attribution': {'adsb': 'ADSB.lol · ODbL 1.0', 'noaa': 'NOAA AOML / PMEL and contributing operators; see per-record license', 'climateviewer': 'Jim Lee / ClimateViewer · adapted historical layer · CC BY-NC-SA 4.0'}[key], 'records': data}, head)
+                data = [r for r in self.server.collector.providers.get(key, {}).get('records', [])
+                        if r.get('record_type') != 'position' or time.time()-r.get('observed_at', 0) <= RETENTION]
+                return self.json(200, {'attribution': {'adsb': 'ADSB.lol · ODbL 1.0', 'noaa': 'NOAA AOML / PMEL and contributing operators; see per-record license', 'climateviewer': 'Jim Lee / ClimateViewer · adapted historical layer · CC BY-NC-SA 4.0', 'atlas': 'Electronic Frontier Foundation / Atlas of Surveillance · adapted drone-program areas · CC BY 4.0', 'gliders': 'NOAA AOML CoastWatch and contributing glider operators · freely redistributable data; see per-record terms'}[key], 'records': data}, head)
         root = PUBLIC
         if path.startswith('/hub-preview/'):
             root = ROOT / 'hub-preview'
