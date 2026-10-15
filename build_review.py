@@ -15,7 +15,9 @@ def build_archive():
     allowed = [ROOT / name for name in FILES]
     for directory in DIRECTORIES:
         allowed.extend(p for p in (ROOT / directory).rglob('*')
-                       if p.is_file() and '__pycache__' not in p.parts
+                       if p.is_file() and not p.is_symlink()
+                       and '__pycache__' not in p.parts
+                       and not any(part.startswith('.') for part in p.relative_to(ROOT).parts)
                        and p.name not in {'source.zip', 'source.zip.tmp'}
                        and p.suffix not in {'.pyc', '.zip'})
     temporary = ROOT / 'public/source.zip.tmp'
