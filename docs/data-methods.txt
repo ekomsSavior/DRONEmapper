@@ -160,3 +160,13 @@ RECOVERY: If collection is more than one minute overdue, a cached map read
 starts one shared background refresh. A concurrency guard and persisted retry
 deadlines prevent duplicate visitor-triggered requests and respect backoff.
 Cron continues collecting without visitors or a local computer.
+
+COMPANY WEBSITE LINKS
+Manufacturer and operator names can link to official company websites. The
+whole-name directory in public/company-links.mjs was checked against company-owned
+pages on 2026-10-15. It is maintained separately from activity collection: these
+links do not claim ownership, a current deployment, or a newly observed position.
+No fuzzy matching or guessed domains. Names without a reviewed website remain
+plain text. Kiwibot's former site redirects to Robot.com; ZenRobotics' site
+redirects to its Terex brand page. Links open a new tab without window-opener
+access or a referrer. Contributors can add an exact company name and official URL.
