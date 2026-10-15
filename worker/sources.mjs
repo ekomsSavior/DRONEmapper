@@ -1,20 +1,24 @@
 // DRONE MAPPER production adapters. AGPL-3.0-or-later.
 import {DEPLOY_URL,ADSB_URL,UAV_TYPES,KINDS,EXCLUDE_MODELS,GOOD_STATUSES,DELIVERY_PROGRAMS,DATASETS} from './constants.mjs';
 import {fetchAtlas,normalizeGliders,GLIDERS_URL} from './additional-sources.mjs';
+import {fetchVoto} from './voto-source.mjs';
+import {fetchOAM} from './oam-source.mjs';
+import {fetchAVMap} from './avmap-source.mjs';
 export const INTERVAL=300,RETENTION=86400;
 const CLIMATE_URL='https://climateviewer.org/layers/geojson/2018/UAV-Drones-over-USA-ClimateViewer-3D.geojson';
 const CLIMATE_PAGE='https://climateviewer.org/history-and-science/government/maps/uav-drones-over-usa/';
 export const finite=(v,min,max)=>typeof v==='number'&&Number.isFinite(v)&&v>=min&&v<=max;
 const clean=(v,n=200)=>String(v??'').replaceAll('\0','').trim().slice(0,n);
 export class SourceError extends Error{constructor(message,retry=300){super(message);this.retry=retry;}}
-export async function fetchJSON(url,max=12000000){
+export async function fetchText(url,max=12000000){
  const response=await fetch(url,{headers:{Accept:'application/json','User-Agent':'DRONE-MAPPER/1.0 (https://dronemapper.churchofmalware.org; five-minute shared collection)'},signal:AbortSignal.timeout(20000),redirect:'manual'});
  if(!response.ok){const r=response.headers.get('Retry-After');const seconds=/^\d+$/.test(r||'')?Number(r):Math.max(0,(Date.parse(r)-Date.now())/1000);throw new SourceError(`HTTP ${response.status}`,response.status===429?Math.max(INTERVAL,Math.min(86400,Number.isFinite(seconds)?seconds:INTERVAL)):INTERVAL);}
  if(Number(response.headers.get('content-length'))>max)throw new SourceError('Oversized response');
  const reader=response.body.getReader(),parts=[];let length=0;
  try{while(true){const {done,value}=await reader.read();if(done)break;length+=value.length;if(length>max)throw new SourceError('Oversized response');parts.push(value);}}catch(e){await reader.cancel();throw e;}
- const bytes=new Uint8Array(length);let at=0;for(const part of parts){bytes.set(part,at);at+=part.length;}return JSON.parse(new TextDecoder().decode(bytes));
+ const bytes=new Uint8Array(length);let at=0;for(const part of parts){bytes.set(part,at);at+=part.length;}return new TextDecoder().decode(bytes);
 }
+export async function fetchJSON(url,max=12000000){return JSON.parse(await fetchText(url,max));}
 export function normalizeDeploy(payload,now=Date.now()/1000){
  if(!Array.isArray(payload?.features))throw new SourceError('Invalid deployment collection');
  const records=new Map(),yearNow=new Date(now*1000).getUTCFullYear();
@@ -61,7 +65,7 @@ export async function normalizeClimate(payload){
  }return [...records.values()];
 }
 async function ocean(){let index=0,failed=0,retry=300;const records=[];await Promise.all(Array.from({length:4},async()=>{while(index<DATASETS.length){const dataset=DATASETS[index++];try{const p=await fetchJSON(`https://data.pmel.noaa.gov/pmel/erddap/tabledap/${dataset[0]}.json?time,latitude,longitude&orderByMax(%22time%22)`,65536),r=normalizeNOAA(p,dataset);if(r)records.push(r);}catch(e){failed++;retry=Math.max(retry,e.retry||300);}}}));if(failed===DATASETS.length)throw new SourceError('Ocean sources unavailable',retry);return {records,partial:failed};}
-export const adapters={deploy:async()=>({records:normalizeDeploy(await fetchJSON(DEPLOY_URL))}),adsb:async()=>({records:normalizeADSB(await fetchJSON(ADSB_URL))}),climateviewer:async()=>({records:await normalizeClimate(await fetchJSON(CLIMATE_URL))}),noaa:ocean,atlas:()=>fetchAtlas(fetchJSON),gliders:async()=>({records:normalizeGliders(await fetchJSON(GLIDERS_URL,1048576))})};
+export const adapters={voto:()=>fetchVoto(fetchJSON),oam:()=>fetchOAM(fetchJSON),avmap:()=>fetchAVMap(fetchText,fetchJSON),deploy:async()=>({records:normalizeDeploy(await fetchJSON(DEPLOY_URL))}),adsb:async()=>({records:normalizeADSB(await fetchJSON(ADSB_URL))}),climateviewer:async()=>({records:await normalizeClimate(await fetchJSON(CLIMATE_URL))}),noaa:ocean,atlas:()=>fetchAtlas(fetchJSON),gliders:async()=>({records:normalizeGliders(await fetchJSON(GLIDERS_URL,1048576))})};
 const privateFields=new Set(['source','source_url','evidence_url','verification','purpose_evidence_url','attribution','license','license_url']);
 export const publicRecord=r=>Object.fromEntries(Object.entries(r).filter(([key])=>!privateFields.has(key)));
 export function mergePositions(previous,incoming,now){

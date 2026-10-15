@@ -170,3 +170,46 @@ No fuzzy matching or guessed domains. Names without a reviewed website remain
 plain text. Kiwibot's former site redirects to Robot.com; ZenRobotics' site
 redirects to its Terex brand page. Links open a new tab without window-opener
 access or a referrer. Contributors can add an exact company name and official URL.
+
+
+WORLDWIDE EXPANSION — 2026-10-15
+AV Map: https://github.com/path-avmap/av-map-data (MIT, Jackson Lester).
+Public events.csv and referenced geometries are fetched in each five-minute
+collection. Replay is per company/city; update events change only the named field.
+Only launched, Autonomous, Public/Waitlist services remain. Announcements,
+testing-only, ended, human safety-driver/attendant, future and generic regional
+records are excluded. Displayed points are provided city points or service-area
+bounding-box centers, never vehicle GPS. Model/maker stay unknown. Last event
+date is retained; continued operation is unverified. These records may overlap
+DEPLOY records and must not be described as unique fleets or vehicle counts.
+Full upstream MIT notice: public/licenses/av-map.txt. Export: /data/driverless.json.
+
+OpenAerialMap: https://api.openaerialmap.org/meta (CC BY 4.0).
+The public catalog is queried for platform=uav and capture dates within the last
+365 days. All pages are collected (100/page, maximum 30); failure, changed counts,
+missing pages or duplicate IDs preserve the previous complete snapshot. Upstream
+page-number labels can race between concurrent requests, so completeness is
+checked using result lengths and unique IDs. Coordinates are centers of valid
+published footprints no wider/taller than two degrees. Future, undated, satellite,
+piloted-aircraft and unknown-platform items are excluded. Sensors and imagery
+providers are not inferred to be aircraft models/operators. Historical survey
+labels and capture dates remain visible. Repeated imagery can describe the same
+survey; these are imagery records, not flight counts. Provider attribution stays
+in /data/surveys.json. No contact details, raster images or thumbnails are copied.
+
+Voice of the Ocean: https://erddap.observations.voiceoftheocean.org/erddap/.
+CC BY 4.0; Voice of the Ocean Foundation. Discover nrt_SEA/SHW mission datasets
+with reports in the last 24 hours, then verify glider identity, license, original
+UTC timestamps and coordinate quality metadata. Request the newest valid position
+with latitude_qc=1 and longitude_qc=1. The provider estimates coordinates between
+surface fixes; this is stated in the details and never presented as direct GPS.
+We do not extrapolate. Shared WMO identifiers across this and the existing glider
+source collapse to the newest report on the map; provider exports remain separate.
+Any dataset failure retains the previous complete provider snapshot. Exports:
+/data/baltic.json. No web-visitor location or request-statistics tables are used.
+
+Further leads, not connected: AODN/IMOS Australian glider data (freshness and
+per-fix timestamps need further work); Ifremer OceanGliders trajectories (latest
+checked report was September 11); humanoid.observer deployment data (site
+coordinates/duplicates need verification); UPDWG medical-drone database (2022,
+redistribution terms and locations need verification). These produce no map pins.

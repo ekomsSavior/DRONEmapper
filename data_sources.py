@@ -68,13 +68,17 @@ def https(value):
     return p.scheme == 'https' and bool(p.hostname) and not p.username and not p.password
 
 
-def fetch_json(url):
+def fetch_text(url, maximum=12_000_000):
     request = urllib.request.Request(url, headers={'User-Agent': 'DRONE-MAPPER/0.2 (public-data map; five-minute cache)', 'Accept': 'application/json'})
     with urllib.request.urlopen(request, timeout=20) as response:
-        payload = response.read(12_000_001)
-        if len(payload) > 12_000_000:
+        payload = response.read(maximum+1)
+        if len(payload) > maximum:
             raise ValueError('Source response exceeds size limit')
-        return json.loads(payload)
+        return payload.decode('utf-8')
+
+
+def fetch_json(url):
+    return json.loads(fetch_text(url))
 
 
 def normalize_deploy(payload, collected_at=None):

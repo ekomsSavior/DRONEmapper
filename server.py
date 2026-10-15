@@ -20,6 +20,9 @@ from urllib.parse import parse_qs, unquote, urlsplit
 from data_sources import fetch_json, normalize_deploy, normalize_adsb, DEPLOY_URL, ADSB_URL, finite
 from climateviewer_source import fetch_climateviewer
 from additional_sources import fetch_atlas, fetch_gliders
+from oam_source import fetch_oam
+from avmap_source import fetch_avmap
+from voto_source import fetch_voto, deduplicate_glider_positions
 from build_review import build_archive
 
 ROOT = Path(__file__).resolve().parent
@@ -50,7 +53,7 @@ class Collector:
             'deploy': lambda: normalize_deploy(fetch_json(DEPLOY_URL)),
             'adsb': lambda: normalize_adsb(fetch_json(ADSB_URL)),
             'climateviewer': fetch_climateviewer,
-            'atlas': fetch_atlas, 'gliders': fetch_gliders}
+            'atlas': fetch_atlas, 'gliders': fetch_gliders, 'oam': fetch_oam, 'avmap': fetch_avmap, 'voto': fetch_voto}
         if adapters is None:
             try:
                 from noaa_source import fetch_noaa
@@ -157,7 +160,7 @@ class Collector:
                         activity.append(public_record(record))
             success = [p['last_success'] for p in self.providers.values() if p.get('last_success')]
             attempts = [p['next_attempt'] for p in self.providers.values() if p.get('next_attempt')]
-            return {'schema_version': 2, 'server_time': current, 'tracks': tracks, 'activity': activity,
+            return {'schema_version': 2, 'server_time': current, 'tracks': deduplicate_glider_positions(tracks), 'activity': activity,
                     'collection': {'interval_seconds': INTERVAL, 'collecting': self.running,
                                    'last_success': max(success) if success else None,
                                    'next_update': min(attempts) if attempts else current,
@@ -187,6 +190,7 @@ class Collector:
                 '<p>Ocean vehicle measurements: NOAA AOML / PMEL and contributing operators. Dataset-specific credit and '
                 'license details are included in <a href="data/ocean.json">the ocean measurement export</a>.</p>'
                 '<p>Documented public-safety drone programs: <a href="https://www.atlasofsurveillance.org/atlas">Electronic Frontier Foundation / Atlas of Surveillance</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Adapted by selecting drone-program records and approximate agency areas, omitting ambiguous planning records and editorial summaries. Continued operation is unverified. <a href="/data/programs.json">Attributed program export</a>.</p><p>Reported underwater glider locations: <a href="https://cwcgom.aoml.noaa.gov/erddap/info/GLIDERS_LAST_10_DAYS_LOCATIONS/index.html">NOAA AOML CoastWatch and contributing operators</a>. The provider permits free use and redistribution without warranty. Positioning method is unspecified; reports older than 24 hours are omitted. <a href="/data/gliders.json">Attributed glider export and terms</a>.</p>'
+                '<p>Documented driverless service areas: <a href="https://github.com/path-avmap/av-map-data">AV Map</a>, <a href="/licenses/av-map.txt">MIT license, copyright Jackson Lester</a>. Adapted by replaying dated service events and filtering for launched autonomous services. City points and boundary centers are approximate areas, not vehicle positions. <a href="/data/driverless.json">Attributed service-area export</a>.</p><p>Dated UAV survey footprints: <a href="https://openaerialmap.org/">OpenAerialMap / Open Imagery Network contributors</a>, <a href="https://openaerialmap.org/legal/">CC BY 4.0</a>. Adapted metadata for contributor-labeled UAV imagery captured within the last 365 days; only footprint centers and factual capture dates are mapped. Per-record provider credits are retained in <a href="/data/surveys.json">the attributed survey export</a>. Imagery records are not flight counts.</p><p>Baltic glider reports: <a href="https://erddap.observations.voiceoftheocean.org/erddap/index.html">Voice of the Ocean Foundation</a>; data collected and made freely available by the Foundation under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Locations may be estimated by the provider between surface fixes. Only good coordinate quality flags and reports within 24 hours are accepted. <a href="/data/baltic.json">Attributed glider export</a>.</p>'
                 '<details><summary>Deployment record acknowledgments</summary><ul>'+links+'</ul></details></main>').encode()
 
 
@@ -229,12 +233,12 @@ class Handler(BaseHTTPRequestHandler):
             return self.json(200, self.server.collector.snapshot(hours), head)
         if path == '/credits.html':
             return self.respond(200, self.server.collector.credits(), 'text/html; charset=utf-8', head)
-        if path in {'/data/aircraft.json', '/data/ocean.json', '/data/history.json', '/data/programs.json', '/data/gliders.json'}:
-            key = {'/data/aircraft.json': 'adsb', '/data/ocean.json': 'noaa', '/data/history.json': 'climateviewer', '/data/programs.json': 'atlas', '/data/gliders.json': 'gliders'}[path]
+        if path in {'/data/driverless.json', '/data/surveys.json', '/data/baltic.json', '/data/aircraft.json', '/data/ocean.json', '/data/history.json', '/data/programs.json', '/data/gliders.json'}:
+            key = {'/data/driverless.json':'avmap', '/data/surveys.json':'oam', '/data/baltic.json':'voto', '/data/aircraft.json': 'adsb', '/data/ocean.json': 'noaa', '/data/history.json': 'climateviewer', '/data/programs.json': 'atlas', '/data/gliders.json': 'gliders'}[path]
             with self.server.collector.lock:
                 data = [r for r in self.server.collector.providers.get(key, {}).get('records', [])
                         if r.get('record_type') != 'position' or time.time()-r.get('observed_at', 0) <= RETENTION]
-                return self.json(200, {'attribution': {'adsb': 'ADSB.lol · ODbL 1.0', 'noaa': 'NOAA AOML / PMEL and contributing operators; see per-record license', 'climateviewer': 'Jim Lee / ClimateViewer · adapted historical layer · CC BY-NC-SA 4.0', 'atlas': 'Electronic Frontier Foundation / Atlas of Surveillance · adapted drone-program areas · CC BY 4.0', 'gliders': 'NOAA AOML CoastWatch and contributing glider operators · freely redistributable data; see per-record terms'}[key], 'records': data}, head)
+                return self.json(200, {'attribution': {'avmap':'AV Map contributors / Jackson Lester · MIT; see /licenses/av-map.txt','oam':'OpenAerialMap / Open Imagery Network contributors · adapted UAV survey metadata · CC BY 4.0; see per-record contributors','voto':'Voice of the Ocean Foundation; data collected and made freely available at https://erddap.observations.voiceoftheocean.org/erddap/index.html · CC BY 4.0','adsb': 'ADSB.lol · ODbL 1.0', 'noaa': 'NOAA AOML / PMEL and contributing operators; see per-record license', 'climateviewer': 'Jim Lee / ClimateViewer · adapted historical layer · CC BY-NC-SA 4.0', 'atlas': 'Electronic Frontier Foundation / Atlas of Surveillance · adapted drone-program areas · CC BY 4.0', 'gliders': 'NOAA AOML CoastWatch and contributing glider operators · freely redistributable data; see per-record terms'}[key], 'records': data}, head)
         root = PUBLIC
         if path.startswith('/hub-preview/'):
             root = ROOT / 'hub-preview'

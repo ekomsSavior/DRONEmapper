@@ -5,7 +5,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parent
 FILES = ['README.md', 'LICENSE', 'NOTICE.txt', '.gitignore', '.gitattributes', 'server.py', 'data_sources.py',
-         'noaa_source.py', 'climateviewer_source.py', 'additional_sources.py', 'build_review.py',
+         'noaa_source.py', 'climateviewer_source.py', 'additional_sources.py', 'oam_source.py', 'avmap_source.py', 'voto_source.py', 'build_review.py',
          'package.json', 'package-lock.json', 'wrangler.jsonc']
 DIRECTORIES = ['public', 'docs', 'tests', 'integration', 'worker', 'deploy']
 
