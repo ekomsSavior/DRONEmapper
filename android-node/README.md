@@ -10,7 +10,7 @@ Android 8+. No root or Bluetooth dongle.
 4. To contribute, tap **Connect to DRONEmapper** → **Continue in browser**. Create an account, verify your email, sign in and approve the matching phone code. Return to **Sharing choices**, enable the reports you want to share and tap **Save**.
 5. Choose a display name or remain **Anonymous**. Public names are optional; email stays private. **Open world map** takes you straight to the website.
 
-Expand or collapse the live list and radar. Optional radar GPS stays on the phone; Wi-Fi-only signals appear as glowing dots below the circle. Tap a dot for type, MAC, strength and age. Their direction and distance are unknown. Tap **What we scan** for supported signals. Offline OUI lookup shows the radio registrant, not proof of a device type.
+Expand or collapse the live list and radar. The **Signals** view puts glowing dots inside the circle; glow size follows measured signal strength, and the dot layout is not a location. **Positions** plots fresh broadcast coordinates relative to the phone. Optional radar GPS stays on the phone. Tap a dot for type, MAC, strength and age. Their direction and distance are unknown. Tap **What we scan** for supported signals. Offline OUI lookup shows the radio registrant, not proof of a device type.
 
 Sharing starts off each session. Raw MACs and network names stay on your phone. A Wi-Fi name match is not proof of a drone; changing addresses may create separate profiles.
 

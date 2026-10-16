@@ -1,11 +1,11 @@
 # Phone acceptance test
 
-**Status: signed Android 0.4.2 installed; real Wi-Fi camera-signal radar dots and tap details verified on the Moto. Account pairing and uploads were verified with 0.4.0. Remote ID and external USB RF acceptance remain pending.** A successful APK build, parser tests and HTTP tests do not establish RF reception or Android background reliability. Use the same checklist for all three phones; exact models are read by the app.
+**Status: signed Android 0.4.3 installed; real Wi-Fi camera-signal dots inside the scanner circle and tap details verified on the Moto. Account pairing and uploads were verified with 0.4.0. Remote ID and external USB RF acceptance remain pending.** A successful APK build, parser tests and HTTP tests do not establish RF reception or Android background reliability. Use the same checklist for all three phones; exact models are read by the app.
 
 | Check | Phone 1 | Phone 2 | Phone 3 |
 | --- | --- | --- | --- |
 | Manufacturer / model / Android from capability report | Motorola moto g 5G - 2024; Android 14 / API 34 | Pending | Pending |
-| Install and launch without root | Passed, signed 0.4.2 APK | Pending | Pending |
+| Install and launch without root | Passed, signed 0.4.3 APK | Pending | Pending |
 | Grant / deny Nearby devices and Location without crashing | Grants and startup passed; denial cases pending | Pending | Pending |
 | Bluetooth disabled / enabled, scan restart | Pending | Pending | Pending |
 | Real BLE legacy Remote ID decoded | Pending | Pending | Pending |
@@ -16,12 +16,27 @@
 | Stop action releases radios and ends upload | Pending | Pending | Pending |
 | Email verification and browser device approval | Passed on production | Pending | Pending |
 | Real Wi-Fi camera signal shown locally and uploaded | Passed; timestamps and repeat reports verified on production | Pending | Pending |
-| Unlocated radar dot and tap details | Passed with real WiFi CAM signal in 0.4.2 | Pending | Pending |
+| In-circle signal dot and tap details | Passed with real WiFi CAM signal in 0.4.3 | Pending | Pending |
 | Fresh observation appears on local map | Pending | Pending | Pending |
 | Airplane mode / offline queue / reconnect keeps original time | Pending | Pending | Pending |
 | USB adapter ID / power / permission / attach / detach | Pending | Pending | Pending |
 | Heat and battery consumption after 30 minutes | Pending | Pending | Pending |
 
+
+## Moto live acceptance — 0.4.3, 2026-10-16
+
+The real WiFi CAM signal now appears as an amber glowing dot inside the circle.
+The checked sample was -49 dBm; tapping the dot opened the same signal identity,
+local MAC, strength and observation age. Signals mode has no compass or phone
+marker and labels direction/distance unknown. Its centered contact layout is not
+a bearing. Positions mode is separate and requires fresh broadcast coordinates
+and a fresh phone fix.
+
+All 59 Android tests passed with zero failures or errors; debug/release builds,
+APK signature verification and Android lint passed. The regression checks the
+shared circle surface, mode switching and retained tap details with the list
+collapsed. Installed without clearing the existing account. Sharing remained off
+during this display acceptance; no new upload or synthetic signal was claimed.
 
 ## Moto live acceptance — 0.4.2, 2026-10-16
 
