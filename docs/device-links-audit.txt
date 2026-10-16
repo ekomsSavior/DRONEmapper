@@ -1,0 +1,37 @@
+Official device links — checked 2026-10-16
+
+Reviewed all 700 distinct manufacturer/model groups in a 5,306-record public feed
+snapshot. 493 manufacturer names were present; 468 have an official company,
+successor-company, or support link. The directory has 471 names including existing
+aliases and 286 model matches. These apply to 1,514 manufacturer rows and 1,046
+model rows in that snapshot. Counts change as providers publish records.
+3,251 records reported neither manufacturer nor model; no identity is inferred.
+
+Model and manufacturer names in the detail panel open separately in new tabs.
+A specific product page is preferred; manufacturer documentation or a relevant
+official product announcement is used for retired products. Float families can
+link to International Argo Program documentation. Company links may lead to
+successor organizations after an acquisition. No product selection implies that
+the deployment or broadcast identity has been independently authenticated.
+
+Matching uses complete manufacturer + model names, ignoring case and repeated
+whitespace. Unbranded historical and profiling-float names additionally require
+the device kind. No prefix matching, guessed domains, arbitrary provider URLs,
+automatic search redirects, or cross-manufacturer model fallback is used.
+
+Sources and maintenance:
+- docs/device-links.json contains reviewed names, destinations and evidence URLs.
+- python3 scripts/build_device_links.py regenerates public/device-link-data.mjs.
+- public/company-links.mjs supplies companyWebsite and modelWebsite.
+- npm test checks matching, unknown values, kind isolation, URL safety and catalog
+  synchronization. Browser checks cover real 4AG listings.
+- Official-page web searches covered every missing manufacturer and additional
+  model groups. HTTP checks covered 727 distinct initial destinations, followed
+  by checks on replacement pages. Broken pages were replaced or omitted.
+  Some official servers block automated requests; an HTTP 403 is not evidence
+  of a dead page. Search-index evidence was retained for those destinations.
+- Unresolved names stay plain text. A missing link is not a claim that no company
+  or product exists. Recheck changed/retired websites before expanding entries.
+
+The research snapshot and raw search results are not included in the repository,
+the source download, or the public map.

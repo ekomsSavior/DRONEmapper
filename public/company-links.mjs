@@ -1,85 +1,22 @@
-// Official company websites checked against company-owned pages, 2026-10-15.
-// Match whole names only. An absent website stays plain text; never guess a domain.
-const websites = {
-  '1X Technologies': 'https://www.1x.tech/',
-  'ABB Robotics': 'https://www.abb.com/global/en',
-  'AeroVironment': 'https://www.avinc.com/',
-  'Agility Robotics': 'https://www.agilityrobotics.com/',
-  'Alphadroid': 'https://www.alphadroid.us/about-us',
-  'Amazon': 'https://www.aboutamazon.com/',
-  'Amazon Prime Air': 'https://www.primeair.amazon/technology',
-  'Ambi Robotics': 'https://www.ambirobotics.com/',
-  'Anduril Industries': 'https://www.anduril.com/',
-  'ANYbotics': 'https://www.anybotics.com/',
-  'Apptronik': 'https://apptronik.com/',
-  'ARX Robotics': 'https://www.arx-robotics.com/',
-  'Aurora Innovation': 'https://aurora.tech/',
-  'Autel Robotics': 'https://www.autelrobotics.com/',
-  'AutoStore': 'https://www.autostoresystem.com/',
-  'Avride': 'https://www.avride.ai/',
-  'Baykar': 'https://baykartech.com/en/',
-  'BD Rowa': 'https://rowa.de/en/',
-  'Bear Robotics': 'https://www.bearrobotics.ai/',
-  'Blueye Robotics': 'https://www.blueyerobotics.com/',
-  'Boeing': 'https://www.boeing.com/',
-  'Boston Dynamics': 'https://bostondynamics.com/',
-  'BRINC': 'https://brincdrones.com/',
-  'Cartken': 'https://www.cartken.com/',
-  'Caterpillar': 'https://www.caterpillar.com/',
-  'Caterpillar Mining': 'https://www.caterpillar.com/',
-  'Clearpath Robotics': 'https://clearpathrobotics.com/',
-  'Coco Robotics': 'https://www.cocodelivery.com/',
-  'Daxbot': 'https://daxbot.com/',
-  'DEEP Robotics': 'https://www.deeprobotics.cn/',
-  'DJI': 'https://www.dji.com/',
-  'Elbit Systems': 'https://www.elbitsystems.com/',
-  'Figure AI': 'https://www.figure.ai/',
-  'Gausium': 'https://gausium.com/',
-  'Geek+': 'https://www.geekplus.com/en',
-  'General Atomics': 'https://www.ga.com/',
-  'General Atomics Aeronautical Systems': 'https://www.ga-asi.com/',
-  'General Dynamics Land Systems': 'https://www.gdls.com/',
-  'Ghost Robotics': 'https://www.ghostrobotics.io/',
-  'Humanoid': 'https://thehumanoid.ai/',
-  'Kiwibot': 'https://www.robot.com/',
-  'Knightscope': 'https://knightscope.com/',
-  'Kodiak AI': 'https://kodiak.ai/',
-  'Kongsberg': 'https://www.kongsberg.com/',
-  'Locus Robotics': 'https://locusrobotics.com/',
-  'May Mobility': 'https://maymobility.com/',
-  'Milrem Robotics': 'https://milremrobotics.com/',
-  'Naio Technologies': 'https://www.naio-technologies.com/',
-  'Northrop Grumman': 'https://www.northropgrumman.com/',
-  'Nuro': 'https://www.nuro.ai/',
-  'Oshen': 'https://www.oshendata.com/',
-  'OTTO Motors': 'https://ottomotors.com/',
-  'Overland AI': 'https://www.overland.ai/',
-  'Parrot': 'https://www.parrot.com/en',
-  'Pudu Robotics': 'https://www.pudurobotics.com/en',
-  'QinetiQ': 'https://www.qinetiq.com/en-gb',
-  'Quantum Systems': 'https://quantum-systems.com/',
-  'Rheinmetall': 'https://www.rheinmetall.com/',
-  'Robot.com': 'https://www.robot.com/',
-  'Roboteam': 'https://robo-team.com/',
-  'Saildrone': 'https://www.saildrone.com/',
-  'Serve Robotics': 'https://www.serverobotics.com/',
-  'SharkNinja': 'https://www.sharkninja.com/',
-  'Simbe Robotics': 'https://www.simberobotics.com/',
-  'Skydio': 'https://www.skydio.com/',
-  'Solinftec': 'https://www.solinftec.com/',
-  'Starship Technologies': 'https://www.starship.xyz/',
-  'Teledyne FLIR': 'https://www.flir.com/',
-  'Tesla': 'https://www.tesla.com/',
-  'UBTech Robotics': 'https://www.ubtrobot.com/en/',
-  'ULC Technologies': 'https://ulctechnologies.com/',
-  'Unitree Robotics': 'https://www.unitree.com/',
-  'Waymo': 'https://waymo.com/',
-  'Wing': 'https://wing.com/',
-  'ZenRobotics': 'https://www.terex.com/zenrobotics',
-  'Zipline': 'https://www.zipline.com/',
-  'Zoox': 'https://zoox.com/',
-};
-const directory = new Map(Object.entries(websites).map(([name,url])=>[name.toLowerCase(),url]));
+// Whole-name matches only: never guess a website or a model from a prefix.
+import {companyLinks, modelLinks} from './device-link-data.mjs';
+
+const normalize = value => typeof value === 'string'
+  ? value.trim().replace(/\s+/g, ' ').toLowerCase() : '';
+const key = (manufacturer, model, kind = '') =>
+  JSON.stringify([normalize(manufacturer), normalize(model), normalize(kind)]);
+const companies = new Map(Object.entries(companyLinks).map(([name, url]) => [normalize(name), url]));
+const models = new Map(modelLinks.map(([manufacturer, model, kind, url]) =>
+  [key(manufacturer, model, kind), url]));
+
 export function companyWebsite(name) {
-  return typeof name==='string' ? directory.get(name.trim().toLowerCase()) || null : null;
+  return companies.get(normalize(name)) || null;
+}
+
+export function modelWebsite(model, manufacturer, kind) {
+  if (!normalize(model)) return null;
+  // Unbranded historic/float names need their device kind to avoid namesakes.
+  // A supplied manufacturer never falls back to a different or unknown maker.
+  return models.get(key(manufacturer, model, kind))
+    || models.get(key(manufacturer, model)) || null;
 }
