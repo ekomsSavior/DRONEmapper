@@ -30,3 +30,15 @@ test('aggregation keeps signal areas out of aircraft trails and flags conflictin
  const [merged]=mergeNodeRows(rows,now);
  assert.equal(merged.reporting_nodes,2);assert.equal(merged.position_conflict,true);assert.equal(merged.live,false);assert.deepEqual(merged.trail,[]);
 });
+
+test('documented Tello SSID is an unconfirmed receiver area, never an identified aircraft',()=>{
+ const raw={...candidate(),signature:'tello-name'};
+ assert.equal(validateBatch(batch(raw),now).length,1);
+ const record=nodeRecord(raw,'signal-test',now);
+ assert.equal(record.record_type,'signal');
+ assert.equal(record.manufacturer,null);
+ assert.equal(record.model,null);
+ assert.match(record.name,/Possible drone/);
+ assert.equal(record.position_basis,'receiver-area');
+ assert.throws(()=>validateBatch(batch({...raw,signature:'any-wifi'}),now));
+});

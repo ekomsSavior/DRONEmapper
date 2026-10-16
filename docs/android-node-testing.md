@@ -1,11 +1,11 @@
 # Phone acceptance test
 
-**Status: signed Android 0.4.0, account pairing and real Wi-Fi camera-signal uploads verified on the Moto. Remote ID and external USB RF acceptance remain pending.** A successful APK build, parser tests and HTTP tests do not establish RF reception or Android background reliability. Use the same checklist for all three phones; exact models are read by the app.
+**Status: signed Android 0.4.2 installed; real Wi-Fi camera-signal radar dots and tap details verified on the Moto. Account pairing and uploads were verified with 0.4.0. Remote ID and external USB RF acceptance remain pending.** A successful APK build, parser tests and HTTP tests do not establish RF reception or Android background reliability. Use the same checklist for all three phones; exact models are read by the app.
 
 | Check | Phone 1 | Phone 2 | Phone 3 |
 | --- | --- | --- | --- |
 | Manufacturer / model / Android from capability report | Motorola moto g 5G - 2024; Android 14 / API 34 | Pending | Pending |
-| Install and launch without root | Passed, signed 0.4.0 APK | Pending | Pending |
+| Install and launch without root | Passed, signed 0.4.2 APK | Pending | Pending |
 | Grant / deny Nearby devices and Location without crashing | Grants and startup passed; denial cases pending | Pending | Pending |
 | Bluetooth disabled / enabled, scan restart | Pending | Pending | Pending |
 | Real BLE legacy Remote ID decoded | Pending | Pending | Pending |
@@ -16,11 +16,28 @@
 | Stop action releases radios and ends upload | Pending | Pending | Pending |
 | Email verification and browser device approval | Passed on production | Pending | Pending |
 | Real Wi-Fi camera signal shown locally and uploaded | Passed; timestamps and repeat reports verified on production | Pending | Pending |
+| Unlocated radar dot and tap details | Passed with real WiFi CAM signal in 0.4.2 | Pending | Pending |
 | Fresh observation appears on local map | Pending | Pending | Pending |
 | Airplane mode / offline queue / reconnect keeps original time | Pending | Pending | Pending |
 | USB adapter ID / power / permission / attach / detach | Pending | Pending | Pending |
 | Heat and battery consumption after 30 minutes | Pending | Pending | Pending |
 
+
+## Moto live acceptance — 0.4.2, 2026-10-16
+
+Installed the signed update on the same Moto without clearing its account. The
+powered WiFi CAM toy drone appeared as an amber glowing dot in the unlocated row
+below the compass. Tapping the actual dot opened its signal name, local MAC,
+RSSI and age; the checked reading was -30 dBm and 28 seconds old. Direction and
+distance remained unknown. Device labels no longer cover the radar, and the live
+list retains the signal details. No synthetic detections were installed.
+
+Sharing was off during this display test, so this check does not establish a new
+0.4.2 production upload. Automated checks passed: 59 Android tests, 35 JavaScript
+tests and 45 Python tests; debug/release builds and Android lint passed. Tests
+cover collapsed-list refresh, stale coordinates, dot details and the Tello-style
+name filter. Real Tello, Remote ID positions, USB capture and background endurance
+still need physical acceptance tests.
 
 ## Moto live acceptance — 0.4.0, 2026-10-15
 

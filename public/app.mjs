@@ -1,7 +1,7 @@
 import {companyWebsite} from './company-links.mjs';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const names = {'possible-drone':'Possible drone / camera link',drone:'Drone','robot-dog':'Robot dog',humanoid:'Humanoid','ground-robot':'Ground robot','delivery-robot':'Delivery robot','industrial-robot':'Industrial robot','autonomous-vehicle':'Autonomous vehicle','surface-vessel':'Unmanned vessel',underwater:'Underwater vehicle',unknown:'Unknown',delivery:'Delivery','public-safety':'Public safety',research:'Research',commercial:'Commercial',personal:'Personal',defense:'Defense'};
+const names = {'possible-drone':'Possible drone / camera link',drone:'Drone','robot-dog':'Robot dog',humanoid:'Humanoid','ground-robot':'Ground robot','delivery-robot':'Delivery robot','industrial-robot':'Industrial robot','autonomous-vehicle':'Autonomous vehicle','surface-vessel':'Unmanned vessel',underwater:'Underwater vehicle','profiling-float':'Autonomous profiling float',unknown:'Unknown',delivery:'Delivery','public-safety':'Public safety',research:'Research',commercial:'Commercial',personal:'Personal',defense:'Defense'};
 const state={data:null,kind:'all',layer:'all',hours:0,search:'',purpose:'all',selected:null,offset:0,pending:false,error:false,limit:100,version:0};
 const now=()=>Date.now()/1000+state.offset;
 const age=t=>{if(!Number.isFinite(t))return 'Unknown';const s=Math.max(0,now()-t);return s<60?`${Math.floor(s)}s ago`:s<3600?`${Math.floor(s/60)}m ago`:s<86400?`${Math.floor(s/3600)}h ago`:`${Math.floor(s/86400)}d ago`;};

@@ -20,7 +20,7 @@ export function validateBatch(body,now){
   if(!number(r.latitude,-90,90)||!number(r.longitude,-180,180)||r.latitude===0&&r.longitude===0)throw Error('Invalid location');
   if(!number(r.observed_at,now-900,now+5)||!number(r.received_at,now-900,now+5)||!number(r.received_at-r.observed_at,-5,120))throw Error('Expired or future observation');
   if(candidate){
-   if(!UUID.test(r.candidate_id)||r.signature!=='wifi-cam-name'||r.location_grid_degrees!==0.01||!Number.isInteger(r.frequency_mhz)||!number(r.frequency_mhz,2400,5900))throw Error('Invalid candidate');
+   if(!UUID.test(r.candidate_id)||!['wifi-cam-name','tello-name'].includes(r.signature)||r.location_grid_degrees!==0.01||!Number.isInteger(r.frequency_mhz)||!number(r.frequency_mhz,2400,5900))throw Error('Invalid candidate');
    for(const key of ['latitude','longitude'])if(Math.abs((r[key]-.005)*100-Math.round((r[key]-.005)*100))>0.0001)throw Error('Receiver area must be rounded to grid center');
   }else{
    if(typeof r.rid!=='string'||! /^[a-f0-9]{40}$/.test(r.rid)||/^0+$/.test(r.rid))throw Error('Invalid broadcast ID');
@@ -45,7 +45,7 @@ export function identify(hex,type,rules=catalog){
 }
 export function nodeRecord(raw,id,uploaded){
  const common={id,origin:'community-node',latitude:raw.latitude,longitude:raw.longitude,observed_at:raw.observed_at,received_at:raw.received_at,uploaded_at:uploaded,operator:null,purpose:'unknown'};
- if(raw.observation_type==='wifi-candidate')return {...common,record_type:'signal',kind:'possible-drone',domain:'unknown',name:'Possible drone / camera link',manufacturer:null,model:null,identification:'unconfirmed-wifi-name',position_basis:'receiver-area',position_method:'coarse-receiver-grid',precision:'Approximate receiver area; drone location unknown',status:'unconfirmed-signal',location_grid_degrees:.01,signature:raw.signature,protocol:'wifi-camera-candidate',frequency_mhz:raw.frequency_mhz,rssi_dbm:raw.rssi_dbm};
+ if(raw.observation_type==='wifi-candidate')return {...common,record_type:'signal',kind:'possible-drone',domain:'unknown',name:raw.signature==='tello-name'?'Possible drone · Tello-style Wi-Fi':'Possible drone / camera link',manufacturer:null,model:null,identification:'unconfirmed-wifi-name',position_basis:'receiver-area',position_method:'coarse-receiver-grid',precision:'Approximate receiver area; drone location unknown',status:'unconfirmed-signal',location_grid_degrees:.01,signature:raw.signature,protocol:'wifi-camera-candidate',frequency_mhz:raw.frequency_mhz,rssi_dbm:raw.rssi_dbm};
  const identity=identify(raw.rid,raw.id_type);
  const r={...common,record_type:'position',kind:'drone',domain:'air',name:identity.model||('Remote ID · '+id.slice(-8)),...identity,position_basis:'reported',position_method:'remote-id-broadcast',precision:'Aircraft broadcast position; unverified',status:'broadcast-reported',reported_airframe:airframes[raw.aircraft_type],protocol:raw.protocol};
  for(const key of ['altitude_m','speed_mps','heading','rssi_dbm'])if(key in raw)r[key]=raw[key];

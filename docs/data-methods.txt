@@ -213,3 +213,18 @@ per-fix timestamps need further work); Ifremer OceanGliders trajectories (latest
 checked report was September 11); humanoid.observer deployment data (site
 coordinates/duplicates need verification); UPDWG medical-drone database (2022,
 redistribution terms and locations need verification). These produce no map pins.
+
+
+Argo autonomous profiling floats (added 2026-10-16)
+Public Ifremer ERDDAP subset: https://erddap.ifremer.fr/erddap/tabledap/ArgoFloats.html
+Accept only position/time QC flag 1; preserve the actual surface-position timestamp.
+Skip stale/future, invalid, missing-time and interpolated reports. Select one newest
+surface fix per WMO identifier; manufacturer/operator remain unknown.
+These platforms drift horizontally and control vertical profiling; their last
+surface fix is not a measured current underwater position.
+Attributed export: /data/floats.json
+International Argo Program and contributing national programs; Argo GDAC via
+Ifremer. Argo is part of the Global Ocean Observing System.
+Dataset DOI: https://doi.org/10.17882/42182
+Unrestricted use, acknowledgment requested:
+https://argo.ucsd.edu/data/acknowledging-argo/
