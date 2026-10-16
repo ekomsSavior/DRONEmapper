@@ -2355,6 +2355,21 @@
       "url": "https://zoox.com/",
       "evidence": "https://zoox.com/",
       "title": "Zoox"
+    },
+    "Scripps Institution of Oceanography Instrument Development Group": {
+      "url": "https://spraydata.ucsd.edu/",
+      "evidence": "https://spraydata.ucsd.edu/",
+      "title": "Scripps Institution of Oceanography Instrument Development Group"
+    },
+    "Scripps Institution of Oceanography": {
+      "url": "https://scripps.ucsd.edu/",
+      "evidence": "https://scripps.ucsd.edu/",
+      "title": "Scripps Institution of Oceanography"
+    },
+    "Woods Hole Oceanographic Institution": {
+      "url": "https://www.whoi.edu/",
+      "evidence": "https://www.whoi.edu/",
+      "title": "Woods Hole Oceanographic Institution"
     }
   },
   "models": [
@@ -4367,6 +4382,13 @@
       "url": "https://zoox.com/know-your-ride",
       "evidence": "https://zoox.com/know-your-ride",
       "title": "The robotaxi designed arou"
+    },
+    {
+      "manufacturer": "Scripps Institution of Oceanography Instrument Development Group",
+      "model": "Spray glider",
+      "url": "https://spraydata.ucsd.edu/about",
+      "evidence": "https://spraydata.ucsd.edu/about",
+      "title": "About Spray"
     }
   ]
 }

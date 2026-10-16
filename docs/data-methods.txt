@@ -173,3 +173,21 @@ retired manufacturers. See docs/device-links-audit.txt for coverage and limits.
 Links are maintained separately from activity collection: they do not establish
 ownership, current deployment, authenticated identity or a new observation.
 They open a new tab without window-opener access or a referrer.
+
+IOOS Spray surface GPS (2026-10-16)
+----------------------------------
+Source: https://gliders.ioos.us/erddap/
+Attribution: Scripps Institution of Oceanography / Woods Hole Oceanographic
+Institution / IOOS Glider DAC. Accepted datasets declare CC BY 4.0.
+The five-minute collector discovers fresh spNNN deployments, verifies metadata
+and queries gps_end_time/lat/lon with gps_end_qc=1. It does not use interpolated
+profile coordinates. Only fixes within 24 hours, finite valid coordinates and
+matching WMO identities are admitted. No locally extrapolated positions.
+Catalog is capped at 32 deployments and requests at three concurrently.
+A failed refresh preserves prior data with its original observation times.
+WMO IDs deduplicate gliders already present in NOAA or VOTO. Every surface fix
+retains its device time; map profiles may remain as historical/ghost records.
+The details show platform/WMO identity and provider QC, not authenticated identity.
+Attributed export: /data/ioos.json. Full dataset metadata remains linked there.
+Initial research found 45 fresh IOOS deployments; only the reviewed Spray GPS
+schema is integrated. Slocum/Seaglider profile midpoints need separate validation.

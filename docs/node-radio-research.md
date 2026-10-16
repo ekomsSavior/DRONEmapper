@@ -126,3 +126,89 @@ A real collection on 2026-10-16 accepted 334 distinct floats. Counts will change
 3. Identify an available USB adapter's chipset before integrating another rootless driver.
 4. Connect one consenting DJI or VDA 5050 fleet with a documented telemetry sample and, for local robot pose, a verified coordinate transform.
 5. Evaluate additional public operator feeds independently for timestamps, permitted reuse and overlap with existing vehicle identifiers.
+
+## Follow-up research — 16 October 2026
+
+This pass adds a working public-data collector and a concrete measurement plan.
+It does not add a new proprietary-radio decoder to Android.
+
+### New public coverage and further candidates
+
+| Source | Verified finding | Integration status |
+|---|---|---|
+| [IOOS Glider DAC](https://gliders.ioos.us/) | The current catalog returned 45 deployments updated within a day. Eight Spray deployments expose surface GPS time, coordinates, WMO identity and a GPS quality flag under CC BY 4.0. | Added to Python and Cloudflare five-minute collection. Only reviewed Scripps/WHOI Spray metadata and passing GPS flags are accepted. Cross-provider WMO deduplication is retained. |
+| [Australian IMOS OceanCurrent](https://oceancurrent.aodn.org.au/gliders/) and [provider notes](https://oceancurrent.aodn.org.au/gliders/glidernotes.htm) | Separate near-real-time and delayed glider products exist; the provider describes hourly checks for near-real-time files. | Candidate. Validate per-file licenses, quality flags, position method, NetCDF access and overlap before publishing any records. Historical deployments must not be advertised as current vehicles. |
+| [Open Glider Network](https://wiki.glidernet.org/) | The project includes drones as well as crewed aircraft. [Its subscription documentation](https://wiki.glidernet.org/wiki:subscribe-to-ogn-data) describes APRS delivery. [FLARM's configuration specification](https://www.flarm.com/wp-content/uploads/2024/04/FTD-014-FLARM-Configuration-Specification-1.18.pdf) assigns aircraft type 13 to UAVs. | Candidate, not imported. An aircraft-type claim alone is insufficient: implement provider privacy/redistribution requirements and reject non-UAV traffic before considering collection. An OGN airborne glider is not an autonomous underwater glider. |
+
+The IOOS adapter uses gps_end_time, gps_end_lat, gps_end_lon and gps_end_qc.
+It deliberately avoids the catalog's generic profile midpoint coordinates.
+The collection request is bounded to 32 matching deployments and three concurrent
+requests. Unknown schemas, changed QC meanings, missing licenses, bad coordinates,
+mismatched identities and stale/future fixes fail validation. All eight real
+records passed the initial fetch. Counts will change with deployments and freshness.
+Platform ID, WMO ID and GPS quality now appear in map details when supplied.
+
+### Proprietary communication findings
+
+**DJI DroneID / OcuSync.** The [NDSS research paper](https://www.ndss-symposium.org/wp-content/uploads/2023-217-paper.pdf)
+demonstrates reception of the examined DJI DroneID broadcasts using an SDR and a
+signal-processing pipeline. It establishes a hardware-specific research path,
+not support in ordinary Android Wi-Fi scans or compatibility with every current
+DJI aircraft. A future receive-only adapter needs reproducible captures from an
+owned test aircraft, explicit model/firmware coverage and a verified device-time
+decoder. Do not collect pilot/home coordinates for the public map. CRC validity
+is packet integrity, not authenticated ownership or identity.
+
+**DJI Cloud API.** The [M3D property reference](https://github.com/dji-sdk/Cloud-API-Doc/blob/master/docs/en/60.api-reference/20.dock-to-cloud/00.mqtt/10.aircraft/10.m3d-properties.md)
+distinguishes periodically reported OSD properties from change-driven state
+properties. The documented wireless topology contains both radio/connection
+information and sensitive fields. A future owner-authorized connector should
+whitelist specific telemetry, never publish a raw MQTT object. This is a fleet
+integration path; finding a server hostname does not provide its telemetry.
+
+**VDA 5050.** [Version 3.0.0](https://github.com/VDA5050/VDA5050/releases/tag/3.0.0)
+changed position and power-supply names, including localized and stateOfCharge.
+Pin a schema version rather than applying a v2 parser to v3 messages. The
+[3.0.0 state schema](https://github.com/VDA5050/VDA5050/blob/3.0.0/json_schemas/state.schema)
+defines mobileRobotPosition in floor/map coordinates. x/y are metres, theta is
+radians, and mapId identifies that coordinate frame. Localization score is
+relative quality, not a calibrated GPS error radius. A surveyed frame transform
+is required before a warehouse robot can become a world-map point.
+
+**MAVLink.** The [common message definitions](https://mavlink.io/en/messages/common.html)
+separate raw GPS, estimated position, system clock and radio status. GPS course
+over ground describes motion, not the way the aircraft is facing. RADIO_STATUS
+RSSI is device-scaled, not universally dBm; 255 is unknown. A future owner-supplied
+telemetry bridge must retain this distinction and normalize timestamps and units.
+No public global MAVLink feed was established by this research.
+
+### Measurement contract for scanner development
+
+These are implementation requirements for the next node protocol revision,
+except fields explicitly marked as already present. Do not silently add them
+to today's strict upload schema.
+
+| Measurement | Collection and interpretation | State |
+|---|---|---|
+| Radio family and protocol version | Record the decoder and transport actually used. An undecoded RF peak cannot identify an autonomous device. | Radio transport already present; richer version reporting planned. |
+| RSSI in dBm; frequency in MHz | Android Wi-Fi ScanResult.level/frequency; Bluetooth reports its own RSSI. Keep receiver measurements separate from a device's internal link-quality score. | Present for supported observations; Wi-Fi frequency is shared for opted-in candidate signals. |
+| Last observation age | Use Android's monotonic scan timestamp to reject cached detections, then retain observation, reception and upload times separately. | Present. |
+| RSSI history | Per receiver and device, retain a bounded 60-second window of fresh observations; show sample count, median and range. Never treat scan callbacks containing cached results as new packets. | Planned; no calibrated range or bearing implied. |
+| Wi-Fi channel width / standard; BLE PHY | Record advertised/OS-reported capability only when the Android API and hardware supply it. These are radio characteristics, not a drone classification. | Planned. |
+| Position method and quality | Distinguish Remote ID claim, surface GPS, provider estimate and coarse receiver area. Preserve provider QC and reported accuracy categories separately. | Position method present; IOOS GPS QC added in this pass; Remote ID accuracy decoding planned. |
+| Velocity and direction of travel | Preserve speed units, course versus heading, and altitude reference. Missing values remain absent rather than zero. | Current Remote ID carries speed/direction/altitude; broader integrations planned. |
+| First/last seen and distinct reports | Count new observation events, not polls. Keep daily history and the existing 14-day ghost rule. | Present. |
+| Identity evidence | Separate broadcast ID, local radio address, OUI registrant, declared serial-range model and authenticated fleet identity. Never merge devices by OUI or RSSI alone. | Existing fields distinguish several of these; an explicit evidence enum is planned. |
+| Battery, operating mode and localization quality | Only from a documented, owner-authorized fleet feed; include protocol/schema version and an independent measurement timestamp. | Planned; not available from an ordinary Wi-Fi beacon. |
+
+Android field definitions:
+[ScanResult](https://developer.android.com/reference/android/net/wifi/ScanResult).
+Remote ID accuracy/status definitions:
+[OpenDroneID core header](https://github.com/opendroneid/opendroneid-core-c/blob/master/libopendroneid/opendroneid.h).
+
+The immediate phone-only development priorities are bounded RSSI history,
+available radio capability fields and Remote ID quality fields. An owned Remote
+ID airframe/module test is still needed before claiming those decoder changes
+work on real broadcasts. Fleet bridges come after a versioned, read-only schema
+and an actual authorized test stream. OcuSync reception remains a separate
+hardware effort; an external antenna alone does not give Android raw I/Q access.

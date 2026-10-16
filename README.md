@@ -39,6 +39,7 @@ Map visitors need only a browser. Scanner reports add Remote ID positions and op
 - [NOAA](https://www.pmel.noaa.gov/usv-hurricane/): uncrewed ocean vehicle measurements.
 - [EFF Atlas](https://www.atlasofsurveillance.org/atlas): documented public-safety drone programs.
 - [International Argo Program / Argo GDAC](https://doi.org/10.17882/42182): quality-checked autonomous profiling-float surface fixes; unrestricted data use with attribution requested.
+- [IOOS Glider DAC](https://gliders.ioos.us/): quality-checked Spray underwater-glider surface GPS fixes from Scripps and WHOI.
 - [NOAA CoastWatch](https://cwcgom.aoml.noaa.gov/erddap/tabledap/GLIDERS_LAST_10_DAYS_LOCATIONS.html): reported underwater glider locations.
 - [ClimateViewer](https://climateviewer.org/history-and-science/government/maps/uav-drones-over-usa/): historical UAV records.
 - [OUI Master Database](https://github.com/Ringmast4r/OUI-Master-Database) by **Ringmast4r**, using IEEE registry entries: offline MAC-prefix/radio-vendor lookup in the Android app.

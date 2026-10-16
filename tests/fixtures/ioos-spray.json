@@ -1,0 +1,151 @@
+{
+  "dataset_id": "sp013-20261012T1606",
+  "metadata": {
+    "table": {
+      "columnNames": [
+        "Row Type",
+        "Variable Name",
+        "Attribute Name",
+        "Data Type",
+        "Value"
+      ],
+      "columnTypes": [
+        "String",
+        "String",
+        "String",
+        "String",
+        "String"
+      ],
+      "rows": [
+        [
+          "attribute",
+          "NC_GLOBAL",
+          "institution",
+          "String",
+          "Scripps Institution of Oceanography"
+        ],
+        [
+          "attribute",
+          "NC_GLOBAL",
+          "license",
+          "String",
+          "Creative Commons Attribution 4.0 International Public License (https://creativecommons.org/licenses/by/4.0/)"
+        ],
+        [
+          "attribute",
+          "NC_GLOBAL",
+          "platform_type",
+          "String",
+          "Spray Glider"
+        ],
+        [
+          "attribute",
+          "gps_end_lat",
+          "comment",
+          "String",
+          "Latitude from GPS at surface at the end of the dive. See the gps_end_lat_uncorrected variable for unmodified near-real-time transmission locations. This location corresponds closely with the surface value of the profile measurements."
+        ],
+        [
+          "attribute",
+          "gps_end_lat",
+          "units",
+          "String",
+          "degrees_north"
+        ],
+        [
+          "attribute",
+          "gps_end_lon",
+          "units",
+          "String",
+          "degrees_east"
+        ],
+        [
+          "attribute",
+          "gps_end_qc",
+          "flag_meanings",
+          "String",
+          "good not_evaluated questionable bad missing"
+        ],
+        [
+          "attribute",
+          "gps_end_qc",
+          "flag_values",
+          "int",
+          "1, 2, 3, 4, 9"
+        ],
+        [
+          "attribute",
+          "gps_end_time",
+          "comment",
+          "String",
+          "GPS time at the end of the dive at surface. See the gps_end_time_uncorrected variable for unmodified near-real-time transmission locations. This location corresponds closely with the surface value of the profile measurements."
+        ],
+        [
+          "attribute",
+          "gps_end_time",
+          "units",
+          "String",
+          "seconds since 1970-01-01T00:00:00Z"
+        ],
+        [
+          "attribute",
+          "platform",
+          "id",
+          "String",
+          "sp013"
+        ],
+        [
+          "attribute",
+          "platform",
+          "platform_maker",
+          "String",
+          "Scripps Institution of Oceanography Instrument Development Group"
+        ],
+        [
+          "attribute",
+          "platform",
+          "wmo_id",
+          "String",
+          "4802946"
+        ]
+      ]
+    }
+  },
+  "position": {
+    "table": {
+      "columnNames": [
+        "wmo_id",
+        "gps_end_time",
+        "gps_end_lat",
+        "gps_end_lon",
+        "gps_end_qc"
+      ],
+      "columnTypes": [
+        "String",
+        "String",
+        "double",
+        "double",
+        "int"
+      ],
+      "columnUnits": [
+        null,
+        "UTC",
+        "degrees_north",
+        "degrees_east",
+        null
+      ],
+      "rows": [
+        [
+          "4802946",
+          "2026-10-16T16:26:00Z",
+          34.3853,
+          -120.6483,
+          1
+        ]
+      ]
+    }
+  },
+  "attribution": "Scripps Institution of Oceanography / IOOS Glider DAC; selected CC BY 4.0 metadata and GPS fields retrieved 2026-10-16",
+  "source_url": "https://gliders.ioos.us/erddap/info/sp013-20261012T1606/index.html",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+}
