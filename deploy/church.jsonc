@@ -16,6 +16,14 @@
       {
         "name": "ACTIVITY",
         "class_name": "ActivityStore"
+      },
+      {
+        "name": "NODES",
+        "class_name": "NodeNetwork"
+      },
+      {
+        "name": "ACCOUNTS",
+        "class_name": "AccountGuard"
       }
     ]
   },
@@ -24,6 +32,18 @@
       "tag": "v1",
       "new_sqlite_classes": [
         "ActivityStore"
+      ]
+    },
+    {
+      "tag": "v2-nodes",
+      "new_sqlite_classes": [
+        "NodeNetwork"
+      ]
+    },
+    {
+      "tag": "v3-accounts",
+      "new_sqlite_classes": [
+        "AccountGuard"
       ]
     }
   ],
@@ -63,5 +83,45 @@
       "pattern": "churchofmalware.org/dronemapper-promo.css",
       "zone_name": "churchofmalware.org"
     }
-  ]
+  ],
+  "vars": {
+    "NODE_INGEST_ENABLED": "true",
+    "AUTH_ENABLED": "true",
+    "AUTH_ORIGIN": "https://dronemapper.churchofmalware.org",
+    "AUTH_FROM": "dronemapper_signup@churchofmalware.org",
+    "AUTH_REPLY_TO": "dronemapper_signup@churchofmalware.org",
+    "AUTH_MAIL_PROVIDER": "cloudflare"
+  },
+  "d1_databases": [
+    {
+      "binding": "AUTH_DB",
+      "database_name": "dronemapper-accounts",
+      "database_id": "fc0575fa-c73b-4d7a-8738-ab6d04de5cba",
+      "migrations_dir": "../migrations"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "AUTH_EDGE",
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 60,
+        "period": 60
+      }
+    }
+  ],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "send_email": [
+    {
+      "name": "AUTH_EMAIL",
+      "allowed_sender_addresses": [
+        "dronemapper_signup@churchofmalware.org"
+      ]
+    }
+  ],
+  "limits": {
+    "cpu_ms": 10000
+  }
 }

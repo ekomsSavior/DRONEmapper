@@ -6,3 +6,14 @@
 
 .map-marker.historical{background:#111;border:2px dashed #aaa;opacity:.7}.legend-history{background:none!important;border:1px dashed #999}.layer-filters button{font-size:9px;padding:8px 3px}
 .detail-panel .company-link{text-decoration:underline;text-underline-offset:3px;text-decoration-color:#888}.detail-panel .company-link:hover{color:#fff;text-decoration-color:currentColor}.company-link span{font-size:11px;white-space:nowrap}
+
+.node-network-status{font:11px/1.5 monospace;color:#bbb;padding:0 18px;margin:2px 0 12px}
+.map-marker.signal,.map-marker.signal-area{background:#111;border:2px dashed #eee;border-radius:50%;transform:none}
+.legend-signal{border:1px dashed #eee!important;background:transparent!important}
+.layer-filters{flex-wrap:wrap}
+
+.map-marker.ghost {opacity:.42;filter:grayscale(1);border-style:dashed!important;background:transparent!important;box-shadow:none!important}.legend-ghost {border:1px dashed #888;background:transparent;opacity:.6}
+
+.masthead nav .app-download{display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:12px;color:#fff;border:1px solid #555;padding:10px 14px;margin:16px 0;border-radius:3px;white-space:nowrap}@media(max-width:720px){.masthead nav .app-download{font-size:10px;padding:8px;margin:8px 0}}
+
+.masthead nav .account-link{display:flex;align-items:center;justify-content:center;color:#ccc;font-size:12px;text-decoration:none;padding:10px}.masthead nav{flex-wrap:wrap}@media(max-width:760px){.masthead nav .app-download{font-size:10px;padding:5px}.masthead nav .account-link{font-size:10px;padding:5px}}

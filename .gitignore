@@ -16,3 +16,13 @@ work/
 *.pem
 public/source.zip.tmp
 hub-preview/
+.node-data/
+android-node/.gradle/
+android-node/local.properties
+android-node/**/build/
+android-node/*.jks
+android-node/*.keystore
+android-node/.idea/
+*.apk
+*.apk.idsig
+public/downloads/*.zip

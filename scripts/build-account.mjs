@@ -1,0 +1,1 @@
+import {build} from 'esbuild';await build({entryPoints:['web/account.mjs'],outfile:'public/account.js',bundle:true,minify:true,format:'esm',platform:'browser',legalComments:'linked'});console.log('Account client built.');

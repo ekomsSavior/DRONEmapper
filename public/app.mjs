@@ -1,15 +1,16 @@
 import {companyWebsite} from './company-links.mjs';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const names = {drone:'Drone','robot-dog':'Robot dog',humanoid:'Humanoid','ground-robot':'Ground robot','delivery-robot':'Delivery robot','industrial-robot':'Industrial robot','autonomous-vehicle':'Autonomous vehicle','surface-vessel':'Unmanned vessel',underwater:'Underwater vehicle',unknown:'Unknown',delivery:'Delivery','public-safety':'Public safety',research:'Research',commercial:'Commercial',personal:'Personal',defense:'Defense'};
-const state={data:null,kind:'all',layer:'all',hours:24,search:'',purpose:'all',selected:null,offset:0,pending:false,error:false,limit:100,version:0};
+const names = {'possible-drone':'Possible drone / camera link',drone:'Drone','robot-dog':'Robot dog',humanoid:'Humanoid','ground-robot':'Ground robot','delivery-robot':'Delivery robot','industrial-robot':'Industrial robot','autonomous-vehicle':'Autonomous vehicle','surface-vessel':'Unmanned vessel',underwater:'Underwater vehicle',unknown:'Unknown',delivery:'Delivery','public-safety':'Public safety',research:'Research',commercial:'Commercial',personal:'Personal',defense:'Defense'};
+const state={data:null,kind:'all',layer:'all',hours:0,search:'',purpose:'all',selected:null,offset:0,pending:false,error:false,limit:100,version:0};
 const now=()=>Date.now()/1000+state.offset;
 const age=t=>{if(!Number.isFinite(t))return 'Unknown';const s=Math.max(0,now()-t);return s<60?`${Math.floor(s)}s ago`:s<3600?`${Math.floor(s/60)}m ago`:s<86400?`${Math.floor(s/3600)}h ago`:`${Math.floor(s/86400)}d ago`;};
 const date=t=>t?new Date(t*1000).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'}):'Not reported';
 const isPosition=t=>t.record_type==='position';
-const isLive=t=>isPosition(t)&&now()-t.observed_at<=120&&now()>=t.observed_at;
-const label=t=>isPosition(t)?`${isLive(t)?'Live position':'Last position'} · ${age(t.observed_at)}`:t.record_type==='historical'?(t.status==='historical-survey'?`UAV survey · ${t.record_dates?.slice(0,10)||t.archive_year}`:`Historical · ${t.archive_year} archive`):t.status==='pilot'?'Documented pilot':t.status==='documented-program'?(t.kind==='drone'?'Documented drone program':'Documented driverless service'):'Documented deployment';
-const glyph=t=>t.domain==='air'?'△':t.kind==='robot-dog'?'◇':t.domain==='water'?'≈':'□';
+const isGhost=t=>Boolean(t.profile_id)&&now()-(t.last_seen||t.observed_at)>=14*86400;
+const isLive=t=>isPosition(t)&&!t.position_conflict&&now()-t.observed_at<=120&&now()>=t.observed_at;
+const label=t=>isGhost(t)?'Ghost · last seen '+age(t.last_seen||t.observed_at):t.record_type==='signal'?'Possible signal · '+age(t.observed_at):isPosition(t)?`${isLive(t)?'Live position':'Last position'} · ${age(t.observed_at)}`:t.record_type==='historical'?(t.status==='historical-survey'?`UAV survey · ${t.record_dates?.slice(0,10)||t.archive_year}`:`Historical · ${t.archive_year} archive`):t.status==='pilot'?'Documented pilot':t.status==='documented-program'?(t.kind==='drone'?'Documented drone program':'Documented driverless service'):'Documented deployment';
+const glyph=t=>isGhost(t)?'♧':t.record_type==='signal'?'◌':t.domain==='air'?'△':t.kind==='robot-dog'?'◇':t.domain==='water'?'≈':'□';
 const map=L.map('map',{zoomControl:false,worldCopyJump:true,minZoom:2,maxZoom:18}).setView([22,10],2);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'}).addTo(map);
 map.attributionControl.setPrefix(false);
@@ -19,8 +20,8 @@ let toastTimer,renderKey='';
 function toast(message){$('toast').textContent=message;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,5000);}
 function allRecords(){return state.data?[...state.data.tracks,...state.data.activity]:[];}
 function matching(){const b=map.getBounds();return allRecords().filter(t=>
-  (!isPosition(t)||now()-t.observed_at<=state.hours*3600)&&
-  (state.layer==='all'||state.layer==='positions'&&isPosition(t)||state.layer==='activity'&&t.record_type==='activity'||state.layer==='historical'&&t.record_type==='historical')&&
+  (!state.hours||!(isPosition(t)||t.record_type==='signal')||now()-t.observed_at<=state.hours*3600)&&
+  (state.layer==='all'||state.layer==='ghosts'&&isGhost(t)||state.layer==='nodes'&&t.origin==='community-node'||state.layer==='signals'&&t.record_type==='signal'||state.layer==='positions'&&isPosition(t)||state.layer==='activity'&&t.record_type==='activity'||state.layer==='historical'&&t.record_type==='historical')&&
   (state.kind==='all'||t.domain===state.kind||t.kind===state.kind)&&
   (state.purpose==='all'||t.purpose===state.purpose)&&
   (!$('in-view').checked||[-360,0,360].some(o=>b.contains([t.latitude,t.longitude+o])))&&
@@ -30,18 +31,24 @@ function resetFilters(){state.kind='all';state.layer='all';state.search='';state
 function render(force=false){
  if(!state.data)return;
  const records=matching(),collection=state.data.collection;
+ const nodeOnly=Boolean(state.data.node_test)&&collection.total===0;
+ $('node-network-status').textContent=state.data.nodes?.enabled?(state.data.nodes.unavailable?'Node feed temporarily unavailable':`${state.data.nodes.active_nodes} live node(s) · ${state.data.nodes.positions||0} positions · ${state.data.nodes.signals||0} possible signals`):'';
+ $('node-network-status').hidden=!state.data.nodes?.enabled;
+ $('feed-scope').textContent=nodeOnly?'LOCAL OBSERVATIONS':'GLOBAL ACTIVITY';
+ $('collection-cadence').textContent=state.data.node_test?'Phone uploads every 10s while sharing. Map refreshes every 15s.':'External collection every 5 min; node reports arrive as received. Map refreshes every 15s.';
  $('active-count').textContent=records.filter(isLive).length.toLocaleString();
  $('drone-count').textContent=records.filter(t=>t.domain==='air').length.toLocaleString();
- $('robot-count').textContent=records.filter(t=>t.domain!=='air').length.toLocaleString();
+ $('robot-count').textContent=records.filter(t=>['ground','water'].includes(t.domain)).length.toLocaleString();
  $('result-count').textContent=records.length.toLocaleString();
  $('result-caption').textContent=state.layer==='positions'?'REPORTED POSITIONS':state.layer==='activity'?'DEPLOYMENT RECORDS':state.layer==='historical'?'HISTORICAL RECORDS':'ACTIVITY RECORDS';
- $('connection').textContent=state.error?'RECONNECTING':collection.collecting?'UPDATING':collection.delayed?'PARTIAL UPDATE':'AUTO · 5 MIN';
- $('server-status').textContent=state.error?'CONNECTION LOST':collection.delayed?'SOME UPDATES DELAYED':'AUTOMATIC COLLECTION ACTIVE';
- $('collection-summary').textContent=`${allRecords().length.toLocaleString()} records worldwide`;
- $('last-check').textContent=collection.last_success?`UPDATED ${age(collection.last_success).toUpperCase()}`:'COLLECTING DATA';
+ $('connection').textContent=state.error?'RECONNECTING':state.data.node_test?'LOCAL NODE TEST':collection.collecting?'UPDATING':collection.delayed?'PARTIAL UPDATE':'AUTO · 5 MIN';
+ $('server-status').textContent=state.error?'CONNECTION LOST':state.data.node_test?'LOCAL TEST · PHONE OBSERVATIONS':collection.delayed?'SOME UPDATES DELAYED':'AUTOMATIC COLLECTION ACTIVE';
+ $('collection-summary').textContent=`${allRecords().length.toLocaleString()} records ${nodeOnly?'in this local test':'worldwide'}`;
+ $('last-check').textContent=state.data.node_test?`${state.data.node_test.positions} NODE POSITIONS · LOCAL ONLY`:collection.last_success?`UPDATED ${age(collection.last_success).toUpperCase()}`:'COLLECTING DATA';
  $('map-status').hidden=records.length>0;
  $('map-status-title').textContent=state.layer==='positions'?'No positions match this view':'No matching activity';
  $('map-status-body').textContent=state.layer==='positions'?'Try a wider time window or switch to All activity. Deployment areas remain available.':'Try another area or reset your filters.';
+ if(nodeOnly&&!allRecords().length){$('map-status-title').textContent='Waiting for a phone node';$('map-status-body').textContent='Enable local sharing in the Android app. Received Remote ID positions will appear here.';}
  const key=[state.version,state.kind,state.layer,state.hours,state.search,state.purpose,state.limit,$('in-view').checked?map.getBounds().toBBoxString():'',Math.floor(now()/120)].join('|');
  if(force||key!==renderKey){
   renderKey=key;
@@ -49,6 +56,7 @@ function render(force=false){
   document.querySelectorAll('[data-record]').forEach(b=>b.onclick=()=>selectRecord(b.dataset.record));
   if($('load-more'))$('load-more').onclick=()=>{state.limit+=100;render(true);};
   if($('empty-reset'))$('empty-reset').onclick=resetFilters;
+  if(nodeOnly&&!allRecords().length){$('observations').querySelector('h1').textContent='Waiting for real observations';$('observations').querySelector('p').textContent='No phone has contributed a recent positioned Remote ID broadcast. This local test contains no sample detections.';}
  }
  drawMarkers(records);
  if(state.selected){const t=allRecords().find(r=>r.id===state.selected);if(t&&records.some(r=>r.id===t.id))showDetail(t);else closeDetail();}
@@ -62,8 +70,8 @@ function drawMarkers(records){
    const marker=L.marker([lat,lng],{icon:L.divIcon({className:'cluster-wrap',html:`<span class="cluster">${group.length}</span>`,iconSize:[36,36],iconAnchor:[18,18]}),title:`${group.length} activity records`});
    marker.on('click',()=>{if(map.getZoom()<13&&new Set(group.map(t=>`${t.latitude},${t.longitude}`)).size>1)map.setView([lat,lng],Math.min(map.getZoom()+3,14));else showGroup(group);}).addTo(markers);
   }else{
-   const t=group[0],type=t.kind==='robot-dog'?'robot-dog':t.domain==='air'?'drone':t.domain==='water'?'water':'robot';
-   const marker=L.marker([t.latitude,t.displayLng],{icon:L.divIcon({className:'marker-wrap',html:`<span class="map-marker ${type} ${isPosition(t)?isLive(t)?'position':'older':t.record_type==='historical'?'historical':'deployment'}"></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`${t.name} · ${label(t)}`});
+   const t=group[0],type=t.record_type==='signal'?'signal':t.kind==='robot-dog'?'robot-dog':t.domain==='air'?'drone':t.domain==='water'?'water':'robot';
+   const marker=L.marker([t.latitude,t.displayLng],{icon:L.divIcon({className:'marker-wrap',html:`<span class="map-marker ${type} ${isGhost(t)?'ghost ':''}${t.record_type==='signal'?'signal-area':isPosition(t)?isLive(t)?'position':'older':t.record_type==='historical'?'historical':'deployment'}"></span>`,iconSize:[28,28],iconAnchor:[14,14]}),title:`${t.name} · ${label(t)}`});
    const tip=document.createElement('span');tip.textContent=`${t.name} · ${label(t)}`;marker.bindTooltip(tip).on('click',()=>selectRecord(t.id,false)).addTo(markers);
   }
  }
@@ -72,13 +80,31 @@ function showGroup(group){$('detail').hidden=false;state.selected=null;trails.cl
 function selectRecord(id,move=true){const t=allRecords().find(x=>x.id===id);if(!t)return;state.selected=id;if(move)map.setView([t.latitude,t.longitude],isPosition(t)?9:8);showDetail(t);render(true);if(innerWidth<=700)document.querySelector('.map-workspace').scrollIntoView({behavior:'smooth',block:'start'});}
 function showDetail(t){
  $('detail').hidden=false;
- const fields=[['Type',names[t.kind]||t.kind],['Record',isPosition(t)?(t.position_basis==='reported'?'Reported position':'Measured position'):t.record_type==='historical'?'Historical area':'Deployment area'],['Model',t.model||'Unknown'],['Manufacturer',t.manufacturer||'Unknown',companyWebsite(t.manufacturer)],['Operator',t.operator||'Unknown',companyWebsite(t.operator)],['Purpose',names[t.purpose]||t.purpose||'Unknown'],['Location precision',t.precision||'Not reported']];
- if(isPosition(t)){fields.push(['Observed',date(t.observed_at)],['Position',`${t.latitude.toFixed(5)}, ${t.longitude.toFixed(5)}`]);if(Number.isFinite(t.altitude_m))fields.push(['Altitude',`${Math.round(t.altitude_m)} m · ${t.altitude_reference||'reference unknown'}`]);if(Number.isFinite(t.speed_mps))fields.push(['Speed',`${t.speed_mps.toFixed(1)} m/s`]);if(t.registration)fields.push(['Registration',t.registration]);}
+ const fields=[['Type',names[t.kind]||t.kind],['Record',t.record_type==='signal'?'Unconfirmed signal / receiver area':isPosition(t)?(t.position_basis==='reported'?'Reported position':'Measured position'):t.record_type==='historical'?'Historical area':'Deployment area'],['Model',t.model||'Unknown'],['Manufacturer',t.manufacturer||'Unknown',companyWebsite(t.manufacturer)],['Operator',t.operator||'Unknown',companyWebsite(t.operator)],['Purpose',names[t.purpose]||t.purpose||'Unknown'],['Location precision',t.precision||'Not reported']];
+ if(t.position_method==='remote-id-broadcast')fields.push(['Broadcast airframe type',t.reported_airframe||'Unknown'],['Radio',t.protocol||'Unknown'],['Identity status','Unverified broadcast claim']);
+ if(t.profile_id&&t.origin!=='community-node')fields.push(['Profile',t.profile_id],['Profile state',isGhost(t)?'Ghost · no report for at least 14 days':'Seen within 14 days'],['First seen',date(t.first_seen)],['Last seen',date(t.last_seen)],['Distinct position reports',t.observation_count||1],['Match basis',t.identity_basis]);
+ if(t.origin==='community-node'){
+  fields.push(['Profile',t.profile_id||t.id],['Profile state',isGhost(t)?'Ghost · no report for at least 14 days':'Seen within 14 days'],['Match basis',t.identity_basis||'Reported identifier'],['Collected by','Community scanner node'],['Contributor',t.contributors?.length?t.contributors.join(', '):'Anonymous'],['Node status',t.node_online?'Reporting within 2 minutes':'Last report / node offline'],['First seen',date(t.first_seen||t.observed_at)],['Last seen',date(t.last_seen||t.observed_at)],['Received by node',date(t.received_at)],['Received by website',date(t.uploaded_at)],['Observation time (UTC)',new Date(t.observed_at*1000).toISOString()],['Reporting nodes',t.reporting_nodes||1],['Observations',t.observation_count||1],['Identification',t.identification||'Unknown']);
+  if(t.module_model)fields.push(['Broadcast module',t.module_model],['Module manufacturer',t.module_manufacturer]);
+  if(t.rssi_dbm!==undefined)fields.push(['Signal strength',`${t.rssi_dbm} dBm · not a distance`]);
+  if(t.position_conflict)fields.push(['Quality','Conflicting position reports; path hidden']);
+ }
+ if(t.record_type==='signal')fields.push(['Radio',`Wi-Fi · ${t.frequency_mhz} MHz`],['Detected',date(t.observed_at)],['Map area','Rounded receiver location; drone position unknown']);
+ else if(isPosition(t)){fields.push(['Observed',date(t.observed_at)],['Position',`${t.latitude.toFixed(5)}, ${t.longitude.toFixed(5)}`]);if(Number.isFinite(t.altitude_m))fields.push(['Altitude',`${Math.round(t.altitude_m)} m · ${t.altitude_reference||'reference unknown'}`]);if(Number.isFinite(t.speed_mps))fields.push(['Speed',`${t.speed_mps.toFixed(1)} m/s`]);if(t.registration)fields.push(['Registration',t.registration]);}
  else if(t.record_type==='historical'){fields.push(['Area',t.place||'Not reported'],[t.status==='historical-survey'?'Capture dates':'Record dates',t.record_dates||'Not specified'],[t.status==='historical-survey'?'Capture year':'Archive edition',t.archive_year],['Record status',t.status==='historical-survey'?'Published UAV imagery':t.status==='historical-base'?'Historical base record':'Historical authorization']);}
  else{fields.push(['Area',t.place||'Not reported'],[t.status==='documented-program'?'Documentation dates':'First recorded',t.record_dates||t.first_year||'Not reported'],['Activity status',t.status==='pilot'?'Pilot / trial':t.status==='documented-program'?'Documented program; current use unverified':'Reported deployment']);}
  $('detail').innerHTML=`<button class="detail-close" id="close-detail" aria-label="Close details">×</button><span class="eyebrow">${esc(label(t).toUpperCase())}</span><h2>${esc(t.name)}</h2><p>${esc(names[t.kind]||t.kind)}</p><dl>${fields.map(([k,v,url])=>`<div><dt>${esc(k)}</dt><dd>${url?`<a class="company-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer" title="${esc(v)} website (opens in a new tab)">${esc(v)} <span aria-hidden="true">↗</span></a>`:esc(v)}</dd></div>`).join('')}</dl><p class="detail-evidence">${isPosition(t)?(t.position_basis==='reported'?(t.position_method==='provider-estimated'?'This is a provider-reported position estimated between surface fixes at the displayed time. DRONE MAPPER does not extrapolate it.':'This is a provider-reported location at the displayed time. Its positioning method is unspecified. The marker is not moved forward between reports.'):'This is a measured position at the displayed time. The marker is not moved forward between reports.'):t.record_type==='historical'?(t.status==='historical-survey'?'This marks the center of a published UAV imagery footprint at its stated capture date. Imagery records may overlap or come from the same survey. This is not a current aircraft position or a flight count.':'This is an older authorization or base record. It does not establish that a drone is present, that a flight occurred, or that an authorization remains valid.'):'This is a published deployment record at an approximate area. It is not a live sighting or a count of vehicles currently present.'}</p>`;
+ if(t.sighting_history?.length){
+  const history=t.sighting_history.slice(-14).reverse();
+  $('detail').insertAdjacentHTML('beforeend',`<details class="profile-history"><summary>Seen on ${t.sighting_history.length} recorded day(s)</summary><p>Latest 14 daily summaries. Areas are last reported that day; they are not continuous routes.</p><dl>${history.map(h=>`<div><dt>${esc(h.day)}</dt><dd>${esc(h.observations)} reports · ${Number(h.latitude).toFixed(t.record_type==='signal'?3:4)}, ${Number(h.longitude).toFixed(t.record_type==='signal'?3:4)}</dd></div>`).join('')}</dl></details>`);
+ }
  $('close-detail').onclick=closeDetail;trails.clearLayers();
- if(isPosition(t)&&t.trail?.length>1){let segment=[];for(const p of t.trail){const prior=segment.at(-1);if(prior&&(p.observed_at-prior.observed_at>600||Math.abs(p.longitude-prior.longitude)>180)){drawSegment(segment);segment=[];}segment.push(p);}drawSegment(segment);}
+ if(t.position_method==='remote-id-broadcast')$('detail').querySelector('.detail-evidence').textContent='A nearby node received this Remote ID position broadcast. Identity and coordinates are unverified and may be spoofed. The observation retains its broadcast time; DRONE MAPPER does not estimate a new position. Make/model matches use declared serial ranges and are not authenticated identity. A separate broadcast module does not identify the host aircraft. Operator purpose remains unknown.';
+ if(t.record_type==='signal'){
+  $('detail').querySelector('.detail-evidence').textContent='A node heard a Wi-Fi name pattern used by camera drones. This can be another type of device or a renamed access point. The square marks the approximate receiver area, not the drone location or radio range. Manufacturer and model are unknown. Network names and MAC addresses are not published.';
+  L.rectangle([[t.latitude-.005,t.longitude-.005],[t.latitude+.005,t.longitude+.005]],{color:'#eee',weight:1,dashArray:'5 5',fillOpacity:.08}).addTo(trails);
+ }
+ if(isPosition(t)&&!t.position_conflict&&t.trail?.length>1){let segment=[];for(const p of t.trail){const prior=segment.at(-1);if(prior&&(p.observed_at-prior.observed_at>600||Math.abs(p.longitude-prior.longitude)>180)){drawSegment(segment);segment=[];}segment.push(p);}drawSegment(segment);}
 }
 function drawSegment(points){if(points.length>1)L.polyline(points.map(p=>[p.latitude,p.longitude]),{color:'#eee',weight:2,opacity:.7,dashArray:'4 5'}).addTo(trails);}
 function closeDetail(){state.selected=null;$('detail').hidden=true;trails.clearLayers();}
@@ -87,10 +113,10 @@ map.on('moveend',()=>{const c=map.getCenter();$('map-coordinate').textContent=`$
 $('zoom-in').onclick=()=>map.zoomIn();$('zoom-out').onclick=()=>map.zoomOut();$('reset-view').onclick=()=>map.setView([22,10],2);$('reset-filters').onclick=resetFilters;$('refresh-view').onclick=()=>refresh();
 $('locate').onclick=()=>{if(!navigator.geolocation)return toast('Location unavailable. Pan or search the map.');navigator.geolocation.getCurrentPosition(p=>map.setView([p.coords.latitude,p.coords.longitude],10),()=>toast('Location unavailable. Pan or search the map.'),{timeout:10000,maximumAge:60000});};
 document.querySelectorAll('[data-kind]').forEach(b=>b.onclick=()=>{state.kind=b.dataset.kind;state.limit=100;document.querySelectorAll('[data-kind]').forEach(x=>x.setAttribute('aria-pressed',x===b));render(true);});
-document.querySelectorAll('[data-layer]').forEach(b=>b.onclick=()=>{state.layer=b.dataset.layer;state.limit=100;document.querySelectorAll('[data-layer]').forEach(x=>x.setAttribute('aria-pressed',x===b));render(true);});
+document.querySelectorAll('[data-layer]').forEach(b=>b.onclick=()=>{state.layer=b.dataset.layer;state.limit=100;if(state.layer==='ghosts'&&state.hours){state.hours=0;document.querySelectorAll('[data-hours]').forEach(x=>x.setAttribute('aria-pressed',x.dataset.hours==='0'));refresh();}document.querySelectorAll('[data-layer]').forEach(x=>x.setAttribute('aria-pressed',x===b));render(true);});
 document.querySelectorAll('[data-hours]').forEach(b=>b.onclick=()=>{state.hours=Number(b.dataset.hours);document.querySelectorAll('[data-hours]').forEach(x=>x.setAttribute('aria-pressed',x===b));closeDetail();render(true);refresh();});
 $('search').oninput=e=>{state.search=e.target.value.trim().toLowerCase();state.limit=100;render(true);};$('purpose').onchange=e=>{state.purpose=e.target.value;state.limit=100;render(true);};$('in-view').onchange=()=>render(true);
-function about(){const c=state.data?.collection;$('dialog-kicker').textContent='DRONE MAPPER / SAVIORSEC';$('dialog-content').innerHTML=`<h1 id="dialog-title">The autonomous world, mapped.</h1><p class="intro">Drones, robots and autonomous vehicles across air, ground and water. Free to explore in your browser.</p><div class="process"><div><span>01 / POSITIONS</span><strong>Where it was observed</strong><p>Published positions retain their observation timestamps. Live means a report within two minutes.</p></div><div><span>02 / ACTIVITY</span><strong>Where it has been deployed</strong><p>Documented deployment areas and pilots, plus a separate dated History layer. These records never become moving vehicles.</p></div><div><span>03 / UPDATES</span><strong>Every five minutes</strong><p>Collection runs automatically on the server. Your map refreshes as new records arrive.</p></div></div><p>Last collection: ${c?.last_success?esc(date(c.last_success)):'In progress'}. Coverage varies by region and vehicle. Missing records do not mean an area is clear. Autonomous vehicle records may include supervised pilots; operation without a human is not assumed.</p><p>Research measurements, fleet deployments and aircraft positions have different update speeds. Model and operator information is shown only when available.</p><div class="dialog-links"><a href="source.zip">Download open-source code ↗</a><a href="credits.html">Credits & licenses ↗</a></div>`;$('info-dialog').showModal();}
+function about(){const c=state.data?.collection;$('dialog-kicker').textContent='DRONE MAPPER / SAVIORSEC';$('dialog-content').innerHTML=`<h1 id="dialog-title">The autonomous world, mapped.</h1><p class="intro">Drones, robots and autonomous vehicles across air, ground and water. Free to explore in your browser.</p><div class="process"><div><span>01 / POSITIONS</span><strong>Where it was observed</strong><p>Published positions retain their observation timestamps. Live means a report within two minutes.</p></div><div><span>02 / ACTIVITY</span><strong>Where it has been deployed</strong><p>Documented deployment areas and pilots, plus a separate dated History layer. These records never become moving vehicles.</p></div><div><span>03 / UPDATES</span><strong>Community nodes + worldwide data</strong><p>External collection runs every five minutes. Opted-in Android nodes add Remote ID positions and separately opted-in, approximate Wi-Fi signal areas. Your map refreshes every 15 seconds.</p></div></div><p>Last collection: ${c?.last_success?esc(date(c.last_success)):'In progress'}. Coverage varies by region and vehicle. Missing records do not mean an area is clear. Autonomous vehicle records may include supervised pilots; operation without a human is not assumed.</p><p>Research measurements, fleet deployments and aircraft positions have different update speeds. Model and operator information is shown only when available.</p><div class="dialog-links"><a href="nodes.html">Contribute with Android ↗</a><a href="source.zip">Download open-source code ↗</a><a href="credits.html">Credits & licenses ↗</a></div>`;$('info-dialog').showModal();}
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>b.dataset.view==='about'?about():$('info-dialog').close());$('close-dialog').onclick=()=>$('info-dialog').close();
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)&&!$('info-dialog').open){e.preventDefault();$('search').focus();}if(e.key==='Escape')closeDetail();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh();});

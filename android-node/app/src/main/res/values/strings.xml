@@ -1,0 +1,9 @@
+<resources>
+    <string name="scan_counts">Remote ID: %1$d · Wi-Fi signals: %3$d · Frames: %2$d</string>
+    <string name="queue_status">%1$s\nQueued: %2$d · expires after 15 min</string>
+    <string name="share_new">Share new observations</string>
+<string name="share_areas">Also share approximate areas for Wi-Fi candidates</string>
+<string name="radar_location">Use phone location for on-device radar</string>
+<string name="radar_hide">Scanner radar ▾</string><string name="radar_show">Scanner radar ▸</string>
+<string name="list_hide">Live detections ▾</string><string name="list_show">Live detections ▸</string>
+</resources>

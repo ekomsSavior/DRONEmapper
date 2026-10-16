@@ -1,2 +1,5 @@
 # Preserve the upstream vendored files without whitespace diagnostics.
 public/vendor/* -whitespace
+
+# Store Windows launchers normalized, with CRLF on checkout.
+*.bat text eol=crlf

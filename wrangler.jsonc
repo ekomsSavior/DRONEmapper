@@ -15,6 +15,14 @@
       {
         "name": "ACTIVITY",
         "class_name": "ActivityStore"
+      },
+      {
+        "name": "NODES",
+        "class_name": "NodeNetwork"
+      },
+      {
+        "name": "ACCOUNTS",
+        "class_name": "AccountGuard"
       }
     ]
   },
@@ -24,11 +32,51 @@
       "new_sqlite_classes": [
         "ActivityStore"
       ]
+    },
+    {
+      "tag": "v2-nodes",
+      "new_sqlite_classes": [
+        "NodeNetwork"
+      ]
+    },
+    {
+      "tag": "v3-accounts",
+      "new_sqlite_classes": [
+        "AccountGuard"
+      ]
     }
   ],
   "triggers": {
     "crons": [
       "*/5 * * * *"
     ]
-  }
+  },
+  "vars": {
+    "NODE_INGEST_ENABLED": "false",
+    "AUTH_ENABLED": "false",
+    "AUTH_ORIGIN": "https://dronemapper.churchofmalware.org",
+    "AUTH_FROM": "dronemapper_signup@churchofmalware.org",
+    "AUTH_REPLY_TO": "dronemapper_signup@churchofmalware.org"
+  },
+  "d1_databases": [
+    {
+      "binding": "AUTH_DB",
+      "database_name": "dronemapper-accounts",
+      "database_id": "replace-with-your-database-id",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "AUTH_EDGE",
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 60,
+        "period": 60
+      }
+    }
+  ],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
 }
