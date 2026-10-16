@@ -4,6 +4,9 @@ A free, open-source map of drones, robots and autonomous vehicles. Built by **[C
 
 **[Open the map](https://dronemapper.churchofmalware.org/)** · [GitHub](https://github.com/ekomsSavior/DRONEmapper) · [Gitea](https://git.churchofmalware.org/ek0mssavi0r/DRONEmapper)
 
+<img width="982" height="964" alt="Screenshot_20261015_220619" src="https://github.com/user-attachments/assets/360dc6dc-3d93-4912-b674-b6dcc396375a" />
+
+
 ## Android app
 
 Android 8 or newer. No root or Bluetooth dongle needed.
@@ -42,3 +45,5 @@ Map visitors need only a browser. Scanner reports add Remote ID positions and op
 Coverage varies. Deployment areas and historical records are labeled separately from timestamped positions; this is not universal live tracking.
 
 Website: **[AGPL-3.0-or-later](LICENSE)**. Android app: **[GPL-2.0-only](android-node/LICENSE)**. Third-party data keeps its own licenses. [Data details](docs/data-methods.txt) · [Advanced setup](docs/setup.md).
+
+<img width="624" height="341" alt="Screenshot_20261015_230856" src="https://github.com/user-attachments/assets/283dcdc7-a222-4e89-aad2-925b777a795b" />
