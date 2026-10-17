@@ -52,3 +52,38 @@ Vendor names identify allocation registrants; they do not establish a drone,
 robot, model, operator or identity. Local/random addresses are not resolved.
 The dataset is bundled for offline lookup; no MAC lookup requests are sent.
 Website logo: Church of Malware / saviorSEC, same vector geometry as public/icon.svg.
+
+MEDIATEK ROOTLESS USB RECEIVE DRIVERS (2026-10-17)
+app/src/main/cpp/uwifi is adapted from Kismet's userspace USB Wi-Fi layer:
+https://github.com/kismetwireless/kismet/tree/e3d31f3275484f8b3d4cc56a5893a4fcf964585d/capture_userspace_usb_wifi
+Copyright Mike Kershaw / Kismet contributors; GPL-2.0-or-later for its wrapper.
+Vendored Linux driver and wireless headers retain their original copyright and
+SPDX notices (GPL-2.0-only, ISC, BSD variants as marked in each file).
+The added drivers/mt76/mt76x0 directory is from Linux v6.18:
+https://github.com/torvalds/linux/tree/v6.18/drivers/net/wireless/mediatek/mt76/mt76x0
+
+DRONEmapper modifications: Android libc/header compatibility; getrandom syscall
+for API 26; Android-granted USB file descriptor entry point; USB serial reads
+omitted; JNI receive callback and frame counts; no packet transmit API exposed;
+MT7610U added to the userspace driver build. Sources and build script are included.
+Native drivers compile for arm64-v8a, armeabi-v7a, and x86_64. Compilation does
+not establish physical adapter reception; see docs/usb-scanner-testing.md.
+
+app/src/main/cpp/libusb: libusb 1.0.29, LGPL-2.1-or-later; see its COPYING.
+https://github.com/libusb/libusb/releases/tag/v1.0.29
+The full corresponding source used for the Android library is included.
+
+Hardware firmware is redistributed unmodified under the separate Ralink / MediaTek
+binary redistribution license, bundled in assets/usb-firmware. It is firmware for
+the adapter, not open-source app code. mt7662 firmware comes from pinned Kismet
+above; mt7610u.bin comes from Ubuntu linux-firmware
+20240318.git3b128b60-0ubuntu2.27 (decompressed unchanged from its .zst container).
+Checksums and provenance: app/src/main/assets/usb-firmware/provenance.json.
+
+RECEIVER RESEARCH CREDITS
+justcallmekoko / ESP32 Marauder Remote ID decoder and receiver scheduling:
+https://github.com/justcallmekoko/ESP32Marauder/tree/d3ceb28afeda1196ca27c13adeaa69ada52383f3
+RocketGod / Wardrive Go USB architecture research:
+https://github.com/RocketGod-git/wardrive-go/tree/b30f16fb3b31807b2526678db2de12c377e09ff6
+DRONEmapper's Java NAN framing parser is independently implemented. No Wardrive Go
+GPL-3.0 code is copied into this GPL-2.0-only Android application.

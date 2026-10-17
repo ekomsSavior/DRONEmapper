@@ -42,3 +42,11 @@ test('documented Tello SSID is an unconfirmed receiver area, never an identified
  assert.equal(record.position_basis,'receiver-area');
  assert.throws(()=>validateBatch(batch({...raw,signature:'any-wifi'}),now));
 });
+
+ test('USB NAN positions use the same validation and original observation time',()=>{
+ const raw={event_id:id,rid:serial('TEST-ONLY'),id_type:1,aircraft_type:2,protocol:'usb-wifi-nan',
+ latitude:37,longitude:-122,observed_at:now-10,received_at:now-9};
+ const [event]=validateBatch(batch(raw),now);
+ assert.equal(event.protocol,'usb-wifi-nan');assert.equal(event.observed_at,now-10);
+ assert.throws(()=>validateBatch(batch({...raw,protocol:'usb-any-radio'}),now));
+ });

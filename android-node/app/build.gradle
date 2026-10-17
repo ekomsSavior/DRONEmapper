@@ -2,12 +2,15 @@ plugins { id 'com.android.application' }
 android {
     namespace 'org.churchofmalware.dronemapper.node'
     compileSdk 35
+    ndkVersion '28.2.13676358'
+    sourceSets { main { jniLibs.srcDirs = ['build/generated/radio/jniLibs'] } }
     defaultConfig {
         applicationId 'org.churchofmalware.dronemapper.node'
         minSdk 26
         targetSdk 35
-        versionCode 7
-        versionName '0.4.3'
+        versionCode 9
+        versionName '0.5.1'
+        testInstrumentationRunner 'org.churchofmalware.dronemapper.node.UsbSmokeInstrumentation'
     }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
     buildTypes { release { minifyEnabled false } }
@@ -26,3 +29,16 @@ android {
     }
 }
 dependencies { testImplementation 'junit:junit:4.13.2'; testImplementation 'org.robolectric:robolectric:4.14.1' }
+
+// Build receive-only USB drivers from the checked-in sources; no downloaded binary driver.
+tasks.register('buildUsbDrivers') {
+    inputs.dir('src/main/cpp')
+    inputs.file('../build-usb.py')
+    outputs.dir('build/generated/radio/jniLibs')
+    doLast {
+        ['arm64-v8a', 'armeabi-v7a', 'x86_64'].each { abi ->
+            exec { commandLine 'python3', '../build-usb.py', "${android.sdkDirectory}/ndk/${android.ndkVersion}", abi }
+        }
+    }
+}
+tasks.named('preBuild').configure { dependsOn 'buildUsbDrivers' }

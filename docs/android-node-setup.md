@@ -38,7 +38,7 @@ For a local Worker test use `npx wrangler dev --ip 127.0.0.1 --port 8783`, a pri
 
 ## Optional USB Wi-Fi
 
-Connect an RTL8187L adapter (USB 0bda:8187) with OTG, then choose **USB Wi-Fi adapter** and approve Android’s USB permission. The bundled driver covers 2.4 GHz channels 1–11, one channel at a time. Other adapters need specific userspace drivers; an antenna alone does not add radio support. Physical adapter reception still needs testing.
+Connect a supported MT7610U, MT7612U or RTL8187L adapter with OTG, choose **USB Wi-Fi adapter** and approve Android’s USB permission. The MediaTek drivers cover 2.4 / 5 GHz; RTL8187L covers 2.4 GHz channels 1–11, one channel at a time. See [exact USB IDs and test steps](usb-scanner-testing.md). Other adapters need specific userspace drivers. Driver availability and physical reception are tracked separately.
 
 ## Stop and privacy
 

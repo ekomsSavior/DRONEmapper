@@ -14,9 +14,9 @@ Expand or collapse the live list and radar. The **Signals** view puts glowing do
 
 Sharing starts off each session. Raw MACs and network names stay on your phone. A Wi-Fi name match is not proof of a drone; changing addresses may create separate profiles.
 
-Optional USB: the bundled driver supports **RTL8187L (0bda:8187), 2.4 GHz channels 1–11**. Other chipsets need their own driver.
+Optional USB: **MT7610U / MT7612U** receive drivers cover the Panda / Alfa IDs below; **RTL8187L (0bda:8187)** covers 2.4 GHz channels 1–11. Other chipsets need their own driver.
 
-Build from the repository root with JDK 17 and Android SDK 35:
+Build from the repository root with JDK 17, Python 3, Android SDK 35 and NDK 28.2.13676358:
 
 ```sh
 cd android-node
@@ -26,3 +26,26 @@ cd android-node
 **Data credit:** [OUI Master Database](https://github.com/Ringmast4r/OUI-Master-Database) by **Ringmast4r**, using IEEE Registration Authority entries, powers the app’s offline MAC-prefix/radio-vendor lookup. A vendor allocation does not establish a device’s type or owner.
 
 [Setup](../docs/android-node-setup.md) · [Radio support](../docs/node-radio-research.md) · [GPL v2](LICENSE) · [Credits](NOTICE.txt)
+
+## USB adapters
+
+Version **0.5.1** adds rootless MT7610U (Panda PAU0D) and MT7612U (Alfa
+AWUS036ACM) receive drivers. Open **USB Wi-Fi adapter**, select the adapter,
+tap **Connect**, then **Allow**. Every phone uses the same controls. The screen
+shows channels, received frames and decoded Remote ID counts. See the
+[compatibility and test steps](../docs/usb-scanner-testing.md) before testing other adapters.
+
+Building native USB support requires Python 3 and Android NDK **28.2.13676358**.
+Install that NDK through SDK Manager; Gradle builds the bundled source for ARM64,
+ARMv7 and x86-64. Linux and macOS build hosts are supported.
+
+## Update the app
+
+Download the latest APK from [Android nodes](https://dronemapper.churchofmalware.org/nodes.html)
+and install it over the existing app; do not uninstall first. Official releases
+use the same signing key to preserve your pairing and settings. Check **Phone
+capabilities** for version **0.5.1**. Updates are manual for now.
+
+Start listening again, reconnect your USB adapter, and enable your preferred
+**Sharing choices** if you want reports on the map. For a test report, connect
+the adapter and use **Phone capabilities → Copy report**.

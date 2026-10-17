@@ -18,6 +18,11 @@ Android 8 or newer. No root or Bluetooth dongle needed.
 
 Sharing is optional. Choose a display name or remain **Anonymous**; email and full MAC addresses stay off the public map. [More app instructions and build steps](android-node/README.md).
 
+**Updating to 0.5.1:** download the new APK from the same page and install it over
+your existing app—no uninstall. Pairing and settings are preserved. In **Phone
+capabilities**, check the version. USB users: **USB Wi-Fi adapter → Connect → Allow**.
+Updates are manual; re-enable your preferred **Sharing choices** after starting.
+
 ## Run locally
 
 Python 3.10+ and an internet connection. No extra packages, API keys or receivers.

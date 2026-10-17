@@ -20,7 +20,7 @@ from http.server import ThreadingHTTPServer
 from urllib.parse import urlsplit
 from server import Collector, Handler, PUBLIC, ROOT
 
-PROTOCOLS = {'ble', 'ble-coded', 'wifi-beacon', 'wifi-aware', 'usb-wifi-beacon'}
+PROTOCOLS = {'ble', 'ble-coded', 'wifi-beacon', 'wifi-aware', 'usb-wifi-beacon','usb-wifi-nan'}
 MAX_AGE = 900
 MAX_BODY = 65536
 RID = re.compile(r'^[a-f0-9]{40}$')

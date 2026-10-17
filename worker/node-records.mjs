@@ -3,7 +3,7 @@ import {rules as catalog} from './rid-catalog.mjs';
 export const RETENTION=86400;
 export const UUID=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
 const number=(v,lo,hi)=>typeof v==='number'&&Number.isFinite(v)&&v>=lo&&v<=hi;
-const protocols=new Set(['ble','ble-coded','wifi-beacon','wifi-aware','usb-wifi-beacon']);
+const protocols=new Set(['ble','ble-coded','wifi-beacon','wifi-aware','usb-wifi-beacon','usb-wifi-nan']);
 const airframes=['Unknown','Aeroplane','Helicopter / multirotor','Gyroplane','Hybrid lift','Ornithopter','Glider','Kite','Free balloon','Captive balloon','Airship','Free-fall parachute','Rocket','Tethered powered aircraft','Ground obstacle','Other'];
 export function envelope(body,observations=true){
  if(!body||Array.isArray(body)||typeof body!=='object'||body.schema_version!==1||!UUID.test(body.node_id)||Object.keys(body).sort().join(',')!==(observations?'node_id,observations,schema_version':'node_id,schema_version'))throw Error('Invalid envelope');

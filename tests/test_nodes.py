@@ -45,6 +45,12 @@ class NodeValidation(unittest.TestCase):
         stored = self.nodes.db.execute('SELECT record FROM observations').fetchone()[0]
         self.assertNotIn(batch()['observations'][0]['rid'], stored)
 
+    def test_usb_nan_position_uses_original_observation_time(self):
+        body = batch()
+        body['observations'][0]['protocol'] = 'usb-wifi-nan'
+        self.assertEqual(self.nodes.accept(body, NOW)['accepted'], 1)
+        self.assertEqual(self.nodes.snapshot(now=NOW)[0]['observed_at'], NOW-10)
+
     def test_repeat_upload_is_idempotent_and_cannot_refresh_age(self):
         self.nodes.accept(batch(), NOW)
         self.assertEqual(self.nodes.accept(batch(), NOW+60)['duplicates'], 1)

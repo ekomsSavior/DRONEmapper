@@ -9,7 +9,8 @@ FILES = ['README.md', 'LICENSE', 'NOTICE.txt', '.gitignore', '.gitattributes', '
          'package.json', 'package-lock.json', 'wrangler.jsonc', 'node_server.py',
          'android-node/README.md', 'android-node/LICENSE', 'android-node/NOTICE.txt',
          'android-node/build.gradle', 'android-node/settings.gradle', 'android-node/gradle.properties',
-         'android-node/gradlew', 'android-node/gradlew.bat', 'android-node/app/build.gradle']
+         'android-node/gradlew', 'android-node/gradlew.bat', 'android-node/app/build.gradle',
+         'android-node/build-usb.py']
 DIRECTORIES = ['public', 'docs', 'tests', 'integration', 'worker', 'deploy',
                'android-node/app/src', 'android-node/gradle', 'migrations', 'scripts', 'web']
 

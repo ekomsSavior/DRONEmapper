@@ -9,7 +9,7 @@ Research checked 2026-10-16. **Church of Malware / saviorSEC.** The first delive
 | Built-in Bluetooth LE | Android BLE scan API, ASTM service UUID `0xFFFA`, application code `0x0D`; legacy and extended scanning; Coded PHY when the controller supports it | A phone may lack extended/Coded reception; Bluetooth branding alone is insufficient. Permission and OEM power behavior matter. |
 | Built-in Wi-Fi beacons | Public `ScanResult.InformationElement` API on Android 11+; vendor IE `FA:0B:BC`, type `0x0D` | Android throttles scans; cached results retain their reception time. This is not general monitor mode. Available bands depend on the phone. |
 | Built-in Wi-Fi Aware / NAN | Passive subscription to `org.opendroneid.remoteid` on supported Android 8+ hardware | Optional hardware feature; availability can conflict with hotspot/other radio uses. Aware discovery may itself exchange management traffic; “passive subscription” does not mean an RF-silent phone. |
-| USB Wi-Fi, no root | Android USB Host permission plus adapted RTL8187L userspace driver | Experimental, only `0bda:8187`, 2.4 GHz ch 1–11. No hardware verification yet. No packet injection UI or arbitrary packet storage. |
+| USB Wi-Fi, no root | Android USB Host permission plus MT7610U / MT7612U native drivers and RTL8187L Java driver | See [USB compatibility / validation](usb-scanner-testing.md). USB beacons + NAN and camera-link candidates; no packet injection UI or arbitrary packet storage. |
 
 The new decoder accepts protocol version 2 Basic ID and Location messages, individually or in message packs. It validates lengths, coordinate ranges and the location timestamp before upload. Unknown versions, system/operator/pilot fields and authentication messages are not used. Authentication signatures are **not verified**; received ID and coordinates remain claims.
 
@@ -212,3 +212,5 @@ ID airframe/module test is still needed before claiming those decoder changes
 work on real broadcasts. Fleet bridges come after a versioned, read-only schema
 and an actual authorized test stream. OcuSync reception remains a separate
 hardware effort; an external antenna alone does not give Android raw I/Q access.
+
+The 2026-10-17 receiver work and Marauder comparison are documented in [USB scanner testing](usb-scanner-testing.md), including pinned source revisions, receive formats, adapter IDs and outstanding physical validation.

@@ -1,0 +1,21 @@
+{
+  "retrieved": "2026-10-17",
+  "license": "LICENCE.ralink_a_mediatek_company_firmware",
+  "files": {
+    "mt7662.bin": {
+      "sha256": "f7e52492f58088cae50e51a54cca68e4abc5b74f7d0b6b731dbb4c04465a94b6",
+      "bytes": 81908,
+      "source": "kismet e3d31f3275484f8b3d4cc56a5893a4fcf964585d"
+    },
+    "mt7662_rom_patch.bin": {
+      "sha256": "6f0e871268f6e4d99196d90d89bcc09fe493d010366260a2cfcaa5dd66095f8c",
+      "bytes": 26350,
+      "source": "kismet e3d31f3275484f8b3d4cc56a5893a4fcf964585d"
+    },
+    "mt7610u.bin": {
+      "sha256": "5a4268e9021bb587426ba624b425f1e660bfc82cd63b36ad3ce6fb9ce6751760",
+      "bytes": 80288,
+      "source": "Ubuntu linux-firmware 20240318.git3b128b60-0ubuntu2.27"
+    }
+  }
+}
