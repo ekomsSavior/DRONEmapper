@@ -23,6 +23,18 @@ your existing app—no uninstall. Pairing and settings are preserved. In **Phone
 capabilities**, check the version. USB users: **USB Wi-Fi adapter → Connect → Allow**.
 Updates are manual; re-enable your preferred **Sharing choices** after starting.
 
+## Linux scanner node
+
+Stationary computers can use a [Linux CLI and local radar dashboard](linux-node/README.md),
+with dedicated monitor Wi-Fi, passive Bluetooth, optional MQTT input and HackRF/RTL-SDR
+spectrum views. Pair it with your account and choose what to share. SDR power is
+unclassified RF activity; it does not yet identify drones. [Setup and hardware notes](docs/linux-node-setup.md).
+
+[Download Linux 0.1.0 and follow the quick start](https://dronemapper.churchofmalware.org/linux.html).
+Wi-Fi, Bluetooth and one SDR can run together. Debian/Ubuntu setup configures a
+spare USB adapter in monitor mode; the optional Bluetooth helper enables passive
+BlueZ reception. Your existing account works with both Android and Linux nodes.
+
 ## Run locally
 
 Python 3.10+ and an internet connection. No extra packages, API keys or receivers.
@@ -47,7 +59,7 @@ Map visitors need only a browser. Scanner reports add Remote ID positions and op
 - [IOOS Glider DAC](https://gliders.ioos.us/): quality-checked Spray underwater-glider surface GPS fixes from Scripps and WHOI.
 - [NOAA CoastWatch](https://cwcgom.aoml.noaa.gov/erddap/tabledap/GLIDERS_LAST_10_DAYS_LOCATIONS.html): reported underwater glider locations.
 - [ClimateViewer](https://climateviewer.org/history-and-science/government/maps/uav-drones-over-usa/): historical UAV records.
-- [OUI Master Database](https://github.com/Ringmast4r/OUI-Master-Database) by **Ringmast4r**, using IEEE registry entries: offline MAC-prefix/radio-vendor lookup in the Android app.
+- [OUI Master Database](https://github.com/Ringmast4r/OUI-Master-Database) by **Ringmast4r**, using IEEE registry entries: offline MAC-prefix/radio-vendor lookup in the Android and Linux apps.
 
 Coverage varies. Deployment areas and historical records are labeled separately from timestamped positions; this is not universal live tracking.
 

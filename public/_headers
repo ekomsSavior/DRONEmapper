@@ -17,3 +17,7 @@
 /account
   Cache-Control: no-store
   Referrer-Policy: no-referrer
+
+/downloads/*.zip
+  Content-Type: application/zip
+  Content-Disposition: attachment

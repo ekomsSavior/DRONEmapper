@@ -1,0 +1,27 @@
+DRONEmapper Linux node
+Copyright 2026 Church of Malware / saviorSEC
+Code licensed under AGPL-3.0-or-later; see LICENSE.
+
+The Python protocol parser is an independent implementation of the public ASTM
+F3411 protocol-v2 wire format. Layout references:
+https://github.com/opendroneid/opendroneid-core-c
+libopendroneid/opendroneid.h, opendroneid.c, wifi.c (Apache-2.0 upstream).
+The GPL-2.0-only Android application is a separate component; its code is not
+included in this Python package.
+
+rid-catalog.json contains factual FAA Declaration of Compliance manufacturer,
+model and serial-range fields exported from this repository's worker catalog.
+https://uasdoc.faa.gov/listDocs
+Declarations and broadcast identifiers are not independent authentication.
+
+oui-vendors.tsv contains IEEE MA-L, MA-M, MA-S and IAB allocation facts from
+Ringmast4r's OUI Master Database. See oui-vendors-provenance.json for revision,
+selection and SHA-256. No device-type heuristics are imported. A radio vendor
+is not necessarily the manufacturer of the complete drone or robot.
+https://github.com/Ringmast4r/OUI-Master-Database
+https://standards.ieee.org/products-programs/regauth/
+
+Optional separately installed dependencies/tools retain their own licenses:
+Bleak (MIT), Eclipse Paho MQTT Python (EPL-2.0 / EDL-1.0), BlueZ, Wireshark
+dumpcap, HackRF tools and Osmocom rtl-sdr. They are not bundled in this package.
+The root repository NOTICE.txt covers other website data sources.

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Linux scanner node — DRONEmapper</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+</head>
+<body>
+<main class="legal-page">
+  <a href="/">← World map</a> · <a href="/nodes.html">Android app</a>
+  <p class="eyebrow">CHURCH OF MALWARE / SAVIORSEC</p>
+  <h1>Your computer. A stationary scanner.</h1>
+  <p>A local radar, live detection list and optional community-map contributions. Run Wi-Fi, Bluetooth and a HackRF or RTL-SDR together. Free and open source, with no subscription.</p>
+  <p><a href="/downloads/DRONEmapper-Linux-0.1.0.zip">Download Linux node · 0.1.0</a> · <a href="/downloads/SHA256SUMS.txt">Checksums</a> · <a href="https://github.com/ekomsSavior/DRONEmapper/tree/main/linux-node">GitHub</a> · <a href="https://git.churchofmalware.org/ek0mssavi0r/DRONEmapper/src/branch/main/linux-node">Gitea</a></p>
+  <h2>Start on Debian or Ubuntu</h2>
+  <ol>
+    <li>Download and extract the ZIP. Open a terminal inside <code>DRONEmapper-Linux-0.1.0</code>.</li>
+    <li>Plug in a dedicated USB Wi-Fi adapter. Run <code>iw dev</code> to find its interface name. Keep your normal Internet adapter separate.</li>
+    <li>Run <code>bash linux-node/setup-debian.sh YOUR_DEDICATED_USB_INTERFACE</code>, replacing the final word with that interface name.</li>
+    <li>Setup requests sudo to install the receiver tools, configure capture permissions and create a monitor interface. It starts the dashboard at <a href="http://127.0.0.1:8790/">127.0.0.1:8790</a>. Leave the terminal running.</li>
+  </ol>
+  <p>Setup starts Wi-Fi on channel 6 and selects HackRF. In <strong>Radio settings</strong>, choose your attached receivers; set SDR to Off if you do not use one. Stop listening before changing receivers, save, then start again. After setup, <code>bash linux-node/run-local.sh</code> starts the node with your saved settings.</p>
+  <h2>Bluetooth or SDR without Wi-Fi</h2>
+  <p>Install Python 3.10+ and its virtual-environment package. From the extracted folder:</p>
+  <pre><code>python3 -m venv .venv-node
+. .venv-node/bin/activate
+pip install './linux-node[all]'
+dronemapper-node serve</code></pre>
+  <p>Select your Bluetooth controller and/or SDR in the dashboard. Install your distribution’s <code>hackrf</code> or <code>rtl-sdr</code> package for SDR reception. A PortaPack must be in its <strong>HackRF / RF USB</strong> mode.</p>
+  <p>If passive Bluetooth reports that BlueZ experimental support is required, run <code>bash linux-node/enable-passive-ble.sh</code> from the extracted folder. It backs up the host configuration and briefly restarts Bluetooth. The node retries automatically.</p>
+  <h2>Connect your account</h2>
+  <ol>
+    <li>Click <strong>Connect to DRONEmapper → Continue in browser</strong>.</li>
+    <li>Sign in and approve the matching code. Your account password stays in the website.</li>
+    <li>Return to <strong>Station location &amp; sharing</strong>, choose the reports to contribute, and save. Sharing starts off.</li>
+  </ol>
+  <p>Remote ID uses broadcast-reported aircraft positions. Camera-link sharing needs station coordinates and sends only a rounded 0.01° receiver area. Radio MACs and network names remain local. Choose a public display name or remain Anonymous through your account.</p>
+  <h2>What the receivers show</h2>
+  <ul>
+    <li><strong>Wi-Fi:</strong> Remote ID beacons and NAN messages, plus possible WiFi CAM and Tello links. Up to four dedicated monitor interfaces, each on a fixed channel.</li>
+    <li><strong>Bluetooth:</strong> passive BLE Remote ID advertisements on a compatible controller and BlueZ configuration.</li>
+    <li><strong>HackRF or RTL-SDR:</strong> live frequency and relative power measurements. RF activity alone does not identify a drone or robot; no SDR protocol decoder is bundled yet.</li>
+    <li><strong>MQTT:</strong> optional input from an authorized receiver broker using the documented Remote ID format.</li>
+  </ul>
+  <p>The clickable radar’s <strong>Signals</strong> view shows strength; dot angles are layout only. <strong>Positions</strong> uses fresh reported GPS relative to the station. A larger antenna must match the frequency and receiver; it does not supply a bearing or decode additional protocols by itself.</p>
+  <h2>Hardware and updates</h2>
+  <p>Linux monitor reception has been tested with a Panda RT5572, spectrum reception with a PortaPack in HackRF USB mode, and passive Bluetooth reception with a Panda-branded USB adapter (7392:c611). All three receivers ran together. RTL-SDR reception still needs hardware testing. A real Remote ID transmitter is still needed to verify decoded positions over the air.</p>
+  <p>To update, stop the node, extract the new release and repeat the virtual-environment install. Users of the Debian/Ubuntu setup can run <code>bash linux-node/run-local.sh</code> from the new folder; follow any dependency changes in its README. Pairing and sharing settings live in your private user-state directory and are preserved. Keep one node process running per state directory.</p>
+  <p>The download includes the full <strong>setup guide</strong>, headless CLI instructions, an optional systemd user-service template, protocol research, source and license notices.</p>
+  <p>Built by <a href="https://churchofmalware.org/">Church of Malware</a> and <a href="https://churchofmalware.org/work/">saviorSEC, the Church’s research branch</a>. Linux code: AGPL-3.0-or-later. <a href="/credits.html">Credits &amp; licenses</a>.</p>
+</main>
+</body>
+</html>

@@ -74,7 +74,7 @@ async function dashboard(){
  const code=field(root,'Connection code');button(root,'Continue',()=>pairing(code.value.trim().toUpperCase()));
  root.append(el('h3','Your nodes'));
  const {nodes}=await api('nodes');if(!nodes.length)note('No phones connected yet.');
- for(const node of nodes){const card=el('div','',{class:'node-card'});card.append(el('strong',node.label||'Android scanner'));card.append(el('p',node.online?'Online':node.last_seen?'Last active '+new Date(node.last_seen*1000).toLocaleString():'Waiting for first scan'));root.append(card);
+ for(const node of nodes){const card=el('div','',{class:'node-card'});card.append(el('strong',node.label||'Scanner node'));card.append(el('p',node.online?'Online':node.last_seen?'Last active '+new Date(node.last_seen*1000).toLocaleString():'Waiting for first scan'));root.append(card);
   button(card,'Remove node and its reports',async()=>{if(!confirm('Disconnect this node and remove its contributed observations?'))return;await api('nodes/revoke',{node_handle:node.handle});await dashboard();},true);
  }
  root.append(el('h3','Your profile'));note('Display name: '+user.name);button(root,'Display name & anonymity',()=>profile(),true);
@@ -85,9 +85,9 @@ async function dashboard(){
 }
 async function pairing(value){
  const details=await api('device/details',{code:value});
- clear('Connect this phone');root.append(el('strong',details.label));root.append(el('span',value,{class:'device-code'}));
+ clear('Connect this node');root.append(el('strong',details.label));root.append(el('span',value,{class:'device-code'}));
  note('Check that this code matches the one shown in your DRONEmapper app. Approve only a phone you are connecting yourself.');
- button(root,'Connect this phone',async()=>{await api('device/approve',{code:value});pair='';sessionStorage.removeItem('dm-pair');clear('Phone approved');note('Return to the app to finish connecting and choose what to share.');button(root,'Your account',dashboard);});
+ button(root,'Connect this node',async()=>{await api('device/approve',{code:value});pair='';sessionStorage.removeItem('dm-pair');clear('Node approved');note('Return to your scanner to finish connecting and choose what to share.');button(root,'Your account',dashboard);});
  button(root,'Cancel',async()=>{pair='';sessionStorage.removeItem('dm-pair');await dashboard();},true);
 }
 function profile(){

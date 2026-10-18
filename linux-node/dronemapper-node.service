@@ -1,0 +1,16 @@
+# Copy to ~/.config/systemd/user/ after adjusting ExecStart to your installed venv.
+# Configure/pair the node first. Run as a normal user with receiver permissions.
+[Unit]
+Description=DRONEmapper stationary scanner — Church of Malware / saviorSEC
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/dronemapper-venv/bin/dronemapper-node serve --listen
+Restart=on-failure
+RestartSec=15
+TimeoutStopSec=30
+UMask=0077
+
+[Install]
+WantedBy=default.target

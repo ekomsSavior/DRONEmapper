@@ -26,3 +26,6 @@ android-node/.idea/
 *.apk
 *.apk.idsig
 public/downloads/*.zip
+linux-node/build/
+linux-node/*.egg-info/
+.venv-node/
