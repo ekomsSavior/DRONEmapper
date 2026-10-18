@@ -28,17 +28,31 @@ def parser():
     config=commands.add_parser('configure',help='Save receiver choices while the node is stopped')
     config.add_argument('--wifi',action='append',dest='wifi_interfaces',help='Dedicated monitor interface; repeat for several radios')
     config.add_argument('--ble',dest='ble_adapter',help='Bluetooth controller, e.g. hci0; empty string disables')
+    config.add_argument('--sdr-mode',choices=['spectrum','adsb','dji'])
+    config.add_argument('--dji-frequency',type=float,help='Fixed DJI research channel in MHz')
+    config.add_argument('--readsb-file',help='Existing local aircraft.json; empty string disables')
     config.add_argument('--sdr',choices=['off','hackrf','rtl'])
     config.add_argument('--band',dest='sdr_band',choices=list(BANDS))
     config.add_argument('--location',nargs=2,type=float,metavar=('LAT','LON'))
     config.add_argument('--label')
     config.add_argument('--mqtt-file')
     config.add_argument('--share-rid',action=argparse.BooleanOptionalAction,default=None)
+    config.add_argument('--share-decoded',action=argparse.BooleanOptionalAction,default=None)
     config.add_argument('--share-areas',action=argparse.BooleanOptionalAction,default=None)
     serve=commands.add_parser('serve',help='Open the local radar/control dashboard')
     serve.add_argument('--port',type=int,default=8790)
     serve.add_argument('--listen',action='store_true',help='Start saved receivers immediately')
     commands.add_parser('run',help='Run saved receivers without the dashboard; print live detections as JSON lines')
+    capture=commands.add_parser('capture-iq',help='Record up to three seconds of receive-only HackRF IQ, 20 Msps / cs8')
+    capture.add_argument('--frequency-mhz',type=float,required=True)
+    capture.add_argument('--seconds',type=float,default=1)
+    capture.add_argument('--output',required=True)
+    decode=commands.add_parser('decode-dji',help='Decode a recorded DJI DroneID IQ file locally; never upload/replay as live')
+    decode.add_argument('capture')
+    decode.add_argument('--sample-rate',type=float,required=True,help='Complex samples per second, e.g. 20000000')
+    decode.add_argument('--format',dest='sample_format',choices=['cf32','cs8'],default='cf32')
+    decode.add_argument('--skip-detection',action='store_true',help='Only for an isolated burst of at most 20 ms')
+    decode.add_argument('--output',required=True,help='New private review JSON file; existing files are not overwritten')
     return p
 
 
@@ -66,6 +80,31 @@ def main(argv=None):
         return
     if args.command=='wifi-help':
         print(WIFI_HELP)
+        return
+    if args.command=='capture-iq':
+        from .capture import capture_iq
+        try:
+            print(json.dumps(capture_iq(args.output,args.frequency_mhz,args.seconds),indent=2))
+        except (OSError,ValueError) as error:
+            print('DRONEmapper: '+str(error),file=sys.stderr)
+            raise SystemExit(1)
+        return
+    if args.command=='decode-dji':
+        from .decoders import decode_dji_file
+        try:
+            # Create exclusively before expensive work, never overwrite a user capture/report.
+            fd=os.open(Path(args.output).expanduser(),os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
+            try:
+                with os.fdopen(fd,'w') as output:
+                    report=decode_dji_file(args.capture,args.sample_rate,args.sample_format,args.skip_detection)
+                    json.dump(report,output,indent=2,allow_nan=False)
+            except BaseException:
+                Path(args.output).expanduser().unlink(missing_ok=True)
+                raise
+            print(f"Decoded {report['decoded_packets']} CRC-valid packets; {report['rejected_candidates']} candidates rejected. Saved local review: {args.output}")
+        except (OSError,ValueError) as error:
+            print('DRONEmapper: '+str(error),file=sys.stderr)
+            raise SystemExit(1)
         return
     store=None
     engine=None

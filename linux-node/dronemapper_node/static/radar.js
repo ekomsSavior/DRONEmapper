@@ -1,7 +1,8 @@
 // Church of Malware / saviorSEC. AGPL-3.0-or-later.
 export function contactPoint(contact, mode, range = 2000) {
   if (mode === 'positions') {
-    if (!Number.isFinite(contact.bearing) || !Number.isFinite(contact.distance_m)) return null;
+    if (!Number.isFinite(contact.bearing) || !Number.isFinite(contact.distance_m) || contact.distance_m < 0) return null;
+    if (!Number.isFinite(range) || range <= 0) range = 2000;
     const radius = Math.min(202, Math.max(0, contact.distance_m / range * 202));
     const angle = contact.bearing * Math.PI / 180;
     return {x: 250 + Math.sin(angle) * radius, y: 250 - Math.cos(angle) * radius,

@@ -1,9 +1,10 @@
 # Signals beyond Wi-Fi and Bluetooth
 
-Research checked 17 October 2026 for DRONEmapper / saviorSEC, Church of Malware.
-The implemented Linux SDR path is a **receive-only power spectrum**. It does not
-claim a drone/robot identity from a peak. The following are decoder research paths,
-not a list of devices this release can already identify.
+Research checked 18 October 2026 for DRONEmapper / saviorSEC, Church of Malware.
+Linux 0.2.0 adds **live readsb ADS-B integration, cyclic DJI capture/decode and recording review**
+alongside receive-only spectrum. See [decoder setup and validation](sdr-decoders.md).
+A spectrum peak still does not establish drone/robot identity. Other paths below
+are research, not implemented universal detection.
 
 | Signal / transport | Useful evidence | What is needed / limits |
 |---|---|---|
@@ -26,8 +27,8 @@ not a list of devices this release can already identify.
 2. Add an explicit local SDR-decoder bridge, starting with owner-operated
    [readsb](https://github.com/wiedehopf/readsb/blob/dev/README-json.md) or an
    authorized MAVLink telemetry receiver. Validate actual timestamps, coordinates
-   and unmanned identity before adding points. No aircraft-category shortcut is
-   implemented in the Linux node yet.
+   and unmanned identity before adding points. Linux 0.2.0 implements a separate optional B6 UAS-category reporting path;
+   the category remains an unverified broadcast claim, not authentication.
 3. Evaluate legacy DJI DroneID with a supported test aircraft and receiver.
    [DroneSecurity](https://github.com/RUB-SysSec/DroneSecurity), from NDSS 2023,
    documents an OcuSync 2.0 proof-of-concept receiver tested with a USRP B205-mini,
@@ -83,5 +84,5 @@ transport is MQTT.
 - [US Coast Guard AIS](https://www.navcen.uscg.gov/automatic-identification-system-overview): maritime identification and position broadcasts.
 - [HackRF hardware](https://hackrf.readthedocs.io/en/latest/hackrf_one.html): receiver limits and specifications.
 
-Research references are not live data sources connected to the map. No new public
-feed or proprietary-radio decoder is enabled by this document.
+Research references are not live data sources connected to the map. No additional public feed is enabled by this document. Consult the
+[decoder guide](sdr-decoders.md) for the implemented and tested paths.

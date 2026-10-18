@@ -50,3 +50,22 @@ test('documented Tello SSID is an unconfirmed receiver area, never an identified
  assert.equal(event.protocol,'usb-wifi-nan');assert.equal(event.observed_at,now-10);
  assert.throws(()=>validateBatch(batch({...raw,protocol:'usb-any-radio'}),now));
  });
+
+
+test('ADS-B UAS observations are a distinct strict protocol and identity',()=>{
+ const r={event_id:id,observation_type:'adsb-uas',protocol:'adsb',icao:'abc123',category:'B6',latitude:37.1,longitude:-122.1,observed_at:now-1,received_at:now,altitude_m:304.8,rssi_dbfs:-21.5};
+ assert.equal(validateBatch(batch(r),now).length,1);
+ for(const extra of [{category:'A3'},{protocol:'ble'},{icao:'~abc123'},{icao:'ffffff'},{manufacturer:'assumed'},{pilot_latitude:37},{rssi_dbm:-30},{received_at:now-901},{heading:360}])assert.throws(()=>validateBatch(batch({...r,...extra}),now));
+ const row=nodeRecord(r,'adsb-test',now);
+ assert.equal(row.position_method,'adsb-broadcast');assert.equal(row.manufacturer,null);
+ assert.match(row.precision,/unverified/);assert.equal(row.rssi_dbfs,-21.5);assert.equal(row.icao,undefined);
+});
+
+
+test('DJI DroneID accepts only aircraft fields with distinct protocol identity',()=>{
+ const r={event_id:id,observation_type:'dji-droneid',protocol:'dji-droneid',device_id:'TEST-ONLY',model_code:58,verification:'crc-valid',frequency_mhz:2444.5,latitude:37.1,longitude:-122.1,observed_at:now,received_at:now};
+ assert.equal(validateBatch(batch(r),now).length,1);
+ for(const extra of [{app_lat:37},{longitude_home:-122},{verification:'unknown'},{device_id:''},{device_id:'x'.repeat(17)},{model_code:256},{frequency_mhz:1090},{observed_at:now-901}])assert.throws(()=>validateBatch(batch({...r,...extra}),now));
+ const row=nodeRecord(r,'dji-test',now);assert.equal(row.model,'Mavic Air 2');assert.equal(row.device_id,undefined);assert.match(row.precision,/unverified/);
+ assert.equal(nodeRecord({...r,model_code:255},'dji-test',now).model,null);
+});

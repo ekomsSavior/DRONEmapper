@@ -25,6 +25,13 @@ test('Durable Object enrollment, actual upload receipts, private storage project
  assert.equal(snap.nodes.active_nodes,1);assert.equal(snap.signals.length,1);assert.equal(snap.tracks.length,0);
  const serialized=JSON.stringify(snap);for(const secret of [token,node_id,node_handle,event.candidate_id,event.event_id])assert.equal(serialized.includes(secret),false);
  assert.equal(snap.signals[0].node_online,true);
+ const adsb={event_id:randomUUID(),observation_type:'adsb-uas',protocol:'adsb',icao:'abc123',category:'B6',latitude:37.1,longitude:-122.1,observed_at:now,received_at:now};
+ assert.equal((await post('/v1/observations',{schema_version:1,node_id,observations:[{...adsb,category:'A3'}]},token)).status,422);
+ assert.deepEqual(await (await post('/v1/observations',{schema_version:1,node_id,observations:[adsb]},token)).json(),{schema_version:1,accepted:1,duplicates:0});
+ const decoded=await (await mf.dispatchFetch('https://node.test/snapshot')).json();
+ assert.equal(decoded.tracks.length,1);assert.equal(decoded.tracks[0].protocol,'adsb');assert.match(decoded.tracks[0].id,/^adsb-/);
+ assert.equal(JSON.stringify(decoded).includes('abc123'),false);
+
  assert.equal((await post('/v1/admin/revoke',{node_handle})).status,200);
  assert.equal((await post('/v1/observations',payload,token)).status,401);
  assert.equal((await (await mf.dispatchFetch('https://node.test/snapshot')).json()).signals.length,0);

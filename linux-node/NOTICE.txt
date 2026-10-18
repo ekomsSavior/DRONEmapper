@@ -25,3 +25,14 @@ Optional separately installed dependencies/tools retain their own licenses:
 Bleak (MIT), Eclipse Paho MQTT Python (EPL-2.0 / EDL-1.0), BlueZ, Wireshark
 dumpcap, HackRF tools and Osmocom rtl-sdr. They are not bundled in this package.
 The root repository NOTICE.txt covers other website data sources.
+
+The optional DJI receiver includes receive-only demodulation helpers derived from
+RUB-SysSec/DroneSecurity (NDSS 2023), AGPL-3.0, revision
+9ff819843bee48fb140a0704ec78aff757896dea. Its LICENSE and per-file provenance are
+in dronemapper_node/_vendor/dronesecurity/. Models are broadcast code mappings,
+not authenticated identification. No upstream recordings are distributed.
+The optional dji extra uses NumPy (BSD), SciPy (BSD), Matplotlib (PSF-based) and
+bitarray (PSF). These libraries are installed separately.
+readsb (GPL-3.0) is a separate receiver process, built by the optional setup script
+at revision 8afcc22de2de81be38231695285070603af78ef4. Its source/license remain in
+the installation source directory; no readsb binary is bundled.

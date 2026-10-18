@@ -14,10 +14,10 @@
   <p class="eyebrow">CHURCH OF MALWARE / SAVIORSEC</p>
   <h1>Your computer. A stationary scanner.</h1>
   <p>A local radar, live detection list and optional community-map contributions. Run Wi-Fi, Bluetooth and a HackRF or RTL-SDR together. Free and open source, with no subscription.</p>
-  <p><a href="/downloads/DRONEmapper-Linux-0.1.0.zip">Download Linux node · 0.1.0</a> · <a href="/downloads/SHA256SUMS.txt">Checksums</a> · <a href="https://github.com/ekomsSavior/DRONEmapper/tree/main/linux-node">GitHub</a> · <a href="https://git.churchofmalware.org/ek0mssavi0r/DRONEmapper/src/branch/main/linux-node">Gitea</a></p>
+  <p><a href="/downloads/DRONEmapper-Linux-0.2.0.zip">Download Linux node · 0.2.0</a> · <a href="/downloads/SHA256SUMS.txt">Checksums</a> · <a href="https://github.com/ekomsSavior/DRONEmapper/tree/main/linux-node">GitHub</a> · <a href="https://git.churchofmalware.org/ek0mssavi0r/DRONEmapper/src/branch/main/linux-node">Gitea</a></p>
   <h2>Start on Debian or Ubuntu</h2>
   <ol>
-    <li>Download and extract the ZIP. Open a terminal inside <code>DRONEmapper-Linux-0.1.0</code>.</li>
+    <li>Download and extract the ZIP. Open a terminal inside <code>DRONEmapper-Linux-0.2.0</code>.</li>
     <li>Plug in a dedicated USB Wi-Fi adapter. Run <code>iw dev</code> to find its interface name. Keep your normal Internet adapter separate.</li>
     <li>Run <code>bash linux-node/setup-debian.sh YOUR_DEDICATED_USB_INTERFACE</code>, replacing the final word with that interface name.</li>
     <li>Setup requests sudo to install the receiver tools, configure capture permissions and create a monitor interface. It starts the dashboard at <a href="http://127.0.0.1:8790/">127.0.0.1:8790</a>. Leave the terminal running.</li>
@@ -31,6 +31,12 @@ pip install './linux-node[all]'
 dronemapper-node serve</code></pre>
   <p>Select your Bluetooth controller and/or SDR in the dashboard. Install your distribution’s <code>hackrf</code> or <code>rtl-sdr</code> package for SDR reception. A PortaPack must be in its <strong>HackRF / RF USB</strong> mode.</p>
   <p>If passive Bluetooth reports that BlueZ experimental support is required, run <code>bash linux-node/enable-passive-ble.sh</code> from the extracted folder. It backs up the host configuration and briefly restarts Bluetooth. The node retries automatically.</p>
+  <h2>Add SDR protocol decoding</h2>
+  <p>Stop the node, then run these commands from the extracted folder:</p>
+  <pre><code>bash linux-node/install-decoders-debian.sh
+bash linux-node/run-local.sh</code></pre>
+  <p>The installer builds readsb with HackRF and RTL-SDR support and installs the DJI decoding dependencies. In <strong>Radio settings</strong>, select a receiver and choose <strong>ADS-B</strong> or, for HackRF, <strong>DJI DroneID</strong>. Save and start listening. Wi-Fi and Bluetooth keep running alongside the SDR.</p>
+  <p>ADS-B receives 1090 MHz aircraft broadcasts. DJI mode captures and decodes the researched OcuSync 2.0 waveform on a selected channel, with gaps during processing. The ZIP includes <code>docs/sdr-decoders.md</code> for setup, supported formats and recording review.</p>
   <h2>Connect your account</h2>
   <ol>
     <li>Click <strong>Connect to DRONEmapper → Continue in browser</strong>.</li>
@@ -42,13 +48,13 @@ dronemapper-node serve</code></pre>
   <ul>
     <li><strong>Wi-Fi:</strong> Remote ID beacons and NAN messages, plus possible WiFi CAM and Tello links. Up to four dedicated monitor interfaces, each on a fixed channel.</li>
     <li><strong>Bluetooth:</strong> passive BLE Remote ID advertisements on a compatible controller and BlueZ configuration.</li>
-    <li><strong>HackRF or RTL-SDR:</strong> live frequency and relative power measurements. RF activity alone does not identify a drone or robot; no SDR protocol decoder is bundled yet.</li>
+    <li><strong>HackRF or RTL-SDR:</strong> spectrum measurements or ADS-B protocol decoding. HackRF also supports DJI DroneID capture/decode cycles and recording review. Ordinary aircraft remain local; fresh decoded drone positions have a separate sharing choice.</li>
     <li><strong>MQTT:</strong> optional input from an authorized receiver broker using the documented Remote ID format.</li>
   </ul>
-  <p>The clickable radar’s <strong>Signals</strong> view shows strength; dot angles are layout only. <strong>Positions</strong> uses fresh reported GPS relative to the station. A larger antenna must match the frequency and receiver; it does not supply a bearing or decode additional protocols by itself.</p>
+  <p>The clickable radar’s <strong>Signals</strong> view shows strength; dot angles are layout only. <strong>Positions</strong> uses fresh reported GPS relative to the station, with selectable viewing ranges from 100 m to 500 km. A larger antenna must match the frequency and receiver; it does not supply a bearing or decode additional protocols by itself.</p>
   <h2>Hardware and updates</h2>
-  <p>Linux monitor reception has been tested with a Panda RT5572, spectrum reception with a PortaPack in HackRF USB mode, and passive Bluetooth reception with a Panda-branded USB adapter (7392:c611). All three receivers ran together. RTL-SDR reception still needs hardware testing. A real Remote ID transmitter is still needed to verify decoded positions over the air.</p>
-  <p>To update, stop the node, extract the new release and repeat the virtual-environment install. Users of the Debian/Ubuntu setup can run <code>bash linux-node/run-local.sh</code> from the new folder; follow any dependency changes in its README. Pairing and sharing settings live in your private user-state directory and are preserved. Keep one node process running per state directory.</p>
+  <p>Linux monitor reception has been tested with a Panda RT5572, spectrum reception with a PortaPack in HackRF USB mode, and passive Bluetooth reception with a Panda-branded USB adapter (7392:c611). All three receivers ran together. RTL-SDR reception still needs hardware testing. A real Remote ID transmitter is still needed to verify decoded positions over the air. The ADS-B test opened HackRF successfully but received no fresh aircraft positions. DJI decoding passed published-recording tests, including conversion to HackRF’s 20 Msps signed 8-bit format; live DJI reception still needs a supported aircraft test.</p>
+  <p>To update, stop the node, extract the new release and repeat the virtual-environment install. Users of the Debian/Ubuntu setup can run <code>bash linux-node/run-local.sh</code> from the new folder; run the decoder installer above first if you want the new SDR decoders. Pairing and sharing settings live in your private user-state directory and are preserved. Keep one node process running per state directory.</p>
   <p>The download includes the full <strong>setup guide</strong>, headless CLI instructions, an optional systemd user-service template, protocol research, source and license notices.</p>
   <p>Built by <a href="https://churchofmalware.org/">Church of Malware</a> and <a href="https://churchofmalware.org/work/">saviorSEC, the Church’s research branch</a>. Linux code: AGPL-3.0-or-later. <a href="/credits.html">Credits &amp; licenses</a>.</p>
 </main>

@@ -69,6 +69,7 @@ class Engine:
         self.last_queued={}
         self.frame_count=0
         self.message_count=0
+        self.decoded_count=0
         self.account_status=''
         self.background=threading.Thread(target=self._maintenance,daemon=True)
         self.background.start()
@@ -97,7 +98,14 @@ class Engine:
             if config['ble_adapter']:
                 receivers.append(('Bluetooth',radios.ble,(config['ble_adapter'],)))
             if config['sdr']!='off':
-                receivers.append(('SDR',radios.sdr,(config['sdr'],config['sdr_band'])))
+                if config['sdr_mode']=='adsb':
+                    receivers.append(('SDR decoder',radios.adsb,(config['sdr'],)))
+                elif config['sdr_mode']=='dji':
+                    receivers.append(('DJI decoder',radios.dji,(config['dji_frequency'],)))
+                else:
+                    receivers.append(('SDR',radios.sdr,(config['sdr'],config['sdr_band'])))
+            if config['readsb_file']:
+                receivers.append(('ADS-B feed',radios.readsb_feed,(config['readsb_file'],)))
             if config['mqtt_file']:
                 receivers.append(('MQTT',radios.mqtt,(config['mqtt_file'],)))
             if not receivers:
@@ -121,7 +129,7 @@ class Engine:
     def configure(self,values):
         # Radio configuration changes require a stopped receiver; consent can change live.
         old=self.store.settings()
-        radio_keys={'wifi_interfaces','ble_adapter','sdr','sdr_band','mqtt_file'}
+        radio_keys={'wifi_interfaces','ble_adapter','sdr','sdr_band','sdr_mode','dji_frequency','readsb_file','mqtt_file'}
         if self.running and any(values.get(k,old[k])!=old[k] for k in radio_keys):
             raise ValueError('Stop listening before changing receivers')
         self.store.update({**old,**values})
@@ -154,6 +162,22 @@ class Engine:
             if not finite(received,now-120,now+5):
                 return
             source=event['source']
+            if kind=='decoded':
+                # Separate contact/transport; never reinterpret ADS-B as Remote ID.
+                if (event.get('protocol'),event.get('verification')) not in (('adsb','readsb-decoded'),('dji-droneid','crc-valid')):
+                    return
+                key=event['protocol']+'|'+event['device_id']
+                if event.get('observed_at',0)<self.contacts.get(key,{}).get('observed_at',0):
+                    return
+                self.contacts[key]={**event,'key':key,'seen':received,
+                    'kind':'drone' if event['unmanned'] else 'aircraft',
+                    'local_only':not event['unmanned']}
+                if event['unmanned']:
+                    self._queue_decoded(key,event)
+                self.decoded_count+=1
+                self.last_queued={k:v for k,v in self.last_queued.items() if now-v[0]<900}
+                self.contacts={k:v for k,v in sorted(self.contacts.items(),key=lambda p:p[1]['seen'],reverse=True)[:200] if now-v['seen']<=120}
+                return
             mac=event['mac']
             key=source+'|'+mac+('|candidate' if kind=='candidate' else '|rid')
             entry=self.contacts.setdefault(key,{'key':key,'mac':mac,'source':source,'radio_vendor':self.catalog.vendor(mac)})
@@ -194,6 +218,22 @@ class Engine:
                         self._queue(key,entry,received)
             self.contacts={k:v for k,v in sorted(self.contacts.items(),key=lambda p:p[1]['seen'],reverse=True)[:200] if now-v['seen']<=120}
             self.last_queued={k:v for k,v in self.last_queued.items() if now-v[0]<900}
+
+    def _queue_decoded(self,key,event):
+        stamp,received=event['observed_at'],event['received_at']
+        last=self.last_queued.get(key,(0,0))
+        if stamp<=last[1] or received-last[0]<5 or not -5<=received-stamp<=120:
+            return
+        record={'event_id':str(uuid.uuid4()),'received_at':received,'observed_at':stamp,
+                'latitude':event['latitude'],'longitude':event['longitude']}
+        if event['protocol']=='adsb':
+            record.update(observation_type='adsb-uas',protocol='adsb',icao=event['device_id'].lower(),category='B6')
+        else:
+            record.update(observation_type='dji-droneid',protocol='dji-droneid',device_id=event['device_id'],model_code=event['model_code'],verification='crc-valid',frequency_mhz=event['frequency_mhz'])
+        for field in ('altitude_m','speed_mps','heading','rssi_dbfs'):
+            if field in event: record[field]=event[field]
+        self.store.add(record,self.store.settings()['share_decoded'])
+        self.last_queued[key]=(received,stamp)
 
     def _queue(self,key,entry,received):
         candidate=entry['kind']=='possible-drone'
@@ -240,7 +280,7 @@ class Engine:
                 baseline=statistics.median(v['power_db'] for v in spectrum)
                 spectrum=[{**v,'above_median_db':round(v['power_db']-baseline,2)} for v in spectrum]
             return {'version':__version__,'running':self.running,'settings':settings,'contacts':contacts,
-                'spectrum':spectrum,'radios':dict(self.states),'wifi_frames':self.frame_count,'rid_messages':self.message_count,
+                'spectrum':spectrum,'radios':dict(self.states),'wifi_frames':self.frame_count,'rid_messages':self.message_count,'decoded_messages':self.decoded_count,
                 'counts':self.store.counts(),'upload_status':self.uploader.status if self.running else 'Scanner stopped',
                 'connected':self.store.connected(),'display_name':self.store.config.get('display_name',''),
                 'pair':self.connection.public_pair(),'account_status':self.account_status}

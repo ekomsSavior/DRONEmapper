@@ -27,10 +27,10 @@ Updates are manual; re-enable your preferred **Sharing choices** after starting.
 
 Stationary computers can use a [Linux CLI and local radar dashboard](linux-node/README.md),
 with dedicated monitor Wi-Fi, passive Bluetooth, optional MQTT input and HackRF/RTL-SDR
-spectrum views. Pair it with your account and choose what to share. SDR power is
+spectrum views. Linux 0.2.0 adds [ADS-B and DJI protocol decoders](docs/sdr-decoders.md). Pair it with your account and choose what to share. SDR power is
 unclassified RF activity; it does not yet identify drones. [Setup and hardware notes](docs/linux-node-setup.md).
 
-[Download Linux 0.1.0 and follow the quick start](https://dronemapper.churchofmalware.org/linux.html).
+[Download Linux 0.2.0 and follow the quick start](https://dronemapper.churchofmalware.org/linux.html).
 Wi-Fi, Bluetooth and one SDR can run together. Debian/Ubuntu setup configures a
 spare USB adapter in monitor mode; the optional Bluetooth helper enables passive
 BlueZ reception. Your existing account works with both Android and Linux nodes.

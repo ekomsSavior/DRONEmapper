@@ -1,0 +1,19 @@
+Derived from RUB-SysSec/DroneSecurity, NDSS 2023, AGPL-3.0.
+https://github.com/RUB-SysSec/DroneSecurity
+Revision: 9ff819843bee48fb140a0704ec78aff757896dea
+
+Changes by Church of Malware / saviorSEC, 2026-10-18:
+Package-relative imports; remove unused distutils and packet imports; replace
+removed NumPy complex alias; remove standalone command-line entry points; trim trailing whitespace.
+Only receiver demodulation helpers are included. No transmitter, GUI, map,
+operator/home location parser or recordings are distributed.
+Original file SHA256:
+{
+  "SpectrumCapture.py": "8fe99b916214c15719a56eab4d7ed10ffb3cead711b48c8162378e9683698d0e",
+  "Packet.py": "5fa1d97ef51fee974a574a0f843bffee41a25a3268fb5c780c3c74486862477d",
+  "qpsk.py": "e71fd45d3a2a17c4b5bfde829d496bbe69f7e83352b69e9dcc860a2ee0d84615",
+  "goldgen.py": "b211925fee6208f2ec6c1e733c90db8a9411abcb70913ce7e871064a940be931",
+  "helpers.py": "3170e19620d676d1bda2482d6c82b81e52dec7ec7b35fa5cee278202edce6d0b",
+  "zcsequence.py": "4534aac3dffbb328cc0581f3a997f28ee3ea6ed6df7e8af2fe7d921a339af267",
+  "packetizer.py": "31413fd1b44a901809e1108ce451d4f92124ced4ccfdd26b6155e2a8ed422b55"
+}

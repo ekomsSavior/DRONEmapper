@@ -85,6 +85,10 @@ Antenna size does not provide bearing or identify a protocol.
 
 ## Bluetooth and SDR
 
+Linux 0.2.0 also supports readsb ADS-B decoding and DJI recording review. See
+[SDR protocol decoders](sdr-decoders.md) for installation, privacy, sharing and
+validation details. The spectrum setup below remains available.
+
 Select `hci0` (or your controller) in the dashboard. The BLE receiver requests
 **passive** Advertisement Monitor reception and does not silently switch to active
 scanning. An unsupported BlueZ/controller combination appears in Receiver status.

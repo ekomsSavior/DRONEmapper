@@ -17,3 +17,18 @@ test('unknown position is not invented; signals fit inside the disc',()=>{
   assert.ok(Math.hypot(p.x-250,p.y-250)<=200.001);
  }
 });
+test('range changes the GPS scale without changing signal-only placement',()=>{
+ const contact={key:'test',bearing:90,distance_m:500,rssi_dbm:-60};
+ for(const range of [500,2000,10000,500000]){
+  const point=contactPoint(contact,'positions',range);
+  assert.equal(point.x,250+500/range*202);
+  assert.equal(point.y,250);
+  assert.equal(point.outside,false);
+  assert.deepEqual(contactPoint(contact,'signals',range),contactPoint(contact,'signals',2000));
+ }
+ assert.equal(contactPoint(contact,'positions',100).outside,true);
+ for(const invalid of [0,-1,NaN,Infinity]){
+  assert.deepEqual(contactPoint(contact,'positions',invalid),contactPoint(contact,'positions',2000));
+ }
+ assert.equal(contactPoint({...contact,distance_m:-1},'positions'),null);
+});

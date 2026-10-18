@@ -10,6 +10,11 @@ import shutil
 import ssl
 import subprocess
 import time
+import sys
+import signal
+import tempfile
+import threading
+from .decoders import adsb_records, read_json
 from .protocol import PcapStream, radiotap, wifi_frame, spectrum_row, finite, MAC
 from .storage import BANDS
 
@@ -36,16 +41,17 @@ def doctor():
         except (OSError,subprocess.SubprocessError):
             pass
     return {'wifi':interfaces,'bluetooth':[p.name for p in Path('/sys/class/bluetooth').glob('hci*')],
-            'tools':{tool:bool(shutil.which(tool)) for tool in ('iw','dumpcap','hackrf_sweep','rtl_power')},
+            'tools':{tool:bool(shutil.which(tool)) for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb')},
             'tool_access':{tool:'Installed but execution is unavailable; check user/group access'
-                           for tool in ('iw','dumpcap','hackrf_sweep','rtl_power') if installed_path(tool) and not shutil.which(tool)},
+                           for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb') if installed_path(tool) and not shutil.which(tool)},
+            'dji_decoder':all(importlib.util.find_spec(x) is not None for x in ('numpy','scipy','matplotlib','bitarray')),
             'bleak':importlib.util.find_spec('bleak') is not None,
             'paho_mqtt':importlib.util.find_spec('paho') is not None}
 
 
 def process_bytes(command,stop):
     """Stream stdout, bound stderr, and terminate owned children on every exit path."""
-    child=subprocess.Popen(command,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+    child=subprocess.Popen(command,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE,start_new_session=True)
     errors=bytearray()
     try:
         with selectors.DefaultSelector() as selector:
@@ -71,11 +77,13 @@ def process_bytes(command,stop):
                 raise RuntimeError(f'Receiver stopped ({code}): {diagnostic[:190]}')
     finally:
         if child.poll() is None:
-            child.terminate()
+            try: os.killpg(child.pid,signal.SIGTERM)
+            except ProcessLookupError: pass
             try:
                 child.wait(timeout=3)
             except subprocess.TimeoutExpired:
-                child.kill()
+                try: os.killpg(child.pid,signal.SIGKILL)
+                except ProcessLookupError: pass
                 child.wait()
         child.stdout.close()
         child.stderr.close()
@@ -234,3 +242,65 @@ def mqtt(path,stop,emit,status):
     finally:
         client.disconnect()
         client.loop_stop()
+
+
+def readsb_feed(path,stop,emit,status):
+    last={}
+    while not stop.is_set():
+        try:
+            doc=read_json(path)
+            records=adsb_records(doc,time.time())
+            for record in records:
+                key=record['device_id']; stamp=(record['received_at'],record['observed_at'])
+                if last.get(key)!=stamp:
+                    emit(record); last[key]=stamp
+            last={k:v for k,v in last.items() if time.time()-v[0]<120}
+            fresh=isinstance(doc,dict) and finite(doc.get('now'),time.time()-15,time.time()+5)
+            status((f'Decoding ADS-B · {int(doc.get("messages",0)) if finite(doc.get("messages"),0,1e15) else 0} messages · {len(records)} fresh aircraft · '+str(sum(r['unmanned'] for r in records))+' reporting UAS category') if fresh else 'Waiting for fresh readsb data')
+        except (FileNotFoundError,json.JSONDecodeError):
+            status('Waiting for readsb aircraft.json')
+        if stop.wait(1): break
+
+
+def adsb(kind,stop,emit,status):
+    if not shutil.which('readsb'):
+        raise RuntimeError('Install readsb with '+kind+' support; see decoder setup')
+    # No network ports or external feeds. This process owns exactly one SDR.
+    with tempfile.TemporaryDirectory(prefix='dronemapper-readsb-') as directory:
+        command=['readsb','--device-type','hackrf' if kind=='hackrf' else 'rtlsdr',
+                 '--no-fix','--no-fix-df','--write-json',directory,'--write-json-every','1','--quiet']
+        if kind=='hackrf': command+=['--gain','16','--hackrf-vgagain','20']
+        local_stop=threading.Event()
+        failure=[]
+        def capture():
+            try:
+                for _ in process_bytes(command,local_stop): pass
+            except Exception as error:
+                failure.append(error)
+            finally:
+                local_stop.set()
+        child=threading.Thread(target=capture,daemon=True);child.start()
+        # Relay parent shutdown while the reader waits on its own stop event.
+        def relay():
+            while not local_stop.wait(.2):
+                if stop.is_set(): local_stop.set()
+        relay_thread=threading.Thread(target=relay,daemon=True);relay_thread.start()
+        try:
+            readsb_feed(Path(directory)/'aircraft.json',local_stop,emit,status)
+        finally:
+            local_stop.set();child.join(timeout=5);relay_thread.join(timeout=1)
+        if failure and not stop.is_set(): raise failure[0]
+
+
+def dji(frequency,stop,emit,status):
+    status(f'DJI DroneID · {frequency:g} MHz · capturing / decoding bursts; reception gaps during processing')
+    command=[sys.executable,str(Path(__file__).with_name('dji_worker.py')),'--frequency',str(frequency)]
+    pending=bytearray()
+    for chunk in process_bytes(command,stop):
+        pending.extend(chunk)
+        if len(pending)>65536: raise ValueError('DJI decoder output exceeded limit')
+        while b'\n' in pending:
+            line,_,rest=pending.partition(b'\n');pending=bytearray(rest)
+            record=json.loads(line)
+            if 'worker_status' in record: status(str(record['worker_status'])[:240])
+            elif record.get('type')=='decoded' and record.get('protocol')=='dji-droneid':emit(record)

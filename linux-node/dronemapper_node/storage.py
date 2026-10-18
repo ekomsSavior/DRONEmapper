@@ -14,8 +14,8 @@ from .protocol import finite
 
 ORIGIN = 'https://dronemapper.churchofmalware.org'
 DEFAULTS = {'label': 'Linux stationary node', 'wifi_interfaces': [], 'ble_adapter': '',
-            'sdr': 'off', 'sdr_band': '2400', 'station': None,
-            'share_rid': False, 'share_areas': False, 'mqtt_file': ''}
+            'sdr': 'off', 'sdr_band': '2400', 'sdr_mode':'spectrum', 'dji_frequency':2444.5, 'readsb_file':'', 'station': None,
+            'share_rid': False, 'share_areas': False, 'share_decoded':False, 'mqtt_file': ''}
 BANDS = {'433': (430,440), '868': (863,870), '915': (902,928), '2400': (2400,2485),
          '5800': (5725,5875), '5900': (5850,5925), '1090': (1089,1091), 'ais': (161,163)}
 
@@ -34,9 +34,19 @@ def validate_settings(values):
         raise ValueError('Bluetooth adapter must be hci0, hci1, etc.')
     if v['sdr'] not in ('off','hackrf','rtl') or not isinstance(v['sdr_band'],str) or v['sdr_band'] not in BANDS:
         raise ValueError('Choose a supported SDR and band')
-    if v['sdr']=='rtl' and BANDS[v['sdr_band']][1]>1766:
+    if not isinstance(v['sdr_mode'],str) or v['sdr_mode'] not in ('spectrum','adsb','dji'):
+        raise ValueError('Choose spectrum, ADS-B or DJI decoding')
+    if not finite(v['dji_frequency'],2390,5875) or v['dji_frequency'] not in (2399.5,2414.5,2429.5,2444.5,2459.5,5756.5,5776.5,5796.5):
+        raise ValueError('Choose a supported DJI research channel')
+    if v['sdr_mode']=='dji' and v['sdr'] not in ('off','hackrf'):
+        raise ValueError('DJI capture needs HackRF; RTL-SDR cannot receive this waveform')
+    if not isinstance(v['readsb_file'],str) or len(v['readsb_file'])>4096 or '\0' in v['readsb_file']:
+        raise ValueError('Invalid readsb JSON path')
+    if v['sdr_mode']=='adsb' and v['readsb_file'] and v['sdr']!='off':
+        raise ValueError('Choose either a managed ADS-B receiver or an existing readsb file')
+    if v['sdr']=='rtl' and v['sdr_mode']=='spectrum' and BANDS[v['sdr_band']][1]>1766:
         raise ValueError('RTL-SDR cannot directly tune 2.4 / 5 GHz; choose a lower band or HackRF')
-    if any(type(v[k]) is not bool for k in ('share_rid','share_areas')):
+    if any(type(v[k]) is not bool for k in ('share_rid','share_areas','share_decoded')):
         raise ValueError('Sharing choices must be true or false')
     if v['station'] is not None and (not isinstance(v['station'],list) or len(v['station'])!=2 or not finite(v['station'][0],-89.99,89.99) or not finite(v['station'][1],-179.99,179.99)):
         raise ValueError('Station location needs valid latitude and longitude')
@@ -101,8 +111,9 @@ class Store:
             self.config['settings'] = checked
             # Disabling sharing cancels pending uploads immediately, not after restart.
             for row in self.db.execute("SELECT id,data FROM events WHERE state='queued'").fetchall():
-                candidate = json.loads(row[1]).get('observation_type')=='wifi-candidate'
-                if not checked['share_areas' if candidate else 'share_rid']:
+                kind = json.loads(row[1]).get('observation_type')
+                choice='share_areas' if kind=='wifi-candidate' else 'share_decoded' if kind in ('adsb-uas','dji-droneid') else 'share_rid'
+                if not checked[choice]:
                     self.db.execute("UPDATE events SET state='local' WHERE id=?",(row[0],))
             self.db.commit()
             self.save()
@@ -138,7 +149,7 @@ class Store:
             for k in ('token','node_handle','display_name','pair'):
                 self.config.pop(k,None)
             settings=self.settings()
-            settings.update(share_rid=False,share_areas=False)
+            settings.update(share_rid=False,share_areas=False,share_decoded=False)
             self.update(settings)
 
     def close(self):

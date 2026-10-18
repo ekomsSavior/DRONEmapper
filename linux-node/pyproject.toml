@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dronemapper-node"
-version = "0.1.0"
+version = "0.2.0"
 description = "Stationary Linux scanner node for DRONEmapper — Church of Malware / saviorSEC"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -13,6 +13,7 @@ dependencies = []
 
 [project.optional-dependencies]
 ble = ["bleak>=3.0.2,<4"]
+dji = ["numpy>=1.26,<3", "scipy>=1.11,<2", "matplotlib>=3.8,<4", "bitarray>=2.9,<4"]
 mqtt = ["paho-mqtt>=2.1,<3"]
 all = ["bleak>=3.0.2,<4", "paho-mqtt>=2.1,<3"]
 
@@ -21,6 +22,7 @@ dronemapper-node = "dronemapper_node.cli:main"
 
 [tool.setuptools.package-data]
 dronemapper_node = ["static/*", "data/*"]
+"dronemapper_node._vendor.dronesecurity" = ["LICENSE", "NOTICE.txt"]
 
 [tool.setuptools.packages.find]
 include = ["dronemapper_node*"]

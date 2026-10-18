@@ -1,7 +1,7 @@
 /* Church of Malware / saviorSEC · AGPL-3.0-or-later */
 import {updateHistory} from './observation-profile.mjs';
 import {DurableObject} from 'cloudflare:workers';
-import {UUID,envelope,validateBatch,nodeRecord,mergeNodeRows,RETENTION} from './node-records.mjs';
+import {UUID,envelope,validateBatch,nodeRecord,nodeIdentity,mergeNodeRows,RETENTION} from './node-records.mjs';
 const encoder=new TextEncoder();
 const hex=bytes=>Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,'0')).join('');
 const hash=async value=>hex(await crypto.subtle.digest('SHA-256',encoder.encode(value)));
@@ -130,7 +130,7 @@ export class NodeNetwork extends DurableObject{
   let records;
   try{if(path==='/v1/nodes/heartbeat')envelope(body,false);else if(path==='/v1/observations')records=validateBatch(body,now);else return reply({error:'Not found'},404);}
   catch{return reply({error:'Invalid or expired observation batch'},422);}
-  const prepared=records?await Promise.all(records.map(async raw=>({event:await this.keyed('event:'+node.handle+':'+raw.event_id),track:(raw.observation_type==='wifi-candidate'?'signal-':'rid-')+(await this.keyed(raw.observation_type==='wifi-candidate'?'candidate:'+node.handle+':'+raw.candidate_id:'rid:'+raw.id_type+':'+raw.rid)).slice(0,24),raw}))):[];
+  const prepared=records?await Promise.all(records.map(async raw=>{const [prefix,key]=nodeIdentity(raw,node.handle);return {event:await this.keyed('event:'+node.handle+':'+raw.event_id),track:prefix+(await this.keyed(key)).slice(0,24),raw};})):[];
   // Authentication, binding and rate state are re-read after asynchronous work.
   const result=this.ctx.storage.transactionSync(()=>{
    const current=[...this.ctx.storage.sql.exec('SELECT * FROM nodes WHERE token_hash=?',tokenHash)][0];
