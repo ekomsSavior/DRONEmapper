@@ -1,4 +1,4 @@
-"""DRONEmapper Linux node command line. AGPL-3.0-or-later."""
+"""DRONEmapper desktop node command line. AGPL-3.0-or-later."""
 import argparse
 import json
 import os
@@ -13,12 +13,13 @@ from .dashboard import make_server
 from .engine import Engine
 from .radios import doctor
 from .storage import Store, BANDS
+from .platform_support import state_directory, system
 
 
 def parser():
-    p=argparse.ArgumentParser(description='DRONEmapper stationary Linux node · Church of Malware / saviorSEC')
+    p=argparse.ArgumentParser(description='DRONEmapper stationary desktop node · Church of Malware / saviorSEC')
     p.add_argument('--version',action='version',version=__version__)
-    p.add_argument('--data-dir',default=str(Path(os.environ.get('XDG_STATE_HOME',Path.home()/'.local/state'))/'dronemapper-node'))
+    p.add_argument('--data-dir',default=str(state_directory()))
     commands=p.add_subparsers(dest='command',required=True)
     commands.add_parser('doctor',help='Report receiver capabilities without starting a scan')
     commands.add_parser('status',help='Show saved settings and queue counts; stop a running node first')
@@ -27,7 +28,7 @@ def parser():
     commands.add_parser('wifi-help',help='Show dedicated monitor-interface setup commands')
     config=commands.add_parser('configure',help='Save receiver choices while the node is stopped')
     config.add_argument('--wifi',action='append',dest='wifi_interfaces',help='Dedicated monitor interface; repeat for several radios')
-    config.add_argument('--ble',dest='ble_adapter',help='Bluetooth controller, e.g. hci0; empty string disables')
+    config.add_argument('--ble',dest='ble_adapter',help='System controller: default on Windows / macOS, hci0 on Linux; empty disables')
     config.add_argument('--sdr-mode',choices=['spectrum','adsb','dji'])
     config.add_argument('--dji-frequency',type=float,help='Fixed DJI research channel in MHz')
     config.add_argument('--readsb-file',help='Existing local aircraft.json; empty string disables')
@@ -41,6 +42,7 @@ def parser():
     config.add_argument('--share-areas',action=argparse.BooleanOptionalAction,default=None)
     serve=commands.add_parser('serve',help='Open the local radar/control dashboard')
     serve.add_argument('--port',type=int,default=8790)
+    serve.add_argument('--open',action='store_true',help='Open the local dashboard in your browser')
     serve.add_argument('--listen',action='store_true',help='Start saved receivers immediately')
     commands.add_parser('run',help='Run saved receivers without the dashboard; print live detections as JSON lines')
     capture=commands.add_parser('capture-iq',help='Record up to three seconds of receive-only HackRF IQ, 20 Msps / cs8')
@@ -73,13 +75,15 @@ Do not switch the computer’s Internet Wi-Fi interface into monitor mode.
 '''
 
 
+DESKTOP_WIFI_HELP="Install Wireshark. Windows also needs Npcap with raw 802.11 / monitor capture enabled.\nmacOS needs Wireshark capture permissions (ChmodBPF). Restart Terminal after setup.\nUse a dedicated Wi-Fi adapter; monitor mode can disconnect its Internet connection.\nRun: dumpcap -D\nCopy the dedicated adapter name into the dashboard's Wi-Fi field, then Start listening.\nThe node requests monitor mode and verifies raw 802.11 support before reading frames.\nA managed/Ethernet-only driver is not sufficient. Many USB Wi-Fi drivers lack monitor\nsupport on Windows or macOS even when the same adapter works on Linux.\nChannel selection is controlled by the OS/driver; this node does not hop channels.\nBLE, SDR and account linking work independently of monitor capture.\n"
+
 def main(argv=None):
     args=parser().parse_args(argv)
     if args.command=='doctor':
         print(json.dumps(doctor(),indent=2))
         return
     if args.command=='wifi-help':
-        print(WIFI_HELP)
+        print(WIFI_HELP if system()=='Linux' else DESKTOP_WIFI_HELP)
         return
     if args.command=='capture-iq':
         from .capture import capture_iq
@@ -147,7 +151,10 @@ def main(argv=None):
             server.timeout=.5
             if args.listen:
                 engine.start()
-            print(f'DRONEmapper Linux {__version__} · Church of Malware / saviorSEC\nOpen http://127.0.0.1:{server.server_port}/',flush=True)
+            print(f'DRONEmapper Desktop {__version__} · Church of Malware / saviorSEC\nOpen http://127.0.0.1:{server.server_port}/',flush=True)
+            if args.open:
+                import webbrowser
+                webbrowser.open(f'http://127.0.0.1:{server.server_port}/')
             while not stop.is_set():
                 server.handle_request()
         elif args.command=='run':

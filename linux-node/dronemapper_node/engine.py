@@ -10,17 +10,17 @@ import threading
 import time
 import uuid
 from .account import Connection, Uploader
-from .protocol import AIRFRAMES, bearing_distance, finite, messages
+from .protocol import AIRFRAMES, bearing_distance, finite, messages, MAC
 from . import radios, __version__
 
 
 class Catalog:
     def __init__(self):
         data=Path(__file__).with_name('data')
-        self.rules=json.loads((data/'rid-catalog.json').read_text()) if (data/'rid-catalog.json').exists() else []
+        self.rules=json.loads((data/'rid-catalog.json').read_text(encoding='utf-8')) if (data/'rid-catalog.json').exists() else []
         self.oui={}
         if (data/'oui-vendors.tsv').exists():
-            for line in (data/'oui-vendors.tsv').read_text().splitlines():
+            for line in (data/'oui-vendors.tsv').read_text(encoding='utf-8').splitlines():
                 prefix,sep,name=line.partition('\t')
                 if sep:
                     self.oui[prefix.upper()]=name
@@ -178,9 +178,19 @@ class Engine:
                 self.last_queued={k:v for k,v in self.last_queued.items() if now-v[0]<900}
                 self.contacts={k:v for k,v in sorted(self.contacts.items(),key=lambda p:p[1]['seen'],reverse=True)[:200] if now-v['seen']<=120}
                 return
-            mac=event['mac']
-            key=source+'|'+mac+('|candidate' if kind=='candidate' else '|rid')
-            entry=self.contacts.setdefault(key,{'key':key,'mac':mac,'source':source,'radio_vendor':self.catalog.vendor(mac)})
+            mac=event.get('mac')
+            receiver_id=event.get('receiver_id')
+            if isinstance(mac,str) and MAC.fullmatch(mac):
+                identity={'mac':mac,'radio_vendor':self.catalog.vendor(mac)}
+                address=mac
+            elif kind=='rid' and isinstance(receiver_id,str):
+                try: address=str(uuid.UUID(receiver_id))
+                except ValueError: return
+                identity={'receiver_id':address}
+            else:
+                return
+            key=source+'|'+address+('|candidate' if kind=='candidate' else '|rid')
+            entry=self.contacts.setdefault(key,{'key':key,'source':source,**identity})
             entry.update(seen=received)
             if finite(event.get('rssi_dbm'),-127,20):
                 entry['rssi_dbm']=event['rssi_dbm']

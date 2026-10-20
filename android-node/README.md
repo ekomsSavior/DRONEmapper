@@ -14,6 +14,33 @@ Expand or collapse the live list and radar. The **Signals** view puts glowing do
 
 Sharing starts off each session. Raw MACs and network names stay on your phone. A Wi-Fi name match is not proof of a drone; changing addresses may create separate profiles.
 
+## Record offline, upload at home
+
+Version **0.7.0** adds **Saved wardrives · record / upload / export**.
+Start listening, open that button, then choose **Record a wardrive**. No account
+or internet is needed to record. Live sharing pauses while the trip records.
+Tap **Finish recording** or **Stop listening**; saved trips survive app restarts.
+
+At home, connect this phone to your account, open a saved trip and choose
+**Upload later to DRONEmapper**. Keep the app open until finished. The original
+dates are preserved; retrying the same trip with the same phone connection does
+not double-count. Uploading does not delete the local trip. Reports up to one year
+old are accepted. Uploads are manual; reconnecting Wi-Fi does not start one.
+
+**Export WiGLE CSV** saves matching Wi-Fi observations with fresh receiver GPS,
+names, MACs, frequency and signal strength. Send it to WiGLE using your WiGLE
+account or another service that accepts that format. Your DRONEmapper token
+does not authorize WiGLE. Biscuit Manager CSV import is **not verified**.
+Remote ID reports use **Export DRONEmapper JSON** instead; they are not Wi-Fi rows.
+
+Recording is opt-in. Exact receiver GPS and Wi-Fi identifiers remain in private
+phone storage until you explicitly export them. Native map uploads send rounded
+Wi-Fi receiver areas and broadcast-reported Remote ID positions. No GPS means no
+Wi-Fi map point or CSV row. Ordinary Wi-Fi networks and raw SDR spectrum are not
+saved as drone sightings. Repeated contacts are sampled at most once per 30 seconds.
+Up to 100 trips / 100,000 saved rows are kept; export and delete old trips if full.
+Deleting a local trip does not remove previously uploaded map reports.
+
 Optional USB: **MT7610U / MT7612U** receive drivers cover the Panda / Alfa IDs below; **RTL8187L (0bda:8187)** covers 2.4 GHz channels 1–11. Other chipsets need their own driver.
 
 Build from the repository root with JDK 17, Python 3, Android SDK 35 and NDK 28.2.13676358:
@@ -39,12 +66,19 @@ Building native USB support requires Python 3 and Android NDK **28.2.13676358**.
 Install that NDK through SDK Manager; Gradle builds the bundled source for ARM64,
 ARMv7 and x86-64. Linux and macOS build hosts are supported.
 
+## HackRF SDR
+
+The **0.6.0** build adds **USB SDR · HackRF → Choose receiver → Connect → Allow**
+for local RF spectrum reception, alongside Wi-Fi and Bluetooth. Use a PortaPack's
+HackRF USB mode. This Android path does not yet include the desktop DJI / ADS-B
+protocol decoders. [Setup and hardware test steps](../docs/android-hackrf.md).
+
 ## Update the app
 
 Download the latest APK from [Android nodes](https://dronemapper.churchofmalware.org/nodes.html)
 and install it over the existing app; do not uninstall first. Official releases
 use the same signing key to preserve your pairing and settings. Check **Phone
-capabilities** for version **0.5.1**. Updates are manual for now.
+capabilities** for version **0.7.0**. Updates are manual for now.
 
 Start listening again, reconnect your USB adapter, and enable your preferred
 **Sharing choices** if you want reports on the map. For a test report, connect

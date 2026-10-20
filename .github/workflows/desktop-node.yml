@@ -1,0 +1,29 @@
+name: Desktop node
+on:
+  push:
+    paths: ['linux-node/**', '.github/workflows/desktop-node.yml']
+  pull_request:
+    paths: ['linux-node/**', '.github/workflows/desktop-node.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  desktop:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "./linux-node[all]"
+      - run: python -m unittest discover -s linux-node/tests -v
+      - run: dronemapper-node --version
+      - run: python -m pip wheel ./linux-node --no-deps --wheel-dir desktop-dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: desktop-node-${{ matrix.os }}
+          path: desktop-dist/*.whl

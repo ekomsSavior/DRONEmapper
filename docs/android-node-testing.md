@@ -1,6 +1,8 @@
 # Phone acceptance test
 
-**Status: signed Android 0.5.1 installed on the Moto; Panda MT7610U USB frame reception confirmed (9,192 frames in the supplied report). Remote ID reception through USB remains pending. See [USB compatibility and results](usb-scanner-testing.md). Camera-signal radar and tap details were verified with 0.4.3; account pairing and uploads with 0.4.0.** A successful APK build, parser tests and HTTP tests do not establish RF reception or Android background reliability. Use the same checklist for all three phones; exact models are read by the app.
+**Current release: Android 0.7.0.** Installed over 0.6.0 on the Moto on 2026-10-19; Android reports version code 11 and the app launches. Saved-wardrive drive/reconnect reception still needs a physical acceptance test.
+
+**Earlier reception evidence: Android 0.5.1 on the Moto; Panda MT7610U USB frame reception confirmed (9,192 frames in the supplied report). Remote ID reception through USB remains pending. See [USB compatibility and results](usb-scanner-testing.md). Camera-signal radar and tap details were verified with 0.4.3; account pairing and uploads with 0.4.0.** A successful APK build, parser tests and HTTP tests do not establish RF reception or Android background reliability. Use the same checklist for all three phones; exact models are read by the app.
 
 | Check | Phone 1 | Phone 2 | Phone 3 |
 | --- | --- | --- | --- |

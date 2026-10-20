@@ -1,6 +1,5 @@
 """Private node settings and bounded durable upload queue. AGPL-3.0-or-later."""
 import copy
-import fcntl
 import json
 import os
 from pathlib import Path
@@ -11,9 +10,10 @@ import threading
 import time
 import uuid
 from .protocol import finite
+from .platform_support import private_directory, lock_file, valid_interface, valid_ble, is_link
 
 ORIGIN = 'https://dronemapper.churchofmalware.org'
-DEFAULTS = {'label': 'Linux stationary node', 'wifi_interfaces': [], 'ble_adapter': '',
+DEFAULTS = {'label': 'Stationary node', 'wifi_interfaces': [], 'ble_adapter': '',
             'sdr': 'off', 'sdr_band': '2400', 'sdr_mode':'spectrum', 'dji_frequency':2444.5, 'readsb_file':'', 'station': None,
             'share_rid': False, 'share_areas': False, 'share_decoded':False, 'mqtt_file': ''}
 BANDS = {'433': (430,440), '868': (863,870), '915': (902,928), '2400': (2400,2485),
@@ -28,10 +28,10 @@ def validate_settings(values):
     if not isinstance(v['label'],str) or not 1 <= len(v['label']) <= 80 or any(ord(x)<32 for x in v['label']):
         raise ValueError('Use a node name of 1–80 printable characters')
     interfaces = v['wifi_interfaces']
-    if not isinstance(interfaces,list) or len(interfaces)>4 or any(not isinstance(x,str) or not re.fullmatch(r'[a-zA-Z0-9_.-]{1,15}',x) or x.startswith('-') for x in interfaces) or len(set(interfaces))!=len(interfaces):
+    if not isinstance(interfaces,list) or len(interfaces)>4 or any(not valid_interface(x) for x in interfaces) or len(set(interfaces))!=len(interfaces):
         raise ValueError('Choose up to four distinct monitor interfaces')
-    if not isinstance(v['ble_adapter'],str) or v['ble_adapter'] and not re.fullmatch(r'hci[0-9]{1,3}',v['ble_adapter']):
-        raise ValueError('Bluetooth adapter must be hci0, hci1, etc.')
+    if not valid_ble(v['ble_adapter']):
+        raise ValueError('Choose the system Bluetooth adapter or a Linux hci controller')
     if v['sdr'] not in ('off','hackrf','rtl') or not isinstance(v['sdr_band'],str) or v['sdr_band'] not in BANDS:
         raise ValueError('Choose a supported SDR and band')
     if not isinstance(v['sdr_mode'],str) or v['sdr_mode'] not in ('spectrum','adsb','dji'):
@@ -60,31 +60,22 @@ def validate_settings(values):
 class Store:
     def __init__(self, directory):
         self.directory = Path(directory).expanduser()
-        self.directory.mkdir(parents=True,exist_ok=True,mode=0o700)
-        if self.directory.is_symlink() or self.directory.stat().st_uid != os.getuid():
-            raise ValueError('Use a private state directory owned by your user')
-        os.chmod(self.directory,0o700)
+        private_directory(self.directory)
         self.lock = threading.RLock()
-        lockfd=os.open(self.directory/'node.lock',os.O_WRONLY|os.O_CREAT|os.O_NOFOLLOW,0o600)
-        self.lockfile = os.fdopen(lockfd,'a')
-        try:
-            fcntl.flock(self.lockfile,fcntl.LOCK_EX|fcntl.LOCK_NB)
-        except BlockingIOError:
-            self.lockfile.close()
-            raise ValueError('This node is already running; use its dashboard or stop it first')
+        self.lockfile = lock_file(self.directory/'node.lock')
         self.path = self.directory/'settings.json'
         self.config = {'node_id':str(uuid.uuid4()),'secret':secrets.token_hex(32),'settings':copy.deepcopy(DEFAULTS)}
         if self.path.exists():
-            if self.path.is_symlink():
+            if is_link(self.path):
                 raise ValueError('Settings must not be a symlink')
-            self.config = json.loads(self.path.read_text())
+            self.config = json.loads(self.path.read_text(encoding='utf-8'))
             self.config['settings'] = validate_settings(self.config['settings'])
             uuid.UUID(self.config['node_id'])
             if not re.fullmatch('[a-f0-9]{64}',self.config.get('secret','')):
                 raise ValueError('Invalid private node configuration')
         self.save()
         dbpath = self.directory/'observations.sqlite3'
-        if dbpath.is_symlink():
+        if dbpath.exists() and is_link(dbpath):
             raise ValueError('Observation database must not be a symlink')
         self.db = sqlite3.connect(dbpath,check_same_thread=False)
         os.chmod(dbpath,0o600)

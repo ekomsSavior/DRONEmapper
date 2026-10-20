@@ -1,0 +1,24 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {authHarness} from './auth-harness.mjs';
+test('saved scanner uploads retain dates, deduplicate after pruning, preserve newest position, and revoke',async t=>{
+ const h=await authHarness();t.after(()=>h.mf.dispose());
+ const env=await h.mf.getBindings(),network=env.NODES.getByName('community');
+ const nodeId=crypto.randomUUID(),{node_key,node_handle}=await network.connectAccount('archive-owner',nodeId,'Offline phone',crypto.randomUUID());
+ const now=Date.now()/1000;
+ const row=(stamp,latitude=37.125)=>({event_id:crypto.randomUUID(),observation_type:'wifi-candidate',candidate_id:'00112233-4455-4677-8899-aabbccddeeff',signature:'wifi-cam-name',frequency_mhz:2437,location_grid_degrees:.01,latitude,longitude:-122.125,observed_at:stamp,received_at:stamp,rssi_dbm:-50});
+ const send=(rows,path='/v1/observations/archive',key=node_key,id=nodeId)=>h.mf.dispatchFetch('http://localhost'+path,{method:'POST',headers:{Authorization:'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify({schema_version:1,node_id:id,observations:rows})});
+ const old=row(now-20*86400);
+ assert.equal((await send([old],'/v1/observations')).status,422);
+ let response=await send([old]);assert.equal(response.status,200,await response.clone().text());assert.equal((await response.json()).accepted,1);
+ let snap=await network.snapshot(0);assert.equal(snap.nodes.active_nodes,0);assert.equal(snap.signals[0].ghost,true);assert.equal(snap.signals[0].source_type,'scanner-archive');
+ assert.equal((await (await send([old])).json()).duplicates,1);assert.equal((await network.snapshot(0)).signals[0].observation_count,1);
+ const fresh=row(now-200,38.125);assert.equal((await (await send([fresh])).json()).accepted,1);
+ assert.equal((await (await send([row(now-21*86400)])).json()).accepted,1);
+ snap=await network.snapshot(0);assert.equal(snap.signals[0].latitude,38.125);assert.equal(snap.signals[0].sighting_history.length,3);
+ assert.equal((await send([row(now-366*86400)])).status,422);assert.equal((await send([row(now+600)])).status,422);
+ assert.equal((await send([row(now-400)],undefined,undefined,crypto.randomUUID())).status,403);
+ const {upload_token}=await network.createWardriveToken('archive-owner','CSV');assert.equal((await send([old],undefined,upload_token)).status,403);
+ await network.revokeAccountNode('archive-owner',node_handle);assert.equal((await send([old])).status,401);
+ assert.equal((await network.snapshot(0)).signals.length,0);
+});

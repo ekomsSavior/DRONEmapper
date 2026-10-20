@@ -57,8 +57,13 @@ class DecoderTests(unittest.TestCase):
             p=Path(tmp)/'input';p.write_text('{}')
             self.assertEqual(read_json(p),{})
             with self.assertRaises(ValueError):read_json(p,1)
-            link=Path(tmp)/'link';link.symlink_to(p)
-            with self.assertRaises(OSError):read_json(link)
+            link=Path(tmp)/'link'
+            try:
+                link.symlink_to(p)
+            except OSError:
+                if os.name!='nt': raise
+            else:
+                with self.assertRaises(OSError):read_json(link)
             fifo=Path(tmp)/'fifo';os.mkfifo(fifo)
             with self.assertRaises(ValueError):read_json(fifo)
 
@@ -134,9 +139,9 @@ class DecoderTests(unittest.TestCase):
                 self.assertEqual(command[command.index('-n')+1],'2000000')
                 os.write(kwargs['pass_fds'][0],bytes(4000000))
                 return type('Result',(),{'returncode':0})()
-            with patch('shutil.which',return_value='/bin/hackrf_transfer'),patch('subprocess.run',side_effect=run):
+            with patch('shutil.which',return_value='/bin/hackrf_transfer'),patch('subprocess.run',side_effect=run),patch('dronemapper_node.capture.system',return_value='Linux'):
                 result=capture_iq(target,2444.5,.1)
                 self.assertEqual(result['sample_format'],'cs8');self.assertEqual(result['sample_rate'],20000000)
-                self.assertEqual(target.stat().st_mode&0o777,0o600)
+                if os.name!='nt': self.assertEqual(target.stat().st_mode&0o777,0o600)
                 with self.assertRaises(FileExistsError):capture_iq(target,2444.5,.1)
                 with self.assertRaises(ValueError):capture_iq(target,1090,.1)

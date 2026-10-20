@@ -18,22 +18,34 @@ Android 8 or newer. No root or Bluetooth dongle needed.
 
 Sharing is optional. Choose a display name or remain **Anonymous**; email and full MAC addresses stay off the public map. [More app instructions and build steps](android-node/README.md).
 
-**Updating to 0.5.1:** download the new APK from the same page and install it over
+**Updating to 0.7.0:** download the new APK from the same page and install it over
 your existing app—no uninstall. Pairing and settings are preserved. In **Phone
-capabilities**, check the version. USB users: **USB Wi-Fi adapter → Connect → Allow**.
+capabilities**, check the version. USB Wi-Fi: **USB Wi-Fi adapter → Connect → Allow**.
+HackRF: **USB SDR · HackRF → Choose receiver → Connect → Allow** for local RF spectrum.
 Updates are manual; re-enable your preferred **Sharing choices** after starting.
 
-## Linux scanner node
+## Desktop scanner node
 
-Stationary computers can use a [Linux CLI and local radar dashboard](linux-node/README.md),
-with dedicated monitor Wi-Fi, passive Bluetooth, optional MQTT input and HackRF/RTL-SDR
-spectrum views. Linux 0.2.0 adds [ADS-B and DJI protocol decoders](docs/sdr-decoders.md). Pair it with your account and choose what to share. SDR power is
-unclassified RF activity; it does not yet identify drones. [Setup and hardware notes](docs/linux-node-setup.md).
+Windows, macOS and Linux computers can run the [standalone node and radar](linux-node/README.md).
+[Download Desktop 0.3.0 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
+Pair with your account and choose which detections to share. Wi-Fi, Bluetooth and one SDR can run together.
 
-[Download Linux 0.2.0 and follow the quick start](https://dronemapper.churchofmalware.org/linux.html).
-Wi-Fi, Bluetooth and one SDR can run together. Debian/Ubuntu setup configures a
-spare USB adapter in monitor mode; the optional Bluetooth helper enables passive
-BlueZ reception. Your existing account works with both Android and Linux nodes.
+- **Windows:** install Python 3.10+, extract the source, then open `linux-node/Start-DRONEmapper.cmd`.
+- **macOS:** install Python 3.10+, then run `bash linux-node/Start-DRONEmapper.command`.
+- **Linux:** follow the [monitor-adapter setup](docs/linux-node-setup.md).
+
+[Windows/macOS receiver setup](docs/desktop-node-setup.md) · [SDR decoders](docs/sdr-decoders.md).
+Wi-Fi capture depends on the OS driver and monitor-mode support. SDR spectrum displays RF activity; the separate decoders extract supported protocols.
+
+## Wardrive logs
+
+In [your account](https://dronemapper.churchofmalware.org/account.html), open
+**Wardrive logs & upload tokens** to import WiGLE CSV exports or create a token
+for automatic completed-export uploads. Matching camera-link signals keep their
+original dates and appear as approximate areas. [Setup and API guide](docs/wardrive-uploads.md).
+
+Android **Saved wardrives** records offline, keeps trips after stopping, and lets
+you upload at home or export WiGLE CSV. [App instructions](android-node/README.md#record-offline-upload-at-home).
 
 ## Run locally
 
@@ -59,7 +71,7 @@ Map visitors need only a browser. Scanner reports add Remote ID positions and op
 - [IOOS Glider DAC](https://gliders.ioos.us/): quality-checked Spray underwater-glider surface GPS fixes from Scripps and WHOI.
 - [NOAA CoastWatch](https://cwcgom.aoml.noaa.gov/erddap/tabledap/GLIDERS_LAST_10_DAYS_LOCATIONS.html): reported underwater glider locations.
 - [ClimateViewer](https://climateviewer.org/history-and-science/government/maps/uav-drones-over-usa/): historical UAV records.
-- [OUI Master Database](https://github.com/Ringmast4r/OUI-Master-Database) by **Ringmast4r**, using IEEE registry entries: offline MAC-prefix/radio-vendor lookup in the Android and Linux apps.
+- [OUI Master Database](https://github.com/Ringmast4r/OUI-Master-Database) by **Ringmast4r**, using IEEE registry entries: offline MAC-prefix/radio-vendor lookup in the Android and desktop apps.
 
 Coverage varies. Deployment areas and historical records are labeled separately from timestamped positions; this is not universal live tracking.
 

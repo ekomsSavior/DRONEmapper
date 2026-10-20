@@ -2,6 +2,7 @@
 import {createAuthClient} from 'better-auth/client';
 import {twoFactorClient} from 'better-auth/client/plugins';
 import QRCode from 'qrcode';
+import {scanWardriveFile,uploadWardriveFile} from './wardrive-upload.mjs';
 const auth=createAuthClient({baseURL:location.origin,basePath:'/api/auth',plugins:[twoFactorClient()]});
 const root=document.querySelector('#account-content'),status=document.querySelector('#account-message');
 const params=new URLSearchParams(location.search);
@@ -70,11 +71,14 @@ async function dashboard(){
  clear('Your scanner account');note(user.email);
  if(pair){try{await pairing(pair);return;}catch(error){pair='';sessionStorage.removeItem('dm-pair');message(error.message);}}
  button(root,'Open world map ↗',()=>{location.href='/';});
- root.append(el('h3','Connect a phone'));note('Tap “Connect to DRONEmapper” in the app. Or enter the code displayed on your phone.');
+ button(root,'Wardrive logs & upload tokens',()=>wardrive(),true);
+ root.append(el('p','Import older CSVs here. Record offline and upload saved trips from the Android app. See the workflows and supported devices below.'));
+ root.append(el('a','Import, offline recording & export guide ↓',{href:'#wardrive-workflow'}));
+ root.append(el('h3','Connect a scanner'));note('Choose “Connect to DRONEmapper” in the Android app or desktop node. Or enter the connection code shown there.');
  const code=field(root,'Connection code');button(root,'Continue',()=>pairing(code.value.trim().toUpperCase()));
  root.append(el('h3','Your nodes'));
- const {nodes}=await api('nodes');if(!nodes.length)note('No phones connected yet.');
- for(const node of nodes){const card=el('div','',{class:'node-card'});card.append(el('strong',node.label||'Scanner node'));card.append(el('p',node.online?'Online':node.last_seen?'Last active '+new Date(node.last_seen*1000).toLocaleString():'Waiting for first scan'));root.append(card);
+ const {nodes}=await api('nodes');if(!nodes.length)note('No scanner nodes connected yet.');
+ for(const node of nodes){const card=el('div','',{class:'node-card'});card.append(el('strong',node.label||'Scanner node'));card.append(el('p',node.scope==='wardrive'?(node.last_seen?'Wardrive uploader · last upload '+new Date(node.last_seen*1000).toLocaleString():'Wardrive uploader · no uploads yet'):node.online?'Online':node.last_seen?'Last active '+new Date(node.last_seen*1000).toLocaleString():'Waiting for first scan'));root.append(card);
   button(card,'Remove node and its reports',async()=>{if(!confirm('Disconnect this node and remove its contributed observations?'))return;await api('nodes/revoke',{node_handle:node.handle});await dashboard();},true);
  }
  root.append(el('h3','Your profile'));note('Display name: '+user.name);button(root,'Display name & anonymity',()=>profile(),true);
@@ -83,10 +87,77 @@ async function dashboard(){
  button(root,'Change password',()=>changePassword(),true);
  button(root,'Sign out',async()=>{await invoke(auth.signOut());user=null;credentials();},true);
 }
+function wardrive(){
+ clear('Contribute wardrive logs');
+ note('Import your WiGLE-format CSV exports. Matching camera-link names become possible signal areas; ordinary Wi-Fi and Bluetooth rows are skipped. This does not decode Remote ID or establish a device’s location.');
+ root.append(el('p','For trips recorded in DRONEmapper, use Saved wardrives → Upload later in the app. You can also export those trips to compatible services.'));
+ const workflowLink=el('p');workflowLink.append(el('a','Offline recording, exports & supported devices ↓',{href:'#wardrive-workflow'}));root.append(workflowLink);
+ const guide=el('a','Setup, automatic uploads & API documentation ↗',{href:'/wardrives.html'});root.append(guide);
+ root.append(el('h3','Create an upload token'));
+ const label=field(root,'Uploader name');label.maxLength=80;label.placeholder='My Biscuit exports';
+ const consentLabel=el('label','',{class:'check-label'}),consent=el('input','',{type:'checkbox'});
+ consentLabel.append(consent,document.createTextNode('I want to contribute matching observations from logs I am allowed to share, as approximate public signal areas.'));root.append(consentLabel);
+ note('The file is processed to find supported signals. Raw files, network names and MAC addresses are not retained. Only rounded areas, dates and matching evidence are saved. Revoke a token and its reports under Your nodes.');
+ const issued=el('div');
+ button(root,'Create upload token',async()=>{
+  if(!label.reportValidity())return;if(!consent.checked)throw Error('Confirm sharing before creating a token.');
+  const result=await api('wardrive/tokens',{label:label.value.trim(),consent:true});key.value=result.upload_token;
+  issued.replaceChildren(el('p','Save this token now. It is shown once and is only allowed to upload wardrive logs.'));
+  const secret=el('textarea','',{rows:'3',readonly:'','aria-label':'New wardrive upload token',spellcheck:'false'});secret.value=result.upload_token;issued.append(secret);
+  button(issued,'Copy token',async()=>{await navigator.clipboard.writeText(result.upload_token);message('Token copied. Keep it private.');},true);
+  message('Upload token created.');
+ });
+ root.append(issued);
+ root.append(el('h3','Upload a completed export'));
+ const key=field(root,'Upload token','password');key.pattern='[a-f0-9]{64}';key.maxLength=64;key.spellcheck=false;
+ const file=field(root,'WiGLE CSV file','file');file.accept='.csv,.wiglecsv,.log,text/csv';
+ const zone=field(root,'Timezone used by the export');zone.value='UTC';zone.placeholder='UTC or -07:00';
+ note('Choose a completed CSV up to 256 MiB. Large files are read in chunks and matching rows upload automatically in batches. Keep this page open until finished.');
+ note('WiGLE/Kismet exports generally use UTC. If your exporter uses local time without a timezone, enter its offset on the capture date, such as -07:00. The log’s FirstSeen field is preserved; uploading it never makes it live.');
+ let preview=null,operation=null;const summary=el('p','',{role:'status'});root.append(summary);
+ const invalidate=()=>{preview=null;summary.textContent='';};file.addEventListener('change',invalidate);zone.addEventListener('input',invalidate);
+ const busy=async action=>{
+  if(operation)return;
+  operation=new AbortController();
+  const controls=[...root.querySelectorAll('input,button,textarea')].map(n=>[n,n.disabled]);
+  for(const [n] of controls)n.disabled=true;
+  cancel.hidden=false;cancel.disabled=false;
+  const preventLeave=e=>{e.preventDefault();e.returnValue='';};
+  addEventListener('beforeunload',preventLeave);
+  try{await action(operation.signal);}
+  catch(e){message(e.name==='AbortError'?`Cancelled. ${e.accepted||0} observations confirmed. You can retry this file without double-counting.`:(e.batches?`${e.accepted} observations confirmed before stopping. ${e.message}`:e.message));}
+  finally{operation=null;removeEventListener('beforeunload',preventLeave);for(const [n,disabled]of controls)n.disabled=disabled;cancel.hidden=true;}
+ };
+ const percent=p=>Math.min(100,Math.floor(100*p.bytesRead/Math.max(1,p.totalBytes)));
+ button(root,'Preview matching observations',async()=>{
+  const selected=file.files[0],timezone=zone.value.trim();preview=null;
+  await busy(async signal=>{
+   const now=Date.now()/1000,s=await scanWardriveFile(selected,timezone,{signal,now,onProgress:p=>{
+    summary.textContent=`Reading ${percent(p)}% · ${p.summary.rows.toLocaleString()} rows checked`;
+   }});
+   preview={selected,timezone,summary:s,now};
+   summary.textContent=`${s.rows.toLocaleString()} row${s.rows===1?'':'s'}: ${s.candidates.toLocaleString()} matching observation${s.candidates===1?'':'s'}, ${s.unrelated.toLocaleString()} unrelated, ${s.invalid.toLocaleString()} invalid, ${s.outside_time_window.toLocaleString()} outside the date window. Repeated sightings are skipped during upload.`;
+  });
+ });
+ button(root,'Upload matching observations',async()=>{
+  if(!key.reportValidity())return;
+  if(!preview||preview.selected!==file.files[0]||preview.timezone!==zone.value.trim())throw Error('Preview this file first.');
+  if(!preview.summary.candidates)throw Error('No supported observations to upload.');
+  await busy(async signal=>{
+   const result=await uploadWardriveFile(preview.selected,key.value.trim(),preview.timezone,{signal,now:preview.now,onProgress:p=>{
+    summary.textContent=`${p.waiting?(p.retrying?'Retrying automatically':'Uploading in batches'):p.totalBytes===undefined?'Uploading':`Reading ${percent(p)}%`} · ${p.accepted.toLocaleString()} imported · ${p.duplicates.toLocaleString()} duplicates skipped · ${p.batches} batches complete`;
+   }});
+   summary.textContent=`Upload complete · ${result.batches} batch${result.batches===1?'':'es'} processed`;
+   message(`Imported ${result.accepted.toLocaleString()} observation${result.accepted===1?'':'s'}; ${result.duplicates.toLocaleString()} duplicates skipped. Find them under Possible signals or Ghosts on the map.`);
+  });
+ });
+ const cancel=button(root,'Cancel upload or preview',()=>operation?.abort(),true);cancel.hidden=true;
+ button(root,'Back to account',dashboard,true);
+}
 async function pairing(value){
  const details=await api('device/details',{code:value});
  clear('Connect this node');root.append(el('strong',details.label));root.append(el('span',value,{class:'device-code'}));
- note('Check that this code matches the one shown in your DRONEmapper app. Approve only a phone you are connecting yourself.');
+ note('Check that this code matches the one shown in your Android app or desktop node. Approve only a device you are connecting yourself.');
  button(root,'Connect this node',async()=>{await api('device/approve',{code:value});pair='';sessionStorage.removeItem('dm-pair');clear('Node approved');note('Return to your scanner to finish connecting and choose what to share.');button(root,'Your account',dashboard);});
  button(root,'Cancel',async()=>{pair='';sessionStorage.removeItem('dm-pair');await dashboard();},true);
 }

@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Linux scanner node — DRONEmapper</title>
+  <title>Windows, macOS &amp; Linux scanner node — DRONEmapper</title>
+  <link rel="canonical" href="https://dronemapper.churchofmalware.org/desktop">
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
 </head>
@@ -13,17 +14,34 @@
   <a href="/">← World map</a> · <a href="/nodes.html">Android app</a>
   <p class="eyebrow">CHURCH OF MALWARE / SAVIORSEC</p>
   <h1>Your computer. A stationary scanner.</h1>
-  <p>A local radar, live detection list and optional community-map contributions. Run Wi-Fi, Bluetooth and a HackRF or RTL-SDR together. Free and open source, with no subscription.</p>
-  <p><a href="/downloads/DRONEmapper-Linux-0.2.0.zip">Download Linux node · 0.2.0</a> · <a href="/downloads/SHA256SUMS.txt">Checksums</a> · <a href="https://github.com/ekomsSavior/DRONEmapper/tree/main/linux-node">GitHub</a> · <a href="https://git.churchofmalware.org/ek0mssavi0r/DRONEmapper/src/branch/main/linux-node">Gitea</a></p>
-  <h2>Start on Debian or Ubuntu</h2>
+  <p><strong>Windows, macOS and Linux.</strong> A local radar, live detection list and optional community-map contributions. Run Wi-Fi, Bluetooth and a HackRF or RTL-SDR together. Free and open source, with no subscription.</p>
+  <p><a href="/downloads/DRONEmapper-Desktop-0.3.0.zip"><strong>Download Desktop node · 0.3.0 · all three systems</strong></a> · <a href="/downloads/SHA256SUMS.txt">Checksums</a> · <a href="/source.zip">Complete source</a></p>
+  <p><a href="#windows">Windows setup ↓</a> · <a href="#macos">macOS setup ↓</a> · <a href="#linux">Linux setup ↓</a> · <a href="/downloads/desktop-node-setup.md">Detailed receiver guide</a></p>
+  <p>This ZIP contains the Python app and launchers. Install <a href="https://www.python.org/downloads/">Python 3.10 or newer</a> first. The first launch needs internet to install dependencies. Extract the ZIP into a folder you can write to.</p>
+  <h2 id="windows">Start on Windows</h2>
   <ol>
-    <li>Download and extract the ZIP. Open a terminal inside <code>DRONEmapper-Linux-0.2.0</code>.</li>
+    <li>Install Python with the Python launcher enabled, then extract the ZIP.</li>
+    <li>Open <code>DRONEmapper-Desktop-0.3.0\linux-node</code> and double-click <strong>Start-DRONEmapper.cmd</strong>. The shared source folder is named <code>linux-node</code> on all three systems.</li>
+    <li>The launcher installs the node dependencies and opens <a href="http://127.0.0.1:8790/">127.0.0.1:8790</a>. Leave its terminal running.</li>
+  </ol>
+  <p>For Bluetooth, choose <strong>System Bluetooth</strong>. Wi-Fi capture needs <a href="https://www.wireshark.org/download.html">Wireshark with Npcap</a>, raw 802.11 capture support and a compatible monitor-mode driver. Optional HackRF/RTL-SDR tools and USB drivers are installed separately; see the receiver guide.</p>
+  <h2 id="macos">Start on macOS</h2>
+  <ol>
+    <li>Install Python, extract the ZIP and open Terminal in <code>DRONEmapper-Desktop-0.3.0</code>.</li>
+    <li>Run <code>bash linux-node/Start-DRONEmapper.command</code>.</li>
+    <li>The launcher installs dependencies and opens the local radar. Allow Terminal/Python Bluetooth access when macOS asks, then choose <strong>System Bluetooth</strong>.</li>
+  </ol>
+  <p>Wi-Fi capture needs Wireshark, its ChmodBPF capture-permission setup and a compatible monitor interface. With Homebrew, optional SDR tools can be installed with <code>brew install hackrf</code> or <code>brew install rtl-sdr</code>. Full receiver requirements are in the <a href="/downloads/desktop-node-setup.md">desktop setup guide</a>.</p>
+  <p>Windows/macOS support includes the dashboard, radar, account pairing and receiver integrations. Software checks pass on Linux, including tests of the platform-specific paths; native Windows/macOS hardware reception has not yet been verified.</p>
+  <h2 id="linux">Start on Debian or Ubuntu</h2>
+  <ol>
+    <li>Download and extract the ZIP. Open a terminal inside <code>DRONEmapper-Desktop-0.3.0</code>.</li>
     <li>Plug in a dedicated USB Wi-Fi adapter. Run <code>iw dev</code> to find its interface name. Keep your normal Internet adapter separate.</li>
     <li>Run <code>bash linux-node/setup-debian.sh YOUR_DEDICATED_USB_INTERFACE</code>, replacing the final word with that interface name.</li>
     <li>Setup requests sudo to install the receiver tools, configure capture permissions and create a monitor interface. It starts the dashboard at <a href="http://127.0.0.1:8790/">127.0.0.1:8790</a>. Leave the terminal running.</li>
   </ol>
   <p>Setup starts Wi-Fi on channel 6 and selects HackRF. In <strong>Radio settings</strong>, choose your attached receivers; set SDR to Off if you do not use one. Stop listening before changing receivers, save, then start again. After setup, <code>bash linux-node/run-local.sh</code> starts the node with your saved settings.</p>
-  <h2>Bluetooth or SDR without Wi-Fi</h2>
+  <h2>Linux: Bluetooth or SDR without Wi-Fi</h2>
   <p>Install Python 3.10+ and its virtual-environment package. From the extracted folder:</p>
   <pre><code>python3 -m venv .venv-node
 . .venv-node/bin/activate
@@ -31,12 +49,13 @@ pip install './linux-node[all]'
 dronemapper-node serve</code></pre>
   <p>Select your Bluetooth controller and/or SDR in the dashboard. Install your distribution’s <code>hackrf</code> or <code>rtl-sdr</code> package for SDR reception. A PortaPack must be in its <strong>HackRF / RF USB</strong> mode.</p>
   <p>If passive Bluetooth reports that BlueZ experimental support is required, run <code>bash linux-node/enable-passive-ble.sh</code> from the extracted folder. It backs up the host configuration and briefly restarts Bluetooth. The node retries automatically.</p>
-  <h2>Add SDR protocol decoding</h2>
+  <h2>Linux: add SDR protocol decoding</h2>
   <p>Stop the node, then run these commands from the extracted folder:</p>
   <pre><code>bash linux-node/install-decoders-debian.sh
 bash linux-node/run-local.sh</code></pre>
   <p>The installer builds readsb with HackRF and RTL-SDR support and installs the DJI decoding dependencies. In <strong>Radio settings</strong>, select a receiver and choose <strong>ADS-B</strong> or, for HackRF, <strong>DJI DroneID</strong>. Save and start listening. Wi-Fi and Bluetooth keep running alongside the SDR.</p>
   <p>ADS-B receives 1090 MHz aircraft broadcasts. DJI mode captures and decodes the researched OcuSync 2.0 waveform on a selected channel, with gaps during processing. The ZIP includes <code>docs/sdr-decoders.md</code> for setup, supported formats and recording review.</p>
+  <p>On Windows/macOS, use the <a href="/downloads/desktop-node-setup.md">desktop receiver guide</a> to install compatible decoder tools; the Debian installer above is Linux-only.</p>
   <h2>Connect your account</h2>
   <ol>
     <li>Click <strong>Connect to DRONEmapper → Continue in browser</strong>.</li>
@@ -47,16 +66,16 @@ bash linux-node/run-local.sh</code></pre>
   <h2>What the receivers show</h2>
   <ul>
     <li><strong>Wi-Fi:</strong> Remote ID beacons and NAN messages, plus possible WiFi CAM and Tello links. Up to four dedicated monitor interfaces, each on a fixed channel.</li>
-    <li><strong>Bluetooth:</strong> passive BLE Remote ID advertisements on a compatible controller and BlueZ configuration.</li>
+    <li><strong>Bluetooth:</strong> Remote ID advertisements through the system Bluetooth API on Windows/macOS, or a selected BlueZ controller on Linux. macOS uses discovery scanning and local device UUIDs rather than radio MAC addresses.</li>
     <li><strong>HackRF or RTL-SDR:</strong> spectrum measurements or ADS-B protocol decoding. HackRF also supports DJI DroneID capture/decode cycles and recording review. Ordinary aircraft remain local; fresh decoded drone positions have a separate sharing choice.</li>
     <li><strong>MQTT:</strong> optional input from an authorized receiver broker using the documented Remote ID format.</li>
   </ul>
   <p>The clickable radar’s <strong>Signals</strong> view shows strength; dot angles are layout only. <strong>Positions</strong> uses fresh reported GPS relative to the station, with selectable viewing ranges from 100 m to 500 km. A larger antenna must match the frequency and receiver; it does not supply a bearing or decode additional protocols by itself.</p>
   <h2>Hardware and updates</h2>
   <p>Linux monitor reception has been tested with a Panda RT5572, spectrum reception with a PortaPack in HackRF USB mode, and passive Bluetooth reception with a Panda-branded USB adapter (7392:c611). All three receivers ran together. RTL-SDR reception still needs hardware testing. A real Remote ID transmitter is still needed to verify decoded positions over the air. The ADS-B test opened HackRF successfully but received no fresh aircraft positions. DJI decoding passed published-recording tests, including conversion to HackRF’s 20 Msps signed 8-bit format; live DJI reception still needs a supported aircraft test.</p>
-  <p>To update, stop the node, extract the new release and repeat the virtual-environment install. Users of the Debian/Ubuntu setup can run <code>bash linux-node/run-local.sh</code> from the new folder; run the decoder installer above first if you want the new SDR decoders. Pairing and sharing settings live in your private user-state directory and are preserved. Keep one node process running per state directory.</p>
+  <p>To stop, press <strong>Ctrl+C</strong> in the terminal; restart with the same launcher. To update, stop the node, extract the new release and run its launcher. If updating files in place, pass <code>--update</code> to refresh dependencies. Debian/Ubuntu users can run <code>bash linux-node/run-local.sh</code> from the new folder. Pairing and sharing settings live in your private user-state directory and are preserved. Keep one node process running per state directory.</p>
   <p>The download includes the full <strong>setup guide</strong>, headless CLI instructions, an optional systemd user-service template, protocol research, source and license notices.</p>
-  <p>Built by <a href="https://churchofmalware.org/">Church of Malware</a> and <a href="https://churchofmalware.org/work/">saviorSEC, the Church’s research branch</a>. Linux code: AGPL-3.0-or-later. <a href="/credits.html">Credits &amp; licenses</a>.</p>
+  <p>Built by <a href="https://churchofmalware.org/">Church of Malware</a> and <a href="https://churchofmalware.org/work/">saviorSEC, the Church’s research branch</a>. Desktop code: AGPL-3.0-or-later. <a href="/credits.html">Credits &amp; licenses</a>.</p>
 </main>
 </body>
 </html>

@@ -28,7 +28,7 @@ class Api:
         allowed={'/account-api/device/start','/account-api/device/poll','/v1/observations','/v1/nodes/heartbeat'}
         if path not in allowed:
             raise ValueError('Unsupported map endpoint')
-        headers={'Content-Type':'application/json','Accept':'application/json','User-Agent':'DRONEmapper-Linux/'+__version__}
+        headers={'Content-Type':'application/json','Accept':'application/json','User-Agent':'DRONEmapper-Desktop/'+__version__}
         if token:
             headers['Authorization']='Bearer '+token
         request=urllib.request.Request(ORIGIN+path,data=json.dumps(body,allow_nan=False).encode(),headers=headers,method='POST')

@@ -206,8 +206,9 @@ class NodeTests(unittest.TestCase):
             with self.assertRaises(ValueError): validate_settings(values)
 
     def test_private_state_and_single_instance(self):
-        self.assertEqual(self.store.path.stat().st_mode&0o777,0o600)
-        self.assertEqual(Path(self.tmp.name).stat().st_mode&0o777,0o700)
+        if os.name!='nt':
+            self.assertEqual(self.store.path.stat().st_mode&0o777,0o600)
+            self.assertEqual(Path(self.tmp.name).stat().st_mode&0o777,0o700)
         with self.assertRaises(ValueError): Store(self.tmp.name)
 
     @patch('time.time',return_value=NOW)

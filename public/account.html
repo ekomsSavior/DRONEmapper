@@ -1,6 +1,47 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="referrer" content="no-referrer"><title>Your scanner account — DRONEmapper</title><link rel="icon" href="/icon.svg"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/account.css"><script type="module" src="/account.js"></script></head>
 <body class="account-page"><header class="account-header"><a class="brand" href="/"><img src="/icon.svg" width="44" height="44" alt=""><span>DRONE<span class="brand-light">MAPPER</span><small>saviorSEC · Church of Malware</small></span></a><nav><a href="/">Open world map ↗</a><a href="/nodes.html">Download Android app</a></nav></header>
-<main class="account-shell"><div class="account-intro"><p class="eyebrow">COMMUNITY SCANNER NODES</p><h1>Your phone.<br>A wider picture.</h1><p>Create an account to connect your scanner. Choose which observations you contribute. The world map is always free to browse.</p></div>
-<section class="account-card"><div id="account-content"></div><p id="account-message" role="status" aria-live="polite"></p></section></main>
+<main class="account-shell"><div class="account-intro"><p class="eyebrow">COMMUNITY SCANNER NODES</p><h1>Your scanner.<br>A wider picture.</h1><p>Connect a live scanner, import a completed log, or record offline and upload when you get home. Choose what you contribute. The world map is always free to browse.</p><p class="account-guide-links"><a href="#wardrive-workflow">Import, record & export ↓</a><a href="#supported-devices">Supported devices ↓</a></p></div>
+<section class="account-card" aria-label="Account and scanner controls"><div id="account-content"></div><p id="account-message" role="status" aria-live="polite"></p></section>
+<section class="account-guide" id="wardrive-workflow" aria-labelledby="workflow-title">
+  <p class="eyebrow">YOUR LOGS. YOUR CHOICE.</p>
+  <h2 id="workflow-title">Bring data in. Take your data with you.</h2>
+  <div class="account-guide-grid">
+    <article>
+      <p class="guide-step">01 / IMPORT</p>
+      <h3>Already have wardrive logs?</h3>
+      <ol><li>Sign in above and open <strong>Wardrive logs & upload tokens</strong>.</li><li>Create an upload token, choose your <strong>WiGLE-format CSV</strong> and check its timezone.</li><li>Preview the matches, then upload to the map.</li></ol>
+      <p>Import observations from the past year, in files up to <strong>256 MiB</strong>. Supported WiFi CAM and Tello-style name matches appear as <strong>Possible signals</strong> near the receiver. Ordinary Wi-Fi and Bluetooth rows are skipped; this CSV importer does not decode Remote ID.</p>
+      <p>Original dates are kept. Sightings older than 14 days appear as <strong>Ghosts</strong>. These are approximate signal areas, not confirmed drone positions.</p>
+      <a href="/wardrives.html">Log uploads & automatic folder uploads ↗</a>
+    </article>
+    <article>
+      <p class="guide-step">02 / RECORD OFFLINE</p>
+      <h3>Drive now. Upload at home.</h3>
+      <ol><li>In Android <strong>0.7.0 or later</strong>, tap <strong>Start listening → Saved wardrives → Record a wardrive</strong>.</li><li>Keep Wi-Fi, Bluetooth and Location enabled. No internet or account is needed to record.</li><li>Finish recording or stop listening to save the trip.</li><li>At home, connect the app to your account, open the trip and select <strong>Upload later to DRONEmapper</strong>.</li></ol>
+      <p>Trips survive stopping and app restarts. Recording pauses live sharing. Saved uploads are <strong>manual</strong>; reconnecting to Wi-Fi alone does not send them. Keep the app open during upload. Retrying with the same connection skips duplicates.</p>
+      <a href="/nodes.html#android">Download the app & start recording ↗</a>
+    </article>
+    <article>
+      <p class="guide-step">03 / EXPORT</p>
+      <h3>Use your logs on another map.</h3>
+      <ol><li>Open a finished trip in <strong>Saved wardrives</strong>.</li><li>Choose <strong>Export WiGLE CSV</strong> for matching Wi-Fi observations with a fresh GPS fix.</li><li>Save the file, then import it into a service that accepts that format using its own account.</li></ol>
+      <p>The CSV includes Wi-Fi names, MAC addresses and receiver GPS. <strong>DRONEmapper JSON</strong> is the separate export for native map reports, including decoded Remote ID.</p>
+      <p>Direct sending to WiGLE and Biscuit is not integrated. WiGLE server acceptance and Biscuit CSV import still need verification. A DRONEmapper token only authorizes uploads to DRONEmapper.</p>
+      <a href="/downloads/wardrive-uploads.md">Formats & connection guide ↗</a>
+    </article>
+  </div>
+  <p class="account-guide-note">For a trip recorded in our app, use its built-in upload to DRONEmapper. Use CSV exports for other services; importing the same trip here under a second token can create separate reports.</p>
+</section>
+<section class="account-guide" id="supported-devices" aria-labelledby="devices-title">
+  <p class="eyebrow">CHOOSE YOUR SETUP</p>
+  <h2 id="devices-title">Use the device you have.</h2>
+  <div class="account-guide-grid device-guide">
+    <article><h3>Android phone</h3><p><strong>Android 8 or newer</strong>, with Wi-Fi and Bluetooth. Start with the radios already in your phone; no root or extra Bluetooth dongle is needed. Reception depends on the phone and the broadcasts nearby.</p><p><strong>Live workflow:</strong> install → start listening → connect your account → choose what to share. For offline trips, use Saved wardrives instead.</p><a href="/nodes.html#android">Android download & instructions ↗</a></article>
+    <article><h3>Optional USB receivers</h3><p>Android USB Wi-Fi drivers are included for <strong>MT7610U</strong> (Panda PAU0D), <strong>MT7612U</strong> (Alfa AWUS036ACM) and <strong>RTL8187L</strong>. Compatibility follows the chipset; phone and adapter combinations still need testing.</p><p>Use USB OTG or a powered hub → select the receiver in the app → <strong>Connect → Allow</strong>. Android HackRF support provides RF reception and a spectrum display; RF peaks alone do not identify drones.</p><a href="/nodes.html">USB Wi-Fi & HackRF setup ↗</a></article>
+    <article><h3>Windows, macOS or Linux</h3><p>Run <strong>Desktop node 0.3.0</strong> with Python 3.10+ and compatible Wi-Fi, Bluetooth, HackRF or RTL-SDR receivers. The same radar and account connection are available on all three systems.</p><p><strong>Workflow:</strong> download and extract → run your system’s launcher → set up receivers → connect your account → choose sharing → start listening.</p><p>Radio reception depends on OS drivers and hardware. Native Windows/macOS reception still needs field testing.</p><a href="/desktop">Desktop download & setup ↗</a></article>
+  </div>
+  <p class="account-guide-note">You can import an existing CSV from a computer or phone browser without any scanner hardware. Live browsing of the world map is also free and needs no receiver.</p>
+</section>
+</main>
 <footer class="account-footer">Free knowledge. <a href="https://churchofmalware.org/">Church of Malware</a> · <a href="https://churchofmalware.org/work/">saviorSEC, our research branch</a> · <a href="/source.html">Open source</a></footer></body></html>

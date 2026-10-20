@@ -63,6 +63,11 @@ export async function accountRequest(request,env){
  const session=await createAuth(env).api.getSession({headers:request.headers});
  if(!session?.user?.emailVerified)return json({error:'Sign in with your verified email first.'},401);
  const owner=session.user.id;
+ if(path==='wardrive/tokens'&&request.method==='POST'){
+  if(body.consent!==true||typeof body.label!=='string'||!body.label.trim()||body.label.length>80||/[\x00-\x1f]/.test(body.label))return json({error:'Name the uploader and confirm that you want to contribute matching signal areas.'},400);
+  try{return json(await env.NODES.getByName('community').createWardriveToken(owner,body.label.trim()),201);}
+  catch{return json({error:'Unable to create another upload token. Remove an unused node and try again.'},409);}
+ }
  if(path==='profile'&&request.method==='POST'){
   const name=displayName(body.name);
   if(!name||typeof body.public_name!=='boolean')return json({error:'Use up to 32 letters, numbers, spaces, dots, underscores or dashes for your display name.'},400);

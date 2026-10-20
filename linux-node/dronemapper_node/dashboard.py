@@ -3,8 +3,10 @@ import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import secrets
+import socket
 from urllib.parse import urlsplit
 from .radios import doctor
+from .platform_support import system
 
 STATIC=Path(__file__).with_name('static')
 
@@ -79,6 +81,12 @@ def make_server(engine,port=8790):
                 self.reply({'error':str(error)[:240]},400)
             except Exception:
                 self.reply({'error':'Request could not be completed; check connection and try again'},503)
-    server=ThreadingHTTPServer(('127.0.0.1',port),Handler)
+    class LocalServer(ThreadingHTTPServer):
+        allow_reuse_address=system()!='Windows'
+        def server_bind(self):
+            if system()=='Windows':
+                self.socket.setsockopt(socket.SOL_SOCKET,socket.SO_EXCLUSIVEADDRUSE,1)
+            super().server_bind()
+    server=LocalServer(('127.0.0.1',port),Handler)
     server.daemon_threads=True
     return server

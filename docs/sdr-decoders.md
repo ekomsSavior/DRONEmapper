@@ -1,6 +1,11 @@
 # SDR protocol decoders
 
-DRONEmapper Linux 0.2.0 · **Church of Malware / saviorSEC**
+DRONEmapper Desktop 0.3.0 · **Church of Malware / saviorSEC**
+
+Windows, macOS and Linux share the decoder integrations. Use the
+[desktop receiver guide](desktop-node-setup.md) for Windows/macOS dependencies;
+the installer below is for Debian/Ubuntu. Native Windows/macOS radio reception
+still needs hardware testing.
 
 ## Install and start
 

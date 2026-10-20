@@ -8,7 +8,7 @@ const airframes=['Unknown','Aeroplane','Helicopter / multirotor','Gyroplane','Hy
 export function envelope(body,observations=true){
  if(!body||Array.isArray(body)||typeof body!=='object'||body.schema_version!==1||!UUID.test(body.node_id)||Object.keys(body).sort().join(',')!==(observations?'node_id,observations,schema_version':'node_id,schema_version'))throw Error('Invalid envelope');
 }
-export function validateBatch(body,now){
+export function validateBatch(body,now,maxAge=900){
  envelope(body);if(!Array.isArray(body.observations)||body.observations.length<1||body.observations.length>50)throw Error('Expected 1–50 observations');
  const seen=new Set();
  for(const r of body.observations){
@@ -18,7 +18,7 @@ export function validateBatch(body,now){
   if(!r||typeof r!=='object'||Array.isArray(r)||required.some(k=>!(k in r))||Object.keys(r).some(k=>!required.includes(k)&&!(k in optional)))throw Error('Unexpected fields');
   if(typeof r.event_id!=='string'||!UUID.test(r.event_id)||seen.has(r.event_id))throw Error('Invalid event ID');seen.add(r.event_id);
   if(!number(r.latitude,-90,90)||!number(r.longitude,-180,180)||r.latitude===0&&r.longitude===0)throw Error('Invalid location');
-  if(!number(r.observed_at,now-900,now+5)||!number(r.received_at,now-900,now+5)||!number(r.received_at-r.observed_at,-5,120))throw Error('Expired or future observation');
+  if(!number(r.observed_at,now-maxAge,now+5)||!number(r.received_at,now-maxAge,now+5)||!number(r.received_at-r.observed_at,-5,120))throw Error('Expired or future observation');
   if(dji){
    if(r.protocol!=='dji-droneid'||r.verification!=='crc-valid'||typeof r.device_id!=='string'||! /^[!-~]{1,16}$/.test(r.device_id)||!Number.isInteger(r.model_code)||!number(r.model_code,0,255)||![2399.5,2414.5,2429.5,2444.5,2459.5,5756.5,5776.5,5796.5].includes(r.frequency_mhz))throw Error('Invalid DJI report');
   }else if(adsb){

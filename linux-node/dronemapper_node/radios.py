@@ -1,22 +1,23 @@
-"""Linux receive backends. No RF transmission or arbitrary shell commands. AGPL-3.0-or-later."""
+"""Desktop receive backends. No SDR transmit or arbitrary shell commands. AGPL-3.0-or-later."""
 import asyncio
 import importlib.util
 import json
 import os
 from pathlib import Path
 import re
-import selectors
 import shutil
 import ssl
 import subprocess
 import time
 import sys
-import signal
 import tempfile
 import threading
+import uuid
 from .decoders import adsb_records, read_json
 from .protocol import PcapStream, radiotap, wifi_frame, spectrum_row, finite, MAC
 from .storage import BANDS
+from .platform_support import system, tool_path, is_link, valid_interface
+from .processes import process_bytes
 
 WIFI_FILTER='wlan[0] == 0x80 or wlan[0] == 0xd0'
 
@@ -28,9 +29,9 @@ def installed_path(tool):
 
 def doctor():
     interfaces=[]
-    if shutil.which('iw'):
+    if system() == 'Linux' and tool_path('iw'):
         try:
-            result=subprocess.run(['iw','dev'],capture_output=True,text=True,timeout=5)
+            result=subprocess.run([tool_path('iw'),'dev'],capture_output=True,text=True,timeout=5)
             # Do not include SSIDs, interface addresses or hardware serials.
             for block in result.stdout.split('Interface ')[1:]:
                 name=block.splitlines()[0].strip()
@@ -40,66 +41,46 @@ def doctor():
                                    'channel':int(channel.group(1)) if channel else None})
         except (OSError,subprocess.SubprocessError):
             pass
-    return {'wifi':interfaces,'bluetooth':[p.name for p in Path('/sys/class/bluetooth').glob('hci*')],
-            'tools':{tool:bool(shutil.which(tool)) for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb')},
+    if system() != 'Linux' and tool_path('dumpcap'):
+        try:
+            result = subprocess.run([tool_path('dumpcap'), '-D'], capture_output=True, text=True, timeout=5)
+            for line in result.stdout.splitlines():
+                match = re.match(r'^\d+\. (\S+)', line)
+                if match and valid_interface(match.group(1)):
+                    interfaces.append({'name':match.group(1), 'mode':'monitor capability needs checking', 'channel':None})
+        except (OSError, subprocess.SubprocessError):
+            pass
+    return {'platform':system(),'wifi':interfaces,'bluetooth':([p.name for p in Path('/sys/class/bluetooth').glob('hci*')] if system() == 'Linux' else ['default']),
+            'tools':{tool:bool(tool_path(tool)) for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb')},
             'tool_access':{tool:'Installed but execution is unavailable; check user/group access'
-                           for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb') if installed_path(tool) and not shutil.which(tool)},
+                           for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb') if installed_path(tool) and not tool_path(tool)},
             'dji_decoder':all(importlib.util.find_spec(x) is not None for x in ('numpy','scipy','matplotlib','bitarray')),
             'bleak':importlib.util.find_spec('bleak') is not None,
             'paho_mqtt':importlib.util.find_spec('paho') is not None}
 
 
-def process_bytes(command,stop):
-    """Stream stdout, bound stderr, and terminate owned children on every exit path."""
-    child=subprocess.Popen(command,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE,start_new_session=True)
-    errors=bytearray()
-    try:
-        with selectors.DefaultSelector() as selector:
-            selector.register(child.stdout,selectors.EVENT_READ,'out')
-            selector.register(child.stderr,selectors.EVENT_READ,'err')
-            while selector.get_map() and not stop.is_set():
-                for key,_ in selector.select(.3):
-                    data=os.read(key.fileobj.fileno(),65536)
-                    if not data:
-                        selector.unregister(key.fileobj)
-                    elif key.data=='out':
-                        yield data
-                    else:
-                        errors.extend(data)
-                        del errors[:-2048]
-            if not stop.is_set():
-                code=child.wait(timeout=3)
-                # Command stderr can include IDs; surface only a compact, sanitized diagnostic.
-                detail=errors.decode(errors='replace').strip().splitlines()
-                failures=[line for line in detail if re.search(r'failed|error|not found|invalid|denied|syntax',line,re.I)]
-                diagnostic=' / '.join(failures[:2] or detail[:2]) or 'receiver exited'
-                diagnostic=re.sub(r'(?i)(serial\S*\s*[:=]?\s*)\S+',r'\1[hidden]',diagnostic)
-                raise RuntimeError(f'Receiver stopped ({code}): {diagnostic[:190]}')
-    finally:
-        if child.poll() is None:
-            try: os.killpg(child.pid,signal.SIGTERM)
-            except ProcessLookupError: pass
-            try:
-                child.wait(timeout=3)
-            except subprocess.TimeoutExpired:
-                try: os.killpg(child.pid,signal.SIGKILL)
-                except ProcessLookupError: pass
-                child.wait()
-        child.stdout.close()
-        child.stderr.close()
-
-
 def wifi(interface,stop,emit,status):
-    if not shutil.which('dumpcap'):
+    if not tool_path('dumpcap'):
         if installed_path('dumpcap'):
             raise RuntimeError('dumpcap is installed but cannot execute as this user; activate the wireshark group or check sandbox capture permissions')
-        raise RuntimeError('Install wireshark-common (dumpcap) and configure capture permissions; see the Linux guide')
+        raise RuntimeError('Install Wireshark / dumpcap and configure capture access; see the desktop node guide')
     matching=[x for x in doctor()['wifi'] if x['name']==interface]
-    if not matching or matching[0]['mode']!='monitor':
-        raise RuntimeError(f'{interface} is not a monitor interface. Use a dedicated adapter; see Wi-Fi setup')
+    if not matching:
+        raise RuntimeError('Choose an attached local capture interface from Receiver status')
+    extra=[]
+    if system() == 'Linux':
+        if matching[0]['mode']!='monitor':
+            raise RuntimeError(f'{interface} is not a monitor interface. Use a dedicated adapter; see Wi-Fi setup')
+    else:
+        # Requested explicitly by the user; do not switch adapters during discovery.
+        check=subprocess.run([tool_path('dumpcap'),'-i',interface,'-I','-L'],capture_output=True,text=True,timeout=8)
+        if check.returncode or not re.search(r'\bIEEE802_11(?:_RADIO)?\b',check.stdout):
+            raise RuntimeError('This adapter / driver does not expose monitor-mode 802.11 capture')
+        link='IEEE802_11_RADIO' if 'IEEE802_11_RADIO' in check.stdout else 'IEEE802_11'
+        extra=['-I','-y',link]
     parser=PcapStream()
     status('Listening · monitor mode · fixed channel '+str(matching[0]['channel'] or 'unknown'))
-    command=['dumpcap','-i',interface,'-P','-s','4096','-f',WIFI_FILTER,'-q','-w','-']
+    command=[tool_path('dumpcap'),'-i',interface,*extra,'-P','-s','4096','-f',WIFI_FILTER,'-q','-w','-']
     for chunk in process_bytes(command,stop):
         for stamp,packet,linktype in parser.feed(chunk):
             now=time.time()
@@ -114,6 +95,36 @@ def wifi(interface,stop,emit,status):
                 emit({**item,**meta,'type':'candidate' if 'signature' in item else 'rid','source':'wifi:'+interface,'received_at':stamp})
 
 
+def ble_event(address, data, rssi, adapter):
+    if not data or len(data)<27 or data[0]!=13:
+        return None
+    identity={}
+    if MAC.fullmatch(address):
+        identity['mac']=address.upper()
+    elif system()=='Darwin':
+        try:
+            identity['receiver_id']=str(uuid.UUID(address))
+        except (ValueError, TypeError):
+            return None
+    else:
+        return None
+    return {'type':'rid','source':'ble:'+adapter,**identity,'payload':bytes(data[2:]),
+            'protocol':'ble','received_at':time.time(),'rssi_dbm':rssi}
+
+
+def ble_options(adapter):
+    if system()=='Linux':
+        if adapter=='default':
+            adapter='hci0'
+        return {'scanning_mode':'passive','bluez':{'adapter':adapter,'or_patterns':[(0,0x16,b'\xfa\xff')]}}
+    if adapter!='default':
+        raise ValueError('Choose System Bluetooth on Windows / macOS')
+    if system()=='Darwin':
+        # CoreBluetooth has no passive mode and exposes per-host UUIDs, not radio MACs.
+        return {'scanning_mode':'active','service_uuids':['0000fffa-0000-1000-8000-00805f9b34fb']}
+    return {'scanning_mode':'passive'}
+
+
 def ble(adapter,stop,emit,status):
     try:
         from bleak import BleakScanner
@@ -121,15 +132,13 @@ def ble(adapter,stop,emit,status):
         raise RuntimeError('Install the BLE extra: pip install "./linux-node[ble]"') from None
     def found(device,advertisement):
         data=advertisement.service_data.get('0000fffa-0000-1000-8000-00805f9b34fb')
-        if data and len(data)>=27 and data[0]==13 and MAC.fullmatch(device.address):
-            emit({'type':'rid','source':'ble:'+adapter,'mac':device.address.upper(),'payload':bytes(data[2:]),
-                  'protocol':'ble','received_at':time.time(),'rssi_dbm':advertisement.rssi})
+        event=ble_event(device.address,data,advertisement.rssi,adapter)
+        if event:
+            emit(event)
     async def listen():
-        # Advertisement Monitor is passive. Never silently fall back to active discovery.
-        scanner=BleakScanner(found,scanning_mode='passive',
-            bluez={'adapter':adapter,'or_patterns':[(0,0x16,b'\xfa\xff')]})
+        scanner=BleakScanner(found,**ble_options(adapter))
         async with scanner:
-            status('Listening · passive Remote ID advertisements; PHY reception depends on controller / BlueZ')
+            status('Listening · Remote ID · '+('CoreBluetooth discovery' if system()=='Darwin' else 'passive Bluetooth advertisements'))
             while not stop.is_set():
                 await asyncio.sleep(.25)
     asyncio.run(listen())
@@ -143,8 +152,9 @@ def sdr(kind,band,stop,emit,status):
         command=['rtl_power','-f',f'{low}M:{high}M:100k','-i','2','-']
     else:
         raise RuntimeError('Unsupported SDR frequency range')
-    if not shutil.which(command[0]):
-        raise RuntimeError('Install '+('hackrf' if kind=='hackrf' else 'rtl-sdr')+' tools using your Linux package manager')
+    if not tool_path(command[0]):
+        raise RuntimeError('Install '+('hackrf' if kind=='hackrf' else 'rtl-sdr')+' receive tools; see the desktop setup guide')
+    command[0]=tool_path(command[0])
     status(f'Listening · {low}–{high} MHz · unclassified RF power')
     pending=bytearray()
     for chunk in process_bytes(command,stop):
@@ -189,11 +199,11 @@ def mqtt(path,stop,emit,status):
     except ImportError:
         raise RuntimeError('Install the MQTT extra: pip install "./linux-node[mqtt]"') from None
     file=Path(path).expanduser()
-    if file.is_symlink() or file.stat().st_mode & 0o077 or file.stat().st_uid!=os.getuid():
+    if is_link(file) or system() != 'Windows' and (file.stat().st_mode & 0o077 or file.stat().st_uid!=os.getuid()):
         raise ValueError('MQTT configuration must be owned by your user with permissions 600')
     if file.stat().st_size>8192:
         raise ValueError('MQTT configuration is too large')
-    config=json.loads(file.read_text())
+    config=json.loads(file.read_text(encoding='utf-8'))
     if not isinstance(config,dict) or set(config)-{'host','topic','tls','port','ca_file','username','password_env'}:
         raise ValueError('Invalid MQTT configuration fields')
     host,topic=config.get('host'),config.get('topic')
@@ -263,11 +273,11 @@ def readsb_feed(path,stop,emit,status):
 
 
 def adsb(kind,stop,emit,status):
-    if not shutil.which('readsb'):
+    if not tool_path('readsb'):
         raise RuntimeError('Install readsb with '+kind+' support; see decoder setup')
     # No network ports or external feeds. This process owns exactly one SDR.
     with tempfile.TemporaryDirectory(prefix='dronemapper-readsb-') as directory:
-        command=['readsb','--device-type','hackrf' if kind=='hackrf' else 'rtlsdr',
+        command=[tool_path('readsb'),'--device-type','hackrf' if kind=='hackrf' else 'rtlsdr',
                  '--no-fix','--no-fix-df','--write-json',directory,'--write-json-every','1','--quiet']
         if kind=='hackrf': command+=['--gain','16','--hackrf-vgagain','20']
         local_stop=threading.Event()

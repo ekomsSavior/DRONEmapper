@@ -1,5 +1,7 @@
 /* Church of Malware / saviorSEC · AGPL-3.0-or-later */
 import {updateHistory} from './observation-profile.mjs';
+import {importWardrive} from './wardrive-ingest.mjs';
+import {importArchive} from './archive-ingest.mjs';
 import {DurableObject} from 'cloudflare:workers';
 import {UUID,envelope,validateBatch,nodeRecord,nodeIdentity,mergeNodeRows,RETENTION} from './node-records.mjs';
 const encoder=new TextEncoder();
@@ -28,6 +30,11 @@ export class NodeNetwork extends DurableObject{
   if(!columns.includes('owner'))ctx.storage.sql.exec("ALTER TABLE nodes ADD COLUMN owner TEXT");
   if(!columns.includes('label'))ctx.storage.sql.exec("ALTER TABLE nodes ADD COLUMN label TEXT");
   if(!columns.includes('flow'))ctx.storage.sql.exec("ALTER TABLE nodes ADD COLUMN flow TEXT");
+  if(!columns.includes('scope'))ctx.storage.sql.exec("ALTER TABLE nodes ADD COLUMN scope TEXT NOT NULL DEFAULT 'scanner'");
+  ctx.storage.sql.exec('CREATE TABLE IF NOT EXISTS wardrive_receipts(event TEXT PRIMARY KEY,node TEXT NOT NULL,stamp REAL NOT NULL)');
+  ctx.storage.sql.exec('CREATE INDEX IF NOT EXISTS wardrive_receipts_node ON wardrive_receipts(node)');
+  ctx.storage.sql.exec('CREATE TABLE IF NOT EXISTS archive_receipts(event TEXT PRIMARY KEY,node TEXT NOT NULL,stamp REAL NOT NULL)');
+  ctx.storage.sql.exec('CREATE INDEX IF NOT EXISTS archive_receipts_node ON archive_receipts(node)');
   ctx.storage.sql.exec('CREATE INDEX IF NOT EXISTS nodes_owner ON nodes(owner)');
   ctx.storage.sql.exec('CREATE TABLE IF NOT EXISTS account_names(owner TEXT PRIMARY KEY,name TEXT NOT NULL)');
   ctx.storage.sql.exec('CREATE TABLE IF NOT EXISTS node_events (event TEXT PRIMARY KEY, track TEXT NOT NULL, node TEXT NOT NULL, stamp REAL NOT NULL, data TEXT NOT NULL)');
@@ -48,7 +55,7 @@ export class NodeNetwork extends DurableObject{
  async alarm(){this.prune(Date.now()/1000);if([...this.ctx.storage.sql.exec('SELECT 1 FROM node_events LIMIT 1')].length)await this.ctx.storage.setAlarm(Date.now()+300000);}
  async snapshot(hours=24){
   const now=Date.now()/1000;this.prune(now);
-  const rows=[...this.ctx.storage.sql.exec('SELECT p.track,p.node,p.data,p.first_seen,p.observations,n.last_seen,a.name AS contributor FROM node_profiles p JOIN nodes n ON n.handle=p.node LEFT JOIN account_names a ON a.owner=n.owner WHERE n.revoked=0 AND (?=0 OR p.last_seen>=?) ORDER BY p.last_seen,p.track',hours,now-hours*3600)];
+  const rows=[...this.ctx.storage.sql.exec("SELECT p.track,p.node,p.data,p.first_seen,p.observations,CASE WHEN n.scope='wardrive' THEN 0 ELSE n.last_seen END AS last_seen,a.name AS contributor FROM node_profiles p JOIN nodes n ON n.handle=p.node LEFT JOIN account_names a ON a.owner=n.owner WHERE n.revoked=0 AND (?=0 OR p.last_seen>=?) ORDER BY p.last_seen,p.track",hours,now-hours*3600)];
   const names=new Map();for(const row of rows){if(row.contributor){if(!names.has(row.track))names.set(row.track,new Set());names.get(row.track).add(row.contributor);}}
   const records=mergeNodeRows(rows,now);
   for(const record of records){
@@ -63,7 +70,7 @@ export class NodeNetwork extends DurableObject{
    if(record.position_conflict)record.live=false;
   }
   const tracks=records.filter(r=>r.record_type==='position'),signals=records.filter(r=>r.record_type==='signal');
-  const active=[...this.ctx.storage.sql.exec('SELECT COUNT(*) AS n FROM nodes WHERE revoked=0 AND last_seen>=?',now-120)][0].n;
+  const active=[...this.ctx.storage.sql.exec("SELECT COUNT(*) AS n FROM nodes WHERE revoked=0 AND scope='scanner' AND last_seen>=?",now-120)][0].n;
   return {tracks,signals,nodes:{enabled:true,active_nodes:active,positions:tracks.length,signals:signals.length,retention_seconds:RETENTION,ghost_after_days:14,ghosts:records.filter(r=>r.ghost).length}};
  }
  async connectAccount(owner,client,label,flow,allowRotate=true){
@@ -84,20 +91,33 @@ export class NodeNetwork extends DurableObject{
   });
  }
  async setAccountProfile(owner,name){this.ctx.storage.sql.exec('INSERT INTO account_names(owner,name) VALUES(?,?) ON CONFLICT(owner) DO UPDATE SET name=excluded.name',owner,name);}
- async accountNodes(owner){return [...this.ctx.storage.sql.exec('SELECT handle,label,created,last_seen FROM nodes WHERE owner=? AND revoked=0 ORDER BY created',owner)].map(r=>({...r,online:Date.now()/1000-r.last_seen<120}));}
+ async accountNodes(owner){return [...this.ctx.storage.sql.exec('SELECT handle,label,scope,created,last_seen FROM nodes WHERE owner=? AND revoked=0 ORDER BY created',owner)].map(r=>({...r,online:r.scope==='scanner'&&Date.now()/1000-r.last_seen<120}));}
+ async createWardriveToken(owner,label){
+  if(typeof owner!=='string'||!owner||owner.length>128||typeof label!=='string'||!label.trim()||label.length>80)throw Error('Invalid upload token request');
+  const token=random(),digest=await hash(token),handle=crypto.randomUUID();
+  this.ctx.storage.transactionSync(()=>{
+   if([...this.ctx.storage.sql.exec('SELECT COUNT(*) n FROM nodes WHERE owner=? AND revoked=0',owner)][0].n>=10||[...this.ctx.storage.sql.exec('SELECT COUNT(*) n FROM nodes')][0].n>=5000)throw Error('Unable to create another upload token');
+   this.ctx.storage.sql.exec('INSERT INTO nodes(handle,token_hash,created,owner,label,scope) VALUES(?,?,?,?,?,?)',handle,digest,Date.now()/1000,owner,label,'wardrive');
+  });
+  return {node_handle:handle,upload_token:token,scope:'wardrive'};
+ }
  async revokeAccountNode(owner,handle){
   this.ctx.storage.transactionSync(()=>{
    if(![...this.ctx.storage.sql.exec('SELECT 1 FROM nodes WHERE owner=? AND handle=?',owner,handle)].length)return;
    this.ctx.storage.sql.exec('UPDATE nodes SET revoked=1 WHERE handle=?',handle);
    this.ctx.storage.sql.exec('DELETE FROM node_events WHERE node=?',handle);
    this.ctx.storage.sql.exec('DELETE FROM node_profiles WHERE node=?',handle);
+   this.ctx.storage.sql.exec('DELETE FROM wardrive_receipts WHERE node=?',handle);
+   this.ctx.storage.sql.exec('DELETE FROM archive_receipts WHERE node=?',handle);
   });
  }
  async fetch(request){
   const path=new URL(request.url).pathname,now=Date.now()/1000;
   if(this.env.NODE_INGEST_ENABLED!=='true')return reply({error:'Node contributions are not enabled'},503);
-  if(request.method!=='POST')return reply({error:'POST required'},405);
-  if(request.headers.has('Origin'))return reply({error:'Use the node client'},403);
+  const wardrive=path==='/v1/wardrives';
+  if(request.method!=='POST'&&!(wardrive&&request.method==='GET'))return reply({error:'POST required'},405);
+  if(request.headers.has('Origin')&&(!wardrive||request.headers.get('Origin')!==this.env.AUTH_ORIGIN))return reply({error:'Use the node client'},403);
+  if(wardrive&&(request.headers.has('Cookie')||request.headers.get('Sec-Fetch-Site')==='cross-site'))return reply({error:'Use an upload token without cookies'},403);
   const minute=Math.floor(now/60);if(this.budget.minute!==minute)this.budget={minute,count:0};
   if(++this.budget.count>1200)return reply({error:'Node service busy; retry shortly'},429);
   const auth=request.headers.get('Authorization')||'',admin=path.startsWith('/v1/admin/');
@@ -111,7 +131,18 @@ export class NodeNetwork extends DurableObject{
    tokenHash=await hash(auth.slice(7));node=[...this.ctx.storage.sql.exec('SELECT * FROM nodes WHERE token_hash=?',tokenHash)][0];
    if(!node||node.revoked)return reply({error:'Invalid or revoked node key'},401);
   }
+  if(wardrive){
+   if(node.scope!=='wardrive')return reply({error:'Use a wardrive upload token'},403);
+   if(request.method==='GET')return reply({ok:true,scope:'wardrive',format:'WiGLE CSV',max_file_bytes:2097152,max_rows:10000,max_candidates:500});
+   try{const result=await importWardrive(this,request,node,tokenHash,now);this.prune(now);if(result.accepted&&!await this.ctx.storage.getAlarm())await this.ctx.storage.setAlarm(Date.now()+300000);return reply(result);}
+   catch(e){return reply({error:e.status?e.message:'Unable to import this file.'},e.status||500);}
+  }
+  if(node?.scope==='wardrive')return reply({error:'This token can only upload wardrive logs'},403);
   let body;try{body=await boundedJson(request);}catch(e){return reply({error:e.message},e.status||400);}
+  if(path==='/v1/observations/archive'){
+   try{return reply(await importArchive(this,body,node,tokenHash,now));}
+   catch(e){return reply({error:e.status?e.message:'Saved observation service unavailable'},e.status||503);}
+  }
   if(admin){
    if(path==='/v1/admin/nodes'){
     if(!body||typeof body!=='object'||Array.isArray(body)||Object.keys(body).length)return reply({error:'Expected empty JSON object'},422);
@@ -122,7 +153,7 @@ export class NodeNetwork extends DurableObject{
    }
    if(path==='/v1/admin/revoke'){
     if(!body||Object.keys(body).length!==1||!UUID.test(body.node_handle))return reply({error:'Invalid node handle'},422);
-    this.ctx.storage.transactionSync(()=>{this.ctx.storage.sql.exec('UPDATE nodes SET revoked=1 WHERE handle=?',body.node_handle);this.ctx.storage.sql.exec('DELETE FROM node_events WHERE node=?',body.node_handle);this.ctx.storage.sql.exec('DELETE FROM node_profiles WHERE node=?',body.node_handle);});
+    this.ctx.storage.transactionSync(()=>{this.ctx.storage.sql.exec('UPDATE nodes SET revoked=1 WHERE handle=?',body.node_handle);this.ctx.storage.sql.exec('DELETE FROM node_events WHERE node=?',body.node_handle);this.ctx.storage.sql.exec('DELETE FROM node_profiles WHERE node=?',body.node_handle);this.ctx.storage.sql.exec('DELETE FROM archive_receipts WHERE node=?',body.node_handle);});
     return reply({revoked:true});
    }
    return reply({error:'Not found'},404);

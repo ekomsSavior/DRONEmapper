@@ -87,3 +87,9 @@ RocketGod / Wardrive Go USB architecture research:
 https://github.com/RocketGod-git/wardrive-go/tree/b30f16fb3b31807b2526678db2de12c377e09ff6
 DRONEmapper's Java NAN framing parser is independently implemented. No Wardrive Go
 GPL-3.0 code is copied into this GPL-2.0-only Android application.
+
+Android HackRF receiver (0.6.0): independent receive-only implementation of the
+public Great Scott Gadgets libhackrf USB protocol. Reference:
+https://github.com/greatscottgadgets/hackrf/blob/main/host/libhackrf/src/hackrf.c
+No libhackrf binary, transmitter or firmware updater is included. RF spectrum
+measurements remain local and do not establish drone identity or position.

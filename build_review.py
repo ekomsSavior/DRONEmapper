@@ -15,7 +15,9 @@ FILES = ['README.md', 'LICENSE', 'NOTICE.txt', '.gitignore', '.gitattributes', '
          'linux-node/NOTICE.txt', 'linux-node/pyproject.toml', 'linux-node/launch.py',
          'linux-node/dronemapper-node.service', 'linux-node/setup-debian.sh', 'linux-node/run-local.sh',
          'linux-node/refresh-catalogs.py', 'linux-node/enable-passive-ble.sh',
-         'linux-node/install-decoders-debian.sh']
+         'linux-node/install-decoders-debian.sh', 'linux-node/bootstrap.py',
+         'linux-node/Start-DRONEmapper.cmd', 'linux-node/Start-DRONEmapper.command',
+         '.github/workflows/desktop-node.yml']
 DIRECTORIES = ['public', 'docs', 'tests', 'integration', 'worker', 'deploy',
                'android-node/app/src', 'android-node/gradle', 'migrations', 'scripts', 'web',
                'linux-node/dronemapper_node', 'linux-node/tests']
@@ -28,7 +30,7 @@ def source_files():
         allowed.extend(p for p in (ROOT / directory).rglob('*')
                        if p.is_file() and not p.is_symlink()
                        and '__pycache__' not in p.parts
-                       and not any(part in {'build','dist'} or part.endswith('.egg-info')
+                       and not any(part in {'build','dist','work','private','node_modules'} or part.endswith('.egg-info')
                                    for part in p.relative_to(ROOT).parts)
                        and not any(part.startswith('.') for part in p.relative_to(ROOT).parts)
                        and p.name not in {'source.zip', 'source.zip.tmp'}
@@ -36,21 +38,23 @@ def source_files():
     return sorted(set(allowed))
 
 
-def build_linux_archive():
-    """Ship the Linux source and setup tools without unrelated map/app files."""
+def build_node_archive(directory=None, family='Desktop'):
+    """Ship desktop source and launchers without runtime state or credentials."""
     # Keep bundle name aligned with the installed package version.
     version = (ROOT / 'linux-node/dronemapper_node/__init__.py').read_text().split('__version__ = ')[1].splitlines()[0].strip("\"'")
-    name = 'DRONEmapper-Linux-' + version
-    target = ROOT / 'public/downloads' / (name + '.zip')
-    target.parent.mkdir(exist_ok=True)
+    name = 'DRONEmapper-' + family + '-' + version
+    target = Path(directory or ROOT / 'public/downloads') / (name + '.zip')
+    target.parent.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in source_files():
             relative = path.relative_to(ROOT)
-            if relative.parts[0] == 'linux-node' or str(relative) in {'docs/linux-node-setup.md', 'docs/sdr-discovery-research.md', 'docs/sdr-decoders.md'}:
+            if relative.parts[0] == 'linux-node' or str(relative) in {'docs/desktop-node-setup.md', 'docs/linux-node-setup.md', 'docs/sdr-discovery-research.md', 'docs/sdr-decoders.md'}:
                 archive.write(path, name + '/' + str(relative))
         archive.writestr(name + '/START-HERE.txt',
-            f'DRONEmapper Linux {version} — Church of Malware / saviorSEC\n\n'
-            'Read linux-node/README.md and docs/linux-node-setup.md.\n'
+            f'DRONEmapper Desktop {version} — Church of Malware / saviorSEC\n\n'
+            'Read linux-node/README.md and docs/desktop-node-setup.md.\n'
+            'Windows: install Python 3.10+, then open linux-node/Start-DRONEmapper.cmd\n'
+            'macOS: install Python 3.10+, then run bash linux-node/Start-DRONEmapper.command\n'
             'Debian/Ubuntu with a dedicated USB Wi-Fi adapter:\n'
             '  bash linux-node/setup-debian.sh YOUR_DEDICATED_USB_INTERFACE\n'
             'Use iw dev to find the spare interface. Setup requests sudo.\n'
@@ -61,10 +65,30 @@ def build_linux_archive():
     lines = [line for line in lines if not line.endswith(target.name)]
     lines.append(hashlib.sha256(target.read_bytes()).hexdigest() + '  ' + target.name)
     checksums.write_text('\n'.join(lines) + '\n')
+    return target
+
+
+def build_linux_archive():
+    return build_node_archive(family='Linux')
 
 
 def build_archive():
+    # Publish the same guide as the source bundle, with working website links.
+    guide = (ROOT / 'docs/desktop-node-setup.md').read_text()
+    for relative in ('linux-node-setup.md', 'sdr-decoders.md'):
+        guide = guide.replace('](' + relative + ')',
+            '](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/' + relative + ')')
+    guide = guide.replace('](../linux-node/README.md)',
+        '](https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/README.md)')
+    target = ROOT / 'public/downloads/desktop-node-setup.md'
+    target.write_text(guide)
+    checksums = target.parent / 'SHA256SUMS.txt'
+    lines = [line for line in checksums.read_text().splitlines()
+             if not line.endswith('  ' + target.name)]
+    lines.append(hashlib.sha256(target.read_bytes()).hexdigest() + '  ' + target.name)
+    checksums.write_text('\n'.join(lines) + '\n')
     build_linux_archive()
+    build_node_archive()
     temporary = ROOT / 'public/source.zip.tmp'
     with zipfile.ZipFile(temporary, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in source_files():

@@ -52,11 +52,11 @@ async function capabilities() {
     const data = await r.json();
     const current = $('ble').value;
     $('ble').replaceChildren(new Option('Off',''));
-    for (const name of data.bluetooth) $('ble').append(new Option(name,name));
+    for (const name of data.bluetooth) $('ble').append(new Option(name==='default'?'System Bluetooth':name,name));
     if (current && !data.bluetooth.includes(current)) $('ble').append(new Option(current+' · not attached',current));
     $('ble').value = current;
     const box = $('capabilities'); box.replaceChildren();
-    box.append(make('p',data.wifi.length ? data.wifi.map(x=>`${x.name}: ${x.mode}${x.channel ? ' · channel '+x.channel : ''}`).join(' / ') : 'No Linux Wi-Fi interfaces found.'));
+    box.append(make('p',data.wifi.length ? data.wifi.map(x=>`${x.name}: ${x.mode}${x.channel ? ' · channel '+x.channel : ''}`).join(' / ') : 'No capture interfaces found.'));
     box.append(make('p',`Bluetooth: ${data.bluetooth.join(', ') || 'not found'} · Bleak: ${data.bleak ? 'installed' : 'not installed'}`));
     box.append(make('p',Object.entries(data.tools).map(([k,v])=>`${k}: ${v?'available':data.tool_access?.[k]?'installed; access unavailable':'not installed'}`).join(' · ')));
     box.append(make('p','DJI decoder dependencies: '+(data.dji_decoder?'installed':'install the DJI extra')));
@@ -67,7 +67,7 @@ function detail(contact) {
   const panel = $('selected');
   if (!contact) { panel.textContent='Select a glowing dot or a detection to see details.'; return; }
   panel.replaceChildren(make('h3',contact.name));
-  const lines = [contact.display_id ? 'Broadcast ID: '+contact.display_id : '', contact.mac ? 'Radio MAC: '+contact.mac : '', contact.device_id ? 'Device ID: '+contact.device_id : '',
+  const lines = [contact.display_id ? 'Broadcast ID: '+contact.display_id : '', contact.mac ? 'Radio MAC: '+contact.mac : contact.receiver_id ? 'Local Bluetooth UUID: '+contact.receiver_id : '', contact.device_id ? 'Device ID: '+contact.device_id : '',
     contact.radio_vendor ? 'Radio vendor: '+contact.radio_vendor : '', contact.callsign ? 'Callsign: '+contact.callsign : '', contact.local_only ? 'Local decoder observation · not uploaded' : '', contact.manufacturer ? 'Manufacturer / model: '+contact.manufacturer+' / '+(contact.model||'Unknown model') : '',
     contact.module ? 'Broadcast module: '+contact.module : '',contact.identification || '',
     contact.ssid ? 'Camera-link name: '+contact.ssid+' · unconfirmed device' : '',
@@ -141,7 +141,7 @@ function render() {
   const list=$('contacts');list.replaceChildren();
   for (const contact of state.contacts) {
     const button=make('button','','contact');
-    button.append(make('strong',contact.name),make('span',(contact.mac||contact.device_id||'Unknown ID')+' · '+(contact.protocol||'Wi-Fi candidate')),
+    button.append(make('strong',contact.name),make('span',(contact.mac||contact.display_id||contact.device_id||contact.receiver_id||'Unknown ID')+' · '+(contact.protocol||'Wi-Fi candidate')),
       make('span',`${Number.isFinite(contact.rssi_dbm)?contact.rssi_dbm+' dBm':Number.isFinite(contact.rssi_dbfs)?contact.rssi_dbfs+' dBFS':'Signal unknown'} · ${Math.max(0,Math.round(Date.now()/1000-contact.seen))}s ago · ${contact.source}`));
     button.onclick=()=>{selected=contact.key;radar();};list.append(button);
   }
@@ -153,7 +153,7 @@ function render() {
 }
 async function refresh() {
   try {const response=await fetch('/api/status');if(!response.ok)throw new Error('Local node unavailable');state=await response.json();csrf=state.csrf;render();}
-  catch(e){notice('Local node connection lost. Check that the Linux process is running.');}
+  catch(e){notice('Local node connection lost. Check that the desktop node is running.');}
 }
 async function action(fn) {
   if (busy) return;busy=true;

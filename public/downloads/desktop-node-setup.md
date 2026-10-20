@@ -1,0 +1,112 @@
+# DRONEmapper Desktop — Windows, macOS and Linux
+
+Version 0.3.0 · **Church of Malware / saviorSEC**
+
+The same local dashboard, radar, detection list, account pairing and optional
+map uploads run on Windows, macOS and Linux. No account password goes into the
+node. [Linux setup](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/linux-node-setup.md) remains available.
+
+## Start the node
+
+Install Python 3.10 or newer from [python.org](https://www.python.org/downloads/)
+and extract the source bundle into a folder you can write to.
+
+- **Windows:** double-click `linux-node\Start-DRONEmapper.cmd`. Include the Python
+  launcher when installing Python. You can also run `py -3 linux-node\bootstrap.py`.
+- **macOS:** in Terminal, change into the extracted folder and run
+  `bash linux-node/Start-DRONEmapper.command`. With Homebrew Python, the launcher
+  checks both `/opt/homebrew/bin` and `/usr/local/bin`.
+
+The first start installs Bleak and Paho into `linux-node/.venv-desktop`, then
+opens **http://127.0.0.1:8790/**. Leave the terminal open. Stop with **Ctrl+C**;
+restart with the same launcher. After a source update, run the launcher with
+`--update` to refresh dependencies. Add `--dji` to install the optional DJI
+decoder dependencies. These launchers do not install OS drivers or change Wi-Fi
+settings automatically.
+
+For a manual installation, create a Python virtual environment and run
+`python -m pip install "./linux-node[all]"`, then `dronemapper-node serve --open`.
+Headless operation uses `dronemapper-node run`. Run `dronemapper-node doctor`
+for capability details.
+
+## Connect and scan
+
+1. Click **Connect to DRONEmapper**, sign in on the website, and approve the matching code.
+2. Choose radios in **Radio settings**, click **Save settings**, then **Start listening**.
+3. Enable your preferred reports under **Station location & sharing**. Sharing starts off.
+
+Set your stationary receiver location to place received aircraft GPS on the
+radar relative to your station. Signals without coordinates remain strength
+contacts. The position range changes the view, not antenna reach.
+
+## Radio setup
+
+| Input | Windows | macOS |
+| --- | --- | --- |
+| Bluetooth Remote ID | Choose **System Bluetooth**; native WinRT passive advertisements | Choose **System Bluetooth**; allow Terminal/Python Bluetooth access when macOS asks |
+| Wi-Fi beacons / Remote ID / camera-link candidates | Wireshark + Npcap with raw 802.11 support; compatible monitor driver | Wireshark + its ChmodBPF capture-permission setup; compatible monitor driver |
+| HackRF spectrum / IQ | Install official HackRF tools and the appropriate USB driver; tools must be on PATH | `brew install hackrf` |
+| RTL-SDR spectrum | Install RTL-SDR tools; `rtl_power.exe` must be on PATH | `brew install rtl-sdr` |
+| ADS-B | Compatible `readsb` build on PATH, or a local `aircraft.json` from an existing receiver | Same; the node accepts fresh local readsb-format data |
+| DJI DroneID | HackRF tools + `--dji` dependencies; capture/decode cycles | Same |
+| MQTT receiver feed | Authorized exact topic and the documented Remote ID envelope | Same |
+
+**Windows SDR tools:** Great Scott Gadgets recommends
+[radioconda or its official build artifacts](https://hackrf.readthedocs.io/en/latest/installing_hackrf_software.html).
+Launch DRONEmapper from an environment where `hackrf_sweep`, `hackrf_transfer`
+and/or `rtl_power` run. When a USB driver needs installing, select only the
+intended SDR in the driver installer. A PortaPack must be in HackRF USB mode.
+This project does not bundle third-party Windows drivers.
+
+**Wi-Fi:** run `dumpcap -D` and copy the dedicated adapter's name from Receiver
+status into the Wi-Fi field. Windows names look like `\Device\NPF_{...}`; macOS
+names commonly look like `en0`. The node requests monitor capture with `-I`,
+checks available 802.11 link types, and rejects Ethernet-only output. Capture
+can disconnect that adapter's network connection; use another interface for
+Internet access. OS/driver settings determine the channel. An adapter working
+on Linux or Android does not establish Windows/macOS monitor support. The
+doctor listing alone is not a reception test.
+
+**Bluetooth:** Windows/macOS select the OS-managed controller. Per-controller
+selection remains a Linux feature. macOS CoreBluetooth exposes local device
+UUIDs instead of MAC addresses and does not offer passive scanning; the node
+uses its discovery API, with no GATT pairing or connections. Local UUIDs are
+never sent to the public map. A broadcast Remote ID identity and fresh reported
+position are still required for position uploads. Denied macOS access can be
+changed in **System Settings → Privacy & Security → Bluetooth**.
+
+Wi-Fi, Bluetooth and one SDR run independently. One SDR runs one mode at a time.
+RTL-SDR cannot directly receive 2.4/5 GHz. RF power does not identify a drone;
+decoded broadcasts and camera-link candidates retain their existing separate
+reporting rules. See [SDR decoders](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/sdr-decoders.md) for protocol limits.
+
+## Local account data
+
+- Windows: `%LOCALAPPDATA%\DRONEmapper\node` (directory access restricted to your user and SYSTEM).
+- macOS: `~/Library/Application Support/DRONEmapper/node` (private user permissions).
+- Linux: existing `~/.local/state/dronemapper-node` location is preserved.
+
+The dashboard binds only to loopback. Do not run the whole node as Administrator
+or root. Use **Disconnect this computer** to remove its local account credential;
+revoke the node on the website to remove server access. Keep MQTT passwords in
+environment variables, as described in the [MQTT setup](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/linux-node-setup.md).
+
+## Validation
+
+The shared suite covers receiver shutdown, Windows binary-IQ handling, macOS
+UUID association, monitor-mode checks, account consent and local dashboard
+boundaries. Windows/macOS-specific paths are exercised with isolated fixtures
+on Linux; the repository includes a native three-OS CI workflow. No native
+Windows/macOS hardware reception has been verified yet. Android HackRF testing
+is separate and does not establish desktop compatibility.
+
+## References
+
+[Bleak Windows backend](https://bleak.readthedocs.io/en/latest/backends/windows.html) ·
+[Bleak macOS backend](https://bleak.readthedocs.io/en/latest/backends/macos.html) ·
+[Wireshark Wi-Fi capture](https://wiki.wireshark.org/CaptureSetup/WLAN) ·
+[dumpcap options](https://www.wireshark.org/docs/man-pages/dumpcap.html) ·
+[HackRF installation](https://hackrf.readthedocs.io/en/latest/installing_hackrf_software.html).
+
+Project and data credits, including the **OUI Master Database**, remain in the
+[node README](https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/README.md).

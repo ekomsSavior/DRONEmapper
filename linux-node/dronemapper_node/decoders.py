@@ -13,13 +13,14 @@ import stat
 import struct
 import time
 from .protocol import finite
+from .platform_support import regular_fd
 
 MAX_JSON = 4 * 1024 * 1024
 
 
 def read_json(path, limit=MAX_JSON):
     # Nonblocking open and regular-file validation avoid FIFOs/devices hanging a receiver.
-    fd = os.open(Path(path).expanduser(), os.O_RDONLY | os.O_NONBLOCK | os.O_NOFOLLOW)
+    fd = regular_fd(path)
     with os.fdopen(fd, 'rb') as stream:
         info = os.fstat(stream.fileno())
         if not stat.S_ISREG(info.st_mode) or info.st_size > limit:
@@ -129,7 +130,7 @@ def decode_dji_file(path, sample_rate, sample_format='cf32', skip_detection=Fals
         from ._vendor.dronesecurity.qpsk import Decoder
     except ImportError as error:
         raise ValueError('Install the DJI extra: pip install "./linux-node[dji]"') from error
-    fd=os.open(Path(path).expanduser(),os.O_RDONLY|os.O_NONBLOCK|os.O_NOFOLLOW)
+    fd=regular_fd(path)
     with os.fdopen(fd,'rb') as stream, open(os.devnull,'w') as quiet:
         info=os.fstat(stream.fileno()); width=8 if sample_format=='cf32' else 2
         if not stat.S_ISREG(info.st_mode) or not 0<info.st_size<=512*1024*1024 or info.st_size%width:

@@ -1,10 +1,20 @@
-# DRONEmapper Linux node
+# DRONEmapper desktop node
 
-Turn a stationary Linux computer into a scanner node with a local radar, live detections and optional uploads to [DRONEmapper](https://dronemapper.churchofmalware.org/). Built by **Church of Malware** and **saviorSEC**, the Church’s research branch.
+Turn a Windows, macOS or Linux computer into a scanner node with a local radar, live detections and optional uploads to [DRONEmapper](https://dronemapper.churchofmalware.org/). Built by **Church of Malware** and **saviorSEC**, the Church’s research branch.
 
 ## Start
 
-Download the [Linux bundle](https://dronemapper.churchofmalware.org/linux.html),
+[Download Desktop 0.3.0 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
+
+**Windows:** install [Python 3.10+](https://www.python.org/downloads/windows/), extract the source, then double-click `Start-DRONEmapper.cmd` in this folder.
+
+**macOS:** install [Python 3.10+](https://www.python.org/downloads/macos/), then run `bash linux-node/Start-DRONEmapper.command` from the extracted bundle/repository root.
+
+Both launchers install dependencies in a local environment and open the radar. Leave the terminal running; `Ctrl+C` stops it. Run the launcher again to restart. [Windows/macOS radio setup](../docs/desktop-node-setup.md).
+
+**Linux:**
+
+Download the [Desktop bundle](https://dronemapper.churchofmalware.org/desktop),
 or use this repository. Debian/Ubuntu users with a spare USB Wi-Fi adapter can run
 `bash linux-node/setup-debian.sh YOUR_DEDICATED_USB_INTERFACE` from the extracted
 bundle/repository root. It requests sudo and sets up monitor mode.
@@ -22,13 +32,13 @@ Open **http://127.0.0.1:8790/**. Choose receivers, **Save settings**, then **Sta
 
 To contribute, click **Connect to DRONEmapper**, approve the matching code in your account, then enable the reports you want under **Station location & sharing**. Sharing starts off. Your account password stays in the website.
 
-- **Wi-Fi:** dedicated Linux monitor interface and `dumpcap`; receives Remote ID beacons/NAN and possible WiFi CAM/Tello camera links. Uses Linux drivers, not the Android USB driver list.
-- **Bluetooth:** passive Remote ID reception through Bleak/BlueZ; controller support varies.
+- **Wi-Fi:** dedicated monitor interface and `dumpcap`; receives Remote ID beacons/NAN and possible WiFi CAM/Tello camera links. Uses OS capture drivers, not the Android USB driver list. Windows needs Npcap; macOS needs Wireshark capture permissions.
+- **Bluetooth:** Remote ID advertisements through Bleak. Choose **System Bluetooth** on Windows/macOS, or an `hci` controller on Linux. macOS uses CoreBluetooth discovery and local UUIDs rather than radio MACs.
 - **SDR:** HackRF/RTL-SDR spectrum or live ADS-B decoding with readsb. Ordinary aircraft stay local; broadcasts reporting UAS category have a separate sharing choice.
 - **DJI DroneID:** automatic HackRF capture/decode cycles on a selected channel, plus separate recording review. Live DJI reception still needs a supported-aircraft test; manually reviewed recordings are never uploaded.
 - **MQTT:** optional authorized receiver feed using the documented Remote ID envelope.
 
-Wi-Fi, Bluetooth and one SDR run together. If BlueZ reports that experimental
+Wi-Fi, Bluetooth and one SDR run together. On Linux, if BlueZ reports that experimental
 support is required, `bash linux-node/enable-passive-ble.sh` backs up its configuration,
 enables passive reception support and briefly restarts Bluetooth.
 
