@@ -64,8 +64,9 @@ class DecoderTests(unittest.TestCase):
                 if os.name!='nt': raise
             else:
                 with self.assertRaises(OSError):read_json(link)
-            fifo=Path(tmp)/'fifo';os.mkfifo(fifo)
-            with self.assertRaises(ValueError):read_json(fifo)
+            if hasattr(os,'mkfifo'):
+                fifo=Path(tmp)/'fifo';os.mkfifo(fifo)
+                with self.assertRaises(ValueError):read_json(fifo)
 
     def test_dji_crc_only_aircraft_fields_and_unknown_identity(self):
         r=dji_payload(packet());self.assertEqual(r['model'],'Mavic Air 2')

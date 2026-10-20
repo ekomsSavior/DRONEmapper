@@ -135,11 +135,38 @@ class DesktopTests(unittest.TestCase):
             self.assertTrue(api.ConvertSecurityDescriptorToStringSecurityDescriptorW(buffer,1,4,ctypes.byref(text),None))
             try:
                 self.assertIn('D:P',text.value)
-                self.assertIn(platform.windows_sid(),text.value)
-                self.assertNotIn(';;;WD)',text.value)
             finally:
                 kernel=ctypes.WinDLL('kernel32');kernel.LocalFree.argtypes=[w.LPVOID]
                 kernel.LocalFree(ctypes.cast(text,w.LPVOID))
+            # SDDL can abbreviate the current user's SID (for example LA on the
+            # hosted Windows runner). Inspect actual ACE SIDs rather than aliases.
+            api.GetSecurityDescriptorDacl.argtypes=[w.LPVOID,ctypes.POINTER(w.BOOL),ctypes.POINTER(w.LPVOID),ctypes.POINTER(w.BOOL)]
+            api.GetSecurityDescriptorDacl.restype=w.BOOL
+            present=w.BOOL();defaulted=w.BOOL();acl=w.LPVOID()
+            self.assertTrue(api.GetSecurityDescriptorDacl(buffer,ctypes.byref(present),ctypes.byref(acl),ctypes.byref(defaulted)))
+            self.assertTrue(present.value and acl.value)
+            class AclSize(ctypes.Structure):
+                _fields_=[('ace_count',w.DWORD),('bytes_used',w.DWORD),('bytes_free',w.DWORD)]
+            info=AclSize()
+            api.GetAclInformation.argtypes=[w.LPVOID,w.LPVOID,w.DWORD,ctypes.c_int]
+            api.GetAclInformation.restype=w.BOOL
+            self.assertTrue(api.GetAclInformation(acl,ctypes.byref(info),ctypes.sizeof(info),2))
+            self.assertEqual(info.ace_count,2)
+            api.GetAce.argtypes=[w.LPVOID,w.DWORD,ctypes.POINTER(w.LPVOID)]
+            api.GetAce.restype=w.BOOL
+            api.ConvertSidToStringSidW.argtypes=[w.LPVOID,ctypes.POINTER(w.LPWSTR)]
+            api.ConvertSidToStringSidW.restype=w.BOOL
+            sids=set()
+            for index in range(info.ace_count):
+                ace=w.LPVOID()
+                self.assertTrue(api.GetAce(acl,index,ctypes.byref(ace)))
+                self.assertEqual(ctypes.c_ubyte.from_address(ace.value).value,0) # access allowed
+                self.assertEqual(ctypes.c_ubyte.from_address(ace.value+1).value&3,3) # child inheritance
+                sid=w.LPWSTR()
+                self.assertTrue(api.ConvertSidToStringSidW(w.LPVOID(ace.value+8),ctypes.byref(sid)))
+                try:sids.add(sid.value)
+                finally:kernel.LocalFree(ctypes.cast(sid,w.LPVOID))
+            self.assertEqual(sids,{'S-1-5-18',platform.windows_sid()})
 
 
 if __name__=='__main__':unittest.main()
