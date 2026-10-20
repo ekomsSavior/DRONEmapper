@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-16",
+  "checked": "2026-10-20",
   "companies": {
     "1X Technologies": {
       "url": "https://www.1x.tech/",
@@ -2370,6 +2370,47 @@
       "url": "https://www.whoi.edu/",
       "evidence": "https://www.whoi.edu/",
       "title": "Woods Hole Oceanographic Institution"
+    },
+    "Teal Drones": {
+      "url": "https://redcataerial.com/",
+      "evidence": "https://redcataerial.com/",
+      "title": "Teal Drones",
+      "checked": "2026-10-20"
+    },
+    "Freefly Systems": {
+      "url": "https://freeflysystems.com/",
+      "evidence": "https://freeflysystems.com/",
+      "title": "Freefly Systems",
+      "checked": "2026-10-20"
+    },
+    "Inspired Flight": {
+      "url": "https://www.inspiredflight.com/",
+      "evidence": "https://www.inspiredflight.com/",
+      "title": "Inspired Flight",
+      "checked": "2026-10-20"
+    },
+    "Wingtra": {
+      "url": "https://wingtra.com/",
+      "evidence": "https://wingtra.com/",
+      "title": "Wingtra",
+      "checked": "2026-10-20"
+    },
+    "AgEagle (senseFly)": {
+      "url": "https://eaglenxt.com/",
+      "evidence": "https://eaglenxt.com/",
+      "title": "AgEagle (senseFly)",
+      "checked": "2026-10-20"
+    },
+    "Quantum-Systems": {
+      "url": "https://quantum-systems.com/",
+      "evidence": "https://quantum-systems.com/",
+      "title": "Quantum-Systems",
+      "checked": "2026-10-20"
+    },
+    "ACSL": {
+      "url": "https://www.acsl.co.jp/en/",
+      "evidence": "https://www.acsl.co.jp/en/company/",
+      "title": "ACSL Ltd."
     }
   },
   "models": [
@@ -4389,6 +4430,91 @@
       "url": "https://spraydata.ucsd.edu/about",
       "evidence": "https://spraydata.ucsd.edu/about",
       "title": "About Spray"
+    },
+    {
+      "manufacturer": "Teal Drones",
+      "model": "Teal 2",
+      "url": "https://redcataerial.com/solutions/teal-2/",
+      "evidence": "https://redcataerial.com/solutions/teal-2/",
+      "title": "Teal 2",
+      "checked": "2026-10-20"
+    },
+    {
+      "manufacturer": "Freefly Systems",
+      "model": "Astro",
+      "url": "https://freeflysystems.com/astro",
+      "evidence": "https://freeflysystems.com/astro",
+      "title": "Astro",
+      "checked": "2026-10-20"
+    },
+    {
+      "manufacturer": "Freefly Systems",
+      "model": "Alta X",
+      "url": "https://freeflysystems.com/alta-x",
+      "evidence": "https://freeflysystems.com/alta-x",
+      "title": "Alta X",
+      "checked": "2026-10-20"
+    },
+    {
+      "manufacturer": "Freefly Systems",
+      "model": "Alta X Gen2",
+      "url": "https://freeflysystems.com/alta-x-gen2",
+      "evidence": "https://freeflysystems.com/alta-x-gen2",
+      "title": "Alta X Gen2",
+      "checked": "2026-10-20"
+    },
+    {
+      "manufacturer": "Inspired Flight",
+      "model": "IF800",
+      "url": "https://www.inspiredflight.com/if800",
+      "evidence": "https://www.inspiredflight.com/if800",
+      "title": "IF800",
+      "checked": "2026-10-20"
+    },
+    {
+      "manufacturer": "Wingtra",
+      "model": "WingtraOne Gen II",
+      "url": "https://wingtra.com/wingtraone-gen-ii-drone/",
+      "evidence": "https://wingtra.com/wingtraone-gen-ii-drone/",
+      "title": "WingtraOne Gen II",
+      "checked": "2026-10-20"
+    },
+    {
+      "manufacturer": "Wingtra",
+      "model": "WingtraRAY",
+      "url": "https://wingtra.com/ray/",
+      "evidence": "https://wingtra.com/ray/",
+      "title": "WingtraRAY",
+      "checked": "2026-10-20"
+    },
+    {
+      "manufacturer": "AgEagle (senseFly)",
+      "model": "eBee X series",
+      "url": "https://eaglenxt.com/products/drones/",
+      "evidence": "https://eaglenxt.com/products/drones/",
+      "title": "eBee X series",
+      "checked": "2026-10-20"
+    },
+    {
+      "manufacturer": "Flyability",
+      "model": "Elios 3",
+      "url": "https://www.flyability.com/elios-3",
+      "evidence": "https://www.flyability.com/elios-3",
+      "title": "Elios 3 inspection drone"
+    },
+    {
+      "manufacturer": "WeRide",
+      "model": "Robotaxi GXR",
+      "url": "https://zh.weride.ai/products",
+      "evidence": "https://zh.weride.ai/products",
+      "title": "WeRide Robotaxi GXR"
+    },
+    {
+      "manufacturer": "ACSL",
+      "model": "PF4-CAT3",
+      "url": "https://www.acsl.co.jp/admin/wp-content/uploads/2024/06/20240628_PF4-CAT3%E5%9E%8B%E5%BC%8F%E8%AA%8D%E8%A8%BC%E7%94%B3%E8%AB%8B_EN_fix.pdf",
+      "evidence": "https://www.acsl.co.jp/admin/wp-content/uploads/2024/06/20240628_PF4-CAT3%E5%9E%8B%E5%BC%8F%E8%AA%8D%E8%A8%BC%E7%94%B3%E8%AB%8B_EN_fix.pdf",
+      "title": "ACSL PF4-CAT3 delivery drone"
     }
   ]
 }

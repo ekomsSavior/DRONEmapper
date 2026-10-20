@@ -4,7 +4,7 @@ Turn a Windows, macOS or Linux computer into a scanner node with a local radar, 
 
 ## Start
 
-[Download Desktop 0.3.0 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.3.1 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
 
 **Windows:** install [Python 3.10+](https://www.python.org/downloads/windows/), extract the source, then double-click `Start-DRONEmapper.cmd` in this folder.
 
@@ -51,3 +51,5 @@ The radar uses reported GPS for direction/distance. In **Positions**, choose a r
 [Church of Malware](https://churchofmalware.org/) · [saviorSEC](https://churchofmalware.org/work/) · [OpenDroneID protocol references](https://github.com/opendroneid/opendroneid-core-c) · [FAA declarations](https://uasdoc.faa.gov/listDocs) · [OUI Master Database by Ringmast4r](https://github.com/Ringmast4r/OUI-Master-Database), using IEEE registry entries · [readsb](https://github.com/wiedehopf/readsb) · [DroneSecurity / RUB-SysSec](https://github.com/RUB-SysSec/DroneSecurity) · [Bleak](https://github.com/hbldh/bleak) · [Eclipse Paho](https://github.com/eclipse-paho/paho.mqtt.python) · [Wireshark](https://www.wireshark.org/) · [HackRF](https://greatscottgadgets.com/hackrf/) · [Osmocom RTL-SDR](https://osmocom.org/projects/rtl-sdr/wiki).
 
 Code: **AGPL-3.0-or-later**. Data and optional dependencies retain their own terms; see [NOTICE](NOTICE.txt). Hardware validation is tracked in the setup guide.
+
+Model recognition now covers 106 reviewed FAA aircraft/module combinations. Historical map enrichment adds 12 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).

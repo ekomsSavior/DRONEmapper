@@ -16,7 +16,9 @@ Sharing starts off each session. Raw MACs and network names stay on your phone. 
 
 ## Record offline, upload at home
 
-Version **0.7.0** adds **Saved wardrives · record / upload / export**.
+Version **0.7.1** expands offline FAA model identification.
+
+Version **0.7.0** added **Saved wardrives · record / upload / export**.
 Start listening, open that button, then choose **Record a wardrive**. No account
 or internet is needed to record. Live sharing pauses while the trip records.
 Tap **Finish recording** or **Stop listening**; saved trips survive app restarts.
@@ -78,7 +80,7 @@ protocol decoders. [Setup and hardware test steps](../docs/android-hackrf.md).
 Download the latest APK from [Android nodes](https://dronemapper.churchofmalware.org/nodes.html)
 and install it over the existing app; do not uninstall first. Official releases
 use the same signing key to preserve your pairing and settings. Check **Phone
-capabilities** for version **0.7.0**. Updates are manual for now.
+capabilities** for version **0.7.1**. Updates are manual for now.
 
 Start listening again, reconnect your USB adapter, and enable your preferred
 **Sharing choices** if you want reports on the map. For a test report, connect

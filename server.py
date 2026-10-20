@@ -18,6 +18,7 @@ import urllib.error
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, unquote, urlsplit
 from data_sources import fetch_json, normalize_deploy, normalize_adsb, DEPLOY_URL, ADSB_URL, finite
+from reviewed_history import fetch_history
 from climateviewer_source import fetch_climateviewer
 from argo_source import fetch_argo
 from ioos_source import fetch_ioos
@@ -54,7 +55,7 @@ class Collector:
         self.adapters = adapters if adapters is not None else {
             'deploy': lambda: normalize_deploy(fetch_json(DEPLOY_URL)),
             'adsb': lambda: normalize_adsb(fetch_json(ADSB_URL)),
-            'climateviewer': fetch_climateviewer,
+            'climateviewer': fetch_climateviewer, 'milestones': fetch_history,
             'ioos': fetch_ioos, 'argo': fetch_argo, 'atlas': fetch_atlas, 'gliders': fetch_gliders, 'oam': fetch_oam, 'avmap': fetch_avmap, 'voto': fetch_voto}
         if adapters is None:
             try:
@@ -147,14 +148,15 @@ class Collector:
             delay = min(deadlines)-time.time() if deadlines else INTERVAL
             self.stop.wait(max(1, min(INTERVAL, delay)))
 
-    def snapshot(self, hours=24, current=None):
+    def snapshot(self, hours=0, current=None):
         current = time.time() if current is None else current
+        window = min(hours*3600, RETENTION) if hours else RETENTION
         with self.lock:
             activity, tracks = [], []
             for state in self.providers.values():
                 for record in state.get('records', []):
                     if record['record_type'] == 'position':
-                        if current-record['observed_at'] <= hours*3600:
+                        if 0 <= current-record['observed_at'] <= window:
                             item = public_record(record)
                             item['live'] = 0 <= current-record['observed_at'] <= 120
                             tracks.append(item)
@@ -184,6 +186,7 @@ class Collector:
                 '<p>Published deployment facts: <a href="https://registry.deploy.report/terms">DEPLOY</a>. Filtered to robotic systems; '
                 'locations are treated as approximate. Original editorial descriptions and images are not reproduced. '
                 'Third-party data is governed by its own terms, separately from our software license.</p>'
+                '<p>Historical operational milestones: Church of Malware / saviorSEC factual review, with dated operator evidence in <a href="/data/milestones.json">the milestone export</a>. Approximate areas are not current vehicle positions.</p>'
                 '<p>Historical UAV layer: <a href="https://climateviewer.org/history-and-science/government/maps/uav-drones-over-usa/">Jim Lee / ClimateViewer</a>, '
                 '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Adapted: structured records filtered, '
                 'fields normalized, reference and planned-location pins excluded. The 2018 archive is historical, not current activity. '
@@ -227,20 +230,20 @@ class Handler(BaseHTTPRequestHandler):
             path = path[len('/work/drone-mapper'):]
         if path == '/feed':
             try:
-                hours = float(parse_qs(parsed.query).get('hours', ['24'])[0])
-                if hours not in {0.25, 1, 6, 24}:
+                hours = float(parse_qs(parsed.query).get('hours', ['0'])[0])
+                if hours not in {0, 0.25, 1, 6, 24, 336}:
                     raise ValueError()
             except (ValueError, TypeError):
                 return self.json(400, {'error': 'Invalid time window'}, head)
             return self.json(200, self.server.collector.snapshot(hours), head)
         if path == '/credits.html':
             return self.respond(200, self.server.collector.credits(), 'text/html; charset=utf-8', head)
-        if path in {'/data/ioos.json', '/data/floats.json', '/data/driverless.json', '/data/surveys.json', '/data/baltic.json', '/data/aircraft.json', '/data/ocean.json', '/data/history.json', '/data/programs.json', '/data/gliders.json'}:
-            key = {'/data/ioos.json':'ioos', '/data/floats.json':'argo', '/data/driverless.json':'avmap', '/data/surveys.json':'oam', '/data/baltic.json':'voto', '/data/aircraft.json': 'adsb', '/data/ocean.json': 'noaa', '/data/history.json': 'climateviewer', '/data/programs.json': 'atlas', '/data/gliders.json': 'gliders'}[path]
+        if path in {'/data/milestones.json', '/data/ioos.json', '/data/floats.json', '/data/driverless.json', '/data/surveys.json', '/data/baltic.json', '/data/aircraft.json', '/data/ocean.json', '/data/history.json', '/data/programs.json', '/data/gliders.json'}:
+            key = {'/data/milestones.json':'milestones', '/data/ioos.json':'ioos', '/data/floats.json':'argo', '/data/driverless.json':'avmap', '/data/surveys.json':'oam', '/data/baltic.json':'voto', '/data/aircraft.json': 'adsb', '/data/ocean.json': 'noaa', '/data/history.json': 'climateviewer', '/data/programs.json': 'atlas', '/data/gliders.json': 'gliders'}[path]
             with self.server.collector.lock:
                 data = [r for r in self.server.collector.providers.get(key, {}).get('records', [])
                         if r.get('record_type') != 'position' or time.time()-r.get('observed_at', 0) <= RETENTION]
-                return self.json(200, {'attribution': {'ioos':'IOOS Glider DAC; Scripps Institution of Oceanography / Woods Hole Oceanographic Institution; adapted surface GPS subset; CC BY 4.0', 'argo':'International Argo Program and contributing national programs / Argo GDAC via Ifremer; https://doi.org/10.17882/42182; unrestricted data use, attribution requested', 'avmap':'AV Map contributors / Jackson Lester · MIT; see /licenses/av-map.txt','oam':'OpenAerialMap / Open Imagery Network contributors · adapted UAV survey metadata · CC BY 4.0; see per-record contributors','voto':'Voice of the Ocean Foundation; data collected and made freely available at https://erddap.observations.voiceoftheocean.org/erddap/index.html · CC BY 4.0','adsb': 'ADSB.lol · ODbL 1.0', 'noaa': 'NOAA AOML / PMEL and contributing operators; see per-record license', 'climateviewer': 'Jim Lee / ClimateViewer · adapted historical layer · CC BY-NC-SA 4.0', 'atlas': 'Electronic Frontier Foundation / Atlas of Surveillance · adapted drone-program areas · CC BY 4.0', 'gliders': 'NOAA AOML CoastWatch and contributing glider operators · freely redistributable data; see per-record terms'}[key], 'records': data}, head)
+                return self.json(200, {'attribution': {'milestones':'Church of Malware / saviorSEC factual historical milestones; per-record primary evidence', 'ioos':'IOOS Glider DAC; Scripps Institution of Oceanography / Woods Hole Oceanographic Institution; adapted surface GPS subset; CC BY 4.0', 'argo':'International Argo Program and contributing national programs / Argo GDAC via Ifremer; https://doi.org/10.17882/42182; unrestricted data use, attribution requested', 'avmap':'AV Map contributors / Jackson Lester · MIT; see /licenses/av-map.txt','oam':'OpenAerialMap / Open Imagery Network contributors · adapted UAV survey metadata · CC BY 4.0; see per-record contributors','voto':'Voice of the Ocean Foundation; data collected and made freely available at https://erddap.observations.voiceoftheocean.org/erddap/index.html · CC BY 4.0','adsb': 'ADSB.lol · ODbL 1.0', 'noaa': 'NOAA AOML / PMEL and contributing operators; see per-record license', 'climateviewer': 'Jim Lee / ClimateViewer · adapted historical layer · CC BY-NC-SA 4.0', 'atlas': 'Electronic Frontier Foundation / Atlas of Surveillance · adapted drone-program areas · CC BY 4.0', 'gliders': 'NOAA AOML CoastWatch and contributing glider operators · freely redistributable data; see per-record terms'}[key], 'records': data}, head)
         root = PUBLIC
         if path.startswith('/hub-preview/'):
             root = ROOT / 'hub-preview'

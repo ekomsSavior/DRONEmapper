@@ -1,0 +1,230 @@
+{
+  "reviewed_at": "2026-10-20",
+  "source": "https://standards-oui.ieee.org/oui/oui.csv",
+  "source_sha256": "de55be3b1ac2a6534add37b13b21a985eeffa6398d8d31e68b58fb0ebfa2c9f8",
+  "decision": "All reviewed prefixes already exist in the shared vendor lookup. No prefixes or autonomous-device classifications added.",
+  "allocations": [
+    {
+      "prefix": "00121C",
+      "ieee_registrant": "PARROT SA",
+      "existing_registrant": "PARROT SA",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "00267E",
+      "ieee_registrant": "PARROT SA",
+      "existing_registrant": "PARROT SA",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "9003B7",
+      "ieee_registrant": "PARROT SA",
+      "existing_registrant": "PARROT SA",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "903AE6",
+      "ieee_registrant": "PARROT SA",
+      "existing_registrant": "PARROT SA",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "A0143D",
+      "ieee_registrant": "PARROT SA",
+      "existing_registrant": "PARROT SA",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "A45129",
+      "ieee_registrant": "XAG",
+      "existing_registrant": "XAG",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "848319",
+      "ieee_registrant": "Hangzhou Zero Zero Technology Co., Ltd.",
+      "existing_registrant": "Hangzhou Zero Zero Technology Co., Ltd.",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "001AA6",
+      "ieee_registrant": "Elbit Systems Deutschland GmbH & Co. KG",
+      "existing_registrant": "Elbit Systems Deutschland GmbH & Co. KG",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "0022B1",
+      "ieee_registrant": "Elbit Systems Ltd.",
+      "existing_registrant": "Elbit Systems Ltd.",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "7C051E",
+      "ieee_registrant": "RAFAEL LTD.",
+      "existing_registrant": "RAFAEL LTD.",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "001356",
+      "ieee_registrant": "FLIR Radiation Inc",
+      "existing_registrant": "FLIR Radiation Inc",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "001BD8",
+      "ieee_registrant": "FLIR Systems Inc",
+      "existing_registrant": "FLIR Systems Inc",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "00407F",
+      "ieee_registrant": "FLIR Systems",
+      "existing_registrant": "FLIR Systems",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "AC44F2",
+      "ieee_registrant": "YAMAHA CORPORATION",
+      "existing_registrant": "YAMAHA CORPORATION",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "00A0DE",
+      "ieee_registrant": "YAMAHA CORPORATION",
+      "existing_registrant": "YAMAHA CORPORATION",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "F4D580",
+      "ieee_registrant": "YAMAHA CORPORATION",
+      "existing_registrant": "YAMAHA CORPORATION",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "000373",
+      "ieee_registrant": "Aselsan A.S",
+      "existing_registrant": "Aselsan A.S",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "001904",
+      "ieee_registrant": "WB Electronics Sp. z o.o.",
+      "existing_registrant": "WB Electronics Sp. z o.o.",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "5CD5B5",
+      "ieee_registrant": "Shenzhen WiSiYiLink Technology Co.,Ltd",
+      "existing_registrant": "Shenzhen WiSiYiLink Technology Co.,Ltd",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "10A4B9",
+      "ieee_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "existing_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "48F3F3",
+      "ieee_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "existing_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "74EE8D",
+      "ieee_registrant": "Apollo Intelligent Connectivity (Beijing) Technology Co., Ltd.",
+      "existing_registrant": "Apollo Intelligent Connectivity (Beijing) Technology Co., Ltd.",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "882D53",
+      "ieee_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd.",
+      "existing_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd.",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "B85CEE",
+      "ieee_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "existing_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "CCE0DA",
+      "ieee_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "existing_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "D46075",
+      "ieee_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "existing_registrant": "Baidu Online Network Technology (Beijing) Co., Ltd",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "0C1C20",
+      "ieee_registrant": "Kakao Corp",
+      "existing_registrant": "Kakao Corp",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "481CB9",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "8C5823",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "0C9AE6",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "60601F",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "E47A2C",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "882985",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "58B858",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "34D262",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "04A85A",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    },
+    {
+      "prefix": "4C43F6",
+      "ieee_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "existing_registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "already_in_catalog": true
+    }
+  ]
+}

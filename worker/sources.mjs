@@ -6,6 +6,7 @@ import {fetchIOOS} from './ioos-source.mjs';
 import {fetchVoto} from './voto-source.mjs';
 import {fetchOAM} from './oam-source.mjs';
 import {fetchAVMap} from './avmap-source.mjs';
+import {historicalMilestones} from './reviewed-history.mjs';
 export const INTERVAL=300,RETENTION=86400;
 const CLIMATE_URL='https://climateviewer.org/layers/geojson/2018/UAV-Drones-over-USA-ClimateViewer-3D.geojson';
 const CLIMATE_PAGE='https://climateviewer.org/history-and-science/government/maps/uav-drones-over-usa/';
@@ -67,7 +68,7 @@ export async function normalizeClimate(payload){
  }return [...records.values()];
 }
 async function ocean(){let index=0,failed=0,retry=300;const records=[];await Promise.all(Array.from({length:4},async()=>{while(index<DATASETS.length){const dataset=DATASETS[index++];try{const p=await fetchJSON(`https://data.pmel.noaa.gov/pmel/erddap/tabledap/${dataset[0]}.json?time,latitude,longitude&orderByMax(%22time%22)`,65536),r=normalizeNOAA(p,dataset);if(r)records.push(r);}catch(e){failed++;retry=Math.max(retry,e.retry||300);}}}));if(failed===DATASETS.length)throw new SourceError('Ocean sources unavailable',retry);return {records,partial:failed};}
-export const adapters={ioos:()=>fetchIOOS(fetchJSON),argo:()=>fetchArgo(fetchJSON),voto:()=>fetchVoto(fetchJSON),oam:()=>fetchOAM(fetchJSON),avmap:()=>fetchAVMap(fetchText,fetchJSON),deploy:async()=>({records:normalizeDeploy(await fetchJSON(DEPLOY_URL))}),adsb:async()=>({records:normalizeADSB(await fetchJSON(ADSB_URL))}),climateviewer:async()=>({records:await normalizeClimate(await fetchJSON(CLIMATE_URL))}),noaa:ocean,atlas:()=>fetchAtlas(fetchJSON),gliders:async()=>({records:normalizeGliders(await fetchJSON(GLIDERS_URL,1048576))})};
+export const adapters={milestones:async()=>({records:structuredClone(historicalMilestones)}),ioos:()=>fetchIOOS(fetchJSON),argo:()=>fetchArgo(fetchJSON),voto:()=>fetchVoto(fetchJSON),oam:()=>fetchOAM(fetchJSON),avmap:()=>fetchAVMap(fetchText,fetchJSON),deploy:async()=>({records:normalizeDeploy(await fetchJSON(DEPLOY_URL))}),adsb:async()=>({records:normalizeADSB(await fetchJSON(ADSB_URL))}),climateviewer:async()=>({records:await normalizeClimate(await fetchJSON(CLIMATE_URL))}),noaa:ocean,atlas:()=>fetchAtlas(fetchJSON),gliders:async()=>({records:normalizeGliders(await fetchJSON(GLIDERS_URL,1048576))})};
 const privateFields=new Set(['source','source_url','evidence_url','verification','purpose_evidence_url','attribution','license','license_url']);
 export const publicRecord=r=>Object.fromEntries(Object.entries(r).filter(([key])=>!privateFields.has(key)));
 export function mergePositions(previous,incoming,now){

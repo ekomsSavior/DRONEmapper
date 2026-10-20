@@ -112,12 +112,13 @@ class NodeStore:
             self.db.execute('DELETE FROM observations WHERE event NOT IN (SELECT event FROM observations ORDER BY stamp DESC LIMIT 10000)')
         return {'schema_version': 1, 'accepted': accepted, 'duplicates': len(records)-accepted}
 
-    def snapshot(self, hours=24, now=None):
+    def snapshot(self, hours=0, now=None):
         now = time.time() if now is None else now
+        window = min(MAX_AGE, hours*3600) if hours else MAX_AGE
         with self.lock, self.db:
             self.db.execute('DELETE FROM observations WHERE stamp < ?', (now-MAX_AGE,))
             rows = self.db.execute('SELECT record FROM observations WHERE stamp >= ? ORDER BY stamp',
-                                   (now-min(MAX_AGE, hours*3600),)).fetchall()
+                                   (now-window,)).fetchall()
         tracks = {}
         for (serialized,) in rows:
             record = json.loads(serialized)
@@ -144,7 +145,7 @@ class NodeCollector(Collector):
         if not external:
             self.providers = {}
 
-    def snapshot(self, hours=24, current=None):
+    def snapshot(self, hours=0, current=None):
         snapshot = super().snapshot(hours, current)
         tracks = self.nodes.snapshot(hours, snapshot['server_time'])
         snapshot['tracks'].extend(tracks)

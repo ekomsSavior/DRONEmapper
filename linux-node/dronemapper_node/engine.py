@@ -42,7 +42,8 @@ class Catalog:
         if not re.fullmatch('[0-9A-HJ-NP-Z]{6,20}',serial) or serial[4] not in '0123456789ABCDEF' or int(serial[4],16)!=len(serial)-5:
             return {}
         matches={(r['manufacturer'],r['model'],r['device_type']) for r in self.rules
-                 if len(r['start'])==len(serial)==len(r['end']) and r['start']<=serial<=r['end']}
+                 if len(r['start'])==len(serial)==len(r['end']) and r['start']<=serial<=r['end']
+                 and (not r.get('decimal_suffix') or re.fullmatch('[0-9]+',serial[-r['decimal_suffix']:]))}
         if len(matches)!=1:
             return {}
         manufacturer,model,kind=matches.pop()

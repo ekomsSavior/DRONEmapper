@@ -1,6 +1,6 @@
 # HackRF on Android
 
-Android 0.7.0 includes the **USB SDR · HackRF** connection and local RF spectrum
+Android 0.7.1 includes the **USB SDR · HackRF** connection and local RF spectrum
 introduced in 0.6.0, plus saved wardrives for Wi-Fi and Remote ID observations.
 Built by **Church of Malware / saviorSEC**. No root is required.
 

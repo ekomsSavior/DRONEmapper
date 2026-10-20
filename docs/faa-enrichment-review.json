@@ -1,0 +1,846 @@
+[
+  {
+    "tracking": "RID000000006",
+    "makeName": "Wingtra",
+    "modelName": "WingtraOne Gen II",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000006",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 57,
+        "sha256": "33f6abee0a10bd4254d241f807594e63e47a325bb2a6bed1703abc1be0dd40ef"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000054",
+    "makeName": "Inspired Flight",
+    "modelName": "IF1200A",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000054",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 3642,
+        "sha256": "210452fcd7d0d87862122e2b1d9204117fc631985d3bcbe09ba73e69a1c48472"
+      },
+      {
+        "id": 106,
+        "sha256": "aa332e3761daac9a375f9ebeea1d693c006bb300424f96aff63021dd59ec5171"
+      }
+    ],
+    "rule_count": 2,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000056",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000056",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6154,
+        "sha256": "b6a0156f18810625d991dccf75b6c4fc54561d323dabe7d5e01abb2e5aa9a5da"
+      },
+      {
+        "id": 6083,
+        "sha256": "9976d2b3426452c2c6cd3afb65e0a12aa33db0d6abb98357a32763304f0ce1a3"
+      },
+      {
+        "id": 108,
+        "sha256": "6edc48c1433e12cf800986af7a4712d1cd98bfe3a86f5a0a46cf54f5e69a2014"
+      }
+    ],
+    "rule_count": 12,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000151",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Max",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000151",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6061,
+        "sha256": "d928778f0bc0bd66943d27e0617fc1e92f244efab39352952a01ea88d11e6be8"
+      },
+      {
+        "id": 217,
+        "sha256": "5cb2671806fb728775768801f42879696bdd0c739b3a79b9781ad6a9823f1a13"
+      },
+      {
+        "id": 5032,
+        "sha256": "3ce40a134bd8c7ef6a939439a63a8049bc715e74aadda4aa8975222eaab8673a"
+      },
+      {
+        "id": 6031,
+        "sha256": "6c8bae3b19736f89f338bf9429959f266965f9e125b8c196f0e66d2fe9027c18"
+      },
+      {
+        "id": 5699,
+        "sha256": "ff1125f7b1671ce113d1a1571d3cfc2a96c84e6c0946ced8165f46e1bd59c17d"
+      },
+      {
+        "id": 6089,
+        "sha256": "dcf7eb9b970ccb9cc0b97e5606805f5011d9ae16c7b9a404ef680e5645995f7a"
+      }
+    ],
+    "rule_count": 3454,
+    "rejected_allocation_count": 0,
+    "decision": "deferred; individually assigned serial set exceeds bounded catalog budget"
+  },
+  {
+    "tracking": "RID000000196",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000196",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 268,
+        "sha256": "c53fe06e074eb7bdd03f597f9da34a3dc1cca0190563287d176489c1e0864468"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000197",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000197",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 270,
+        "sha256": "d87a508ceb57c1e0243b468b39ed486d8696666161d67e5594f6a74d5635371f"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000198",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000198",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 271,
+        "sha256": "d87a508ceb57c1e0243b468b39ed486d8696666161d67e5594f6a74d5635371f"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000281",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000281",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 363,
+        "sha256": "2ea912928a5a57d4442ac54cb85e2650b8df8cb9b459a095180301ad0adc1e5f"
+      }
+    ],
+    "rule_count": 2,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000300",
+    "makeName": "Skydio",
+    "modelName": "2 SDRC2V1",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000300",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6252,
+        "sha256": "004b07a95b3a5431720f2908a6b0c002c2c67669888c5bc5f19935d582c01cfd"
+      },
+      {
+        "id": 6104,
+        "sha256": "c222011cd4e961dcf71fc786fb98d42af3dbea597c42a0f659702bd451f177f6"
+      },
+      {
+        "id": 406,
+        "sha256": "e8167723f2db85f664f714ac888d993c24cfc3214bbc002aa10242abc451599a"
+      }
+    ],
+    "rule_count": 24022,
+    "rejected_allocation_count": 0,
+    "decision": "deferred; individually assigned serial set exceeds bounded catalog budget"
+  },
+  {
+    "tracking": "RID000000312",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000312",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 445,
+        "sha256": "c3718ebb5656bd2579770449ab5856e8e77edae0470954c56c6633b19cdf1e55"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000313",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000313",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 446,
+        "sha256": "c3718ebb5656bd2579770449ab5856e8e77edae0470954c56c6633b19cdf1e55"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000314",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000314",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 447,
+        "sha256": "7119fd0150bb32ed19b871a92097d515b43f6efcf8cdd51c703189fa27fb8706"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000315",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000315",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 448,
+        "sha256": "7119fd0150bb32ed19b871a92097d515b43f6efcf8cdd51c703189fa27fb8706"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000316",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000316",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 449,
+        "sha256": "7119fd0150bb32ed19b871a92097d515b43f6efcf8cdd51c703189fa27fb8706"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000320",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Nano",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000320",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1780,
+        "sha256": "a86e8b9560dc451d69ba9093c21d276e86ee3a773dcd664b4cfb772ef6faaad9"
+      },
+      {
+        "id": 461,
+        "sha256": "64bf0956bff4aa0f7b22d91ca8f8514da4b34375c67651caa5bc9d53a4b76843"
+      }
+    ],
+    "decision": "existing-model; additional allocations retained for later review"
+  },
+  {
+    "tracking": "RID000000321",
+    "makeName": "AgEagle (senseFly)",
+    "modelName": "eBee X series",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000321",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 477,
+        "sha256": "cc5ebb7f6cbff1dd22c33e5eeeb2826e981f790785928e918e70dde988ed3126"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000397",
+    "makeName": "Zipline",
+    "modelName": "Sparrow",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000397",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 784,
+        "sha256": "fd4ad525714fed1671255e73553c1c5bf23f2722ac2ced1510fbe6bd52de9119"
+      }
+    ],
+    "rule_count": 64,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000423",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Lite",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000423",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1775,
+        "sha256": "d6792e7520049ff29dae9906b8db5fce45f548e20a063956fe9f99d6b6db1b38"
+      },
+      {
+        "id": 852,
+        "sha256": "e3057256ebaa1b595f3c9ef60b07eddfb4a162f7aa8468b0e116ee2541d0aead"
+      }
+    ],
+    "decision": "existing-model; additional allocations retained for later review"
+  },
+  {
+    "tracking": "RID000000454",
+    "makeName": "Teal Drones",
+    "modelName": "Teal 2",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000454",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 915,
+        "sha256": "d09747c319840fecc20b93e07a720452b812ff8ee343951165a22cbd75b3bc10"
+      }
+    ],
+    "rule_count": 73,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000540",
+    "makeName": "Quantum-Systems",
+    "modelName": "Trinity R14",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000540",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1082,
+        "sha256": "1b26bf44ca056ab07ab3070807ccbfdbb905ff3ae61450bd74bac9570701af48"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000547",
+    "makeName": "Quantum-Systems",
+    "modelName": "Trinity R10",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000547",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1089,
+        "sha256": "7fa202b938cd5800997ff6f380ecb83a6f60c7a1a1a27163cc15a4dc9017ed97"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000597",
+    "makeName": "Quantum-Systems",
+    "modelName": "Trinity R8",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000597",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1223,
+        "sha256": "bf996fca9931e690938af731f60875ea3717b017375d14250900acaef147169c"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000598",
+    "makeName": "Quantum-Systems",
+    "modelName": "Trinity R7",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000598",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1224,
+        "sha256": "9196aac917d330f1ee65120ffac25f853aea725e6cb9aa8e1c5fb602d118434e"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000599",
+    "makeName": "Quantum-Systems",
+    "modelName": "Trinity R6",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000599",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1225,
+        "sha256": "a77996e6f16605634edf61f6cdeaa3660e8cb1b0b192e21180436c42d5e17fc3"
+      }
+    ],
+    "rule_count": 3,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000691",
+    "makeName": "BRINC",
+    "modelName": "LEMUR 2",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000691",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1400,
+        "sha256": "96e9ec43366072fe86d2b5d33be6aa0e53de9396e247497ca392f3722badeb50"
+      }
+    ],
+    "rule_count": 170,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000749",
+    "makeName": "Skydio",
+    "modelName": "X10E SR47P",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000749",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1625,
+        "sha256": "cb5625cb86b859fe1f6243b5385609a5100e36860d389134e697b52171cb686f"
+      }
+    ],
+    "rule_count": 69,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000750",
+    "makeName": "Skydio",
+    "modelName": "X10E SR47P",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000750",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 5976,
+        "sha256": "bef6fc29f842e03a8317b308980d8be6f04b365a311d997ad835340e947930eb"
+      },
+      {
+        "id": 6120,
+        "sha256": "12bb48127b2e0a5ec021e300d28f833f2c07f28cc2a924b1dd958365033f993d"
+      },
+      {
+        "id": 6122,
+        "sha256": "2ae20d73d3a5f323f3829c8fd7a0469cd30e600b05641609ba3c380f36c7d28c"
+      },
+      {
+        "id": 5804,
+        "sha256": "c8d1d418a2ada5832c232061d192d204d9581a38229d7aa8b8ef997829d7acbb"
+      },
+      {
+        "id": 1626,
+        "sha256": "cb5625cb86b859fe1f6243b5385609a5100e36860d389134e697b52171cb686f"
+      },
+      {
+        "id": 2318,
+        "sha256": "b1ffe11d87440473006b339a42884e0974c118429cf2858d4532498d154e638a"
+      },
+      {
+        "id": 2363,
+        "sha256": "f87c731ff795f314d116578c70ecef8f0685a08855702f15edc065a070f49d18"
+      },
+      {
+        "id": 2614,
+        "sha256": "630b36f6f5edcb862aac9ab10aa23cc126a767b0af783560b574c06a3ddd68a5"
+      },
+      {
+        "id": 2510,
+        "sha256": "1fd61a0f9db15e5b27dcbac57e6938df274eb17e741c3f53dbf20a834371949d"
+      },
+      {
+        "id": 2464,
+        "sha256": "f843fbde2d897cf32ca34937b969d554c38b208e68221b1bd4ab55c58bea4050"
+      },
+      {
+        "id": 2954,
+        "sha256": "c0c9736ed83511abeb5a850bbf1e4fdfa33110e0db5327993014c60e0734b9e4"
+      },
+      {
+        "id": 3049,
+        "sha256": "59c4eea03232e730f8db1f6d603ac2df8ec6f7a78113a68d348bddf19cc524e9"
+      },
+      {
+        "id": 3303,
+        "sha256": "92a573a8380c97a90989148a9b5c0048d8b0ccbdacde2f3292d00b79ccf372fb"
+      },
+      {
+        "id": 3687,
+        "sha256": "d47ba4977f9afce4423ac2ed2a22af4da751df72d97605e4a64ffed23190bcf1"
+      },
+      {
+        "id": 3892,
+        "sha256": "482d3b403c9b1dc7920b338026b6793375ca3eca22e6638a1e6a60127313f03c"
+      },
+      {
+        "id": 4061,
+        "sha256": "a44b14b9f5135aac12ffebc7082f674d529122f21c7d40e4c7ad9905b5a1766e"
+      },
+      {
+        "id": 6097,
+        "sha256": "28666bc7fd028b3a35a5e86ce831710e8d9248d8099cfe47e57e413ee22c6121"
+      },
+      {
+        "id": 6040,
+        "sha256": "be8da765567d8831f35a72684ad7abc0f5371f766cf05a722f3c52bc3887ca3c"
+      },
+      {
+        "id": 5405,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "id": 5785,
+        "sha256": "021fced672d8613abb5c3c395d85d1c26aafdfdd292efe1b14bd2afdeb8a12cd"
+      }
+    ],
+    "rule_count": 125408,
+    "rejected_allocation_count": 0,
+    "decision": "deferred; individually assigned serial set exceeds bounded catalog budget"
+  },
+  {
+    "tracking": "RID000000815",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Lite",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000815",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1778,
+        "sha256": "4f6d576ad6c92cfe395c57468a6c1818b094cfcbea2b41c26be91483e58a14d5"
+      }
+    ],
+    "decision": "existing-model; additional allocations retained for later review"
+  },
+  {
+    "tracking": "RID000000818",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Nano",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000818",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1784,
+        "sha256": "a1ba8421c54a52973f0e2f7f0e8c3304d2a53fdcfd776865b47f9c4ba9899316"
+      }
+    ],
+    "decision": "existing-model; additional allocations retained for later review"
+  },
+  {
+    "tracking": "RID000000819",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Nano",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000819",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1785,
+        "sha256": "c644e3c7ddd84e1426ed3a426d679c25425b8cb5a73d3ff258142897fb20d60e"
+      }
+    ],
+    "decision": "existing-model; additional allocations retained for later review"
+  },
+  {
+    "tracking": "RID000001039",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Lite",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001039",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2197,
+        "sha256": "734def4515403d6f05b4e794d66011228932bf6a2188f332176894b6363e8a16"
+      }
+    ],
+    "decision": "existing-model; additional allocations retained for later review"
+  },
+  {
+    "tracking": "RID000001050",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Lite",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001050",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2217,
+        "sha256": "c1841cdb7ea1a73d2d268d67994115ecafe2187947714e98207ebde3b891147d"
+      }
+    ],
+    "decision": "existing-model; additional allocations retained for later review"
+  },
+  {
+    "tracking": "RID000001087",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO II",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001087",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2296,
+        "sha256": "742bd74b7cba81659025659d3311306c108932a05bcbc732561fdfcdfd04b8e1"
+      }
+    ],
+    "decision": "existing-model; additional allocations retained for later review"
+  },
+  {
+    "tracking": "RID000001225",
+    "makeName": "Freefly Systems",
+    "modelName": "Remote ID Upgrade Kit (Alta X)",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001225",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2774,
+        "sha256": "9ab6093de2b5f0d937aaf9be3fa500bac42cc85ba91a77f5d7f9fbefc90711ce"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001240",
+    "makeName": "Freefly Systems",
+    "modelName": "Astro",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001240",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6146,
+        "sha256": "8fd059656e90ee0cde9da26348d728db8f7c9a67fc74c7a58267a57165f436e3"
+      },
+      {
+        "id": 2814,
+        "sha256": "58f083445d19ea0b003e5c733b5601638410bb2ed78540b6318159d7288fe856"
+      }
+    ],
+    "rule_count": 2,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001242",
+    "makeName": "Freefly Systems",
+    "modelName": "Alta X",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001242",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2816,
+        "sha256": "211eef190c31ec32df600749b277c3e13a4ebf9280a45a795938053ae4dcf771"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001511",
+    "makeName": "Inspired Flight",
+    "modelName": "IF800",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001511",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 3645,
+        "sha256": "584ff578535c1110a769d3bad36dd2d8315157986570f98f87bc6b2bc800a7b4"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002128",
+    "makeName": "Zipline",
+    "modelName": "P2 Zip",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002128",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6195,
+        "sha256": "128a398589c464c5c27ca5ecc6d061e6341312c2b0baad91bb5e3c8d21c3846f"
+      },
+      {
+        "id": 6009,
+        "sha256": "00a7e09a0c9fa544c7dc67311b9bc3cbe562249966ea90199d82616b2502613c"
+      },
+      {
+        "id": 5286,
+        "sha256": "661b053104e9564a3f4afcf7065dfaf4220a44670dcfbce6d77c67c373737d12"
+      },
+      {
+        "id": 5187,
+        "sha256": "7adde634791a1c7e34b3ef629e8a6de3e0f8790baa590394eff26b35c249e79c"
+      }
+    ],
+    "rule_count": 7,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002190",
+    "makeName": "BRINC",
+    "modelName": "RESPONDER",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002190",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6287,
+        "sha256": "ddfa5f559c15ed5bf6062149b72d63916cfef116e8c82560dc51669ed33bd037"
+      },
+      {
+        "id": 5277,
+        "sha256": "38f24a11702bb606c050350338f2eec5f556d32a71c79132ec98ccb29708b23c"
+      }
+    ],
+    "rule_count": 1179,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002429",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Nano+",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002429",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 5974,
+        "sha256": "4b1f24737bb8be7f89c681d02787381b51801357f0360ad99121bf6a6fc9825f"
+      },
+      {
+        "id": 5701,
+        "sha256": "595e6cf14bc9712ecf92d11bb122cc7ee2c35c93f28151aaec000b801090b45d"
+      }
+    ],
+    "rule_count": 473,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002590",
+    "makeName": "Wingtra",
+    "modelName": "WingtraRAY",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002590",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 5990,
+        "sha256": "8781e7ea0ba85b783063d0af3ffccaaa5a86a28123048607dddddbce17bb30cc"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002659",
+    "makeName": "Freefly Systems",
+    "modelName": "Alta X Gen2",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002659",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6147,
+        "sha256": "223ab06b02484b1fd6c5fb7769b3f6bec30307a72feace82fcb70dcff99f0eac"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002670",
+    "makeName": "Skydio",
+    "modelName": "R10 SDR5PC",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002670",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6196,
+        "sha256": "ca69abb1e4eeb4a6ea8515ea40414bb170955c8ba7747484d1939292f09b41ad"
+      },
+      {
+        "id": 6178,
+        "sha256": "d937902c4ffe37efa665a2a5e5c148336b9d4a533e74787a43bb858d96b83e2d"
+      }
+    ],
+    "rule_count": 56013,
+    "rejected_allocation_count": 0,
+    "decision": "deferred; individually assigned serial set exceeds bounded catalog budget"
+  },
+  {
+    "tracking": "RID000002673",
+    "makeName": "Autel Robotics",
+    "modelName": "EVO Max",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002673",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6231,
+        "sha256": "9e5287f7147ad588532759887c0bea987029fc7cd91923ae9c657d7484ec13c6"
+      },
+      {
+        "id": 6181,
+        "sha256": "aa66e81eaa410b312c75028f0fc629a832b9a1f5f9ca81af42fec5b61b92c0ac"
+      }
+    ],
+    "rule_count": 135,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  }
+]

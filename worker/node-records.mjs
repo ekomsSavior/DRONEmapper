@@ -47,7 +47,7 @@ export function identify(hex,type,rules=catalog){
  if(end>=0&&bytes.slice(end).some(x=>x!==0))return unknown;
  const serial=String.fromCharCode(...(end<0?bytes:bytes.slice(0,end)));
  if(!/^[0-9A-HJ-NP-Z]{6,20}$/.test(serial)||parseInt(serial[4],16)!==serial.length-5)return unknown;
- const found=rules.filter(r=>r.start.length===serial.length&&r.end.length===serial.length&&serial>=r.start&&serial<=r.end);
+ const found=rules.filter(r=>r.start.length===serial.length&&r.end.length===serial.length&&serial>=r.start&&serial<=r.end&&(!r.decimal_suffix||/^[0-9]+$/.test(serial.slice(-r.decimal_suffix))));
  if(!found.length)return unknown;
  if(new Set(found.map(r=>[r.manufacturer,r.model,r.device_type].join('|'))).size!==1)return {...unknown,identification:'ambiguous-catalog-match'};
  const r=found[0];
