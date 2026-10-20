@@ -8,8 +8,8 @@ android {
         applicationId 'org.churchofmalware.dronemapper.node'
         minSdk 26
         targetSdk 35
-        versionCode 12
-        versionName '0.7.1'
+        versionCode 13
+        versionName '0.7.2'
         testInstrumentationRunner 'org.churchofmalware.dronemapper.node.UsbSmokeInstrumentation'
     }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }

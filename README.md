@@ -18,7 +18,7 @@ Android 8 or newer. No root or Bluetooth dongle needed.
 
 Sharing is optional. Choose a display name or remain **Anonymous**; email and full MAC addresses stay off the public map. [More app instructions and build steps](android-node/README.md).
 
-**Updating to 0.7.1:** download the new APK from the same page and install it over
+**Updating to 0.7.2:** download the new APK from the same page and install it over
 your existing app—no uninstall. Pairing and settings are preserved. In **Phone
 capabilities**, check the version. USB Wi-Fi: **USB Wi-Fi adapter → Connect → Allow**.
 HackRF: **USB SDR · HackRF → Choose receiver → Connect → Allow** for local RF spectrum.
@@ -64,6 +64,7 @@ Map visitors need only a browser. Scanner reports add Remote ID positions and op
 ## Where the data comes from
 
 - [DEPLOY](https://registry.deploy.report/map): documented drone and robot deployments.
+- [AV Map](https://github.com/path-avmap/av-map-data): driverless service areas and dated ended services.
 - [ADSB.lol](https://www.adsb.lol/docs/open-data/api/): identified unmanned aircraft positions.
 - [NOAA](https://www.pmel.noaa.gov/usv-hurricane/): uncrewed ocean vehicle measurements.
 - [EFF Atlas](https://www.atlasofsurveillance.org/atlas): documented public-safety drone programs.
@@ -80,3 +81,5 @@ Website: **[AGPL-3.0-or-later](LICENSE)**. Android app: **[GPL-2.0-only](android
 <img width="624" height="341" alt="Screenshot_20261015_230856" src="https://github.com/user-attachments/assets/283dcdc7-a222-4e89-aad2-925b777a795b" />
 
 Model recognition now covers 106 reviewed FAA aircraft/module combinations. Historical map enrichment adds 22 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).
+
+[Vehicle data, recurring feeds and HackRF connection notes](docs/source-reception-review.md).

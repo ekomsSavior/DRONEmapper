@@ -9,13 +9,17 @@ LIFECYCLE={'service_testing','service_announced','service_created'}
 FIELDS=['date','event_type','company','city','geometry_file','vehicles','platform','fares','direct_booking','service_model','supervision','access','fleet_partner','expected_launch','company_link','booking_platform_link','source_url','notes']
 GENERIC={'north america','south america','europe','asia','africa','global','worldwide','various','multiple locations'}
 
-def replay(text, day):
+def eligible(state):
+    return state['status']=='service_created' and state.get('supervision')=='Autonomous' and state.get('access') in ('Public','Waitlist') and state['city'].lower() not in GENERIC
+
+def replay(text, day, include_history=False):
     if len(text)>2_000_000: raise ValueError('Oversized AV Map CSV')
     reader=csv.DictReader(io.StringIO(text.lstrip('\ufeff')))
     if reader.fieldnames!=FIELDS: raise ValueError('Changed AV Map schema')
     rows=list(reader)
     if len(rows)>10000: raise ValueError('Too many AV Map rows')
     states={}
+    history={}
     for row in sorted(rows,key=lambda r:r.get('date','')):
         if None in row or any(v is None for v in row.values()):raise ValueError('Malformed AV Map row')
         row={k:v.strip() for k,v in row.items()}
@@ -31,13 +35,21 @@ def replay(text, day):
             states[key]={**prior,**{k:v for k,v in row.items() if v},'status':typ,'last_event':date}
         elif key in states:
             state=states[key]
-            if typ=='service_ended':state['status']=typ
+            if typ=='service_ended':
+                if eligible(state) and state.get('driverless_since'):
+                    history[key+'|'+state['driverless_since']+'|'+date]={
+                        **state,'status':'service_ended','ended_at':date,'last_event':date,
+                        'source_url':row['source_url'] or state.get('source_url','')}
+                state['status']=typ
             elif typ in UPDATES and row[UPDATES[typ]]:
                 # Crucially, unrelated nonempty cells do not replace fields.
                 state[UPDATES[typ]]=row[UPDATES[typ]]
             else:continue
             state['last_event']=date
-    return [s for s in states.values() if s['status']=='service_created' and s.get('supervision')=='Autonomous' and s.get('access') in ('Public','Waitlist') and s['city'].lower() not in GENERIC]
+        state=states.get(key)
+        if state is not None:
+            state['driverless_since']=(state.get('driverless_since') or date) if eligible(state) else None
+    return [s for s in states.values() if eligible(s)]+(list(history.values()) if include_history else [])
 
 def geometry_files(states):
     return sorted({s['geometry_file'] for s in states if re.fullmatch(r'[a-zA-Z0-9_-]+\.geojson',s.get('geometry_file',''))})
@@ -76,11 +88,17 @@ def position(value, geometries):
 
 def normalize(text,geometries,day):
     records=[]
-    for s in replay(text,day):
+    for s in replay(text,day,True):
         p=position(s.get('geometry_file',''),geometries)
         if not p:continue
         company=s['company'];city=s['city']
-        records.append({'id':'avmap:'+quote(company+'|'+city,safe="-_.!~*'()"),'record_type':'activity','kind':'autonomous-vehicle','domain':'ground','name':company+' — driverless service','model':None,'manufacturer':None,'operator':company,'purpose':'unknown','latitude':p[1],'longitude':p[0],'place':city,'status':'documented-program','observed_at':None,'record_dates':s['last_event'],'precision':p[2],'source':'avmap','source_url':URL,'evidence_url':'https://avmap.io/','attribution':'AV Map contributors / Jackson Lester','license':'MIT','license_url':'https://github.com/path-avmap/av-map-data/blob/main/LICENSE','verification':'Documented driverless service area; continued operation unverified'})
+        ended=s['status']=='service_ended'
+        key=company+'|'+city+('|' + s['driverless_since']+'|'+s['ended_at'] if ended else '')
+        record={'id':('avmap-history:' if ended else 'avmap:')+quote(key,safe="-_.!~*'()"),'record_type':'historical' if ended else 'activity','kind':'autonomous-vehicle','domain':'ground','name':company+(' — ended driverless service' if ended else ' — driverless service'),'model':None,'manufacturer':None,'operator':company,'purpose':'unknown','latitude':p[1],'longitude':p[0],'place':city,'status':'historical-service' if ended else 'documented-program','observed_at':None,'record_dates':s['driverless_since']+' — '+s['ended_at'] if ended else s['last_event'],'precision':p[2],'source':'avmap','source_url':URL,'evidence_url':'https://avmap.io/','attribution':'AV Map contributors / Jackson Lester','license':'MIT','license_url':'https://github.com/path-avmap/av-map-data/blob/main/LICENSE','verification':'Previously documented driverless service; end recorded by AV Map' if ended else 'Documented driverless service area; continued operation unverified'}
+        if ended:
+            record.update(service_started=s['driverless_since'],service_ended=s['ended_at'],summary='AV Map records the end of this previously launched driverless service.')
+            if s.get('source_url','').startswith('https://'):record['evidence_url']=s['source_url']
+        records.append(record)
     return records
 
 
@@ -90,7 +108,7 @@ def fetch_avmap():
     from data_sources import fetch_text, fetch_json
     day = datetime.now(timezone.utc).date().isoformat()
     text = fetch_text(URL, 2_000_000)
-    files = geometry_files(replay(text, day))
+    files = geometry_files(replay(text, day, True))
     if len(files) > 50:
         raise ValueError('AV Map geometry limit')
     with ThreadPoolExecutor(max_workers=3) as pool:

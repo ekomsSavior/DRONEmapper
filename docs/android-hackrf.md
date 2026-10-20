@@ -1,6 +1,6 @@
 # HackRF on Android
 
-Android 0.7.1 includes the **USB SDR · HackRF** connection and local RF spectrum
+Android 0.7.2 includes the **USB SDR · HackRF** connection and local RF spectrum
 introduced in 0.6.0, plus saved wardrives for Wi-Fi and Remote ID observations.
 Built by **Church of Malware / saviorSEC**. No root is required.
 
@@ -28,8 +28,7 @@ Bluetooth continue independently, including their existing opt-in reports.
 
 Version 0.5.1's **USB Wi-Fi adapter** menu cannot open HackRF. Its “Permission:
 not granted” report is a consequence of having no SDR Connect path; it is not
-proof of a broken cable. In 0.6.0 the Wi-Fi chooser directs HackRF users to the SDR
-menu. New or unsupported board IDs fail with a specific message instead of
+proof of a broken cable. In 0.7.2 the Wi-Fi chooser offers **Open SDR**, which opens the frequency and receiver controls directly. A PortaPack exposing its Mayhem serial console gets a mode-change instruction instead of a missing-driver message. New or unsupported board IDs fail with a specific message instead of
 starting an unverified configuration.
 
 ## Test checklist
@@ -56,3 +55,5 @@ an instrumented Moto/Pixel reception check remains pending.
 
 The Android receive driver is an independent implementation of the documented
 USB command layout. No upstream libhackrf binary is bundled.
+
+PortaPack setup: choose **HackRF** (called **RF** in some versions), then **Yes** on the device. Return to the app and tap **Refresh**. This uses the existing firmware; it does not install or flash anything. See the [Mayhem mode guide](https://github.com/portapack-mayhem/mayhem-firmware/wiki/HackRF).

@@ -12,21 +12,30 @@ export function parseCSV(text){
  if(rows.length>10000)throw Error('Too many AV Map rows');
  return rows.map(r=>{if(r.length!==FIELDS.length)throw Error('Malformed AV Map row');return Object.fromEntries(FIELDS.map((k,i)=>[k,r[i].trim()]));});
 }
-export function replay(text,day){
- const states=new Map();
+const eligible=s=>s.status==='service_created'&&s.supervision==='Autonomous'&&['Public','Waitlist'].includes(s.access)&&!GENERIC.has(s.city.toLowerCase());
+export function replay(text,day,includeHistory=false){
+ const states=new Map(),history=new Map();
  for(const row of parseCSV(text).sort((a,b)=>a.date.localeCompare(b.date))){
   const date=row.date;if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(Date.parse(date))||new Date(date).toISOString().slice(0,10)!==date||date>day||!row.company||!row.city)continue;
   const key=row.company+'|'+row.city,typ=row.event_type;
   if(['service_testing','service_announced','service_created'].includes(typ))states.set(key,{...(states.get(key)||{}),...Object.fromEntries(Object.entries(row).filter(([,v])=>v)),status:typ,last_event:date});
   else if(states.has(key)){
    const s=states.get(key);
-   if(typ==='service_ended')s.status=typ;
+   if(typ==='service_ended'){
+    if(eligible(s)&&s.driverless_since){
+     const key=row.company+'|'+row.city+'|'+s.driverless_since+'|'+date;
+     history.set(key,{...s,status:'service_ended',ended_at:date,last_event:date,source_url:row.source_url||s.source_url});
+    }
+    s.status=typ;
+   }
    else if(Object.hasOwn(UPDATES,typ)&&row[UPDATES[typ]])s[UPDATES[typ]]=row[UPDATES[typ]];
    else continue;
    s.last_event=date;
   }
+  const state=states.get(key);
+  if(state)state.driverless_since=eligible(state)?state.driverless_since||date:null;
  }
- return [...states.values()].filter(s=>s.status==='service_created'&&s.supervision==='Autonomous'&&['Public','Waitlist'].includes(s.access)&&!GENERIC.has(s.city.toLowerCase()));
+ return [...states.values()].filter(eligible).concat(includeHistory?[...history.values()]:[]);
 }
 export const geometryFiles=states=>[...new Set(states.map(s=>s.geometry_file).filter(v=>/^[a-zA-Z0-9_-]+\.geojson$/.test(v||'')))].sort();
 export function position(value,geometries){
@@ -50,11 +59,15 @@ export function position(value,geometries){
  return [(xmin+xmax)/2,(ymin+ymax)/2,'Service-area bounding-box center; not a vehicle position'];
 }
 export function normalize(text,geometries,day){
- return replay(text,day).flatMap(s=>{const p=position(s.geometry_file||'',geometries);if(!p)return [];return [{id:'avmap:'+encodeURIComponent(s.company+'|'+s.city),record_type:'activity',kind:'autonomous-vehicle',domain:'ground',name:s.company+' — driverless service',model:null,manufacturer:null,operator:s.company,purpose:'unknown',latitude:p[1],longitude:p[0],place:s.city,status:'documented-program',observed_at:null,record_dates:s.last_event,precision:p[2],source:'avmap',source_url:AVMAP_URL,evidence_url:'https://avmap.io/',attribution:'AV Map contributors / Jackson Lester',license:'MIT',license_url:'https://github.com/path-avmap/av-map-data/blob/main/LICENSE',verification:'Documented driverless service area; continued operation unverified'}];});
+ return replay(text,day,true).flatMap(s=>{const p=position(s.geometry_file||'',geometries);if(!p)return [];
+ const ended=s.status==='service_ended',key=s.company+'|'+s.city+(ended?'|'+s.driverless_since+'|'+s.ended_at:'');
+ const record={id:(ended?'avmap-history:':'avmap:')+encodeURIComponent(key),record_type:ended?'historical':'activity',kind:'autonomous-vehicle',domain:'ground',name:s.company+(ended?' — ended driverless service':' — driverless service'),model:null,manufacturer:null,operator:s.company,purpose:'unknown',latitude:p[1],longitude:p[0],place:s.city,status:ended?'historical-service':'documented-program',observed_at:null,record_dates:ended?s.driverless_since+' — '+s.ended_at:s.last_event,precision:p[2],source:'avmap',source_url:AVMAP_URL,evidence_url:'https://avmap.io/',attribution:'AV Map contributors / Jackson Lester',license:'MIT',license_url:'https://github.com/path-avmap/av-map-data/blob/main/LICENSE',verification:ended?'Previously documented driverless service; end recorded by AV Map':'Documented driverless service area; continued operation unverified'};
+ if(ended){record.service_started=s.driverless_since;record.service_ended=s.ended_at;record.summary='AV Map records the end of this previously launched driverless service.';if(/^https:\/\//.test(s.source_url||''))record.evidence_url=s.source_url;}
+ return [record];});
 }
 
 export async function fetchAVMap(fetchText,fetchJSON,now=Date.now()/1000){
- const day=new Date(now*1000).toISOString().slice(0,10),text=await fetchText(AVMAP_URL,2000000),files=geometryFiles(replay(text,day));
+ const day=new Date(now*1000).toISOString().slice(0,10),text=await fetchText(AVMAP_URL,2000000),files=geometryFiles(replay(text,day,true));
  if(files.length>50)throw Error('AV Map geometry limit');
  const geometries={};let next=0;
  await Promise.all(Array.from({length:3},async()=>{while(next<files.length){const name=files[next++];geometries[name]=await fetchJSON('https://raw.githubusercontent.com/path-avmap/av-map-data/main/geometries/'+name,2000000);}}));

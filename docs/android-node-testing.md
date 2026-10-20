@@ -1,3 +1,5 @@
+**Connection update: Android 0.7.2, version code 13.** USB UI tests cover the direct HackRF handoff, Android permission flow, Mayhem serial-mode guidance and re-enumeration as a HackRF receiver on API 28 and 35. No new physical HackRF reception test is claimed.
+
 # Phone acceptance test
 
 **Catalog update: Android 0.7.1, version code 12.** Automated model tests cover newly reviewed FAA serial allocations, gaps and module handling. A new physical reception test has not been performed for this catalog-only update.

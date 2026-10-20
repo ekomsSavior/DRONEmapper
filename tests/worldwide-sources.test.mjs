@@ -19,6 +19,27 @@ test('service replay changes named field only and rejects ended, announced and s
  for(const change of [{event_type:'service_announced'},{event_type:'service_testing'},{supervision:'Safety Driver'},{supervision:'Attendant'},{date:'2028-01-01'}])assert.deepEqual(replay(csv([{...create,...change}]),'2026-10-15'),[]);
  assert.throws(()=>parseCSV('different,schema\nx,y'));assert.equal(parseCSV(csv([{city:'Area, "quoted"\nsecond line'}]))[0].city,'Area, "quoted"\nsecond line');
 });
+test('ended driverless services keep dates and geometry and survive later reopening',()=>{
+ const launch={event_type:'service_created',supervision:'Autonomous',access:'Public',geometry_file:'10,20'};
+ const end={event_type:'service_ended',date:'2026-03-01',geometry_file:'80,30',source_url:'https://example.org/closure'};
+ const rows=[launch,end,end,{...launch,date:'2026-04-01',geometry_file:'30,40'}];
+ const output=normalize(csv(rows),{},'2026-10-20'),historical=output.filter(r=>r.record_type==='historical');
+ assert.equal(output.length,2);assert.equal(historical.length,1);
+ const [h]=historical;assert.equal(h.longitude,10);assert.equal(h.status,'historical-service');
+ assert.equal(h.observed_at,null);assert.equal(h.record_dates,'2026-01-01 — 2026-03-01');
+ assert.equal(h.evidence_url,'https://example.org/closure');
+ assert.deepEqual(normalize(csv(rows),{},'2026-12-20'),output);
+ assert.equal(normalize(csv([launch,end]),{},'2026-02-01')[0].record_type,'activity');
+ for(const change of [{event_type:'service_announced'},{event_type:'service_testing'},{supervision:'Safety Driver'},{access:'Private'}])
+  assert.deepEqual(normalize(csv([{...launch,...change},end]),{},'2026-10-20'),[]);
+});
+test('history starts when the launched service became driverless, and cannot invent a launch',()=>{
+ const launch={event_type:'service_created',supervision:'Safety Driver',access:'Public',geometry_file:'10,20'};
+ const end={event_type:'service_ended',date:'2026-03-01'};
+ assert.deepEqual(normalize(csv([end]),{},'2026-10-20'),[]);
+ const [h]=normalize(csv([launch,{event_type:'supervision_updated',date:'2026-02-01',supervision:'Autonomous'},end]),{},'2026-10-20');
+ assert.equal(h.service_started,'2026-02-01');assert.equal(h.service_ended,'2026-03-01');
+});
 test('glider discovery ignores web statistics; shared WMO keeps newest position',()=>{
  assert.deepEqual(votoDatasets({table:{columnNames:['datasetID','title','maxTime'],rows:[['locations','','2026-10-15T23:00:00Z'],['nrt_SEA055_M109','','2026-10-15T23:00:00Z']]}},NOW),['nrt_SEA055_M109']);
  assert.ok(votoPositionUrl('nrt_SEA055_M109').includes('latitude_qc=1&longitude_qc=1'));

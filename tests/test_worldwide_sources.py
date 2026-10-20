@@ -57,6 +57,30 @@ class WorldwideSources(unittest.TestCase):
         b = {'id':'voto:6801674','wmo_id':'6801674','kind':'underwater','observed_at':NOW-300}
         self.assertEqual(deduplicate_glider_positions([a,b]), [b])
 
+    def test_ended_service_history_survives_reopening_without_changing_original_area(self):
+        launch={'event_type':'service_created','supervision':'Autonomous','access':'Public','geometry_file':'10,20'}
+        end={'event_type':'service_ended','date':'2026-03-01','geometry_file':'80,30','source_url':'https://example.org/closure'}
+        rows=[launch,end,end,{**launch,'date':'2026-04-01','geometry_file':'30,40'}]
+        output=normalize(events(rows),{},'2026-10-20')
+        historical=[r for r in output if r['record_type']=='historical']
+        self.assertEqual(len(output),2);self.assertEqual(len(historical),1)
+        h=historical[0]
+        self.assertEqual(h['longitude'],10);self.assertEqual(h['status'],'historical-service')
+        self.assertIsNone(h['observed_at']);self.assertEqual(h['record_dates'],'2026-01-01 — 2026-03-01')
+        self.assertEqual(h['evidence_url'],'https://example.org/closure')
+        self.assertEqual(normalize(events(rows),{},'2026-12-20'),output)
+        self.assertEqual(normalize(events([launch,end]),{},'2026-02-01')[0]['record_type'],'activity')
+        for change in [{'event_type':'service_announced'},{'event_type':'service_testing'},{'supervision':'Safety Driver'},{'access':'Private'}]:
+            self.assertEqual(normalize(events([{**launch,**change},end]),{},'2026-10-20'),[])
+
+    def test_history_needs_a_launch_and_starts_at_driverless_transition(self):
+        launch={'event_type':'service_created','supervision':'Safety Driver','access':'Public','geometry_file':'10,20'}
+        end={'event_type':'service_ended','date':'2026-03-01'}
+        self.assertEqual(normalize(events([end]),{},'2026-10-20'),[])
+        h=normalize(events([launch,{'event_type':'supervision_updated','date':'2026-02-01','supervision':'Autonomous'},end]),{},'2026-10-20')[0]
+        self.assertEqual(h['service_started'],'2026-02-01')
+        self.assertEqual(h['service_ended'],'2026-03-01')
+
     def test_glider_null_and_stale_reports_are_not_moved(self):
         meta = {'dataset_id':'nrt_SEA055_M109','wmo_id':'6801674','glider_serial':'SEA055','glider_name':'Validation'}
         t = {'table': {'columnNames':['time','latitude','longitude'], 'columnUnits':['UTC','degrees_north','degrees_east'], 'rows': [['2026-10-15T23:00:00Z',60,19],['2026-10-15T23:30:00Z',None,None],['2026-10-01T23:00:00Z',60,19]]}}
