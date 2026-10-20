@@ -93,12 +93,13 @@ environment variables, as described in the [MQTT setup](https://github.com/ekoms
 
 ## Validation
 
-The shared suite covers receiver shutdown, Windows binary-IQ handling, macOS
-UUID association, monitor-mode checks, account consent and local dashboard
-boundaries. Windows/macOS-specific paths are exercised with isolated fixtures
-on Linux; the repository includes a native three-OS CI workflow. No native
-Windows/macOS hardware reception has been verified yet. Android HackRF testing
-is separate and does not establish desktop compatibility.
+The shared suite passes on native Windows, macOS and Linux runners
+([verified CI run](https://github.com/ekomsSavior/DRONEmapper/actions/runs/39374036922)).
+It covers receiver shutdown, Windows binary-IQ handling and account-directory
+permissions, macOS UUID association, monitor-mode checks, account consent and
+local dashboard boundaries. Radio inputs in these checks use isolated fixtures.
+Native Windows/macOS hardware reception has not been verified yet. Android
+HackRF testing is separate and does not establish desktop compatibility.
 
 ## References
 
