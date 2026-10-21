@@ -22,3 +22,19 @@ test('saved scanner uploads retain dates, deduplicate after pruning, preserve ne
  await network.revokeAccountNode('archive-owner',node_handle);assert.equal((await send([old])).status,401);
  assert.equal((await network.snapshot(0)).signals.length,0);
 });
+
+test('saved robot reports preserve age and coarse areas without becoming live positions',async t=>{
+ const h=await authHarness();t.after(()=>h.mf.dispose());
+ const env=await h.mf.getBindings(),network=env.NODES.getByName('community');
+ const nodeId=crypto.randomUUID(),{node_key}=await network.connectAccount('robot-archive',nodeId,'Offline phone',crypto.randomUUID());
+ const now=Date.now()/1000,stamp=now-20*86400;
+ const event={event_id:crypto.randomUUID(),observation_type:'ble-robot-candidate',candidate_id:crypto.randomUUID(),signature:'cyberdog-ble-v1',latitude:37.125,longitude:-122.125,location_grid_degrees:.01,observed_at:stamp,received_at:stamp,rssi_dbm:-55};
+ const send=()=>h.mf.dispatchFetch('http://localhost/v1/observations/archive',{method:'POST',headers:{Authorization:'Bearer '+node_key,'Content-Type':'application/json'},body:JSON.stringify({schema_version:1,node_id:nodeId,observations:[event]})});
+ let response=await send();assert.equal(response.status,200,await response.clone().text());assert.equal((await response.json()).accepted,1);
+ assert.equal((await (await send()).json()).duplicates,1);
+ const snap=await network.snapshot(0);assert.equal(snap.tracks.length,0);assert.equal(snap.nodes.active_nodes,0);
+ assert.equal(snap.signals.length,1);assert.equal(snap.signals[0].kind,'possible-robot');
+ assert.equal(snap.signals[0].ghost,true);assert.equal(snap.signals[0].observed_at,stamp);
+ assert.equal(snap.signals[0].manufacturer,null);assert.equal(snap.signals[0].position_basis,'receiver-area');
+ assert.equal(JSON.stringify(snap).includes(event.candidate_id),false);
+});

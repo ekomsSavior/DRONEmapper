@@ -37,7 +37,7 @@ test('all scanner catalogs contain the same rules and decimal constraints',()=>{
 });
 test('historical milestones stay historical through the public adapter',async()=>{
  const {records}=await adapters.milestones();
- assert.equal(records.length,26);
+ assert.equal(records.length,40);
  for(const source of records){
   const r=publicRecord(source);
   assert.equal(r.record_type,'historical');
@@ -46,4 +46,23 @@ test('historical milestones stay historical through the public adapter',async()=
   assert.equal(r.evidence_url,undefined);
   assert.ok(r.record_dates);
  }
+});
+
+test('October 21 declarations retain sparse allocations instead of prefix guesses',()=>{
+ assert.equal(identify(hex('18136H6E120'),1).model,'Carrier H6');
+ assert.equal(identify(hex('18136H8E025'),1).model,'Carrier H8E');
+ assert.equal(identify(hex('1863FPEG821800000000'),1).model,'P100');
+ assert.equal(identify(hex('1863FPEG821900000000'),1).model,'P100 Pro');
+ assert.equal(identify(hex('17868SN000714'),1).model,'MK27-2');
+ assert.equal(identify(hex('178650100E'),1).model,'MK30');
+ assert.equal(identify(hex('1863FPEG822300000000'),1).model,'P150');
+ assert.equal(identify(hex('1862CE1G125130174'),1).model,'Evo');
+ assert.equal(identify(hex('1863F242000000000000'),1).model,'P60');
+ assert.equal(identify(hex('2095FH05000000000000'),1).model,'ZZ-H-1-003');
+ assert.equal(identify(hex('2095FH04000000000000'),1).model,'ZZ-H-1-004');
+ assert.equal(identify(hex('1863F251000000000000'),1).model,'P150 Max');
+ assert.equal(identify(hex('17868SN000715'),1).model,null);
+ assert.equal(identify(hex('17868SN000739'),1).model,null);
+ assert.equal(identify(hex('18136H6E118'),1).model,null);
+ assert.equal(identify(hex('1862CE1G125130173'),1).model,null);
 });

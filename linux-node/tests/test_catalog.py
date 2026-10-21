@@ -35,3 +35,23 @@ class CatalogTest(unittest.TestCase):
         # Accepted M2 and M2 Block 2 declarations overlap: never choose one.
         self.assertEqual(identify('18106M22021'), {})
         self.assertEqual(identify('1634FS0TEN2600A0271A'), {})
+
+    def test_october_21_declarations_and_sparse_allocations(self):
+        catalog=Catalog()
+        def identify(s): return catalog.identify(s.encode().hex().ljust(40,'0'),1)
+        self.assertEqual(identify('18136H6E120')['model'],'Carrier H6')
+        self.assertEqual(identify('18136H8E025')['model'],'Carrier H8E')
+        self.assertEqual(identify('1863FPEG821800000000')['model'],'P100')
+        self.assertEqual(identify('1863FPEG821900000000')['model'],'P100 Pro')
+        self.assertEqual(identify('17868SN000714')['model'],'MK27-2')
+        self.assertEqual(identify('178650100E')['model'],'MK30')
+        self.assertEqual(identify('1863FPEG822300000000')['model'],'P150')
+        self.assertEqual(identify('1862CE1G125130174')['model'],'Evo')
+        self.assertEqual(identify('1863F242000000000000')['model'],'P60')
+        self.assertEqual(identify('2095FH05000000000000')['model'],'ZZ-H-1-003')
+        self.assertEqual(identify('2095FH04000000000000')['model'],'ZZ-H-1-004')
+        self.assertEqual(identify('1863F251000000000000')['model'],'P150 Max')
+        self.assertEqual(identify('17868SN000715'),{})
+        self.assertEqual(identify('17868SN000739'),{})
+        self.assertEqual(identify('18136H6E118'),{})
+        self.assertEqual(identify('1862CE1G125130173'),{})

@@ -13,6 +13,7 @@ import sys
 import tempfile
 import threading
 import uuid
+from .robot_signals import robot_signature, CYBERDOG_UUID
 from .decoders import adsb_records, read_json
 from .protocol import PcapStream, radiotap, wifi_frame, spectrum_row, finite, MAC
 from .storage import BANDS
@@ -96,9 +97,7 @@ def wifi(interface,stop,emit,status):
                 emit({**item,**meta,'type':'candidate' if 'signature' in item else 'rid','source':'wifi:'+interface,'received_at':stamp})
 
 
-def ble_event(address, data, rssi, adapter):
-    if not data or len(data)<27 or data[0]!=13:
-        return None
+def ble_identity(address):
     identity={}
     if MAC.fullmatch(address):
         identity['mac']=address.upper()
@@ -109,6 +108,13 @@ def ble_event(address, data, rssi, adapter):
             return None
     else:
         return None
+    return identity
+
+
+def ble_event(address, data, rssi, adapter):
+    identity=ble_identity(address)
+    if not identity or not data or len(data)<27 or data[0]!=13:
+        return None
     return {'type':'rid','source':'ble:'+adapter,**identity,'payload':bytes(data[2:]),
             'protocol':'ble','received_at':time.time(),'rssi_dbm':rssi}
 
@@ -117,12 +123,12 @@ def ble_options(adapter):
     if system()=='Linux':
         if adapter=='default':
             adapter='hci0'
-        return {'scanning_mode':'passive','bluez':{'adapter':adapter,'or_patterns':[(0,0x16,b'\xfa\xff')]}}
+        return {'scanning_mode':'passive','bluez':{'adapter':adapter,'or_patterns':[(0,0x16,b'\xfa\xff'),(0,0x02,b'\x20\xc4'),(0,0x03,b'\x20\xc4'),(0,0x09,'铁蛋'.encode())]}}
     if adapter!='default':
         raise ValueError('Choose System Bluetooth on Windows / macOS')
     if system()=='Darwin':
         # CoreBluetooth has no passive mode and exposes per-host UUIDs, not radio MACs.
-        return {'scanning_mode':'active','service_uuids':['0000fffa-0000-1000-8000-00805f9b34fb']}
+        return {'scanning_mode':'active','service_uuids':['0000fffa-0000-1000-8000-00805f9b34fb',CYBERDOG_UUID]}
     return {'scanning_mode':'passive'}
 
 
@@ -136,10 +142,19 @@ def ble(adapter,stop,emit,status):
         event=ble_event(device.address,data,advertisement.rssi,adapter)
         if event:
             emit(event)
+        signature = robot_signature(advertisement.local_name, advertisement.service_uuids,
+                                    advertisement.manufacturer_data)
+        if signature:
+            # Reuse platform address handling without interpreting this as Remote ID.
+            identity = ble_identity(device.address)
+            if identity:
+                emit({**identity,'type':'robot-candidate','source':'ble:'+adapter,
+                      'received_at':time.time(),'rssi_dbm':advertisement.rssi,'name':advertisement.local_name,
+                      'signature':signature})
     async def listen():
         scanner=BleakScanner(found,**ble_options(adapter))
         async with scanner:
-            status('Listening · Remote ID · '+('CoreBluetooth discovery' if system()=='Darwin' else 'passive Bluetooth advertisements'))
+            status('Listening · Remote ID / robot advertisements · '+('CoreBluetooth discovery' if system()=='Darwin' else 'passive Bluetooth advertisements'))
             while not stop.is_set():
                 await asyncio.sleep(.25)
     asyncio.run(listen())

@@ -4,7 +4,7 @@ Turn a Windows, macOS or Linux computer into a scanner node with a local radar, 
 
 ## Start
 
-[Download Desktop 0.4.0 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.5.0 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
 
 **Windows:** install [Python 3.10+](https://www.python.org/downloads/windows/), extract the source, then double-click `Start-DRONEmapper.cmd` in this folder.
 
@@ -53,4 +53,6 @@ The radar uses reported GPS for direction/distance. In **Positions**, choose a r
 
 Code: **AGPL-3.0-or-later**. Data and optional dependencies retain their own terms; see [NOTICE](NOTICE.txt). Hardware validation is tracked in the setup guide.
 
-Model recognition now covers 106 reviewed FAA aircraft/module combinations. Historical map enrichment adds 22 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).
+Model recognition now covers 141 reviewed FAA aircraft/module combinations. Historical map enrichment adds 40 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).
+
+**Robot signals:** matching CyberDog Bluetooth advertisements appear as possible robot dogs. Optional **Share approximate robot signal areas** uses your rounded station area. [Support, protocol and testing](../docs/robot-signals.md).

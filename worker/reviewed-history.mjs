@@ -24,7 +24,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.zipline.com/newsroom/zipline-ghana-remote-communities-within-reach",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Zipline — Kisumu medical delivery program",
@@ -50,7 +50,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.zipline.com/newsroom/de-stigmatizing-hiv-aids-care--drone-delivery",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Zipline — Kaduna State delivery launch",
@@ -76,7 +76,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.zipline.com/newsroom/creating-an-energy-infrastructure-in-nigeria",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Zipline / Sora-iina — Gotō delivery launch",
@@ -102,7 +102,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.globenewswire.com/news-release/2022/04/21/2426108/0/en/Toyota-Tsusho-Corporation-Autonomous-Deliveries-Launched-in-Japan-Powered-By-Zipline-s-Instant-Logistics-System.html",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Starship / Bolt — Tallinn grocery delivery launch",
@@ -128,7 +128,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.starship.xyz/wp-content/uploads/2024/11/Starship-x-Bolt_press-release.pdf",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Zoox — Las Vegas public service launch",
@@ -154,7 +154,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://zoox.com/journal/las-vegas",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Waymo — Denver first public riders",
@@ -180,7 +180,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Waymo — San Diego first public riders",
@@ -206,7 +206,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Waymo — Tampa first public riders",
@@ -232,7 +232,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Gatik — Dallas–Fort Worth driverless deliveries",
@@ -258,7 +258,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Gatik — Phoenix driverless deliveries",
@@ -284,7 +284,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Gatik — Northwest Arkansas driverless deliveries",
@@ -310,7 +310,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Pony.ai — Guangzhou Gen-7 driverless launch",
@@ -336,7 +336,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-kicks-fully-driverless-commercial-services-gen-7",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Pony.ai — Shenzhen Gen-7 driverless launch",
@@ -362,7 +362,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-kicks-fully-driverless-commercial-services-gen-7",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Pony.ai — Beijing Gen-7 driverless launch",
@@ -388,7 +388,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-kicks-fully-driverless-commercial-services-gen-7",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "WeRide — Abu Dhabi downtown service expansion",
@@ -414,7 +414,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.weride.ai/news-releases/news-release-details/weride-and-uber-begin-first-commercial-robotaxi-service-downtown",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "WeRide / beti — Valence shuttle inauguration",
@@ -440,7 +440,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://zh.weride.ai/posts/nrd2478rd1a0x411ovtzzog6",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "EHang — Bangkok autonomous flight trials",
@@ -466,7 +466,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.ehang.com/news/1293.html",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Einride — Morgongåva autonomous freight",
@@ -492,7 +492,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.catena.se/en/about-us/press-room/articles/europes-first-daily-autonomous-freight-operations-on-catena-s-property",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "ACSL — Toyooka parcel delivery trial",
@@ -518,7 +518,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.acsl.co.jp/admin/wp-content/uploads/2024/06/20240628_PF4-CAT3%E5%9E%8B%E5%BC%8F%E8%AA%8D%E8%A8%BC%E7%94%B3%E8%AB%8B_EN_fix.pdf",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "XAG — Guayaquil agricultural drone activity",
@@ -544,7 +544,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.xa.com/en/news/official/xag/191",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Flyability — Johannesburg disaster inspection",
@@ -570,7 +570,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.flyability.com/casestudies/johannesburg-street-explosion-elios-3",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "Singapore Police — Changi autonomous patrol robots",
@@ -596,7 +596,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.police.gov.sg/media-hub/news/2023/20230512_police_workplan_seminar_and_exhibition_2023_a_future-ready_force_for_the_nation",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "ANYmal — Péry autonomous inspections",
@@ -622,7 +622,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/vigier-ciment-autonomous-inspection-case-study/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "ANYmal / Vale — Cauê inspection report",
@@ -648,7 +648,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/anymal-helps-vale-to-prioritize-people-in-mining/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
   },
   {
     "name": "ANYmal — Slough inspection demonstration",
@@ -674,6 +674,370 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/kanadevia-inova-and-anybotics-partner-to-transform-waste-to-x-operations/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-20"
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "ANYmal / Northern Lights — inspection deployment",
+    "manufacturer": "ANYbotics",
+    "model": "ANYmal D",
+    "operator": "Equinor",
+    "kind": "robot-dog",
+    "domain": "ground",
+    "purpose": "unknown",
+    "place": "Øygarden region, Norway",
+    "latitude": 60.55,
+    "longitude": 4.9,
+    "summary": "Manufacturer reported autonomous inspection missions at Northern Lights. Date is the report; continued operation is not inferred.",
+    "evidence_url": "https://www.anybotics.com/news/equinor-deploys-anymal-at-northern-lights-ccs-facility/",
+    "id": "milestone:anymal-northern-lights-report-2025",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2025,
+    "record_dates": "2025-06-23",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.anybotics.com/news/equinor-deploys-anymal-at-northern-lights-ccs-facility/",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "ANYmal / Onkalo — underground inspection trial",
+    "manufacturer": "ANYbotics",
+    "model": "ANYmal",
+    "operator": "Posiva / European Commission",
+    "kind": "robot-dog",
+    "domain": "ground",
+    "purpose": "unknown",
+    "place": "Eurajoki region, Finland",
+    "latitude": 61.2,
+    "longitude": 21.73,
+    "summary": "Manufacturer reported underground autonomous inspection trials at Onkalo. Date is the published report, not a deployment start.",
+    "evidence_url": "https://www.anybotics.com/news/autonomous-inspection-for-enhanced-nuclear-safety-at-onkalo/",
+    "id": "milestone:anymal-onkalo-report-2024",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2024,
+    "record_dates": "2024-02-19",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.anybotics.com/news/autonomous-inspection-for-enhanced-nuclear-safety-at-onkalo/",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "ANYmal X / BASF — inspection evaluation",
+    "manufacturer": "ANYbotics",
+    "model": "ANYmal X",
+    "operator": "BASF",
+    "kind": "robot-dog",
+    "domain": "ground",
+    "purpose": "unknown",
+    "place": "Ludwigshafen, Germany",
+    "latitude": 49.48,
+    "longitude": 8.44,
+    "summary": "Manufacturer reported completed inspection tests in hazardous process areas at Ludwigshafen. Date is the published report.",
+    "evidence_url": "https://www.anybotics.com/news/anymal-x-basf-ludwigshafen-deployment/",
+    "id": "milestone:anymal-basf-report-2023",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2023,
+    "record_dates": "2023-08-04",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.anybotics.com/news/anymal-x-basf-ludwigshafen-deployment/",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "ANYmal X / Equinor — five-week test",
+    "manufacturer": "ANYbotics",
+    "model": "ANYmal X",
+    "operator": "Equinor",
+    "kind": "robot-dog",
+    "domain": "ground",
+    "purpose": "unknown",
+    "place": "Kårstø region, Norway",
+    "latitude": 59.27,
+    "longitude": 5.52,
+    "summary": "Manufacturer reported a completed five-week K-Lab evaluation with autonomous and remotely operated inspection missions. Date is the report.",
+    "evidence_url": "https://www.anybotics.com/news/anymal-x-completes-five-week-test-program-at-equinor-lab/",
+    "id": "milestone:anymal-karsto-report-2023",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2023,
+    "record_dates": "2023-06-01",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.anybotics.com/news/anymal-x-completes-five-week-test-program-at-equinor-lab/",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "ANYmal / railCare — wagon inspection pilot",
+    "manufacturer": "ANYbotics",
+    "model": "ANYmal",
+    "operator": "railCare",
+    "kind": "robot-dog",
+    "domain": "ground",
+    "purpose": "unknown",
+    "place": "Domat/Ems, Switzerland",
+    "latitude": 46.83,
+    "longitude": 9.45,
+    "summary": "Manufacturer documented a pilot inspecting freight wagons at Domat/Ems. Date is the published activity report.",
+    "evidence_url": "https://www.anybotics.com/news/transforming-rail-operations-through-automated-robotic-inspection/",
+    "id": "milestone:anymal-railcare-report-2023",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2023,
+    "record_dates": "2023-12-27",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.anybotics.com/news/transforming-rail-operations-through-automated-robotic-inspection/",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "Spot — Bishan park trial",
+    "manufacturer": "Boston Dynamics",
+    "model": "Spot",
+    "operator": "NParks / SNDGG",
+    "kind": "robot-dog",
+    "domain": "ground",
+    "purpose": "public-safety",
+    "place": "Bishan–Ang Mo Kio, Singapore",
+    "latitude": 1.36,
+    "longitude": 103.84,
+    "summary": "Government announced a two-week remotely controlled park-patrol trial, accompanied by an officer. This is a historical trial, not a current robot position.",
+    "evidence_url": "https://www.tech.gov.sg/media/spot-robot-trial-for-safe-distancing-operations/",
+    "id": "milestone:spot-bishan-trial-2020",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2020,
+    "record_dates": "2020-05-08",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.tech.gov.sg/media/spot-robot-trial-for-safe-distancing-operations/",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "Spot — Changi isolation facility trial",
+    "manufacturer": "Boston Dynamics",
+    "model": "Spot",
+    "operator": "SNDGG",
+    "kind": "robot-dog",
+    "domain": "ground",
+    "purpose": "delivery",
+    "place": "Changi region, Singapore",
+    "latitude": 1.36,
+    "longitude": 103.99,
+    "summary": "Government reported a trial delivering supplies at Changi Exhibition Centre. Date is the report; exact trial start and continued operation are not inferred.",
+    "evidence_url": "https://www.tech.gov.sg/media/spot-robot-trial-for-safe-distancing-operations/",
+    "id": "milestone:spot-changi-trial-report-2020",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2020,
+    "record_dates": "2020-05-08",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.tech.gov.sg/media/spot-robot-trial-for-safe-distancing-operations/",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "Aurora Driver — Texas driverless freight launch",
+    "manufacturer": "Aurora",
+    "model": "Aurora Driver",
+    "operator": "Aurora",
+    "kind": "autonomous-vehicle",
+    "domain": "ground",
+    "purpose": "commercial",
+    "place": "Dallas, Texas, United States",
+    "latitude": 32.78,
+    "longitude": -96.8,
+    "summary": "Operator reported regular driverless customer deliveries between Dallas and Houston began that week. City reference for one endpoint of the reported corridor; not a truck fix or current operating status.",
+    "evidence_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-25-000078/auroracommerciallaunchpres.htm",
+    "id": "milestone:aurora-dallas-launch-report-2025",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2025,
+    "record_dates": "2025-05-01",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-25-000078/auroracommerciallaunchpres.htm",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "Aurora Driver — Texas driverless freight launch",
+    "manufacturer": "Aurora",
+    "model": "Aurora Driver",
+    "operator": "Aurora",
+    "kind": "autonomous-vehicle",
+    "domain": "ground",
+    "purpose": "commercial",
+    "place": "Houston, Texas, United States",
+    "latitude": 29.76,
+    "longitude": -95.37,
+    "summary": "Operator reported regular driverless customer deliveries between Dallas and Houston began that week. City reference for one endpoint of the reported corridor; not a truck fix or current operating status.",
+    "evidence_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-25-000078/auroracommerciallaunchpres.htm",
+    "id": "milestone:aurora-houston-launch-report-2025",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2025,
+    "record_dates": "2025-05-01",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-25-000078/auroracommerciallaunchpres.htm",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "May Mobility — Grand Rapids on-demand launch",
+    "manufacturer": "May Mobility",
+    "model": "Lexus RX450h / Polaris GEM",
+    "operator": "May Mobility",
+    "kind": "autonomous-vehicle",
+    "domain": "ground",
+    "purpose": "commercial",
+    "place": "Grand Rapids, Michigan, United States",
+    "latitude": 42.96,
+    "longitude": -85.67,
+    "summary": "Operator reported the Phase 2 on-demand AV service began July 26. The report does not establish driverless operation.",
+    "evidence_url": "https://maymobility.com/posts/may-mobility-announces-on-demand-autonomous-service-in-grand-rapids-michigan",
+    "id": "milestone:may-grand-rapids-phase2-2021",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2021,
+    "record_dates": "2021-07-26",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://maymobility.com/posts/may-mobility-announces-on-demand-autonomous-service-in-grand-rapids-michigan",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "May Mobility / Toyota — Miyata e-Palette service",
+    "manufacturer": "Toyota",
+    "model": "e-Palette with May Mobility driving kit",
+    "operator": "May Mobility / Toyota Motor Kyushu",
+    "kind": "autonomous-vehicle",
+    "domain": "ground",
+    "purpose": "commercial",
+    "place": "Miyawaka region, Fukuoka, Japan",
+    "latitude": 33.72,
+    "longitude": 130.67,
+    "summary": "Operator announced an autonomous campus shuttle service with an onboard supervising operator at the Miyata factory. Date is the launch announcement.",
+    "evidence_url": "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan/",
+    "id": "milestone:may-miyata-launch-2024",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2024,
+    "record_dates": "2024-12-03",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan/",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "WeRide — Sentosa driverless Robobus milestone",
+    "manufacturer": "WeRide",
+    "model": "Robobus",
+    "operator": "WeRide / Resorts World Sentosa",
+    "kind": "autonomous-vehicle",
+    "domain": "ground",
+    "purpose": "commercial",
+    "place": "Sentosa, Singapore",
+    "latitude": 1.25,
+    "longitude": 103.82,
+    "summary": "Operator announced Robobus service without an onboard safety officer after a year of operations at Resorts World Sentosa. This records the driverless milestone, not the original June 2024 service launch.",
+    "evidence_url": "https://ir.weride.ai/news-releases/news-release-details/weride-launches-southeast-asias-first-fully-driverless-robobus",
+    "id": "milestone:weride-sentosa-driverless-2025",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2025,
+    "record_dates": "2025-07-17",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://ir.weride.ai/news-releases/news-release-details/weride-launches-southeast-asias-first-fully-driverless-robobus",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "WeRide — Marina Coastal Drive autonomous sanitation",
+    "manufacturer": "WeRide",
+    "model": "Robosweeper S6 / S1",
+    "operator": "WeRide",
+    "kind": "autonomous-vehicle",
+    "domain": "ground",
+    "purpose": "commercial",
+    "place": "Marina Coastal Drive region, Singapore",
+    "latitude": 1.27,
+    "longitude": 103.86,
+    "summary": "Operator reported commercial autonomous sanitation began in November 2024 at Marina Coastal Drive and the Esplanade using S6 and S1. The report does not assign an individual model to each location.",
+    "evidence_url": "https://www.weride.ai/posts/wrqxhqx5u9dp1np0on58ygtx",
+    "id": "milestone:weride-marina-coastal-drive-sweepers-2024",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2024,
+    "record_dates": "2024-11",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.weride.ai/posts/wrqxhqx5u9dp1np0on58ygtx",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
+  },
+  {
+    "name": "WeRide — Esplanade autonomous sanitation",
+    "manufacturer": "WeRide",
+    "model": "Robosweeper S6 / S1",
+    "operator": "WeRide",
+    "kind": "autonomous-vehicle",
+    "domain": "ground",
+    "purpose": "commercial",
+    "place": "Esplanade region, Singapore",
+    "latitude": 1.29,
+    "longitude": 103.85,
+    "summary": "Operator reported commercial autonomous sanitation began in November 2024 at Marina Coastal Drive and the Esplanade using S6 and S1. The report does not assign an individual model to each location.",
+    "evidence_url": "https://www.weride.ai/posts/wrqxhqx5u9dp1np0on58ygtx",
+    "id": "milestone:weride-esplanade-sweepers-2024",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2024,
+    "record_dates": "2024-11",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.weride.ai/posts/wrqxhqx5u9dp1np0on58ygtx",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-21"
   }
 ];

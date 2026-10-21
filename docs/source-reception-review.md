@@ -1,10 +1,10 @@
 # Vehicle research, recurring data and HackRF
 
-Reviewed 20 October 2026 by Church of Malware / saviorSEC.
+Reviewed 21 October 2026 by Church of Malware / saviorSEC.
 
-The reviewed worldwide research now contributes 26 historical operational
-milestones in 17 countries. The shared Android, desktop and server catalog
-contains 3,716 rules covering 129 manufacturer/model/module combinations. This identifies supported decoded broadcasts;
+The reviewed worldwide research now contributes 40 historical operational
+milestones in 20 countries. The shared Android, desktop and server catalog
+contains 3,738 rules covering 141 manufacturer/model/module combinations. This identifies supported decoded broadcasts;
 it does not add a radio decoder for autonomous ground vehicles.
 
 The research pack's vehicle frequencies, FCC filings, cloud hostnames and broad
@@ -20,7 +20,7 @@ of that vehicle's location.
 | --- | --- | --- |
 | [AV Map events](https://github.com/path-avmap/av-map-data) | Launched driverless service areas, plus ended services in History | Existing five-minute collector replays the dated CSV and its geometry files |
 | [DEPLOY registry](https://registry.deploy.report/docs/v1) | Published robot, drone and vehicle deployment facts | Existing five-minute collector; approximate deployment areas |
-| Reviewed operator publications | 26 independently checked dates and approximate regions | Versioned review file; refreshing the collector does not discover new articles |
+| Reviewed operator publications | 40 independently checked dates and approximate regions | Versioned review file; refreshing the collector does not discover new articles |
 | [FAA declarations](https://uasdoc.faa.gov/listDocs) | Declared serial allocations for offline model identification | Reviewed catalog releases; not a flight-position feed |
 | [Skydio Cloud](https://apidocs.skydio.com/reference/live-telemetry) | Potential operator-contributed telemetry | Not connected; requires an organization's authorized API token and enabled telemetry |
 
@@ -41,7 +41,7 @@ finding a hostname does not establish a public data feed.
 
 ## Android connection update
 
-Android 0.7.3 retains the 0.7.2 connection update: it offers **Open SDR** when a HackRF is selected in **USB Wi-Fi adapter**.
+Android 0.8.0 retains the 0.7.2 connection update: it offers **Open SDR** when a HackRF is selected in **USB Wi-Fi adapter**.
 The button opens frequency selection before requesting Android USB permission.
 Its receive driver was already included in 0.6.0 and newer.
 

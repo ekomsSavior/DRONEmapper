@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-20",
+  "checked": "2026-10-21",
   "companies": {
     "1X Technologies": {
       "url": "https://www.1x.tech/",
@@ -26,6 +26,11 @@
       "evidence": "https://www.abb.com/global/en",
       "title": "ABB Robotics"
     },
+    "ACSL": {
+      "url": "https://www.acsl.co.jp/en/",
+      "evidence": "https://www.acsl.co.jp/en/company/",
+      "title": "ACSL Ltd."
+    },
     "ACUA Ocean": {
       "url": "https://www.ocean.tech/",
       "evidence": "https://www.ocean.tech/",
@@ -35,6 +40,61 @@
       "url": "https://www.acwa-robotics.com/",
       "evidence": "https://www.acwa-robotics.com/",
       "title": "Home | Acwa Robotics"
+    },
+    "AES Corporation": {
+      "url": "https://www.aes.com/",
+      "evidence": "https://www.aes.com/about-us",
+      "title": "About AES Corporation: Innovating Global Energy Solutions"
+    },
+    "AEVEX Aerospace": {
+      "url": "https://aevex.com/",
+      "evidence": "https://aevex.com/",
+      "title": "AEVEX | Faster. Farther. Forward."
+    },
+    "ALSEAMAR": {
+      "url": "https://www.alseamar-alcen.com/",
+      "evidence": "https://www.alseamar-alcen.com/",
+      "title": "ALSEAMAR - innovation & services at sea"
+    },
+    "AM General": {
+      "url": "https://www.amgeneral.com/",
+      "evidence": "https://www.amgeneral.com/",
+      "title": "AM General: Military & Commercial Automotive Manufacturer"
+    },
+    "AMP Robotics": {
+      "url": "https://ampsortation.com/",
+      "evidence": "https://ampsortation.com/about",
+      "title": "About AMP Robotics - AI Recycling Automation Company"
+    },
+    "ANYbotics": {
+      "url": "https://www.anybotics.com/",
+      "evidence": "https://www.anybotics.com/",
+      "title": "ANYbotics"
+    },
+    "ARX Robotics": {
+      "url": "https://www.arx-robotics.com/",
+      "evidence": "https://www.arx-robotics.com/",
+      "title": "ARX Robotics"
+    },
+    "ASI Mining": {
+      "url": "https://asimining.com/",
+      "evidence": "https://asimining.com/",
+      "title": "ASI Mining | Providing Autonomous Mining Solutions"
+    },
+    "ASTI Mobile Robotics Group": {
+      "url": "https://www.abb.com/global/en",
+      "evidence": "https://www.abb.com/global/en/news/95036/prsrl-abb-rebrands-autonomous-mobile-robot-portfolio",
+      "title": "ASTI Mobile Robotics Group"
+    },
+    "ATOMS": {
+      "url": "https://atoms.co/",
+      "evidence": "https://atoms.co/",
+      "title": "Atoms"
+    },
+    "AUBO Robotics": {
+      "url": "https://aubo-usa.com/",
+      "evidence": "https://aubo-usa.com/",
+      "title": "Collaborative Robots for Industrial Automation | AUBO Robotics"
     },
     "Advanced Construction Robotics": {
       "url": "https://constructionrobots.com/",
@@ -51,11 +111,6 @@
       "evidence": "https://www.avinc.com/",
       "title": "AeroVironment"
     },
-    "AES Corporation": {
-      "url": "https://www.aes.com/",
-      "evidence": "https://www.aes.com/about-us",
-      "title": "About AES Corporation: Innovating Global Energy Solutions"
-    },
     "Aescape": {
       "url": "https://www.aescape.com/",
       "evidence": "https://www.aescape.com/",
@@ -66,10 +121,16 @@
       "evidence": "https://aethon.com/10189-2/",
       "title": "Aethon Support and COVID-19 - Aethon"
     },
-    "AEVEX Aerospace": {
-      "url": "https://aevex.com/",
-      "evidence": "https://aevex.com/",
-      "title": "AEVEX | Faster. Farther. Forward."
+    "AgEagle (senseFly)": {
+      "url": "https://eaglenxt.com/",
+      "evidence": "https://eaglenxt.com/",
+      "title": "AgEagle (senseFly)",
+      "checked": "2026-10-20"
+    },
+    "AgXeed": {
+      "url": "https://www.agxeed.com/",
+      "evidence": "https://www.agxeed.com/",
+      "title": "Home - AgXeed.com"
     },
     "AgiBot": {
       "url": "https://agibot.com/",
@@ -91,25 +152,20 @@
       "evidence": "https://agripass.co/investor-relations",
       "title": "Investor Relations - AgriPass"
     },
-    "AgXeed": {
-      "url": "https://www.agxeed.com/",
-      "evidence": "https://www.agxeed.com/",
-      "title": "Home - AgXeed.com"
-    },
     "AheadForm": {
       "url": "https://www.aheadform.com/",
       "evidence": "https://www.aheadform.com/",
       "title": "AheadForm | Humanoid Robot"
     },
-    "Airbound": {
-      "url": "https://www.airbound.com/",
-      "evidence": "https://www.airbound.com/",
-      "title": "Home | Airbound"
-    },
     "AirForestry": {
       "url": "https://airforestry.com/",
       "evidence": "https://airforestry.com/",
       "title": "AirForestry – Efficient, Electric, and Sustainable Forestry from the Air"
+    },
+    "Airbound": {
+      "url": "https://www.airbound.com/",
+      "evidence": "https://www.airbound.com/",
+      "title": "Home | Airbound"
     },
     "Aldebaran Robotics": {
       "url": "https://maxtronics.com/en/",
@@ -121,11 +177,6 @@
       "evidence": "https://www.alphadroid.us/about-us",
       "title": "Alphadroid"
     },
-    "ALSEAMAR": {
-      "url": "https://www.alseamar-alcen.com/",
-      "evidence": "https://www.alseamar-alcen.com/",
-      "title": "ALSEAMAR - innovation & services at sea"
-    },
     "Also": {
       "url": "https://ridealso.com/",
       "evidence": "https://ridealso.com/",
@@ -135,11 +186,6 @@
       "url": "https://www.altaares.com/",
       "evidence": "https://www.altaares.com/?4f45e554_page=2&eab6d224_page=2",
       "title": "Alta Ares | Next-generation air defense"
-    },
-    "AM General": {
-      "url": "https://www.amgeneral.com/",
-      "evidence": "https://www.amgeneral.com/",
-      "title": "AM General: Military & Commercial Automotive Manufacturer"
     },
     "Amazon": {
       "url": "https://www.aboutamazon.com/",
@@ -161,11 +207,6 @@
       "evidence": "https://www.amityrobotics.com/",
       "title": "Amity Robotics"
     },
-    "AMP Robotics": {
-      "url": "https://ampsortation.com/",
-      "evidence": "https://ampsortation.com/about",
-      "title": "About AMP Robotics - AI Recycling Automation Company"
-    },
     "Andromeda Robotics": {
       "url": "https://andromedarobotics.ai/",
       "evidence": "https://andromedarobotics.ai/news",
@@ -175,11 +216,6 @@
       "url": "https://www.anduril.com/",
       "evidence": "https://www.anduril.com/",
       "title": "Anduril Industries"
-    },
-    "ANYbotics": {
-      "url": "https://www.anybotics.com/",
-      "evidence": "https://www.anybotics.com/",
-      "title": "ANYbotics"
     },
     "Anyverse Dynamics": {
       "url": "https://anyverse.com/",
@@ -216,45 +252,25 @@
       "evidence": "https://artly.coffee/",
       "title": "Artly: The Barista Bot – Artly Robot Coffee"
     },
-    "ARX Robotics": {
-      "url": "https://www.arx-robotics.com/",
-      "evidence": "https://www.arx-robotics.com/",
-      "title": "ARX Robotics"
-    },
     "Ascento": {
       "url": "https://www.ascento.ai/",
       "evidence": "https://www.ascento.ai/",
       "title": "Ascento - Secure Assets with Robotics and AI"
-    },
-    "ASI Mining": {
-      "url": "https://asimining.com/",
-      "evidence": "https://asimining.com/",
-      "title": "ASI Mining | Providing Autonomous Mining Solutions"
     },
     "Asteria Aerospace": {
       "url": "https://asteria.co.in/",
       "evidence": "https://asteria.co.in/public/images/Drone%20Chronicle%20Newsletter_April25.pdf",
       "title": "April, 2025"
     },
-    "ASTI Mobile Robotics Group": {
-      "url": "https://www.abb.com/global/en",
-      "evidence": "https://www.abb.com/global/en/news/95036/prsrl-abb-rebrands-autonomous-mobile-robot-portfolio",
-      "title": "ASTI Mobile Robotics Group"
-    },
-    "ATOMS": {
-      "url": "https://atoms.co/",
-      "evidence": "https://atoms.co/",
-      "title": "Atoms"
-    },
-    "AUBO Robotics": {
-      "url": "https://aubo-usa.com/",
-      "evidence": "https://aubo-usa.com/",
-      "title": "Collaborative Robots for Industrial Automation | AUBO Robotics"
-    },
     "August Robotics": {
       "url": "https://www.augustrobotics.com/",
       "evidence": "https://www.augustrobotics.com/",
       "title": "Autonomous Robotic Fleets for Construction and Exhibitions | August Robotics"
+    },
+    "Aurora": {
+      "url": "https://ir.aurora.tech/",
+      "evidence": "https://ir.aurora.tech/",
+      "title": "Aurora Innovation investor relations"
     },
     "Aurora Innovation": {
       "url": "https://aurora.tech/",
@@ -266,15 +282,15 @@
       "evidence": "https://www.autelrobotics.com/",
       "title": "Autel Robotics"
     },
-    "Autonomous A2Z": {
-      "url": "https://www.autoa2z.ai/",
-      "evidence": "https://www.autoa2z.ai/",
-      "title": "Autonomous A2Z"
-    },
     "AutoStore": {
       "url": "https://www.autostoresystem.com/",
       "evidence": "https://www.autostoresystem.com/",
       "title": "AutoStore"
+    },
+    "Autonomous A2Z": {
+      "url": "https://www.autoa2z.ai/",
+      "evidence": "https://www.autoa2z.ai/",
+      "title": "Autonomous A2Z"
     },
     "Ava Robotics": {
       "url": "https://www.avarobotics.com/",
@@ -301,15 +317,25 @@
       "evidence": "https://www.avular.com/",
       "title": "Mobile robotics and applied autonomy from Eindhoven - Avular"
     },
-    "Badger Technologies": {
-      "url": "https://www.badger-technologies.com/",
-      "evidence": "https://www.badger-technologies.com/about/company.html",
-      "title": "Company | Badger Technologies"
-    },
     "BAE Systems": {
       "url": "https://www.baesystems.com/",
       "evidence": "https://www.baesystems.com/en/product/atlas",
       "title": "ATLAS CCV"
+    },
+    "BD Rowa": {
+      "url": "https://rowa.de/en/",
+      "evidence": "https://rowa.de/en/",
+      "title": "BD Rowa"
+    },
+    "BRINC": {
+      "url": "https://brincdrones.com/",
+      "evidence": "https://brincdrones.com/",
+      "title": "BRINC"
+    },
+    "Badger Technologies": {
+      "url": "https://www.badger-technologies.com/",
+      "evidence": "https://www.badger-technologies.com/about/company.html",
+      "title": "Company | Badger Technologies"
     },
     "Baidu": {
       "url": "https://www.apollo.auto/",
@@ -325,11 +351,6 @@
       "url": "https://baykartech.com/en/",
       "evidence": "https://baykartech.com/en/",
       "title": "Baykar"
-    },
-    "BD Rowa": {
-      "url": "https://rowa.de/en/",
-      "evidence": "https://rowa.de/en/",
-      "title": "BD Rowa"
     },
     "Bear Robotics": {
       "url": "https://www.bearrobotics.ai/",
@@ -416,11 +437,6 @@
       "evidence": "https://www.brightmachines.com/",
       "title": "Home - Bright Machines"
     },
-    "BRINC": {
-      "url": "https://brincdrones.com/",
-      "evidence": "https://brincdrones.com/",
-      "title": "BRINC"
-    },
     "Brokk": {
       "url": "https://www.brokk.com/",
       "evidence": "https://www.brokk.com/product/brokk-170/",
@@ -440,6 +456,16 @@
       "url": "https://burro.ai/",
       "evidence": "https://burro.ai/",
       "title": "Home - Burro"
+    },
+    "CNH Industrial": {
+      "url": "https://www.cnh.com/",
+      "evidence": "https://www.cnh.com/media/press_releases/2022/december/CNH-Industrial-adds-new-Automation-and-Autonomy-Solutions-to-Ag-Tech-portfolio",
+      "title": ""
+    },
+    "COBOD": {
+      "url": "https://cobod.com/",
+      "evidence": "https://cobod.com/",
+      "title": "3D Construction Printing Technology | COBOD International"
     },
     "Cafe X": {
       "url": "https://www.cafexapp.com/",
@@ -506,11 +532,6 @@
       "evidence": "https://ottomotors.com/press-kit/",
       "title": "OTTO press kit | Autonomous Material Handling | OTTO by Rockwell Automation"
     },
-    "CNH Industrial": {
-      "url": "https://www.cnh.com/",
-      "evidence": "https://www.cnh.com/media/press_releases/2022/december/CNH-Industrial-adds-new-Automation-and-Autonomy-Solutions-to-Ag-Tech-portfolio",
-      "title": ""
-    },
     "Cobalt AI": {
       "url": "https://www.cobaltai.com/",
       "evidence": "https://www.cobaltai.com/security-robots/",
@@ -520,11 +541,6 @@
       "url": "https://cobaltrobotics.com/",
       "evidence": "https://cobaltrobotics.com/wp-content/uploads/2020/06/Cobalt-Robotics-Whitepaper-Robots-Augmenting-Physical-Security.pdf",
       "title": "Exi"
-    },
-    "COBOD": {
-      "url": "https://cobod.com/",
-      "evidence": "https://cobod.com/",
-      "title": "3D Construction Printing Technology | COBOD International"
     },
     "Coco Robotics": {
       "url": "https://www.cocodelivery.com/",
@@ -561,6 +577,36 @@
       "evidence": "https://cytronic.ai/",
       "title": "3PL Fulfillment Services & Ecommerce Fulfillment | Cytronic"
     },
+    "DEEP Robotics": {
+      "url": "https://www.deeprobotics.cn/",
+      "evidence": "https://www.deeprobotics.cn/",
+      "title": "DEEP Robotics"
+    },
+    "DEXA": {
+      "url": "https://flydexa.com/",
+      "evidence": "https://flydexa.com/",
+      "title": "Delivery at the Speed of Now | Dexa"
+    },
+    "DIODON Drone Technology": {
+      "url": "https://www.diodon-drone.com/",
+      "evidence": "https://www.diodon-drone.com/",
+      "title": "Maritime UAV systems | DIODON Drone Technology"
+    },
+    "DJI": {
+      "url": "https://www.dji.com/",
+      "evidence": "https://www.dji.com/",
+      "title": "DJI"
+    },
+    "DLR Institute of Robotics and Mechatronics": {
+      "url": "https://www.dlr.de/en/rm/",
+      "evidence": "https://www.dlr.de/en/rm/",
+      "title": "Institute of Robotics and Mechatronics"
+    },
+    "DZYNE Technologies": {
+      "url": "https://dzyne.com/",
+      "evidence": "https://dzyne.com/",
+      "title": "DZYNE Technologies - Autonomous Defense Systems, UAS & Counter-UAS Solutions"
+    },
     "Daedong": {
       "url": "https://daedong-kioti.com/",
       "evidence": "https://daedong-kioti.com/",
@@ -571,25 +617,15 @@
       "evidence": "https://daxbot.com/",
       "title": "Daxbot"
     },
-    "dConstruct Technologies": {
-      "url": "https://www.dconstruct.ai/",
-      "evidence": "https://www.dconstruct.ai/news",
-      "title": "News & Updates | dConstruct Robotics – Robotics Industry Innovations"
-    },
-    "DEEP Robotics": {
-      "url": "https://www.deeprobotics.cn/",
-      "evidence": "https://www.deeprobotics.cn/",
-      "title": "DEEP Robotics"
+    "DeLaval": {
+      "url": "https://www.delaval.com/",
+      "evidence": "https://www.delaval.com/en-us/farm-solutions/milking/delaval-vms-series/delaval-vms-milking-system-v310/",
+      "title": "DeLaval VMS™ milking system V310 - DeLaval"
     },
     "DeepWay": {
       "url": "https://deepway.com/en/index.html",
       "evidence": "https://deepway.com/en/index.html",
       "title": "DeepWay - Let global logistics enter the era of autonomous freight"
-    },
-    "DeLaval": {
-      "url": "https://www.delaval.com/",
-      "evidence": "https://www.delaval.com/en-us/farm-solutions/milking/delaval-vms-series/delaval-vms-milking-system-v310/",
-      "title": "DeLaval VMS™ milking system V310 - DeLaval"
     },
     "DeltaQuad": {
       "url": "https://www.deltaquad.com/",
@@ -600,11 +636,6 @@
       "url": "https://www.devanthro.com/",
       "evidence": "https://www.devanthro.com/about-us/",
       "title": "About us – DEVANTHRO"
-    },
-    "DEXA": {
-      "url": "https://flydexa.com/",
-      "evidence": "https://flydexa.com/",
-      "title": "Delivery at the Speed of Now | Dexa"
     },
     "Dexai Robotics": {
       "url": "https://www.dexai.com/",
@@ -640,21 +671,6 @@
       "url": "https://www.diligentrobots.com/",
       "evidence": "https://www.diligentrobots.com/",
       "title": "Diligent Robotics | Moxi for Hospital Logistics"
-    },
-    "DIODON Drone Technology": {
-      "url": "https://www.diodon-drone.com/",
-      "evidence": "https://www.diodon-drone.com/",
-      "title": "Maritime UAV systems | DIODON Drone Technology"
-    },
-    "DJI": {
-      "url": "https://www.dji.com/",
-      "evidence": "https://www.dji.com/",
-      "title": "DJI"
-    },
-    "DLR Institute of Robotics and Mechatronics": {
-      "url": "https://www.dlr.de/en/rm/",
-      "evidence": "https://www.dlr.de/en/rm/",
-      "title": "Institute of Robotics and Mechatronics"
     },
     "Dobot": {
       "url": "https://www.dobot-robots.com/",
@@ -696,15 +712,25 @@
       "evidence": "https://www.dyna.co/?trk=public_post_main-feed-card-text",
       "title": "DYNA Robotics — Commercial-Grade Robots for the Real World"
     },
-    "DZYNE Technologies": {
-      "url": "https://dzyne.com/",
-      "evidence": "https://dzyne.com/",
-      "title": "DZYNE Technologies - Autonomous Defense Systems, UAS & Counter-UAS Solutions"
-    },
     "E80 Group": {
       "url": "https://www.e80group.com/",
       "evidence": "https://www.e80group.com/",
       "title": "Homepage"
+    },
+    "ECA Group": {
+      "url": "https://www.exail.com/",
+      "evidence": "https://www.exail.com/news/eca-group-and-ixblue-join-forces-and-become-exail-6073",
+      "title": "ECA Group"
+    },
+    "EHang": {
+      "url": "https://www.ehang.com/",
+      "evidence": "https://www.ehang.com/ehang216s/",
+      "title": "EHang | UAM - EH216-S"
+    },
+    "EM&E Group": {
+      "url": "https://eme-es.com/",
+      "evidence": "https://eme-es.com/",
+      "title": "HOME • EM&E Group"
     },
     "Eacon Mining Technology": {
       "url": "https://www.eaconmining.com.au/",
@@ -721,11 +747,6 @@
       "evidence": "https://easymile.com/en/",
       "title": "Autonomous Driving Technology for Heavy-Duty Vehicles | EasyMile - EasyMile"
     },
-    "ECA Group": {
-      "url": "https://www.exail.com/",
-      "evidence": "https://www.exail.com/news/eca-group-and-ixblue-join-forces-and-become-exail-6073",
-      "title": "ECA Group"
-    },
     "Ecorobotix": {
       "url": "https://ecorobotix.com/",
       "evidence": "https://ecorobotix.com/",
@@ -741,11 +762,6 @@
       "evidence": "https://edgeautonomy.io/tag/technician/",
       "title": "technician Archives - Edge Autonomy"
     },
-    "EHang": {
-      "url": "https://www.ehang.com/",
-      "evidence": "https://www.ehang.com/ehang216s/",
-      "title": "EHang | UAM - EH216-S"
-    },
     "Einride": {
       "url": "https://www.einride.tech/",
       "evidence": "https://www.einride.tech/",
@@ -760,11 +776,6 @@
       "url": "https://elroyair.com/",
       "evidence": "https://elroyair.com/",
       "title": "Elroy Air - Revolutionizing Express Shipping"
-    },
-    "EM&E Group": {
-      "url": "https://eme-es.com/",
-      "evidence": "https://eme-es.com/",
-      "title": "HOME • EM&E Group"
     },
     "Emesent": {
       "url": "https://www.emesent.com/",
@@ -811,6 +822,11 @@
       "evidence": "https://www.fanuc.com/?lang=en",
       "title": "FANUC GLOBAL"
     },
+    "FBR": {
+      "url": "https://www.fbr.com.au/",
+      "evidence": "https://www.fbr.com.au/upload/pages/20220303075243/2350770-fbr-liebherr-mischtechnik-and-fbr-sign-mou-for-next-gen-hardianx.pdf?amp%3Butm_campaign=Liebherr-Mischtechnik",
+      "title": "ASX Announcement"
+    },
     "Faraday Future": {
       "url": "https://robotics.ff.com/us/",
       "evidence": "https://robotics.ff.com/us/",
@@ -825,11 +841,6 @@
       "url": "https://www.farmwise.io/",
       "evidence": "https://www.farmwise.io/products",
       "title": "FarmWise® | Feeding Our World and Our Future"
-    },
-    "FBR": {
-      "url": "https://www.fbr.com.au/",
-      "evidence": "https://www.fbr.com.au/upload/pages/20220303075243/2350770-fbr-liebherr-mischtechnik-and-fbr-sign-mou-for-next-gen-hardianx.pdf?amp%3Butm_campaign=Liebherr-Mischtechnik",
-      "title": "ASX Announcement"
     },
     "Fetch Robotics": {
       "url": "https://fetchrobotics.github.io/docs/",
@@ -891,6 +902,22 @@
       "evidence": "https://franka.de/",
       "title": "Homepage"
     },
+    "Freefly Systems": {
+      "url": "https://freeflysystems.com/",
+      "evidence": "https://freeflysystems.com/",
+      "title": "Freefly Systems",
+      "checked": "2026-10-20"
+    },
+    "GEA Group": {
+      "url": "https://www.gea.com/",
+      "evidence": "https://www.gea.com/en/dairy-farming/",
+      "title": "GEA Farm Technologies | Leading Solutions for your Dairy Farm"
+    },
+    "GMO AI & Robotics": {
+      "url": "https://ai-robotics.gmo/en/",
+      "evidence": "https://ai-robotics.gmo/en/",
+      "title": "GMO AI & Robotics Corporation (GMO AIR)"
+    },
     "Galaxea Dynamics": {
       "url": "https://galaxea-dynamics.com/",
       "evidence": "https://galaxea-dynamics.com/",
@@ -920,11 +947,6 @@
       "url": "https://gausium.com/",
       "evidence": "https://gausium.com/",
       "title": "Gausium"
-    },
-    "GEA Group": {
-      "url": "https://www.gea.com/",
-      "evidence": "https://www.gea.com/en/dairy-farming/",
-      "title": "GEA Farm Technologies | Leading Solutions for your Dairy Farm"
     },
     "Geek+": {
       "url": "https://www.geekplus.com/en",
@@ -956,11 +978,6 @@
       "evidence": "https://gigaai.cc/",
       "title": "极佳科技"
     },
-    "GMO AI & Robotics": {
-      "url": "https://ai-robotics.gmo/en/",
-      "evidence": "https://ai-robotics.gmo/en/",
-      "title": "GMO AI & Robotics Corporation (GMO AIR)"
-    },
     "Gravis Robotics": {
       "url": "https://www.gravisrobotics.com/",
       "evidence": "https://www.gravisrobotics.com/about-us",
@@ -991,6 +1008,11 @@
       "evidence": "https://www.hairobotics.com/company",
       "title": "Warehouse Automation Company | Hai Robotics"
     },
+    "HDT Global": {
+      "url": "https://www.hdtglobal.com/",
+      "evidence": "https://www.hdtglobal.com/2025/10/10/introducing-the-next-gen-hunter-wolf-at-ausa-2025/",
+      "title": "Introducing the Next-Gen Hunter Wolf at AUSA 2025 | BLADE/HDT Global"
+    },
     "Halter": {
       "url": "https://www.halterhq.com/",
       "evidence": "https://www.halterhq.com/",
@@ -1011,6 +1033,11 @@
       "evidence": "https://harmattan.ai/",
       "title": "Building Autonomous Forces | Harmattan AI"
     },
+    "Harris Aerial": {
+      "url": "https://harrisaerial.com/",
+      "evidence": "https://harrisaerial.com/",
+      "title": "Harris Aerial"
+    },
     "Havoc": {
       "url": "https://www.havocai.com/",
       "evidence": "https://www.havocai.com/",
@@ -1020,11 +1047,6 @@
       "url": "https://www.havocai.com/",
       "evidence": "https://www.havocai.com/",
       "title": "HavocAI | All-Domain Collaborative Autonomy"
-    },
-    "HDT Global": {
-      "url": "https://www.hdtglobal.com/",
-      "evidence": "https://www.hdtglobal.com/2025/10/10/introducing-the-next-gen-hunter-wolf-at-ausa-2025/",
-      "title": "Introducing the Next-Gen Hunter Wolf at AUSA 2025 | BLADE/HDT Global"
     },
     "Helsing": {
       "url": "https://helsing.ai/",
@@ -1106,11 +1128,6 @@
       "evidence": "https://en.inceptio.ai/",
       "title": "Inceptio Technology"
     },
-    "indiGO Technologies": {
-      "url": "https://indigotech.com/",
-      "evidence": "https://indigotech.com/",
-      "title": "indiGOtech | Electric Vehicles, Charging & Fleet Operations"
-    },
     "Infiforce": {
       "url": "https://www.infiforce.cn/",
       "evidence": "https://www.infiforce.cn/",
@@ -1125,6 +1142,12 @@
       "url": "https://www.inspectorbots.com/",
       "evidence": "https://www.inspectorbots.com/",
       "title": "Best Safety Inspection Robots and Services - INSPECTORBOTS"
+    },
+    "Inspired Flight": {
+      "url": "https://www.inspiredflight.com/",
+      "evidence": "https://www.inspiredflight.com/",
+      "title": "Inspired Flight",
+      "checked": "2026-10-20"
     },
     "Instacart": {
       "url": "https://www.instacart.com/",
@@ -1161,6 +1184,31 @@
       "evidence": "https://www.deere.com/en-us/products-solutions/tractors/autonomous-tractor/",
       "title": "Autonomous Tractor | John Deere US"
     },
+    "KEENON Robotics": {
+      "url": "https://www.keenon.com/",
+      "evidence": "https://www.keenon.com/",
+      "title": "KEENON Robotics - Smart Service Robots & Solutions"
+    },
+    "KEMARO": {
+      "url": "https://www.kemaro.ch/",
+      "evidence": "https://www.kemaro.ch/",
+      "title": "Kemaro"
+    },
+    "KNDS": {
+      "url": "https://knds.com/",
+      "evidence": "https://knds.com/en/products/systems/centurio",
+      "title": "CENTURIO | KNDS Group"
+    },
+    "KUKA AG": {
+      "url": "https://www.kuka.com/",
+      "evidence": "https://www.kuka.com/-/media/2662771752c447d885f2309cb86ca6a0.pdf",
+      "title": "Food industry"
+    },
+    "KUKA Industrial": {
+      "url": "https://www.kuka.com/",
+      "evidence": "https://www.kuka.com/-/media/0993c763460846859aff78300f15570f.pdf",
+      "title": "Small robots"
+    },
     "Karcher": {
       "url": "https://www.karcher.com/",
       "evidence": "https://www.karcher.com/ie/en/professional/cleaning-robots/kira-b-50-15330020.html",
@@ -1171,20 +1219,10 @@
       "evidence": "https://en.kargobot.ai/",
       "title": "KargoBot"
     },
-    "KEENON Robotics": {
-      "url": "https://www.keenon.com/",
-      "evidence": "https://www.keenon.com/",
-      "title": "KEENON Robotics - Smart Service Robots & Solutions"
-    },
     "Kelluu": {
       "url": "https://kelluu.com/",
       "evidence": "https://kelluu.com/",
       "title": "Kelluu | Persistent Aerial data with Autonomous Airships"
-    },
-    "KEMARO": {
-      "url": "https://www.kemaro.ch/",
-      "evidence": "https://www.kemaro.ch/",
-      "title": "Kemaro"
     },
     "Kepler Robotics": {
       "url": "https://www.gotokepler.com/",
@@ -1200,11 +1238,6 @@
       "url": "https://www.robot.com/",
       "evidence": "https://www.robot.com/",
       "title": "Kiwibot"
-    },
-    "KNDS": {
-      "url": "https://knds.com/",
-      "evidence": "https://knds.com/en/products/systems/centurio",
-      "title": "CENTURIO | KNDS Group"
     },
     "Knightscope": {
       "url": "https://knightscope.com/",
@@ -1251,20 +1284,20 @@
       "evidence": "https://www.kratosdefense.com/newsroom/kratos-demonstrates-xq-58a-electronic-warfare-capabilities-for-united-states-marine-corps",
       "title": "Kratos Demonstrates XQ-58A Electronic Warfare Capabilities for United States Marine Corps | Kratos Defense"
     },
-    "KUKA AG": {
-      "url": "https://www.kuka.com/",
-      "evidence": "https://www.kuka.com/-/media/2662771752c447d885f2309cb86ca6a0.pdf",
-      "title": "Food industry"
-    },
-    "KUKA Industrial": {
-      "url": "https://www.kuka.com/",
-      "evidence": "https://www.kuka.com/-/media/0993c763460846859aff78300f15570f.pdf",
-      "title": "Small robots"
-    },
     "L3Harris": {
       "url": "https://www.l3harris.com/",
       "evidence": "https://www.l3harris.com/all-capabilities/asview-control-system",
       "title": "ASView™ Control System | L3Harris® Fast. Forward."
+    },
+    "LG Electronics": {
+      "url": "https://www.lgcorp.com/",
+      "evidence": "https://www.lgcorp.com/media/release/29725/",
+      "title": "Press Release | Media | LG"
+    },
+    "LYRO Robotics": {
+      "url": "https://lyro.com/",
+      "evidence": "https://lyro.com/",
+      "title": "Lyro Machine Intelligence | Lyro"
     },
     "Labrador Systems": {
       "url": "https://labradorsystems.com/",
@@ -1280,11 +1313,6 @@
       "url": "https://www.lejurobot.com/en",
       "evidence": "https://www.lejurobot.com/en",
       "title": "Leju - Leader in the industrialization of humanoid robots"
-    },
-    "LG Electronics": {
-      "url": "https://www.lgcorp.com/",
-      "evidence": "https://www.lgcorp.com/media/release/29725/",
-      "title": "Press Release | Media | LG"
     },
     "Liebherr Mining Equipment": {
       "url": "https://www.liebherr.com/",
@@ -1321,15 +1349,15 @@
       "evidence": "https://lucidbots.com/",
       "title": "Lucid Bots Home Page"
     },
-    "LYRO Robotics": {
-      "url": "https://lyro.com/",
-      "evidence": "https://lyro.com/",
-      "title": "Lyro Machine Intelligence | Lyro"
-    },
     "MAB Robotics": {
       "url": "https://www.mabrobotics.pl/",
       "evidence": "https://www.mabrobotics.pl/",
       "title": "MAB Robotics | Legged Robotics & Motion Control Technology"
+    },
+    "MOIA": {
+      "url": "https://www.moia.io/",
+      "evidence": "https://www.moia.io/en/news/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services?_rr=1",
+      "title": "MOIA unveils series production version ID. Buzz AD and turnkey solution for fully autonomous mobility services"
     },
     "Machina Labs": {
       "url": "https://machinalabs.ai/",
@@ -1406,11 +1434,6 @@
       "evidence": "https://www.mobileye.com/",
       "title": "Mobileye | Driver Assist and Autonomous Driving Technologies"
     },
-    "MOIA": {
-      "url": "https://www.moia.io/",
-      "evidence": "https://www.moia.io/en/news/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services?_rr=1",
-      "title": "MOIA unveils series production version ID. Buzz AD and turnkey solution for fully autonomous mobility services"
-    },
     "Momenta Global": {
       "url": "https://www.momenta.ai/",
       "evidence": "https://www.momenta.ai/",
@@ -1426,15 +1449,25 @@
       "evidence": "https://moveez-inc.com/en/",
       "title": "MoveEz, inc. – moveez"
     },
-    "Naio Technologies": {
-      "url": "https://www.naio-technologies.com/",
-      "evidence": "https://www.naio-technologies.com/",
-      "title": "Naio Technologies"
-    },
     "NAO Robot": {
       "url": "https://maxtronics.com/en/",
       "evidence": "https://maxtronics.com/en/",
       "title": "NAO Robot"
+    },
+    "NEURA Robotics": {
+      "url": "https://neura-robotics.com/",
+      "evidence": "https://neura-robotics.com/company/",
+      "title": "About Us | NEURA Robotics"
+    },
+    "NYK Line": {
+      "url": "https://www.nyk.com/",
+      "evidence": "https://www.nyk.com/english/news/2026/20260512_01.html",
+      "title": "Car Carrier Elder Leader Conducts Demonstration Trial of Autonomous Navigation System Integration with Singapore Port Systems | NYK Line"
+    },
+    "Naio Technologies": {
+      "url": "https://www.naio-technologies.com/",
+      "evidence": "https://www.naio-technologies.com/",
+      "title": "Naio Technologies"
     },
     "Nauticus Robotics": {
       "url": "https://nauticusrobotics.com/",
@@ -1466,11 +1499,6 @@
       "evidence": "https://www.neubility.ai/en/product",
       "title": "Product | Neubility"
     },
-    "NEURA Robotics": {
-      "url": "https://neura-robotics.com/",
-      "evidence": "https://neura-robotics.com/company/",
-      "title": "About Us | NEURA Robotics"
-    },
     "Nilfisk": {
       "url": "https://www.nilfisk.com/",
       "evidence": "https://www.nilfisk.com/global/professional/products/floor-cleaning/robotic-floor-cleaners/liberty-sc60%2B56123292/",
@@ -1480,11 +1508,6 @@
       "url": "https://nimble.ai/",
       "evidence": "https://nimble.ai/",
       "title": "Nimble - Fully Autonomous Fulfillment"
-    },
-    "nLink": {
-      "url": "https://www.nlinkrobotics.com/",
-      "evidence": "https://www.nlinkrobotics.com/",
-      "title": "nLink - designs and develops mobile robots"
     },
     "Nomagic": {
       "url": "https://nomagic.ai/",
@@ -1511,10 +1534,15 @@
       "evidence": "https://www.nuro.ai/",
       "title": "Nuro"
     },
-    "NYK Line": {
-      "url": "https://www.nyk.com/",
-      "evidence": "https://www.nyk.com/english/news/2026/20260512_01.html",
-      "title": "Car Carrier Elder Leader Conducts Demonstration Trial of Autonomous Navigation System Integration with Singapore Port Systems | NYK Line"
+    "OTSAW Digital": {
+      "url": "https://otsaw.com/",
+      "evidence": "https://otsaw.com/",
+      "title": "OTSAW | Accelerating Robotics Globally"
+    },
+    "OTTO Motors": {
+      "url": "https://ottomotors.com/",
+      "evidence": "https://ottomotors.com/",
+      "title": "OTTO Motors"
     },
     "Ocado Group": {
       "url": "https://www.ocadogroup.com/",
@@ -1576,16 +1604,6 @@
       "evidence": "https://www.oshkoshcorp.com/",
       "title": "Oshkosh Corporation | Move the world forward"
     },
-    "OTSAW Digital": {
-      "url": "https://otsaw.com/",
-      "evidence": "https://otsaw.com/",
-      "title": "OTSAW | Accelerating Robotics Globally"
-    },
-    "OTTO Motors": {
-      "url": "https://ottomotors.com/",
-      "evidence": "https://ottomotors.com/",
-      "title": "OTTO Motors"
-    },
     "Ottonomy": {
       "url": "https://ottonomy.io/",
       "evidence": "https://ottonomy.io/",
@@ -1621,6 +1639,11 @@
       "evidence": "https://pal-robotics.com/",
       "title": "PAL Robotics | Home"
     },
+    "PAZZI": {
+      "url": "https://www.pazzipizza.com/",
+      "evidence": "https://www.pazzipizza.com/",
+      "title": "PAZZI | The Future of Automated Pizza & Franchise Opportunities"
+    },
     "Pangolin Robot": {
       "url": "https://www.alpharobotics.com.cn/",
       "evidence": "https://www.alpharobotics.com.cn/uploads/Amy-English-Manual-10th-20211124.pdf",
@@ -1635,11 +1658,6 @@
       "url": "https://www.patriagroup.com/",
       "evidence": "https://www.patriagroup.com/",
       "title": "Defence & security technology and lifecycle support | Patria"
-    },
-    "PAZZI": {
-      "url": "https://www.pazzipizza.com/",
-      "evidence": "https://www.pazzipizza.com/",
-      "title": "PAZZI | The Future of Automated Pizza & Franchise Opportunities"
     },
     "Percepto": {
       "url": "https://percepto.co/",
@@ -1700,6 +1718,12 @@
       "url": "https://quantum-systems.com/",
       "evidence": "https://quantum-systems.com/",
       "title": "Quantum Systems"
+    },
+    "Quantum-Systems": {
+      "url": "https://quantum-systems.com/",
+      "evidence": "https://quantum-systems.com/",
+      "title": "Quantum-Systems",
+      "checked": "2026-10-20"
     },
     "QuikBot Technologies": {
       "url": "https://quikbot.ai/",
@@ -1821,6 +1845,11 @@
       "evidence": "https://rugged-robotics.com/",
       "title": "Rugged Robotics | Home"
     },
+    "SMP Robotics": {
+      "url": "https://smprobotics.com/",
+      "evidence": "https://smprobotics.com/",
+      "title": "Autonomous Outdoor Security Robots for Patrol & Inspection | RaaS Solutions"
+    },
     "Saab Seaeye": {
       "url": "https://www.saabseaeye.com/",
       "evidence": "https://www.saabseaeye.com/",
@@ -1875,6 +1904,16 @@
       "url": "https://www.scania.com/",
       "evidence": "https://www.scania.com/",
       "title": "Scania corporate website | Scania Group"
+    },
+    "Scripps Institution of Oceanography": {
+      "url": "https://scripps.ucsd.edu/",
+      "evidence": "https://scripps.ucsd.edu/",
+      "title": "Scripps Institution of Oceanography"
+    },
+    "Scripps Institution of Oceanography Instrument Development Group": {
+      "url": "https://spraydata.ucsd.edu/",
+      "evidence": "https://spraydata.ucsd.edu/",
+      "title": "Scripps Institution of Oceanography Instrument Development Group"
     },
     "Scythe Robotics": {
       "url": "https://scytherobotics.com/",
@@ -1956,11 +1995,6 @@
       "evidence": "https://skyfront.com/",
       "title": "Longest Endurance Hybrid Drones - Skyfront"
     },
-    "SMP Robotics": {
-      "url": "https://smprobotics.com/",
-      "evidence": "https://smprobotics.com/",
-      "title": "Autonomous Outdoor Security Robots for Patrol & Inspection | RaaS Solutions"
-    },
     "SoftBank Robotics": {
       "url": "https://www.softbankrobotics.com/",
       "evidence": "https://www.softbankrobotics.com/",
@@ -1991,15 +2025,15 @@
       "evidence": "https://www.starship.xyz/",
       "title": "Starship Technologies"
     },
-    "Swarmbotics AI": {
-      "url": "https://www.swarmbotics.ai/",
-      "evidence": "https://www.swarmbotics.ai/",
-      "title": "Swarmbotics AI"
-    },
     "SwarmFarm Robotics": {
       "url": "https://www.swarmfarm.com/",
       "evidence": "https://www.swarmfarm.com/",
       "title": "SwarmFarm Robotics | Robotic Agriculture"
+    },
+    "Swarmbotics AI": {
+      "url": "https://www.swarmbotics.ai/",
+      "evidence": "https://www.swarmbotics.ai/",
+      "title": "Swarmbotics AI"
     },
     "Symbotic": {
       "url": "https://www.symbotic.com/",
@@ -2011,6 +2045,16 @@
       "evidence": "https://www.systemlogistics.com/media/2054/EN_System-Logistics-sustainability-report-2024.pdf",
       "title": "1. Introduction"
     },
+    "TEKEVER": {
+      "url": "https://www.tekever.com/",
+      "evidence": "https://www.tekever.com/",
+      "title": "Tekever"
+    },
+    "TRIC Robotics": {
+      "url": "https://tricrobotics.com/",
+      "evidence": "https://tricrobotics.com/",
+      "title": "Tric Robotics – Automating Pest & Disease Control with Light, Healthier Plants + Less Chemicals"
+    },
     "Tata Daewoo Commercial Vehicle": {
       "url": "https://www.tata-daewoo.com/",
       "evidence": "https://www.tata-daewoo.com/eng/brand/company6",
@@ -2021,15 +2065,16 @@
       "evidence": "https://www.tau-robotics.com/",
       "title": "Tau Robotics | Humanoid Cleaning Service in San Francisco"
     },
+    "Teal Drones": {
+      "url": "https://redcataerial.com/",
+      "evidence": "https://redcataerial.com/",
+      "title": "Teal Drones",
+      "checked": "2026-10-20"
+    },
     "TechnipFMC": {
       "url": "https://www.technipfmc.com/",
       "evidence": "https://www.technipfmc.com/en/what-we-do/technology-and-innovation/",
       "title": "Technology and Innovation - TechnipFMC plc"
-    },
-    "TEKEVER": {
-      "url": "https://www.tekever.com/",
-      "evidence": "https://www.tekever.com/",
-      "title": "Tekever"
     },
     "Teledyne FLIR": {
       "url": "https://www.flir.com/",
@@ -2106,10 +2151,10 @@
       "evidence": "https://torc.ai/",
       "title": "Torc Robotics - Driving the Future of Freight"
     },
-    "TRIC Robotics": {
-      "url": "https://tricrobotics.com/",
-      "evidence": "https://tricrobotics.com/",
-      "title": "Tric Robotics – Automating Pest & Disease Control with Light, Healthier Plants + Less Chemicals"
+    "Toyota": {
+      "url": "https://global.toyota/en/",
+      "evidence": "https://global.toyota/en/",
+      "title": "Toyota Motor Corporation"
     },
     "Trombia Technologies": {
       "url": "https://trombia.com/",
@@ -2146,15 +2191,15 @@
       "evidence": "https://global.uisee.com/en/about-us/news/231",
       "title": "UISEE at MODEX 2026: L4 AI Driver Draws Record Attention in North America | UISEE"
     },
-    "Ukrainian Armor": {
-      "url": "https://ukrainianarmor.com/",
-      "evidence": "https://ukrainianarmor.com/en/",
-      "title": "Технологічний легкий бронезахист від Українська Броня™"
-    },
     "ULC Technologies": {
       "url": "https://ulctechnologies.com/",
       "evidence": "https://ulctechnologies.com/",
       "title": "ULC Technologies"
+    },
+    "Ukrainian Armor": {
+      "url": "https://ukrainianarmor.com/",
+      "evidence": "https://ukrainianarmor.com/en/",
+      "title": "Технологічний легкий бронезахист від Українська Броня™"
     },
     "Ulysses": {
       "url": "https://ulysses.inc/",
@@ -2216,6 +2261,11 @@
       "evidence": "https://www.volvoautonomoussolutions.com/en-en/",
       "title": "Welcome | Volvo Autonomous Solutions"
     },
+    "WIRobotics": {
+      "url": "https://corp.wirobotics.com/en",
+      "evidence": "https://corp.wirobotics.com/en",
+      "title": "WIRobotics"
+    },
     "Waabi": {
       "url": "https://waabi.ai/",
       "evidence": "https://waabi.ai/company",
@@ -2251,10 +2301,16 @@
       "evidence": "https://wingcopter.com/",
       "title": "Wingcopter – Delivering the Future."
     },
-    "WIRobotics": {
-      "url": "https://corp.wirobotics.com/en",
-      "evidence": "https://corp.wirobotics.com/en",
-      "title": "WIRobotics"
+    "Wingtra": {
+      "url": "https://wingtra.com/",
+      "evidence": "https://wingtra.com/",
+      "title": "Wingtra",
+      "checked": "2026-10-20"
+    },
+    "Woods Hole Oceanographic Institution": {
+      "url": "https://www.whoi.edu/",
+      "evidence": "https://www.whoi.edu/",
+      "title": "Woods Hole Oceanographic Institution"
     },
     "X-Humanoid": {
       "url": "https://www.x-humanoid.com/en",
@@ -2265,11 +2321,6 @@
       "url": "https://xa.com/",
       "evidence": "https://xa.com/",
       "title": "XAG - Advancing Agriculture"
-    },
-    "Xiaomi": {
-      "url": "https://www.mi.com/",
-      "evidence": "https://ir.mi.com/static-files/b4fb0310-81e0-4fe2-8c2e-d50e52e5d3b9",
-      "title": "PowerPoint 演示文稿"
     },
     "XOcean": {
       "url": "https://xocean.com/",
@@ -2285,6 +2336,16 @@
       "url": "https://xtend.me/",
       "evidence": "https://xtend.me/certified/",
       "title": "Certified - XTEND"
+    },
+    "Xiaomi": {
+      "url": "https://www.mi.com/",
+      "evidence": "https://ir.mi.com/static-files/b4fb0310-81e0-4fe2-8c2e-d50e52e5d3b9",
+      "title": "PowerPoint 演示文稿"
+    },
+    "YOGO Robot": {
+      "url": "https://www.yogorobot.cn/",
+      "evidence": "https://www.yogorobot.cn/",
+      "title": "从这里，走向未来"
     },
     "Yandex": {
       "url": "https://yandex.com/",
@@ -2306,11 +2367,6 @@
       "evidence": "https://www.inspace.cc/about",
       "title": "影智科技 - XBOT商业机器人"
     },
-    "YOGO Robot": {
-      "url": "https://www.yogorobot.cn/",
-      "evidence": "https://www.yogorobot.cn/",
-      "title": "从这里，走向未来"
-    },
     "Yuneec": {
       "url": "https://us.yuneec.com/",
       "evidence": "https://us.yuneec.com/about-us/",
@@ -2320,6 +2376,16 @@
       "url": "https://www.yunji.ai/",
       "evidence": "https://www.yunji.ai/",
       "title": "Yunji Technology — Robots, Making Humans Happier"
+    },
+    "ZERO ZERO ROBOTICS": {
+      "url": "https://zerozerorobotics.com/",
+      "evidence": "https://zerozerorobotics.com/",
+      "title": "Zero Zero Robotics"
+    },
+    "ZF Friedrichshafen": {
+      "url": "https://www.zf.com/",
+      "evidence": "https://www.zf.com/site/locations/en/europe/germany_locations/germany.html",
+      "title": "ZF Locations - Germany - ZF"
     },
     "Zebra Technologies": {
       "url": "https://www.zebra.com/",
@@ -2341,11 +2407,6 @@
       "evidence": "https://zerith.com/",
       "title": "零次方zerith-零次方机器人官网"
     },
-    "ZF Friedrichshafen": {
-      "url": "https://www.zf.com/",
-      "evidence": "https://www.zf.com/site/locations/en/europe/germany_locations/germany.html",
-      "title": "ZF Locations - Germany - ZF"
-    },
     "Zipline": {
       "url": "https://www.zipline.com/",
       "evidence": "https://www.zipline.com/",
@@ -2356,61 +2417,20 @@
       "evidence": "https://zoox.com/",
       "title": "Zoox"
     },
-    "Scripps Institution of Oceanography Instrument Development Group": {
-      "url": "https://spraydata.ucsd.edu/",
-      "evidence": "https://spraydata.ucsd.edu/",
-      "title": "Scripps Institution of Oceanography Instrument Development Group"
+    "dConstruct Technologies": {
+      "url": "https://www.dconstruct.ai/",
+      "evidence": "https://www.dconstruct.ai/news",
+      "title": "News & Updates | dConstruct Robotics – Robotics Industry Innovations"
     },
-    "Scripps Institution of Oceanography": {
-      "url": "https://scripps.ucsd.edu/",
-      "evidence": "https://scripps.ucsd.edu/",
-      "title": "Scripps Institution of Oceanography"
+    "indiGO Technologies": {
+      "url": "https://indigotech.com/",
+      "evidence": "https://indigotech.com/",
+      "title": "indiGOtech | Electric Vehicles, Charging & Fleet Operations"
     },
-    "Woods Hole Oceanographic Institution": {
-      "url": "https://www.whoi.edu/",
-      "evidence": "https://www.whoi.edu/",
-      "title": "Woods Hole Oceanographic Institution"
-    },
-    "Teal Drones": {
-      "url": "https://redcataerial.com/",
-      "evidence": "https://redcataerial.com/",
-      "title": "Teal Drones",
-      "checked": "2026-10-20"
-    },
-    "Freefly Systems": {
-      "url": "https://freeflysystems.com/",
-      "evidence": "https://freeflysystems.com/",
-      "title": "Freefly Systems",
-      "checked": "2026-10-20"
-    },
-    "Inspired Flight": {
-      "url": "https://www.inspiredflight.com/",
-      "evidence": "https://www.inspiredflight.com/",
-      "title": "Inspired Flight",
-      "checked": "2026-10-20"
-    },
-    "Wingtra": {
-      "url": "https://wingtra.com/",
-      "evidence": "https://wingtra.com/",
-      "title": "Wingtra",
-      "checked": "2026-10-20"
-    },
-    "AgEagle (senseFly)": {
-      "url": "https://eaglenxt.com/",
-      "evidence": "https://eaglenxt.com/",
-      "title": "AgEagle (senseFly)",
-      "checked": "2026-10-20"
-    },
-    "Quantum-Systems": {
-      "url": "https://quantum-systems.com/",
-      "evidence": "https://quantum-systems.com/",
-      "title": "Quantum-Systems",
-      "checked": "2026-10-20"
-    },
-    "ACSL": {
-      "url": "https://www.acsl.co.jp/en/",
-      "evidence": "https://www.acsl.co.jp/en/company/",
-      "title": "ACSL Ltd."
+    "nLink": {
+      "url": "https://www.nlinkrobotics.com/",
+      "evidence": "https://www.nlinkrobotics.com/",
+      "title": "nLink - designs and develops mobile robots"
     }
   },
   "models": [
@@ -4515,6 +4535,55 @@
       "url": "https://www.acsl.co.jp/admin/wp-content/uploads/2024/06/20240628_PF4-CAT3%E5%9E%8B%E5%BC%8F%E8%AA%8D%E8%A8%BC%E7%94%B3%E8%AB%8B_EN_fix.pdf",
       "evidence": "https://www.acsl.co.jp/admin/wp-content/uploads/2024/06/20240628_PF4-CAT3%E5%9E%8B%E5%BC%8F%E8%AA%8D%E8%A8%BC%E7%94%B3%E8%AB%8B_EN_fix.pdf",
       "title": "ACSL PF4-CAT3 delivery drone"
+    },
+    {
+      "manufacturer": "Harris Aerial",
+      "model": "Carrier H6",
+      "url": "https://harrisaerial.com/carrier-h6-platform/",
+      "evidence": "https://harrisaerial.com/carrier-h6-platform/",
+      "title": "Carrier H6 Platform"
+    },
+    {
+      "manufacturer": "XAG",
+      "model": "P100 Pro",
+      "url": "https://www.xa.com/en/p100pro",
+      "evidence": "https://www.xa.com/en/p100pro",
+      "title": "XAG P100 Pro"
+    },
+    {
+      "manufacturer": "DeltaQuad",
+      "model": "Evo",
+      "url": "https://docs.deltaquad.com/evo",
+      "evidence": "https://docs.deltaquad.com/evo",
+      "title": "DeltaQuad Evo operations manual"
+    },
+    {
+      "manufacturer": "ANYbotics",
+      "model": "ANYmal",
+      "url": "https://www.anybotics.com/robotics/anymal/",
+      "evidence": "https://www.anybotics.com/robotics/anymal/",
+      "title": "ANYmal"
+    },
+    {
+      "manufacturer": "ANYbotics",
+      "model": "ANYmal D",
+      "url": "https://github.com/ANYbotics/anymal_d_simple_description",
+      "evidence": "https://github.com/ANYbotics/anymal_d_simple_description",
+      "title": "ANYmal D manufacturer robot description"
+    },
+    {
+      "manufacturer": "ANYbotics",
+      "model": "ANYmal X",
+      "url": "https://www.anybotics.com/robotics/anymal-x/",
+      "evidence": "https://www.anybotics.com/robotics/anymal-x/",
+      "title": "ANYmal X"
+    },
+    {
+      "manufacturer": "Amazon",
+      "model": "MK30",
+      "url": "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages",
+      "evidence": "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages",
+      "title": "Amazon MK30"
     }
   ]
 }

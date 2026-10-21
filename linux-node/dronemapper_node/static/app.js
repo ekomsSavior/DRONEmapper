@@ -34,6 +34,7 @@ function settingsToForm(settings) {
   $('longitude').value = settings.station?.[1] ?? '';
   $('share-rid').checked = settings.share_rid;
   $('share-areas').checked = settings.share_areas;
+  $('share-robots').checked = settings.share_robots;
   $('share-decoded').checked = settings.share_decoded;
   sdrChoices();
 }
@@ -49,7 +50,7 @@ function formSettings() {
   return {label:$('label').value.trim(),wifi_interfaces:$('wifi').value.split(',').map(x=>x.trim()).filter(Boolean),
     ble_adapter:$('ble').value,sdr:$('sdr').value,sdr_band:$('band').value,sdr_mode:$('sdr-mode').value,dji_frequency:Number($('dji-frequency').value),readsb_file:$('readsb-file').value.trim(),mqtt_file:$('mqtt').value.trim(),
     serial_port:$('serial-port').value,serial_baud:Number($('serial-baud').value),serial_format:$('serial-format').value,
-    station:lat === '' ? null : [Number(lat),Number(lon)],share_rid:$('share-rid').checked,share_areas:$('share-areas').checked,share_decoded:$('share-decoded').checked};
+    station:lat === '' ? null : [Number(lat),Number(lon)],share_rid:$('share-rid').checked,share_areas:$('share-areas').checked,share_robots:$('share-robots').checked,share_decoded:$('share-decoded').checked};
 }
 async function capabilities() {
   try {
@@ -103,7 +104,7 @@ function radar() {
     const p = contactPoint(contact,mode,Number($('range').value)); if (!p) continue;
     count++;
     const group = document.createElementNS(ns,'g');
-    const color = contact.kind==='possible-drone'?' possible':contact.kind==='drone'?'':' unknown';
+    const color = ['possible-drone','possible-robot'].includes(contact.kind)?' possible':contact.kind==='drone'?'':' unknown';
     const halo = document.createElementNS(ns,'circle');
     halo.setAttribute('cx',p.x); halo.setAttribute('cy',p.y); halo.setAttribute('r','12'); halo.setAttribute('class','dot halo'+color);
     const dot = document.createElementNS(ns,'circle');
@@ -135,6 +136,7 @@ function render() {
   if (lastConnected !== state.connected) {
     $('share-rid').checked=state.settings.share_rid;
     $('share-areas').checked=state.settings.share_areas;
+    $('share-robots').checked=state.settings.share_robots;
     $('share-decoded').checked=state.settings.share_decoded;
     lastConnected=state.connected;
   }

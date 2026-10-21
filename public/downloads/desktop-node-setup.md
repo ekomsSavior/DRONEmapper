@@ -1,6 +1,6 @@
 # DRONEmapper Desktop — Windows, macOS and Linux
 
-Version 0.4.0 · **Church of Malware / saviorSEC**
+Version 0.5.0 · **Church of Malware / saviorSEC**
 
 The same local dashboard, radar, detection list, account pairing and optional
 map uploads run on Windows, macOS and Linux. No account password goes into the

@@ -58,7 +58,7 @@ Two nodes reporting the same claimed identifier are merged for display; that doe
 No DroneAware software, paywalled feed, private node or access-control bypass is needed for this design. Public workflow research informed the approach; the app, local ingestion and map integration are our own work, with the USB driver’s upstream authors credited separately.
 
 ## Identification and repeated sightings (2026-10-16 UTC)
-The bundled FAA catalog contains 2,320 declared/compacted serial rules covering 106 distinct manufacturer/model/device-type combinations, reviewed from the FAA public Declarations of Compliance service. It is a subset, not an exhaustive supported-drone list. Exact declared serial-range matches can suggest aircraft make/model; ambiguous matches remain unknown. A broadcast module identifies the module, not its host. A match does not authenticate identity or establish current regulatory compliance. Each range carries its FAA evidence link in worker/rid-catalog.mjs.
+The bundled FAA catalog contains 3,738 declared/compacted serial rules covering 141 distinct manufacturer/model/device-type combinations, reviewed from the FAA public Declarations of Compliance service. It is a subset, not an exhaustive supported-drone list. Exact declared serial-range matches can suggest aircraft make/model; ambiguous matches remain unknown. A broadcast module identifies the module, not its host. A match does not authenticate identity or establish current regulatory compliance. Each range carries its FAA evidence link in worker/rid-catalog.mjs.
 
 A full Wi-Fi BSSID or Bluetooth address is shown only on the collecting phone. Repeated candidate BSSIDs receive per-install HMAC identifiers and per-node server HMAC profile IDs. No raw address is uploaded. Do not group devices by OUI alone; it can describe radio hardware rather than aircraft maker. Locally administered addresses may be randomized; globally assigned addresses can also be spoofed. Android documents address randomization at https://source.android.com/docs/core/connect/wifi-mac-randomization .
 
@@ -214,3 +214,7 @@ and an actual authorized test stream. OcuSync reception remains a separate
 hardware effort; an external antenna alone does not give Android raw I/Q access.
 
 The 2026-10-17 receiver work and Marauder comparison are documented in [USB scanner testing](usb-scanner-testing.md), including pinned source revisions, receive formats, adapter IDs and outstanding physical validation.
+
+## Robot advertisements
+
+Android 0.8.0 and Desktop 0.5.0 recognize one manufacturer-published CyberDog BLE pattern as a **possible** robot dog. All three advertisement fields must match. See [robot signals](robot-signals.md) for separate sharing consent, original source and reception limits.

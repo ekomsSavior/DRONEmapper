@@ -208,18 +208,26 @@ class Engine:
             if isinstance(mac,str) and MAC.fullmatch(mac):
                 identity={'mac':mac,'radio_vendor':self.catalog.vendor(mac)}
                 address=mac
-            elif kind=='rid' and isinstance(receiver_id,str):
+            elif kind in ('rid','robot-candidate') and isinstance(receiver_id,str):
                 try: address=str(uuid.UUID(receiver_id))
                 except ValueError: return
                 identity={'receiver_id':address}
             else:
                 return
-            key=source+'|'+address+('|candidate' if kind=='candidate' else '|rid')
+            key=source+'|'+address+('|candidate' if kind in ('candidate','robot-candidate') else '|rid')
             entry=self.contacts.setdefault(key,{'key':key,'source':source,**identity})
             entry.update(seen=received)
             if finite(event.get('rssi_dbm'),-127,20):
                 entry['rssi_dbm']=event['rssi_dbm']
-            if kind=='candidate':
+            if kind=='robot-candidate':
+                if event.get('signature') != 'cyberdog-ble-v1':
+                    self.contacts.pop(key, None)
+                    return
+                entry.update(kind='possible-robot',name='Possible robot dog · CyberDog-style BLE',
+                             signature=event['signature'],protocol='ble-robot-candidate',
+                             identification='Unconfirmed advertisement pattern')
+                self._queue(key,entry,received)
+            elif kind=='candidate':
                 entry.update(kind='possible-drone',name='Possible drone / camera link',ssid=event['name'],signature=event['signature'])
                 if finite(event.get('frequency_mhz'),2400,5900):
                     entry['frequency_mhz']=int(event['frequency_mhz'])
@@ -271,7 +279,8 @@ class Engine:
         self.last_queued[key]=(received,stamp)
 
     def _queue(self,key,entry,received):
-        candidate=entry['kind']=='possible-drone'
+        robot=entry['kind']=='possible-robot'
+        candidate=robot or entry['kind']=='possible-drone'
         stamp=received if candidate else entry.get('observed_at')
         last=self.last_queued.get(key,(0,0))
         if stamp is None or stamp<=last[1] or received-last[0]<5:
@@ -279,20 +288,22 @@ class Engine:
         settings=self.store.settings()
         record={'event_id':str(uuid.uuid4()),'received_at':received,'observed_at':stamp}
         if candidate:
-            if settings['station'] is None or 'frequency_mhz' not in entry:
+            if settings['station'] is None or (not robot and 'frequency_mhz' not in entry):
                 return
             lat,lon=(round(math.floor(c*100)/100+.005,3) for c in settings['station'])
             # Node-specific stable pseudonym; neither full MAC nor network name is uploaded.
-            digest=hmac.new(bytes.fromhex(self.store.config['secret']),entry['mac'].encode(),hashlib.sha256).digest()
+            digest=hmac.new(bytes.fromhex(self.store.config['secret']),(('ble|' + entry.get('mac', entry.get('receiver_id',''))) if robot else entry['mac']).encode(),hashlib.sha256).digest()
             record.update(observation_type='wifi-candidate',candidate_id=str(uuid.UUID(bytes=digest[:16])),
-                signature=entry['signature'],frequency_mhz=entry['frequency_mhz'],location_grid_degrees=.01,latitude=lat,longitude=lon)
+                signature=entry['signature'],location_grid_degrees=.01,latitude=lat,longitude=lon)
+            if robot: record['observation_type']='ble-robot-candidate'
+            else: record['frequency_mhz']=entry['frequency_mhz']
         else:
             for field in ('rid','id_type','aircraft_type','protocol','latitude','longitude','altitude_m','speed_mps','heading'):
                 if field in entry:
                     record[field]=entry[field]
         if 'rssi_dbm' in entry:
             record['rssi_dbm']=entry['rssi_dbm']
-        self.store.add(record,settings['share_areas' if candidate else 'share_rid'])
+        self.store.add(record,settings['share_robots' if robot else 'share_areas' if candidate else 'share_rid'])
         self.last_queued[key]=(received,stamp)
 
     def snapshot(self):

@@ -91,7 +91,7 @@ class Connection:
                 self.store.config.update(token=token,node_handle=result['node_handle'],display_name=str(result.get('display_name','Anonymous'))[:32])
                 self.store.config.pop('pair',None)
                 settings=self.store.settings()
-                settings.update(share_rid=False,share_areas=False,share_decoded=False)
+                settings.update(share_rid=False,share_areas=False,share_robots=False,share_decoded=False)
                 self.store.update(settings)
         elif result.get('status')=='expired':
             with self.store.lock:
@@ -115,7 +115,7 @@ class Uploader:
         # The same lock orders consent changes with outgoing requests.
         with self.store.lock:
             settings=self.store.settings()
-            if not (settings['share_rid'] or settings['share_areas'] or settings['share_decoded']):
+            if not (settings['share_rid'] or settings['share_areas'] or settings['share_robots'] or settings['share_decoded']):
                 self.status='Sharing is off'
                 return
             if not self.store.connected():
@@ -145,7 +145,7 @@ class Uploader:
                 self.next_attempt=time.monotonic()+(10 if records else 60)
             except ApiError as error:
                 if error.status in (401,403):
-                    settings.update(share_rid=False,share_areas=False,share_decoded=False)
+                    settings.update(share_rid=False,share_areas=False,share_robots=False,share_decoded=False)
                     self.store.update(settings)
                     self.status='Node credential rejected · sharing stopped; reconnect your account'
                 elif error.status in (400,422):

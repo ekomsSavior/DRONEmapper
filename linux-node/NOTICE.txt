@@ -42,3 +42,8 @@ bitarray (PSF). These libraries are installed separately.
 readsb (GPL-3.0) is a separate receiver process, built by the optional setup script
 at revision 8afcc22de2de81be38231695285070603af78ef4. Its source/license remain in
 the installation source directory; no readsb binary is bundled.
+
+CyberDog BLE advertisement research: MiRoboticsLab/cyberdog_ros2
+https://github.com/MiRoboticsLab/cyberdog_ros2/blob/9a8674e5009f0ea7c0736168dfbd8d501900a4cb/cyberdog_interaction/cyberdog_wireless/bluetooth/bluetooth/gattserver.py
+Published advertisement values were independently implemented as an unconfirmed
+pattern matcher. No robot control code or research-pack code is bundled.

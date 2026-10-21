@@ -42,6 +42,7 @@ def parser():
     config.add_argument('--serial-format',choices=['marauder','remoteid-json'])
     config.add_argument('--share-rid',action=argparse.BooleanOptionalAction,default=None)
     config.add_argument('--share-decoded',action=argparse.BooleanOptionalAction,default=None)
+    config.add_argument('--share-robots',action=argparse.BooleanOptionalAction,default=None)
     config.add_argument('--share-areas',action=argparse.BooleanOptionalAction,default=None)
     serve=commands.add_parser('serve',help='Open the local radar/control dashboard')
     serve.add_argument('--port',type=int,default=8790)

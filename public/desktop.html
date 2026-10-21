@@ -15,19 +15,19 @@
   <p class="eyebrow">CHURCH OF MALWARE / SAVIORSEC</p>
   <h1>Your computer. A stationary scanner.</h1>
   <p><strong>Windows, macOS and Linux.</strong> A local radar, live detection list and optional community-map contributions. Run Wi-Fi, Bluetooth and a HackRF or RTL-SDR together. Free and open source, with no subscription.</p>
-  <p><a href="/downloads/DRONEmapper-Desktop-0.4.0.zip"><strong>Download Desktop node · 0.4.0 · all three systems</strong></a> · <a href="/downloads/SHA256SUMS.txt">Checksums</a> · <a href="/source.zip">Complete source</a></p>
+  <p><a href="/downloads/DRONEmapper-Desktop-0.5.0.zip"><strong>Download Desktop node · 0.5.0 · all three systems</strong></a> · <a href="/downloads/SHA256SUMS.txt">Checksums</a> · <a href="/source.zip">Complete source</a></p>
   <p><a href="#windows">Windows setup ↓</a> · <a href="#macos">macOS setup ↓</a> · <a href="#linux">Linux setup ↓</a> · <a href="/downloads/desktop-node-setup.md">Detailed receiver guide</a></p>
   <p>This ZIP contains the Python app and launchers. Install <a href="https://www.python.org/downloads/">Python 3.10 or newer</a> first. The first launch needs internet to install dependencies. Extract the ZIP into a folder you can write to.</p>
   <h2 id="windows">Start on Windows</h2>
   <ol>
     <li>Install Python with the Python launcher enabled, then extract the ZIP.</li>
-    <li>Open <code>DRONEmapper-Desktop-0.4.0\linux-node</code> and double-click <strong>Start-DRONEmapper.cmd</strong>. The shared source folder is named <code>linux-node</code> on all three systems.</li>
+    <li>Open <code>DRONEmapper-Desktop-0.5.0\linux-node</code> and double-click <strong>Start-DRONEmapper.cmd</strong>. The shared source folder is named <code>linux-node</code> on all three systems.</li>
     <li>The launcher installs the node dependencies and opens <a href="http://127.0.0.1:8790/">127.0.0.1:8790</a>. Leave its terminal running.</li>
   </ol>
   <p>For Bluetooth, choose <strong>System Bluetooth</strong>. Wi-Fi capture needs <a href="https://www.wireshark.org/download.html">Wireshark with Npcap</a>, raw 802.11 capture support and a compatible monitor-mode driver. Optional HackRF/RTL-SDR tools and USB drivers are installed separately; see the receiver guide.</p>
   <h2 id="macos">Start on macOS</h2>
   <ol>
-    <li>Install Python, extract the ZIP and open Terminal in <code>DRONEmapper-Desktop-0.4.0</code>.</li>
+    <li>Install Python, extract the ZIP and open Terminal in <code>DRONEmapper-Desktop-0.5.0</code>.</li>
     <li>Run <code>bash linux-node/Start-DRONEmapper.command</code>.</li>
     <li>The launcher installs dependencies and opens the local radar. Allow Terminal/Python Bluetooth access when macOS asks, then choose <strong>System Bluetooth</strong>.</li>
   </ol>
@@ -35,7 +35,7 @@
   <p>Windows/macOS support includes the dashboard, radar, account pairing and receiver integrations. Automated checks pass on Windows, macOS and Linux; native Windows/macOS hardware reception has not yet been verified.</p>
   <h2 id="linux">Start on Debian or Ubuntu</h2>
   <ol>
-    <li>Download and extract the ZIP. Open a terminal inside <code>DRONEmapper-Desktop-0.4.0</code>.</li>
+    <li>Download and extract the ZIP. Open a terminal inside <code>DRONEmapper-Desktop-0.5.0</code>.</li>
     <li>Plug in a dedicated USB Wi-Fi adapter. Run <code>iw dev</code> to find its interface name. Keep your normal Internet adapter separate.</li>
     <li>Run <code>bash linux-node/setup-debian.sh YOUR_DEDICATED_USB_INTERFACE</code>, replacing the final word with that interface name.</li>
     <li>Setup requests sudo to install the receiver tools, configure capture permissions and create a monitor interface. It starts the dashboard at <a href="http://127.0.0.1:8790/">127.0.0.1:8790</a>. Leave the terminal running.</li>
@@ -82,6 +82,6 @@ bash linux-node/run-local.sh</code></pre>
   <p>To stop, press <strong>Ctrl+C</strong> in the terminal; restart with the same launcher. To update, stop the node, extract the new release and run its launcher. If updating files in place, pass <code>--update</code> to refresh dependencies. Debian/Ubuntu users can run <code>bash linux-node/run-local.sh</code> from the new folder. Pairing and sharing settings live in your private user-state directory and are preserved. Keep one node process running per state directory.</p>
   <p>The download includes the full <strong>setup guide</strong>, headless CLI instructions, an optional systemd user-service template, protocol research, source and license notices.</p>
   <p>Built by <a href="https://churchofmalware.org/">Church of Malware</a> and <a href="https://churchofmalware.org/work/">saviorSEC, the Church’s research branch</a>. Desktop code: AGPL-3.0-or-later. <a href="/credits.html">Credits &amp; licenses</a>.</p>
-</main>
+<h2>Robot signals</h2><p>Bluetooth can also recognize a documented CyberDog advertisement pattern. It appears as a <strong>possible robot dog</strong> in the live list and Signals radar. Enable <strong>Share approximate robot signal areas</strong> separately to contribute a rounded station area. A match has no robot coordinates and does not authenticate its identity. Physical CyberDog reception still needs field testing.</p></main>
 </body>
 </html>

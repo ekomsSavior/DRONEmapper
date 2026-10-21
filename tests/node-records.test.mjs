@@ -69,3 +69,16 @@ test('DJI DroneID accepts only aircraft fields with distinct protocol identity',
  const row=nodeRecord(r,'dji-test',now);assert.equal(row.model,'Mavic Air 2');assert.equal(row.device_id,undefined);assert.match(row.precision,/unverified/);
  assert.equal(nodeRecord({...r,model_code:255},'dji-test',now).model,null);
 });
+
+test('robot advertisements remain coarse unconfirmed signals and cannot assert identity',()=>{
+ const raw={...candidate(),observation_type:'ble-robot-candidate',signature:'cyberdog-ble-v1'};
+ delete raw.frequency_mhz;
+ assert.equal(validateBatch(batch(raw),now).length,1);
+ for(const extra of [{mac:'00:11:22:33:44:55'},{ssid:'private'},{manufacturer:'Xiaomi'},{model:'CyberDog'},{frequency_mhz:2402},{signature:'ffe0'},{signature:'wifi-cam-name'},{latitude:37.12345}])assert.throws(()=>validateBatch(batch({...raw,...extra}),now));
+ const record=nodeRecord(raw,'signal-test',now);
+ assert.equal(record.record_type,'signal');assert.equal(record.kind,'possible-robot');assert.equal(record.domain,'ground');
+ assert.equal(record.manufacturer,null);assert.equal(record.model,null);assert.equal(record.position_basis,'receiver-area');
+ const [merged]=mergeNodeRows([{node:'a',last_seen:now,data:JSON.stringify(record)}],now);
+ assert.equal(merged.live,false);assert.deepEqual(merged.trail,[]);
+ assert.equal(mergeNodeRows([{node:'a',last_seen:now,data:JSON.stringify(record)}],now+15*86400)[0].ghost,true);
+});

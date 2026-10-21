@@ -1,6 +1,6 @@
 # ESP32 / CYD serial receivers and channel hopping
 
-DRONEmapper Desktop 0.4.0 · **Church of Malware / saviorSEC**
+DRONEmapper Desktop 0.5.0 · **Church of Malware / saviorSEC**
 
 ## Connect an external receiver
 

@@ -12,8 +12,8 @@ export function validateBatch(body,now,maxAge=900){
  envelope(body);if(!Array.isArray(body.observations)||body.observations.length<1||body.observations.length>50)throw Error('Expected 1–50 observations');
  const seen=new Set();
  for(const r of body.observations){
-  const candidate=r?.observation_type==='wifi-candidate',adsb=r?.observation_type==='adsb-uas',dji=r?.observation_type==='dji-droneid';
-  const required=['event_id','latitude','longitude','observed_at','received_at',...(dji?['observation_type','protocol','device_id','model_code','verification','frequency_mhz']:adsb?['observation_type','protocol','icao','category']:candidate?['observation_type','candidate_id','signature','frequency_mhz','location_grid_degrees']:['rid','id_type','aircraft_type','protocol'])];
+  const robot=r?.observation_type==='ble-robot-candidate',candidate=robot||r?.observation_type==='wifi-candidate',adsb=r?.observation_type==='adsb-uas',dji=r?.observation_type==='dji-droneid';
+  const required=['event_id','latitude','longitude','observed_at','received_at',...(dji?['observation_type','protocol','device_id','model_code','verification','frequency_mhz']:adsb?['observation_type','protocol','icao','category']:candidate?['observation_type','candidate_id','signature','location_grid_degrees',...(robot?[]:['frequency_mhz'])]:['rid','id_type','aircraft_type','protocol'])];
   const optional=dji?{}:adsb?{rssi_dbfs:[-100,0],altitude_m:[-609.6,30480],speed_mps:[0,1028.889],heading:[0,359.999]}:candidate?{rssi_dbm:[-127,20]}:{rssi_dbm:[-127,20],altitude_m:[-999.5,31767.5],speed_mps:[0,254.25],heading:[0,359]};
   if(!r||typeof r!=='object'||Array.isArray(r)||required.some(k=>!(k in r))||Object.keys(r).some(k=>!required.includes(k)&&!(k in optional)))throw Error('Unexpected fields');
   if(typeof r.event_id!=='string'||!UUID.test(r.event_id)||seen.has(r.event_id))throw Error('Invalid event ID');seen.add(r.event_id);
@@ -24,7 +24,7 @@ export function validateBatch(body,now,maxAge=900){
   }else if(adsb){
    if(r.protocol!=='adsb'||r.category!=='B6'||typeof r.icao!=='string'||! /^[0-9a-f]{6}$/.test(r.icao)||['000000','ffffff'].includes(r.icao))throw Error('Invalid ADS-B UAS report');
   }else if(candidate){
-   if(!UUID.test(r.candidate_id)||!['wifi-cam-name','tello-name'].includes(r.signature)||r.location_grid_degrees!==0.01||!Number.isInteger(r.frequency_mhz)||!number(r.frequency_mhz,2400,5900))throw Error('Invalid candidate');
+   if(!UUID.test(r.candidate_id)||r.location_grid_degrees!==0.01||(robot?r.signature!=='cyberdog-ble-v1':!['wifi-cam-name','tello-name'].includes(r.signature)||!Number.isInteger(r.frequency_mhz)||!number(r.frequency_mhz,2400,5900)))throw Error('Invalid candidate');
    for(const key of ['latitude','longitude'])if(Math.abs((r[key]-.005)*100-Math.round((r[key]-.005)*100))>0.0001)throw Error('Receiver area must be rounded to grid center');
   }else{
    if(typeof r.rid!=='string'||! /^[a-f0-9]{40}$/.test(r.rid)||/^0+$/.test(r.rid))throw Error('Invalid broadcast ID');
@@ -35,6 +35,7 @@ export function validateBatch(body,now,maxAge=900){
  return body.observations;
 }
 export function nodeIdentity(raw,node){
+ if(raw.observation_type==='ble-robot-candidate')return ['signal-','robot-candidate:'+node+':'+raw.candidate_id];
  if(raw.observation_type==='wifi-candidate')return ['signal-','candidate:'+node+':'+raw.candidate_id];
  if(raw.observation_type==='adsb-uas')return ['adsb-','adsb:'+raw.icao];
  if(raw.observation_type==='dji-droneid')return ['dji-','dji:'+raw.device_id];
@@ -55,6 +56,7 @@ export function identify(hex,type,rules=catalog){
 }
 export function nodeRecord(raw,id,uploaded){
  const common={id,origin:'community-node',latitude:raw.latitude,longitude:raw.longitude,observed_at:raw.observed_at,received_at:raw.received_at,uploaded_at:uploaded,operator:null,purpose:'unknown'};
+ if(raw.observation_type==='ble-robot-candidate')return {...common,record_type:'signal',kind:'possible-robot',domain:'ground',name:'Possible robot dog · CyberDog-style BLE',manufacturer:null,model:null,identification:'unconfirmed-ble-pattern',position_basis:'receiver-area',position_method:'coarse-receiver-grid',precision:'Approximate receiver area; robot identity and location unconfirmed',status:'unconfirmed-signal',location_grid_degrees:.01,signature:raw.signature,protocol:'ble-robot-candidate',rssi_dbm:raw.rssi_dbm};
  if(raw.observation_type==='wifi-candidate')return {...common,record_type:'signal',kind:'possible-drone',domain:'unknown',name:raw.signature==='tello-name'?'Possible drone · Tello-style Wi-Fi':'Possible drone / camera link',manufacturer:null,model:null,identification:'unconfirmed-wifi-name',position_basis:'receiver-area',position_method:'coarse-receiver-grid',precision:'Approximate receiver area; drone location unknown',status:'unconfirmed-signal',location_grid_degrees:.01,signature:raw.signature,protocol:'wifi-camera-candidate',frequency_mhz:raw.frequency_mhz,rssi_dbm:raw.rssi_dbm};
  if(raw.observation_type==='dji-droneid'){
   const models={16:'Mavic Pro',24:'Mavic Air',41:'Mavic 2',53:'Mavic Mini',58:'Mavic Air 2',60:'M300 RTK',61:'DJI FPV',63:'Mini 2',64:'AGRAS T10',65:'AGRAS T30',66:'Air 2S',67:'M30',68:'Mavic 3',69:'Mavic 2 Enterprise Advanced',70:'Mini SE'};

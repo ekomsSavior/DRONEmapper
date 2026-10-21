@@ -18,7 +18,7 @@ Android 8 or newer. No root or Bluetooth dongle needed.
 
 Sharing is optional. Choose a display name or remain **Anonymous**; email and full MAC addresses stay off the public map. [More app instructions and build steps](android-node/README.md).
 
-**Updating to 0.7.3:** download the new APK from the same page and install it over
+**Updating to 0.8.0:** download the new APK from the same page and install it over
 your existing app—no uninstall. Pairing and settings are preserved. In **Phone
 capabilities**, check the version. USB Wi-Fi: **USB Wi-Fi adapter → Connect → Allow**.
 HackRF: **USB SDR · HackRF → Choose receiver → Connect → Allow** for local RF spectrum.
@@ -27,7 +27,7 @@ Updates are manual; re-enable your preferred **Sharing choices** after starting.
 ## Desktop scanner node
 
 Windows, macOS and Linux computers can run the [standalone node and radar](linux-node/README.md).
-[Download Desktop 0.4.0 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.5.0 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
 Pair with your account and choose which detections to share. Wi-Fi, Bluetooth, one SDR and an external USB serial receiver can run together.
 [ESP32 / Marauder receivers and optional Linux channel hopping](docs/serial-receivers.md).
 
@@ -60,7 +60,7 @@ python3 server.py
 
 Open **http://127.0.0.1:8780**. Allow a moment for the first collection. Data refreshes every five minutes while the server runs. Stop with `Ctrl+C`. On Windows, use `py -3 server.py`.
 
-Map visitors need only a browser. Scanner reports add Remote ID positions and optional approximate Wi-Fi signal areas. Observed items keep a profile and become ghosts after 14 days without another sighting.
+Map visitors need only a browser. Scanner reports add Remote ID positions and optional approximate Wi-Fi or supported robot signal areas. Observed items keep a profile and become ghosts after 14 days without another sighting.
 
 ## Where the data comes from
 
@@ -81,6 +81,8 @@ Website: **[AGPL-3.0-or-later](LICENSE)**. Android app: **[GPL-2.0-only](android
 
 <img width="624" height="341" alt="Screenshot_20261015_230856" src="https://github.com/user-attachments/assets/283dcdc7-a222-4e89-aad2-925b777a795b" />
 
-Model recognition now covers 106 reviewed FAA aircraft/module combinations. Historical map enrichment adds 22 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).
+Model recognition now covers 141 reviewed FAA aircraft/module combinations. Historical map enrichment adds 40 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).
 
 [Vehicle data, recurring feeds and HackRF connection notes](docs/source-reception-review.md).
+
+[Robot signal support and sharing](docs/robot-signals.md) · [Latest research review](docs/community-enrichment.md).

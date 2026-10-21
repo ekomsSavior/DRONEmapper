@@ -16,7 +16,7 @@ from .platform_support import private_directory, lock_file, valid_interface, val
 ORIGIN = 'https://dronemapper.churchofmalware.org'
 DEFAULTS = {'label': 'Stationary node', 'wifi_interfaces': [], 'ble_adapter': '',
             'sdr': 'off', 'sdr_band': '2400', 'sdr_mode':'spectrum', 'dji_frequency':2444.5, 'readsb_file':'', 'station': None,
-            'share_rid': False, 'share_areas': False, 'share_decoded':False, 'mqtt_file': '', 'serial_port':'', 'serial_baud':115200, 'serial_format':'marauder'}
+            'share_rid': False, 'share_areas': False, 'share_robots':False, 'share_decoded':False, 'mqtt_file': '', 'serial_port':'', 'serial_baud':115200, 'serial_format':'marauder'}
 BANDS = {'433': (430,440), '868': (863,870), '915': (902,928), '2400': (2400,2485),
          '5800': (5725,5875), '5900': (5850,5925), '1090': (1089,1091), 'ais': (161,163)}
 
@@ -47,11 +47,11 @@ def validate_settings(values):
         raise ValueError('Choose either a managed ADS-B receiver or an existing readsb file')
     if v['sdr']=='rtl' and v['sdr_mode']=='spectrum' and BANDS[v['sdr_band']][1]>1766:
         raise ValueError('RTL-SDR cannot directly tune 2.4 / 5 GHz; choose a lower band or HackRF')
-    if any(type(v[k]) is not bool for k in ('share_rid','share_areas','share_decoded')):
+    if any(type(v[k]) is not bool for k in ('share_rid','share_areas','share_robots','share_decoded')):
         raise ValueError('Sharing choices must be true or false')
     if v['station'] is not None and (not isinstance(v['station'],list) or len(v['station'])!=2 or not finite(v['station'][0],-89.99,89.99) or not finite(v['station'][1],-179.99,179.99)):
         raise ValueError('Station location needs valid latitude and longitude')
-    if v['share_areas'] and v['station'] is None:
+    if (v['share_areas'] or v['share_robots']) and v['station'] is None:
         raise ValueError('Set a stationary receiver location before sharing approximate areas')
     if not isinstance(v['mqtt_file'],str) or len(v['mqtt_file'])>4096 or '\0' in v['mqtt_file']:
         raise ValueError('Invalid MQTT configuration path')
@@ -106,7 +106,7 @@ class Store:
             # Disabling sharing cancels pending uploads immediately, not after restart.
             for row in self.db.execute("SELECT id,data FROM events WHERE state='queued'").fetchall():
                 kind = json.loads(row[1]).get('observation_type')
-                choice='share_areas' if kind=='wifi-candidate' else 'share_decoded' if kind in ('adsb-uas','dji-droneid') else 'share_rid'
+                choice='share_robots' if kind=='ble-robot-candidate' else 'share_areas' if kind=='wifi-candidate' else 'share_decoded' if kind in ('adsb-uas','dji-droneid') else 'share_rid'
                 if not checked[choice]:
                     self.db.execute("UPDATE events SET state='local' WHERE id=?",(row[0],))
             self.db.commit()
@@ -143,7 +143,7 @@ class Store:
             for k in ('token','node_handle','display_name','pair'):
                 self.config.pop(k,None)
             settings=self.settings()
-            settings.update(share_rid=False,share_areas=False,share_decoded=False)
+            settings.update(share_rid=False,share_areas=False,share_robots=False,share_decoded=False)
             self.update(settings)
 
     def close(self):

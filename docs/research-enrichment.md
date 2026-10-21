@@ -1,11 +1,11 @@
-# Research enrichment — 20 October 2026
+# Research enrichment — 21 October 2026
 
 Church of Malware / saviorSEC reviewed both the original and expanded worldwide
 community research collections of FAA declarations, FCC filings, vendor notes and
 radio signatures. They are research leads, not receiver logs. Their internal-only
 documents and scripts are not redistributed here.
 
-The scanner catalog now contains **3,716 rules covering 129 distinct manufacturer,
+The scanner catalog now contains **3,738 rules covering 141 distinct manufacturer,
 model and aircraft/module combinations**, up from 110 rules and 84 combinations.
 New coverage includes Teal, BRINC, Zipline, Freefly, Inspired Flight, Wingtra,
 AgEagle, Quantum-Systems, Wing, Matternet, Flytrex, Draganfly, Microdrones,
@@ -23,7 +23,7 @@ links and SHA-256 digests. Large individually assigned serial sets are deferred
 when they exceed the bounded offline catalog budget. New accepted declarations
 extend existing allocations without replacing earlier evidence. Overlapping
 allocations for different models remain unidentified across all three platforms.
-The latest review added 48 accepted declarations and 23 combinations. The catalog does not claim complete coverage of every
+The 21 October review added 12 accepted declarations and 12 combinations, including Harris Aerial, XAG, Amazon, DeltaQuad and ZERO ZERO ROBOTICS. The catalog does not claim complete coverage of every
 aircraft made by a listed company.
 
 To review another sanitized public FAA export, use
@@ -38,12 +38,11 @@ The same generated rules ship in the website, Android app and desktop node.
 Catalog recognition works offline and is applied to supported Remote ID reports.
 It does not add a new RF decoder or recover Remote ID from ordinary Wi-Fi CSVs.
 
-Twenty-six independently checked operational milestones add history in **17
-countries**: Brazil, China, Ecuador, Estonia, France, Ghana, Japan, Kenya, Nigeria,
-Singapore, South Africa, Sweden, Switzerland, Thailand, the United Arab Emirates,
-the United Kingdom and the United States. The latest additions cover Singapore
-police patrol robots and ANYmal inspection or demonstration activity in Brazil,
-Switzerland and the United Kingdom.
+Forty independently checked operational milestones add history in **20 countries**.
+The latest 14 references cover ANYmal inspections, Singapore Spot trials,
+Aurora trucking, May Mobility/Toyota shuttles and WeRide operations. Two Aurora
+city references describe one corridor, not two individual trucks. WeRide's
+month-level service dates remain month-level.
 `reviewed-history.json` preserves
 each event's original date precision and primary evidence. Coordinates are rounded
 city/region reference points, not measured aircraft positions, launch sites or
@@ -69,5 +68,4 @@ FCC bands, OUI allocations and vendor hostnames remain useful research context,
 but do not by themselves establish that a drone is nearby. MQTT is a transport;
 connecting an authorized broker and understanding its payload schema are separate
 requirements. The existing Remote ID, DJI DroneID, Wi-Fi candidate and ADS-B
-pipelines remain the supported reception paths. No private fleet service is
-accessed by this enrichment.
+pipelines remain the supported reception paths. The new CyberDog BLE candidate path is documented in [robot signals](robot-signals.md). No private fleet service is accessed by this enrichment.

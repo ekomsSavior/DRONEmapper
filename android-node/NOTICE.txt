@@ -93,3 +93,8 @@ public Great Scott Gadgets libhackrf USB protocol. Reference:
 https://github.com/greatscottgadgets/hackrf/blob/main/host/libhackrf/src/hackrf.c
 No libhackrf binary, transmitter or firmware updater is included. RF spectrum
 measurements remain local and do not establish drone identity or position.
+
+CyberDog BLE advertisement research: MiRoboticsLab/cyberdog_ros2
+https://github.com/MiRoboticsLab/cyberdog_ros2/blob/9a8674e5009f0ea7c0736168dfbd8d501900a4cb/cyberdog_interaction/cyberdog_wireless/bluetooth/bluetooth/gattserver.py
+Published advertisement values were independently implemented as an unconfirmed
+pattern matcher. No robot control code or research-pack code is bundled.

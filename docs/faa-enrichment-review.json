@@ -92,6 +92,42 @@
     "decision": "included"
   },
   {
+    "tracking": "RID000000073",
+    "makeName": "Harris Aerial",
+    "modelName": "Carrier H6",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000073",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 128,
+        "sha256": "9fa3ba47c284fa9310776cad3b3417e78e114d0f4eba0f04a3c8a6aee7d86e7a"
+      },
+      {
+        "id": 3181,
+        "sha256": "53cd61b9111fde8634bb9199cf90802a44a34238f96793f0a0cf84aa40a01080"
+      }
+    ],
+    "rule_count": 3,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000074",
+    "makeName": "Harris Aerial",
+    "modelName": "Carrier H8E",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000074",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 129,
+        "sha256": "165cb9cae2145fd3af691a7057d36dc1a2ae37b55a02a37d0d598ff80db9c7c8"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000000138",
     "makeName": "Microdrones",
     "modelName": "EasyOne",
@@ -162,6 +198,38 @@
     "rule_count": 3454,
     "rejected_allocation_count": 0,
     "decision": "deferred; individually assigned serial set exceeds bounded catalog budget"
+  },
+  {
+    "tracking": "RID000000162",
+    "makeName": "XAG",
+    "modelName": "P100",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000162",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 228,
+        "sha256": "1c721fa8e854ebe5ef362d370cc071a87a2e9b2368c88afbc53762bd82d76ff6"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000163",
+    "makeName": "XAG",
+    "modelName": "P100 Pro",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000163",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 229,
+        "sha256": "b393ded1362032963cf4da2ead12a04c0933f6391e7abad88857c9fbbfe1919c"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
   },
   {
     "tracking": "RID000000196",
@@ -462,6 +530,22 @@
       }
     ],
     "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000378",
+    "makeName": "Amazon Prime Air",
+    "modelName": "MK27-2",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000378",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 745,
+        "sha256": "1c6a8f0c7d660be00b183c461d391d90749f5d1f70d67ae4f0ff2443c880251f"
+      }
+    ],
+    "rule_count": 8,
     "rejected_allocation_count": 0,
     "decision": "included"
   },
@@ -1472,6 +1556,26 @@
     "decision": "included"
   },
   {
+    "tracking": "RID000001843",
+    "makeName": "Amazon Prime Air",
+    "modelName": "MK30",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001843",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 5961,
+        "sha256": "e0abd85df1d0ec5cffb28696edaeeb22ef00592c3569aaf2d3243ecd716b6c88"
+      },
+      {
+        "id": 4510,
+        "sha256": "e0abd85df1d0ec5cffb28696edaeeb22ef00592c3569aaf2d3243ecd716b6c88"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000001934",
     "makeName": "FIMI X8 Tele Drone",
     "modelName": "FMWRJ04A1",
@@ -1556,6 +1660,42 @@
     "decision": "included"
   },
   {
+    "tracking": "RID000002240",
+    "makeName": "XAG",
+    "modelName": "P150",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002240",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 5354,
+        "sha256": "0faf6b9dd84bf79a554aceaedf421ad6479d986816833f528dbea958c0339bb4"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002365",
+    "makeName": "DeltaQuad",
+    "modelName": "Evo",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002365",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 6276,
+        "sha256": "cb7f7fd8dd2966222d3d27fa45d8d8a839dc083680f14350ec6a4661bda4b652"
+      },
+      {
+        "id": 5567,
+        "sha256": "b1f0c16a8f52ffd8b272cb03df561d90a8ee525ae3c5c915cc0e02d89dff5cf9"
+      }
+    ],
+    "rule_count": 2,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000002429",
     "makeName": "Autel Robotics",
     "modelName": "EVO Nano+",
@@ -1576,6 +1716,22 @@
     "decision": "included"
   },
   {
+    "tracking": "RID000002588",
+    "makeName": "XAG",
+    "modelName": "P60",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002588",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 5988,
+        "sha256": "02076ab62c35b3f3f128473489ab9fca0191f181bd8adc6ea44e4c6560183d76"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000002590",
     "makeName": "Wingtra",
     "modelName": "WingtraRAY",
@@ -1585,6 +1741,54 @@
       {
         "id": 5990,
         "sha256": "8781e7ea0ba85b783063d0af3ffccaaa5a86a28123048607dddddbce17bb30cc"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002593",
+    "makeName": "ZERO ZERO ROBOTICS",
+    "modelName": "ZZ-H-1-003",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002593",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 5996,
+        "sha256": "486a94c9e471e198e000a9ec020d3d4cd55308445af11d3021f3602bab17a9ac"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002594",
+    "makeName": "ZERO ZERO ROBOTICS",
+    "modelName": "ZZ-H-1-004",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002594",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 5997,
+        "sha256": "04a4b1b7a8b8047b26808a2146552a07d5d8f733bd11c37d072efd2724550307"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002602",
+    "makeName": "XAG",
+    "modelName": "P150 Max",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002602",
+    "reviewed_at": "2026-10-21",
+    "revision_evidence": [
+      {
+        "id": 6013,
+        "sha256": "c1952f0714bf39e042fcbb6e5f274005cd9746700b267b23a50c9f795d57a29c"
       }
     ],
     "rule_count": 1,

@@ -11,10 +11,11 @@ with tempfile.TemporaryDirectory() as directory:
     engine=Engine(store)
     try:
         store.config['token']='offline-test-only'
-        engine.configure({'share_rid':True,'share_decoded':True,'share_areas':True,'station':[37.123456,-122.123456]})
+        engine.configure({'share_rid':True,'share_decoded':True,'share_areas':True,'share_robots':True,'station':[37.123456,-122.123456]})
         with patch('time.time',return_value=NOW):
             engine.ingest(event())
             engine.ingest(event(type='candidate',name='WIFI_8K__test123',signature='wifi-cam-name',frequency_mhz=2437))
+            engine.ingest(event(type='robot-candidate',source='ble:hci0',signature='cyberdog-ble-v1'))
             engine.ingest(adsb_records(document(),NOW)[0])
             engine.ingest(live_dji_records({'detections':[dji_payload(packet())]},NOW,NOW,2444.5)[0])
             batch={'schema_version':1,'node_id':store.config['node_id'],'observations':store.batch(NOW)}

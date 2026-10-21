@@ -1,4 +1,4 @@
-**Catalog update: Android 0.7.3, version code 14.** Shared catalog tests cover additional public FAA allocations, numeric gaps and overlapping declarations that must remain unidentified. No new RF decoder or hardware reception claim is introduced.
+**Catalog update: Android 0.8.0, version code 15.** Shared catalog tests cover additional public FAA allocations, numeric gaps and overlapping declarations that must remain unidentified. A new CyberDog BLE candidate matcher has software tests; physical reception on a CyberDog has not been tested.
 
 **Connection update: Android 0.7.2, version code 13.** USB UI tests cover the direct HackRF handoff, Android permission flow, Mayhem serial-mode guidance and re-enumeration as a HackRF receiver on API 28 and 35. No new physical HackRF reception test is claimed.
 
