@@ -1,0 +1,1283 @@
+{
+  "records": 4939,
+  "manufacturer_groups": 495,
+  "model_groups": 688,
+  "missing_manufacturers": [
+    {
+      "manufacturer": "CAIG",
+      "count": 5,
+      "url": null
+    },
+    {
+      "manufacturer": "CASUN Intelligent Equipment",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Ukrainian Armed Forces",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "A-Lab Factory",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Embodied",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Refraction AI",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Chowbotics Sally",
+      "count": 1,
+      "url": null
+    }
+  ],
+  "missing_models": [
+    {
+      "manufacturer": "",
+      "model": "Unknown",
+      "kind": "drone",
+      "count": 19,
+      "url": null
+    },
+    {
+      "manufacturer": "Kiwibot",
+      "model": "Kiwibot 4.0",
+      "kind": "delivery-robot",
+      "count": 14,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Shadow",
+      "kind": "drone",
+      "count": 13,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Raven",
+      "kind": "drone",
+      "count": 11,
+      "url": null
+    },
+    {
+      "manufacturer": "ABB Robotics",
+      "model": "ABB IRB 6700",
+      "kind": "industrial-robot",
+      "count": 5,
+      "url": null
+    },
+    {
+      "manufacturer": "Alphadroid",
+      "model": "Alpha AMR",
+      "kind": "ground-robot",
+      "count": 5,
+      "url": null
+    },
+    {
+      "manufacturer": "CAIG",
+      "model": "Wing Loong II",
+      "kind": "drone",
+      "count": 5,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Wasp",
+      "kind": "drone",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Wasp, Raven",
+      "kind": "drone",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Predator",
+      "kind": "drone",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "Aescape",
+      "model": "Aescape Massage Robot",
+      "kind": "ground-robot",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "John Deere",
+      "model": "John Deere autonomous tractor + See & Spray",
+      "kind": "ground-robot",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "Donecle",
+      "model": "Iris",
+      "kind": "drone",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "EasyMile",
+      "model": "EZ10",
+      "kind": "autonomous-vehicle",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "Einride",
+      "model": "Einride Pod",
+      "kind": "autonomous-vehicle",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "Hirschbach Motor Lines",
+      "model": "Hirschbach Autonomous Freight Operations",
+      "kind": "autonomous-vehicle",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "Serve Robotics",
+      "model": "Serve Robot",
+      "kind": "delivery-robot",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "Threod Systems",
+      "model": "Stream C",
+      "kind": "drone",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "UISEE",
+      "model": "UISEE TH10 Tow Tractor",
+      "kind": "autonomous-vehicle",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "Aviation Industry Corporation of China",
+      "model": "Wing Loong UAV",
+      "kind": "drone",
+      "count": 4,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Hunter",
+      "kind": "drone",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "Beam",
+      "model": "BeamPro",
+      "kind": "ground-robot",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "Berkshire Grey",
+      "model": "Berkshire Grey System",
+      "kind": "ground-robot",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "Boonray Technology",
+      "model": "Boonray BLEB145A1 Driverless Mining Truck",
+      "kind": "autonomous-vehicle",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "Bot Auto",
+      "model": "Bot Auto Autonomous Truck",
+      "kind": "autonomous-vehicle",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "Didi Chuxing",
+      "model": "DiDi Autonomous Driving (Gemini)",
+      "kind": "autonomous-vehicle",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "HavocAI",
+      "model": "Havoc USV",
+      "kind": "surface-vessel",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "JD Logistics",
+      "model": "JD Autonomous Delivery Robot",
+      "kind": "delivery-robot",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "Perennial Autonomy",
+      "model": "Merops Interceptor",
+      "kind": "drone",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "Realbotix",
+      "model": "Sally",
+      "kind": "humanoid",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "Volatus Aerospace",
+      "model": "Heavy-Lift Cargo Drone",
+      "kind": "drone",
+      "count": 3,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Draganflyer X6",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "MQ-1 Predator",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Shadow, Wasp, Raven",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "A2Z Drone Delivery",
+      "model": "RDSX",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Avride",
+      "model": "Avride Robotaxi (Hyundai Ioniq 5)",
+      "kind": "autonomous-vehicle",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "BelAZ",
+      "model": "BELAZ-7513R Robotic Dump Truck",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Braga Fresh Partners",
+      "model": "Braga Smart Farming System",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "CASUN Intelligent Equipment",
+      "model": "C5 Series Forklift AGV",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Dexterity",
+      "model": "Dexterity DXR",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Dominion Dynamics",
+      "model": "Scout",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Fetch Robotics",
+      "model": "Fetch AMR",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Ghost Robotics",
+      "model": "Ghost Robotics Spirit 40",
+      "kind": "robot-dog",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Helsing",
+      "model": "HX-2 (and HF-1)",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Huntington Ingalls Industries",
+      "model": "REMUS (100 / 300 / 620)",
+      "kind": "underwater",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "KEENON Robotics",
+      "model": "Diners",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Knightscope",
+      "model": "Knightscope K3",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Meituan",
+      "model": "Meituan Autonomous Delivery Vehicle",
+      "kind": "autonomous-vehicle",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Naio Technologies",
+      "model": "Naio weeding robots (Ted / Oz / Orio)",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Neolix Technologies",
+      "model": "Neolix X3",
+      "kind": "autonomous-vehicle",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Neros",
+      "model": "Neros FPV Drone",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Nomagic",
+      "model": "justInduct",
+      "kind": "industrial-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Raphe mPhibr",
+      "model": "Raphe UAV Platform",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Skye Air Mobility",
+      "model": "Skye Air Drone Fleet",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Trunk.Tech",
+      "model": "Trunk Highway",
+      "kind": "autonomous-vehicle",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "XTEND",
+      "model": "XTEND Tactical Drone",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Yunji Technology",
+      "model": "RUN",
+      "kind": "ground-robot",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Zeekr",
+      "model": "Zeekr RT (Ojai)",
+      "kind": "autonomous-vehicle",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "Zipline",
+      "model": "Zipline Zip",
+      "kind": "drone",
+      "count": 2,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "CQ-10A Snowgoose",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Raven RQ11A/B Wasp",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Nano Shrike III UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "AUAV-Galah Unmanned Aircraft System",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "AirRobot AR-1 00 Draganflyer X6 Draganflyer X8",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "BAT 3 UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Tempest miniature UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Maxi-Joker3",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Quarter-Scale Piper Cub UAV CropCam UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Information Withheld",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Leptron Avenger",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "WASP II",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Honeywell Micro Air Vehicle",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "ShadowHawk UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "EasyStar UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Black Hawk Parafoil Modified Cloud Dancer Powered Parafoil UAV with Autopilot",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "CLMax Engineering Falcon Unmanned Ariel Vehicle",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Predator and ??",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Aqua Puma",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Wasp (BATMAV) Small UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Insight A-20",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "University Built (One-Third Scale Piper Cub) UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Crop Cam plane",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Raven (RQ – 11A, RQ – 11B)",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "radio controlled airplane made by U of W",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Yamaha RMAX Type II helicopter",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Insitu Insight UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Hornet Micro from Adaptive Flight, Inc",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Spectra AP flying wing UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "VIPAR (Vertical Integrated Patrol And Reconnaissance)",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Hunter, Shadow",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Viking 300, Scan Eagle",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Wasp, Raven, Puma-AE",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Wasp, Raven. Puma-AE, Shadow",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Preadtor, Reaper",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "gMAV",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Warrior",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Raven, Warrior, Puma-AE",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Tiger Moth",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Shadow, Warrior, Raven",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Vigilante",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Global Hawk, BAMS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Spyder",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "",
+      "model": "Shadow, Raven",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "A-Lab Factory",
+      "model": "A-Lab Factory Android",
+      "kind": "humanoid",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Alphadroid",
+      "model": "Hikpad AMR",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Amazon",
+      "model": "Amazon Robotics fleet",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Amity Robotics",
+      "model": "Amity ARC Move",
+      "kind": "humanoid",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Anyverse Dynamics",
+      "model": "Anyverse K15",
+      "kind": "humanoid",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "ASTI Mobile Robotics Group",
+      "model": "EBot 350",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Avatar Robotics",
+      "model": "Avatar Humanoid",
+      "kind": "humanoid",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "BAE Systems",
+      "model": "BAE Systems ARCIMS USV",
+      "kind": "surface-vessel",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Balyo",
+      "model": "Balyo MV",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Botrista",
+      "model": "Botrista DrinkBot",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Buoyant Aero",
+      "model": "Buoyant Aero Cargo Blimp",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Caterpillar",
+      "model": "789D AHS",
+      "kind": "autonomous-vehicle",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Cellula Robotics",
+      "model": "Solus-LR",
+      "kind": "underwater",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Chery Automobile",
+      "model": "AiMOGA (Mornine)",
+      "kind": "humanoid",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Civ Robotics",
+      "model": "CivDot",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "CNH Industrial",
+      "model": "CNH Raven Autonomy (Case IH / New Holland)",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Dexai Robotics",
+      "model": "Dexai Alfred",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Didi Autonomous Driving",
+      "model": "Didi Robotaxi",
+      "kind": "autonomous-vehicle",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "DIODON Drone Technology",
+      "model": "DP3",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "ECA Group",
+      "model": "Alistar",
+      "kind": "underwater",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Elroy Air",
+      "model": "Elroy Air VTOL",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Epiroc",
+      "model": "Pit Viper",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Shenzhen Uditech",
+      "model": "Yomie",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "FANUC Corporation",
+      "model": "FANUC M-20iD",
+      "kind": "industrial-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "FarmWise",
+      "model": "FarmWise Titan",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Teledyne FLIR",
+      "model": "FLIR Thermal UAS",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Flirtey (SkyDrop)",
+      "model": "Flirtey Delivery Drone",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Flytrex",
+      "model": "Flytrex delivery drone (Sky2)",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Formic",
+      "model": "Formic Cobot RaaS",
+      "kind": "industrial-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Garuda Aerospace",
+      "model": "Kisan Drone",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "GigaAI",
+      "model": "SeeLight S1",
+      "kind": "humanoid",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "GreyOrange",
+      "model": "Ranger MoveSmart",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Hylio",
+      "model": "AG-272",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "MOIA",
+      "model": "ID. Buzz AD",
+      "kind": "autonomous-vehicle",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Insitu",
+      "model": "RQ-21 Blackjack",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "IntBot",
+      "model": "José (IntBot humanoid)",
+      "kind": "humanoid",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "YOGO Robot",
+      "model": "KAGO 5",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "KEENON Robotics",
+      "model": "T9 Pro",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "LG Electronics",
+      "model": "CLOi HomeBot",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "LYRO Robotics",
+      "model": "LYRO Pick & Pack Robot",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Ukrainian Armed Forces",
+      "model": "Magura V5 USV",
+      "kind": "surface-vessel",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Momenta Global",
+      "model": "Momenta Robotaxi",
+      "kind": "autonomous-vehicle",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Embodied",
+      "model": "Moxie",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Twinny",
+      "model": "NarGo",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Nauticus Robotics",
+      "model": "Aquanaut Mark 2",
+      "kind": "underwater",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Nori Robotics",
+      "model": "Nori L2",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Nuro",
+      "model": "Nuro Autonomous Prius",
+      "kind": "autonomous-vehicle",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Oceaneering",
+      "model": "Millennium ROV",
+      "kind": "underwater",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Orchard Robotics",
+      "model": "Orchard Vision System",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Oshen",
+      "model": "C-Star",
+      "kind": "surface-vessel",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Oshkosh Corporation",
+      "model": "TerraMax",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "ATOMS",
+      "model": "Pronto AHS",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Quantum Systems",
+      "model": "Vector (and Trinity)",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "QuikBot Technologies",
+      "model": "QuikBot Delivery Robot",
+      "kind": "delivery-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Raise Robotics",
+      "model": "Raise Mobile Manipulator",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Recycleye",
+      "model": "Recycleye Robotics",
+      "kind": "industrial-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Refraction AI",
+      "model": "REV-1",
+      "kind": "delivery-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Rugged Robotics",
+      "model": "Mark1",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Sagar Defence Engineering",
+      "model": "Sagar USV",
+      "kind": "surface-vessel",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Chowbotics Sally",
+      "model": "Sally",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Construction Robotics",
+      "model": "SAM100",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Scaled Robotics",
+      "model": "Scaled Robotics Progress Monitor",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Leidos",
+      "model": "Sea Hunter (and Seahawk)",
+      "kind": "surface-vessel",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Seegrid",
+      "model": "Palion AMR",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "SharkNinja",
+      "model": "Navigator RV2110",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Skyfire AI",
+      "model": "Skyfire AI Swarm System",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "SwarmFarm Robotics",
+      "model": "SwarmBot",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Tau Robotics",
+      "model": "Tau Humanoid",
+      "kind": "humanoid",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Tencore",
+      "model": "TerMIT",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Shifters AI",
+      "model": "TRUST",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Ukrainian Armed Forces",
+      "model": "Ukrainian FPV Loitering Munitions",
+      "kind": "drone",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Ulysses",
+      "model": "Ulysses Autonomous Maritime Fleet",
+      "kind": "surface-vessel",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Verobotics",
+      "model": "Ibex",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    },
+    {
+      "manufacturer": "Zebra Technologies",
+      "model": "Fetch AMR line",
+      "kind": "ground-robot",
+      "count": 1,
+      "url": null
+    }
+  ]
+}

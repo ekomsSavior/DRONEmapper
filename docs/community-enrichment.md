@@ -27,6 +27,8 @@ The internal-only research documents and scripts are not redistributed.
 
 Primary evidence, dates and review decisions are retained in the
 [FAA review](faa-enrichment-review.json) and [historical review](reviewed-history.json).
+The follow-up [manufacturer and model link review](device-link-review.md) adds
+223 model references and 19 company references across the map.
 The historical adapter runs in the existing collection cycle. Refreshing it does
 not change an event's original date or discover new articles automatically.
 
