@@ -68,6 +68,8 @@ def make_server(engine,port=8790):
                     engine.stop()
                 elif self.path=='/api/settings':
                     engine.configure(body)
+                elif self.path=='/api/serial':
+                    engine.connect_serial(body)
                 elif self.path=='/api/pair':
                     self.reply(engine.connection.start())
                     return

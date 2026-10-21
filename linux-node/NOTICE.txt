@@ -24,6 +24,12 @@ https://standards.ieee.org/products-programs/regauth/
 Optional separately installed dependencies/tools retain their own licenses:
 Bleak (MIT), Eclipse Paho MQTT Python (EPL-2.0 / EDL-1.0), BlueZ, Wireshark
 dumpcap, HackRF tools and Osmocom rtl-sdr. They are not bundled in this package.
+pySerial (BSD) is an optional separately installed serial-port dependency.
+The stock Marauder RID CSV layout was inspected in Just Call Me Koko's
+ESP32Marauder project at commit 45f47daa6ae65b36bbef9f9051977adcb315b1c5,
+esp32_marauder/WiFiScanRemoteId.h. The serial parser is independent code;
+no Marauder firmware or implementation is redistributed in this package.
+https://github.com/justcallmekoko/ESP32Marauder
 The root repository NOTICE.txt covers other website data sources.
 
 The optional DJI receiver includes receive-only demodulation helpers derived from

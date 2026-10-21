@@ -50,7 +50,8 @@ def doctor():
                     interfaces.append({'name':match.group(1), 'mode':'monitor capability needs checking', 'channel':None})
         except (OSError, subprocess.SubprocessError):
             pass
-    return {'platform':system(),'wifi':interfaces,'bluetooth':([p.name for p in Path('/sys/class/bluetooth').glob('hci*')] if system() == 'Linux' else ['default']),
+    from .serial_receiver import ports
+    return {'serial_ports':ports(), 'pyserial':importlib.util.find_spec('serial') is not None, 'platform':system(),'wifi':interfaces,'bluetooth':([p.name for p in Path('/sys/class/bluetooth').glob('hci*')] if system() == 'Linux' else ['default']),
             'tools':{tool:bool(tool_path(tool)) for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb')},
             'tool_access':{tool:'Installed but execution is unavailable; check user/group access'
                            for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb') if installed_path(tool) and not tool_path(tool)},
@@ -79,7 +80,7 @@ def wifi(interface,stop,emit,status):
         link='IEEE802_11_RADIO' if 'IEEE802_11_RADIO' in check.stdout else 'IEEE802_11'
         extra=['-I','-y',link]
     parser=PcapStream()
-    status('Listening · monitor mode · fixed channel '+str(matching[0]['channel'] or 'unknown'))
+    status('Listening · monitor mode · starting channel '+str(matching[0]['channel'] or 'driver-selected'))
     command=[tool_path('dumpcap'),'-i',interface,*extra,'-P','-s','4096','-f',WIFI_FILTER,'-q','-w','-']
     for chunk in process_bytes(command,stop):
         for stamp,packet,linktype in parser.feed(chunk):

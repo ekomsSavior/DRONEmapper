@@ -17,3 +17,21 @@ class CatalogTest(unittest.TestCase):
         module = identify('18179300000000')
         self.assertIn('Remote ID Upgrade Kit (Alta X)', module['module'])
         self.assertNotIn('model', module)
+
+    def test_additional_public_allocations_and_ambiguous_models(self):
+        catalog = Catalog()
+        def identify(serial):
+            return catalog.identify(serial.encode().hex().ljust(40, '0'), 1)
+        for serial, model in [
+            ('1644FMD4100000007004', 'md4-1000'),
+            ('18088FDA972B6', 'Commander3 XL'),
+            ('1886BSKY20002000', 'SKY II'),
+            ('1634FS0TEN2600A02715', 'SOTEN'),
+            ('18106M22010', 'M2'),
+            ('16355A9551', 'Hummingbird v2'),
+        ]:
+            with self.subTest(serial=serial):
+                self.assertEqual(identify(serial)['model'], model)
+        # Accepted M2 and M2 Block 2 declarations overlap: never choose one.
+        self.assertEqual(identify('18106M22021'), {})
+        self.assertEqual(identify('1634FS0TEN2600A0271A'), {})

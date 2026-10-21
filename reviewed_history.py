@@ -20,7 +20,7 @@ def normalize_history(payload):
             raise ValueError("Unreviewed, duplicate or future history")
         if not finite(event["latitude"], -90, 90) or not finite(event["longitude"], -180, 180):
             raise ValueError("Invalid historical reference point")
-        if (event["kind"], event["domain"]) not in {("drone", "air"), ("delivery-robot", "ground"), ("autonomous-vehicle", "ground")}:
+        if (event["kind"], event["domain"]) not in {("drone", "air"), ("delivery-robot", "ground"), ("autonomous-vehicle", "ground"), ("robot-dog", "ground"), ("ground-robot", "ground")}:
             raise ValueError("Unsupported historical device class")
         seen.add(event["id"])
         record = {key: event[key] for key in ("name", "manufacturer", "model", "operator",

@@ -26,6 +26,10 @@ function settingsToForm(settings) {
   $('dji-frequency').value = String(settings.dji_frequency);
   $('readsb-file').value = settings.readsb_file;
   $('mqtt').value = settings.mqtt_file;
+  if (settings.serial_port && ![...$('serial-port').options].some(x=>x.value===settings.serial_port)) $('serial-port').append(new Option(settings.serial_port,settings.serial_port));
+  $('serial-port').value=settings.serial_port || '';
+  $('serial-format').value=settings.serial_format || 'marauder';
+  $('serial-baud').value=String(settings.serial_baud || 115200);
   $('latitude').value = settings.station?.[0] ?? '';
   $('longitude').value = settings.station?.[1] ?? '';
   $('share-rid').checked = settings.share_rid;
@@ -44,12 +48,18 @@ function formSettings() {
   if ((lat === '') !== (lon === '')) throw new Error('Enter both latitude and longitude, or leave both blank.');
   return {label:$('label').value.trim(),wifi_interfaces:$('wifi').value.split(',').map(x=>x.trim()).filter(Boolean),
     ble_adapter:$('ble').value,sdr:$('sdr').value,sdr_band:$('band').value,sdr_mode:$('sdr-mode').value,dji_frequency:Number($('dji-frequency').value),readsb_file:$('readsb-file').value.trim(),mqtt_file:$('mqtt').value.trim(),
+    serial_port:$('serial-port').value,serial_baud:Number($('serial-baud').value),serial_format:$('serial-format').value,
     station:lat === '' ? null : [Number(lat),Number(lon)],share_rid:$('share-rid').checked,share_areas:$('share-areas').checked,share_decoded:$('share-decoded').checked};
 }
 async function capabilities() {
   try {
     const r = await fetch('/api/doctor'); if (!r.ok) throw new Error('Could not check receivers');
     const data = await r.json();
+    const serialCurrent=$('serial-port').value;
+    $('serial-port').replaceChildren(new Option('Off',''));
+    for (const port of data.serial_ports || []) $('serial-port').append(new Option(port.port+(port.usb_id?' · '+port.usb_id:''),port.port));
+    if(serialCurrent && !(data.serial_ports||[]).some(p=>p.port===serialCurrent)) $('serial-port').append(new Option(serialCurrent+' · not attached',serialCurrent));
+    $('serial-port').value=serialCurrent;
     const current = $('ble').value;
     $('ble').replaceChildren(new Option('Off',''));
     for (const name of data.bluetooth) $('ble').append(new Option(name==='default'?'System Bluetooth':name,name));
@@ -59,6 +69,7 @@ async function capabilities() {
     box.append(make('p',data.wifi.length ? data.wifi.map(x=>`${x.name}: ${x.mode}${x.channel ? ' · channel '+x.channel : ''}`).join(' / ') : 'No capture interfaces found.'));
     box.append(make('p',`Bluetooth: ${data.bluetooth.join(', ') || 'not found'} · Bleak: ${data.bleak ? 'installed' : 'not installed'}`));
     box.append(make('p',Object.entries(data.tools).map(([k,v])=>`${k}: ${v?'available':data.tool_access?.[k]?'installed; access unavailable':'not installed'}`).join(' · ')));
+    box.append(make('p','USB serial: '+(data.pyserial?'driver installed':'install the serial extra')+' · '+(data.serial_ports?.length || 0)+' ports'));
     box.append(make('p','DJI decoder dependencies: '+(data.dji_decoder?'installed':'install the DJI extra')));
     box.append(make('p','Capabilities are not a reception test. Run “dronemapper-node wifi-help” for monitor setup.'));
   } catch (e) { notice(e.message); }
@@ -68,12 +79,16 @@ function detail(contact) {
   if (!contact) { panel.textContent='Select a glowing dot or a detection to see details.'; return; }
   panel.replaceChildren(make('h3',contact.name));
   const lines = [contact.display_id ? 'Broadcast ID: '+contact.display_id : '', contact.mac ? 'Radio MAC: '+contact.mac : contact.receiver_id ? 'Local Bluetooth UUID: '+contact.receiver_id : '', contact.device_id ? 'Device ID: '+contact.device_id : '',
-    contact.radio_vendor ? 'Radio vendor: '+contact.radio_vendor : '', contact.callsign ? 'Callsign: '+contact.callsign : '', contact.local_only ? 'Local decoder observation · not uploaded' : '', contact.manufacturer ? 'Manufacturer / model: '+contact.manufacturer+' / '+(contact.model||'Unknown model') : '',
+    contact.radio_vendor ? 'Radio vendor: '+contact.radio_vendor : '', contact.callsign ? 'Callsign: '+contact.callsign : '', contact.local_only ? 'Local receiver observation · not uploaded' : '', contact.manufacturer ? 'Manufacturer / model: '+contact.manufacturer+' / '+(contact.model||'Unknown model') : '',
     contact.module ? 'Broadcast module: '+contact.module : '',contact.identification || '',
     contact.ssid ? 'Camera-link name: '+contact.ssid+' · unconfirmed device' : '',
     'Input: '+contact.source+(contact.protocol ? ' · '+contact.protocol : ''),
     Number.isFinite(contact.rssi_dbm) ? 'Signal: '+contact.rssi_dbm+' dBm' : '',
     Number.isFinite(contact.rssi_dbfs) ? 'Decoder signal: '+contact.rssi_dbfs+' dBFS (not dBm)' : '',
+    contact.channel ? 'Receiver channel: '+contact.channel : '',
+    contact.transports ? 'Reported transports: '+contact.transports : '',
+    Number.isFinite(contact.packet_count) ? 'Receiver packets: '+contact.packet_count : '',
+    Number.isFinite(contact.reported_latitude) ? 'Receiver coordinates: '+contact.reported_latitude.toFixed(6)+', '+contact.reported_longitude.toFixed(6)+' · fix age unknown' : '',
     contact.frequency_mhz ? 'Frequency: '+contact.frequency_mhz+' MHz' : '',
     Number.isFinite(contact.distance_m) ? `Reported GPS: ${Math.round(contact.distance_m)} m · ${Math.round(contact.bearing)}° true bearing` : 'Direction and distance unknown',
     Number.isFinite(contact.altitude_m) ? 'Broadcast altitude: '+contact.altitude_m+' m · '+(contact.altitude_reference||'WGS84') : '',
@@ -163,6 +178,13 @@ $('toggle').onclick=()=>action(async()=>{await post(state.running?'stop':'start'
 $('connect').onclick=()=>action(async()=>{await post('pair');notice('Approve the code in your DRONEmapper account, then choose what to share.');});
 $('disconnect').onclick=()=>action(async()=>{await post('disconnect');initialized=false;notice('Local pairing removed. Use Manage account to revoke server access and remove reports.');});
 $('settings').onsubmit=e=>{e.preventDefault();action(async()=>{await post('settings',formSettings());notice('Settings saved. Sharing choices apply immediately; radio changes apply when listening starts.');});};
+$('serial-refresh').onclick=()=>capabilities();
+$('serial-connect').onclick=()=>action(async()=>{
+  if(!$('serial-port').value)throw new Error('Choose an attached serial receiver first.');
+  await post('serial',{serial_port:$('serial-port').value,serial_baud:Number($('serial-baud').value),serial_format:$('serial-format').value});
+  notice('Serial connection requested. Start Remote ID Scan on the board; check Receiver status below.');
+});
+$('serial-disconnect').onclick=()=>action(async()=>{await post('serial',{serial_port:''});$('serial-port').value='';notice('Serial receiver disconnected.');});
 $('refresh').onclick=e=>{e.preventDefault();capabilities();};
 for(const name of ['signals','positions'])$(name).onclick=()=>{mode=name;$('signals').setAttribute('aria-pressed',name==='signals');$('positions').setAttribute('aria-pressed',name==='positions');if(state)radar();};
 $('range').onchange=()=>{

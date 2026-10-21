@@ -16,7 +16,9 @@ Sharing starts off each session. Raw MACs and network names stay on your phone. 
 
 ## Record offline, upload at home
 
-Version **0.7.2** adds a direct **Open SDR** action when HackRF is selected in the Wi-Fi menu, and identifies PortaPack Mayhem serial mode. It retains the expanded offline FAA model catalog.
+Version **0.7.3** expands the shared offline FAA catalog to 3,716 rules across 129 manufacturer/model/module combinations. Overlapping model declarations remain unknown.
+
+Version **0.7.2** added a direct **Open SDR** action when HackRF is selected in the Wi-Fi menu, and identifies PortaPack Mayhem serial mode. It retains the expanded offline FAA model catalog.
 
 Version **0.7.0** added **Saved wardrives · record / upload / export**.
 Start listening, open that button, then choose **Record a wardrive**. No account
@@ -80,7 +82,7 @@ protocol decoders. [Setup and hardware test steps](../docs/android-hackrf.md).
 Download the latest APK from [Android nodes](https://dronemapper.churchofmalware.org/nodes.html)
 and install it over the existing app; do not uninstall first. Official releases
 use the same signing key to preserve your pairing and settings. Check **Phone
-capabilities** for version **0.7.2**. Updates are manual for now.
+capabilities** for version **0.7.3**. Updates are manual for now.
 
 Start listening again, reconnect your USB adapter, and enable your preferred
 **Sharing choices** if you want reports on the map. For a test report, connect

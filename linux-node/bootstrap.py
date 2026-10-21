@@ -23,10 +23,11 @@ def main():
         print('Installing the desktop node in its own local Python environment…',flush=True)
         venv.EnvBuilder(with_pip=True).create(directory)
     marker=directory/'dronemapper-ready'
-    if first or not marker.exists() or args.update or args.dji:
+    version=(root/'dronemapper_node/__init__.py').read_text(encoding='utf-8').split('__version__ = ')[1].splitlines()[0].strip("\"'")
+    if first or not marker.exists() or marker.read_text(encoding='utf-8').strip()!=version or args.update or args.dji:
         extras='all,dji' if args.dji else 'all'
         subprocess.run([str(python),'-m','pip','install',str(root)+'['+extras+']'],check=True)
-        marker.touch()
+        marker.write_text(version,encoding='utf-8')
     # Execute this checkout so source updates take effect without changing paired credentials.
     child=subprocess.Popen([str(python),str(root/'launch.py'),'serve','--open'])
     try:

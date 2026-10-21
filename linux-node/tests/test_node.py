@@ -302,6 +302,9 @@ class NodeTests(unittest.TestCase):
             self.assertEqual(request('/api/settings','POST','{"label":"Test node"}',headers)[0],200)
             self.assertEqual(e.snapshot()['settings']['label'],'Test node')
             self.assertEqual(request('/api/settings','POST','{"wifi_interfaces":[{}]}',headers)[0],400)
+            self.assertEqual(request('/api/serial','POST','{"serial_port":""}',{'Content-Type':'application/json'})[0],403)
+            self.assertEqual(request('/api/serial','POST','{"serial_port":"socket://x"}',headers)[0],400)
+            self.assertEqual(request('/api/serial','POST','{"serial_port":""}',headers)[0],200)
             self.assertEqual(request('/../../settings.json')[0],404)
         finally:
             server.shutdown();server.server_close();thread.join()

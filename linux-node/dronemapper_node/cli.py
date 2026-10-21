@@ -37,6 +37,9 @@ def parser():
     config.add_argument('--location',nargs=2,type=float,metavar=('LAT','LON'))
     config.add_argument('--label')
     config.add_argument('--mqtt-file')
+    config.add_argument('--serial-port',help='USB serial port; empty disables')
+    config.add_argument('--serial-baud',type=int,default=None)
+    config.add_argument('--serial-format',choices=['marauder','remoteid-json'])
     config.add_argument('--share-rid',action=argparse.BooleanOptionalAction,default=None)
     config.add_argument('--share-decoded',action=argparse.BooleanOptionalAction,default=None)
     config.add_argument('--share-areas',action=argparse.BooleanOptionalAction,default=None)
@@ -69,7 +72,10 @@ WIFI_HELP='''Use a dedicated Wi-Fi adapter, separate from your Internet connecti
 5. Configure the node: dronemapper-node configure --wifi dmmon0
 Use channel 149 only where the adapter/regulatory configuration supports it.
 Multiple dedicated adapters can watch different channels simultaneously.
-This first version listens on fixed channels; it does not hop automatically.
+Optional Linux hopping (in a separate terminal):
+sudo python3 linux-node/channel-hop.py --interface dmmon0
+The helper prioritizes channel 6, checks supported channels, and restores the
+original channel on exit. One radio can listen to only one channel at a time.
 Cleanup: sudo iw dev dmmon0 del
 Do not switch the computer’s Internet Wi-Fi interface into monitor mode.
 '''

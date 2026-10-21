@@ -26,7 +26,7 @@ Only dates within the past year are accepted. Retries do not inflate counts.
 
 ## Record in DRONEmapper without internet
 
-Android **0.7.2**: **Start listening → Saved wardrives → Record a wardrive**.
+Android **0.7.3**: **Start listening → Saved wardrives → Record a wardrive**.
 Keep Wi-Fi, Bluetooth and Location enabled; they do not need an internet connection
 to receive locally. Finish recording or stop listening when done. Saved trips stay
 on the phone after app restarts. Live sharing pauses during recording.

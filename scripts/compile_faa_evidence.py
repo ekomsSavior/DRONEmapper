@@ -89,30 +89,42 @@ def main():
     catalog = ROOT / "worker/rid-catalog.mjs"
     text = catalog.read_text()
     current = json.loads(re.search(r"export const rules\s*=\s*(\[.*\])\s*;", text, re.S)[1])
-    known_models = {(r["manufacturer"], r["model"]) for r in current}
     known_docs = {r["evidence_url"] for r in current}
-    report = []
+    report_path = ROOT / "docs/faa-enrichment-review.json"
+    previous = json.loads(report_path.read_text()) if report_path.exists() else []
+    report = {row["tracking"]: row for row in previous}
+    added_count = 0
     for path in sorted(args.evidence.glob("RID*.json")):
         record = json.loads(path.read_text())
         summary = {key: record[key] for key in ("tracking", "makeName", "modelName", "evidence_url", "reviewed_at")}
         summary["revision_evidence"] = [{key: rev[key] for key in ("id", "sha256")} for rev in record["revisions"]]
-        if record["evidence_url"] in known_docs or (record["makeName"], record["modelName"]) in known_models:
-            summary["decision"] = "existing-model; additional allocations retained for later review"
+        if record.get("status") != "accepted" or record.get("docType") != "rid":
+            summary["decision"] = "excluded; not an accepted Remote ID declaration"
+        elif record["evidence_url"] in known_docs:
+            summary["decision"] = "already-catalogued declaration"
         else:
             rules, rejected = compile_declaration(record)
             summary.update(rule_count=len(rules), rejected_allocation_count=rejected)
             if len(rules) > args.max_rules:
                 summary["decision"] = "deferred; individually assigned serial set exceeds bounded catalog budget"
             else:
-                current.extend(rules)
-                summary["decision"] = "included"
-        report.append(summary)
+                if rules:
+                    current.extend(rules)
+                    added_count += 1
+                    known_docs.add(record["evidence_url"])
+                    summary["decision"] = "included"
+                else:
+                    summary["decision"] = "deferred; no usable serial allocations"
+        if summary["decision"] == "already-catalogued declaration" and report.get(record["tracking"], {}).get("decision") == "included":
+            continue
+        report[record["tracking"]] = summary
     # Stable deduplication preserves the evidence associated with each rule.
     current = list({json.dumps(r, sort_keys=True): r for r in current}.values())
     catalog.write_text("// FAA public serial allocations, reviewed evidence; identity remains unverified.\n"
                        "export const rules = " + json.dumps(current, separators=(",", ":")) + ";\n")
-    (ROOT / "docs/faa-enrichment-review.json").write_text(json.dumps(report, indent=2) + "\n")
-    print(f"{len(current)} rules; {sum(r['decision']=='included' for r in report)} additional declarations.")
+    report = sorted(report.values(), key=lambda row: row["tracking"])
+    report_path.write_text(json.dumps(report, indent=2) + "\n")
+    print(f"{len(current)} rules; {added_count} additional declarations.")
 
 
 if __name__ == "__main__":

@@ -5,10 +5,11 @@ community research collections of FAA declarations, FCC filings, vendor notes an
 radio signatures. They are research leads, not receiver logs. Their internal-only
 documents and scripts are not redistributed here.
 
-The scanner catalog now contains **2,320 rules covering 106 distinct manufacturer,
+The scanner catalog now contains **3,716 rules covering 129 distinct manufacturer,
 model and aircraft/module combinations**, up from 110 rules and 84 combinations.
 New coverage includes Teal, BRINC, Zipline, Freefly, Inspired Flight, Wingtra,
-AgEagle and Quantum-Systems. Coverage is partial: an unmatched serial remains
+AgEagle, Quantum-Systems, Wing, Matternet, Flytrex, Draganfly, Microdrones,
+ACSL, Percepto, Airobotics and Swoop Aero. Coverage is partial: an unmatched serial remains
 unknown. A matching broadcast is not authenticated device identity.
 
 We independently retrieved the public FAA declarations and serial allocations.
@@ -19,8 +20,10 @@ runs require digits; letters cannot slip into those numeric ranges.
 
 `faa-enrichment-review.json` records declaration decisions, revision IDs, evidence
 links and SHA-256 digests. Large individually assigned serial sets are deferred
-when they exceed the bounded offline catalog budget; existing-model allocations
-were not blindly replaced. The catalog does not claim complete coverage of every
+when they exceed the bounded offline catalog budget. New accepted declarations
+extend existing allocations without replacing earlier evidence. Overlapping
+allocations for different models remain unidentified across all three platforms.
+The latest review added 48 accepted declarations and 23 combinations. The catalog does not claim complete coverage of every
 aircraft made by a listed company.
 
 To review another sanitized public FAA export, use
@@ -35,9 +38,12 @@ The same generated rules ship in the website, Android app and desktop node.
 Catalog recognition works offline and is applied to supported Remote ID reports.
 It does not add a new RF decoder or recover Remote ID from ordinary Wi-Fi CSVs.
 
-Twenty-two independently checked operational milestones add history in **13
-countries**: China, Ecuador, Estonia, France, Ghana, Japan, Kenya, Nigeria, South
-Africa, Sweden, Thailand, the United Arab Emirates and the United States.
+Twenty-six independently checked operational milestones add history in **17
+countries**: Brazil, China, Ecuador, Estonia, France, Ghana, Japan, Kenya, Nigeria,
+Singapore, South Africa, Sweden, Switzerland, Thailand, the United Arab Emirates,
+the United Kingdom and the United States. The latest additions cover Singapore
+police patrol robots and ANYmal inspection or demonstration activity in Brazil,
+Switzerland and the United Kingdom.
 `reviewed-history.json` preserves
 each event's original date precision and primary evidence. Coordinates are rounded
 city/region reference points, not measured aircraft positions, launch sites or

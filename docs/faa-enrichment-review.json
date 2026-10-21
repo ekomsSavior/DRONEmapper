@@ -1,5 +1,37 @@
 [
   {
+    "tracking": "RID000000003",
+    "makeName": "Microdrones",
+    "modelName": "md4-1000",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000003",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 54,
+        "sha256": "6057ccff89793731df70e288e0a3b6374dd6ff7ad53a363bb1319887af48af10"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000004",
+    "makeName": "Microdrones",
+    "modelName": "md4-3000",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000004",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 55,
+        "sha256": "c75bb3f0fe368fc553cdbafa2b19a84e328380a60f2ead5c1c0ade679d134c23"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000000006",
     "makeName": "Wingtra",
     "modelName": "WingtraOne Gen II",
@@ -56,6 +88,42 @@
       }
     ],
     "rule_count": 12,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000138",
+    "makeName": "Microdrones",
+    "modelName": "EasyOne",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000138",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2362,
+        "sha256": "ffd0b2d52f469c615f7106f0300dd53a99399ae49acd0bdec30cba7ae359f1a2"
+      },
+      {
+        "id": 200,
+        "sha256": "ffd0b2d52f469c615f7106f0300dd53a99399ae49acd0bdec30cba7ae359f1a2"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000150",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000150",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 216,
+        "sha256": "166be59f85fe4833d091eb66b1f2c794f0eaeb67c20f852322b8b0e68edd687a"
+      }
+    ],
+    "rule_count": 1,
     "rejected_allocation_count": 0,
     "decision": "included"
   },
@@ -144,6 +212,22 @@
     "decision": "included"
   },
   {
+    "tracking": "RID000000212",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000212",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 287,
+        "sha256": "02cbe3d33bf7cb8b223d98f76d157a0ddf52755dba520344988e1fbdbfd7b08d"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000000281",
     "makeName": "AgEagle (senseFly)",
     "modelName": "eBee X series",
@@ -156,6 +240,42 @@
       }
     ],
     "rule_count": 2,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000283",
+    "makeName": "Draganfly Innovations",
+    "modelName": "Commander3 XL",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000283",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6199,
+        "sha256": "20a6396b1ae36de1c661f9660eec7dea46bf99819d47e05a37b6c5ce0464b30a"
+      },
+      {
+        "id": 6254,
+        "sha256": "3b9c3c5d92483364c20d4f8ca3f38f92c98984bdb4dfd405b7df82abfbb54b21"
+      },
+      {
+        "id": 366,
+        "sha256": "cf6a87dd97045f653bef4eaebc3f53a949c39980e52d9e6ad96f3aa12d8c1da8"
+      },
+      {
+        "id": 2407,
+        "sha256": "5009c43ff750bdd0604c5a7f817664b44810d5f75ecbb681ee5e7e461ad2bdd5"
+      },
+      {
+        "id": 6027,
+        "sha256": "df3d14a1a56fef2e5f43b796d413b47c5709f6c45680d694e7d77cde26122a8f"
+      },
+      {
+        "id": 6183,
+        "sha256": "fbd02d4f1a0103ae783a2199f72509cd9e3f9cd3053064641939bbade197ca61"
+      }
+    ],
+    "rule_count": 49,
     "rejected_allocation_count": 0,
     "decision": "included"
   },
@@ -298,6 +418,54 @@
     "decision": "included"
   },
   {
+    "tracking": "RID000000337",
+    "makeName": "Matternet",
+    "modelName": "M2 Block 2",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000337",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 529,
+        "sha256": "758a90b5d9b821830b0ac75798227e945f39e051afd539a626f3e9123a1085c6"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000373",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax OGI, Percepto Airmax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000373",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 667,
+        "sha256": "69f13865dd5b54dc2f62b0661812e7ab6adea3ef20bade8650c9bb800dde88bf"
+      }
+    ],
+    "rule_count": 4,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000376",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000376",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 693,
+        "sha256": "a17bb2a8e007dbf851f7ed4ed22d5e4bac16f32030f9f4854fdd4fcc7a53a266"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000000397",
     "makeName": "Zipline",
     "modelName": "Sparrow",
@@ -310,6 +478,22 @@
       }
     ],
     "rule_count": 64,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000399",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000399",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 787,
+        "sha256": "fa6119ac5bd209a8166c6da866800b53fa1ea2b3f456f7128287f61728190232"
+      }
+    ],
+    "rule_count": 1,
     "rejected_allocation_count": 0,
     "decision": "included"
   },
@@ -332,6 +516,22 @@
     "decision": "existing-model; additional allocations retained for later review"
   },
   {
+    "tracking": "RID000000448",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000448",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 907,
+        "sha256": "2bb6a060f49f5202264e2eac711e24751b91097a25b88e2b98d744c0e6e65421"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000000454",
     "makeName": "Teal Drones",
     "modelName": "Teal 2",
@@ -344,6 +544,78 @@
       }
     ],
     "rule_count": 73,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000482",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000482",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 957,
+        "sha256": "3c5fb72c14dd728607a9899d158a73bcbe1f6cb6332e23b2f84437f8cef9a7a0"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000488",
+    "makeName": "Wing Aviation LLC",
+    "modelName": "Hummingbird v2",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000488",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 3807,
+        "sha256": "61be75cd4fe888639861e80c0468756fc973bcac355287918dedb323df8ac58c"
+      },
+      {
+        "id": 2249,
+        "sha256": "eb77de8d0a604007eb18e775bcca5400ef9de4eb9796c73f73ab0ed24a995a93"
+      },
+      {
+        "id": 972,
+        "sha256": "5ed611f3ca9f526b85fc6ac5ee93bab41f7154ca5575109500e95bf5e3a61e53"
+      }
+    ],
+    "rule_count": 151,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000491",
+    "makeName": "Flytrex",
+    "modelName": "FTX-M600P",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000491",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 975,
+        "sha256": "8a1546f99c016eed2b8b46f6d574ae268ac7d70166fc3ef48fed079ab6b7963a"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000498",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000498",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 986,
+        "sha256": "963bd78883ace4f4f324062e887663f0e2ce7c3aa88ecb6b39cbad8c715a5bf6"
+      }
+    ],
+    "rule_count": 1,
     "rejected_allocation_count": 0,
     "decision": "included"
   },
@@ -376,6 +648,38 @@
       }
     ],
     "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000586",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000586",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1190,
+        "sha256": "146ec630f162b53721bc8fd97fa1598dcc7ed864ac738bebe7a72c468746d7e2"
+      }
+    ],
+    "rule_count": 6,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000587",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000587",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1191,
+        "sha256": "32c80c8b38820d20dd03d45c2c7b3daee81e8f114305e330f223dc721d39e32e"
+      }
+    ],
+    "rule_count": 3,
     "rejected_allocation_count": 0,
     "decision": "included"
   },
@@ -428,6 +732,70 @@
     "decision": "included"
   },
   {
+    "tracking": "RID000000601",
+    "makeName": "Percepto AirMax",
+    "modelName": "OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000601",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1227,
+        "sha256": "a161248a8bb59e626c44d5a023ae372ae43e233a16d8ceb02a836ba5f9c68200"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000653",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000653",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1331,
+        "sha256": "3f7b714a7e69cc340917d6d5febe13282f31cf680f5f26ff97259bdde462e0b9"
+      }
+    ],
+    "rule_count": 3,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000654",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000654",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1332,
+        "sha256": "593a95e74d7eb7e5928eec1976c06e4e94f897f1b04497846c365f1c09254246"
+      }
+    ],
+    "rule_count": 2,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000655",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000655",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1333,
+        "sha256": "a9ffdeead112b03370f717a2603a14a8c4b54a77ac7f78e5c9e7739d9eb7c9b6"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000000691",
     "makeName": "BRINC",
     "modelName": "LEMUR 2",
@@ -440,6 +808,22 @@
       }
     ],
     "rule_count": 170,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000694",
+    "makeName": "Swoop Aero",
+    "modelName": "Kite",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000694",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 1414,
+        "sha256": "1760f91e79fbb438d91abf4770f7e0259bfc98e397d6c939fe4d916555461c9a"
+      }
+    ],
+    "rule_count": 1000,
     "rejected_allocation_count": 0,
     "decision": "included"
   },
@@ -594,6 +978,38 @@
     "decision": "existing-model; additional allocations retained for later review"
   },
   {
+    "tracking": "RID000000997",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000997",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2106,
+        "sha256": "e7435978f6b02f73ef1e45e87db6e8cf08457bf55238080b1694e6b3289d9d41"
+      }
+    ],
+    "rule_count": 3,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000000999",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000000999",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2108,
+        "sha256": "373c5fb3a3e6ee3cb4b5330013d47d536230468e60f157c911a554aedf782c1a"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000001039",
     "makeName": "Autel Robotics",
     "modelName": "EVO Lite",
@@ -622,6 +1038,42 @@
     "decision": "existing-model; additional allocations retained for later review"
   },
   {
+    "tracking": "RID000001065",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001065",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2247,
+        "sha256": "88c359d1ca75c95d8d1d8d1d93e95f87bc172bf92c26acea72e52d54f8f7c6b8"
+      }
+    ],
+    "rule_count": 10,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001066",
+    "makeName": "Percepto AirMax",
+    "modelName": "Percepto AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001066",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2530,
+        "sha256": "dfcd06f4374d79e1fadd548fa81ac7bf3b6d35ca1296b0ed58c086e6d7b7dca6"
+      },
+      {
+        "id": 2248,
+        "sha256": "dfcd06f4374d79e1fadd548fa81ac7bf3b6d35ca1296b0ed58c086e6d7b7dca6"
+      }
+    ],
+    "rule_count": 2,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000001087",
     "makeName": "Autel Robotics",
     "modelName": "EVO II",
@@ -634,6 +1086,230 @@
       }
     ],
     "decision": "existing-model; additional allocations retained for later review"
+  },
+  {
+    "tracking": "RID000001112",
+    "makeName": "Microdrones",
+    "modelName": "EasyOne NDAA",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001112",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2361,
+        "sha256": "9ac6abdc032dc40680b9140b30da4abda8270ea83ff29c55b4a7dd3aa2f0e06f"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001157",
+    "makeName": "Percepto",
+    "modelName": "AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001157",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2526,
+        "sha256": "64ecf5f3b10a44944946abc3df5730dce2b971380e01fd2e3649a406861092d1"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001158",
+    "makeName": "Percepto",
+    "modelName": "AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001158",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2527,
+        "sha256": "5b011019f216723dd906ec7afbe73d748ce7eb9828945b9c9f367c6f8a0d732a"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001159",
+    "makeName": "Percepto",
+    "modelName": "AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001159",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2528,
+        "sha256": "2a439d95085e3773995c581e5aa5ebf49f1214f11ff86702e108886e4a5fcbb7"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001160",
+    "makeName": "Percepto",
+    "modelName": "AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001160",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2529,
+        "sha256": "48b9f04796c05b7e8011150b4d6b3dd9e8dd70b97c996ac9c452765600667a3a"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001165",
+    "makeName": "Percepto",
+    "modelName": "AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001165",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2555,
+        "sha256": "0d37f7f119193d44ef4d7f793975bafbfa83b66efd4768a0ce7f5e697bcf5ea1"
+      }
+    ],
+    "rule_count": 23,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001169",
+    "makeName": "Percepto",
+    "modelName": "AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001169",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2566,
+        "sha256": "64ecf5f3b10a44944946abc3df5730dce2b971380e01fd2e3649a406861092d1"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001170",
+    "makeName": "Percepto",
+    "modelName": "AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001170",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2567,
+        "sha256": "5b011019f216723dd906ec7afbe73d748ce7eb9828945b9c9f367c6f8a0d732a"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001171",
+    "makeName": "Percepto",
+    "modelName": "AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001171",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2568,
+        "sha256": "2a439d95085e3773995c581e5aa5ebf49f1214f11ff86702e108886e4a5fcbb7"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001172",
+    "makeName": "Percepto",
+    "modelName": "AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001172",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2569,
+        "sha256": "48b9f04796c05b7e8011150b4d6b3dd9e8dd70b97c996ac9c452765600667a3a"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001179",
+    "makeName": "Draganfly Innovations",
+    "modelName": "Commander 2",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001179",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2603,
+        "sha256": "3ee3adf70bef9ce0273c715fe8cd9bf528c58c37ebcdab53c3216c7476ad4783"
+      }
+    ],
+    "rule_count": 3,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001189",
+    "makeName": "Percepto",
+    "modelName": "AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001189",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2646,
+        "sha256": "88004451655e83d799d4eb5739db8a2fd6a4fb89bee029d930cd72d02b9dd1be"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001190",
+    "makeName": "Percepto",
+    "modelName": "AirMax OGI",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001190",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2647,
+        "sha256": "5ee2243d55a69e1c739af3f0aec6586ad3f0e234eea6d25a1909e16ef9cd8377"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001201",
+    "makeName": "Percepto",
+    "modelName": "AirMax",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001201",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2685,
+        "sha256": "837ecacea37147bd21688de94ee8e9ea0eb6d92fa4627562da8f9075e4c3e55a"
+      }
+    ],
+    "rule_count": 4,
+    "rejected_allocation_count": 0,
+    "decision": "included"
   },
   {
     "tracking": "RID000001225",
@@ -688,6 +1364,82 @@
     "decision": "included"
   },
   {
+    "tracking": "RID000001258",
+    "makeName": "ACSL",
+    "modelName": "SOTEN",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001258",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 2849,
+        "sha256": "177ab44e893a137cc13a14d65db42f3218f5036d39c83ad11463c7f4881eaa1b"
+      }
+    ],
+    "rule_count": 93,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001343",
+    "makeName": "FIMI X8 SE 2022 Drone",
+    "modelName": "FMWRJ03A8",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001343",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 3311,
+        "sha256": "0464844fb24a82665932e18bc402cb07d72f60ac1b99836d8f15f6c746eb8227"
+      },
+      {
+        "id": 3073,
+        "sha256": "559d8af120765f15f53cd1a5e14c954cdefed18e885b4ceb2e81308249e149c4"
+      }
+    ],
+    "rule_count": 2,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001411",
+    "makeName": "Flytrex",
+    "modelName": "SKY II",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001411",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 3299,
+        "sha256": "51a3705f89934dc0a9996b5612be8864920966a480dbf2db599846fd35f3bcb4"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001459",
+    "makeName": "Wing Aviation LLC",
+    "modelName": "Hummingbird",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001459",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6073,
+        "sha256": "be9c7d20ce0028626700d95e9b9dce352a0d45649eca697c66510406dd20a48f"
+      },
+      {
+        "id": 6024,
+        "sha256": "1486e47a2cf53a9fa8ce8764fac9987bd602ff1c55ead011ac01a88caf26a953"
+      },
+      {
+        "id": 3439,
+        "sha256": "cfcdda4e3a44f62511a600377b3e7a5a1215f9d55127cbb9c621214c85c842f0"
+      }
+    ],
+    "rule_count": 3,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
     "tracking": "RID000001511",
     "makeName": "Inspired Flight",
     "modelName": "IF800",
@@ -697,6 +1449,38 @@
       {
         "id": 3645,
         "sha256": "584ff578535c1110a769d3bad36dd2d8315157986570f98f87bc6b2bc800a7b4"
+      }
+    ],
+    "rule_count": 1,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001634",
+    "makeName": "Airobotics",
+    "modelName": "Optimus 1-EX",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001634",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 3983,
+        "sha256": "ebea4c85cea03528476fa216a982d1df640a28db2d5b20d42def97f231ab8c16"
+      }
+    ],
+    "rule_count": 4,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000001934",
+    "makeName": "FIMI X8 Tele Drone",
+    "modelName": "FMWRJ04A1",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000001934",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 4706,
+        "sha256": "3d463af271582404d12306d81a3467b561f86037422098bc28f0b20f4fcb4736"
       }
     ],
     "rule_count": 1,
@@ -728,6 +1512,26 @@
       }
     ],
     "rule_count": 7,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002169",
+    "makeName": "Wing Aviation LLC",
+    "modelName": "Hummingbird",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002169",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6023,
+        "sha256": "217a17c0790e2b46bb57a031e9349d1f0bb315f1009e1625b2dcc61729cbe271"
+      },
+      {
+        "id": 5244,
+        "sha256": "b47ff2a33d8e3f75b3b759565ae7c2a3590156baf39e0255a456431df9edca2f"
+      }
+    ],
+    "rule_count": 2,
     "rejected_allocation_count": 0,
     "decision": "included"
   },
@@ -840,6 +1644,22 @@
       }
     ],
     "rule_count": 135,
+    "rejected_allocation_count": 0,
+    "decision": "included"
+  },
+  {
+    "tracking": "RID000002707",
+    "makeName": "Matternet",
+    "modelName": "M2",
+    "evidence_url": "https://uasdoc.faa.gov/listDocs/RID000002707",
+    "reviewed_at": "2026-10-20",
+    "revision_evidence": [
+      {
+        "id": 6245,
+        "sha256": "dbb422de22981475cae1a43f53a1fe9269cbce01cad063a0bcc4726f67a0ffd1"
+      }
+    ],
+    "rule_count": 1,
     "rejected_allocation_count": 0,
     "decision": "included"
   }

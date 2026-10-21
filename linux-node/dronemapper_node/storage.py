@@ -10,12 +10,13 @@ import threading
 import time
 import uuid
 from .protocol import finite
+from .serial_receiver import valid_port, BAUDS, FORMATS
 from .platform_support import private_directory, lock_file, valid_interface, valid_ble, is_link
 
 ORIGIN = 'https://dronemapper.churchofmalware.org'
 DEFAULTS = {'label': 'Stationary node', 'wifi_interfaces': [], 'ble_adapter': '',
             'sdr': 'off', 'sdr_band': '2400', 'sdr_mode':'spectrum', 'dji_frequency':2444.5, 'readsb_file':'', 'station': None,
-            'share_rid': False, 'share_areas': False, 'share_decoded':False, 'mqtt_file': ''}
+            'share_rid': False, 'share_areas': False, 'share_decoded':False, 'mqtt_file': '', 'serial_port':'', 'serial_baud':115200, 'serial_format':'marauder'}
 BANDS = {'433': (430,440), '868': (863,870), '915': (902,928), '2400': (2400,2485),
          '5800': (5725,5875), '5900': (5850,5925), '1090': (1089,1091), 'ais': (161,163)}
 
@@ -54,6 +55,8 @@ def validate_settings(values):
         raise ValueError('Set a stationary receiver location before sharing approximate areas')
     if not isinstance(v['mqtt_file'],str) or len(v['mqtt_file'])>4096 or '\0' in v['mqtt_file']:
         raise ValueError('Invalid MQTT configuration path')
+    if not valid_port(v['serial_port']) or type(v['serial_baud']) is not int or v['serial_baud'] not in BAUDS or v['serial_format'] not in FORMATS:
+        raise ValueError('Choose a local USB serial port, supported baud rate and receiver format')
     return v
 
 

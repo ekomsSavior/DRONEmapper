@@ -6,6 +6,7 @@ import subprocess
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 from urllib.error import HTTPError
 from urllib.request import urlopen
 
@@ -42,7 +43,7 @@ class EnrichmentTests(unittest.TestCase):
                 base = f"http://127.0.0.1:{httpd.server_port}"
                 for suffix in ("", "?hours=0", "?hours=336"):
                     with urlopen(base + "/feed" + suffix) as response:
-                        self.assertEqual(len(json.load(response)["activity"]), 22)
+                        self.assertEqual(len(json.load(response)["activity"]), 26)
                 with self.assertRaises(HTTPError) as caught:
                     urlopen(base + "/feed?hours=nan")
                 self.assertEqual(caught.exception.code, 400)
@@ -50,6 +51,33 @@ class EnrichmentTests(unittest.TestCase):
                 httpd.shutdown()
                 httpd.server_close()
                 thread.join(timeout=2)
+
+    def test_incremental_catalog_import_preserves_review_and_rejects_non_rid(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in ('worker', 'docs', 'evidence'):
+                (root / name).mkdir()
+            catalog = root / 'worker/rid-catalog.mjs'
+            catalog.write_text('export const rules = [];\n')
+            review = root / 'docs/faa-enrichment-review.json'
+            review.write_text(json.dumps([{'tracking': 'RID000000999', 'decision': 'deferred'}]))
+            record = dict(tracking='RID000000001', makeName='Fixture', modelName='Aircraft',
+                docType='rid', status='accepted', certificationTypeId=1,
+                evidence_url='https://uasdoc.faa.gov/listDocs/RID000000001', reviewed_at='2026-10-20',
+                revisions=[dict(id='first', sha256='0'*64, allocations=['18179300000000-181793FFFFFFFF'])])
+            (root / 'evidence/RID000000001.json').write_text(json.dumps(record))
+            rejected = dict(record, tracking='RID000000002', status='rescinded',
+                evidence_url='https://uasdoc.faa.gov/listDocs/RID000000002')
+            (root / 'evidence/RID000000002.json').write_text(json.dumps(rejected))
+            with patch.object(compiler, 'ROOT', root), patch('sys.argv', ['compile', str(root / 'evidence')]):
+                compiler.main()
+                first = catalog.read_text()
+                compiler.main()
+            self.assertEqual(catalog.read_text(), first)
+            decisions = {r['tracking']: r['decision'] for r in json.loads(review.read_text())}
+            self.assertEqual(decisions['RID000000001'], 'included')
+            self.assertTrue(decisions['RID000000002'].startswith('excluded'))
+            self.assertEqual(decisions['RID000000999'], 'deferred')
 
     def test_compaction_does_not_fill_serial_gaps_or_accept_letters_in_numeric_runs(self):
         values = [f"1839FTD502932332{n:04d}" for n in list(range(1, 51)) + list(range(60, 81))]
@@ -79,13 +107,23 @@ class EnrichmentTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 compiler.compile_declaration(dict(r, **change))
 
+    def test_robot_history_keeps_original_dates_and_area_precision(self):
+        rows = {r['id']: r for r in fetch_history()}
+        self.assertEqual(rows['milestone:spf-changi-patrol-2023']['record_dates'], '2023-04')
+        self.assertEqual(rows['milestone:anymal-pery-inspections-2025']['record_dates'], '2025-01')
+        for key in ('anymal-pery-inspections-2025', 'anymal-itabira-inspection-report-2021', 'anymal-slough-demo-report-2025'):
+            row = rows['milestone:' + key]
+            self.assertEqual(row['kind'], 'robot-dog')
+            self.assertEqual(row['position_basis'], 'reported-area')
+            self.assertIsNone(row['observed_at'])
+
     def test_history_parity_and_no_current_positions(self):
         rows = fetch_history()
         js = subprocess.check_output(["node", "--input-type=module", "-e",
             "import {historicalMilestones as r} from './worker/reviewed-history.mjs';console.log(JSON.stringify(r))"],
             cwd=ROOT, text=True)
         self.assertEqual(rows, json.loads(js))
-        self.assertEqual(len({r["id"] for r in rows}), 22)
+        self.assertEqual(len({r["id"] for r in rows}), 26)
         for row in rows:
             self.assertEqual(row["record_type"], "historical")
             self.assertIsNone(row["observed_at"])

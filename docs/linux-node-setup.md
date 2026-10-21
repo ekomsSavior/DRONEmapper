@@ -72,9 +72,12 @@ dronemapper-node serve --listen
 ```
 
 Use `dmmon0` in the dashboard. A second dedicated adapter can watch channel 149
-where the hardware and regulatory configuration permit it. This version uses
-**fixed channels**, with up to four interfaces; it does not automatically hop.
-Other camera-link channels require retuning the dedicated interface. Never choose
+where the hardware and regulatory configuration permit it. Up to four dedicated
+interfaces can listen simultaneously. Keep a radio fixed, or optionally run
+`sudo python3 linux-node/channel-hop.py --interface dmmon0` in a separate terminal.
+The Linux helper checks channel availability and other active interfaces on the
+same radio, prioritizes channel 6, and restores the original channel on exit.
+[Channel plans and ESP32/CYD serial receivers](serial-receivers.md). Never choose
 the PHY used for your Internet connection. Linux monitor setup reference:
 [iw documentation](https://wireless.docs.kernel.org/en/latest/en/users/documentation/iw.html).
 

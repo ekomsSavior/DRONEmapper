@@ -11,7 +11,7 @@ import time
 import uuid
 from .account import Connection, Uploader
 from .protocol import AIRFRAMES, bearing_distance, finite, messages, MAC
-from . import radios, __version__
+from . import radios, serial_receiver, __version__
 
 
 class Catalog:
@@ -59,7 +59,7 @@ class Engine:
         self.uploader=Uploader(store,api)
         self.catalog=Catalog()
         self.lock=threading.RLock()
-        self.control=threading.Lock()
+        self.control=threading.RLock()
         self.stop_event=threading.Event()
         self.quit_event=threading.Event()
         self.threads=[]
@@ -107,6 +107,8 @@ class Engine:
                     receivers.append(('SDR',radios.sdr,(config['sdr'],config['sdr_band'])))
             if config['readsb_file']:
                 receivers.append(('ADS-B feed',radios.readsb_feed,(config['readsb_file'],)))
+            if config['serial_port']:
+                receivers.append(('USB serial',serial_receiver.receive,(config['serial_port'],config['serial_baud'],config['serial_format'])))
             if config['mqtt_file']:
                 receivers.append(('MQTT',radios.mqtt,(config['mqtt_file'],)))
             if not receivers:
@@ -128,12 +130,28 @@ class Engine:
                 self.states={name:'Stopped' for name in self.states}
 
     def configure(self,values):
-        # Radio configuration changes require a stopped receiver; consent can change live.
-        old=self.store.settings()
-        radio_keys={'wifi_interfaces','ble_adapter','sdr','sdr_band','sdr_mode','dji_frequency','readsb_file','mqtt_file'}
-        if self.running and any(values.get(k,old[k])!=old[k] for k in radio_keys):
-            raise ValueError('Stop listening before changing receivers')
-        self.store.update({**old,**values})
+        with self.control:
+            # Radio configuration changes require a stopped receiver; consent can change live.
+            old=self.store.settings()
+            radio_keys={'wifi_interfaces','ble_adapter','sdr','sdr_band','sdr_mode','dji_frequency','readsb_file','mqtt_file','serial_port','serial_baud','serial_format'}
+            if self.running and any(values.get(k,old[k])!=old[k] for k in radio_keys):
+                raise ValueError('Stop listening before changing receivers')
+            self.store.update({**old,**values})
+
+    def connect_serial(self, values):
+        with self.control:
+            from .storage import validate_settings
+            if set(values)-{'serial_port','serial_baud','serial_format'} or 'serial_port' not in values:
+                raise ValueError('Expected USB serial receiver settings')
+            config=validate_settings({**self.store.settings(),**values})
+            if config['serial_port'] and config['serial_port'] not in {p['port'] for p in serial_receiver.ports()}:
+                raise ValueError('Serial receiver is not attached; refresh ports')
+            was_running=self.running
+            self.stop()
+            self.configure(config)
+            has_receiver=any(config[k] for k in ('wifi_interfaces','ble_adapter','readsb_file','mqtt_file','serial_port')) or config['sdr']!='off'
+            if has_receiver and (was_running or config['serial_port']):
+                self.start()
 
     def _maintenance(self):
         while not self.quit_event.wait(1):
@@ -163,6 +181,12 @@ class Engine:
             if not finite(received,now-120,now+5):
                 return
             source=event['source']
+            if kind=='receiver-rid':
+                key=source+'|marauder|'+event['display_id']
+                self.contacts[key]={**event,'key':key,'seen':received,'kind':'drone',
+                    'name':'Remote ID receiver report','local_only':True}
+                self.contacts={k:v for k,v in sorted(self.contacts.items(),key=lambda p:p[1]['seen'],reverse=True)[:200] if now-v['seen']<=120}
+                return
             if kind=='decoded':
                 # Separate contact/transport; never reinterpret ADS-B as Remote ID.
                 if (event.get('protocol'),event.get('verification')) not in (('adsb','readsb-decoded'),('dji-droneid','crc-valid')):

@@ -4,7 +4,7 @@ Turn a Windows, macOS or Linux computer into a scanner node with a local radar, 
 
 ## Start
 
-[Download Desktop 0.3.1 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.4.0 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
 
 **Windows:** install [Python 3.10+](https://www.python.org/downloads/windows/), extract the source, then double-click `Start-DRONEmapper.cmd` in this folder.
 
@@ -36,9 +36,10 @@ To contribute, click **Connect to DRONEmapper**, approve the matching code in yo
 - **Bluetooth:** Remote ID advertisements through Bleak. Choose **System Bluetooth** on Windows/macOS, or an `hci` controller on Linux. macOS uses CoreBluetooth discovery and local UUIDs rather than radio MACs.
 - **SDR:** HackRF/RTL-SDR spectrum or live ADS-B decoding with readsb. Ordinary aircraft stay local; broadcasts reporting UAS category have a separate sharing choice.
 - **DJI DroneID:** automatic HackRF capture/decode cycles on a selected channel, plus separate recording review. Live DJI reception still needs a supported-aircraft test; manually reviewed recordings are never uploaded.
+- **USB serial:** connect a Marauder ESP32/CYD or a receiver producing our raw Remote ID JSON. Choose the port and format, then **Connect receiver**. [Setup and channel hopping](../docs/serial-receivers.md).
 - **MQTT:** optional authorized receiver feed using the documented Remote ID envelope.
 
-Wi-Fi, Bluetooth and one SDR run together. On Linux, if BlueZ reports that experimental
+Wi-Fi, Bluetooth, one SDR and USB serial run together. On Linux, if BlueZ reports that experimental
 support is required, `bash linux-node/enable-passive-ble.sh` backs up its configuration,
 enables passive reception support and briefly restarts Bluetooth.
 
@@ -48,8 +49,8 @@ The radar uses reported GPS for direction/distance. In **Positions**, choose a r
 
 ## Credits
 
-[Church of Malware](https://churchofmalware.org/) · [saviorSEC](https://churchofmalware.org/work/) · [OpenDroneID protocol references](https://github.com/opendroneid/opendroneid-core-c) · [FAA declarations](https://uasdoc.faa.gov/listDocs) · [OUI Master Database by Ringmast4r](https://github.com/Ringmast4r/OUI-Master-Database), using IEEE registry entries · [readsb](https://github.com/wiedehopf/readsb) · [DroneSecurity / RUB-SysSec](https://github.com/RUB-SysSec/DroneSecurity) · [Bleak](https://github.com/hbldh/bleak) · [Eclipse Paho](https://github.com/eclipse-paho/paho.mqtt.python) · [Wireshark](https://www.wireshark.org/) · [HackRF](https://greatscottgadgets.com/hackrf/) · [Osmocom RTL-SDR](https://osmocom.org/projects/rtl-sdr/wiki).
+[Church of Malware](https://churchofmalware.org/) · [saviorSEC](https://churchofmalware.org/work/) · [OpenDroneID protocol references](https://github.com/opendroneid/opendroneid-core-c) · [FAA declarations](https://uasdoc.faa.gov/listDocs) · [OUI Master Database by Ringmast4r](https://github.com/Ringmast4r/OUI-Master-Database), using IEEE registry entries · [readsb](https://github.com/wiedehopf/readsb) · [DroneSecurity / RUB-SysSec](https://github.com/RUB-SysSec/DroneSecurity) · [Bleak](https://github.com/hbldh/bleak) · [Eclipse Paho](https://github.com/eclipse-paho/paho.mqtt.python) · [Marauder by Just Call Me Koko](https://github.com/justcallmekoko/ESP32Marauder) · [pySerial](https://github.com/pyserial/pyserial) · [Wireshark](https://www.wireshark.org/) · [HackRF](https://greatscottgadgets.com/hackrf/) · [Osmocom RTL-SDR](https://osmocom.org/projects/rtl-sdr/wiki).
 
 Code: **AGPL-3.0-or-later**. Data and optional dependencies retain their own terms; see [NOTICE](NOTICE.txt). Hardware validation is tracked in the setup guide.
 
-Model recognition now covers 106 reviewed FAA aircraft/module combinations. Historical map enrichment adds 12 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).
+Model recognition now covers 106 reviewed FAA aircraft/module combinations. Historical map enrichment adds 22 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).

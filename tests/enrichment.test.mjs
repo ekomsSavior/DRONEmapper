@@ -12,9 +12,17 @@ test('expanded FAA catalog identifies reviewed serials without bridging missing 
   ['1656DTYR14MBD00001','Trinity R14'],
   ['174442423','WingtraOne Gen II'],
   ['18735P2721','P2 Zip'],
+  ['1644FMD4100000007004','md4-1000'],
+  ['18088FDA972B6','Commander3 XL'],
+  ['1886BSKY20002000','SKY II'],
+  ['1634FS0TEN2600A02715','SOTEN'],
+  ['18106M22010','M2'],
+  ['16355A9551','Hummingbird v2'],
  ])assert.equal(identify(hex(s),1).model,model);
- for(const s of ['1839FTD502932332000A','1839FTD5029323320501'])
+ for(const s of ['1839FTD502932332000A','1839FTD5029323320501','1634FS0TEN2600A0271A'])
   assert.equal(identify(hex(s),1).model,null);
+ assert.equal(identify(hex('18106M22021'),1).identification,'ambiguous-catalog-match');
+ assert.equal(identify(hex('18106M22021'),1).model,null);
  const module=identify(hex('18179300000000'),1);
  assert.equal(module.model,null);
  assert.equal(module.module_model,'Remote ID Upgrade Kit (Alta X)');
@@ -29,7 +37,7 @@ test('all scanner catalogs contain the same rules and decimal constraints',()=>{
 });
 test('historical milestones stay historical through the public adapter',async()=>{
  const {records}=await adapters.milestones();
- assert.equal(records.length,22);
+ assert.equal(records.length,26);
  for(const source of records){
   const r=publicRecord(source);
   assert.equal(r.record_type,'historical');

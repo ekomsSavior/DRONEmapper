@@ -1,6 +1,6 @@
 # DRONEmapper Desktop — Windows, macOS and Linux
 
-Version 0.3.1 · **Church of Malware / saviorSEC**
+Version 0.4.0 · **Church of Malware / saviorSEC**
 
 The same local dashboard, radar, detection list, account pairing and optional
 map uploads run on Windows, macOS and Linux. No account password goes into the
@@ -17,7 +17,7 @@ and extract the source bundle into a folder you can write to.
   `bash linux-node/Start-DRONEmapper.command`. With Homebrew Python, the launcher
   checks both `/opt/homebrew/bin` and `/usr/local/bin`.
 
-The first start installs Bleak and Paho into `linux-node/.venv-desktop`, then
+The first start installs Bleak, Paho and pySerial into `linux-node/.venv-desktop`, then
 opens **http://127.0.0.1:8790/**. Leave the terminal open. Stop with **Ctrl+C**;
 restart with the same launcher. After a source update, run the launcher with
 `--update` to refresh dependencies. Add `--dji` to install the optional DJI
@@ -39,6 +39,14 @@ Set your stationary receiver location to place received aircraft GPS on the
 radar relative to your station. Signals without coordinates remain strength
 contacts. The position range changes the view, not antenna reach.
 
+## External ESP32 / CYD receivers
+
+Plug in a compatible serial receiver, open **USB serial receiver**, choose its port
+and format, then **Connect receiver**. Start Remote ID Scan on the board.
+Marauder CSV reports appear locally; timestamped raw Remote ID JSON can contribute
+fresh positions through your existing sharing choice.
+[Serial formats, firmware setup and Linux channel hopping](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/serial-receivers.md).
+
 ## Radio setup
 
 | Input | Windows | macOS |
@@ -49,6 +57,7 @@ contacts. The position range changes the view, not antenna reach.
 | RTL-SDR spectrum | Install RTL-SDR tools; `rtl_power.exe` must be on PATH | `brew install rtl-sdr` |
 | ADS-B | Compatible `readsb` build on PATH, or a local `aircraft.json` from an existing receiver | Same; the node accepts fresh local readsb-format data |
 | DJI DroneID | HackRF tools + `--dji` dependencies; capture/decode cycles | Same |
+| ESP32 / CYD USB serial | COM port + pySerial; board USB/UART driver if needed | /dev/cu.* port + pySerial; board USB/UART driver if needed |
 | MQTT receiver feed | Authorized exact topic and the documented Remote ID envelope | Same |
 
 **Windows SDR tools:** Great Scott Gadgets recommends

@@ -18,7 +18,7 @@ Android 8 or newer. No root or Bluetooth dongle needed.
 
 Sharing is optional. Choose a display name or remain **Anonymous**; email and full MAC addresses stay off the public map. [More app instructions and build steps](android-node/README.md).
 
-**Updating to 0.7.2:** download the new APK from the same page and install it over
+**Updating to 0.7.3:** download the new APK from the same page and install it over
 your existing app—no uninstall. Pairing and settings are preserved. In **Phone
 capabilities**, check the version. USB Wi-Fi: **USB Wi-Fi adapter → Connect → Allow**.
 HackRF: **USB SDR · HackRF → Choose receiver → Connect → Allow** for local RF spectrum.
@@ -27,8 +27,9 @@ Updates are manual; re-enable your preferred **Sharing choices** after starting.
 ## Desktop scanner node
 
 Windows, macOS and Linux computers can run the [standalone node and radar](linux-node/README.md).
-[Download Desktop 0.3.1 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
-Pair with your account and choose which detections to share. Wi-Fi, Bluetooth and one SDR can run together.
+[Download Desktop 0.4.0 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
+Pair with your account and choose which detections to share. Wi-Fi, Bluetooth, one SDR and an external USB serial receiver can run together.
+[ESP32 / Marauder receivers and optional Linux channel hopping](docs/serial-receivers.md).
 
 - **Windows:** install Python 3.10+, extract the source, then open `linux-node/Start-DRONEmapper.cmd`.
 - **macOS:** install Python 3.10+, then run `bash linux-node/Start-DRONEmapper.command`.
