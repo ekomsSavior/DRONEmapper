@@ -3,7 +3,7 @@ import {parseWardrive,WARD_MAX_BYTES,WARD_MAX_AGE} from './wardrive-parser.mjs';
 import {nodeRecord} from './node-records.mjs';
 import {updateHistory} from './observation-profile.mjs';
 const error=(message,status=400)=>Object.assign(Error(message),{status});
-async function readUpload(request){
+export async function readUpload(request){
  const type=request.headers.get('Content-Type')||'';
  if(!/^(?:text\/csv|text\/plain|multipart\/form-data)(?:;|$)/i.test(type))throw error('Send a WiGLE CSV or multipart file field.',415);
  const length=request.headers.get('Content-Length');
@@ -33,7 +33,9 @@ export async function importWardrive(network,request,node,tokenHash,now){
   sql.exec('UPDATE nodes SET minute=?,requests=? WHERE handle=?',minute,count+1,node.handle);
  });
  const zone=request.headers.get('X-Wardrive-Timezone');if(!zone)throw error('Set X-Wardrive-Timezone to UTC or the export’s numeric UTC offset.');
- const {summary,observations}=parseWardrive(await readUpload(request),zone,now);
+ const csv=await readUpload(request);let parsed;
+ try{parsed=parseWardrive(csv,zone,now);}catch(e){throw error(e.message,422);}
+ const {summary,observations}=parsed;
  const prepared=await Promise.all(observations.map(async r=>({
   event:await network.keyed('wardrive-event:'+node.handle+':'+r.identity),
   track:'signal-'+(await network.keyed('wardrive-radio:'+node.handle+':'+r.mac)).slice(0,24),raw:r

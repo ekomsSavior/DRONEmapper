@@ -1,7 +1,60 @@
 # Police drone activity from dispatch and public flight logs
 
-Research reviewed 2026-10-21 for Church of Malware / saviorSEC.
-Implementation: SFPD flight-log adapter and fourteen agency portal links. Complete live export validation passed October 22, 2026; both collectors produced the same 8,244 historical records.
+Research reviewed 2026-10-22 for Church of Malware / saviorSEC.
+Implementation: automatic SFPD logs plus 18 agency-published flight layers,
+shared by the hosted Worker and local Python website. The reviewed registry is
+`public/police-flight-sources.json`; `/api/police-coverage` reports actual collection
+status and `/police-flights.html` displays it. Coverage is not universal.
+
+## Imported public flight layers
+
+Cincinnati, Wichita, Bellingham, Killeen, Fayette County (GA), Saint Paul,
+New Orleans, Tampa, Laurel, Nashville, Hawaii DLE, University of Illinois,
+Niles, Cleveland, Santa Clara County Sheriff, Duluth, Arvada and Pickens County
+(GA) link public Skydio dashboards from their official sites. Their published
+ArcGIS flight layers supply completed takeoff/landing times and flight envelopes.
+Only agency-published data is queried. No credentials, private operations or
+undocumented account access are used; dashboard code is not bundled.
+
+The adapter validates schema and source revision, reads 1,000 rows per page and
+limits each department to its latest 5,000 published rows. Tampa follows its
+published last-30-days window. Check intervals are 5, 15 or 60 minutes; a check
+does not override an agency's publication delay. Unchanged layers reuse cache.
+Identical duplicate flights collapse; conflicting copies are excluded. Partial
+pages and revision changes retain the last good snapshot. Coverage exposes
+selected, omitted and filtered/duplicate row counts. These are rows, not a claim
+that every underlying mission was published.
+
+Flight envelopes are rounded outward to 0.001 degrees and mapped at their center.
+Cards include department, purpose, start, end, duration and the published area.
+Unknown aircraft models and identities remain unknown. Completed records cannot
+be live; after 14 days they become ghost flights, not profiles of one aircraft.
+SFPD's date-only records keep day precision and separate PDDL attribution. Other
+agency facts retain source attribution; no open-data license is invented.
+
+## Remaining coverage work
+
+The Atlas of Surveillance program layer supplies broader documented agency
+coverage; it does not supply flights. The coverage page keeps these counts apart.
+New departments can be added to the reviewed registry after an official portal
+link, public-layer schema and real-response test are established.
+
+Buxton (ME), Carmel (IN), and Arlington (TX) publish DroneSense portals. Their
+public flight-list responses were inspected; the response lists supply event
+fields but no coordinates. They are linked for review, not geocoded from private
+incident addresses or claimed as imported flights. Agency-approved coordinate
+exports would support a future adapter. DroneSense's customer terms are separate
+from a public-data license.
+
+Airdata portals for Chula Vista, Anne Arundel, Everett, Lancaster, Los Angeles
+Port, Elk Grove, Bothell, Westmont and Chico were identified. Airdata's reuse
+terms require review before automated republication; these remain portal leads.
+Portland's advertised Tableau CSV download returned 404 during validation.
+Redmond provides a separate dashboard. None is counted as an automatic feed.
+
+Do not infer a drone from a generic air-support dispatch request. An agency's
+program or an aggregate annual flight total is not an individual mapped flight.
+
 
 ## Findings
 
@@ -22,8 +75,8 @@ Sources: https://www.broadcastify.com/terms/ and https://support.broadcastify.co
 | Source | What was verified | Integration status |
 | --- | --- | --- |
 | Chula Vista PD / AirData | Official public flight-history portal; public flights delayed two hours. The portal states that addresses and flight paths do not precisely represent incident locations. | Evaluate a permitted structured export and stable flight IDs. Preserve flight time and publication delay; historical activity, not a current aircraft position. |
-| Wichita PD / Skydio | City's transparency page describes near-real-time public drone operations and links its dashboard. | Review public flight records, timestamps, geometry and reuse/export conditions. Near-real-time wording does not prove current telemetry. |
-| Bellingham PD / Skydio | City confirms a public flight dashboard. Indexed dashboard displays flight times, durations, purposes and available paths. | Review public record schema and actual publication delay. Do not assume a uniform delay across agencies. |
+| Wichita PD / Skydio | City's transparency page describes near-real-time public drone operations and links its dashboard. | Automatic completed-flight import enabled, checked every five minutes. Preserve the original flight time; completed missions never count as live positions. |
+| Bellingham PD / Skydio | City confirms a public flight dashboard. Indexed dashboard displays flight times, durations, purposes and available paths. | Automatic completed-flight import enabled, checked every five minutes. The latest published flight time is shown on the coverage page. |
 | Community-owned receiver audio / agency open dispatch data | Architectural input option; no particular feed validated here. | Requires a concrete source, permission for processing/redistribution, documented agency/channel and timestamps. Local transcription can avoid a paid speech service. |
 
 Chula Vista: https://www.chulavistaca.gov/departments/police-department/programs/uas-drone-program and https://app.airdata.com/u/cvpd
@@ -34,7 +87,7 @@ Bellingham: https://cob.org/news/2026/bellingham-police-department-launches-dron
 
 AirData documents configurable publication delays and confidential-flight controls: https://airdata.com/public-safety
 
-## Proposed DRONEmapper behavior
+## Dispatch ingestion requirements
 
 Add police-drone activity reports alongside existing Remote ID positions and program/deployment records. Treat dispatch and published flights as different evidence types.
 
@@ -51,7 +104,7 @@ The current EFF integration supplies documented agency program areas; it does no
 
 Before enabling a source: inspect real permitted records, test cancelled requests and helicopter/civilian-drone mentions, validate geography and time zones, exercise corrections/deduplication, and verify public output contains no invented position or ownership. Add attribution required by the source. Publicly viewable portals are candidates, not established open-data feeds or permission to redistribute everything they display.
 
-Recommended sequence: validate one official flight-history source first, then add dispatch ingestion from an explicitly permitted feed. This can establish actual police-drone activity while avoiding dependence on an unavailable CrimeRadar export.
+The flight-history adapters above are implemented. Dispatch ingestion still needs an explicitly permitted, validated feed; no CrimeRadar export is configured.
 
 ## Implemented source: San Francisco
 
@@ -66,7 +119,7 @@ The public export is /data/police-flights.json. The map details include flight d
 ## Additional official portals
 
 - Portland: https://www.portland.gov/police/open-data/uascalls — monthly, generalized call areas; the recorded date is the original call time, not launch time. The dashboard offers a public CSV export. Pending retrieval/schema validation.
-- Cincinnati: https://www.cincinnati-oh.gov/police/department-references/cpd-drones-as-first-responders1/ — official announcement links https://cloud.skydio.com/dashboard/cincinnatipolicedrones. A public ArcGIS flight layer was inspected; item-level reuse terms and a minimal projection still need review before an adapter.
+- Cincinnati: https://www.cincinnati-oh.gov/police/department-references/cpd-drones-as-first-responders1/ — official announcement links https://cloud.skydio.com/dashboard/cincinnatipolicedrones. Its public flight layer is now imported with only flight times, broad purpose and a generalized envelope.
 - Saint Paul: https://www.stpaul.gov/publicsafetytechnology — links https://cloud.skydio.com/dashboard/sppd; updates every 24 hours.
 - Killeen: https://killeentexas.gov/745/Drone-Transparency — links https://cloud.skydio.com/dashboard/killeenpdtx.
 - Fayette County, Georgia: https://fayettesheriff.org/about-us/divisions/special-operations/ — links https://cloud.skydio.com/dashboard/fayettecountysheriff. Geography is required in matching to avoid same-name counties.
@@ -86,6 +139,6 @@ Other agency directories verified through their public pages: Brooklyn Park (htt
 
 The complete SFPD request returned five pages, then the original normalizer rejected a provider row ID. Its slug-like allowlist was too restrictive. Both implementations now retain bounded printable provider IDs exactly, including punctuation, without trimming or truncating identity. New parity cases cover punctuation, whitespace, control characters and overlong identifiers. The validation helper now saves request/response pages before normalization and supports offline replay; the corrected complete import passed its rerun. Actual IDs containing tilde (~) confirmed the cause; both language implementations produce identical records across all seven saved HTTP responses.
 
-Cincinnati's ArcGIS item metadata was retrieved successfully: item 5954ee0b48654284be02d3a8e13bab1d is public and describes the Cincinnati Police Department feature service, owned by bella_skydio_inc. licenseInfo and accessInformation are null. This does not establish a reuse license; retain the official portal link while structured-feed review continues.
+Cincinnati's ArcGIS item metadata was retrieved successfully: item 5954ee0b48654284be02d3a8e13bab1d is public and describes the Cincinnati Police Department feature service, owned by bella_skydio_inc. licenseInfo and accessInformation are null. This does not establish a reuse license. The adapter now selects published flight facts and generalized envelopes, retains source attribution and does not redistribute dashboard software or imply a license to the underlying service.
 
 The Portland dashboard's advertised PPBOpenDataDownloads/UAS_Drones.csv endpoint returned HTTP 404 during direct validation. Its October 15, 2026 dashboard still offers that download path. Keep the agency portal link; no working CSV collector is claimed.

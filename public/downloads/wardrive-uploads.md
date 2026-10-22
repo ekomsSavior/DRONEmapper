@@ -2,17 +2,21 @@
 
 Built by **Church of Malware / saviorSEC**. Free and open source.
 
-1. Sign in to [your account](https://dronemapper.churchofmalware.org/account.html).
-2. Open **Wardrive logs & upload tokens**, name your uploader, confirm sharing and
-   create a token. Save it privately; it is shown once.
-3. Export a completed wardrive as WiGLE CSV. Choose the file and its timestamp
-   timezone, preview the matches, then upload. The browser accepts completed CSVs
-   up to **256 MiB**, filters locally, and sends matching rows in small batches.
-   Keep the page open; progress and Cancel are available. If interrupted, retry
-   with the same token—completed batches will not count twice.
-4. See accepted reports under **Possible signals** on the map. Older reports
-   appear under **Ghosts** after 14 days. Remove an uploader and its reports in
-   **Your nodes** to revoke its token.
+1. Sign in, then open [Wardrive logs](https://dronemapper.churchofmalware.org/wardrives.html).
+2. Under **Manual CSV upload**, leave **My signed-in account** selected. No upload token is needed.
+3. Choose a completed WiGLE CSV and its timestamp timezone, preview matches,
+   confirm sharing and upload. Files up to **256 MiB** are filtered locally and
+   matching rows are sent in small batches. Keep the page open; progress and
+   Cancel are available. If interrupted, sign in again and retry with the same
+   account—completed batches will not count twice.
+4. Accepted signal areas appear under **Possible signals**; records older than
+   14 days appear under **Ghosts**. Removing **Website log uploads** from **Your
+   nodes** removes those reports.
+
+For automatic uploads, expand **Automatic uploads & token management**. Create
+an uploader and save its token privately; it is shown once. Existing tokens can
+also be selected and checked in the manual form. Tokens work with the documented
+API and uploader script; other apps need an integration to use this destination.
 
 The initial importer recognizes the same WiFi CAM and Tello-style network-name
 patterns as our scanners. These are **unconfirmed signal areas**, not decoded

@@ -1,5 +1,6 @@
 
 import {createAuth} from './config.mjs';
+import {readUpload} from '../wardrive-ingest.mjs';
 import {privateHash,clientIP,emailAddress,strongPassword,displayName,json,smallBody,GENERIC} from './security.mjs';
 const AUTH_POST=new Set(['sign-up/email','sign-in/email','sign-out','send-verification-email','request-password-reset','reset-password','change-password','revoke-sessions','two-factor/enable','two-factor/disable','two-factor/verify-totp','two-factor/verify-backup-code','two-factor/generate-backup-codes','two-factor/get-totp-uri']);
 const AUTH_GET=new Set(['get-session','verify-email']);
@@ -18,13 +19,15 @@ export async function accountRequest(request,env){
  if(!emailLink&&(origin&&origin!==env.AUTH_ORIGIN||request.headers.get('Sec-Fetch-Site')==='cross-site'))return json({error:GENERIC},403);
  if(isAuth&&!(request.method==='POST'?AUTH_POST:request.method==='GET'?AUTH_GET:new Set()).has(path)&&!(request.method==='GET'&&/^reset-password\/[A-Za-z0-9_-]{16,200}$/.test(path)))return json({error:'Not found'},404);
  if(!isAuth&&!['POST','GET'].includes(request.method))return json({error:'Not found'},404);
- // Browser mutations require same-origin JSON. Native device start/poll send no cookies.
+ // Browser mutations require the same origin; CSV import has its own bounded parser.
+ // Native device start/poll send no cookies.
  const native=!isAuth&&['device/start','device/poll'].includes(path);
  if(request.method==='POST'&&!native&&origin!==env.AUTH_ORIGIN)return json({error:GENERIC},403);
  if(native&&request.headers.has('Cookie'))return json({error:GENERIC},403);
  const ipHash=privateHash(env.AUTH_SECRET,'ip',ip),guard=env.ACCOUNTS.getByName('accounts');
+ const manualUpload=!isAuth&&path==='wardrive/import'&&request.method==='POST';
  let body={};
- try{if(request.method==='POST')body=await smallBody(request);}catch{return json({error:'Unable to read that request.'},400);}
+ try{if(request.method==='POST'&&!manualUpload)body=await smallBody(request);}catch{return json({error:'Unable to read that request.'},400);}
  const email=emailAddress(body.email);if(body.email!==undefined)body.email=email;
  const kind=isAuth?(path==='sign-up/email'?'signup':path==='sign-in/email'?'login':['send-verification-email','request-password-reset'].includes(path)?'mail':'auth'):path==='device/start'?'start':path==='device/poll'?'poll':'auth';
  if(!await guard.permit(ipHash,kind,email?privateHash(env.AUTH_SECRET,'email',email):null))return json({error:GENERIC},429);
@@ -63,6 +66,14 @@ export async function accountRequest(request,env){
  const session=await createAuth(env).api.getSession({headers:request.headers});
  if(!session?.user?.emailVerified)return json({error:'Sign in with your verified email first.'},401);
  const owner=session.user.id;
+ if(manualUpload){
+  if(request.headers.get('X-Wardrive-Consent')!=='yes')return json({error:'Confirm sharing before uploading.'},400);
+  try{
+   const csv=await readUpload(request);
+   const result=await env.NODES.getByName('community').importAccountWardrive(owner,csv,request.headers.get('X-Wardrive-Timezone'));
+   return json(result.body,result.status);
+  }catch(e){return json({error:e.status?e.message:'Unable to upload this log. Please try again.'},e.status||503);}
+ }
  if(path==='wardrive/tokens'&&request.method==='POST'){
   if(body.consent!==true||typeof body.label!=='string'||!body.label.trim()||body.label.length>80||/[\x00-\x1f]/.test(body.label))return json({error:'Name the uploader and confirm that you want to contribute matching signal areas.'},400);
   try{return json(await env.NODES.getByName('community').createWardriveToken(owner,body.label.trim()),201);}

@@ -91,3 +91,14 @@ test('large candidate rows split by encoded byte size as well as row count',asyn
  }});
  assert.equal(summary.rows,20);assert.ok(sizes.length>1);assert.ok(summary.candidates>0);
 });
+
+test('manual browser upload uses the verified session without sending or requesting a token',async()=>{
+ let calls=0;
+ const result=await uploadWardriveFile(file(header,row()),'', 'UTC',{accountUpload:true,now,fetcher:async(url,request)=>{
+  calls++;assert.equal(url,'/account-api/wardrive/import');assert.equal(request.credentials,'same-origin');assert.equal(request.headers['X-Wardrive-Consent'],'yes');assert.equal('Authorization' in request.headers,false);return Response.json({accepted:1,duplicates:0});
+ }});assert.equal(calls,1);assert.equal(result.accepted,1);
+ await assert.rejects(uploadWardriveFile(file(header,row()),'','UTC',{accountUpload:true,fetcher:async()=>Response.json({error:'Sign in'},{status:401})}),/sign-in expired/);
+});
+test('pasted token whitespace and uppercase hex normalize without storing secrets',async()=>{
+ await uploadWardriveFile(file(header,row()),'  '+ 'A'.repeat(64)+'  ','UTC',{fetcher:async(url,request)=>{assert.equal(request.headers.Authorization,'Bearer '+'a'.repeat(64));assert.equal(request.credentials,'omit');return Response.json({accepted:1,duplicates:0});}});
+});

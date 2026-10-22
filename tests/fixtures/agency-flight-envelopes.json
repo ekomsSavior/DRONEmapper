@@ -1,0 +1,267 @@
+{
+  "agency_id": "wichita",
+  "now": 1792717200,
+  "metadata": {
+    "geometryType": "esriGeometryPolyline",
+    "objectIdField": "ObjectId",
+    "extent": {
+      "xmin": -114.33621529999999,
+      "ymin": 0,
+      "xmax": 0,
+      "ymax": 65.5215012,
+      "spatialReference": {
+        "wkid": 4326,
+        "latestWkid": 4326
+      }
+    },
+    "advancedQueryCapabilities": {
+      "supportsPagination": true,
+      "supportsPaginationOnAggregatedQueries": true,
+      "supportsQueryRelatedPagination": true,
+      "supportsQueryWithDistance": true,
+      "supportsOutDistance": true,
+      "supportsReturningQueryExtent": true,
+      "supportsStatistics": true,
+      "supportsOrderBy": true,
+      "supportsDistinct": true,
+      "supportsQueryWithResultType": true,
+      "supportsSqlExpression": true,
+      "supportsTimeRelation": true,
+      "supportsAdvancedQueryRelated": true,
+      "supportsCountDistinct": true,
+      "supportsPercentileStatistics": true,
+      "supportsApproxPercentileStatistics": true,
+      "supportsSpatialAggregationStatistics": true,
+      "supportsTrueCurve": true,
+      "supportedSpatialAggregationStatistics": [
+        "EnvelopeAggregate",
+        "CentroidAggregate",
+        "ConvexHullAggregate"
+      ],
+      "supportsLod": true,
+      "supportsQueryWithLodSR": false,
+      "supportedLodTypes": [
+        "geohash"
+      ],
+      "supportsReturningGeometryCentroid": false,
+      "supportsReturningGeometryEnvelope": true,
+      "supportsReturningGeometryProperties": true,
+      "supportsQueryWithDatumTransformation": true,
+      "supportsCurrentUserQueries": true,
+      "supportsHavingClause": true,
+      "supportsOutFieldSQLExpression": true,
+      "supportsMaxRecordCountFactor": true,
+      "supportsTopFeaturesQuery": true,
+      "supportsDisjointSpatialRel": true,
+      "supportsQueryWithCacheHint": true,
+      "supportedOperationsWithCacheHint": [
+        "query",
+        "queryTopFilter",
+        "queryAnalytics",
+        "queryAttachments",
+        "queryRelated",
+        "queryBins",
+        "queryPivot"
+      ],
+      "supportsQueryAnalytic": true,
+      "supportsQueryPivot": true,
+      "supportsQueryBins": true,
+      "supportsDefaultSR": true,
+      "supportsTranslations": false,
+      "supportsAggIds": true,
+      "supportsQueryWithCollation": true,
+      "supportsISODOW": true,
+      "supportsISOWeek": true,
+      "supportsFullTextSearch": true,
+      "fullTextSearchCapabilities": {
+        "supportsAccentSensitivity": true,
+        "supportsStopWords": true,
+        "supportsSearchOperator": true,
+        "supportsOperator": true
+      }
+    },
+    "fields": [
+      {
+        "name": "ObjectId",
+        "type": "esriFieldTypeOID",
+        "actualType": "int",
+        "alias": "ObjectId",
+        "sqlType": "sqlTypeInteger",
+        "nullable": false,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "flight_id",
+        "type": "esriFieldTypeString",
+        "alias": "Flight ID",
+        "sqlType": "sqlTypeOther",
+        "length": 5000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "vehicle_serial",
+        "type": "esriFieldTypeString",
+        "alias": "Vehicle",
+        "sqlType": "sqlTypeOther",
+        "length": 5000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "dock_serial",
+        "type": "esriFieldTypeString",
+        "alias": "Dock",
+        "sqlType": "sqlTypeOther",
+        "length": 5000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "user_email",
+        "type": "esriFieldTypeString",
+        "alias": "Pilot",
+        "sqlType": "sqlTypeOther",
+        "length": 5000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "takeoff",
+        "type": "esriFieldTypeDate",
+        "alias": "Takeoff",
+        "sqlType": "sqlTypeOther",
+        "length": 8,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null,
+        "precision": 1
+      },
+      {
+        "name": "landing",
+        "type": "esriFieldTypeDate",
+        "alias": "Landing",
+        "sqlType": "sqlTypeOther",
+        "length": 8,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null,
+        "precision": 1
+      },
+      {
+        "name": "external_id",
+        "type": "esriFieldTypeString",
+        "alias": "External ID",
+        "sqlType": "sqlTypeOther",
+        "length": 5000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "description",
+        "type": "esriFieldTypeString",
+        "alias": "Description",
+        "sqlType": "sqlTypeOther",
+        "length": 5000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "flight_purpose",
+        "type": "esriFieldTypeString",
+        "alias": "Flight Purpose",
+        "sqlType": "sqlTypeOther",
+        "length": 5000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "operation_id",
+        "type": "esriFieldTypeString",
+        "alias": "Operation ID",
+        "sqlType": "sqlTypeOther",
+        "length": 5000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "organization_id",
+        "type": "esriFieldTypeString",
+        "alias": "Org ID",
+        "sqlType": "sqlTypeOther",
+        "length": 5000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Shape__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape__Length",
+        "sqlType": "sqlTypeDouble",
+        "nullable": true,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      }
+    ],
+    "editingInfo": {
+      "lastEditDate": 1792683981286,
+      "schemaLastEditDate": 1792683978724,
+      "dataLastEditDate": 1792683981286
+    }
+  },
+  "features": [
+    {
+      "attributes": {
+        "ObjectId": 8145,
+        "flight_id": "5da5c5ed-e99d-42eb-91a8-0e7c0b7be7fa",
+        "takeoff": 1792678194002,
+        "landing": 1792678852876,
+        "flight_purpose": "Other Call for Service"
+      },
+      "envelope": {
+        "xmin": -97.326,
+        "ymin": 37.687,
+        "xmax": -97.305,
+        "ymax": 37.707
+      }
+    },
+    {
+      "attributes": {
+        "ObjectId": 8146,
+        "flight_id": "4094a87c-4e80-4df8-a447-8c8a58cd386a",
+        "takeoff": 1792676672531,
+        "landing": 1792677933135,
+        "flight_purpose": "Other Call for Service"
+      },
+      "envelope": {
+        "xmin": -97.326,
+        "ymin": 37.687,
+        "xmax": -97.304,
+        "ymax": 37.708
+      }
+    }
+  ]
+}

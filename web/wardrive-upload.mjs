@@ -80,32 +80,32 @@ export function waitForUpload(ms,signal){
   signal?.addEventListener('abort',abort,{once:true});
  });
 }
-async function postBatch(text,token,timezone,signal,fetcher){
+async function postBatch(text,token,timezone,signal,fetcher,accountUpload){
  const request=new AbortController(),abort=()=>request.abort();
  signal?.addEventListener('abort',abort,{once:true});
  const timer=setTimeout(abort,30000);
  try{
   checkAbort(signal);
-  const response=await fetcher('/v1/wardrives',{method:'POST',credentials:'omit',redirect:'error',signal:request.signal,
-   headers:{'Content-Type':'text/csv',Authorization:'Bearer '+token,'X-Wardrive-Timezone':timezone},body:text});
+  const response=await fetcher(accountUpload?'/account-api/wardrive/import':'/v1/wardrives',{method:'POST',credentials:accountUpload?'same-origin':'omit',redirect:'error',signal:request.signal,
+   headers:{'Content-Type':'text/csv','X-Wardrive-Timezone':timezone,...(accountUpload?{'X-Wardrive-Consent':'yes'}:{Authorization:'Bearer '+token.trim().toLowerCase()})},body:text});
   let result;try{result=await response.json();}catch{result=null;}
   return {response,result};
  }finally{clearTimeout(timer);signal?.removeEventListener('abort',abort);}
 }
-export async function uploadWardriveFile(file,token,timezone,{signal,onProgress,fetcher=fetch,wait=waitForUpload,now=Date.now()/1000}={}){
+export async function uploadWardriveFile(file,token,timezone,{signal,onProgress,fetcher=fetch,wait=waitForUpload,now=Date.now()/1000,accountUpload=false}={}){
  let accepted=0,duplicates=0,batches=0;
  const progress=extra=>onProgress?.({accepted,duplicates,batches,...extra});
  const send=async(text,batch)=>{
   if(batches){progress({waiting:true});await wait(11000,signal);}
   for(let attempt=0;attempt<4;attempt++){
    checkAbort(signal);let response,result;
-   try{({response,result}=await postBatch(text,token,timezone,signal,fetcher));}
+   try{({response,result}=await postBatch(text,token,timezone,signal,fetcher,accountUpload));}
    catch(e){checkAbort(signal);if(attempt===3)throw Error('Connection interrupted. Retry this file; completed batches will not be counted twice.');}
    if(response?.ok){
     if(!result||!Number.isInteger(result.accepted)||result.accepted<0||!Number.isInteger(result.duplicates)||result.duplicates<0||result.accepted+result.duplicates>batch.rows)throw Error('Unexpected upload response. Retry this file safely.');
     accepted+=result.accepted;duplicates+=result.duplicates;batches++;progress({waiting:false});return;
    }
-   if(response&&response.status!==429&&response.status<500)throw Error(result?.error||'Upload failed. Check your token and file.');
+   if(response&&response.status!==429&&response.status<500)throw Error(response.status===401&&accountUpload?'Your sign-in expired. Sign in again, then retry the same file. Completed batches will not count twice.':result?.error||'Upload failed. Check your token and file.');
    if(attempt===3)throw Error('Upload service unavailable. Retry this file; completed batches will not be counted twice.');
    const retry=response?.headers.get('Retry-After'),seconds=Number(retry);
    const delay=response?.status===429?(retry&&Number.isFinite(seconds)?Math.max(1,Math.min(300,seconds))*1000:60000):10000*2**attempt;

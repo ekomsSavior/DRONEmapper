@@ -91,3 +91,32 @@ test('token issuance requires verified account, same origin and explicit consent
  const list=await (await request('/account-api/nodes')).json();assert.equal(list.nodes[0].scope,'wardrive');assert.ok(!JSON.stringify(list).includes(token.upload_token));
  await request('/account-api/nodes/revoke',{node_handle:token.node_handle});assert.equal((await (await request('/account-api/nodes')).json()).nodes.length,0);
 });
+
+test('manual website uploads reuse one owned identity across visits and remain revocable',async t=>{
+ const h=await authHarness();t.after(()=>h.mf.dispose());const env=await h.mf.getBindings(),network=env.NODES.getByName('community');
+ const first=await network.importAccountWardrive('manual-owner',csv(row(now-20*86400)),'UTC');assert.equal(first.status,200);assert.equal(first.body.accepted,1);assert.equal('upload_token' in first.body,false);
+ const second=await network.importAccountWardrive('manual-owner',csv(row(now-20*86400)),'UTC');assert.equal(second.body.duplicates,1);
+ const nodes=await network.accountNodes('manual-owner');assert.equal(nodes.length,1);assert.equal(nodes[0].label,'Website log uploads');
+ assert.equal((await network.snapshot(0)).signals[0].ghost,true);
+ await network.revokeAccountNode('another-owner',nodes[0].handle);assert.equal((await network.snapshot(0)).signals.length,1);
+ await network.revokeAccountNode('manual-owner',nodes[0].handle);assert.equal((await network.snapshot(0)).signals.length,0);
+ const replacement=await network.importAccountWardrive('manual-owner',csv(row(now-100)),'UTC');assert.equal(replacement.body.accepted,1);assert.notEqual((await network.accountNodes('manual-owner'))[0].handle,nodes[0].handle);
+});
+test('manual file endpoint requires a verified session, same origin and explicit sharing consent',async t=>{
+ const h=await authHarness();t.after(()=>h.mf.dispose());const jar=new Map();
+ const request=async(path,body,headers={})=>{
+  const raw=typeof body==='string';const r=await h.mf.dispatchFetch('http://localhost'+path,{method:body?'POST':'GET',headers:{Origin:'http://localhost','X-Test-IP':'192.0.2.83','Content-Type':raw?'text/csv':'application/json',Cookie:[...jar].map(([k,v])=>k+'='+v).join('; '),...headers},body:body?(raw?body:JSON.stringify(body)):undefined,redirect:'manual'});
+  for(const c of r.headers.getSetCookie()){const part=c.split(';')[0],i=part.indexOf('=');jar.set(part.slice(0,i),part.slice(i+1));}return r;
+ };
+ const path='/account-api/wardrive/import',headers={'X-Wardrive-Timezone':'UTC','X-Wardrive-Consent':'yes'};
+ assert.equal((await request(path,csv(row()),headers)).status,401);
+ await request('/api/auth/sign-up/email',{email:'manual@example.test',password:'Comets drift through luminous skies!',name:'Tester'});
+ assert.equal((await request(path,csv(row()),headers)).status,401);
+ const link=h.mail.at(-1).text.match(/http:\/\/localhost\/api\/auth\/verify-email\?\S+/)[0];await request(link.replace('http://localhost',''));
+ await request('/api/auth/sign-in/email',{email:'manual@example.test',password:'Comets drift through luminous skies!'});
+ assert.equal((await request(path,csv(row()),{...headers,Origin:'https://elsewhere.test'})).status,403);
+ assert.equal((await request(path,csv(row()),{...headers,'X-Wardrive-Consent':'no'})).status,400);
+ const r=await request(path,csv(row()),headers);assert.equal(r.status,200,await r.clone().text());assert.equal((await r.json()).accepted,1);
+ assert.equal((await request(path,csv(row()),{...headers,'Content-Type':'application/json'})).status,415);
+ assert.equal((await request(path,'x'.repeat(WARD_MAX_BYTES+16385),headers)).status,413);
+});

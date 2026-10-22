@@ -7,6 +7,7 @@ import {fetchVoto} from './voto-source.mjs';
 import {fetchOAM} from './oam-source.mjs';
 import {fetchAVMap} from './avmap-source.mjs';
 import {fetchSFPD} from './police-flights.mjs';
+import {agencies,fetchAgencyFlights} from './agency-flights.mjs';
 import {historicalMilestones} from './reviewed-history.mjs';
 export const INTERVAL=300,RETENTION=86400;
 // Cron can refresh regular feeds, but source-specific cadences and backoff still apply.
@@ -71,7 +72,7 @@ export async function normalizeClimate(payload){
  }return [...records.values()];
 }
 async function ocean(){let index=0,failed=0,retry=300;const records=[];await Promise.all(Array.from({length:4},async()=>{while(index<DATASETS.length){const dataset=DATASETS[index++];try{const p=await fetchJSON(`https://data.pmel.noaa.gov/pmel/erddap/tabledap/${dataset[0]}.json?time,latitude,longitude&orderByMax(%22time%22)`,65536),r=normalizeNOAA(p,dataset);if(r)records.push(r);}catch(e){failed++;retry=Math.max(retry,e.retry||300);}}}));if(failed===DATASETS.length)throw new SourceError('Ocean sources unavailable',retry);return {records,partial:failed};}
-export const adapters={sfpd:()=>fetchSFPD(fetchJSON),milestones:async()=>({records:structuredClone(historicalMilestones)}),ioos:()=>fetchIOOS(fetchJSON),argo:()=>fetchArgo(fetchJSON),voto:()=>fetchVoto(fetchJSON),oam:()=>fetchOAM(fetchJSON),avmap:()=>fetchAVMap(fetchText,fetchJSON),deploy:async()=>({records:normalizeDeploy(await fetchJSON(DEPLOY_URL))}),adsb:async()=>({records:normalizeADSB(await fetchJSON(ADSB_URL))}),climateviewer:async()=>({records:await normalizeClimate(await fetchJSON(CLIMATE_URL))}),noaa:ocean,atlas:()=>fetchAtlas(fetchJSON),gliders:async()=>({records:normalizeGliders(await fetchJSON(GLIDERS_URL,1048576))})};
+export const adapters={...Object.fromEntries(agencies.map(a=>['police-'+a.id,(previous)=>fetchAgencyFlights(fetchJSON,a,previous)])),sfpd:()=>fetchSFPD(fetchJSON),milestones:async()=>({records:structuredClone(historicalMilestones)}),ioos:()=>fetchIOOS(fetchJSON),argo:()=>fetchArgo(fetchJSON),voto:()=>fetchVoto(fetchJSON),oam:()=>fetchOAM(fetchJSON),avmap:()=>fetchAVMap(fetchText,fetchJSON),deploy:async()=>({records:normalizeDeploy(await fetchJSON(DEPLOY_URL))}),adsb:async()=>({records:normalizeADSB(await fetchJSON(ADSB_URL))}),climateviewer:async()=>({records:await normalizeClimate(await fetchJSON(CLIMATE_URL))}),noaa:ocean,atlas:()=>fetchAtlas(fetchJSON),gliders:async()=>({records:normalizeGliders(await fetchJSON(GLIDERS_URL,1048576))})};
 const privateFields=new Set(['source','source_url','evidence_url','verification','purpose_evidence_url','attribution','license','license_url']);
 export const publicRecord=r=>Object.fromEntries(Object.entries(r).filter(([key])=>!privateFields.has(key)));
 export function mergePositions(previous,incoming,now){

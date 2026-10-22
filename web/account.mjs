@@ -10,7 +10,7 @@ let pair=(params.get('device')||sessionStorage.getItem('dm-pair')||'').toUpperCa
 if(pair)sessionStorage.setItem('dm-pair',pair);
 let resetToken=params.get('token');
 if(resetToken)history.replaceState(null,'',location.pathname);
-let user=null;
+let user=null,requestedView=params.get('view')||root.dataset.view||'';
 const el=(tag,text,attrs={})=>{const n=document.createElement(tag);if(text)n.textContent=text;for(const [k,v]of Object.entries(attrs))n.setAttribute(k,v);return n;};
 function message(text=''){status.textContent=text;}
 function clear(title){root.replaceChildren(el('h2',title));message();}
@@ -25,7 +25,7 @@ function button(parent,label,action,secondary=false){
 }
 async function invoke(promise){const result=await promise;if(result.error)throw Error(result.error.status===429?'Unable to complete this request. Please try again later.':result.error.message||'Unable to complete this request.');return result.data;}
 async function api(path,body){
- const response=await fetch('/account-api/'+path,{method:body?'POST':'GET',credentials:'same-origin',headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});
+ const response=await fetch('/account-api/'+path,{method:body?'POST':'GET',credentials:'same-origin',headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(20000)});
  const result=await response.json();if(!response.ok)throw Error(result.error||'Unable to complete this request.');return result;
 }
 function credentials(signup=false){
@@ -70,10 +70,11 @@ async function dashboard(){
  const data=await invoke(auth.getSession());user=data?.user;if(!user?.emailVerified){credentials();return;}
  clear('Your scanner account');note(user.email);
  if(pair){try{await pairing(pair);return;}catch(error){pair='';sessionStorage.removeItem('dm-pair');message(error.message);}}
+ if(requestedView==='wardrives'){requestedView='';wardrive();return;}
  button(root,'Open world map ↗',()=>{location.href='/';});
  button(root,'Wardrive logs & upload tokens',()=>wardrive(),true);
  root.append(el('p','Import older CSVs here. Record offline and upload saved trips from the Android app. See the workflows and supported devices below.'));
- root.append(el('a','Import, offline recording & export guide ↓',{href:'#wardrive-workflow'}));
+ root.append(el('a','Import, offline recording & export guide ↓',{href:'/account#wardrive-workflow'}));
  root.append(el('h3','Connect a scanner'));note('Choose “Connect to DRONEmapper” in the Android app or desktop node. Or enter the connection code shown there.');
  const code=field(root,'Connection code');button(root,'Continue',()=>pairing(code.value.trim().toUpperCase()));
  root.append(el('h3','Your nodes'));
@@ -91,25 +92,25 @@ function wardrive(){
  clear('Contribute wardrive logs');
  note('Import your WiGLE-format CSV exports. Matching camera-link names become possible signal areas; ordinary Wi-Fi and Bluetooth rows are skipped. This does not decode Remote ID or establish a device’s location.');
  root.append(el('p','For trips recorded in DRONEmapper, use Saved wardrives → Upload later in the app. You can also export those trips to compatible services.'));
- const workflowLink=el('p');workflowLink.append(el('a','Offline recording, exports & supported devices ↓',{href:'#wardrive-workflow'}));root.append(workflowLink);
+ const workflowLink=el('p');workflowLink.append(el('a','Offline recording, exports & supported devices ↓',{href:'/account#wardrive-workflow'}));root.append(workflowLink);
  const guide=el('a','Setup, automatic uploads & API documentation ↗',{href:'/wardrives.html'});root.append(guide);
- root.append(el('h3','Create an upload token'));
- const label=field(root,'Uploader name');label.maxLength=80;label.placeholder='My Biscuit exports';
+ root.append(el('h3','Upload a file manually'));
+ note('Choose a file, preview the matches, then upload with your signed-in account. No upload token is needed.');
+ const methodLabel=el('label','Upload using',{for:'upload-method'}),method=el('select','',{id:'upload-method'});
+ method.append(el('option','My signed-in account',{value:'account'}),el('option','An existing upload token',{value:'token'}));root.append(methodLabel,method);
+ const keyPanel=el('div');root.append(keyPanel);
+ const key=field(keyPanel,'Upload token','password');key.required=false;key.maxLength=256;key.spellcheck=false;
+ const normalizeKey=()=>{key.value=key.value.trim().toLowerCase();if(!/^[a-f0-9]{64}$/.test(key.value))throw Error('Paste the complete DRONEmapper upload token. You can also choose My signed-in account instead.');return key.value;};
+ const checkToken=async()=>{
+  const token=normalizeKey(),controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
+  try{const response=await fetch('/v1/wardrives',{headers:{Authorization:'Bearer '+token},credentials:'omit',redirect:'error',signal:controller.signal});const result=await response.json();if(!response.ok)throw Error(result.error||'This token is unavailable. Use your signed-in account or create a new upload token.');message('Token is valid. Choose a file below.');}
+  finally{clearTimeout(timer);}
+ };
+ button(keyPanel,'Check token',checkToken,true);
+ const setMethod=()=>{keyPanel.hidden=method.value!=='token';};method.addEventListener('change',setMethod);setMethod();
  const consentLabel=el('label','',{class:'check-label'}),consent=el('input','',{type:'checkbox'});
  consentLabel.append(consent,document.createTextNode('I want to contribute matching observations from logs I am allowed to share, as approximate public signal areas.'));root.append(consentLabel);
- note('The file is processed to find supported signals. Raw files, network names and MAC addresses are not retained. Only rounded areas, dates and matching evidence are saved. Revoke a token and its reports under Your nodes.');
- const issued=el('div');
- button(root,'Create upload token',async()=>{
-  if(!label.reportValidity())return;if(!consent.checked)throw Error('Confirm sharing before creating a token.');
-  const result=await api('wardrive/tokens',{label:label.value.trim(),consent:true});key.value=result.upload_token;
-  issued.replaceChildren(el('p','Save this token now. It is shown once and is only allowed to upload wardrive logs.'));
-  const secret=el('textarea','',{rows:'3',readonly:'','aria-label':'New wardrive upload token',spellcheck:'false'});secret.value=result.upload_token;issued.append(secret);
-  button(issued,'Copy token',async()=>{await navigator.clipboard.writeText(result.upload_token);message('Token copied. Keep it private.');},true);
-  message('Upload token created.');
- });
- root.append(issued);
- root.append(el('h3','Upload a completed export'));
- const key=field(root,'Upload token','password');key.pattern='[a-f0-9]{64}';key.maxLength=64;key.spellcheck=false;
+ note('Raw files, network names and MAC addresses are not retained. Only rounded areas, dates and matching evidence are saved. Manage website uploads and tokens under Your nodes.');
  const file=field(root,'WiGLE CSV file','file');file.accept='.csv,.wiglecsv,.log,text/csv';
  const zone=field(root,'Timezone used by the export');zone.value='UTC';zone.placeholder='UTC or -07:00';
  note('Choose a completed CSV up to 256 MiB. Large files are read in chunks and matching rows upload automatically in batches. Keep this page open until finished.');
@@ -119,7 +120,7 @@ function wardrive(){
  const busy=async action=>{
   if(operation)return;
   operation=new AbortController();
-  const controls=[...root.querySelectorAll('input,button,textarea')].map(n=>[n,n.disabled]);
+  const controls=[...root.querySelectorAll('input,button,textarea,select')].map(n=>[n,n.disabled]);
   for(const [n] of controls)n.disabled=true;
   cancel.hidden=false;cancel.disabled=false;
   const preventLeave=e=>{e.preventDefault();e.returnValue='';};
@@ -140,11 +141,12 @@ function wardrive(){
   });
  });
  button(root,'Upload matching observations',async()=>{
-  if(!key.reportValidity())return;
+  if(!consent.checked)throw Error('Confirm sharing before uploading.');
+  const accountUpload=method.value==='account',token=accountUpload?'':normalizeKey();
   if(!preview||preview.selected!==file.files[0]||preview.timezone!==zone.value.trim())throw Error('Preview this file first.');
   if(!preview.summary.candidates)throw Error('No supported observations to upload.');
   await busy(async signal=>{
-   const result=await uploadWardriveFile(preview.selected,key.value.trim(),preview.timezone,{signal,now:preview.now,onProgress:p=>{
+   const result=await uploadWardriveFile(preview.selected,token,preview.timezone,{signal,accountUpload,now:preview.now,onProgress:p=>{
     summary.textContent=`${p.waiting?(p.retrying?'Retrying automatically':'Uploading in batches'):p.totalBytes===undefined?'Uploading':`Reading ${percent(p)}%`} · ${p.accepted.toLocaleString()} imported · ${p.duplicates.toLocaleString()} duplicates skipped · ${p.batches} batches complete`;
    }});
    summary.textContent=`Upload complete · ${result.batches} batch${result.batches===1?'':'es'} processed`;
@@ -152,6 +154,18 @@ function wardrive(){
   });
  });
  const cancel=button(root,'Cancel upload or preview',()=>operation?.abort(),true);cancel.hidden=true;
+ const automation=el('details'),automationTitle=el('summary','Automatic uploads & token management');automation.append(automationTitle);root.append(automation);
+ automation.append(el('p','Only automatic uploaders and integrations need a token. Tokens are shown once. A lost token cannot be recovered; create a replacement and remove the old uploader under Your nodes.'));
+ const label=field(automation,'Uploader name');label.maxLength=80;label.placeholder='My Biscuit exports';
+ const issued=el('div');
+ button(automation,'Create upload token',async()=>{
+  if(!label.reportValidity())return;if(!consent.checked)throw Error('Confirm sharing before creating a token.');
+  const result=await api('wardrive/tokens',{label:label.value.trim(),consent:true});key.value=result.upload_token;method.value='token';setMethod();
+  issued.replaceChildren(el('p','Save this token privately. It is shown once. Your next file upload is ready to use it.'));
+  const secret=el('textarea','',{rows:'3',readonly:'','aria-label':'New wardrive upload token',spellcheck:'false'});secret.value=result.upload_token;issued.append(secret);
+  button(issued,'Copy token',async()=>{await navigator.clipboard.writeText(result.upload_token);message('Token copied. Keep it private.');},true);
+  message('Upload token created. Choose a file above.');
+ });automation.append(issued);
  button(root,'Back to account',dashboard,true);
 }
 async function pairing(value){

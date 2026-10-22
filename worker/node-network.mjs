@@ -101,6 +101,29 @@ export class NodeNetwork extends DurableObject{
   });
   return {node_handle:handle,upload_token:token,scope:'wardrive'};
  }
+ async importAccountWardrive(owner,csv,timezone){
+  try {
+  if(typeof owner!=='string'||!owner||owner.length>128)throw Error('Invalid account');
+  if(typeof csv!=='string'||encoder.encode(csv).length>2097152)throw Object.assign(Error('Upload batch too large.'),{status:413});
+  if(typeof timezone!=='string'||!timezone||timezone.length>10)throw Object.assign(Error('Choose the export timezone.'),{status:400});
+  // One stable, account-owned uploader makes retries safe across browser sessions.
+  // The internal credential never leaves the service; removal revokes its reports.
+  const flow='manual-wardrive';
+  let node=[...this.ctx.storage.sql.exec('SELECT * FROM nodes WHERE owner=? AND flow=? AND revoked=0',owner,flow)][0];
+  if(!node){
+   const handle=crypto.randomUUID(),token=await this.keyed('manual-wardrive:'+owner+':'+handle),digest=await hash(token);
+   node=this.ctx.storage.transactionSync(()=>{
+    const existing=[...this.ctx.storage.sql.exec('SELECT * FROM nodes WHERE owner=? AND flow=? AND revoked=0',owner,flow)][0];
+    if(existing)return existing;
+    if([...this.ctx.storage.sql.exec('SELECT COUNT(*) n FROM nodes')][0].n>=5000)throw Object.assign(Error('Upload capacity reached. Please try again later.'),{status:409});
+    this.ctx.storage.sql.exec('INSERT INTO nodes(handle,token_hash,created,owner,label,scope,flow) VALUES(?,?,?,?,?,?,?)',handle,digest,Date.now()/1000,owner,'Website log uploads','wardrive',flow);
+    return [...this.ctx.storage.sql.exec('SELECT * FROM nodes WHERE handle=?',handle)][0];
+   });
+  }
+  const request=new Request('https://node.internal/v1/wardrives',{method:'POST',headers:{'Content-Type':'text/csv','X-Wardrive-Timezone':timezone},body:csv});
+  return {status:200,body:await importWardrive(this,request,node,node.token_hash,Date.now()/1000)};
+  }catch(e){return {status:e.status||503,body:{error:e.status?e.message:'Unable to import this log. Please try again.'}};}
+ }
  async revokeAccountNode(owner,handle){
   this.ctx.storage.transactionSync(()=>{
    if(![...this.ctx.storage.sql.exec('SELECT 1 FROM nodes WHERE owner=? AND handle=?',owner,handle)].length)return;

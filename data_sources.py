@@ -77,8 +77,8 @@ def fetch_text(url, maximum=12_000_000):
         return payload.decode('utf-8')
 
 
-def fetch_json(url):
-    return json.loads(fetch_text(url))
+def fetch_json(url, max_bytes=12000000):
+    return json.loads(fetch_text(url, max_bytes))
 
 
 def normalize_deploy(payload, collected_at=None):

@@ -24,6 +24,7 @@ from argo_source import fetch_argo
 from ioos_source import fetch_ioos
 from additional_sources import fetch_atlas, fetch_gliders
 from police_flights import fetch_sfpd, SFPD_REFRESH
+from agency_flights import AGENCIES, fetch_agency_flights
 from oam_source import fetch_oam
 from avmap_source import fetch_avmap
 from voto_source import fetch_voto, deduplicate_glider_positions
@@ -59,6 +60,7 @@ class Collector:
             'climateviewer': fetch_climateviewer, 'milestones': fetch_history,
             'sfpd': fetch_sfpd, 'ioos': fetch_ioos, 'argo': fetch_argo, 'atlas': fetch_atlas, 'gliders': fetch_gliders, 'oam': fetch_oam, 'avmap': fetch_avmap, 'voto': fetch_voto}
         if adapters is None:
+            self.adapters.update({'police-'+a['id']: (lambda previous, agency=a: fetch_agency_flights(agency, previous)) for a in AGENCIES})
             try:
                 from noaa_source import fetch_noaa
                 self.adapters['noaa'] = fetch_noaa
@@ -78,7 +80,9 @@ class Collector:
                 return
             self.providers[key] = {**previous, 'last_attempt': now, 'collecting': True}
         try:
-            records = adapter()
+            result = adapter(previous) if key.startswith('police-') else adapter()
+            details = result if isinstance(result, dict) else {}
+            records = details.get('records') if details else result
             if not isinstance(records, list):
                 raise ValueError('Adapter must return records')
             # Validate adapter output at the persistence boundary too.
@@ -110,7 +114,8 @@ class Collector:
                     output.append(record)
                 output.extend(retained.values())
                 self.providers[key] = {'records': output, 'last_attempt': now, 'last_success': time.time(),
-                                       'next_attempt': now+(SFPD_REFRESH if key == 'sfpd' else INTERVAL), 'error': None, 'collecting': False}
+                                       'next_attempt': now+max(INTERVAL, details.get('refresh_after', SFPD_REFRESH if key == 'sfpd' else INTERVAL)), 'error': None, 'collecting': False,
+                                       'source_revision': details.get('source_revision'), 'coverage': details.get('coverage')}
                 self.save()
                 print(json.dumps({'source': key, 'records': len(output), 'collected_at': time.time()}), flush=True)
         except Exception as error:
@@ -195,7 +200,7 @@ class Collector:
                 'The noncommercial restriction applies to this data, not our AGPL software.</p>'
                 '<p>Ocean vehicle measurements: NOAA AOML / PMEL and contributing operators. Dataset-specific credit and '
                 'license details are included in <a href="data/ocean.json">the ocean measurement export</a>.</p>'
-                '<p>Published police flight logs: <a href="https://data.sf.gov/d/giw5-ttjs">City and County of San Francisco / SFPD</a>, <a href="https://opendatacommons.org/licenses/pddl/1.0/">PDDL 1.0</a>. Adapted dates, durations, broad mission categories and generalized operation areas. Agency publication is monthly; collection checks hourly. Missing coordinates are omitted. No aircraft identity or live position is inferred. <a href="/data/police-flights.json">Attributed flight-log export</a> · <a href="/police-flights.html">Official flight-history portals</a>.</p>'
+                '<p>Published police flight logs: <a href="https://data.sf.gov/d/giw5-ttjs">City and County of San Francisco / SFPD</a>, <a href="https://opendatacommons.org/licenses/pddl/1.0/">PDDL 1.0</a>. Adapted dates, durations, broad mission categories and generalized operation areas. SFPD publishes monthly and is checked hourly. Other agency-published flight dashboards are checked every 5–60 minutes according to the reviewed registry. Their factual dates, mission categories and generalized flight envelopes retain agency attribution; no additional open-data license is claimed. Missing or conflicting locations are omitted. No aircraft identity or live position is inferred. <a href="/data/police-flights.json">Attributed flight-log export</a> · <a href="/police-flights.html">Official flight-history portals</a>.</p>'
                 '<p>Documented public-safety drone programs: <a href="https://www.atlasofsurveillance.org/atlas">Electronic Frontier Foundation / Atlas of Surveillance</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Adapted by selecting drone-program records and approximate agency areas, omitting ambiguous planning records and editorial summaries. Continued operation is unverified. <a href="/data/programs.json">Attributed program export</a>.</p><p>Reported underwater glider locations: <a href="https://cwcgom.aoml.noaa.gov/erddap/info/GLIDERS_LAST_10_DAYS_LOCATIONS/index.html">NOAA AOML CoastWatch and contributing operators</a>. The provider permits free use and redistribution without warranty. Positioning method is unspecified; reports older than 24 hours are omitted. <a href="/data/gliders.json">Attributed glider export and terms</a>.</p>'
                 '<p>Documented driverless service areas: <a href="https://github.com/path-avmap/av-map-data">AV Map</a>, <a href="/licenses/av-map.txt">MIT license, copyright Jackson Lester</a>. Adapted by replaying dated service events and filtering for launched autonomous services. Ended driverless services are retained as dated history. City points and boundary centers are approximate areas, not vehicle positions. <a href="/data/driverless.json">Attributed service-area export</a>.</p><p>Dated UAV survey footprints: <a href="https://openaerialmap.org/">OpenAerialMap / Open Imagery Network contributors</a>, <a href="https://openaerialmap.org/legal/">CC BY 4.0</a>. Adapted metadata for contributor-labeled UAV imagery captured within the last 365 days; only footprint centers and factual capture dates are mapped. Per-record provider credits are retained in <a href="/data/surveys.json">the attributed survey export</a>. Imagery records are not flight counts.</p><p>Autonomous profiling floats: <a href="https://argo.ucsd.edu/">International Argo Program and contributing national programs</a>, part of the Global Ocean Observing System; Argo GDAC via Ifremer. <a href="https://doi.org/10.17882/42182">Dataset DOI</a> · <a href="https://argo.ucsd.edu/data/acknowledging-argo/">Unrestricted data use; attribution requested</a>. Only good-quality surface fixes within 24 hours enter collection; profiles retain their original observation times. These are drifting, vertically profiling robots, not powered navigation tracks. <a href="/data/floats.json">Attributed float export</a>.</p><p>Spray underwater gliders: <a href="https://gliders.ioos.us/">IOOS Glider DAC</a>, Scripps Institution of Oceanography and Woods Hole Oceanographic Institution; <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Adapted surface GPS subset; only passing provider quality flags and fixes within 24 hours enter collection. Surface fixes are not underwater trajectories. <a href="/data/ioos.json">Attributed GPS export</a>.</p><p>Baltic glider reports: <a href="https://erddap.observations.voiceoftheocean.org/erddap/index.html">Voice of the Ocean Foundation</a>; data collected and made freely available by the Foundation under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Locations may be estimated by the provider between surface fixes. Only good coordinate quality flags and reports within 24 hours are accepted. <a href="/data/baltic.json">Attributed glider export</a>.</p>'
                 '<details><summary>Deployment record acknowledgments</summary><ul>'+links+'</ul></details></main>').encode()
@@ -240,6 +245,18 @@ class Handler(BaseHTTPRequestHandler):
             return self.json(200, self.server.collector.snapshot(hours), head)
         if path == '/credits.html':
             return self.respond(200, self.server.collector.credits(), 'text/html; charset=utf-8', head)
+        if path == '/api/police-coverage':
+            with self.server.collector.lock:
+                registry=[dict(id='sfpd',agency='San Francisco Police Department',portal='https://data.sf.gov/d/giw5-ttjs',refresh_seconds=3600)]+[{**a,'id':'police-'+a['id']} for a in AGENCIES]
+                feeds=[]
+                for a in registry:
+                    p=self.server.collector.providers.get(a['id'],{}); records=p.get('records',[]); dates=sorted(r['event_date'] for r in records if r.get('event_date'))
+                    feeds.append(dict(id=a['id'],agency=a['agency'],portal=a['portal'],records=len(records),newest_flight=dates[-1] if dates else None,oldest_flight=dates[0] if dates else None,last_checked=p.get('last_attempt'),last_success=p.get('last_success'),status='delayed' if p.get('error') else 'collecting' if p.get('last_success') else 'pending',check_interval_seconds=a['refresh_seconds'],coverage=p.get('coverage')))
+                return self.json(200,dict(generated_at=time.time(),configured_flight_feeds=len(feeds),feeds_with_records=sum(bool(f['records']) for f in feeds),mapped_flights=sum(f['records'] for f in feeds),documented_program_records=len(self.server.collector.providers.get('atlas',{}).get('records',[])),feeds=feeds),head)
+        if path == '/data/police-flights.json':
+            with self.server.collector.lock:
+                providers = {k:v for k,v in self.server.collector.providers.items() if k=='sfpd' or k.startswith('police-')}
+                return self.json(200, {'attribution':'Agency-published flight facts; per-record source and license where specified', 'records':[r for v in providers.values() for r in v.get('records',[])], 'coverage':{k:{**(v.get('coverage') or {}), 'last_success':v.get('last_success'), 'error':v.get('error'), 'next_attempt':v.get('next_attempt')} for k,v in providers.items()}}, head)
         if path in {'/data/police-flights.json', '/data/milestones.json', '/data/ioos.json', '/data/floats.json', '/data/driverless.json', '/data/surveys.json', '/data/baltic.json', '/data/aircraft.json', '/data/ocean.json', '/data/history.json', '/data/programs.json', '/data/gliders.json'}:
             key = {'/data/police-flights.json':'sfpd', '/data/milestones.json':'milestones', '/data/ioos.json':'ioos', '/data/floats.json':'argo', '/data/driverless.json':'avmap', '/data/surveys.json':'oam', '/data/baltic.json':'voto', '/data/aircraft.json': 'adsb', '/data/ocean.json': 'noaa', '/data/history.json': 'climateviewer', '/data/programs.json': 'atlas', '/data/gliders.json': 'gliders'}[path]
             with self.server.collector.lock:

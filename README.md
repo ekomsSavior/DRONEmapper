@@ -41,7 +41,7 @@ Wi-Fi capture depends on the OS driver and monitor-mode support. SDR spectrum di
 ## Wardrive logs
 
 In [your account](https://dronemapper.churchofmalware.org/account.html), open
-**Wardrive logs & upload tokens** to import WiGLE CSV exports or create a token
+**Wardrive logs** to import WiGLE CSV exports or create a token
 for automatic completed-export uploads. Matching camera-link signals keep their
 original dates and appear as approximate areas. [Setup and API guide](docs/wardrive-uploads.md).
 
@@ -58,7 +58,7 @@ cd DRONEmapper
 python3 server.py
 ```
 
-Open **http://127.0.0.1:8780**. Allow a moment for the first collection. Most data refreshes every five minutes while the server runs; monthly police flight logs are checked hourly. Stop with `Ctrl+C`. On Windows, use `py -3 server.py`.
+Open **http://127.0.0.1:8780**. Allow a moment for the first collection. Most data refreshes every five minutes while the server runs; police flight feeds follow their configured 5–60 minute check schedules. Stop with `Ctrl+C`. On Windows, use `py -3 server.py`.
 
 Map visitors need only a browser. Scanner reports add Remote ID positions and optional approximate Wi-Fi or supported robot signal areas. Observed items keep a profile and become ghosts after 14 days without another sighting.
 
@@ -68,6 +68,7 @@ Map visitors need only a browser. Scanner reports add Remote ID positions and op
 - [AV Map](https://github.com/path-avmap/av-map-data): driverless service areas and dated ended services.
 - [ADSB.lol](https://www.adsb.lol/docs/open-data/api/): identified unmanned aircraft positions.
 - [NOAA](https://www.pmel.noaa.gov/usv-hurricane/): uncrewed ocean vehicle measurements.
+- Agency flight dashboards: published takeoff/landing times, purposes and generalized flight areas. [Coverage and official portals](https://dronemapper.churchofmalware.org/police-flights.html). Agency data retains separate terms from the software.
 - [San Francisco / SFPD](https://data.sf.gov/d/giw5-ttjs): dated police flight logs and generalized operation areas (PDDL 1.0), checked hourly. [Official flight portals](https://dronemapper.churchofmalware.org/police-flights.html).
 - [EFF Atlas](https://www.atlasofsurveillance.org/atlas): documented public-safety drone programs.
 - [International Argo Program / Argo GDAC](https://doi.org/10.17882/42182): quality-checked autonomous profiling-float surface fixes; unrestricted data use with attribution requested.
