@@ -7,6 +7,7 @@ import re
 import time
 from urllib.parse import urlencode
 from data_sources import fetch_json, finite
+from agency_points import fetch_operation_points
 
 AGENCIES = json.loads((Path(__file__).parent/'public/police-flight-sources.json').read_text())
 FIELDS = 'ObjectId,flight_id,takeoff,landing,flight_purpose'
@@ -63,6 +64,8 @@ def normalize_agency_flights(features, agency, now=None):
     return [r for key,r in records.items() if key not in conflicts]
 
 def fetch_agency_flights(agency, previous=None, fetch=fetch_json, now=None):
+    if agency.get('format')=='roselle-points':
+        return fetch_operation_points(agency,previous,fetch,now)
     now=time.time() if now is None else now
     previous=previous or {}
     before=layer_revision(fetch(agency['layer']+'?f=json',262144))

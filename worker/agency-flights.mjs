@@ -1,5 +1,6 @@
 // Factual records from agency-published public flight layers. No aircraft telemetry.
 import agencies from '../public/police-flight-sources.json' with {type:'json'};
+import {fetchOperationPoints} from './agency-points.mjs';
 export {agencies};
 const PAGE=1000;
 const finite=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b;
@@ -36,6 +37,7 @@ export function normalizeAgencyFlights(features,agency,now=Date.now()/1000){
  return [...records.values()].filter(r=>!conflicts.has(r.id));
 }
 export async function fetchAgencyFlights(fetchJSON,agency,previous={},now=Date.now()/1000){
+ if(agency.format==='roselle-points')return fetchOperationPoints(fetchJSON,agency,previous,now);
  const before=layerRevision(await fetchJSON(agency.layer+'?f=json',262144));
  // Daily cache key also expires a rolling publication window without source edits.
  const revision=`${before}:${agency.window_days?Math.floor(now/86400):0}`;

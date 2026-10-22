@@ -1,7 +1,7 @@
 # Police drone activity from dispatch and public flight logs
 
 Research reviewed 2026-10-22 for Church of Malware / saviorSEC.
-Implementation: automatic SFPD logs plus 18 agency-published flight layers,
+Implementation: automatic SFPD logs plus 20 agency-published flight layers and Roselle’s deployment log,
 shared by the hosted Worker and local Python website. The reviewed registry is
 `public/police-flight-sources.json`; `/api/police-coverage` reports actual collection
 status and `/police-flights.html` displays it. Coverage is not universal.
@@ -11,7 +11,7 @@ status and `/police-flights.html` displays it. Coverage is not universal.
 Cincinnati, Wichita, Bellingham, Killeen, Fayette County (GA), Saint Paul,
 New Orleans, Tampa, Laurel, Nashville, Hawaii DLE, University of Illinois,
 Niles, Cleveland, Santa Clara County Sheriff, Duluth, Arvada and Pickens County
-(GA) link public Skydio dashboards from their official sites. Their published
+(GA), Laredo and Overland Park link public Skydio dashboards from their official sites. Their published
 ArcGIS flight layers supply completed takeoff/landing times and flight envelopes.
 Only agency-published data is queried. No credentials, private operations or
 undocumented account access are used; dashboard code is not bundled.
@@ -142,3 +142,13 @@ The complete SFPD request returned five pages, then the original normalizer reje
 Cincinnati's ArcGIS item metadata was retrieved successfully: item 5954ee0b48654284be02d3a8e13bab1d is public and describes the Cincinnati Police Department feature service, owned by bella_skydio_inc. licenseInfo and accessInformation are null. This does not establish a reuse license. The adapter now selects published flight facts and generalized envelopes, retains source attribution and does not redistribute dashboard software or imply a license to the underlying service.
 
 The Portland dashboard's advertised PPBOpenDataDownloads/UAS_Drones.csv endpoint returned HTTP 404 during direct validation. Its October 15, 2026 dashboard still offers that download path. Keep the agency portal link; no working CSV collector is claimed.
+
+## Additional coverage verified after publication
+
+Overland Park’s official flights link (https://www.opkansas.gov/drones-as-first-responder-flights-0) redirects to its public dashboard. Its 536 published rows produced 531 valid completed flights. Laredo’s official police page links its DFR transparency portal; that public dashboard identifies the department and supplies 6,193 rows. Its latest 5,000 rows produced 4,631 distinct valid flights. Both now use the automatic collector with 15-minute checks.
+
+Roselle’s police page (https://www.roselle.il.us/61/Police) links its public ArcGIS dashboard. This is a deployment log, not aircraft telemetry. The adapter requests only row ID, calendar date, duration, broad category and supplied geometry. It cross-checks the displayed date against the UTC date field, generalizes points to 0.01-degree cells, omits addresses and case numbers, checks hourly and retains the original day precision. A deployment entry may describe total flight time; it does not identify an aircraft.
+
+Further leads: Shaker Heights publishes annual flight-log documents at https://www.shakerheightsoh.gov/1005/SHPD-Drone-Flight-Logs . Canadian RCMP transparency reporting and the UK law-enforcement UAV survey provide program/aggregate context, not validated event coordinates; no additional flight pins are inferred from them.
+
+Validation totals: 22 department feeds, 30,841 mapped flight/deployment records on October 22. Roselle supplies 139 rows; 138 pass the date/location validation. Publication checks retain the last good snapshot if a later request fails. These counts are measured imported records, not a claim of nationwide or real-time coverage.

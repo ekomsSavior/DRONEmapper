@@ -6,7 +6,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parent
 FILES = ['README.md', 'LICENSE', 'NOTICE.txt', '.gitignore', '.gitattributes', 'server.py', 'data_sources.py',
-         'noaa_source.py', 'climateviewer_source.py', 'additional_sources.py', 'police_flights.py', 'agency_flights.py', 'oam_source.py', 'avmap_source.py', 'voto_source.py', 'ioos_source.py', 'argo_source.py', 'reviewed_history.py', 'build_review.py',
+         'noaa_source.py', 'climateviewer_source.py', 'additional_sources.py', 'police_flights.py', 'agency_flights.py', 'agency_points.py', 'oam_source.py', 'avmap_source.py', 'voto_source.py', 'ioos_source.py', 'argo_source.py', 'reviewed_history.py', 'build_review.py',
          'package.json', 'package-lock.json', 'wrangler.jsonc', 'node_server.py',
          'android-node/README.md', 'android-node/LICENSE', 'android-node/NOTICE.txt',
          'android-node/build.gradle', 'android-node/settings.gradle', 'android-node/gradle.properties',

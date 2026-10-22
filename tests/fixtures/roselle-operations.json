@@ -1,0 +1,181 @@
+{
+  "now": 1792692000,
+  "agency_id": "roselle",
+  "metadata": {
+    "geometryType": "esriGeometryPoint",
+    "objectIdField": "OBJECTID",
+    "advancedQueryCapabilities": {
+      "supportsPagination": true,
+      "supportsPaginationOnAggregatedQueries": true,
+      "supportsQueryRelatedPagination": true,
+      "supportsQueryWithDistance": true,
+      "supportsOutDistance": true,
+      "supportsReturningQueryExtent": true,
+      "supportsStatistics": true,
+      "supportsOrderBy": true,
+      "supportsDistinct": true,
+      "supportsQueryWithResultType": true,
+      "supportsSqlExpression": true,
+      "supportsTimeRelation": true,
+      "supportsAdvancedQueryRelated": true,
+      "supportsCountDistinct": true,
+      "supportsPercentileStatistics": true,
+      "supportsApproxPercentileStatistics": true,
+      "supportsSpatialAggregationStatistics": true,
+      "supportedSpatialAggregationStatistics": [
+        "EnvelopeAggregate",
+        "CentroidAggregate",
+        "ConvexHullAggregate"
+      ],
+      "supportsLod": true,
+      "supportsQueryWithLodSR": false,
+      "supportedLodTypes": [
+        "geohash"
+      ],
+      "supportsReturningGeometryCentroid": false,
+      "supportsReturningGeometryEnvelope": false,
+      "supportsQueryWithDatumTransformation": true,
+      "supportsCurrentUserQueries": true,
+      "supportsHavingClause": true,
+      "supportsOutFieldSQLExpression": true,
+      "supportsMaxRecordCountFactor": true,
+      "supportsTopFeaturesQuery": true,
+      "supportsDisjointSpatialRel": true,
+      "supportsQueryWithCacheHint": true,
+      "supportedOperationsWithCacheHint": [
+        "query",
+        "queryTopFilter",
+        "queryAnalytics",
+        "queryAttachments",
+        "queryRelated",
+        "queryBins",
+        "queryPivot"
+      ],
+      "supportsQueryAnalytic": true,
+      "supportsQueryPivot": true,
+      "supportsQueryBins": true,
+      "supportsDefaultSR": true,
+      "supportsTranslations": false,
+      "supportsAggIds": true,
+      "supportsQueryWithCollation": true,
+      "supportsISODOW": true,
+      "supportsISOWeek": true,
+      "supportsFullTextSearch": true,
+      "fullTextSearchCapabilities": {
+        "supportsAccentSensitivity": true,
+        "supportsStopWords": true,
+        "supportsSearchOperator": true,
+        "supportsOperator": true
+      }
+    },
+    "dateFieldsTimeReference": {
+      "timeZone": "UTC",
+      "timeZoneIANA": "Etc/UTC",
+      "respectsDaylightSaving": false
+    },
+    "editingInfo": {
+      "lastEditDate": 1789045674897,
+      "schemaLastEditDate": 1789045674897,
+      "dataLastEditDate": 1789045674897
+    },
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "sqlType": "sqlTypeOther",
+        "nullable": false,
+        "editable": false,
+        "domain": null,
+        "defaultValue": "",
+        "required": true
+      },
+      {
+        "name": "USER_Date_",
+        "type": "esriFieldTypeDate",
+        "alias": "Date:",
+        "sqlType": "sqlTypeOther",
+        "length": 8,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": "",
+        "precision": 1
+      },
+      {
+        "name": "USER_Total_Duration_of_Flight",
+        "type": "esriFieldTypeString",
+        "alias": "Total Duration of Flight",
+        "sqlType": "sqlTypeOther",
+        "length": 8000,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": ""
+      },
+      {
+        "name": "General_Category",
+        "type": "esriFieldTypeString",
+        "alias": "General_Category",
+        "sqlType": "sqlTypeOther",
+        "length": 255,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": ""
+      },
+      {
+        "name": "Date_Text",
+        "type": "esriFieldTypeString",
+        "alias": "Date_Text",
+        "sqlType": "sqlTypeOther",
+        "length": 255,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": ""
+      }
+    ]
+  },
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1,
+        "Date_Text": "6/21/2023",
+        "USER_Date_": 1687305600000,
+        "USER_Total_Duration_of_Flight": "15 mins",
+        "General_Category": "Admin/Training"
+      },
+      "geometry": {
+        "x": -88.074,
+        "y": 41.981
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2,
+        "Date_Text": "6/22/2023",
+        "USER_Date_": 1687392000000,
+        "USER_Total_Duration_of_Flight": "41 mins",
+        "General_Category": "Fleeing and Eluding"
+      },
+      "geometry": {
+        "x": -88.133,
+        "y": 42
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3,
+        "Date_Text": "6/26/2023",
+        "USER_Date_": 1687737600000,
+        "USER_Total_Duration_of_Flight": "30 mins",
+        "General_Category": "Domestic Battery"
+      },
+      "geometry": {
+        "x": -88.059,
+        "y": 41.991
+      }
+    }
+  ]
+}

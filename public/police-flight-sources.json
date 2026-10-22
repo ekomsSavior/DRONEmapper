@@ -214,5 +214,42 @@
     "max_records": 5000,
     "window_days": null,
     "reviewed": "2026-10-22"
+  },
+  {
+    "id": "overland-park",
+    "agency": "Overland Park Police Department",
+    "place": "Overland Park, Kansas",
+    "official": "https://www.opkansas.gov/drones-as-first-responder-flights-0",
+    "portal": "https://cloud.skydio.com/dashboard/overland-park-ks",
+    "layer": "https://services7.arcgis.com/mnhQTdIYDA7UoY2l/arcgis/rest/services/2b350515-444b-4007-890b-471ce5652da0-production/FeatureServer/0",
+    "refresh_seconds": 900,
+    "max_records": 5000,
+    "window_days": null,
+    "reviewed": "2026-10-22"
+  },
+  {
+    "id": "laredo",
+    "agency": "Laredo Police Department",
+    "place": "Laredo, Texas",
+    "official": "https://www.cityoflaredo.com/departments/police-department/",
+    "portal": "https://cloud.skydio.com/dashboard/laredopd",
+    "layer": "https://services7.arcgis.com/mnhQTdIYDA7UoY2l/arcgis/rest/services/139347d9-df46-42ce-98d8-980db6bda7ff-production/FeatureServer/0",
+    "refresh_seconds": 900,
+    "max_records": 5000,
+    "window_days": null,
+    "reviewed": "2026-10-22"
+  },
+  {
+    "id": "roselle",
+    "agency": "Roselle Police Department",
+    "place": "Roselle, Illinois",
+    "official": "https://www.roselle.il.us/61/Police",
+    "portal": "https://roselleil.maps.arcgis.com/apps/dashboards/cbd5658846474ea097ead68273f03480",
+    "layer": "https://services3.arcgis.com/2IQcjBhWvUWNwrY8/arcgis/rest/services/VRO_DroneFlightLog_gdb_view/FeatureServer/0",
+    "format": "roselle-points",
+    "refresh_seconds": 3600,
+    "max_records": 5000,
+    "window_days": null,
+    "reviewed": "2026-10-22"
   }
 ]
