@@ -41,14 +41,14 @@ finding a hostname does not establish a public data feed.
 
 ## Android connection update
 
-Android 0.8.0 retains the 0.7.2 connection update: it offers **Open SDR** when a HackRF is selected in **USB Wi-Fi adapter**.
+Android 0.8.1 retains the 0.7.2 connection update: it offers **Open SDR** when a HackRF is selected in **USB Wi-Fi adapter**.
 The button opens frequency selection before requesting Android USB permission.
 Its receive driver was already included in 0.6.0 and newer.
 
 A PortaPack advertising `1d50:6018` with a PortaPack product name is identified as
 the Mayhem serial console, not a capture receiver. This USB ID is shared with other
 devices, so it is insufficient by itself. The app asks the user to select
-**HackRF / RF → Yes** on the PortaPack, then refresh. Standard HackRF capture uses
+**HackRF / RF → Yes** on the PortaPack, the list now refreshes automatically. Standard HackRF capture uses
 `1d50:6089`. No firmware commands are sent to the serial console.
 
 References: [Mayhem USB descriptors](https://github.com/portapack-mayhem/mayhem-firmware/blob/next/firmware/application/usb_serial_descriptor.c),

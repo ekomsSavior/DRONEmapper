@@ -1,6 +1,6 @@
 # HackRF on Android
 
-Android 0.7.2 includes the **USB SDR · HackRF** connection and local RF spectrum
+Android 0.8.1 includes the **USB SDR · HackRF** connection and local RF spectrum
 introduced in 0.6.0, plus saved wardrives for Wi-Fi and Remote ID observations.
 Built by **Church of Malware / saviorSEC**. No root is required.
 
@@ -12,12 +12,28 @@ Built by **Church of Malware / saviorSEC**. No root is required.
    Expand **SDR spectrum** to view measured RF power. **Disconnect SDR** stops only
    the HackRF; **Stop listening** stops all receivers.
 
-The connection recognizes USB `1d50:6089`, reads the board ID to distinguish HackRF
-One / Pro, and uses Android USB Host control transfers and the bulk-IN endpoint.
+The connection recognizes the upstream libhackrf USB IDs: `1d50:6089` (HackRF
+One / Pro), `1d50:604b` (Jawbreaker), and `1d50:cc15` (rad1o). PortaPacks and
+compatible clones using these IDs go through the same board query and receive
+configuration. Jawbreaker/rad1o hardware reception is not yet verified. The app
+reads board IDs 1–5 and uses Android USB Host control transfers and bulk IN.
 Firmware is not changed. RF amplifier and antenna power are disabled; receive
 LNA/VGA gains are 16/20 dB. Sampling is 8 Msps with a 6 MHz analog filter; the display
 covers an 8 MHz window around the selected center frequency. USB throughput and
 power vary by phone, hub and cable. A powered hub may help if reception stalls.
+
+In 0.8.1, the USB chooser tracks plug/unplug and PortaPack mode changes while
+open. Permission grants are recovered after Android recreates the screen;
+short USB reads keep I/Q alignment instead of stopping the stream. For USB API
+1.02 or newer the driver clears external-trigger waiting before reception.
+Legacy boards without antenna-power control skip that unsupported command.
+Setup errors identify the failing stage in **Phone capabilities → Copy report**.
+The report includes USB API and endpoint layout, without USB serial numbers.
+
+Other SDR families, including RTL-SDR, Airspy and SDRplay, do not use the HackRF
+USB protocol. They need separate Android receive drivers; recognizing a USB
+device alone does not mean it can capture samples. Desktop RTL-SDR support is
+separate from the Android HackRF driver.
 
 This Android path receives IQ and displays a Hann-windowed FFT in dBFS. It does
 not yet demodulate DJI DroneID or ADS-B. Those integrations are in the
@@ -40,7 +56,7 @@ starting an unverified configuration.
 - Copy **Phone capabilities** with the actual phone, Android version, firmware and
   sample counter. Reports omit USB serial numbers and phone identifiers.
 
-Automated USB permission tests cover Android API 28 and 35. Protocol command,
+Automated USB permission tests cover Android API 28, 34 and 35. Protocol command,
 configuration failure and FFT tests use isolated fixtures. These are software
 checks, not proof of physical reception on the Moto or Pixel / Android 17.
 A community tester reported working Android HackRF reception on 2026-10-19.
@@ -56,4 +72,4 @@ an instrumented Moto/Pixel reception check remains pending.
 The Android receive driver is an independent implementation of the documented
 USB command layout. No upstream libhackrf binary is bundled.
 
-PortaPack setup: choose **HackRF** (called **RF** in some versions), then **Yes** on the device. Return to the app and tap **Refresh**. This uses the existing firmware; it does not install or flash anything. See the [Mayhem mode guide](https://github.com/portapack-mayhem/mayhem-firmware/wiki/HackRF).
+PortaPack setup: choose **HackRF** (called **RF** in some versions), then **Yes** on the device. The open receiver list updates automatically; **Refresh** is also available. This uses the existing firmware; it does not install or flash anything. See the [Mayhem mode guide](https://github.com/portapack-mayhem/mayhem-firmware/wiki/HackRF).

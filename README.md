@@ -18,7 +18,7 @@ Android 8 or newer. No root or Bluetooth dongle needed.
 
 Sharing is optional. Choose a display name or remain **Anonymous**; email and full MAC addresses stay off the public map. [More app instructions and build steps](android-node/README.md).
 
-**Updating to 0.8.0:** download the new APK from the same page and install it over
+**Updating to 0.8.1:** download the new APK from the same page and install it over
 your existing app—no uninstall. Pairing and settings are preserved. In **Phone
 capabilities**, check the version. USB Wi-Fi: **USB Wi-Fi adapter → Connect → Allow**.
 HackRF: **USB SDR · HackRF → Choose receiver → Connect → Allow** for local RF spectrum.
