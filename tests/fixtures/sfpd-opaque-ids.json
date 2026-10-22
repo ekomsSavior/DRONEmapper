@@ -1,0 +1,47 @@
+[
+  {
+    "source_row_id": "row-eacr~543s.3mda",
+    "date": "2026-04-07T00:00:00.000",
+    "flight_duration_minutes": "3.0",
+    "reason_for_flight": "Criminal Investigation",
+    "point": {
+      "type": "Point",
+      "coordinates": [
+        -122.405301,
+        37.773864
+      ]
+    },
+    "analysis_neighborhood": "South of Market",
+    "data_loaded_at": "2026-09-25T11:14:23.651"
+  },
+  {
+    "source_row_id": "row-h26n~55cb.hpg8",
+    "date": "2026-04-07T00:00:00.000",
+    "flight_duration_minutes": "7.0",
+    "reason_for_flight": "Criminal Investigation",
+    "point": {
+      "type": "Point",
+      "coordinates": [
+        -122.404608,
+        37.727379
+      ]
+    },
+    "analysis_neighborhood": "Portola",
+    "data_loaded_at": "2026-09-25T11:14:23.651"
+  },
+  {
+    "source_row_id": "row-a84y.93n8~cbws",
+    "date": "2026-04-08T00:00:00.000",
+    "flight_duration_minutes": "6.0",
+    "reason_for_flight": "Criminal Investigation",
+    "point": {
+      "type": "Point",
+      "coordinates": [
+        -122.3940465,
+        37.776339
+      ]
+    },
+    "analysis_neighborhood": "Mission Bay",
+    "data_loaded_at": "2026-09-25T11:14:23.651"
+  }
+]

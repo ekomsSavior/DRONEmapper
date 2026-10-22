@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "id": "giw5-ttjs",
+    "licenseId": "PDDL",
+    "rowsUpdatedAt": 1790360074,
+    "columns": [
+      {
+        "fieldName": "date",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "fieldName": "case_cad_event_number",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "call_type_original_desc",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "flight_duration_minutes",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "reason_for_flight",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "location",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "geocoded_location",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "point",
+        "dataTypeName": "point"
+      },
+      {
+        "fieldName": "analysis_neighborhood",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "supervisor_district",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "data_as_of",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "fieldName": "data_loaded_at",
+        "dataTypeName": "calendar_date"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "source_row_id": "fixture-0",
+      "date": "2026-04-07T00:00:00.000",
+      "flight_duration_minutes": "3.0",
+      "reason_for_flight": "Criminal Investigation",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -122.405301,
+          37.773864
+        ]
+      },
+      "analysis_neighborhood": "South of Market",
+      "data_loaded_at": "2026-09-25T11:14:23.651"
+    },
+    {
+      "source_row_id": "fixture-1",
+      "date": "2026-04-07T00:00:00.000",
+      "flight_duration_minutes": "7.0",
+      "reason_for_flight": "Criminal Investigation",
+      "point": {
+        "type": "Point",
+        "coordinates": [
+          -122.404608,
+          37.727379
+        ]
+      },
+      "analysis_neighborhood": "Portola",
+      "data_loaded_at": "2026-09-25T11:14:23.651"
+    }
+  ]
+}

@@ -19,3 +19,5 @@
 .masthead nav .account-link{display:flex;align-items:center;justify-content:center;color:#ccc;font-size:12px;text-decoration:none;padding:10px}.masthead nav{flex-wrap:wrap}@media(max-width:760px){.masthead nav .app-download{font-size:10px;padding:5px}.masthead nav .account-link{font-size:10px;padding:5px}}
 
 .legal-page pre{overflow-x:auto;max-width:100%;padding:16px;background:#151515;border:1px solid #444;border-radius:4px}.legal-page code{overflow-wrap:anywhere}
+
+@media(max-width:700px){.footer-links{flex-wrap:wrap;justify-content:flex-end;white-space:normal;row-gap:3px}.footer-links a{white-space:nowrap}}
