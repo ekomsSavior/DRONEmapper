@@ -10,7 +10,7 @@ import {DurableObject} from 'cloudflare:workers';
 import {adapters,INTERVAL,RETENTION,publicRecord,mergePositions,collectionDue} from './sources.mjs';
 import {deduplicateGliderPositions} from './voto-source.mjs';
 import {HUB_CARD,HOME_PROMO} from './promotion.mjs';
-const RELEASE='2026-10-25.7-device-library-flock';
+const RELEASE='2026-10-25.8-map-startup-fix';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const CSP="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'";
 function response(body,status=200,type='application/json; charset=utf-8',head=false){return new Response(head?null:typeof body==='string'||body instanceof ReadableStream?body:JSON.stringify(body),{status,headers:{'Content-Type':type,'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin','Permissions-Policy':'geolocation=(self), camera=(), microphone=()','Content-Security-Policy':CSP,'X-Drone-Mapper-Release':RELEASE}});}

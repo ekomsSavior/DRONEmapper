@@ -293,3 +293,8 @@ export const policePortals=[
     ]
   }
 ];
+export function policePortalFor(record){
+ const operator=String(record.operator||'').trim().toLowerCase();
+ if(record.purpose!=='public-safety'||record.kind!=='drone'||!Number.isFinite(record.latitude)||!Number.isFinite(record.longitude))return null;
+ return policePortals.find(p=>p.aliases.some(a=>a.toLowerCase()===operator)&&record.latitude>=p.bounds[0]&&record.longitude>=p.bounds[1]&&record.latitude<=p.bounds[2]&&record.longitude<=p.bounds[3])||null;
+}
