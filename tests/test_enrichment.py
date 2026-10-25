@@ -43,7 +43,7 @@ class EnrichmentTests(unittest.TestCase):
                 base = f"http://127.0.0.1:{httpd.server_port}"
                 for suffix in ("", "?hours=0", "?hours=336"):
                     with urlopen(base + "/feed" + suffix) as response:
-                        self.assertEqual(len(json.load(response)["activity"]), 40)
+                        self.assertEqual(len(json.load(response)["activity"]), 43)
                 with self.assertRaises(HTTPError) as caught:
                     urlopen(base + "/feed?hours=nan")
                 self.assertEqual(caught.exception.code, 400)
@@ -123,7 +123,7 @@ class EnrichmentTests(unittest.TestCase):
             "import {historicalMilestones as r} from './worker/reviewed-history.mjs';console.log(JSON.stringify(r))"],
             cwd=ROOT, text=True)
         self.assertEqual(rows, json.loads(js))
-        self.assertEqual(len({r["id"] for r in rows}), 40)
+        self.assertEqual(len({r["id"] for r in rows}), 43)
         for row in rows:
             self.assertEqual(row["record_type"], "historical")
             self.assertIsNone(row["observed_at"])

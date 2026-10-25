@@ -44,6 +44,16 @@ def pcap(wire):
 
 
 class DnsEvidenceTests(unittest.TestCase):
+    def test_fusus_and_dedrone_are_only_local_domain_hints(self):
+        for domain in ('fusus.com','dedrone.com'):
+            result=ethernet_dns(packet(question('example.'+domain)))
+            self.assertEqual(result['domain'],domain)
+            self.assertNotIn('example',str(result))
+            for absent in ('model','operator','latitude','longitude','mac'):
+                self.assertNotIn(absent,result)
+            for invalid in ('evil'+domain,domain+'.example','104.19.154.92','api.evidence.com'):
+                self.assertIsNone(domain_hint(invalid))
+
     def test_domain_boundary_and_data_minimization(self):
         for name in ('carbyne.com', 'CARBYNE.COM.', 'www.carbyne.com', 'tenant-example.carbyne.com'):
             hint = domain_hint(name)

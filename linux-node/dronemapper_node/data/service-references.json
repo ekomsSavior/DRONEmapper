@@ -6,12 +6,40 @@
       "id": "carbyne",
       "name": "Carbyne",
       "url": "https://carbyne.com/",
-      "domains": ["carbyne.com"],
+      "domains": [
+        "carbyne.com"
+      ],
       "category": "Emergency communications cloud",
       "description": "Axon 911 Core, by Carbyne. This rule recognizes a DNS question for the public company domain or a subdomain. A website visit can produce the same observation; it does not establish use of a dispatch system or nearby hardware.",
       "integration_url": "https://carbyne.com/cloud-advantage/carbyne-integrations/",
       "telemetry_status": "No public drone-position feed or RF signature verified. A separate documented, authorized telemetry integration is required.",
       "source": "https://carbyne.com/"
+    },
+    {
+      "id": "fusus",
+      "name": "Axon Fusus",
+      "url": "https://www.axon.com/products/axon-fusus",
+      "domains": [
+        "fusus.com"
+      ],
+      "category": "Real-time operations platform",
+      "description": "Can aggregate drone video, cameras and other agency data. A domain lookup does not establish a drone, a flight or an active integration.",
+      "integration_url": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "telemetry_status": "Local DNS hint only; cloud telemetry requires separately authorized access. Website visits can also match.",
+      "source": "https://www.axon.com/products/axon-fusus"
+    },
+    {
+      "id": "dedrone",
+      "name": "Dedrone",
+      "url": "https://www.dedrone.com/",
+      "domains": [
+        "dedrone.com"
+      ],
+      "category": "Airspace awareness platform",
+      "description": "Counter-drone and detect-and-avoid services. A domain lookup does not identify a detected aircraft or an operating sensor.",
+      "integration_url": "https://www.dedrone.com/solutions/dedrone-beyond",
+      "telemetry_status": "Local DNS hint only; cloud telemetry requires separately authorized access. Website visits can also match.",
+      "source": "https://www.dedrone.com/"
     }
   ]
 }

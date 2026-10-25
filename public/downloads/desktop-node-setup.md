@@ -1,6 +1,6 @@
 # DRONEmapper Desktop — Windows, macOS and Linux
 
-Version 0.6.1 · **Church of Malware / saviorSEC**
+Version 0.6.2 · **Church of Malware / saviorSEC**
 
 The same local dashboard, radar, detection list, account pairing and optional
 map uploads run on Windows, macOS and Linux. No account password goes into the
@@ -125,4 +125,6 @@ Project and data credits, including the **OUI Master Database**, remain in the
 
 Desktop 0.6.0 adds optional passive ARP sender recognition for reviewed Verkada MAC allocations. Choose a LAN interface under Radio settings, save, then start listening. Wireshark/dumpcap capture access is required. This receiver leaves interface mode unchanged, shows matching observations in a separate local list and never uploads them. No physical CM42 reception has been verified. [Full setup, research and limits](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/security-device-discovery.md).
 
-Desktop 0.6.1 adds an independent **Listen for Carbyne domain lookups** option in that same panel. Matches appear in **Local service activity**, with time, interface and a platform link. Website visits can match; these observations stay local and do not identify a drone, camera or dispatch installation. [Carbyne setup and integration research](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/carbyne-discovery.md).
+Desktop 0.6.2 adds an independent **Listen for Carbyne, Fusus and Dedrone domain lookups** option in that same panel. Matches appear in **Local service activity**, with time, interface and a platform link. Website visits can match; these observations stay local and do not identify a drone, camera or dispatch installation. [Carbyne setup and integration research](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/carbyne-discovery.md).
+
+[Axon Air / Fusus model references and local domain hints](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/axon-air-fusus.md).

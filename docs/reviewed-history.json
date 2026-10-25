@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-10-21",
+  "reviewed_at": "2026-10-25",
   "coordinate_method": "Rounded reference points for the named city or region, selected for map navigation; not device fixes, launch sites or service boundaries.",
   "events": [
     {
@@ -362,7 +362,7 @@
       "operator": "Singapore Police Force",
       "kind": "ground-robot",
       "domain": "ground",
-      "purpose": "police",
+      "purpose": "public-safety",
       "place": "Changi area, Singapore",
       "latitude": 1.35,
       "longitude": 103.99,
@@ -641,6 +641,54 @@
       "date": "2024-11",
       "summary": "Operator reported commercial autonomous sanitation began in November 2024 at Marina Coastal Drive and the Esplanade using S6 and S1. The report does not assign an individual model to each location.",
       "evidence_url": "https://www.weride.ai/posts/wrqxhqx5u9dp1np0on58ygtx"
+    },
+    {
+      "id": "miami-beach-axon-x10-2024",
+      "name": "Miami Beach Police — X10 / Axon program documented",
+      "manufacturer": "Skydio",
+      "model": "Skydio X10",
+      "operator": "Miami Beach Police Department",
+      "kind": "drone",
+      "domain": "air",
+      "purpose": "public-safety",
+      "place": "Miami Beach, Florida, USA",
+      "latitude": 25.79,
+      "longitude": -80.13,
+      "date": "2024-06-20",
+      "summary": "Axon reported Miami Beach Police using X10 drones alongside its software. Date is the report publication, not a flight.",
+      "evidence_url": "https://www.axon.com/blog/next-gen-drone-and-drone-as-first-responder-dfr-solutions"
+    },
+    {
+      "id": "forsyth-fusus-drone-2024",
+      "name": "Forsyth County Sheriff — drone / Fusus coordination documented",
+      "manufacturer": null,
+      "model": null,
+      "operator": "Forsyth County Sheriff’s Office",
+      "kind": "drone",
+      "domain": "air",
+      "purpose": "public-safety",
+      "place": "Forsyth County, Georgia, USA",
+      "latitude": 34.21,
+      "longitude": -84.14,
+      "date": "2024-06-20",
+      "summary": "Axon described drone video and K-9 coordination through Fusus. Aircraft model and individual flight dates were not specified.",
+      "evidence_url": "https://www.axon.com/blog/next-gen-drone-and-drone-as-first-responder-dfr-solutions"
+    },
+    {
+      "id": "oakland-dedrone-axon-2024",
+      "name": "Oakland County Sheriff — Axon Air / DedroneBeyond pilot documented",
+      "manufacturer": null,
+      "model": null,
+      "operator": "Oakland County Sheriff’s Office",
+      "kind": "drone",
+      "domain": "air",
+      "purpose": "public-safety",
+      "place": "Oakland County, Michigan, USA",
+      "latitude": 42.66,
+      "longitude": -83.39,
+      "date": "2024-06-20",
+      "summary": "Axon reported an Axon Air / DedroneBeyond DFR pilot and a pending BVLOS waiver. This does not establish a later approval or a current flight.",
+      "evidence_url": "https://www.axon.com/blog/next-gen-drone-and-drone-as-first-responder-dfr-solutions"
     }
   ]
 }

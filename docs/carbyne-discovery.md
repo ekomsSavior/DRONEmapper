@@ -6,7 +6,7 @@ Desktop **0.6.1** · **Church of Malware / saviorSEC** · reviewed 25 October 20
 
 1. Stop listening in the desktop dashboard.
 2. Open **Radio settings → Local network discovery** and choose a LAN interface on a network you manage. Wireshark/dumpcap capture access is required.
-3. Enable **Listen for Carbyne domain lookups**, save, and start listening.
+3. Enable **Listen for Carbyne, Fusus and Dedrone domain lookups**, save, and start listening.
 4. Open **Local service activity** for matching observations, receive times, the input interface and a platform link. **Device reference** includes the reviewed Carbyne integration links.
 
 Headless configuration, with the node stopped:

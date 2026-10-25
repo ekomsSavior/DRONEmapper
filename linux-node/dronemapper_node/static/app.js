@@ -1,4 +1,5 @@
 import {contactPoint} from './radar.js';
+import {dronePlatform,dronePlatforms} from './drone-platforms.mjs';
 const $ = id => document.getElementById(id);
 let state, csrf = '', mode = 'signals', selected = '', initialized = false, busy = false, lastConnected;
 try {
@@ -107,6 +108,9 @@ function detail(contact) {
     'Received: '+new Date(contact.seen*1000).toLocaleString()];
   for (const line of lines.filter(Boolean)) panel.append(make('p',line));
   if (contact.vendor_url) panel.append(referenceLink('Manufacturer ↗',contact.vendor_url));
+  const model=dronePlatform(contact.manufacturer,contact.model,contact.kind);
+  if (model) panel.append(make('p','Compatible platform: '+model.platform),make('p',dronePlatforms.notice),
+    referenceLink('Model ↗',model.url),make('span',' · '),referenceLink('Integration ↗',model.integration_url));
 }
 function referenceLink(label,url) {
   const link=make('a',label); if (/^https:\/\//.test(url)) link.href=url;
@@ -131,7 +135,7 @@ function networkDevices() {
       referenceLink('Platform ↗',activity.service_url));services.append(item);
   }
   if (!services.childElementCount) services.append(make('p',state.settings.lan_dns && state.settings.lan_interface?
-    'No matching domain lookup in the last two minutes.':'Enable Carbyne domain lookups under Local network discovery to listen.'));
+    'No matching domain lookup in the last two minutes.':'Enable Carbyne, Fusus and Dedrone domain lookups under Local network discovery to listen.'));
   const refs=$('device-references');
   if (!refs.childElementCount && state.device_references) {
     refs.append(make('p','Hardware and service references; these are not received detections.'));
@@ -141,6 +145,13 @@ function networkDevices() {
         make('p',model.description),referenceLink('Model details ↗',model.url));
       const vendor=state.device_references.vendors.find(v=>v.id===model.vendor);
       if (vendor) item.append(make('span',' · '),referenceLink('Manufacturer ↗',vendor.url));
+      refs.append(item);
+    }
+    for (const model of dronePlatforms.models) {
+      const item=make('article','','contact');
+      item.append(make('strong',model.name),make('p',model.category+' · '+model.connection),
+        make('p',model.description),make('p',model.reception),make('p',dronePlatforms.notice),
+        referenceLink('Model ↗',model.url),make('span',' · '),referenceLink('Integration ↗',model.integration_url));
       refs.append(item);
     }
     for (const platform of state.service_references?.platforms || []) {

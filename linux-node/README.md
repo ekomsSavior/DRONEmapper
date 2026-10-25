@@ -4,7 +4,7 @@ Turn a Windows, macOS or Linux computer into a scanner node with a local radar, 
 
 ## Start
 
-[Download Desktop 0.6.1 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.6.2 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
 
 **Windows:** install [Python 3.10+](https://www.python.org/downloads/windows/), extract the source, then double-click `Start-DRONEmapper.cmd` in this folder.
 
@@ -58,3 +58,5 @@ Code: **AGPL-3.0-or-later**. Data and optional dependencies retain their own ter
 Model recognition now covers 141 reviewed FAA aircraft/module combinations. Historical map enrichment adds 40 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).
 
 **Robot signals:** matching CyberDog Bluetooth advertisements appear as possible robot dogs. Optional **Share approximate robot signal areas** uses your rounded station area. [Support, protocol and testing](../docs/robot-signals.md).
+
+Axon Air / Fusus model references: Skydio X10, X2/X2E and R10, with official links. Compatibility does not identify an operator or active cloud connection. [Research and reception details](../docs/axon-air-fusus.md). Credits: [saviorSEC / Axon Galaxy](https://github.com/saviorSEC/axon-galaxy) research leads and the linked Axon/Skydio primary documentation.

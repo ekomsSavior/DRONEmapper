@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-25",
+  "notice": "Model compatibility does not establish the operator or an active Fusus connection.",
+  "research": {
+    "url": "https://github.com/saviorSEC/axon-galaxy",
+    "commit": "476c844ed9f70b231c8ee0f9252f38cd884f9ec1",
+    "use": "Infrastructure research leads, checked against primary product documentation. No locations or detections imported."
+  },
+  "models": [
+    {
+      "id": "skydio-x10",
+      "manufacturer": "Skydio",
+      "manufacturer_aliases": [
+        "Skydio",
+        "Skydio, Inc."
+      ],
+      "model": "X10",
+      "aliases": [
+        "X10",
+        "Skydio X10",
+        "X10E SR47P"
+      ],
+      "name": "Skydio X10",
+      "category": "Outdoor drone",
+      "manufacturer_url": "https://www.skydio.com/",
+      "url": "https://www.skydio.com/x10",
+      "platform": "Axon Air / Fusus",
+      "integration_url": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "connection": "Connect SL (2.4 / 5 GHz); optional cellular and Fusion",
+      "description": "Fusus supports video, telemetry and flight alerts from an authorized Skydio Cloud integration.",
+      "reception": "Remote ID serial matches can identify catalogued X10E SR47P aircraft. Connect SL and cellular traffic are not decoded by this reference.",
+      "sources": [
+        "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+        "https://support.skydio.com/hc/en-us/articles/20592871628571-Understanding-Skydio-Connect",
+        "https://www.skydio.com/x10/faqs",
+        "https://uasdoc.faa.gov/listDocs"
+      ]
+    },
+    {
+      "id": "skydio-x2",
+      "manufacturer": "Skydio",
+      "manufacturer_aliases": [
+        "Skydio",
+        "Skydio, Inc."
+      ],
+      "model": "X2",
+      "aliases": [
+        "X2",
+        "Skydio X2",
+        "X2E",
+        "Skydio X2E",
+        "X2E SDR21V1",
+        "X2E SDR21V2"
+      ],
+      "name": "Skydio X2 / X2E",
+      "category": "Enterprise drone",
+      "manufacturer_url": "https://www.skydio.com/",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "platform": "Axon Air / Fusus",
+      "integration_url": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "connection": "X2E proprietary controller link; Remote ID on supported firmware",
+      "description": "X2 is included in the supported Fusus integration family. X2D is not treated as interchangeable with X2E.",
+      "reception": "Overlapping X2E Remote ID declarations remain ambiguous; the scanner does not guess a hardware revision.",
+      "sources": [
+        "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+        "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+        "https://support.skydio.com/hc/en-us/articles/8629239357595-What-is-Remote-ID-and-how-does-Skydio-have-you-covered"
+      ]
+    },
+    {
+      "id": "skydio-r10",
+      "manufacturer": "Skydio",
+      "manufacturer_aliases": [
+        "Skydio",
+        "Skydio, Inc."
+      ],
+      "model": "R10",
+      "aliases": [
+        "R10",
+        "Skydio R10"
+      ],
+      "name": "Skydio R10",
+      "category": "Indoor / confined-space drone",
+      "manufacturer_url": "https://www.skydio.com/",
+      "url": "https://www.skydio.com/r10",
+      "platform": "Axon Air / Fusus",
+      "integration_url": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "connection": "Connect SL plus cellular; visual navigation",
+      "description": "The manufacturer documents Remote ID and Fusus sharing. Indoor navigation can operate without GPS.",
+      "reception": "Reference only: no reviewed R10 serial allocation is bundled yet. Generic Remote ID reception remains available without an exact model match.",
+      "sources": [
+        "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+        "https://www.skydio.com/r10/faq"
+      ]
+    }
+  ]
+}

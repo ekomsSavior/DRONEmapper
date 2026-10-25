@@ -37,7 +37,7 @@ test('all scanner catalogs contain the same rules and decimal constraints',()=>{
 });
 test('historical milestones stay historical through the public adapter',async()=>{
  const {records}=await adapters.milestones();
- assert.equal(records.length,40);
+ assert.equal(records.length,43);
  for(const source of records){
   const r=publicRecord(source);
   assert.equal(r.record_type,'historical');

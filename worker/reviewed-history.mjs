@@ -24,7 +24,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.zipline.com/newsroom/zipline-ghana-remote-communities-within-reach",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Zipline — Kisumu medical delivery program",
@@ -50,7 +50,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.zipline.com/newsroom/de-stigmatizing-hiv-aids-care--drone-delivery",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Zipline — Kaduna State delivery launch",
@@ -76,7 +76,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.zipline.com/newsroom/creating-an-energy-infrastructure-in-nigeria",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Zipline / Sora-iina — Gotō delivery launch",
@@ -102,7 +102,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.globenewswire.com/news-release/2022/04/21/2426108/0/en/Toyota-Tsusho-Corporation-Autonomous-Deliveries-Launched-in-Japan-Powered-By-Zipline-s-Instant-Logistics-System.html",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Starship / Bolt — Tallinn grocery delivery launch",
@@ -128,7 +128,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.starship.xyz/wp-content/uploads/2024/11/Starship-x-Bolt_press-release.pdf",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Zoox — Las Vegas public service launch",
@@ -154,7 +154,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://zoox.com/journal/las-vegas",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Waymo — Denver first public riders",
@@ -180,7 +180,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Waymo — San Diego first public riders",
@@ -206,7 +206,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Waymo — Tampa first public riders",
@@ -232,7 +232,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Gatik — Dallas–Fort Worth driverless deliveries",
@@ -258,7 +258,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Gatik — Phoenix driverless deliveries",
@@ -284,7 +284,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Gatik — Northwest Arkansas driverless deliveries",
@@ -310,7 +310,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Pony.ai — Guangzhou Gen-7 driverless launch",
@@ -336,7 +336,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-kicks-fully-driverless-commercial-services-gen-7",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Pony.ai — Shenzhen Gen-7 driverless launch",
@@ -362,7 +362,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-kicks-fully-driverless-commercial-services-gen-7",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Pony.ai — Beijing Gen-7 driverless launch",
@@ -388,7 +388,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-kicks-fully-driverless-commercial-services-gen-7",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "WeRide — Abu Dhabi downtown service expansion",
@@ -414,7 +414,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.weride.ai/news-releases/news-release-details/weride-and-uber-begin-first-commercial-robotaxi-service-downtown",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "WeRide / beti — Valence shuttle inauguration",
@@ -440,7 +440,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://zh.weride.ai/posts/nrd2478rd1a0x411ovtzzog6",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "EHang — Bangkok autonomous flight trials",
@@ -466,7 +466,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.ehang.com/news/1293.html",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Einride — Morgongåva autonomous freight",
@@ -492,7 +492,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.catena.se/en/about-us/press-room/articles/europes-first-daily-autonomous-freight-operations-on-catena-s-property",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "ACSL — Toyooka parcel delivery trial",
@@ -518,7 +518,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.acsl.co.jp/admin/wp-content/uploads/2024/06/20240628_PF4-CAT3%E5%9E%8B%E5%BC%8F%E8%AA%8D%E8%A8%BC%E7%94%B3%E8%AB%8B_EN_fix.pdf",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "XAG — Guayaquil agricultural drone activity",
@@ -544,7 +544,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.xa.com/en/news/official/xag/191",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Flyability — Johannesburg disaster inspection",
@@ -570,7 +570,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.flyability.com/casestudies/johannesburg-street-explosion-elios-3",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Singapore Police — Changi autonomous patrol robots",
@@ -579,7 +579,7 @@ export const historicalMilestones = [
     "operator": "Singapore Police Force",
     "kind": "ground-robot",
     "domain": "ground",
-    "purpose": "police",
+    "purpose": "public-safety",
     "place": "Changi area, Singapore",
     "latitude": 1.35,
     "longitude": 103.99,
@@ -596,7 +596,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.police.gov.sg/media-hub/news/2023/20230512_police_workplan_seminar_and_exhibition_2023_a_future-ready_force_for_the_nation",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "ANYmal — Péry autonomous inspections",
@@ -622,7 +622,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/vigier-ciment-autonomous-inspection-case-study/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "ANYmal / Vale — Cauê inspection report",
@@ -648,7 +648,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/anymal-helps-vale-to-prioritize-people-in-mining/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "ANYmal — Slough inspection demonstration",
@@ -674,7 +674,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/kanadevia-inova-and-anybotics-partner-to-transform-waste-to-x-operations/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "ANYmal / Northern Lights — inspection deployment",
@@ -700,7 +700,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/equinor-deploys-anymal-at-northern-lights-ccs-facility/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "ANYmal / Onkalo — underground inspection trial",
@@ -726,7 +726,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/autonomous-inspection-for-enhanced-nuclear-safety-at-onkalo/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "ANYmal X / BASF — inspection evaluation",
@@ -752,7 +752,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/anymal-x-basf-ludwigshafen-deployment/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "ANYmal X / Equinor — five-week test",
@@ -778,7 +778,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/anymal-x-completes-five-week-test-program-at-equinor-lab/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "ANYmal / railCare — wagon inspection pilot",
@@ -804,7 +804,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.anybotics.com/news/transforming-rail-operations-through-automated-robotic-inspection/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Spot — Bishan park trial",
@@ -830,7 +830,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.tech.gov.sg/media/spot-robot-trial-for-safe-distancing-operations/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Spot — Changi isolation facility trial",
@@ -856,7 +856,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.tech.gov.sg/media/spot-robot-trial-for-safe-distancing-operations/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Aurora Driver — Texas driverless freight launch",
@@ -882,7 +882,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-25-000078/auroracommerciallaunchpres.htm",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "Aurora Driver — Texas driverless freight launch",
@@ -908,7 +908,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-25-000078/auroracommerciallaunchpres.htm",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "May Mobility — Grand Rapids on-demand launch",
@@ -934,7 +934,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://maymobility.com/posts/may-mobility-announces-on-demand-autonomous-service-in-grand-rapids-michigan",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "May Mobility / Toyota — Miyata e-Palette service",
@@ -960,7 +960,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan/",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "WeRide — Sentosa driverless Robobus milestone",
@@ -986,7 +986,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://ir.weride.ai/news-releases/news-release-details/weride-launches-southeast-asias-first-fully-driverless-robobus",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "WeRide — Marina Coastal Drive autonomous sanitation",
@@ -1012,7 +1012,7 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.weride.ai/posts/wrqxhqx5u9dp1np0on58ygtx",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
   },
   {
     "name": "WeRide — Esplanade autonomous sanitation",
@@ -1038,6 +1038,84 @@ export const historicalMilestones = [
     "source": "milestones",
     "source_url": "https://www.weride.ai/posts/wrqxhqx5u9dp1np0on58ygtx",
     "verification": "Dated operator report; continued operation not inferred",
-    "reviewed_at": "2026-10-21"
+    "reviewed_at": "2026-10-25"
+  },
+  {
+    "name": "Miami Beach Police — X10 / Axon program documented",
+    "manufacturer": "Skydio",
+    "model": "Skydio X10",
+    "operator": "Miami Beach Police Department",
+    "kind": "drone",
+    "domain": "air",
+    "purpose": "public-safety",
+    "place": "Miami Beach, Florida, USA",
+    "latitude": 25.79,
+    "longitude": -80.13,
+    "summary": "Axon reported Miami Beach Police using X10 drones alongside its software. Date is the report publication, not a flight.",
+    "evidence_url": "https://www.axon.com/blog/next-gen-drone-and-drone-as-first-responder-dfr-solutions",
+    "id": "milestone:miami-beach-axon-x10-2024",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2024,
+    "record_dates": "2024-06-20",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.axon.com/blog/next-gen-drone-and-drone-as-first-responder-dfr-solutions",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-25"
+  },
+  {
+    "name": "Forsyth County Sheriff — drone / Fusus coordination documented",
+    "manufacturer": null,
+    "model": null,
+    "operator": "Forsyth County Sheriff’s Office",
+    "kind": "drone",
+    "domain": "air",
+    "purpose": "public-safety",
+    "place": "Forsyth County, Georgia, USA",
+    "latitude": 34.21,
+    "longitude": -84.14,
+    "summary": "Axon described drone video and K-9 coordination through Fusus. Aircraft model and individual flight dates were not specified.",
+    "evidence_url": "https://www.axon.com/blog/next-gen-drone-and-drone-as-first-responder-dfr-solutions",
+    "id": "milestone:forsyth-fusus-drone-2024",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2024,
+    "record_dates": "2024-06-20",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.axon.com/blog/next-gen-drone-and-drone-as-first-responder-dfr-solutions",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-25"
+  },
+  {
+    "name": "Oakland County Sheriff — Axon Air / DedroneBeyond pilot documented",
+    "manufacturer": null,
+    "model": null,
+    "operator": "Oakland County Sheriff’s Office",
+    "kind": "drone",
+    "domain": "air",
+    "purpose": "public-safety",
+    "place": "Oakland County, Michigan, USA",
+    "latitude": 42.66,
+    "longitude": -83.39,
+    "summary": "Axon reported an Axon Air / DedroneBeyond DFR pilot and a pending BVLOS waiver. This does not establish a later approval or a current flight.",
+    "evidence_url": "https://www.axon.com/blog/next-gen-drone-and-drone-as-first-responder-dfr-solutions",
+    "id": "milestone:oakland-dedrone-axon-2024",
+    "record_type": "historical",
+    "status": "documented-milestone",
+    "first_year": 2024,
+    "record_dates": "2024-06-20",
+    "observed_at": null,
+    "position_basis": "reported-area",
+    "precision": "Historical city/region reference; not a vehicle position",
+    "source": "milestones",
+    "source_url": "https://www.axon.com/blog/next-gen-drone-and-drone-as-first-responder-dfr-solutions",
+    "verification": "Dated operator report; continued operation not inferred",
+    "reviewed_at": "2026-10-25"
   }
 ];

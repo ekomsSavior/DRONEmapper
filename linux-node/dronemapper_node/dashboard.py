@@ -41,9 +41,9 @@ def make_server(engine,port=8790):
                 self.reply({**engine.snapshot(),'csrf':csrf})
             elif path=='/api/doctor':
                 self.reply(doctor())
-            elif path in ('/','/app.js','/radar.js','/style.css','/icon.svg'):
+            elif path in ('/','/app.js','/radar.js','/style.css','/icon.svg','/drone-platforms.mjs','/drone-platform-data.mjs'):
                 file='index.html' if path=='/' else path[1:]
-                mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'}[Path(file).suffix]
+                mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'}[Path(file).suffix]
                 self.reply((STATIC/file).read_bytes(),mime=mime)
             else:
                 self.reply({'error':'Not found'},404)

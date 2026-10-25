@@ -2526,6 +2526,31 @@
       "url": "https://zoox.com/",
       "evidence": "https://zoox.com/",
       "title": "Zoox"
+    },
+    "Skydio, Inc.": {
+      "url": "https://www.skydio.com/",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio manufacturer"
+    },
+    "Axon Air": {
+      "url": "https://www.axon.com/products/axon-air",
+      "evidence": "https://www.axon.com/products/axon-air",
+      "title": "Axon Air"
+    },
+    "Axon Fusus": {
+      "url": "https://www.axon.com/products/axon-fusus",
+      "evidence": "https://www.axon.com/products/axon-fusus",
+      "title": "Axon Fusus"
+    },
+    "Fusus": {
+      "url": "https://www.axon.com/products/axon-fusus",
+      "evidence": "https://www.axon.com/products/axon-fusus",
+      "title": "Fusus"
+    },
+    "DedroneBeyond": {
+      "url": "https://www.dedrone.com/solutions/dedrone-beyond",
+      "evidence": "https://www.dedrone.com/solutions/dedrone-beyond",
+      "title": "DedroneBeyond"
     }
   },
   "models": [
@@ -6251,6 +6276,153 @@
       "url": "https://ukrarmor.com/uk/news-uk/nrk-protector-najpotuzhnishij-nazemnij-dron-armiyainform-video/",
       "evidence": "https://ukrarmor.com/uk/news-uk/nrk-protector-najpotuzhnishij-nazemnij-dron-armiyainform-video/",
       "title": "Ukrainian Armor Protector unmanned ground vehicle"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "X10",
+      "url": "https://www.skydio.com/x10",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X10"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "X10E SR47P",
+      "url": "https://www.skydio.com/x10",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X10"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "X10",
+      "url": "https://www.skydio.com/x10",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X10"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "Skydio X10",
+      "url": "https://www.skydio.com/x10",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X10"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "X10E SR47P",
+      "url": "https://www.skydio.com/x10",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X10"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "X2",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "Skydio X2",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "X2E",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "Skydio X2E",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "X2E SDR21V1",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "X2E SDR21V2",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "X2",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "Skydio X2",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "X2E",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "Skydio X2E",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "X2E SDR21V1",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "X2E SDR21V2",
+      "url": "https://pages.skydio.com/rs/784-TUF-591/images/skydio-x2e-datasheet-x2-pg.pdf",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio X2 / X2E"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "R10",
+      "url": "https://www.skydio.com/r10",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio R10"
+    },
+    {
+      "manufacturer": "Skydio",
+      "model": "Skydio R10",
+      "url": "https://www.skydio.com/r10",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio R10"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "R10",
+      "url": "https://www.skydio.com/r10",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio R10"
+    },
+    {
+      "manufacturer": "Skydio, Inc.",
+      "model": "Skydio R10",
+      "url": "https://www.skydio.com/r10",
+      "evidence": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
+      "title": "Skydio R10"
     }
   ]
 }

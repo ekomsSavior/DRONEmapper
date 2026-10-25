@@ -295,6 +295,10 @@ class NodeTests(unittest.TestCase):
             c.request(method,path,body=body,headers=headers or {});r=c.getresponse();data=r.read();status=r.status;c.close();return status,data
         try:
             status,data=request('/api/status');self.assertEqual(status,200);csrf=json.loads(data)['csrf']
+            for module in ('drone-platforms.mjs','drone-platform-data.mjs'):
+                status,data=request('/'+module)
+                self.assertEqual(status,200)
+                self.assertIn(b'export',data)
             self.assertEqual(request('/api/status',headers={'Host':'evil.example'})[0],403)
             self.assertEqual(request('/api/status',headers={'Sec-Fetch-Site':'cross-site'})[0],403)
             self.assertEqual(request('/api/settings','POST','{}',{'Content-Type':'application/json'})[0],403)

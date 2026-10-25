@@ -48,7 +48,7 @@ def build_node_archive(directory=None, family='Desktop'):
     with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in source_files():
             relative = path.relative_to(ROOT)
-            if relative.parts[0] == 'linux-node' or str(relative) in {'docs/desktop-node-setup.md', 'docs/linux-node-setup.md', 'docs/sdr-discovery-research.md', 'docs/sdr-decoders.md', 'docs/serial-receivers.md', 'docs/robot-signals.md', 'docs/community-enrichment.md', 'docs/security-device-discovery.md', 'docs/carbyne-discovery.md'}:
+            if relative.parts[0] == 'linux-node' or str(relative) in {'docs/desktop-node-setup.md', 'docs/linux-node-setup.md', 'docs/sdr-discovery-research.md', 'docs/sdr-decoders.md', 'docs/serial-receivers.md', 'docs/robot-signals.md', 'docs/community-enrichment.md', 'docs/security-device-discovery.md', 'docs/carbyne-discovery.md', 'docs/axon-air-fusus.md'}:
                 archive.write(path, name + '/' + str(relative))
         archive.writestr(name + '/START-HERE.txt',
             f'DRONEmapper Desktop {version} — Church of Malware / saviorSEC\n\n'
@@ -75,7 +75,7 @@ def build_linux_archive():
 def build_archive():
     # Publish the same guide as the source bundle, with working website links.
     guide = (ROOT / 'docs/desktop-node-setup.md').read_text()
-    for relative in ('linux-node-setup.md', 'sdr-decoders.md', 'serial-receivers.md', 'security-device-discovery.md', 'carbyne-discovery.md'):
+    for relative in ('linux-node-setup.md', 'sdr-decoders.md', 'serial-receivers.md', 'security-device-discovery.md', 'carbyne-discovery.md', 'axon-air-fusus.md'):
         guide = guide.replace('](' + relative + ')',
             '](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/' + relative + ')')
     guide = guide.replace('](../linux-node/README.md)',
