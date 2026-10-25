@@ -14,7 +14,7 @@ for(const vendor of [...new Set(models.map(m=>m.maker))].sort())$('reference-ven
 const selectedVendor=new URLSearchParams(location.search).get('vendor');if(selectedVendor)$('reference-vendor').value=selectedVendor;
 }
 filters();
-$('reference-search').value=new URLSearchParams(location.search).get('model')||'';
+$('reference-search').value=new URLSearchParams(location.search).get('model')||(location.hash==='#warhound'?'Warhound':'');
 function render(){
  const q=$('reference-search').value.trim().toLowerCase(),category=$('reference-category').value;
  const vendor=$('reference-vendor').value;
@@ -31,7 +31,7 @@ function render(){
   const comms=make('p');comms.append(make('strong','Published communications: '),document.createTextNode(m.connection));card.append(comms,make('p',m.reception,'reference-reception'));
   const links=make('p');if(m.url)links.append(link('Product / program ↗',m.url));if(m.manufacturer_url)links.append(document.createTextNode(' · '),link('Manufacturer ↗',m.manufacturer_url));const cloud=make('a','Cloud Surface ↗');cloud.href='/cloud-surface?vendor='+encodeURIComponent(m.maker);const galaxy=make('a','Galaxy ↗');galaxy.href='/galaxy?vendor='+encodeURIComponent(m.maker);links.append(document.createTextNode(' · '),cloud,document.createTextNode(' · '),galaxy);card.append(links);
   if(m.specs&&Object.keys(m.specs).length){const specs=make('dl');for(const [k,v] of Object.entries(m.specs)){specs.append(make('dt',k.replaceAll('_',' ')),make('dd',typeof v==='object'?JSON.stringify(v):String(v)));}card.append(specs);}
-  const evidence=make('details');evidence.append(make('summary','Reference details'));if(m.source)evidence.append(link('Published source ↗',m.source));
+  const evidence=make('details');evidence.append(make('summary','Reference details'));if(m.source)evidence.append(link('Published source ↗',m.source));if(m.reference_notes)evidence.append(make('p',m.reference_notes));
   for(const related of m.related_links||[])evidence.append(document.createTextNode(' · '),link(related.name+' ↗',related.url));
   card.append(evidence);list.append(card);
  }
