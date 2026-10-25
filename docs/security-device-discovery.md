@@ -1,6 +1,6 @@
 # Security-device references and local discovery
 
-Android **0.8.2** and Desktop **0.6.0**, by **Church of Malware / saviorSEC**.
+Android **0.8.2** and Desktop **0.6.1**, by **Church of Malware / saviorSEC**.
 
 ## What changed
 
@@ -46,5 +46,7 @@ Verkada's separate [GW31-E gateway](https://help.verkada.com/connectivity/config
 Vendor-only observations remain in memory on the receiving device and expire from the live list after two minutes. They are excluded from public-map uploads and Android saved wardrives/exports. LAN observations have no radar dot, GPS or signal-strength estimate. The command-line mode prints these local observations; redirected output is under the user's control. Existing drone/robot sharing choices are unchanged.
 
 `integration/security-device-references.json` is the reviewed source for both apps; regenerate bundled copies with `python3 scripts/sync-device-references.py`. References are not detections or map records.
+
+Desktop 0.6.1 also offers separate, opt-in [Carbyne domain lookup recognition](carbyne-discovery.md). With that option on, the LAN capture filter additionally permits plaintext DNS questions; the device-vendor path still uses only ARP. Domain activity stays in its own local list and never becomes a device or camera claim.
 
 Tests cover real libpcap filter compilation against synthetic ARP/VLAN packets, malformed/source-mismatched packets, sender-versus-target handling, probe-response parsing, expiry, receiver isolation, and exclusion from uploads/exports. Android tests exercise API 28 and 35. The CM42 was supplied as a photo only: physical CM42/GW31-E reception and this new LAN receiver on Windows/macOS still need device testing. No photograph-derived or synthetic sightings were added to the public map.

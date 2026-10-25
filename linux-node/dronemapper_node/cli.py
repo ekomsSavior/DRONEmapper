@@ -29,6 +29,7 @@ def parser():
     config=commands.add_parser('configure',help='Save receiver choices while the node is stopped')
     config.add_argument('--wifi',action='append',dest='wifi_interfaces',help='Dedicated monitor interface; repeat for several radios')
     config.add_argument('--lan-interface',help='Optional local Ethernet/managed interface for passive vendor discovery; empty disables')
+    config.add_argument('--lan-dns',action=argparse.BooleanOptionalAction,default=None,help='Recognize reviewed service domains in local plaintext DNS questions; local only')
     config.add_argument('--ble',dest='ble_adapter',help='System controller: default on Windows / macOS, hci0 on Linux; empty disables')
     config.add_argument('--sdr-mode',choices=['spectrum','adsb','dji'])
     config.add_argument('--dji-frequency',type=float,help='Fixed DJI research channel in MHz')
@@ -171,7 +172,7 @@ def main(argv=None):
             last_status=None
             while not stop.wait(1):
                 view=engine.snapshot()
-                for contact in view['contacts']+view['network_devices']:
+                for contact in view['contacts']+view['network_devices']+view['service_activity']:
                     if contact['seen']>last.get(contact['key'],0)+5:
                         print(json.dumps(contact,ensure_ascii=True),flush=True)
                         last[contact['key']]=contact['seen']

@@ -9,11 +9,13 @@ import statistics
 import threading
 import time
 import uuid
+from functools import partial
 from .account import Connection, Uploader
 from .protocol import AIRFRAMES, bearing_distance, finite, messages, MAC
 from . import radios, serial_receiver, __version__
 from . import network_receiver
 from .security_devices import vendor_hint, REFERENCES
+from .service_activity import domain_hint, QUERY_TYPES, REFERENCES as SERVICE_REFERENCES
 
 
 class Catalog:
@@ -70,6 +72,7 @@ class Engine:
         self.running=False
         self.contacts={}
         self.network_devices={}
+        self.service_activity={}
         self.states={}
         self.spectrum={}
         self.last_queued={}
@@ -103,7 +106,7 @@ class Engine:
             config=self.store.settings()
             receivers=[('Wi-Fi '+x,radios.wifi,(x,)) for x in config['wifi_interfaces']]
             if config['lan_interface']:
-                receivers.append(('Local network',network_receiver.receive,(config['lan_interface'],)))
+                receivers.append(('Local network',partial(network_receiver.receive,dns=config['lan_dns']),(config['lan_interface'],)))
             if config['ble_adapter']:
                 receivers.append(('Bluetooth',radios.ble,(config['ble_adapter'],)))
             if config['sdr']!='off':
@@ -141,10 +144,13 @@ class Engine:
         with self.control:
             # Radio configuration changes require a stopped receiver; consent can change live.
             old=self.store.settings()
-            radio_keys={'wifi_interfaces','lan_interface','ble_adapter','sdr','sdr_band','sdr_mode','dji_frequency','readsb_file','mqtt_file','serial_port','serial_baud','serial_format'}
+            radio_keys={'wifi_interfaces','lan_interface','lan_dns','ble_adapter','sdr','sdr_band','sdr_mode','dji_frequency','readsb_file','mqtt_file','serial_port','serial_baud','serial_format'}
             if self.running and any(values.get(k,old[k])!=old[k] for k in radio_keys):
                 raise ValueError('Stop listening before changing receivers')
             self.store.update({**old,**values})
+            if not self.store.settings()['lan_dns'] or self.store.settings()['lan_interface'] != old['lan_interface']:
+                with self.lock:
+                    self.service_activity.clear()
 
     def connect_serial(self, values):
         with self.control:
@@ -163,6 +169,8 @@ class Engine:
 
     def _maintenance(self):
         while not self.quit_event.wait(1):
+            with self.lock:
+                self._expire_network_activity(time.time())
             try:
                 self.connection.poll()
                 self.account_status=''
@@ -170,6 +178,10 @@ class Engine:
                     self.uploader.tick()
             except Exception:
                 self.account_status='Account service unavailable · retrying'
+
+    def _expire_network_activity(self,now):
+        self.network_devices={k:v for k,v in self.network_devices.items() if now-v['seen']<=120}
+        self.service_activity={k:v for k,v in self.service_activity.items() if now-v['seen']<=120}
 
     def ingest(self,event):
         with self.lock:
@@ -192,6 +204,20 @@ class Engine:
             if not finite(received,now-120,now+5):
                 return
             source=event['source']
+            if kind=='service-domain':
+                settings=self.store.settings()
+                hint=domain_hint(event.get('domain'))
+                if (not settings['lan_dns'] or not settings['lan_interface'] or not hint
+                    or source!='lan:'+settings['lan_interface'] or event.get('protocol')!='dns-query'
+                    or event.get('query_type') not in QUERY_TYPES.values()):
+                    return
+                key=source+'|'+hint['service_id']+'|'+event['query_type']
+                if received<=self.service_activity.get(key,{}).get('seen',0): return
+                self.service_activity[key]={**hint,'key':key,'kind':'service-domain','source':source,
+                    'name':hint['service_name']+' domain lookup','protocol':'dns-query',
+                    'query_type':event['query_type'],'seen':received,'local_only':True}
+                self.service_activity={k:v for k,v in sorted(self.service_activity.items(),key=lambda p:p[1]['seen'],reverse=True)[:100] if now-v['seen']<=120}
+                return
             if kind=='vendor':
                 hint=vendor_hint(event.get('mac'))
                 protocol=event.get('protocol')
@@ -311,7 +337,7 @@ class Engine:
         self.last_queued[key]=(received,stamp)
 
     def _queue(self,key,entry,received):
-        if entry.get('kind')=='hardware-vendor':
+        if entry.get('kind') in ('hardware-vendor','service-domain'):
             return
         robot=entry['kind']=='possible-robot'
         candidate=robot or entry['kind']=='possible-drone'
@@ -344,6 +370,7 @@ class Engine:
         with self.lock:
             settings=self.store.settings()
             now=time.time()
+            self._expire_network_activity(now)
             contacts=[]
             for entry in self.contacts.values():
                 if now-entry['seen']>120:
@@ -361,6 +388,8 @@ class Engine:
                 spectrum=[{**v,'above_median_db':round(v['power_db']-baseline,2)} for v in spectrum]
             return {'version':__version__,'running':self.running,'settings':settings,'contacts':contacts,
                 'network_devices':[dict(v) for v in self.network_devices.values() if now-v['seen']<=120],
+                'service_activity':[dict(v) for v in self.service_activity.values() if now-v['seen']<=120],
+                'service_references':SERVICE_REFERENCES,
                 'network_frames':self.network_frame_count,'device_references':REFERENCES,
                 'spectrum':spectrum,'radios':dict(self.states),'wifi_frames':self.frame_count,'rid_messages':self.message_count,'decoded_messages':self.decoded_count,
                 'counts':self.store.counts(),'upload_status':self.uploader.status if self.running else 'Scanner stopped',

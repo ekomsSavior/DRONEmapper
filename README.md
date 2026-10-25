@@ -27,7 +27,7 @@ Updates are manual; re-enable your preferred **Sharing choices** after starting.
 ## Desktop scanner node
 
 Windows, macOS and Linux computers can run the [standalone node and radar](linux-node/README.md).
-[Download Desktop 0.6.0 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.6.1 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
 Pair with your account and choose which detections to share. Wi-Fi, Bluetooth, one SDR and an external USB serial receiver can run together.
 [ESP32 / Marauder receivers and optional Linux channel hopping](docs/serial-receivers.md).
 

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-25",
+  "platforms": [
+    {
+      "id": "carbyne",
+      "name": "Carbyne",
+      "url": "https://carbyne.com/",
+      "domains": ["carbyne.com"],
+      "category": "Emergency communications cloud",
+      "description": "Axon 911 Core, by Carbyne. This rule recognizes a DNS question for the public company domain or a subdomain. A website visit can produce the same observation; it does not establish use of a dispatch system or nearby hardware.",
+      "integration_url": "https://carbyne.com/cloud-advantage/carbyne-integrations/",
+      "telemetry_status": "No public drone-position feed or RF signature verified. A separate documented, authorized telemetry integration is required.",
+      "source": "https://carbyne.com/"
+    }
+  ]
+}

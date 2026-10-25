@@ -15,27 +15,27 @@
   <p class="eyebrow">CHURCH OF MALWARE / SAVIORSEC</p>
   <h1>Your computer. A stationary scanner.</h1>
   <p><strong>Windows, macOS and Linux.</strong> A local radar, live detection list and optional community-map contributions. Run Wi-Fi, Bluetooth and a HackRF or RTL-SDR together. Free and open source, with no subscription.</p>
-  <p><a href="/downloads/DRONEmapper-Desktop-0.6.0.zip"><strong>Download Desktop node · 0.6.0 · all three systems</strong></a> · <a href="/downloads/SHA256SUMS.txt">Checksums</a> · <a href="/source.zip">Complete source</a></p>
+  <p><a href="/downloads/DRONEmapper-Desktop-0.6.1.zip"><strong>Download Desktop node · 0.6.1 · all three systems</strong></a> · <a href="/downloads/SHA256SUMS.txt">Checksums</a> · <a href="/source.zip">Complete source</a></p>
   <p><a href="#windows">Windows setup ↓</a> · <a href="#macos">macOS setup ↓</a> · <a href="#linux">Linux setup ↓</a> · <a href="/downloads/desktop-node-setup.md">Detailed receiver guide</a></p>
   <p>This ZIP contains the Python app and launchers. Install <a href="https://www.python.org/downloads/">Python 3.10 or newer</a> first. The first launch needs internet to install dependencies. Extract the ZIP into a folder you can write to.</p>
   <h2 id="windows">Start on Windows</h2>
   <ol>
     <li>Install Python with the Python launcher enabled, then extract the ZIP.</li>
-    <li>Open <code>DRONEmapper-Desktop-0.6.0\linux-node</code> and double-click <strong>Start-DRONEmapper.cmd</strong>. The shared source folder is named <code>linux-node</code> on all three systems.</li>
+    <li>Open <code>DRONEmapper-Desktop-0.6.1\linux-node</code> and double-click <strong>Start-DRONEmapper.cmd</strong>. The shared source folder is named <code>linux-node</code> on all three systems.</li>
     <li>The launcher installs the node dependencies and opens <a href="http://127.0.0.1:8790/">127.0.0.1:8790</a>. Leave its terminal running.</li>
   </ol>
   <p>For Bluetooth, choose <strong>System Bluetooth</strong>. Wi-Fi capture needs <a href="https://www.wireshark.org/download.html">Wireshark with Npcap</a>, raw 802.11 capture support and a compatible monitor-mode driver. Optional HackRF/RTL-SDR tools and USB drivers are installed separately; see the receiver guide.</p>
   <h2 id="macos">Start on macOS</h2>
   <ol>
-    <li>Install Python, extract the ZIP and open Terminal in <code>DRONEmapper-Desktop-0.6.0</code>.</li>
+    <li>Install Python, extract the ZIP and open Terminal in <code>DRONEmapper-Desktop-0.6.1</code>.</li>
     <li>Run <code>bash linux-node/Start-DRONEmapper.command</code>.</li>
     <li>The launcher installs dependencies and opens the local radar. Allow Terminal/Python Bluetooth access when macOS asks, then choose <strong>System Bluetooth</strong>.</li>
   </ol>
   <p>Wi-Fi capture needs Wireshark, its ChmodBPF capture-permission setup and a compatible monitor interface. With Homebrew, optional SDR tools can be installed with <code>brew install hackrf</code> or <code>brew install rtl-sdr</code>. Full receiver requirements are in the <a href="/downloads/desktop-node-setup.md">desktop setup guide</a>.</p>
-  <p>Windows/macOS support includes the dashboard, radar, account pairing and receiver integrations. Automated checks pass on Windows, macOS and Linux; native Windows/macOS hardware reception has not yet been verified.</p>
+  <p>Windows/macOS support includes the dashboard, radar, account pairing and receiver integrations. The shared code has automated checks; native Windows/macOS hardware reception still needs field testing.</p>
   <h2 id="linux">Start on Debian or Ubuntu</h2>
   <ol>
-    <li>Download and extract the ZIP. Open a terminal inside <code>DRONEmapper-Desktop-0.6.0</code>.</li>
+    <li>Download and extract the ZIP. Open a terminal inside <code>DRONEmapper-Desktop-0.6.1</code>.</li>
     <li>Plug in a dedicated USB Wi-Fi adapter. Run <code>iw dev</code> to find its interface name. Keep your normal Internet adapter separate.</li>
     <li>Run <code>bash linux-node/setup-debian.sh YOUR_DEDICATED_USB_INTERFACE</code>, replacing the final word with that interface name.</li>
     <li>Setup requests sudo to install the receiver tools, configure capture permissions and create a monitor interface. It starts the dashboard at <a href="http://127.0.0.1:8790/">127.0.0.1:8790</a>. Leave the terminal running.</li>
@@ -77,11 +77,16 @@ bash linux-node/run-local.sh</code></pre>
     <li><strong>MQTT:</strong> optional input from an authorized receiver broker using the documented Remote ID format.</li>
   </ul>
   <p>The clickable radar’s <strong>Signals</strong> view shows strength; dot angles are layout only. <strong>Positions</strong> uses fresh reported GPS relative to the station, with selectable viewing ranges from 100 m to 500 km. A larger antenna must match the frequency and receiver; it does not supply a bearing or decode additional protocols by itself.</p>
+  <h2>Carbyne domain activity</h2>
+  <p>Desktop 0.6.1 can recognize Carbyne domain lookups on your local network. Under <strong>Radio settings → Local network discovery</strong>, choose a LAN interface and enable <strong>Listen for Carbyne domain lookups</strong>. Save, start listening, and open <strong>Local service activity</strong>. Entries show receive times and platform links. Website visits can match too; these local observations do not identify drones or create map points. <a href="https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/carbyne-discovery.md">Setup and research ↗</a></p>
+  <h2>Local network discovery</h2>
+  <p>The desktop node includes an optional LAN receiver. Stop listening, choose an interface under <strong>Radio settings → Local network discovery</strong>, save and start. With Wireshark capture access, it passively recognizes ARP senders with reviewed Verkada MAC allocations. Entries show the manufacturer, MAC and receive time in <strong>Local network devices</strong>. They remain local, with model unknown; they do not create radar positions or map points.</p>
+  <p><strong>Device reference</strong> includes the wired CM42 camera and GW31-E gateway with official links. Physical reception of these models has not been verified. <a href="https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/security-device-discovery.md">Setup and research</a>.</p>
   <h2>Hardware and updates</h2>
   <p>Linux monitor reception has been tested with a Panda RT5572, spectrum reception with a PortaPack in HackRF USB mode, and passive Bluetooth reception with a Panda-branded USB adapter (7392:c611). All three receivers ran together. RTL-SDR reception still needs hardware testing. A real Remote ID transmitter is still needed to verify decoded positions over the air. The ADS-B test opened HackRF successfully but received no fresh aircraft positions. DJI decoding passed published-recording tests, including conversion to HackRF’s 20 Msps signed 8-bit format; live DJI reception still needs a supported aircraft test.</p>
   <p>To stop, press <strong>Ctrl+C</strong> in the terminal; restart with the same launcher. To update, stop the node, extract the new release and run its launcher. If updating files in place, pass <code>--update</code> to refresh dependencies. Debian/Ubuntu users can run <code>bash linux-node/run-local.sh</code> from the new folder. Pairing and sharing settings live in your private user-state directory and are preserved. Keep one node process running per state directory.</p>
   <p>The download includes the full <strong>setup guide</strong>, headless CLI instructions, an optional systemd user-service template, protocol research, source and license notices.</p>
   <p>Built by <a href="https://churchofmalware.org/">Church of Malware</a> and <a href="https://churchofmalware.org/work/">saviorSEC, the Church’s research branch</a>. Desktop code: AGPL-3.0-or-later. <a href="/credits.html">Credits &amp; licenses</a>.</p>
-</main>
+<h2>Robot signals</h2><p>Bluetooth can also recognize a documented CyberDog advertisement pattern. It appears as a <strong>possible robot dog</strong> in the live list and Signals radar. Enable <strong>Share approximate robot signal areas</strong> separately to contribute a rounded station area. A match has no robot coordinates and does not authenticate its identity. Physical CyberDog reception still needs field testing.</p></main>
 </body>
 </html>

@@ -14,7 +14,7 @@ from .serial_receiver import valid_port, BAUDS, FORMATS
 from .platform_support import private_directory, lock_file, valid_interface, valid_ble, is_link
 
 ORIGIN = 'https://dronemapper.churchofmalware.org'
-DEFAULTS = {'label': 'Stationary node', 'wifi_interfaces': [], 'lan_interface': '', 'ble_adapter': '',
+DEFAULTS = {'label': 'Stationary node', 'wifi_interfaces': [], 'lan_interface': '', 'lan_dns': False, 'ble_adapter': '',
             'sdr': 'off', 'sdr_band': '2400', 'sdr_mode':'spectrum', 'dji_frequency':2444.5, 'readsb_file':'', 'station': None,
             'share_rid': False, 'share_areas': False, 'share_robots':False, 'share_decoded':False, 'mqtt_file': '', 'serial_port':'', 'serial_baud':115200, 'serial_format':'marauder'}
 BANDS = {'433': (430,440), '868': (863,870), '915': (902,928), '2400': (2400,2485),
@@ -35,6 +35,8 @@ def validate_settings(values):
         raise ValueError('Choose a local LAN capture interface, or leave it off')
     if v['lan_interface'] in interfaces:
         raise ValueError('LAN and monitor capture must use separate interfaces')
+    if type(v['lan_dns']) is not bool:
+        raise ValueError('Domain lookup listening must be true or false')
     if not valid_ble(v['ble_adapter']):
         raise ValueError('Choose the system Bluetooth adapter or a Linux hci controller')
     if v['sdr'] not in ('off','hackrf','rtl') or not isinstance(v['sdr_band'],str) or v['sdr_band'] not in BANDS:

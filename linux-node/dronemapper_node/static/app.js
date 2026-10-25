@@ -19,6 +19,7 @@ function settingsToForm(settings) {
   const lan=settings.lan_interface || '';
   if (lan && ![...$('lan-interface').options].some(x=>x.value===lan)) $('lan-interface').append(new Option(lan,lan));
   $('lan-interface').value=lan;
+  $('lan-dns').checked=Boolean(settings.lan_dns);
   if (settings.ble_adapter && ![...$('ble').options].some(x => x.value === settings.ble_adapter)) {
     const option = make('option', settings.ble_adapter); option.value = settings.ble_adapter; $('ble').append(option);
   }
@@ -51,7 +52,7 @@ function formSettings() {
   const lat = $('latitude').value, lon = $('longitude').value;
   if ((lat === '') !== (lon === '')) throw new Error('Enter both latitude and longitude, or leave both blank.');
   return {label:$('label').value.trim(),wifi_interfaces:$('wifi').value.split(',').map(x=>x.trim()).filter(Boolean),
-    lan_interface:$('lan-interface').value,
+    lan_interface:$('lan-interface').value,lan_dns:$('lan-dns').checked,
     ble_adapter:$('ble').value,sdr:$('sdr').value,sdr_band:$('band').value,sdr_mode:$('sdr-mode').value,dji_frequency:Number($('dji-frequency').value),readsb_file:$('readsb-file').value.trim(),mqtt_file:$('mqtt').value.trim(),
     serial_port:$('serial-port').value,serial_baud:Number($('serial-baud').value),serial_format:$('serial-format').value,
     station:lat === '' ? null : [Number(lat),Number(lon)],share_rid:$('share-rid').checked,share_areas:$('share-areas').checked,share_robots:$('share-robots').checked,share_decoded:$('share-decoded').checked};
@@ -114,7 +115,7 @@ function referenceLink(label,url) {
 function networkDevices() {
   const list=$('network-devices');list.replaceChildren();
   const devices=state.network_devices || [];
-  $('network-count').textContent=`${devices.length} · ${(state.network_frames||0).toLocaleString()} ARP frames`;
+  $('network-count').textContent=`${devices.length} · ${(state.network_frames||0).toLocaleString()} LAN frames`;
   for (const device of devices) {
     const item=make('article','','contact');
     item.append(make('strong',device.name),make('p',`${device.mac} · ${device.protocol} · ${device.source}`),
@@ -122,9 +123,18 @@ function networkDevices() {
       referenceLink('Manufacturer ↗',device.vendor_url));list.append(item);
   }
   if (!devices.length) list.append(make('p',state.settings.lan_interface?'No matching LAN sender in the last two minutes.':'Choose a LAN interface in Radio settings to listen.'));
+  const services=$('service-activity');services.replaceChildren();
+  for (const activity of state.service_activity || []) {
+    const item=make('article','','contact');
+    item.append(make('strong',activity.name),make('p',activity.domain+' · '+activity.query_type+' · '+activity.source),
+      make('p',activity.identification),make('p','Heard '+new Date(activity.seen*1000).toLocaleString()+' · local only'),
+      referenceLink('Platform ↗',activity.service_url));services.append(item);
+  }
+  if (!services.childElementCount) services.append(make('p',state.settings.lan_dns && state.settings.lan_interface?
+    'No matching domain lookup in the last two minutes.':'Enable Carbyne domain lookups under Local network discovery to listen.'));
   const refs=$('device-references');
   if (!refs.childElementCount && state.device_references) {
-    refs.append(make('p','Hardware facts for identification; these are not received detections.'));
+    refs.append(make('p','Hardware and service references; these are not received detections.'));
     for (const model of state.device_references.models) {
       const item=make('article','','contact');
       item.append(make('strong',model.name),make('p',model.category+' · '+model.connection),
@@ -132,6 +142,12 @@ function networkDevices() {
       const vendor=state.device_references.vendors.find(v=>v.id===model.vendor);
       if (vendor) item.append(make('span',' · '),referenceLink('Manufacturer ↗',vendor.url));
       refs.append(item);
+    }
+    for (const platform of state.service_references?.platforms || []) {
+      const item=make('article','','contact');
+      item.append(make('strong',platform.name),make('p',platform.category),make('p',platform.description),
+        make('p',platform.telemetry_status),referenceLink('Platform ↗',platform.url),make('span',' · '),
+        referenceLink('Integration details ↗',platform.integration_url));refs.append(item);
     }
   }
 }
