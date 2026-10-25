@@ -18,7 +18,7 @@ Android 8 or newer. No root or Bluetooth dongle needed.
 
 Sharing is optional. Choose a display name or remain **Anonymous**; email and full MAC addresses stay off the public map. [More app instructions and build steps](android-node/README.md).
 
-**Updating to 0.8.3:** download the new APK from the same page and install it over
+**Updating to 0.8.4:** download the new APK from the same page and install it over
 your existing app—no uninstall. Pairing and settings are preserved. In **Phone
 capabilities**, check the version. USB Wi-Fi: **USB Wi-Fi adapter → Connect → Allow**.
 HackRF: **USB SDR · HackRF → Choose receiver → Connect → Allow** for local RF spectrum.
@@ -27,7 +27,7 @@ Updates are manual; re-enable your preferred **Sharing choices** after starting.
 ## Desktop scanner node
 
 Windows, macOS and Linux computers can run the [standalone node and radar](linux-node/README.md).
-[Download Desktop 0.6.2 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.6.3 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
 Pair with your account and choose which detections to share. Wi-Fi, Bluetooth, one SDR and an external USB serial receiver can run together.
 [ESP32 / Marauder receivers and optional Linux channel hopping](docs/serial-receivers.md).
 
@@ -92,3 +92,7 @@ Model recognition now covers 141 reviewed FAA aircraft/module combinations. Hist
 [Robot signal support and sharing](docs/robot-signals.md) · [Latest research review](docs/community-enrichment.md).
 
 Axon Air / Fusus model references: Skydio X10, X2/X2E and R10, with official links. Compatibility does not identify an operator or active cloud connection. [Research and reception details](docs/axon-air-fusus.md). Credits: [saviorSEC / Axon Galaxy](https://github.com/saviorSEC/axon-galaxy) research leads and the linked Axon/Skydio primary documentation.
+
+General Atomics: shared [aircraft references](docs/aircraft-references.md), with official model links and reviewed specifications. References do not add proprietary radio decoders.
+
+[Public flight dashboard coverage](docs/public-flight-dashboards.md): 94 feeds with original flight times, categories and reported areas. Newly added dashboards refresh every five minutes as operators publish records.

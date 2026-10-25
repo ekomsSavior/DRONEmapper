@@ -1,3 +1,4 @@
+import {aircraftReference,aircraftReferences} from './aircraft-references.mjs';
 import {contactPoint} from './radar.js';
 import {dronePlatform,dronePlatforms} from './drone-platforms.mjs';
 const $ = id => document.getElementById(id);
@@ -108,6 +109,9 @@ function detail(contact) {
     'Received: '+new Date(contact.seen*1000).toLocaleString()];
   for (const line of lines.filter(Boolean)) panel.append(make('p',line));
   if (contact.vendor_url) panel.append(referenceLink('Manufacturer ↗',contact.vendor_url));
+  const aircraft=aircraftReference(contact.manufacturer,contact.model,contact.kind);
+  if(aircraft){panel.append(referenceLink('Aircraft reference ↗',aircraft.url),make('p',aircraft.description),make('p',aircraft.connection));for(const [key,value] of Object.entries(aircraft.specs))panel.append(make('p',key+': '+value));}
+  if(contact.model_basis)panel.append(make('p',contact.model_basis));
   const model=dronePlatform(contact.manufacturer,contact.model,contact.kind);
   if (model) panel.append(make('p','Compatible platform: '+model.platform),make('p',dronePlatforms.notice),
     referenceLink('Model ↗',model.url),make('span',' · '),referenceLink('Integration ↗',model.integration_url));
@@ -154,6 +158,13 @@ function networkDevices() {
         referenceLink('Model ↗',model.url),make('span',' · '),referenceLink('Integration ↗',model.integration_url));
       refs.append(item);
     }
+    const aircraftList=make('details');aircraftList.append(make('summary','General Atomics aircraft references · '+aircraftReferences.models.length),make('p',aircraftReferences.notice));
+    for (const aircraft of aircraftReferences.models) {
+      const item=make('article','','contact');item.append(make('strong',aircraft.name),make('p',aircraft.category+' · '+aircraft.connection),make('p',aircraft.description));
+      for(const [key,value] of Object.entries(aircraft.specs))item.append(make('p',key+': '+value));
+      item.append(make('p',aircraft.reception),referenceLink('Model ↗',aircraft.url),make('span',' · '),referenceLink('Manufacturer ↗',aircraft.manufacturer_url));aircraftList.append(item);
+    }
+    refs.append(aircraftList);
     for (const platform of state.service_references?.platforms || []) {
       const item=make('article','','contact');
       item.append(make('strong',platform.name),make('p',platform.category),make('p',platform.description),

@@ -38,3 +38,22 @@ test('coverage distinguishes configured feeds, successful records and delayed up
  assert.equal(result.configured_flight_feeds,agencies.length+1);assert.equal(result.feeds_with_records,1);assert.equal(result.mapped_flights,1);assert.equal(result.documented_program_records,2);assert.equal(result.feeds.find(f=>f.id==='police-'+a.id).status,'delayed');
  assert.ok(result.feeds.some(f=>f.status==='pending'));
 });
+test('empty published layers validate their top-level reference and collect zero records',async()=>{
+ const m=meta();m.extent=null;m.spatialReference={wkid:4326};assert.equal(layerRevision(m),1);
+ const result=await fetchAgencyFlights(async u=>u.includes('/query?')?{count:0}:m,a,{},now);
+ assert.deepEqual(result.records,[]);assert.equal(result.coverage.published_rows,0);
+ m.spatialReference.wkid=3857;assert.throws(()=>layerRevision(m),/schema/);
+});
+test('commercial and fire feeds keep their operator class and never enter police-only results',async()=>{
+ const {isPoliceFlight}=await import('../public/activity-state.mjs');
+ for(const [operator_type,purpose] of [['utility','commercial'],['fire-and-rescue','public-safety']]){
+  const [r]=normalizeAgencyFlights([feature()],{...a,operator_type,purpose},now);
+  assert.equal(r.operator_type,operator_type);assert.equal(r.purpose,purpose);assert.equal(r.reporting_platform,'Skydio');assert.equal(isPoliceFlight(r),false);assert.equal(isLive(r,now),false);
+ }
+ const [r]=normalizeAgencyFlights([feature()],{...a,operator_type:'police-and-fire'},now);assert.equal(isPoliceFlight(r),true);
+});
+test('coverage counts multiple feeds from one operator once',async()=>{
+ const {policeCoverage}=await import('../worker/police-coverage.mjs');const duplicate=agencies.filter(a=>a.department_id==='oklahoma-city');assert.equal(duplicate.length,2);
+ const result=policeCoverage(Object.fromEntries(duplicate.map(a=>['police-'+a.id,{records:normalizeAgencyFlights([feature()],a,now),last_success:now}])));
+ assert.equal(result.feeds_with_records,2);assert.equal(result.operators_with_records,1);assert.equal(result.configured_flight_feeds,94);assert.ok(result.configured_operators<94);
+});

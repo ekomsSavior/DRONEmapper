@@ -42,3 +42,11 @@ class AgencyFlightTests(unittest.TestCase):
         with self.assertRaises(ValueError):normalize_agency_flights([f,f],A,F['now'])
         meta=copy.deepcopy(F['metadata']);meta['fields']=[]
         with self.assertRaisesRegex(ValueError,'fields changed'):layer_revision(meta)
+    def test_empty_extent_and_operator_category(self):
+        meta=copy.deepcopy(F['metadata']);meta['extent']=None;meta['spatialReference']={'wkid':4326}
+        self.assertIsNotNone(layer_revision(meta))
+        meta['spatialReference']['wkid']=3857
+        with self.assertRaises(ValueError):layer_revision(meta)
+        a={**A,'operator_type':'utility','purpose':'commercial'}
+        records=normalize_agency_flights(F['features'],a,F['now'])
+        self.assertTrue(all(r['operator_type']=='utility' and r['purpose']=='commercial' and not r['live'] for r in records))

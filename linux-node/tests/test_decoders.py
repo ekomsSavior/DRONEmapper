@@ -42,6 +42,14 @@ class DecoderTests(unittest.TestCase):
         self.assertAlmostEqual(r['speed_mps'],10.289,places=3)
         self.assertFalse(adsb_records(document(category='A3',dbFlags=1,flight='DRONE'),NOW)[0]['unmanned'])
 
+    def test_database_family_enrichment_does_not_promote_aircraft(self):
+        for code, family in [('Q1','Predator / Gray Eagle family'),('Q9','MQ-9 family')]:
+            row=adsb_records(document(t=code,category='A3'),NOW)[0]
+            self.assertFalse(row['unmanned']);self.assertEqual(row['model'],family)
+            self.assertIn('database family',row['model_basis'])
+        for code in ['Q9B','MQ-9B',None,{},'']:
+            self.assertNotIn('model',adsb_records(document(t=code),NOW)[0])
+
     def test_stale_guessed_indirect_nonicao_and_malformed_ignored(self):
         for changes in ({'type':'mlat'},{'hex':'~abc123'},{'hex':'000000'},{'seen_pos':61},
                         {'seen':float('nan')},{'lat':0,'lon':0},{'lat':True},{'lat':None},

@@ -74,6 +74,11 @@ def adsb_records(document, now):
             event['altitude_reference'] = 'WGS84 ellipsoid (ADS-B)'
         if isinstance(row.get('flight'),str) and re.fullmatch(r'[A-Z0-9 -]{1,8}',row['flight']):
             event['callsign'] = row['flight'].strip()
+        # readsb database type is enrichment, not a decoded model or UAS-category claim.
+        family = {'Q1':'Predator / Gray Eagle family','Q9':'MQ-9 family'}.get(row.get('t')) if isinstance(row.get('t'),str) else None
+        if family:
+            event.update(manufacturer='General Atomics', model=family,
+                         model_basis='Receiver aircraft database family; exact variant and operator unknown')
         result.append(event)
     return result
 

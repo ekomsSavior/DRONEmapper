@@ -1,3 +1,4 @@
+import {aircraftReference,aircraftReferences} from './aircraft-references.mjs';
 // Whole-name matches only: never guess a website or a model from a prefix.
 import {companyLinks, modelLinks} from './device-link-data.mjs';
 
@@ -10,7 +11,7 @@ const models = new Map(modelLinks.map(([manufacturer, model, kind, url]) =>
   [key(manufacturer, model, kind), url]));
 
 export function companyWebsite(name) {
-  return companies.get(normalize(name)) || null;
+  return companies.get(normalize(name)) || aircraftReferences.models.find(m=>m.manufacturer_aliases.some(a=>normalize(a)===normalize(name)))?.manufacturer_url || null;
 }
 
 export function modelWebsite(model, manufacturer, kind) {
@@ -18,5 +19,5 @@ export function modelWebsite(model, manufacturer, kind) {
   // Unbranded historic/float names need their device kind to avoid namesakes.
   // A supplied manufacturer never falls back to a different or unknown maker.
   return models.get(key(manufacturer, model, kind))
-    || models.get(key(manufacturer, model)) || null;
+    || models.get(key(manufacturer, model)) || aircraftReference(manufacturer,model,kind)?.url || null;
 }

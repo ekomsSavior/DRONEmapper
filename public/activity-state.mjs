@@ -1,6 +1,6 @@
 // Event time, never collection time, determines map freshness.
 export const GHOST_SECONDS=14*86400;
-export const isPoliceFlight=r=>r.kind==='drone'&&r.purpose==='public-safety';
+export const isPoliceFlight=r=>r.kind==='drone'&&(r.operator_type?['police','police-and-fire'].includes(r.operator_type):r.purpose==='public-safety');
 export function isLiveRecord(r,now=Date.now()/1000){
  return r.record_type==='position'&&r.live!==false&&!r.position_conflict&&!['wardrive-import','scanner-archive'].includes(r.source_type)&&Number.isFinite(r.observed_at)&&r.observed_at<=now&&now-r.observed_at<=120;
 }

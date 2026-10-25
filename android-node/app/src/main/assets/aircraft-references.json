@@ -1,0 +1,842 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-25",
+  "notice": "Published model specifications are reference data, not received measurements or proof of detection. Configuration and operating conditions affect performance.",
+  "models": [
+    {
+      "id": "ga-q1-family",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Predator / Gray Eagle family",
+      "aliases": [
+        "Predator / Gray Eagle family",
+        "Q1"
+      ],
+      "name": "General Atomics Predator / Gray Eagle family",
+      "category": "Aircraft family reference",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gray-eagle",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Q1 is a family-level aircraft database designation; exact variant unknown.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gray-eagle"
+      ]
+    },
+    {
+      "id": "ga-q9-family",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "MQ-9 family",
+      "aliases": [
+        "MQ-9 family",
+        "Q9"
+      ],
+      "name": "General Atomics MQ-9 family",
+      "category": "Aircraft family reference",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9a",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Q9 is a family-level aircraft database designation; exact variant unknown.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9a"
+      ]
+    },
+    {
+      "id": "ga-mq1",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "MQ-1 Predator",
+      "aliases": [
+        "MQ-1 Predator",
+        "MQ-1",
+        "Predator"
+      ],
+      "name": "General Atomics MQ-1 Predator",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.163atkw.ang.af.mil/About-Us/Fact-Sheets/Display/Article/452916/mq-1-predator-unmanned-aerial-vehicle/",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Legacy Predator family aircraft; a historical reference does not establish current operation.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.163atkw.ang.af.mil/About-Us/Fact-Sheets/Display/Article/452916/mq-1-predator-unmanned-aerial-vehicle/"
+      ]
+    },
+    {
+      "id": "ga-predator-xp",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Predator XP",
+      "aliases": [
+        "Predator XP"
+      ],
+      "name": "General Atomics Predator XP",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/predator-xp",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Export Predator variant.",
+      "connection": "Line-of-sight and beyond-line-of-sight control links",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Published endurance": "35 hours",
+        "Published altitude": "25,000 ft"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/predator-xp"
+      ]
+    },
+    {
+      "id": "ga-gray-eagle",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "MQ-1C Gray Eagle",
+      "aliases": [
+        "MQ-1C Gray Eagle",
+        "MQ-1C",
+        "Gray Eagle"
+      ],
+      "name": "General Atomics MQ-1C Gray Eagle",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gray-eagle",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Predator-derived aircraft; specifications apply to the cited Gray Eagle configuration.",
+      "connection": "TCDL line-of-sight and Ku-band SATCOM",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Wingspan": "56 ft",
+        "Length": "28 ft",
+        "Published endurance": "25 hours",
+        "Published altitude": "29,000 ft",
+        "Published speed": "167 KTAS"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gray-eagle"
+      ]
+    },
+    {
+      "id": "ga-gray-eagle-er",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Gray Eagle ER",
+      "aliases": [
+        "Gray Eagle ER",
+        "Gray Eagle Extended Range",
+        "GE-ER"
+      ],
+      "name": "General Atomics Gray Eagle ER",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gray-eagle-extended-range",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Extended-range Gray Eagle configuration.",
+      "connection": "CDL line-of-sight and satellite communications",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Wingspan": "58 ft",
+        "Length": "28 ft",
+        "Published endurance": "42 hours",
+        "Published altitude": "29,000 ft",
+        "Published speed": "167 KTAS"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gray-eagle-extended-range"
+      ]
+    },
+    {
+      "id": "ga-gray-eagle-25m",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Gray Eagle 25M",
+      "aliases": [
+        "Gray Eagle 25M",
+        "GE-25M"
+      ],
+      "name": "General Atomics Gray Eagle 25M",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gray-eagle-25m",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Modernized Gray Eagle configuration.",
+      "connection": "TCDL line-of-sight; Ku-band SATCOM",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Wingspan": "58 ft",
+        "Length": "28 ft",
+        "Published endurance": "40+ hours",
+        "Published altitude": "25,000 ft",
+        "Published speed": "167 KTAS"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gray-eagle-25m",
+        "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2604_GRAY_EAGLE_25M_E1.pdf"
+      ]
+    },
+    {
+      "id": "ga-mq9a",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "MQ-9A Reaper",
+      "aliases": [
+        "MQ-9A Reaper",
+        "MQ-9A",
+        "Reaper",
+        "Predator B"
+      ],
+      "name": "General Atomics MQ-9A Reaper",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9a",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "MQ-9A family. Performance varies by configuration.",
+      "connection": "Line-of-sight and SATCOM control",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Published endurance": "27+ hours",
+        "Published speed": "240 KTAS",
+        "Published altitude": "50,000 ft"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9a"
+      ]
+    },
+    {
+      "id": "ga-mq9a-block5",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "MQ-9A Block 5",
+      "aliases": [
+        "MQ-9A Block 5"
+      ],
+      "name": "General Atomics MQ-9A Block 5",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9a",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Block 5 specifications; do not apply the larger ER wing figures to this configuration.",
+      "connection": "Line-of-sight and BLOS/SATCOM",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Wingspan": "66 ft",
+        "Length": "36 ft",
+        "Published endurance": "26 hours",
+        "Published altitude": "45,000 ft",
+        "Published speed": "240 KTAS"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9a",
+        "https://www.ga-asi.com/images/products/aircraft_systems/pdf/2509_MQ-9A-BLK-5_E.pdf"
+      ]
+    },
+    {
+      "id": "ga-mq9b-sky",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "MQ-9B SkyGuardian",
+      "aliases": [
+        "MQ-9B SkyGuardian",
+        "SkyGuardian"
+      ],
+      "name": "General Atomics MQ-9B SkyGuardian",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-skyguardian",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "MQ-9B land-focused configuration. ADS-B in the detect-and-avoid suite does not establish ADS-B Out transmission.",
+      "connection": "Satellite control; VHF/UHF communications",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Wingspan": "79 ft",
+        "Length": "38 ft",
+        "Published endurance": "40+ hours",
+        "Published altitude": "40,000 ft"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-skyguardian",
+        "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+      ]
+    },
+    {
+      "id": "ga-mq9b-sea",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "MQ-9B SeaGuardian",
+      "aliases": [
+        "MQ-9B SeaGuardian",
+        "SeaGuardian"
+      ],
+      "name": "General Atomics MQ-9B SeaGuardian",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-seaguardian",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Maritime MQ-9B configuration. Its AIS sensor observes vessels; it is not evidence of a drone AIS beacon.",
+      "connection": "Satellite control",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Published endurance": "30+ hours, configuration dependent"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-seaguardian"
+      ]
+    },
+    {
+      "id": "ga-protector",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Protector RG Mk1",
+      "aliases": [
+        "Protector RG Mk1",
+        "Protector RG Mk 1"
+      ],
+      "name": "General Atomics Protector RG Mk1",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-skyguardian",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "UK MQ-9B designation. Country or operator is not inferred from a family identifier.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-skyguardian"
+      ]
+    },
+    {
+      "id": "ga-mq9b-stol",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "MQ-9B STOL",
+      "aliases": [
+        "MQ-9B STOL"
+      ],
+      "name": "General Atomics MQ-9B STOL",
+      "category": "Aircraft configuration",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Short-takeoff-and-landing wing/tail configuration for MQ-9B; development reference.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol"
+      ]
+    },
+    {
+      "id": "ga-mojave",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Mojave",
+      "aliases": [
+        "Mojave",
+        "Mojave STOL"
+      ],
+      "name": "General Atomics Mojave",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/mojave",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Short-takeoff-and-landing demonstrator.",
+      "connection": "SATCOM control",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Wingspan": "52 ft",
+        "Length": "29 ft",
+        "Published endurance": "25+ hours",
+        "Published altitude": "25,000 ft",
+        "Published speed": "140 knots"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/mojave",
+        "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2603_MOJAVE_STOL_E.pdf"
+      ]
+    },
+    {
+      "id": "ga-avenger",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Avenger",
+      "aliases": [
+        "Avenger",
+        "MQ-20",
+        "MQ-20 Avenger",
+        "Predator C"
+      ],
+      "name": "General Atomics Avenger",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/predator-c-avenger",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Jet-powered aircraft family; extended-range variant has its own reference.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/predator-c-avenger"
+      ]
+    },
+    {
+      "id": "ga-avenger-er",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Avenger ER",
+      "aliases": [
+        "Avenger ER",
+        "Avenger Extended Range"
+      ],
+      "name": "General Atomics Avenger ER",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/predator-c-avenger",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Extended-range Avenger configuration.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {
+        "Wingspan": "76 ft",
+        "Length": "44 ft",
+        "Published endurance": "20 hours",
+        "Published altitude": "50,000 ft",
+        "Published speed": "400 KTAS"
+      },
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/predator-c-avenger",
+        "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2606_AVENGER_ER_E.pdf"
+      ]
+    },
+    {
+      "id": "ga-yfq42a",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "YFQ-42A Dark Merlin",
+      "aliases": [
+        "YFQ-42A Dark Merlin",
+        "YFQ-42A"
+      ],
+      "name": "General Atomics YFQ-42A Dark Merlin",
+      "category": "Development aircraft",
+      "url": "https://www.ga-asi.com/ga-asi-announces-yfq-42a-dark-merlin",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Collaborative combat aircraft prototype designation.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/ga-asi-announces-yfq-42a-dark-merlin"
+      ]
+    },
+    {
+      "id": "ga-fq42a",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "FQ-42A",
+      "aliases": [
+        "FQ-42A",
+        "FQ-42A Dark Merlin"
+      ],
+      "name": "General Atomics FQ-42A",
+      "category": "Remotely piloted aircraft",
+      "url": "https://www.ga-asi.com/us-air-force-awards-ga-asi-production-contract-for-fq-42a-cca",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Production designation announced in June 2026; no public decoder verified.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/us-air-force-awards-ga-asi-production-contract-for-fq-42a-cca"
+      ]
+    },
+    {
+      "id": "ga-xq67a",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "XQ-67A",
+      "aliases": [
+        "XQ-67A",
+        "XQ-67A OBSS"
+      ],
+      "name": "General Atomics XQ-67A",
+      "category": "Development aircraft",
+      "url": "https://www.ga.com/ga-asi-makes-first-flight-of-xq-67a-obss",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Off-Board Sensing Station demonstrator.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga.com/ga-asi-makes-first-flight-of-xq-67a-obss"
+      ]
+    },
+    {
+      "id": "ga-gambit-1",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Gambit 1",
+      "aliases": [
+        "Gambit 1"
+      ],
+      "name": "General Atomics Gambit 1",
+      "category": "Aircraft concept",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Long-endurance sensing concept.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+      ]
+    },
+    {
+      "id": "ga-gambit-2",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Gambit 2",
+      "aliases": [
+        "Gambit 2"
+      ],
+      "name": "General Atomics Gambit 2",
+      "category": "Aircraft concept",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Air-to-air collaboration concept.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+      ]
+    },
+    {
+      "id": "ga-gambit-3",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Gambit 3",
+      "aliases": [
+        "Gambit 3"
+      ],
+      "name": "General Atomics Gambit 3",
+      "category": "Aircraft concept",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Training concept.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+      ]
+    },
+    {
+      "id": "ga-gambit-4",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Gambit 4",
+      "aliases": [
+        "Gambit 4"
+      ],
+      "name": "General Atomics Gambit 4",
+      "category": "Aircraft concept",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Low-observable reconnaissance concept.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+      ]
+    },
+    {
+      "id": "ga-gambit-5",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Gambit 5",
+      "aliases": [
+        "Gambit 5"
+      ],
+      "name": "General Atomics Gambit 5",
+      "category": "Aircraft concept",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Carrier-operations concept.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+      ]
+    },
+    {
+      "id": "ga-gambit-6",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Gambit 6",
+      "aliases": [
+        "Gambit 6"
+      ],
+      "name": "General Atomics Gambit 6",
+      "category": "Aircraft concept",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Air-to-ground collaboration concept.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+      ]
+    },
+    {
+      "id": "ga-eaglet",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Eaglet",
+      "aliases": [
+        "Eaglet"
+      ],
+      "name": "General Atomics Eaglet",
+      "category": "Small / launched aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/small-uas-and-launched-effects",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Small aircraft launched from air or ground.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/small-uas-and-launched-effects"
+      ]
+    },
+    {
+      "id": "ga-pele",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "PELE",
+      "aliases": [
+        "PELE",
+        "Precision Exportable Launched Effect"
+      ],
+      "name": "General Atomics PELE",
+      "category": "Small / launched aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/small-uas-and-launched-effects",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Semi-autonomous multi-mission small aircraft.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/small-uas-and-launched-effects"
+      ]
+    },
+    {
+      "id": "ga-sparrowhawk",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "Sparrowhawk",
+      "aliases": [
+        "Sparrowhawk"
+      ],
+      "name": "General Atomics Sparrowhawk",
+      "category": "Small / launched aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/small-uas-and-launched-effects",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Recoverable small aircraft carried by a larger unmanned aircraft.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/small-uas-and-launched-effects"
+      ]
+    },
+    {
+      "id": "ga-longshot",
+      "catalog": "aircraft",
+      "manufacturer": "General Atomics",
+      "manufacturer_aliases": [
+        "General Atomics",
+        "General Atomics Aeronautical Systems",
+        "General Atomics Aeronautical Systems, Inc.",
+        "GA-ASI"
+      ],
+      "model": "X-68A LongShot",
+      "aliases": [
+        "X-68A LongShot",
+        "X-68A",
+        "LongShot"
+      ],
+      "name": "General Atomics X-68A LongShot",
+      "category": "Small / launched aircraft",
+      "url": "https://www.ga-asi.com/remotely-piloted-aircraft/small-uas-and-launched-effects",
+      "manufacturer_url": "https://www.ga-asi.com/",
+      "description": "Air-launched development aircraft.",
+      "connection": "Public radio protocol not documented in reviewed sources",
+      "reception": "Receive a supported position broadcast or public feed to plot an aircraft. No proprietary control-link or satellite decoder is provided.",
+      "specs": {},
+      "sources": [
+        "https://www.ga-asi.com/remotely-piloted-aircraft/small-uas-and-launched-effects"
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {aircraftReference,aircraftReferences} from './aircraft-references.mjs';
 import {isLiveRecord,isGhostRecord,isPoliceFlight,withinTimeWindow,recordTime} from './activity-state.mjs';
 import {policePortalFor} from './police-portals.mjs';
 import {companyWebsite,modelWebsite} from './company-links.mjs';
@@ -28,7 +29,7 @@ function matching(){const b=map.getBounds();return allRecords().filter(t=>
   (state.kind==='all'||t.domain===state.kind||t.kind===state.kind||state.kind==='robot-dog'&&t.kind==='possible-robot')&&
   (state.purpose==='all'||t.purpose===state.purpose)&&
   (!$('in-view').checked||[-360,0,360].some(o=>b.contains([t.latitude,t.longitude+o])))&&
-  (!state.search||[t.name,t.model,t.manufacturer,t.operator,t.place,t.registration,t.callsign,dronePlatform(t.manufacturer,t.model,t.kind)?.platform].filter(Boolean).join(' ').toLowerCase().includes(state.search))
+  (!state.search||[t.name,t.model,t.manufacturer,t.operator,t.reporting_platform,t.operator_type,t.place,t.registration,t.callsign,dronePlatform(t.manufacturer,t.model,t.kind)?.platform].filter(Boolean).join(' ').toLowerCase().includes(state.search))
 ).sort((a,b)=>Number(isPosition(b))-Number(isPosition(a))||recordTime(b)-recordTime(a)||a.name.localeCompare(b.name));}
 function resetFilters(){state.kind='all';state.layer='all';state.search='';state.purpose='all';state.limit=100;$('search').value='';$('purpose').value='all';$('in-view').checked=false;document.querySelectorAll('[data-kind],[data-layer]').forEach(b=>b.setAttribute('aria-pressed',(b.dataset.kind||b.dataset.layer)==='all'));render(true);}
 function render(force=false){
@@ -84,6 +85,10 @@ function selectRecord(id,move=true){const t=allRecords().find(x=>x.id===id);if(!
 function showDetail(t){
  $('detail').hidden=false;
  const fields=[['Type',names[t.kind]||t.kind],['Record',t.record_type==='signal'?'Unconfirmed signal / receiver area':isPosition(t)?(t.position_basis==='reported'?'Reported position':'Measured position'):t.record_type==='historical'?(t.status==='published-flight'?'Published flight area':'Historical area'):'Deployment area'],['Model',t.model||'Unknown',modelWebsite(t.model,t.manufacturer,t.kind)],['Manufacturer',t.manufacturer||'Unknown',companyWebsite(t.manufacturer)],['Operator',t.operator||'Unknown',companyWebsite(t.operator)],['Purpose',names[t.purpose]||t.purpose||'Unknown'],['Location precision',t.precision||'Not reported']];
+ if(t.reporting_platform)fields.push(['Reporting platform',t.reporting_platform]);
+ if(t.operator_type)fields.push(['Operator type',t.operator_type.replaceAll('-',' ')]);
+ const aircraft=aircraftReference(t.manufacturer,t.model,t.kind);
+ if(aircraft){fields.push(['Aircraft reference',aircraft.name,aircraft.url],['Published communications',aircraft.connection]);for(const [key,value] of Object.entries(aircraft.specs))fields.push([key,value]);fields.push(['Specification context',aircraftReferences.notice]);}
  const platform=dronePlatform(t.manufacturer,t.model,t.kind);
  if(platform)fields.push(['Compatible platform',platform.platform,platform.integration_url],['Integration status',dronePlatforms.notice]);
  if(t.status==='published-flight'){if(Number.isFinite(t.flight_started_at))fields.push(['Takeoff (your time)',date(t.flight_started_at)],['Landed (your time)',date(t.flight_ended_at)],['Time (UTC)',new Date(t.flight_started_at*1000).toISOString()]);fields.push([Number.isFinite(t.flight_started_at)?'Flight date (UTC)':'Flight date',t.event_date],['Mission category',t.flight_purpose],['Dataset published',t.publication_date||'Not reported']);if(Number.isFinite(t.reported_duration_minutes))fields.push(['Reported duration',`${t.reported_duration_minutes} minutes`]);}

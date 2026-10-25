@@ -7,7 +7,7 @@ const finite=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b;
 const uuid=v=>typeof v==='string'&&/^[a-f0-9]{8}-(?:[a-f0-9]{4}-){3}[a-f0-9]{12}$/i.test(v);
 const fields='ObjectId,flight_id,takeoff,landing,flight_purpose';
 export function layerRevision(meta){
- if(meta?.error||meta?.geometryType!=='esriGeometryPolyline'||meta.objectIdField!=='ObjectId'||meta.extent?.spatialReference?.wkid!==4326||meta.advancedQueryCapabilities?.supportsReturningGeometryEnvelope!==true)throw Error('Published flight schema changed');
+ if(meta?.error||meta?.geometryType!=='esriGeometryPolyline'||meta.objectIdField!=='ObjectId'||(meta.extent?.spatialReference??meta.spatialReference)?.wkid!==4326||meta.advancedQueryCapabilities?.supportsReturningGeometryEnvelope!==true)throw Error('Published flight schema changed');
  const types=new Map((meta.fields||[]).map(f=>[f.name,f.type]));
  for(const [key,type] of Object.entries({ObjectId:'esriFieldTypeOID',flight_id:'esriFieldTypeString',takeoff:'esriFieldTypeDate',landing:'esriFieldTypeDate',flight_purpose:'esriFieldTypeString'}))if(types.get(key)!==type)throw Error('Published flight fields changed');
  const revision=meta.editingInfo?.lastEditDate;
@@ -29,7 +29,7 @@ export function normalizeAgencyFlights(features,agency,now=Date.now()/1000){
   if(west===0&&east===0&&south===0&&north===0)continue;
   const start=p.takeoff/1000,end=p.landing/1000,day=new Date(p.takeoff).toISOString().slice(0,10);
   const purpose=typeof p.flight_purpose==='string'?p.flight_purpose.replace(/[\x00-\x1f]/g,' ').trim().slice(0,180):'';
-  const record={id:`police-flight:${agency.id}:${p.flight_id}`,record_type:'historical',status:'published-flight',kind:'drone',domain:'air',name:agency.agency+' flight · '+day,model:null,manufacturer:null,operator:agency.agency,purpose:'public-safety',latitude:Number(((south+north)/2).toFixed(4)),longitude:Number(((west+east)/2).toFixed(4)),flight_area:[south,west,north,east],place:agency.place,event_date:day,record_dates:day,flight_started_at:start,flight_ended_at:end,reported_duration_minutes:Math.round((end-start)/6)/10,flight_purpose:purpose||'Not reported',observed_at:null,live:false,precision:'Published flight envelope; generalized area, not aircraft GPS or incident address',source:'police-'+agency.id,source_url:agency.layer,evidence_url:agency.official,agency_portal:agency.portal,attribution:agency.agency+' / public flight transparency dashboard',verification:'Agency-published completed flight; publication timing controlled by the agency'};
+  const record={id:`police-flight:${agency.id}:${p.flight_id}`,record_type:'historical',status:'published-flight',kind:'drone',domain:'air',name:agency.agency+' flight · '+day,model:null,manufacturer:null,operator:agency.agency,purpose:agency.purpose||'public-safety',operator_type:agency.operator_type||'police',reporting_platform:agency.reporting_platform||'Skydio',latitude:Number(((south+north)/2).toFixed(4)),longitude:Number(((west+east)/2).toFixed(4)),flight_area:[south,west,north,east],place:agency.place,event_date:day,record_dates:day,flight_started_at:start,flight_ended_at:end,reported_duration_minutes:Math.round((end-start)/6)/10,flight_purpose:purpose||'Not reported',observed_at:null,live:false,precision:'Published flight envelope; generalized area, not aircraft GPS or incident address',source:'police-'+agency.id,source_url:agency.layer,evidence_url:agency.official,agency_portal:agency.portal,attribution:agency.agency+' / public flight transparency dashboard',verification:'Agency-published completed flight; publication timing controlled by the agency'};
   const prior=records.get(record.id);
   if(prior&&JSON.stringify(prior)!==JSON.stringify(record))conflicts.add(record.id);
   else records.set(record.id,record);
@@ -40,7 +40,7 @@ export async function fetchAgencyFlights(fetchJSON,agency,previous={},now=Date.n
  if(agency.format==='roselle-points')return fetchOperationPoints(fetchJSON,agency,previous,now);
  const before=layerRevision(await fetchJSON(agency.layer+'?f=json',262144));
  // Daily cache key also expires a rolling publication window without source edits.
- const revision=`${before}:${agency.window_days?Math.floor(now/86400):0}`;
+ const revision=`2:${before}:${agency.window_days?Math.floor(now/86400):0}`;
  if(previous.source_revision===revision&&Array.isArray(previous.records))return {records:previous.records,source_revision:revision,refresh_after:agency.refresh_seconds,coverage:previous.coverage};
  const cutoff=agency.window_days?new Date((now-agency.window_days*86400)*1000).toISOString().replace('T',' ').replace(/\.\d+Z$/,''):null;
  const where='landing IS NOT NULL'+(cutoff?` AND takeoff >= TIMESTAMP '${cutoff}'`:'');

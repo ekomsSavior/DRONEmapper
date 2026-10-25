@@ -16,7 +16,7 @@ UUID = re.compile(r'^[a-f0-9]{8}-(?:[a-f0-9]{4}-){3}[a-f0-9]{12}$', re.I)
 def layer_revision(meta):
     if (meta.get('error') or meta.get('geometryType') != 'esriGeometryPolyline'
         or meta.get('objectIdField') != 'ObjectId'
-        or meta.get('extent', {}).get('spatialReference', {}).get('wkid') != 4326
+        or ((meta.get('extent') or {}).get('spatialReference') or meta.get('spatialReference') or {}).get('wkid') != 4326
         or meta.get('advancedQueryCapabilities', {}).get('supportsReturningGeometryEnvelope') is not True):
         raise ValueError('Published flight schema changed')
     types = {f['name']: f['type'] for f in meta.get('fields', [])}
@@ -56,7 +56,7 @@ def normalize_agency_flights(features, agency, now=None):
         day=datetime.fromtimestamp(start/1000,timezone.utc).date().isoformat()
         purpose=p.get('flight_purpose')
         purpose=re.sub(r'[\x00-\x1f]',' ',purpose).strip()[:180] if isinstance(purpose,str) else ''
-        record=dict(id=f"police-flight:{agency['id']}:{fid}",record_type='historical',status='published-flight',kind='drone',domain='air',name=agency['agency']+' flight · '+day,model=None,manufacturer=None,operator=agency['agency'],purpose='public-safety',latitude=round((south+north)/2,4),longitude=round((west+east)/2,4),flight_area=[south,west,north,east],place=agency['place'],event_date=day,record_dates=day,flight_started_at=start/1000,flight_ended_at=end/1000,reported_duration_minutes=math.floor((end-start)/6000+.5)/10,flight_purpose=purpose or 'Not reported',observed_at=None,live=False,precision='Published flight envelope; generalized area, not aircraft GPS or incident address',source='police-'+agency['id'],source_url=agency['layer'],evidence_url=agency['official'],agency_portal=agency['portal'],attribution=agency['agency']+' / public flight transparency dashboard',verification='Agency-published completed flight; publication timing controlled by the agency')
+        record=dict(id=f"police-flight:{agency['id']}:{fid}",record_type='historical',status='published-flight',kind='drone',domain='air',name=agency['agency']+' flight · '+day,model=None,manufacturer=None,operator=agency['agency'],purpose=agency.get('purpose','public-safety'),operator_type=agency.get('operator_type','police'),reporting_platform=agency.get('reporting_platform','Skydio'),latitude=round((south+north)/2,4),longitude=round((west+east)/2,4),flight_area=[south,west,north,east],place=agency['place'],event_date=day,record_dates=day,flight_started_at=start/1000,flight_ended_at=end/1000,reported_duration_minutes=math.floor((end-start)/6000+.5)/10,flight_purpose=purpose or 'Not reported',observed_at=None,live=False,precision='Published flight envelope; generalized area, not aircraft GPS or incident address',source='police-'+agency['id'],source_url=agency['layer'],evidence_url=agency['official'],agency_portal=agency['portal'],attribution=agency['agency']+' / public flight transparency dashboard',verification='Agency-published completed flight; publication timing controlled by the agency')
         if record['id'] in records and records[record['id']] != record:
             conflicts.add(record['id'])
         else:
@@ -69,7 +69,7 @@ def fetch_agency_flights(agency, previous=None, fetch=fetch_json, now=None):
     now=time.time() if now is None else now
     previous=previous or {}
     before=layer_revision(fetch(agency['layer']+'?f=json',262144))
-    revision=f"{before}:{math.floor(now/86400) if agency.get('window_days') else 0}"
+    revision=f"2:{before}:{math.floor(now/86400) if agency.get('window_days') else 0}"
     if previous.get('source_revision')==revision and isinstance(previous.get('records'),list):
         return dict(records=previous['records'],source_revision=revision,refresh_after=agency['refresh_seconds'],coverage=previous.get('coverage'))
     where='landing IS NOT NULL'

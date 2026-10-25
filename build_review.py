@@ -48,7 +48,7 @@ def build_node_archive(directory=None, family='Desktop'):
     with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in source_files():
             relative = path.relative_to(ROOT)
-            if relative.parts[0] == 'linux-node' or str(relative) in {'docs/desktop-node-setup.md', 'docs/linux-node-setup.md', 'docs/sdr-discovery-research.md', 'docs/sdr-decoders.md', 'docs/serial-receivers.md', 'docs/robot-signals.md', 'docs/community-enrichment.md', 'docs/security-device-discovery.md', 'docs/carbyne-discovery.md', 'docs/axon-air-fusus.md'}:
+            if relative.parts[0] == 'linux-node' or str(relative) in {'docs/desktop-node-setup.md', 'docs/linux-node-setup.md', 'docs/sdr-discovery-research.md', 'docs/sdr-decoders.md', 'docs/serial-receivers.md', 'docs/robot-signals.md', 'docs/community-enrichment.md', 'docs/security-device-discovery.md', 'docs/carbyne-discovery.md', 'docs/axon-air-fusus.md', 'docs/aircraft-references.md'}:
                 archive.write(path, name + '/' + str(relative))
         archive.writestr(name + '/START-HERE.txt',
             f'DRONEmapper Desktop {version} — Church of Malware / saviorSEC\n\n'
