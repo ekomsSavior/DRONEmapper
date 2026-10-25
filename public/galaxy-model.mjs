@@ -14,5 +14,6 @@ export function buildGalaxy(catalog=cloudSurfaces){
  }
  if(nodes.some(n=>n.id==='skydio')&&nodes.some(n=>n.id==='fusus'))edges.push({from:'skydio',to:'fusus',label:'Video, telemetry and flight-state integration',source:catalog.services.find(s=>s.id==='fusus').source,service:catalog.services.find(s=>s.id==='fusus')});
  for(const [from,to,label] of [['skydio','axon-air','Skydio cloud streaming into Axon Respond'],['flytbase','dronedeploy','Listed Flinks data-platform integration']]){const s=catalog.services.find(s=>s.id===from),target=catalog.services.find(s=>s.id===to);if(s&&target)edges.push({from,to,label,source:from==='skydio'?target.source:s.source,service:from==='skydio'?target:s});}
+ for(const c of catalog.connections||[]){const a=nodes.find(n=>n.id===c.from_id),b=nodes.find(n=>n.id===c.to_id);if(a&&b)edges.push({from:a.id,to:b.id,label:c.label,source:c.source,service:b.service});}
  return {nodes,edges};
 }

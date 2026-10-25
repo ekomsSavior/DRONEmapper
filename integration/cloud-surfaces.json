@@ -434,6 +434,163 @@
       "evidence": "Published documentation",
       "connector": "Reference only \u2014 no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25"
+    },
+    {
+      "id": "brinc",
+      "vendor": "BRINC",
+      "name": "BRINC LiveOps",
+      "category": "Drones",
+      "path": [
+        "BRINC fleet / LEMUR 2",
+        "LiveOps",
+        "CAD / RTCC / evidence systems"
+      ],
+      "protocols": [
+        "Browser operations platform",
+        "Integration transport not specified here"
+      ],
+      "data": "Fleet video, dispatch context and LEMUR 2 LiDAR maps.",
+      "source": "https://brincdrones.com/liveops/",
+      "gap": "Integration availability depends on customer configuration; nearby radio reception does not expose LiveOps.",
+      "related": [
+        {
+          "name": "Guardian / Fusus integration",
+          "url": "https://brincdrones.com/guardian/"
+        }
+      ],
+      "hosting": "Deployment dependent",
+      "access": "Customer-authorized integration; no public fleet access established.",
+      "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
+      "evidence": "Published documentation",
+      "connector": "Research reference \u2014 no live connector enabled",
+      "reviewed_on": "2026-10-25"
+    },
+    {
+      "id": "airdata",
+      "vendor": "AirData UAV",
+      "name": "AirData flight records",
+      "category": "Drones",
+      "path": [
+        "Operator flight logs",
+        "AirData",
+        "Authorized API client"
+      ],
+      "protocols": [
+        "HTTPS API"
+      ],
+      "data": "Flight records and flight groups from the authorized account.",
+      "source": "https://app.airdata.com/docs/api/",
+      "gap": "Uploaded flight logs are historical records, not necessarily a current stream.",
+      "related": [
+        {
+          "name": "BRINC integration setup",
+          "url": "https://app.airdata.com/wiki/Help/BRINC"
+        }
+      ],
+      "hosting": "Deployment dependent",
+      "access": "Customer-authorized integration; no public fleet access established.",
+      "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
+      "evidence": "Published documentation",
+      "connector": "Research reference \u2014 no live connector enabled",
+      "reviewed_on": "2026-10-25"
+    },
+    {
+      "id": "anybotics",
+      "vendor": "ANYbotics",
+      "name": "ANYbotics Shift",
+      "category": "Robot dogs",
+      "path": [
+        "ANYmal fleet",
+        "Shift Maps / Fleet / Insight / Connect",
+        "Maintenance / asset management systems"
+      ],
+      "protocols": [
+        "REST API",
+        "Webhook notifications"
+      ],
+      "data": "Robot health, mission monitoring, inspection findings and environment synchronization.",
+      "source": "https://www.anybotics.com/solutions/shift/",
+      "gap": "Published October 2026 release information; individual deployments may run older versions. Indoor positions require site coordinates.",
+      "related": [
+        {
+          "name": "Shift release and rename",
+          "url": "https://www.anybotics.com/news/anybotics-shift-launch/"
+        }
+      ],
+      "hosting": "Deployment dependent",
+      "access": "Customer-authorized integration; no public fleet access established.",
+      "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
+      "evidence": "Published documentation",
+      "connector": "Research reference \u2014 no live connector enabled",
+      "reviewed_on": "2026-10-25"
+    },
+    {
+      "id": "locus",
+      "vendor": "Locus Robotics",
+      "name": "LocusONE / LocusHub",
+      "category": "Autonomous ground vehicles",
+      "path": [
+        "Origin / Vector / Array robots",
+        "LocusONE",
+        "WMS / ERP / LocusHub"
+      ],
+      "protocols": [
+        "Enterprise APIs; protocol unspecified"
+      ],
+      "data": "Fleet orchestration and warehouse operational analytics.",
+      "source": "https://locusrobotics.com/platform/locusone/",
+      "gap": "No public robot-position feed or public API authentication specification verified.",
+      "related": [],
+      "hosting": "Deployment dependent",
+      "access": "Customer-authorized integration; no public fleet access established.",
+      "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
+      "evidence": "Published documentation",
+      "connector": "Research reference \u2014 no live connector enabled",
+      "reviewed_on": "2026-10-25"
+    },
+    {
+      "id": "percepto",
+      "vendor": "Percepto",
+      "name": "Percepto AIM / Spot integration (2021)",
+      "category": "Robot dogs",
+      "path": [
+        "Boston Dynamics Spot / Percepto Base",
+        "Percepto AIM",
+        "Inspection workflow"
+      ],
+      "protocols": [
+        "Published integration; protocol unspecified"
+      ],
+      "data": "Documented autonomous inspection and charging integration for Spot.",
+      "source": "https://percepto.co/wp-content/uploads/2021/05/Spot-and-Base-.pdf",
+      "gap": "Historical manufacturer publication from 2021. Current product availability and compatibility need revalidation; this does not establish an Orbit-to-AIM integration.",
+      "related": [],
+      "hosting": "Deployment dependent",
+      "access": "Customer-authorized integration; no public fleet access established.",
+      "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
+      "evidence": "Published documentation",
+      "connector": "Research reference \u2014 no live connector enabled",
+      "reviewed_on": "2026-10-25"
+    }
+  ],
+  "connections": [
+    {
+      "from_id": "brinc",
+      "to_id": "fusus:path:2",
+      "label": "Published BRINC video integration with Fusus",
+      "source": "https://brincdrones.com/guardian/"
+    },
+    {
+      "from_id": "brinc",
+      "to_id": "airdata",
+      "label": "Operator-configured flight-log integration",
+      "source": "https://app.airdata.com/wiki/Help/BRINC"
+    },
+    {
+      "from_id": "vendor:Boston Dynamics",
+      "to_id": "percepto",
+      "label": "Spot hardware integration \u00b7 published 2021",
+      "source": "https://percepto.co/wp-content/uploads/2021/05/Spot-and-Base-.pdf"
     }
   ]
 }
