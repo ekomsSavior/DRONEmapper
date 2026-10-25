@@ -434,54 +434,6 @@ export const cloudSurfaces = {
       "evidence": "Published documentation",
       "connector": "Reference only \u2014 no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25"
-    },
-    {
-      "id": "anybotics",
-      "vendor": "ANYbotics",
-      "name": "ANYmal API / Workforce",
-      "category": "Robot dogs",
-      "path": [
-        "ANYmal / ANYmal X",
-        "ANYmal API / Workforce",
-        "Asset management / digital twin"
-      ],
-      "data": "Fleet and mission integration with transfer of inspection data.",
-      "source": "https://www.anybotics.com/resources/whitepapers-and-ebooks/api-whitepaper/",
-      "protocols": [
-        "Published API integration; transport not established here"
-      ],
-      "access": "Customer deployment and its authorized integrations.",
-      "gap": "No public live location feed verified. Indoor coordinates require a verified geographic reference.",
-      "hosting": "Deployment dependent",
-      "useful": "Operators can evaluate timestamped exports from their own deployment; a dedicated importer is required.",
-      "related": [],
-      "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
-      "reviewed_on": "2026-10-25"
-    },
-    {
-      "id": "locus",
-      "vendor": "Locus Robotics",
-      "name": "LocusONE / LocusHub",
-      "category": "Autonomous ground vehicles",
-      "path": [
-        "Origin / Vector / Array robots",
-        "LocusONE",
-        "Warehouse systems / LocusHub"
-      ],
-      "data": "Mixed-fleet orchestration, operational analytics and warehouse-system integration.",
-      "source": "https://locusrobotics.com/platform/locusone/",
-      "protocols": [
-        "Published API integration; transport not established here"
-      ],
-      "access": "Customer deployment and its authorized integrations.",
-      "gap": "No public live location feed verified. Indoor coordinates require a verified geographic reference.",
-      "hosting": "Deployment dependent",
-      "useful": "Operators can evaluate timestamped exports from their own deployment; a dedicated importer is required.",
-      "related": [],
-      "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
-      "reviewed_on": "2026-10-25"
     }
   ]
 };
