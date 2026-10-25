@@ -5,10 +5,11 @@ const $=id=>document.getElementById(id),svg=$('universe'),space=$('space'),NS='h
 const el=(tag,text)=>{const e=document.createElement(tag);e.textContent=text;return e;};
 const se=(tag,attrs)=>{const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);return e;};
 const link=(name,url)=>{const a=el('a',name);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;};
-let selected=null,view=[-50,-220,2300,2070],drag=null,moved=false;
+const home=[-50,-220,2300,Math.max(...nodes.map(n=>n.y))+500];
+let selected=null,view=[...home],drag=null,moved=false;
 function applyView(){svg.setAttribute('viewBox',view.join(' '));}
 function zoom(f,cx=view[0]+view[2]/2,cy=view[1]+view[3]/2){const w=Math.min(4400,Math.max(240,view[2]*f)),h=w*view[3]/view[2],ratio=w/view[2];view=[cx-(cx-view[0])*ratio,cy-(cy-view[1])*ratio,w,h];applyView();}
-$('zoom-in').onclick=()=>zoom(.75);$('zoom-out').onclick=()=>zoom(1.33);$('reset').onclick=()=>{view=[-50,-220,2300,2070];applyView();};
+$('zoom-in').onclick=()=>zoom(.75);$('zoom-out').onclick=()=>zoom(1.33);$('reset').onclick=()=>{view=[...home];applyView();};
 function point(e){return new DOMPoint(e.clientX,e.clientY).matrixTransform(svg.getScreenCTM().inverse());}
 svg.addEventListener('wheel',e=>{e.preventDefault();const p=point(e);zoom(e.deltaY>0?1.12:.89,p.x,p.y);},{passive:false});
 svg.addEventListener('pointerdown',e=>{if(e.button!==0)return;drag={x:e.clientX,y:e.clientY,view:[...view],matrix:svg.getScreenCTM().inverse()};moved=false;});
