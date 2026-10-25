@@ -7,6 +7,7 @@ import csv
 import math
 import re
 import struct
+from .security_devices import vendor_hint
 
 AIRFRAMES = ['Unknown airframe', 'Aeroplane', 'Helicopter / multirotor', 'Gyroplane',
              'Hybrid lift', 'Ornithopter', 'Glider', 'Kite', 'Free balloon',
@@ -112,14 +113,14 @@ def radiotap(packet):
 
 
 def wifi_frame(frame):
-    """Strict beacon and NAN publish parsing; unrelated traffic is dropped."""
-    if len(frame) < 24 or frame[1] & 0x44 or frame[22] & 15 or frame[0] not in (0x80, 0xd0):
+    """Parse Remote ID beacons/NAN and beacon/probe-response hints; drop unrelated traffic."""
+    if len(frame) < 24 or frame[1] & 0x44 or frame[22] & 15 or frame[0] not in (0x50, 0x80, 0xd0):
         return []
     sender = ':'.join(f'{b:02X}' for b in frame[10:16])
     if frame[10] & 1 or not any(frame[10:16]):
         return []
     results = []
-    if frame[0] == 0x80:
+    if frame[0] in (0x50, 0x80):
         if len(frame) < 36:
             return []
         p, name = 36, None
@@ -136,10 +137,13 @@ def wifi_frame(frame):
                 if size > 32 or name is not None:
                     return []
                 name = value.decode('utf-8', errors='replace')
-            if kind == 221 and len(value) >= 30 and value[:4] == b'\xfa\x0b\xbc\x0d':
+            if frame[0] == 0x80 and kind == 221 and len(value) >= 30 and value[:4] == b'\xfa\x0b\xbc\x0d':
                 results.append({'mac': sender, 'protocol': 'wifi-beacon', 'payload': value[5:]})
         if name and camera_signature(name):
             results.append({'mac': sender, 'name': name, 'signature': camera_signature(name)})
+        elif name is not None and vendor_hint(sender):
+            results.append({'mac': sender, 'name': name, 'vendor_only': True,
+                            'protocol': 'wifi-beacon' if frame[0] == 0x80 else 'wifi-probe-response'})
     elif frame[4:10] == b'\x51\x6f\x9a\x01\0\0' and frame[24:30] == b'\x04\x09\x50\x6f\x9a\x13':
         p = 30
         while p < len(frame):
@@ -160,11 +164,12 @@ def wifi_frame(frame):
 
 class PcapStream:
     """Bounded incremental classic-pcap reader for dumpcap -P -w -. No packet files."""
-    def __init__(self):
+    def __init__(self, linktypes=(105, 127)):
         self.buffer = bytearray()
         self.endian = None
         self.linktype = None
         self.scale = 1e6
+        self.allowed_linktypes = tuple(linktypes)
 
     def feed(self, data):
         self.buffer.extend(data)
@@ -180,8 +185,8 @@ class PcapStream:
             self.endian, self.scale = types[bytes(self.buffer[:4])]
             version = struct.unpack_from(self.endian+'HH', self.buffer, 4)
             self.linktype = struct.unpack_from(self.endian+'I', self.buffer, 20)[0]
-            if version != (2,4) or self.linktype not in (105,127):
-                raise ValueError('Capture must contain raw 802.11 or radiotap; configure a monitor interface')
+            if version != (2,4) or self.linktype not in self.allowed_linktypes:
+                raise ValueError('Capture link type does not match receiver; Wi-Fi requires a monitor interface and LAN requires Ethernet')
             del self.buffer[:24]
         result = []
         while len(self.buffer) >= 16:

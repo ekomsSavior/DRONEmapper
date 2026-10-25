@@ -12,6 +12,8 @@ import uuid
 from .account import Connection, Uploader
 from .protocol import AIRFRAMES, bearing_distance, finite, messages, MAC
 from . import radios, serial_receiver, __version__
+from . import network_receiver
+from .security_devices import vendor_hint, REFERENCES
 
 
 class Catalog:
@@ -26,9 +28,11 @@ class Catalog:
                     self.oui[prefix.upper()]=name
 
     def vendor(self,mac):
+        if not isinstance(mac,str) or not MAC.fullmatch(mac):
+            return 'Unknown radio vendor'
         raw=mac.replace(':','').upper()
-        if int(raw[:2],16)&2:
-            return 'Locally administered address · vendor unknown'
+        if int(raw[:2],16)&3:
+            return 'Locally administered or multicast address · vendor unknown'
         for length in (9,7,6):
             if raw[:length] in self.oui:
                 return self.oui[raw[:length]]
@@ -65,10 +69,12 @@ class Engine:
         self.threads=[]
         self.running=False
         self.contacts={}
+        self.network_devices={}
         self.states={}
         self.spectrum={}
         self.last_queued={}
         self.frame_count=0
+        self.network_frame_count=0
         self.message_count=0
         self.decoded_count=0
         self.account_status=''
@@ -96,6 +102,8 @@ class Engine:
                 raise ValueError('Receivers are still stopping; retry shortly')
             config=self.store.settings()
             receivers=[('Wi-Fi '+x,radios.wifi,(x,)) for x in config['wifi_interfaces']]
+            if config['lan_interface']:
+                receivers.append(('Local network',network_receiver.receive,(config['lan_interface'],)))
             if config['ble_adapter']:
                 receivers.append(('Bluetooth',radios.ble,(config['ble_adapter'],)))
             if config['sdr']!='off':
@@ -133,7 +141,7 @@ class Engine:
         with self.control:
             # Radio configuration changes require a stopped receiver; consent can change live.
             old=self.store.settings()
-            radio_keys={'wifi_interfaces','ble_adapter','sdr','sdr_band','sdr_mode','dji_frequency','readsb_file','mqtt_file','serial_port','serial_baud','serial_format'}
+            radio_keys={'wifi_interfaces','lan_interface','ble_adapter','sdr','sdr_band','sdr_mode','dji_frequency','readsb_file','mqtt_file','serial_port','serial_baud','serial_format'}
             if self.running and any(values.get(k,old[k])!=old[k] for k in radio_keys):
                 raise ValueError('Stop listening before changing receivers')
             self.store.update({**old,**values})
@@ -149,7 +157,7 @@ class Engine:
             was_running=self.running
             self.stop()
             self.configure(config)
-            has_receiver=any(config[k] for k in ('wifi_interfaces','ble_adapter','readsb_file','mqtt_file','serial_port')) or config['sdr']!='off'
+            has_receiver=any(config[k] for k in ('wifi_interfaces','lan_interface','ble_adapter','readsb_file','mqtt_file','serial_port')) or config['sdr']!='off'
             if has_receiver and (was_running or config['serial_port']):
                 self.start()
 
@@ -172,6 +180,9 @@ class Engine:
             if kind=='frame':
                 self.frame_count+=1
                 return
+            if kind=='network-frame':
+                self.network_frame_count+=1
+                return
             if kind=='spectrum':
                 for item in event['bins']:
                     self.spectrum[round(item['frequency_mhz'],6)]={**item,'seen':now}
@@ -181,6 +192,26 @@ class Engine:
             if not finite(received,now-120,now+5):
                 return
             source=event['source']
+            if kind=='vendor':
+                hint=vendor_hint(event.get('mac'))
+                protocol=event.get('protocol')
+                if not hint or protocol not in ('ethernet-arp','wifi-beacon','wifi-probe-response'):
+                    return
+                key=source+'|'+event['mac'].upper()+'|vendor'
+                entry={'key':key,'source':source,'mac':event['mac'].upper(),**hint,
+                    'seen':received,'kind':'hardware-vendor','protocol':protocol,
+                    'name':hint['vendor_name']+' device · model unknown','local_only':True}
+                if protocol!='ethernet-arp':
+                    if finite(event.get('rssi_dbm'),-127,20): entry['rssi_dbm']=event['rssi_dbm']
+                    if finite(event.get('frequency_mhz'),2400,7125): entry['frequency_mhz']=event['frequency_mhz']
+                    entry['ssid']=str(event.get('name',''))[:32]
+                collection=self.network_devices if protocol=='ethernet-arp' else self.contacts
+                if received<=collection.get(key,{}).get('seen',0): return
+                collection[key]=entry
+                fresh={k:v for k,v in sorted(collection.items(),key=lambda p:p[1]['seen'],reverse=True)[:200] if now-v['seen']<=120}
+                if protocol=='ethernet-arp': self.network_devices=fresh
+                else: self.contacts=fresh
+                return
             if kind=='receiver-rid':
                 key=source+'|marauder|'+event['display_id']
                 self.contacts[key]={**event,'key':key,'seen':received,'kind':'drone',
@@ -206,7 +237,8 @@ class Engine:
             mac=event.get('mac')
             receiver_id=event.get('receiver_id')
             if isinstance(mac,str) and MAC.fullmatch(mac):
-                identity={'mac':mac,'radio_vendor':self.catalog.vendor(mac)}
+                bluetooth=kind=='robot-candidate' or str(event.get('protocol','')).startswith('ble')
+                identity={'mac':mac,'radio_vendor':'Bluetooth address type unverified · vendor unknown' if bluetooth else self.catalog.vendor(mac)}
                 address=mac
             elif kind in ('rid','robot-candidate') and isinstance(receiver_id,str):
                 try: address=str(uuid.UUID(receiver_id))
@@ -279,6 +311,8 @@ class Engine:
         self.last_queued[key]=(received,stamp)
 
     def _queue(self,key,entry,received):
+        if entry.get('kind')=='hardware-vendor':
+            return
         robot=entry['kind']=='possible-robot'
         candidate=robot or entry['kind']=='possible-drone'
         stamp=received if candidate else entry.get('observed_at')
@@ -326,6 +360,8 @@ class Engine:
                 baseline=statistics.median(v['power_db'] for v in spectrum)
                 spectrum=[{**v,'above_median_db':round(v['power_db']-baseline,2)} for v in spectrum]
             return {'version':__version__,'running':self.running,'settings':settings,'contacts':contacts,
+                'network_devices':[dict(v) for v in self.network_devices.values() if now-v['seen']<=120],
+                'network_frames':self.network_frame_count,'device_references':REFERENCES,
                 'spectrum':spectrum,'radios':dict(self.states),'wifi_frames':self.frame_count,'rid_messages':self.message_count,'decoded_messages':self.decoded_count,
                 'counts':self.store.counts(),'upload_status':self.uploader.status if self.running else 'Scanner stopped',
                 'connected':self.store.connected(),'display_name':self.store.config.get('display_name',''),

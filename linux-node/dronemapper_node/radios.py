@@ -20,7 +20,7 @@ from .storage import BANDS
 from .platform_support import system, tool_path, is_link, valid_interface
 from .processes import process_bytes
 
-WIFI_FILTER='wlan[0] == 0x80 or wlan[0] == 0xd0'
+WIFI_FILTER='wlan[0] == 0x80 or wlan[0] == 0x50 or wlan[0] == 0xd0'
 
 
 def installed_path(tool):
@@ -52,7 +52,8 @@ def doctor():
         except (OSError, subprocess.SubprocessError):
             pass
     from .serial_receiver import ports
-    return {'serial_ports':ports(), 'pyserial':importlib.util.find_spec('serial') is not None, 'platform':system(),'wifi':interfaces,'bluetooth':([p.name for p in Path('/sys/class/bluetooth').glob('hci*')] if system() == 'Linux' else ['default']),
+    from .network_receiver import interfaces as lan_interfaces
+    return {'lan_interfaces':lan_interfaces(), 'serial_ports':ports(), 'pyserial':importlib.util.find_spec('serial') is not None, 'platform':system(),'wifi':interfaces,'bluetooth':([p.name for p in Path('/sys/class/bluetooth').glob('hci*')] if system() == 'Linux' else ['default']),
             'tools':{tool:bool(tool_path(tool)) for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb')},
             'tool_access':{tool:'Installed but execution is unavailable; check user/group access'
                            for tool in ('iw','dumpcap','hackrf_sweep','hackrf_transfer','rtl_power','readsb') if installed_path(tool) and not tool_path(tool)},
@@ -94,7 +95,7 @@ def wifi(interface,stop,emit,status):
             frame,meta=decoded
             emit({'type':'frame','source':'wifi:'+interface})
             for item in wifi_frame(frame):
-                emit({**item,**meta,'type':'candidate' if 'signature' in item else 'rid','source':'wifi:'+interface,'received_at':stamp})
+                emit({**item,**meta,'type':'vendor' if item.get('vendor_only') else 'candidate' if 'signature' in item else 'rid','source':'wifi:'+interface,'received_at':stamp})
 
 
 def ble_identity(address):

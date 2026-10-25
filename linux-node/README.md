@@ -4,7 +4,7 @@ Turn a Windows, macOS or Linux computer into a scanner node with a local radar, 
 
 ## Start
 
-[Download Desktop 0.5.0 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.6.0 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
 
 **Windows:** install [Python 3.10+](https://www.python.org/downloads/windows/), extract the source, then double-click `Start-DRONEmapper.cmd` in this folder.
 
@@ -37,6 +37,7 @@ To contribute, click **Connect to DRONEmapper**, approve the matching code in yo
 - **SDR:** HackRF/RTL-SDR spectrum or live ADS-B decoding with readsb. Ordinary aircraft stay local; broadcasts reporting UAS category have a separate sharing choice.
 - **DJI DroneID:** automatic HackRF capture/decode cycles on a selected channel, plus separate recording review. Live DJI reception still needs a supported-aircraft test; manually reviewed recordings are never uploaded.
 - **USB serial:** connect a Marauder ESP32/CYD or a receiver producing our raw Remote ID JSON. Choose the port and format, then **Connect receiver**. [Setup and channel hopping](../docs/serial-receivers.md).
+- **Local network discovery:** optional passive ARP sender matching for reviewed Verkada allocations. Choose a LAN interface; observations stay local, separate from the radar and map. [Setup and hardware references](../docs/security-device-discovery.md).
 - **MQTT:** optional authorized receiver feed using the documented Remote ID envelope.
 
 Wi-Fi, Bluetooth, one SDR and USB serial run together. On Linux, if BlueZ reports that experimental

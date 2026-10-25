@@ -1,6 +1,6 @@
 # DRONEmapper Desktop — Windows, macOS and Linux
 
-Version 0.5.0 · **Church of Malware / saviorSEC**
+Version 0.6.0 · **Church of Malware / saviorSEC**
 
 The same local dashboard, radar, detection list, account pairing and optional
 map uploads run on Windows, macOS and Linux. No account password goes into the
@@ -120,3 +120,7 @@ HackRF testing is separate and does not establish desktop compatibility.
 
 Project and data credits, including the **OUI Master Database**, remain in the
 [node README](../linux-node/README.md).
+
+## Local network discovery
+
+Desktop 0.6.0 adds optional passive ARP sender recognition for reviewed Verkada MAC allocations. Choose a LAN interface under Radio settings, save, then start listening. Wireshark/dumpcap capture access is required. This receiver leaves interface mode unchanged, shows matching observations in a separate local list and never uploads them. No physical CM42 reception has been verified. [Full setup, research and limits](security-device-discovery.md).

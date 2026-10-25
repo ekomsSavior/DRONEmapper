@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-25",
+  "vendors": [
+    {
+      "id": "verkada",
+      "name": "Verkada",
+      "url": "https://www.verkada.com/",
+      "prefixes": ["E0A700"],
+      "evidence": "IEEE allocation registrant Verkada Inc in the bundled OUI catalog; prefix identifies a registrant, not a product or owner.",
+      "source": "https://github.com/Ringmast4r/OUI-Master-Database/tree/b8826bb53e949822f702e63865e582955cdc3505"
+    }
+  ],
+  "models": [
+    {
+      "vendor": "verkada",
+      "model": "CM42",
+      "aliases": ["CM42-256-HW"],
+      "name": "CM42 Mini Dome Camera",
+      "category": "Fixed security camera",
+      "connection": "Ethernet / PoE",
+      "url": "https://www.verkada.com/security-cameras/mini/cm42/",
+      "source": "https://docs.verkada.com/docs/video-security-cm42-datasheet.pdf",
+      "description": "5 MP indoor camera. Documented connectivity is RJ-45 Ethernet with PoE. No Wi-Fi or Bluetooth detection signature is established for this model. An observed Verkada MAC does not identify a CM42."
+    },
+    {
+      "vendor": "verkada",
+      "model": "GW31-E",
+      "aliases": [],
+      "name": "GW31-E Outdoor Wi-Fi Gateway",
+      "category": "Network gateway",
+      "connection": "Wi-Fi uplink / Ethernet PoE; Bluetooth setup",
+      "url": "https://help.verkada.com/connectivity/configuration/add-wi-fi-gateway-to-command",
+      "source": "https://help.verkada.com/connectivity/configuration/add-wi-fi-gateway-to-command/wi-fi-gateway-status-leds",
+      "description": "A separate gateway can connect wired cameras through Wi-Fi. The manufacturer documents Bluetooth during setup, but a validated advertisement signature is not yet available here. Seeing a gateway does not establish the number, model or position of attached cameras."
+    }
+  ]
+}

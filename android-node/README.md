@@ -84,7 +84,7 @@ protocol decoders. [Setup and hardware test steps](../docs/android-hackrf.md).
 Download the latest APK from [Android nodes](https://dronemapper.churchofmalware.org/nodes.html)
 and install it over the existing app; do not uninstall first. Official releases
 use the same signing key to preserve your pairing and settings. Check **Phone
-capabilities** for version **0.8.1**. Updates are manual for now.
+capabilities** for version **0.8.2**. Updates are manual for now.
 
 Start listening again, reconnect your USB adapter, and enable your preferred
 **Sharing choices** if you want reports on the map. For a test report, connect
@@ -93,3 +93,5 @@ the adapter and use **Phone capabilities → Copy report**.
 ## Robot signals
 
 A supported CyberDog Bluetooth advertisement appears in the list and Signals radar as a **possible robot dog**. Enable **Sharing choices → Share approximate robot signal areas** separately to contribute a rounded receiver area. Saved wardrives include positioned robot reports in DRONEmapper JSON; WiGLE CSV remains Wi-Fi-only. [Protocol and test status](../docs/robot-signals.md).
+
+**0.8.2:** Device reference adds CM42/GW31-E hardware facts and links. Observed Verkada Wi-Fi allocations appear as local vendor hints, model unknown; they are not uploaded or saved in wardrives. USB Wi-Fi now also checks probe responses for supported camera-link names. [Details and reception limits](../docs/security-device-discovery.md).

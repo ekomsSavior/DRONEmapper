@@ -18,7 +18,7 @@ Android 8 or newer. No root or Bluetooth dongle needed.
 
 Sharing is optional. Choose a display name or remain **Anonymous**; email and full MAC addresses stay off the public map. [More app instructions and build steps](android-node/README.md).
 
-**Updating to 0.8.1:** download the new APK from the same page and install it over
+**Updating to 0.8.2:** download the new APK from the same page and install it over
 your existing app—no uninstall. Pairing and settings are preserved. In **Phone
 capabilities**, check the version. USB Wi-Fi: **USB Wi-Fi adapter → Connect → Allow**.
 HackRF: **USB SDR · HackRF → Choose receiver → Connect → Allow** for local RF spectrum.
@@ -27,7 +27,7 @@ Updates are manual; re-enable your preferred **Sharing choices** after starting.
 ## Desktop scanner node
 
 Windows, macOS and Linux computers can run the [standalone node and radar](linux-node/README.md).
-[Download Desktop 0.5.0 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.6.0 and follow your system's setup](https://dronemapper.churchofmalware.org/desktop).
 Pair with your account and choose which detections to share. Wi-Fi, Bluetooth, one SDR and an external USB serial receiver can run together.
 [ESP32 / Marauder receivers and optional Linux channel hopping](docs/serial-receivers.md).
 
@@ -86,5 +86,7 @@ Website: **[AGPL-3.0-or-later](LICENSE)**. Android app: **[GPL-2.0-only](android
 Model recognition now covers 141 reviewed FAA aircraft/module combinations. Historical map enrichment adds 40 dated operational milestones. [Review notes](https://github.com/ekomsSavior/DRONEmapper/blob/main/docs/research-enrichment.md).
 
 [Vehicle data, recurring feeds and HackRF connection notes](docs/source-reception-review.md).
+
+[Local security-device discovery and hardware references](docs/security-device-discovery.md).
 
 [Robot signal support and sharing](docs/robot-signals.md) · [Latest research review](docs/community-enrichment.md).

@@ -60,7 +60,7 @@ def ie(kind,value):
 
 class ProtocolTests(unittest.TestCase):
     @unittest.skipUnless(ctypes.util.find_library('pcap'),'libpcap not installed')
-    def test_capture_filter_compiles_and_admits_only_beacons_actions(self):
+    def test_capture_filter_compiles_and_admits_beacons_probe_responses_actions(self):
         lib=ctypes.CDLL(ctypes.util.find_library('pcap'))
         class Program(ctypes.Structure):
             _fields_=[('length',ctypes.c_uint),('insns',ctypes.c_void_p)]
@@ -74,7 +74,7 @@ class ProtocolTests(unittest.TestCase):
             capture=lib.pcap_open_dead(linktype,4096);program=Program()
             try:
                 self.assertEqual(lib.pcap_compile(capture,ctypes.byref(program),WIFI_FILTER.encode(),1,0xffffffff),0)
-                for control,expected in ((0x80,True),(0xd0,True),(0x08,False),(0x40,False)):
+                for control,expected in ((0x80,True),(0x50,True),(0xd0,True),(0x08,False),(0x40,False)):
                     frame=bytes([control])+bytes(35)
                     if linktype==127:frame=struct.pack('<BBHI',0,0,8,0)+frame
                     header=Header(0,0,len(frame),len(frame));buffer=ctypes.create_string_buffer(frame)

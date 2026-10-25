@@ -16,6 +16,9 @@ async function post(path, body = {}) {
 function settingsToForm(settings) {
   $('label').value = settings.label;
   $('wifi').value = settings.wifi_interfaces.join(', ');
+  const lan=settings.lan_interface || '';
+  if (lan && ![...$('lan-interface').options].some(x=>x.value===lan)) $('lan-interface').append(new Option(lan,lan));
+  $('lan-interface').value=lan;
   if (settings.ble_adapter && ![...$('ble').options].some(x => x.value === settings.ble_adapter)) {
     const option = make('option', settings.ble_adapter); option.value = settings.ble_adapter; $('ble').append(option);
   }
@@ -48,6 +51,7 @@ function formSettings() {
   const lat = $('latitude').value, lon = $('longitude').value;
   if ((lat === '') !== (lon === '')) throw new Error('Enter both latitude and longitude, or leave both blank.');
   return {label:$('label').value.trim(),wifi_interfaces:$('wifi').value.split(',').map(x=>x.trim()).filter(Boolean),
+    lan_interface:$('lan-interface').value,
     ble_adapter:$('ble').value,sdr:$('sdr').value,sdr_band:$('band').value,sdr_mode:$('sdr-mode').value,dji_frequency:Number($('dji-frequency').value),readsb_file:$('readsb-file').value.trim(),mqtt_file:$('mqtt').value.trim(),
     serial_port:$('serial-port').value,serial_baud:Number($('serial-baud').value),serial_format:$('serial-format').value,
     station:lat === '' ? null : [Number(lat),Number(lon)],share_rid:$('share-rid').checked,share_areas:$('share-areas').checked,share_robots:$('share-robots').checked,share_decoded:$('share-decoded').checked};
@@ -56,6 +60,11 @@ async function capabilities() {
   try {
     const r = await fetch('/api/doctor'); if (!r.ok) throw new Error('Could not check receivers');
     const data = await r.json();
+    const lanCurrent=$('lan-interface').value;
+    $('lan-interface').replaceChildren(new Option('Off',''));
+    for (const name of data.lan_interfaces || []) $('lan-interface').append(new Option(name,name));
+    if (lanCurrent && !(data.lan_interfaces||[]).includes(lanCurrent)) $('lan-interface').append(new Option(lanCurrent+' · not attached',lanCurrent));
+    $('lan-interface').value=lanCurrent;
     const serialCurrent=$('serial-port').value;
     $('serial-port').replaceChildren(new Option('Off',''));
     for (const port of data.serial_ports || []) $('serial-port').append(new Option(port.port+(port.usb_id?' · '+port.usb_id:''),port.port));
@@ -82,7 +91,7 @@ function detail(contact) {
   const lines = [contact.display_id ? 'Broadcast ID: '+contact.display_id : '', contact.mac ? 'Radio MAC: '+contact.mac : contact.receiver_id ? 'Local Bluetooth UUID: '+contact.receiver_id : '', contact.device_id ? 'Device ID: '+contact.device_id : '',
     contact.radio_vendor ? 'Radio vendor: '+contact.radio_vendor : '', contact.callsign ? 'Callsign: '+contact.callsign : '', contact.local_only ? 'Local receiver observation · not uploaded' : '', contact.manufacturer ? 'Manufacturer / model: '+contact.manufacturer+' / '+(contact.model||'Unknown model') : '',
     contact.module ? 'Broadcast module: '+contact.module : '',contact.identification || '',
-    contact.ssid ? 'Camera-link name: '+contact.ssid+' · unconfirmed device' : '',
+    contact.ssid ? (contact.kind==='hardware-vendor'?'Network name: ':'Camera-link name: ')+contact.ssid+' · unconfirmed device' : '',
     'Input: '+contact.source+(contact.protocol ? ' · '+contact.protocol : ''),
     Number.isFinite(contact.rssi_dbm) ? 'Signal: '+contact.rssi_dbm+' dBm' : '',
     Number.isFinite(contact.rssi_dbfs) ? 'Decoder signal: '+contact.rssi_dbfs+' dBFS (not dBm)' : '',
@@ -96,6 +105,35 @@ function detail(contact) {
     Number.isFinite(contact.speed_mps) ? 'Broadcast speed: '+contact.speed_mps+' m/s' : '',
     'Received: '+new Date(contact.seen*1000).toLocaleString()];
   for (const line of lines.filter(Boolean)) panel.append(make('p',line));
+  if (contact.vendor_url) panel.append(referenceLink('Manufacturer ↗',contact.vendor_url));
+}
+function referenceLink(label,url) {
+  const link=make('a',label); if (/^https:\/\//.test(url)) link.href=url;
+  link.target='_blank';link.rel='noreferrer';return link;
+}
+function networkDevices() {
+  const list=$('network-devices');list.replaceChildren();
+  const devices=state.network_devices || [];
+  $('network-count').textContent=`${devices.length} · ${(state.network_frames||0).toLocaleString()} ARP frames`;
+  for (const device of devices) {
+    const item=make('article','','contact');
+    item.append(make('strong',device.name),make('p',`${device.mac} · ${device.protocol} · ${device.source}`),
+      make('p',device.identification),make('p','Heard '+new Date(device.seen*1000).toLocaleString()+' · local only'),
+      referenceLink('Manufacturer ↗',device.vendor_url));list.append(item);
+  }
+  if (!devices.length) list.append(make('p',state.settings.lan_interface?'No matching LAN sender in the last two minutes.':'Choose a LAN interface in Radio settings to listen.'));
+  const refs=$('device-references');
+  if (!refs.childElementCount && state.device_references) {
+    refs.append(make('p','Hardware facts for identification; these are not received detections.'));
+    for (const model of state.device_references.models) {
+      const item=make('article','','contact');
+      item.append(make('strong',model.name),make('p',model.category+' · '+model.connection),
+        make('p',model.description),referenceLink('Model details ↗',model.url));
+      const vendor=state.device_references.vendors.find(v=>v.id===model.vendor);
+      if (vendor) item.append(make('span',' · '),referenceLink('Manufacturer ↗',vendor.url));
+      refs.append(item);
+    }
+  }
 }
 function radar() {
   const svg = $('dots'); svg.replaceChildren();
@@ -166,7 +204,7 @@ function render() {
   const statuses=$('radio-status');statuses.replaceChildren();
   for (const [name,text] of Object.entries(state.radios)) {const p=make('p','');p.append(make('strong',name+' · '),document.createTextNode(text));statuses.append(p);}
   if (!Object.keys(state.radios).length) statuses.append(make('p','Choose receivers, save, then start listening.'));
-  radar();spectrum();
+  radar();spectrum();networkDevices();
 }
 async function refresh() {
   try {const response=await fetch('/api/status');if(!response.ok)throw new Error('Local node unavailable');state=await response.json();csrf=state.csrf;render();}
