@@ -21,3 +21,6 @@
 .legal-page pre{overflow-x:auto;max-width:100%;padding:16px;background:#151515;border:1px solid #444;border-radius:4px}.legal-page code{overflow-wrap:anywhere}
 
 @media(max-width:700px){.footer-links{flex-wrap:wrap;justify-content:flex-end;white-space:normal;row-gap:3px}.footer-links a{white-space:nowrap}}
+
+/* Keep the complete workspace navigation reachable on narrow screens. */
+.masthead nav{flex-wrap:nowrap;overflow-x:auto;min-width:0;align-items:center}.masthead nav>*{flex-shrink:0;white-space:nowrap}.masthead nav button{height:100%}.masthead .brand{flex-shrink:0}@media(max-width:1100px){.masthead .church-link{display:none}.masthead nav{gap:4px}.masthead nav button{padding-left:10px;padding-right:10px}}

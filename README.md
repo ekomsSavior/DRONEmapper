@@ -100,3 +100,5 @@ General Atomics: shared [aircraft references](docs/aircraft-references.md), with
 [Anduril & Warhound device library](https://dronemapper.churchofmalware.org/anduril): 32 reviewed references and exact IEEE manufacturer hints. Hints stay local; they do not establish a drone model or location.
 
 Cloud communications reference: [Cloud Surface](https://dronemapper.churchofmalware.org/cloud-surface). Published device/platform paths, protocols and access requirements; separate from live observations. Catalog: `integration/cloud-surfaces.json`.
+
+Device research: the Device Library, Cloud Surface coverage, and Galaxy device constellations share `/api/device-library`, an aggregate of current map records. Unknown models stay unknown; vendor associations do not imply a cloud connection. Curated product references add verified links, specifications, and manufacturer MAC allocations where available. Individual observed radio MACs remain local to scanners.

@@ -32,3 +32,23 @@ function filter(){const q=$('search').value.toLowerCase().trim(),c=$('category')
 $('search').addEventListener('input',filter);$('category').addEventListener('change',filter);filter();
 
 applyView();
+
+// Expand one vendor's device constellation on demand, preserving every researched edge.
+import {loadMapInventory,vendorInventory,servicesForVendor,deviceLinks} from './map-device-coverage.mjs';
+const inventoryPanel=el('section','');inventoryPanel.append(el('h2','All map devices'));
+const inventorySearch=el('input','');inventorySearch.type='search';inventorySearch.placeholder='Search mapped models';inventorySearch.setAttribute('aria-label','Search mapped models');
+const vendorSelect=el('select','');vendorSelect.setAttribute('aria-label','Map device manufacturer');const inventoryNote=el('p','Loading map inventory…');inventoryPanel.append(inventorySearch,vendorSelect,inventoryNote);$('results').after(inventoryPanel);
+const deviceLayer=se('g',{'aria-label':'Selected vendor device constellation',class:'device-constellation'});space.append(deviceLayer);
+loadMapInventory().then(data=>{
+ const vendors=vendorInventory(data.models);
+ function options(){const current=vendorSelect.value,q=inventorySearch.value.toLowerCase();vendorSelect.replaceChildren(new Option('Choose a map manufacturer',''));for(const [v,rows] of vendors)if([v,...rows.map(r=>r.name)].join(' ').toLowerCase().includes(q))vendorSelect.append(new Option(v,v));vendorSelect.value=current;}
+ function expand(){deviceLayer.replaceChildren();const rows=vendors.find(([v])=>v===vendorSelect.value)?.[1];if(!rows)return;const vendor=vendorSelect.value,existing=nodes.find(n=>n.type==='vendor'&&n.name.toLowerCase()===vendor.toLowerCase());const cx=existing?.x??2700,cy=existing?.y??350;
+  const radius=Math.max(260,rows.length*25),center=se('g',{class:'node vendor',transform:`translate(${cx} ${cy})`});center.append(se('rect',{x:-9,y:-9,width:18,height:18,class:'core'}));const title=se('text',{x:0,y:-25,'text-anchor':'middle'});title.textContent=vendor;center.append(title);deviceLayer.append(center);
+  rows.forEach((row,i)=>{const angle=2*Math.PI*i/rows.length,x=cx+radius*Math.cos(angle),y=cy+radius*Math.sin(angle);if(vendor!=='Unknown manufacturer')deviceLayer.append(se('line',{x1:cx,y1:cy,x2:x,y2:y,class:'edge','stroke-dasharray':'3 6'}));
+   const g=se('g',{class:'node device',transform:`translate(${x} ${y})`,tabindex:0,role:'button','aria-label':row.name+' — map device'});g.append(se('circle',{r:8,class:'core'}));const label=se('text',{x:0,y:25,'text-anchor':'middle'});label.textContent=row.name;g.append(label);
+   const inspect=()=>{const p=$('inspector'),links=deviceLinks(row);p.replaceChildren(el('h2',row.name),el('p',row.maker+' · '+row.category),el('p',row.records+' map records'),el('p','Dotted line: manufacturer reported by map records. It does not establish a cloud or network connection.'));for(const [name,url] of [['Device library',links.library],['Cloud research',links.cloud],['Product',links.product],['Manufacturer',links.manufacturer]])if(url)p.append(link(name+' ↗',url));};g.onclick=()=>{if(!moved)inspect();};g.onkeydown=e=>activate(e,inspect);deviceLayer.append(g);
+  });
+  inventoryNote.textContent=rows.length+' mapped model groups · '+(servicesForVendor(vendor).length?'documented services remain connected in the original graph':'cloud relationships not yet verified');view=[cx-radius-180,cy-radius-100,(radius+180)*2,(radius+100)*2];applyView();
+ }
+ inventorySearch.oninput=options;vendorSelect.onchange=expand;options();inventoryNote.textContent=data.models.length+' model groups from the map. Choose a vendor to expand its devices.';const initial=new URLSearchParams(location.search).get('vendor');if(initial){vendorSelect.value=initial;expand();}
+}).catch(()=>inventoryNote.textContent='Map inventory is temporarily unavailable. The documented network remains available.');

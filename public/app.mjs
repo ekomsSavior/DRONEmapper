@@ -86,11 +86,12 @@ function selectRecord(id,move=true){const t=allRecords().find(x=>x.id===id);if(!
 function showDetail(t){
  $('detail').hidden=false;
  const fields=[['Type',names[t.kind]||t.kind],['Record',t.record_type==='signal'?'Unconfirmed signal / receiver area':isPosition(t)?(t.position_basis==='reported'?'Reported position':'Measured position'):t.record_type==='historical'?(t.status==='published-flight'?'Published flight area':'Historical area'):'Deployment area'],['Model',t.model||'Unknown',modelWebsite(t.model,t.manufacturer,t.kind)],['Manufacturer',t.manufacturer||'Unknown',companyWebsite(t.manufacturer)],['Operator',t.operator||'Unknown',companyWebsite(t.operator)],['Purpose',names[t.purpose]||t.purpose||'Unknown'],['Location precision',t.precision||'Not reported']];
+ fields.push(['Device research','Open Device Library','/devices?vendor='+encodeURIComponent(t.manufacturer||'Unknown manufacturer')+'&model='+encodeURIComponent(t.model||'Unknown model')],['Vendor cloud research','Cloud Surface','/cloud-surface?vendor='+encodeURIComponent(t.manufacturer||'Unknown manufacturer')],['Vendor relationships','Galaxy Map','/galaxy?vendor='+encodeURIComponent(t.manufacturer||'Unknown manufacturer')]);
  if(t.reporting_platform)fields.push(['Reporting platform',t.reporting_platform]);
  if(t.operator_type)fields.push(['Operator type',t.operator_type.replaceAll('-',' ')]);
  const aircraft=aircraftReference(t.manufacturer,t.model,t.kind);
  const device=deviceReference(t.manufacturer,t.model,t.kind);
- if(device)fields.push(['Product reference',device.name,device.url],['Published communications',device.connection],['Scanner support',device.reception],['Anduril / Warhound catalog','Browse product references','/anduril.html']);
+ if(device)fields.push(['Product reference',device.name,device.url],['Published communications',device.connection],['Scanner support',device.reception],['Device Library','Browse product references','/devices']);
  if(aircraft){fields.push(['Aircraft reference',aircraft.name,aircraft.url],['Published communications',aircraft.connection]);for(const [key,value] of Object.entries(aircraft.specs))fields.push([key,value]);fields.push(['Specification context',aircraftReferences.notice]);}
  const platform=dronePlatform(t.manufacturer,t.model,t.kind);
  if(platform)fields.push(['Compatible platform',platform.platform,platform.integration_url],['Integration status',dronePlatforms.notice]);
