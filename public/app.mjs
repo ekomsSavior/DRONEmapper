@@ -1,4 +1,5 @@
 import {aircraftReference,aircraftReferences} from './aircraft-references.mjs';
+import {deviceReference} from './security-device-references.mjs';
 import {isLiveRecord,isGhostRecord,isPoliceFlight,withinTimeWindow,recordTime} from './activity-state.mjs';
 import {policePortalFor} from './police-portals.mjs';
 import {companyWebsite,modelWebsite} from './company-links.mjs';
@@ -88,6 +89,8 @@ function showDetail(t){
  if(t.reporting_platform)fields.push(['Reporting platform',t.reporting_platform]);
  if(t.operator_type)fields.push(['Operator type',t.operator_type.replaceAll('-',' ')]);
  const aircraft=aircraftReference(t.manufacturer,t.model,t.kind);
+ const device=deviceReference(t.manufacturer,t.model,t.kind);
+ if(device)fields.push(['Product reference',device.name,device.url],['Published communications',device.connection],['Scanner support',device.reception],['Anduril / Warhound catalog','Browse product references','/anduril.html']);
  if(aircraft){fields.push(['Aircraft reference',aircraft.name,aircraft.url],['Published communications',aircraft.connection]);for(const [key,value] of Object.entries(aircraft.specs))fields.push([key,value]);fields.push(['Specification context',aircraftReferences.notice]);}
  const platform=dronePlatform(t.manufacturer,t.model,t.kind);
  if(platform)fields.push(['Compatible platform',platform.platform,platform.integration_url],['Integration status',dronePlatforms.notice]);

@@ -143,14 +143,18 @@ function networkDevices() {
   const refs=$('device-references');
   if (!refs.childElementCount && state.device_references) {
     refs.append(make('p','Hardware and service references; these are not received detections.'));
+    const andurilList=make('details');
+    andurilList.append(make('summary','Anduril & Warhound references'),make('p',state.device_references.notice));
     for (const model of state.device_references.models) {
       const item=make('article','','contact');
       item.append(make('strong',model.name),make('p',model.category+' · '+model.connection),
         make('p',model.description),referenceLink('Model details ↗',model.url));
+      if(model.reception)item.append(make('p',model.reception));
       const vendor=state.device_references.vendors.find(v=>v.id===model.vendor);
       if (vendor) item.append(make('span',' · '),referenceLink('Manufacturer ↗',vendor.url));
-      refs.append(item);
+      (model.group==='anduril'?andurilList:refs).append(item);
     }
+    refs.append(andurilList);
     for (const model of dronePlatforms.models) {
       const item=make('article','','contact');
       item.append(make('strong',model.name),make('p',model.category+' · '+model.connection),

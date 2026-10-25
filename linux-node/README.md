@@ -4,7 +4,7 @@ Turn a Windows, macOS or Linux computer into a scanner node with a local radar, 
 
 ## Start
 
-[Download Desktop 0.6.3 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.6.4 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
 
 **Windows:** install [Python 3.10+](https://www.python.org/downloads/windows/), extract the source, then double-click `Start-DRONEmapper.cmd` in this folder.
 
@@ -62,3 +62,5 @@ Model recognition now covers 141 reviewed FAA aircraft/module combinations. Hist
 Axon Air / Fusus model references: Skydio X10, X2/X2E and R10, with official links. Compatibility does not identify an operator or active cloud connection. [Research and reception details](../docs/axon-air-fusus.md). Credits: [saviorSEC / Axon Galaxy](https://github.com/saviorSEC/axon-galaxy) research leads and the linked Axon/Skydio primary documentation.
 
 General Atomics: shared [aircraft references](../docs/aircraft-references.md), with official model links and reviewed specifications. References do not add proprietary radio decoders.
+
+[Anduril & Warhound device library](https://dronemapper.churchofmalware.org/anduril): 32 reviewed references and exact IEEE manufacturer hints. Hints stay local; they do not establish a drone model or location.

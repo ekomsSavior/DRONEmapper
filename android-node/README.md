@@ -84,7 +84,7 @@ protocol decoders. [Setup and hardware test steps](../docs/android-hackrf.md).
 Download the latest APK from [Android nodes](https://dronemapper.churchofmalware.org/nodes.html)
 and install it over the existing app; do not uninstall first. Official releases
 use the same signing key to preserve your pairing and settings. Check **Phone
-capabilities** for version **0.8.4**. Updates are manual for now.
+capabilities** for version **0.8.5**. Updates are manual for now.
 
 Start listening again, reconnect your USB adapter, and enable your preferred
 **Sharing choices** if you want reports on the map. For a test report, connect
@@ -99,3 +99,5 @@ A supported CyberDog Bluetooth advertisement appears in the list and Signals rad
 Axon Air / Fusus model references: Skydio X10, X2/X2E and R10, with official links. Compatibility does not identify an operator or active cloud connection. [Research and reception details](../docs/axon-air-fusus.md). Credits: [saviorSEC / Axon Galaxy](https://github.com/saviorSEC/axon-galaxy) research leads and the linked Axon/Skydio primary documentation.
 
 General Atomics: shared [aircraft references](../docs/aircraft-references.md), with official model links and reviewed specifications. References do not add proprietary radio decoders.
+
+[Anduril & Warhound device library](https://dronemapper.churchofmalware.org/anduril): 32 reviewed references and exact IEEE manufacturer hints. Hints stay local; they do not establish a drone model or location.

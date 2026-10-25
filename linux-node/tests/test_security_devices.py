@@ -34,6 +34,18 @@ def beacon(mac=MAC,ssid=b'Fixture',subtype=0x80):
     return bytes(frame)+bytes([0,len(ssid)])+ssid
 
 class ReferenceTests(unittest.TestCase):
+    def test_anduril_allocation_width_and_unknown_model(self):
+        for mac,name in [('E8:B4:70:C0:00:01','Anduril Industries'),('E8:B4:70:CF:FF:FF','Anduril Industries'),('8C:1F:64:76:30:01','Anduril Imaging'),('8C:1F:64:76:3F:FF','Anduril Imaging')]:
+            hint=vendor_hint(mac)
+            self.assertEqual(hint['vendor_name'],name)
+            self.assertNotIn('model',hint)
+            match=wifi_frame(beacon(mac=mac))[0]
+            self.assertTrue(match['vendor_only'])
+            self.assertEqual(ethernet_arp(arp(sender=mac))['vendor_name'],name)
+        for mac in ('E8:B4:70:B0:00:01','E8:B4:70:D0:00:01','8C:1F:64:76:20:01','8C:1F:64:76:40:01','EA:B4:70:C0:00:01','8D:1F:64:76:30:01'):
+            self.assertIsNone(vendor_hint(mac))
+            self.assertEqual(wifi_frame(beacon(mac=mac)),[])
+
     def test_shared_catalog_and_bundled_allocation(self):
         repo=Path(__file__).resolve().parents[2]
         bundled=Path(__file__).resolve().parents[1]/'dronemapper_node/data/security-device-references.json'

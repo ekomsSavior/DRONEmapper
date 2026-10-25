@@ -48,7 +48,7 @@ def build_node_archive(directory=None, family='Desktop'):
     with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in source_files():
             relative = path.relative_to(ROOT)
-            if relative.parts[0] == 'linux-node' or str(relative) in {'docs/desktop-node-setup.md', 'docs/linux-node-setup.md', 'docs/sdr-discovery-research.md', 'docs/sdr-decoders.md', 'docs/serial-receivers.md', 'docs/robot-signals.md', 'docs/community-enrichment.md', 'docs/security-device-discovery.md', 'docs/carbyne-discovery.md', 'docs/axon-air-fusus.md', 'docs/aircraft-references.md'}:
+            if relative.parts[0] == 'linux-node' or str(relative) in {'docs/desktop-node-setup.md', 'docs/linux-node-setup.md', 'docs/sdr-discovery-research.md', 'docs/sdr-decoders.md', 'docs/serial-receivers.md', 'docs/robot-signals.md', 'docs/community-enrichment.md', 'docs/security-device-discovery.md', 'docs/carbyne-discovery.md', 'docs/axon-air-fusus.md', 'docs/aircraft-references.md', 'docs/anduril-warhound.md'}:
                 archive.write(path, name + '/' + str(relative))
         archive.writestr(name + '/START-HERE.txt',
             f'DRONEmapper Desktop {version} — Church of Malware / saviorSEC\n\n'
@@ -93,6 +93,7 @@ def build_archive():
              if not line.endswith('  ' + wardrive.name)]
     lines.append(hashlib.sha256(wardrive.read_bytes()).hexdigest() + '  ' + wardrive.name)
     checksums.write_text('\n'.join(lines) + '\n')
+    (ROOT / 'public/downloads/anduril-warhound.md').write_bytes((ROOT / 'docs/anduril-warhound.md').read_bytes())
     build_linux_archive()
     build_node_archive()
     temporary = ROOT / 'public/source.zip.tmp'
