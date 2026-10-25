@@ -98,3 +98,5 @@ General Atomics: shared [aircraft references](docs/aircraft-references.md), with
 [Public flight dashboard coverage](docs/public-flight-dashboards.md): 94 feeds with original flight times, categories and reported areas. Newly added dashboards refresh every five minutes as operators publish records.
 
 [Anduril & Warhound device library](https://dronemapper.churchofmalware.org/anduril): 32 reviewed references and exact IEEE manufacturer hints. Hints stay local; they do not establish a drone model or location.
+
+Cloud communications reference: [Cloud Surface](https://dronemapper.churchofmalware.org/cloud-surface). Published device/platform paths, protocols and access requirements; separate from live observations. Catalog: `integration/cloud-surfaces.json`.

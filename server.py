@@ -265,6 +265,8 @@ class Handler(BaseHTTPRequestHandler):
                         if r.get('record_type') != 'position' or time.time()-r.get('observed_at', 0) <= RETENTION]
                 return self.json(200, {'attribution': {'sfpd':'City and County of San Francisco / SFPD · adapted published flight-log areas · PDDL 1.0', 'milestones':'Church of Malware / saviorSEC factual historical milestones; per-record primary evidence', 'ioos':'IOOS Glider DAC; Scripps Institution of Oceanography / Woods Hole Oceanographic Institution; adapted surface GPS subset; CC BY 4.0', 'argo':'International Argo Program and contributing national programs / Argo GDAC via Ifremer; https://doi.org/10.17882/42182; unrestricted data use, attribution requested', 'avmap':'AV Map contributors / Jackson Lester · MIT; see /licenses/av-map.txt','oam':'OpenAerialMap / Open Imagery Network contributors · adapted UAV survey metadata · CC BY 4.0; see per-record contributors','voto':'Voice of the Ocean Foundation; data collected and made freely available at https://erddap.observations.voiceoftheocean.org/erddap/index.html · CC BY 4.0','adsb': 'ADSB.lol · ODbL 1.0', 'noaa': 'NOAA AOML / PMEL and contributing operators; see per-record license', 'climateviewer': 'Jim Lee / ClimateViewer · adapted historical layer · CC BY-NC-SA 4.0', 'atlas': 'Electronic Frontier Foundation / Atlas of Surveillance · adapted drone-program areas · CC BY 4.0', 'gliders': 'NOAA AOML CoastWatch and contributing glider operators · freely redistributable data; see per-record terms'}[key], 'records': data}, head)
         root = PUBLIC
+        if path == '/cloud-surface':
+            path = '/cloud-surface.html'
         if path == '/anduril':
             path = '/anduril.html'
         if path.startswith('/hub-preview/'):
