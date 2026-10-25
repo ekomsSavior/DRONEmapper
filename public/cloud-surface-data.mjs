@@ -571,6 +571,105 @@ export const cloudSurfaces = {
       "evidence": "Published documentation",
       "connector": "Research reference \u2014 no live connector enabled",
       "reviewed_on": "2026-10-25"
+    },
+    {
+      "id": "flock-aerodome",
+      "vendor": "Flock Safety",
+      "name": "Flock Aerodome / DFR",
+      "category": "Drones",
+      "path": [
+        "Docked aircraft / Alpha",
+        "Aerodome operations",
+        "Authorized dispatch / mobile users"
+      ],
+      "protocols": [
+        "Integration transport not specified in product documentation"
+      ],
+      "data": "Flight operations, video, flight logs and mission reports.",
+      "access": "Customer-authorized operations. Community flight dashboards publish selected historical records separately.",
+      "source": "https://www.flocksafety.com/products/flock-dfr",
+      "gap": "No public live fleet endpoint or Flock-specific over-the-air signature verified. Platform membership is not an aircraft identity.",
+      "evidence": "Manufacturer documentation",
+      "connector": "Reference only \u2014 no live vendor connector enabled",
+      "reviewed_on": "2026-10-25",
+      "hosting": "Vendor platform",
+      "useful": "Retain original flight times and agency attribution in authorized exports. Public portal links do not imply an active importer.",
+      "related": [
+        {
+          "name": "Alpha hardware",
+          "url": "https://www.flocksafety.com/blog/flock-safety-unveils-alpha-drone-as-first-responder-system"
+        },
+        {
+          "name": "Developer documentation",
+          "url": "https://docs.flocksafety.com/"
+        }
+      ]
+    },
+    {
+      "id": "flock-os",
+      "vendor": "Flock Safety",
+      "name": "FlockOS / drone integration",
+      "category": "Drones",
+      "path": [
+        "Falcon LPR / Raven alerts",
+        "Flock platform",
+        "Aerodome drone response"
+      ],
+      "protocols": [
+        "Integration transport not specified in product documentation"
+      ],
+      "data": "Sensor-triggered drone dispatch and shared operational context.",
+      "access": "Customer-authorized operations. Community flight dashboards publish selected historical records separately.",
+      "source": "https://www.flocksafety.com/blog/aerodome-and-flock-safety-forge-strategic-partnership-to-expand-drone-as-first-responder-technology-for-public-safety-agencies",
+      "gap": "No public live fleet endpoint or Flock-specific over-the-air signature verified. Platform membership is not an aircraft identity.",
+      "evidence": "Manufacturer documentation",
+      "connector": "Reference only \u2014 no live vendor connector enabled",
+      "reviewed_on": "2026-10-25",
+      "hosting": "Vendor platform",
+      "useful": "Retain original flight times and agency attribution in authorized exports. Public portal links do not imply an active importer.",
+      "related": [
+        {
+          "name": "Alpha hardware",
+          "url": "https://www.flocksafety.com/blog/flock-safety-unveils-alpha-drone-as-first-responder-system"
+        },
+        {
+          "name": "Developer documentation",
+          "url": "https://docs.flocksafety.com/"
+        }
+      ]
+    },
+    {
+      "id": "flock-das",
+      "vendor": "Flock Safety",
+      "name": "Flock Drone as Automated Security",
+      "category": "Drones",
+      "path": [
+        "Site alarms / LPR / audio",
+        "DAS operations",
+        "Authorized security team"
+      ],
+      "protocols": [
+        "Integration transport not specified in product documentation"
+      ],
+      "data": "Site incident response, aerial video and incident records.",
+      "access": "Customer-authorized operations. Community flight dashboards publish selected historical records separately.",
+      "source": "https://www.flocksafety.com/blog/flock-safety-launches-flock-aerodome-drone-as-automated-security",
+      "gap": "No public live fleet endpoint or Flock-specific over-the-air signature verified. Platform membership is not an aircraft identity.",
+      "evidence": "Manufacturer documentation",
+      "connector": "Reference only \u2014 no live vendor connector enabled",
+      "reviewed_on": "2026-10-25",
+      "hosting": "Vendor platform",
+      "useful": "Retain original flight times and agency attribution in authorized exports. Public portal links do not imply an active importer.",
+      "related": [
+        {
+          "name": "Alpha hardware",
+          "url": "https://www.flocksafety.com/blog/flock-safety-unveils-alpha-drone-as-first-responder-system"
+        },
+        {
+          "name": "Developer documentation",
+          "url": "https://docs.flocksafety.com/"
+        }
+      ]
     }
   ],
   "connections": [
@@ -591,6 +690,12 @@ export const cloudSurfaces = {
       "to_id": "percepto",
       "label": "Spot hardware integration \u00b7 published 2021",
       "source": "https://percepto.co/wp-content/uploads/2021/05/Spot-and-Base-.pdf"
+    },
+    {
+      "from_id": "flock-os",
+      "to_id": "flock-aerodome",
+      "label": "Published sensor-triggered drone-response integration",
+      "source": "https://www.flocksafety.com/blog/aerodome-and-flock-safety-forge-strategic-partnership-to-expand-drone-as-first-responder-technology-for-public-safety-agencies"
     }
   ]
 };

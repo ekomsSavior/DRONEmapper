@@ -1,4 +1,4 @@
-// Reviewed official public portals, 2026-10-21. Links are not imported telemetry.
+// Reviewed public portals. Links are not imported telemetry.
 export const policePortals=[
   {
     "id": "san-francisco",
@@ -255,10 +255,41 @@ export const policePortals=[
     "aliases": [
       "Oceanside Police Department"
     ]
+  },
+  {
+    "id": "flock-elk-grove",
+    "agency": "Elk Grove Police Department",
+    "place": "Elk Grove, California",
+    "url": "https://community.elk-grove.ca.us.aerodome.com/",
+    "official": "https://elkgrove.gov/sites/default/files/city-files/City%20Government/City%20Clerk/city-council-2025/Attachments/05-28-25-7-13.pdf",
+    "bounds": [
+      38.35,
+      -121.5,
+      38.5,
+      -121.3
+    ],
+    "cadence": "Agency-published history; delay unspecified",
+    "note": "Aerodome community dashboard. Direct automated access returned HTTP 403 during review; link only, no flight importer enabled.",
+    "aliases": [
+      "Elk Grove Police Department"
+    ]
+  },
+  {
+    "id": "flock-redondo-beach",
+    "agency": "Redondo Beach Police Department",
+    "place": "Redondo Beach, California",
+    "url": "https://community.rbpd.ca.us.aerodome.com/",
+    "official": "https://redondo.legistar.com/LegislationDetail.aspx?FullText=1&GUID=0A55CDE1-5560-4B61-81B4-6209C361FDB9&ID=6877520&Options=&Search=",
+    "bounds": [
+      33.8,
+      -118.42,
+      33.92,
+      -118.32
+    ],
+    "cadence": "Agency-published history; delay unspecified",
+    "note": "Aerodome community dashboard. Direct automated access returned HTTP 403 during review; link only, no flight importer enabled.",
+    "aliases": [
+      "Redondo Beach Police Department"
+    ]
   }
 ];
-export function policePortalFor(record){
- const operator=String(record.operator||'').trim().toLowerCase();
- if(record.purpose!=='public-safety'||record.kind!=='drone'||!Number.isFinite(record.latitude)||!Number.isFinite(record.longitude))return null;
- return policePortals.find(p=>p.aliases.some(a=>a.toLowerCase()===operator)&&record.latitude>=p.bounds[0]&&record.longitude>=p.bounds[1]&&record.latitude<=p.bounds[2]&&record.longitude<=p.bounds[3])||null;
-}

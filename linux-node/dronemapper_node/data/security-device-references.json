@@ -50,6 +50,18 @@
       "prefixes": [],
       "evidence": "Working-dog technology program; no verified device allocation or radio signature.",
       "source": "https://warhound.com/"
+    },
+    {
+      "id": "flock",
+      "name": "Flock Safety",
+      "aliases": [
+        "Flock",
+        "Flock Group"
+      ],
+      "url": "https://www.flocksafety.com/",
+      "prefixes": [],
+      "evidence": "Published product references. No drone-specific radio allocation verified.",
+      "source": "https://www.flocksafety.com/products/flock-dfr"
     }
   ],
   "models": [
@@ -863,6 +875,92 @@
         {
           "name": "Colossal Biosciences",
           "url": "https://colossal.com/"
+        }
+      ]
+    },
+    {
+      "vendor": "flock",
+      "model": "Alpha",
+      "aliases": [
+        "Alpha",
+        "Flock Alpha"
+      ],
+      "name": "Flock Alpha",
+      "group": "flock",
+      "category": "Outdoor drone",
+      "connection": "Four cellular modems; network redundancy",
+      "description": "Manufacturer describes a 60 mph DFR aircraft with thermal and low-light imaging. Early-access availability is advertised; configuration and mission conditions affect performance.",
+      "reception": "No validated Flock-specific RF decoder or model signature is bundled. Supported Remote ID broadcasts may be received independently; cellular activity alone cannot identify this product or its operator.",
+      "url": "https://www.flocksafety.com/blog/flock-safety-unveils-alpha-drone-as-first-responder-system",
+      "source": "https://www.flocksafety.com/blog/flock-safety-unveils-alpha-drone-as-first-responder-system",
+      "manufacturer_url": "https://www.flocksafety.com/",
+      "manufacturer_aliases": [
+        "Flock Safety",
+        "Flock"
+      ],
+      "kinds": [
+        "drone"
+      ],
+      "related_links": [
+        {
+          "name": "Drone platform",
+          "url": "https://www.flocksafety.com/products/flock-dfr"
+        }
+      ]
+    },
+    {
+      "vendor": "flock",
+      "model": "Aerodome DFR",
+      "aliases": [
+        "Aerodome DFR",
+        "Flock Aerodome DFR"
+      ],
+      "name": "Flock Aerodome DFR",
+      "group": "flock",
+      "category": "Drone operations platform",
+      "connection": "Remote flight operations, video sharing and dispatch integration",
+      "description": "DFR software connects docked aircraft with operators and emergency response workflows. Aerodome is a platform, not one aircraft model.",
+      "reception": "No validated Flock-specific RF decoder or model signature is bundled. Supported Remote ID broadcasts may be received independently; cellular activity alone cannot identify this product or its operator.",
+      "url": "https://www.flocksafety.com/products/flock-dfr",
+      "source": "https://www.flocksafety.com/products/flock-dfr",
+      "manufacturer_url": "https://www.flocksafety.com/",
+      "manufacturer_aliases": [
+        "Flock Safety",
+        "Flock"
+      ],
+      "kinds": [],
+      "related_links": [
+        {
+          "name": "Drone platform",
+          "url": "https://www.flocksafety.com/products/flock-dfr"
+        }
+      ]
+    },
+    {
+      "vendor": "flock",
+      "model": "DAS",
+      "aliases": [
+        "DAS",
+        "Flock Drone as Automated Security"
+      ],
+      "name": "Flock Drone as Automated Security",
+      "group": "flock",
+      "category": "Private-site drone program",
+      "connection": "Alarm / LPR / audio / video-management integration",
+      "description": "Private-enterprise aerial security offering for site response and inspection. A product offering does not establish deployment at any particular property.",
+      "reception": "No validated Flock-specific RF decoder or model signature is bundled. Supported Remote ID broadcasts may be received independently; cellular activity alone cannot identify this product or its operator.",
+      "url": "https://www.flocksafety.com/blog/flock-safety-launches-flock-aerodome-drone-as-automated-security",
+      "source": "https://www.flocksafety.com/blog/flock-safety-launches-flock-aerodome-drone-as-automated-security",
+      "manufacturer_url": "https://www.flocksafety.com/",
+      "manufacturer_aliases": [
+        "Flock Safety",
+        "Flock"
+      ],
+      "kinds": [],
+      "related_links": [
+        {
+          "name": "Drone platform",
+          "url": "https://www.flocksafety.com/products/flock-dfr"
         }
       ]
     }

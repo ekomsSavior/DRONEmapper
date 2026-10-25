@@ -1,0 +1,36 @@
+Flock drone references — Church of Malware / saviorSEC
+Reviewed 2026-10-25
+
+Product references: Alpha aircraft, Aerodome DFR operations software and
+Drone as Automated Security (DAS). Aerodome is not a single aircraft model.
+Flock documentation describes Alpha with four cellular modems. No cellular
+protocol decoder, radio fingerprint, operator inference or public live fleet
+connector is added by these references.
+
+Cloud Surface and Galaxy: Aerodome/DFR, FlockOS sensor-triggered response,
+and private-site DAS. The existing graph is retained; the documented
+FlockOS/Aerodome relationship extends it. Protocol names are left unspecified
+where the manufacturer has not published them.
+
+Sources:
+https://www.flocksafety.com/products/flock-dfr
+https://www.flocksafety.com/blog/flock-safety-unveils-alpha-drone-as-first-responder-system
+https://www.flocksafety.com/blog/flock-safety-launches-flock-aerodome-drone-as-automated-security
+https://www.flocksafety.com/blog/aerodome-and-flock-safety-forge-strategic-partnership-to-expand-drone-as-first-responder-technology-for-public-safety-agencies
+
+Map: three dated historical program records, Scottsdale (2024), Prosper
+(2025) and Redondo Beach (2024), use generalized city reference points.
+Each record retains its own primary evidence URL. Aircraft manufacturer,
+model and current position remain unknown. Program existence is not a flight.
+
+Public portals:
+https://community.elk-grove.ca.us.aerodome.com/
+https://community.rbpd.ca.us.aerodome.com/
+Both have indexed public overview pages. Direct automated flight-page access
+returned HTTP 403 during review. Listed as links only; no automated collection
+or promised refresh cadence. No authentication bypass attempted.
+
+The broader Device Library combines existing device, aircraft and drone
+platform catalogs. Anduril/Warhound research and the old URL remain available.
+Reference JSON is synchronized to scanner source assets. Installed binaries
+require a separate build and release; no new RF detection is claimed.
