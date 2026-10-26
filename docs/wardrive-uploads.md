@@ -102,7 +102,7 @@ timezone header. Explicit ISO-8601 offsets take precedence.
 
 A successful response reports `rows`, `candidates`, `accepted`, `duplicates`,
 `unrelated`, `invalid` and `outside_time_window`. `accepted: 0` can be a successful
-duplicate-only upload. The body is limited to 2 MiB, 10,000 rows and 500 matching
+duplicate-only upload. The body is limited to 2 MiB, 15,000 rows and 500 matching
 observations **per API request**, not per selected browser file. The browser and
 folder uploader split larger sessions automatically. Maximum six uploads per
 token per minute; respect `Retry-After` on 429. 401/403: stop and request a valid

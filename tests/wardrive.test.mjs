@@ -53,7 +53,7 @@ test('authenticated import is scoped, private, idempotent after prune, historica
  assert.equal((await upload(csv(row(old-86400)))).status,200);
  snap=await network.snapshot(0);assert.equal(snap.signals[0].observation_count,3);assert.equal(snap.signals[0].ghost,false);assert.equal(snap.signals[0].sighting_history.length,3);assert.equal(snap.signals[0].first_seen,Math.floor(old-86400));assert.equal(snap.signals[0].last_seen,Math.floor(now-100));
  const otherScope=await h.mf.dispatchFetch('http://localhost/v1/observations',{method:'POST',headers:{Authorization:'Bearer '+token.upload_token,'Content-Type':'application/json'},body:'{}'});assert.equal(otherScope.status,403);
- const status=await h.mf.dispatchFetch('http://localhost/v1/wardrives',{headers:{Authorization:'Bearer '+token.upload_token}});assert.equal(status.status,200);
+ const status=await h.mf.dispatchFetch('http://localhost/v1/wardrives',{headers:{Authorization:'Bearer '+token.upload_token}});assert.equal(status.status,200);assert.equal((await status.json()).max_rows,15000);
  const listing=await network.accountNodes('owner');assert.equal(listing[0].scope,'wardrive');assert.equal(listing[0].online,false);assert.ok(!JSON.stringify(listing).includes(token.upload_token));
  await network.revokeAccountNode('someone-else',token.node_handle);assert.equal((await upload(csv(row(old)))).status,200);
  await network.revokeAccountNode('owner',token.node_handle);assert.equal((await upload(csv(row(old)))).status,401);assert.equal((await network.snapshot(0)).signals.length,0);
@@ -119,4 +119,14 @@ test('manual file endpoint requires a verified session, same origin and explicit
  const r=await request(path,csv(row()),headers);assert.equal(r.status,200,await r.clone().text());assert.equal((await r.json()).accepted,1);
  assert.equal((await request(path,csv(row()),{...headers,'Content-Type':'application/json'})).status,415);
  assert.equal((await request(path,'x'.repeat(WARD_MAX_BYTES+16385),headers)).status,413);
+});
+
+test('direct CSV accepts 15,000 data rows with or without metadata and rejects 15,001',()=>{
+ const body=Array(15000).fill(row(now-100,'Ordinary router')).join('\n');
+ for(const prefix of ['', 'WigleWifi-1.6,appRelease=test\n']){
+  const input=prefix+header+'\n'+body;
+  assert.ok(Buffer.byteLength(input)<WARD_MAX_BYTES);
+  assert.equal(parseWardrive(input,'UTC',now).summary.rows,15000);
+  assert.throws(()=>parseWardrive(input+'\n'+row(now-100,'Ordinary router'),'UTC',now),e=>e.status===422&&/Too many rows/.test(e.message));
+ }
 });

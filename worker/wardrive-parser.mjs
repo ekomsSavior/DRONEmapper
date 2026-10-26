@@ -1,7 +1,7 @@
 /* Church of Malware / saviorSEC · AGPL-3.0-or-later */
 // Shared by the browser preview and server. A CSV row is receiver evidence,
 // never decoded aircraft telemetry. No OUI-only classifications are accepted.
-export const WARD_MAX_BYTES=2*1024*1024, WARD_MAX_ROWS=10000, WARD_MAX_MATCHES=500;
+export const WARD_MAX_BYTES=2*1024*1024, WARD_MAX_ROWS=15000, WARD_MAX_MATCHES=500;
 export const WARD_MAX_AGE=365*86400;
 const fail=message=>{throw Object.assign(Error(message),{status:422});};
 export function csvRows(text){

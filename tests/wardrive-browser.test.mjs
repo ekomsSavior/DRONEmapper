@@ -7,7 +7,7 @@ const date=n=>new Date((now-3600-n)*1000).toISOString();
 const row=(n=0,name='WIFI_8K_test')=>`C0:18:82:17:38:A0,${name},[OPEN],${date(n)},6,-52,37.12345,-122.12345,10,5,WIFI\n`;
 const file=(...parts)=>new Blob(parts,{type:'text/csv'});
 
-test('large browser exports stream past 2 MiB/10,000 rows/500 matches and only send bounded candidate batches',async()=>{
+test('large browser exports stream past 2 MiB/15,000 rows/500 matches and only send bounded candidate batches',async()=>{
  const blob=file('WigleWifi-1.6,appRelease=test\n',header,row(0,'Home router').repeat(25000),Array.from({length:601},(_,i)=>row(i)).join(''),row(0));
  assert.ok(blob.size>WARD_MAX_BYTES);
  // Never materialize the full file. The implementation must read slices.

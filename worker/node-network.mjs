@@ -1,6 +1,7 @@
 /* Church of Malware / saviorSEC · AGPL-3.0-or-later */
 import {updateHistory} from './observation-profile.mjs';
 import {importWardrive} from './wardrive-ingest.mjs';
+import {WARD_MAX_BYTES,WARD_MAX_ROWS,WARD_MAX_MATCHES} from './wardrive-parser.mjs';
 import {importArchive} from './archive-ingest.mjs';
 import {DurableObject} from 'cloudflare:workers';
 import {UUID,envelope,validateBatch,nodeRecord,nodeIdentity,mergeNodeRows,RETENTION} from './node-records.mjs';
@@ -156,7 +157,7 @@ export class NodeNetwork extends DurableObject{
   }
   if(wardrive){
    if(node.scope!=='wardrive')return reply({error:'Use a wardrive upload token'},403);
-   if(request.method==='GET')return reply({ok:true,scope:'wardrive',format:'WiGLE CSV',max_file_bytes:2097152,max_rows:10000,max_candidates:500});
+   if(request.method==='GET')return reply({ok:true,scope:'wardrive',format:'WiGLE CSV',max_file_bytes:WARD_MAX_BYTES,max_rows:WARD_MAX_ROWS,max_candidates:WARD_MAX_MATCHES});
    try{const result=await importWardrive(this,request,node,tokenHash,now);this.prune(now);if(result.accepted&&!await this.ctx.storage.getAlarm())await this.ctx.storage.setAlarm(Date.now()+300000);return reply(result);}
    catch(e){return reply({error:e.status?e.message:'Unable to import this file.'},e.status||500);}
   }
