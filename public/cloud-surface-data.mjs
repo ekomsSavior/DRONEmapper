@@ -23,7 +23,7 @@ export const cloudSurfaces = {
       "source": "https://apidocs.skydio.com/docs/exploring-the-skydio-cloud-api",
       "gap": "Cloud account membership and aircraft identity cannot be established from a domain lookup.",
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Cloud",
       "useful": "Fleet owners can examine permitted flight-history exports and distinguish stored flights from streaming telemetry.",
@@ -32,7 +32,7 @@ export const cloudSurfaces = {
     {
       "id": "fusus",
       "vendor": "Axon / Fusus",
-      "name": "Skydio \u2192 FususONE",
+      "name": "Skydio → FususONE",
       "category": "Drones",
       "path": [
         "Skydio X10 / X2 / R10",
@@ -49,7 +49,7 @@ export const cloudSurfaces = {
       "source": "https://www.axon.com/help/axon-air/robotics-and-drones/axon-air/livestreaming-skydio.htm",
       "gap": "A documented integration is not a public flight feed or proof it is enabled at a particular department.",
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Cloud",
       "useful": "Agency operators can check the official integration prerequisites and device groups; this catalog does not connect to their account.",
@@ -73,7 +73,7 @@ export const cloudSurfaces = {
       "source": "https://www.axon.com/blog/skydio-autonomous-drones-now-integrate-with-axon-respond-for-public-safety",
       "gap": "Current tenant endpoints and live flight records are not published by this source.",
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Cloud",
       "useful": "Check which agency integration is actually enabled before attributing a drone stream to Respond.",
@@ -97,7 +97,7 @@ export const cloudSurfaces = {
       "source": "https://www.dedrone.com/solutions/dedrone-beyond",
       "gap": "This publication does not establish MQTT endpoints, RF fingerprints or a public track API.",
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Deployment dependent",
       "useful": "Useful context for identifying sensor inputs; this source does not provide an importable public track feed.",
@@ -121,7 +121,7 @@ export const cloudSurfaces = {
       "source": "https://carbyne.com/cloud-advantage/carbyne-integrations/",
       "gap": "No specific aircraft, robot or drone location can be inferred from the cloud platform or its public website.",
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Cloud",
       "useful": "Use as emergency-platform context; a dispatch or caller location is not a drone location.",
@@ -147,7 +147,7 @@ export const cloudSurfaces = {
       "source": "https://developer.dji.com/doc/cloud-api-tutorial/en/overview/product-architecture.html",
       "gap": "Enterprise product support varies. MQTT traffic alone does not identify a drone; the aircraft does not connect directly to this cloud interface.",
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Cloud + edge",
       "useful": "Operators can evaluate gateway telemetry from their own configured platform. A generic MQTT log needs DJI-specific schema validation.",
@@ -172,7 +172,7 @@ export const cloudSurfaces = {
       "source": "https://dev.bostondynamics.com/docs/concepts/orbit/orbit_api.html",
       "gap": "An Orbit instance may be privately hosted. A fleet record does not guarantee public GPS or current movement.",
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Deployment dependent",
       "useful": "Spot fleet operators can inspect permitted robot and run records; local site coordinates require a verified georeference before mapping.",
@@ -189,19 +189,25 @@ export const cloudSurfaces = {
         "Authorized application"
       ],
       "protocols": [
-        "REST API",
+        "REST / HTTP JSON",
+        "gRPC / Protobuf",
         "SDK"
       ],
-      "data": "Entity, object, task and video interfaces in the documented platform.",
+      "data": "Entities, Tasks, Objects and Video interfaces. Entities and Tasks support REST and gRPC; Objects file operations use REST. Internal Lattice exchanges use gRPC / Protobuf.",
       "access": "Authorized deployment integration; no public operational feed verified.",
       "source": "https://developer.anduril.com/reference/overview/overview",
       "gap": "Platform API documentation does not reveal deployed units, device radio signatures or public locations.",
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Deployment dependent",
       "useful": "Integrator reference for documented entity schemas; no operational records are supplied by this catalog.",
-      "related": []
+      "related": [
+        {
+          "name": "Documented data flow and protocols",
+          "url": "https://developer.anduril.com/guides/concepts/overview"
+        }
+      ]
     },
     {
       "id": "mir",
@@ -221,7 +227,7 @@ export const cloudSurfaces = {
       "source": "https://mobile-industrial-robots.com/products/software/mir-fleet",
       "gap": "Fleet management can be local. Published APIs do not establish internet exposure, GPS positions or a public fleet feed.",
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Deployment dependent",
       "useful": "Fleet operators can assess timestamped status exports. Indoor map coordinates must be transformed using a verified site reference.",
@@ -255,7 +261,7 @@ export const cloudSurfaces = {
         }
       ],
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -289,7 +295,7 @@ export const cloudSurfaces = {
         }
       ],
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -324,7 +330,7 @@ export const cloudSurfaces = {
         }
       ],
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -354,7 +360,7 @@ export const cloudSurfaces = {
         }
       ],
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -378,7 +384,7 @@ export const cloudSurfaces = {
       "useful": "Useful historical evidence requires capture dates and a verified footprint, with permission to redistribute the metadata.",
       "related": [],
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -408,7 +414,7 @@ export const cloudSurfaces = {
         }
       ],
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -432,7 +438,7 @@ export const cloudSurfaces = {
       "useful": "Node builders can evaluate their own telemetry output; a bridge needs message validation, timestamp handling and vehicle identity checks.",
       "related": [],
       "evidence": "Published documentation",
-      "connector": "Reference only \u2014 no vendor telemetry connector enabled",
+      "connector": "Reference only — no vendor telemetry connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -462,7 +468,7 @@ export const cloudSurfaces = {
       "access": "Customer-authorized integration; no public fleet access established.",
       "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
       "evidence": "Published documentation",
-      "connector": "Research reference \u2014 no live connector enabled",
+      "connector": "Research reference — no live connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -491,7 +497,7 @@ export const cloudSurfaces = {
       "access": "Customer-authorized integration; no public fleet access established.",
       "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
       "evidence": "Published documentation",
-      "connector": "Research reference \u2014 no live connector enabled",
+      "connector": "Research reference — no live connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -521,7 +527,7 @@ export const cloudSurfaces = {
       "access": "Customer-authorized integration; no public fleet access established.",
       "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
       "evidence": "Published documentation",
-      "connector": "Research reference \u2014 no live connector enabled",
+      "connector": "Research reference — no live connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -545,7 +551,7 @@ export const cloudSurfaces = {
       "access": "Customer-authorized integration; no public fleet access established.",
       "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
       "evidence": "Published documentation",
-      "connector": "Research reference \u2014 no live connector enabled",
+      "connector": "Research reference — no live connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -569,7 +575,7 @@ export const cloudSurfaces = {
       "access": "Customer-authorized integration; no public fleet access established.",
       "useful": "Operators can assess their own timestamped exports. Dedicated import support would need validation.",
       "evidence": "Published documentation",
-      "connector": "Research reference \u2014 no live connector enabled",
+      "connector": "Research reference — no live connector enabled",
       "reviewed_on": "2026-10-25"
     },
     {
@@ -590,7 +596,7 @@ export const cloudSurfaces = {
       "source": "https://www.flocksafety.com/products/flock-dfr",
       "gap": "No public live fleet endpoint or Flock-specific over-the-air signature verified. Platform membership is not an aircraft identity.",
       "evidence": "Manufacturer documentation",
-      "connector": "Reference only \u2014 no live vendor connector enabled",
+      "connector": "Reference only — no live vendor connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Vendor platform",
       "useful": "Retain original flight times and agency attribution in authorized exports. Public portal links do not imply an active importer.",
@@ -623,7 +629,7 @@ export const cloudSurfaces = {
       "source": "https://www.flocksafety.com/blog/aerodome-and-flock-safety-forge-strategic-partnership-to-expand-drone-as-first-responder-technology-for-public-safety-agencies",
       "gap": "No public live fleet endpoint or Flock-specific over-the-air signature verified. Platform membership is not an aircraft identity.",
       "evidence": "Manufacturer documentation",
-      "connector": "Reference only \u2014 no live vendor connector enabled",
+      "connector": "Reference only — no live vendor connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Vendor platform",
       "useful": "Retain original flight times and agency attribution in authorized exports. Public portal links do not imply an active importer.",
@@ -656,7 +662,7 @@ export const cloudSurfaces = {
       "source": "https://www.flocksafety.com/blog/flock-safety-launches-flock-aerodome-drone-as-automated-security",
       "gap": "No public live fleet endpoint or Flock-specific over-the-air signature verified. Platform membership is not an aircraft identity.",
       "evidence": "Manufacturer documentation",
-      "connector": "Reference only \u2014 no live vendor connector enabled",
+      "connector": "Reference only — no live vendor connector enabled",
       "reviewed_on": "2026-10-25",
       "hosting": "Vendor platform",
       "useful": "Retain original flight times and agency attribution in authorized exports. Public portal links do not imply an active importer.",
@@ -670,6 +676,85 @@ export const cloudSurfaces = {
           "url": "https://docs.flocksafety.com/"
         }
       ]
+    },
+    {
+      "vendor": "Unitree Robotics",
+      "name": "SDK2 / ROS 2 local communications",
+      "path": [
+        "Go2 / B2 / H1 (supported SDK configurations)",
+        "Ethernet / local network",
+        "CycloneDDS / SDK2",
+        "ROS 2 application"
+      ],
+      "protocols": [
+        "DDS",
+        "ROS 2"
+      ],
+      "data": "Robot state and application commands in supported SDK configurations.",
+      "access": "A configured robot and developer network connection.",
+      "hosting": "Local / onboard",
+      "source": "https://github.com/unitreerobotics/unitree_ros2/blob/master/README.md",
+      "gap": "Not evidence of a vendor cloud path or support on every retail configuration.",
+      "useful": "Examine DDS domain, participant discovery and control-versus-state topic boundaries on an authorized robot network.",
+      "id": "unitree-sdk2",
+      "category": "Robotics / local networks",
+      "evidence": "Official developer documentation",
+      "reviewed_on": "2026-10-25",
+      "connector": "Reference only — no telemetry connector enabled",
+      "related": []
+    },
+    {
+      "vendor": "DEEP Robotics",
+      "name": "DR02 communication architecture",
+      "path": [
+        "DR02 robot",
+        "Robot networking interface",
+        "TCP / UDP or ROS 2 interface",
+        "External developer system"
+      ],
+      "protocols": [
+        "TCP",
+        "UDP",
+        "ROS 2"
+      ],
+      "data": "Robot-to-host communications through documented development interfaces.",
+      "access": "Configured developer connection; interface depends on selected development mode.",
+      "hosting": "Local / onboard",
+      "source": "https://developer.deeprobotics.cn/docs/dr02/guide/communication/architecture/",
+      "gap": "Applies to DR02 documentation; does not establish other models or an internet-accessible robot.",
+      "useful": "Review the robot / external-host boundary and the selected interface implementation.",
+      "id": "deep-dr02",
+      "category": "Robotics / local networks",
+      "evidence": "Official developer documentation",
+      "reviewed_on": "2026-10-25",
+      "connector": "Reference only — no telemetry connector enabled",
+      "related": []
+    },
+    {
+      "vendor": "Clearpath Robotics / OTTO Motors",
+      "name": "Clearpath ROS 2 networking (Clearpath scope only)",
+      "path": [
+        "Supported Clearpath ROS 2 robot",
+        "Ethernet / Wi-Fi network",
+        "eProsima Fast DDS",
+        "ROS 2 workstation"
+      ],
+      "protocols": [
+        "ROS 2",
+        "Fast DDS"
+      ],
+      "data": "ROS 2 distributed messages on the configured robot network.",
+      "access": "Configured local network and compatible middleware.",
+      "hosting": "Local / onboard",
+      "source": "https://docs.clearpathrobotics.com/docs/ros/networking/overview/",
+      "gap": "This evidence covers Clearpath ROS 2 robots, not OTTO fleet software merely because a map manufacturer label combines their names.",
+      "useful": "Review discovery, middleware compatibility and network separation; no cloud path established.",
+      "id": "clearpath-ros2",
+      "category": "Robotics / local networks",
+      "evidence": "Official developer documentation",
+      "reviewed_on": "2026-10-25",
+      "connector": "Reference only — no telemetry connector enabled",
+      "related": []
     }
   ],
   "connections": [
@@ -688,7 +773,7 @@ export const cloudSurfaces = {
     {
       "from_id": "vendor:Boston Dynamics",
       "to_id": "percepto",
-      "label": "Spot hardware integration \u00b7 published 2021",
+      "label": "Spot hardware integration · published 2021",
       "source": "https://percepto.co/wp-content/uploads/2021/05/Spot-and-Base-.pdf"
     },
     {

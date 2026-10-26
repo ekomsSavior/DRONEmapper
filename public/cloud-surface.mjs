@@ -20,13 +20,13 @@ $('cloud-hosting').addEventListener('change',render);
 $('cloud-search').addEventListener('input',render);$('cloud-category').addEventListener('change',render);render();
 
 // Shared map coverage augments, rather than replaces, documented service paths.
-import {loadMapInventory,servicesForVendor,vendorInventory,deviceLinks} from './map-device-coverage.mjs';
+import {loadMapInventory,servicesForVendor,vendorInventory,deviceLinks,researchInventory} from './map-device-coverage.mjs';
 const coverage=el('section','');coverage.className='reference-feature';coverage.id='map-device-coverage';
 coverage.append(el('h2','Map device coverage'));
 const search=el('input','');search.type='search';search.placeholder='Find a manufacturer or model';search.setAttribute('aria-label','Search map device coverage');
 const status=el('p','Loading map models…'),cards=el('div','');cards.className='reference-grid';const controls=el('div','');controls.className='reference-controls';const searchLabel=el('label','Search mapped devices');searchLabel.append(search);controls.append(searchLabel);coverage.append(controls,status,cards);$('cloud-list').before(coverage);
 loadMapInventory().then(data=>{
- let limit=12;const vendors=vendorInventory(data.models);search.value=new URLSearchParams(location.search).get('vendor')||'';
+ let limit=12;const vendors=vendorInventory(researchInventory(data.models));search.value=new URLSearchParams(location.search).get('vendor')||'';
  function show(){const q=search.value.toLowerCase(),rows=vendors.filter(([v,models])=>[v,...models.map(m=>m.name)].join(' ').toLowerCase().includes(q));cards.replaceChildren();status.textContent=`${rows.length} manufacturers / unknown groups · ${data.models.length} map model groups`;
   for(const [vendor,models] of rows.slice(0,limit)){const card=el('article','');card.className='reference-card';card.append(el('h2',vendor),el('p',`${models.length} model groups · ${models.reduce((n,m)=>n+m.records,0).toLocaleString()} map records`));
    const services=servicesForVendor(vendor);card.append(el('p',services.length?'Documented vendor services: '+services.map(s=>s.name).join(', ')+'. Model-specific participation requires separate evidence.':'Cloud service and model-specific communications not yet verified.'));
