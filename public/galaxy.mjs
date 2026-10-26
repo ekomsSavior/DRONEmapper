@@ -1,6 +1,6 @@
-import {vendorFlow} from './vendor-flow-model.mjs?v=20261026-networks-167';
-import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261026-networks-167';
-import {buildGalaxy} from './galaxy-model.mjs?v=20261026-networks-167';
+import {vendorFlow} from './vendor-flow-model.mjs?v=20261026-networks-196';
+import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261026-networks-196';
+import {buildGalaxy} from './galaxy-model.mjs?v=20261026-networks-196';
 const {nodes,edges}=buildGalaxy(),byId=new Map(nodes.map(n=>[n.id,n]));
 const $=id=>document.getElementById(id),svg=$('universe'),space=$('space'),NS='http://www.w3.org/2000/svg';
 const el=(tag,text)=>{const e=document.createElement(tag);e.textContent=text;return e;};
@@ -38,7 +38,7 @@ $('search').addEventListener('input',filter);$('category').addEventListener('cha
 applyView();
 
 // Expand one vendor's device constellation on demand, preserving every researched edge.
-import {loadMapInventory,vendorInventory,servicesForVendor,deviceLinks,researchInventory,canonicalVendor} from './map-device-coverage.mjs?v=20261026-networks-167';
+import {loadMapInventory,vendorInventory,servicesForVendor,deviceLinks,researchInventory,canonicalVendor} from './map-device-coverage.mjs?v=20261026-networks-196';
 const inventoryPanel=el('section','');inventoryPanel.append(el('h2','Vendors & devices'));
 const inventorySearch=el('input','');inventorySearch.type='search';inventorySearch.placeholder='Search mapped models';inventorySearch.setAttribute('aria-label','Search mapped models');
 const vendorSelect=el('select','');vendorSelect.setAttribute('aria-label','Vendor or platform');const inventoryNote=el('p','Loading map inventory…');inventoryPanel.append(inventorySearch,vendorSelect,inventoryNote);$('results').after(inventoryPanel);

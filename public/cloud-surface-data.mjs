@@ -7659,6 +7659,1494 @@ export const cloudSurfaces = {
           "boundary": "Configured customer fleet and facility integrations."
         }
       ]
+    },
+    {
+      "id": "donecle-inspection",
+      "vendor": "Donecle",
+      "name": "Iris / image analysis / inspection history",
+      "category": "Drones",
+      "hosting": "Vendor cloud",
+      "path": [
+        "Iris inspection drone",
+        "Image analysis software",
+        "Donecle cloud history",
+        "Authorized airline / MRO"
+      ],
+      "protocols": [
+        "Image processing and cloud storage; transport unpublished"
+      ],
+      "data": "Aircraft-surface images become defect reports and a retained inspection history.",
+      "access": "Customer inspection workspace; third-party access is customer-controlled.",
+      "gap": "This is an inspection-data workflow, not a live flight feed. The source does not specify upload transport or a public API.",
+      "source": "https://www.donecle.com/resources/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Inspection imagery",
+          "data": "Collected pictures enter image analysis.",
+          "direction": "forward",
+          "source": "https://www.donecle.com/resources/",
+          "boundary": "Customer inspection workspace; third-party access is customer-controlled."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Inspection archive",
+          "data": "Images and reports are stored for historical comparison.",
+          "direction": "forward",
+          "source": "https://www.donecle.com/resources/",
+          "boundary": "Customer inspection workspace; third-party access is customer-controlled."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Customer review",
+          "data": "Authorized access to retained inspection evidence.",
+          "direction": "forward",
+          "source": "https://www.donecle.com/resources/",
+          "boundary": "Customer inspection workspace; third-party access is customer-controlled."
+        }
+      ]
+    },
+    {
+      "id": "agibot-linksoul",
+      "vendor": "AgiBot",
+      "name": "Lingxi X2 / LinkSoul interaction gateway",
+      "category": "Humanoid robots",
+      "hosting": "Robot / interaction cloud",
+      "path": [
+        "X2 robot / SDK client",
+        "LinkSoul development gateway",
+        "Interaction gateway / AI services"
+      ],
+      "protocols": [
+        "LinkSoul-AgentSDK; wire transport unspecified"
+      ],
+      "data": "Speech, text and multimodal interaction use published agents and a common gateway.",
+      "access": "Developer application credentials and configured agents.",
+      "gap": "AimDK X2 documentation establishes this integration. It does not establish identical interfaces on A2, A2-W or G2.",
+      "source": "https://x2-aimdk.agibot.com/en/latest/Interface/interactor/linksoul.html",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Authenticated SDK session",
+          "data": "Application interaction input and responses.",
+          "direction": "both",
+          "source": "https://x2-aimdk.agibot.com/en/latest/Interface/interactor/linksoul.html",
+          "boundary": "Developer application credentials and configured agents."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Interaction dispatch",
+          "data": "Configured algorithms, channel APIs and developer services supply responses.",
+          "direction": "both",
+          "source": "https://x2-aimdk.agibot.com/en/latest/Interface/interactor/linksoul.html",
+          "boundary": "Developer application credentials and configured agents."
+        }
+      ]
+    },
+    {
+      "id": "neura-neuraverse",
+      "vendor": "NEURA Robotics",
+      "name": "MiPA / Neuraverse learning platform",
+      "category": "Service robots",
+      "hosting": "Announced AWS-backed platform",
+      "path": [
+        "MiPA / participating robots",
+        "Neuraverse",
+        "NEURA Gym / AWS training services"
+      ],
+      "protocols": [
+        "Shared-learning platform; transport unpublished"
+      ],
+      "data": "MiPA is described as learning through Neuraverse. The 2026 AWS collaboration describes cloud training and fleet intelligence sharing.",
+      "access": "Vendor robot ecosystem; commercial availability and permissions depend on the product.",
+      "gap": "AWS infrastructure is an announced collaboration. The sources do not verify rollout to an individual MiPA or expose a fleet API.",
+      "source": "https://neura-robotics.com/product/mipa-reservation/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Shared learning",
+          "data": "Experience-sharing and new-capability workflow; exact direction per message is unpublished.",
+          "direction": "unspecified",
+          "source": "https://neura-robotics.com/product/mipa-reservation/",
+          "boundary": "Vendor robot ecosystem; commercial availability and permissions depend on the product."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Announced training integration",
+          "data": "Cloud infrastructure and training pipelines support Neuraverse.",
+          "direction": "unspecified",
+          "source": "https://press.aboutamazon.com/aws/2026/4/neura-robotics-and-aws-enter-strategic-collaboration-to-accelerate-physical-ai-at-scale",
+          "boundary": "Vendor robot ecosystem; commercial availability and permissions depend on the product."
+        }
+      ]
+    },
+    {
+      "id": "amazon-deepfleet",
+      "vendor": "Amazon",
+      "name": "Fulfillment robots / DeepFleet learning",
+      "category": "Warehouse robots",
+      "hosting": "AWS training / fulfillment operations",
+      "path": [
+        "Inventory movement data",
+        "Amazon SageMaker AI / DeepFleet training",
+        "DeepFleet coordination",
+        "Fulfillment drive units"
+      ],
+      "protocols": [
+        "Model training and fleet orchestration; transport unpublished"
+      ],
+      "data": "Movement data trains a fleet-coordination model used to improve fulfillment robot traffic.",
+      "access": "Amazon internal operations.",
+      "gap": "This covers warehouse robotics. It does not document Prime Air MK30 aircraft connectivity or an externally accessible fleet API.",
+      "source": "https://aws.amazon.com/about-aws/learn-from-amazon/e-commerce/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Training input",
+          "data": "Inventory movements inform model training.",
+          "direction": "forward",
+          "source": "https://aws.amazon.com/about-aws/learn-from-amazon/e-commerce/",
+          "boundary": "Amazon internal operations."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Model application",
+          "data": "The trained model provides fleet-coordination intelligence; deployment routing is unpublished.",
+          "direction": "forward",
+          "source": "https://aws.amazon.com/about-aws/learn-from-amazon/e-commerce/",
+          "boundary": "Amazon internal operations."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Traffic coordination",
+          "data": "DeepFleet coordinates drive units such as Hercules and Pegasus.",
+          "direction": "forward",
+          "source": "https://aws.amazon.com/about-aws/learn-from-amazon/e-commerce/",
+          "boundary": "Amazon internal operations."
+        }
+      ]
+    },
+    {
+      "id": "ehang-eh216s-control",
+      "vendor": "EHang",
+      "name": "EH216-S / ground coordination",
+      "category": "Drones",
+      "hosting": "Aircraft / ground operations",
+      "path": [
+        "EH216-S",
+        "Ground command-and-control system"
+      ],
+      "protocols": [
+        "Encrypted aircraft communications; transport unpublished"
+      ],
+      "data": "Flight data and ground coordination support monitoring, dispatch and emergency handling.",
+      "access": "Configured aircraft and authorized ground operations.",
+      "gap": "Published product claims do not identify a decodable RF protocol, public telemetry endpoint, or the configuration of a particular aircraft.",
+      "source": "https://www.ehang.com/ehang216s/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Flight status / ground coordination",
+          "data": "Real-time aircraft data exchange and ground operational instructions.",
+          "direction": "both",
+          "source": "https://www.ehang.com/ehang216s/",
+          "boundary": "Configured aircraft and authorized ground operations."
+        }
+      ]
+    },
+    {
+      "id": "manna-connected-operations",
+      "vendor": "Manna Air Delivery",
+      "name": "Cubic3 connectivity / Manna OS",
+      "category": "Drones",
+      "hosting": "Connectivity provider / vendor operations",
+      "path": [
+        "Manna aircraft fleet",
+        "Cubic3 connectivity services",
+        "Manna cloud services / Manna OS",
+        "Operations staff / order integrations"
+      ],
+      "protocols": [
+        "Managed connectivity; LTE / 5G readiness",
+        "OTA updates",
+        "Application protocol unpublished"
+      ],
+      "data": "Connected fleet oversight and updates support delivery operations; Manna OS handles dispatch and order status.",
+      "access": "Manna operations and configured commercial integrations.",
+      "gap": "These are logical service roles, not a packet-routing diagram. Readiness for LTE or 5G does not prove either bearer on every flight. Manna Mesh refers to delivery bases, not a verified RF mesh.",
+      "source": "https://www.cubic3.com/customer-stories/manna-takes-drone-delivery-to-the-skies-with-our-smart-connectivity/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Connectivity / updates",
+          "data": "Fleet connectivity supports oversight and over-the-air software delivery.",
+          "direction": "both",
+          "source": "https://www.cubic3.com/customer-stories/manna-takes-drone-delivery-to-the-skies-with-our-smart-connectivity/",
+          "boundary": "Manna operations and configured commercial integrations."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Cloud integration",
+          "data": "Connectivity services integrate with Manna-developed cloud services.",
+          "direction": "unspecified",
+          "source": "https://www.cubic3.com/customer-stories/manna-takes-drone-delivery-to-the-skies-with-our-smart-connectivity/",
+          "boundary": "Manna operations and configured commercial integrations."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Operations / order workflow",
+          "data": "Dispatch, aircraft status and order-platform integration.",
+          "direction": "both",
+          "source": "https://www.manna.aero/technology",
+          "boundary": "Manna operations and configured commercial integrations."
+        }
+      ],
+      "map_vendor_names": [
+        {
+          "name": "Manna Aero",
+          "scope": "Manna delivery operations and connectivity; aircraft generation may differ.",
+          "source": "https://www.manna.aero/technology"
+        }
+      ]
+    },
+    {
+      "id": "fanuc-zdt",
+      "vendor": "FANUC Corporation",
+      "name": "ZDT / factory collectors / cloud or local storage",
+      "category": "Industrial robots",
+      "hosting": "Local server or optional ZDT Cloud",
+      "path": [
+        "FANUC robot controllers",
+        "Factory collector",
+        "ZDT Cloud",
+        "Local ZDT server",
+        "Authorized browser / maintenance staff"
+      ],
+      "protocols": [
+        "Ethernet",
+        "Web portal; application transport unpublished"
+      ],
+      "data": "Robot health and process information support maintenance analytics and customer reports.",
+      "access": "Configured ZDT installation and customer accounts.",
+      "gap": "Cloud and on-premise storage are alternatives. A listed arm model alone does not establish ZDT enablement, controller compatibility or an internet connection.",
+      "source": "https://www.fanuc.co.jp/en/product/catalog/pdf/robot/ZDT(E)-05.pdf",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Robot health collection",
+          "data": "Configured robot data reaches a factory collector.",
+          "direction": "forward",
+          "source": "https://www.fanucamerica.com/press-releases/fanuc-americas-robot-linki-zero-down-time-zdt-available-on-all-fanuc-robots",
+          "boundary": "Configured ZDT installation and customer accounts."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Cloud configuration",
+          "data": "Collected messages reach ZDT Cloud when that option is installed.",
+          "direction": "forward",
+          "source": "https://www.fanuc.co.jp/en/product/catalog/pdf/robot/ZDT(E)-05.pdf",
+          "boundary": "Configured ZDT installation and customer accounts."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "On-premise configuration",
+          "data": "Local server and collector retain data inside the factory.",
+          "direction": "forward",
+          "source": "https://www.fanuc.co.jp/en/product/catalog/pdf/robot/ZDT(E)-05.pdf",
+          "boundary": "Configured ZDT installation and customer accounts."
+        },
+        {
+          "from_index": 2,
+          "to_index": 4,
+          "label": "Cloud reports",
+          "data": "Authorized health and performance review.",
+          "direction": "forward",
+          "source": "https://www.fanuc.co.jp/en/product/catalog/pdf/robot/ZDT(E)-05.pdf",
+          "boundary": "Configured ZDT installation and customer accounts."
+        },
+        {
+          "from_index": 3,
+          "to_index": 4,
+          "label": "Local reports",
+          "data": "Browser access to locally retained data.",
+          "direction": "forward",
+          "source": "https://www.fanuc.co.jp/en/product/catalog/pdf/robot/ZDT(E)-05.pdf",
+          "boundary": "Configured ZDT installation and customer accounts."
+        }
+      ]
+    },
+    {
+      "id": "nilfisk-sc60-brainos",
+      "vendor": "Nilfisk",
+      "name": "Liberty SC60 / BrainOS operations",
+      "category": "Service robots",
+      "hosting": "Onboard / Brain Corp cloud",
+      "path": [
+        "SC60 sensors / onboard storage",
+        "Embedded cellular modem",
+        "Brain Corp operations cloud",
+        "Optional customer portal / notifications"
+      ],
+      "protocols": [
+        "Cellular modem",
+        "Encrypted storage / secure transfer; detailed transport unpublished"
+      ],
+      "data": "Selected machine telemetry and assistance images support autonomous cleaning, diagnosis and fleet reporting.",
+      "access": "BrainOS service agreement and optional customer accounts.",
+      "gap": "SC60-specific documentation; SC50 uses a different published connectivity workflow. Local data is not all uploaded, and this does not expose public robot locations.",
+      "source": "https://www.nilfisk.com/media/cnodeeyh/sc60-machine-data-faq-letter_en.pdf",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Selected operational data",
+          "data": "Status, usage and assistance-event data selected for transfer.",
+          "direction": "forward",
+          "source": "https://www.nilfisk.com/media/cnodeeyh/sc60-machine-data-faq-letter_en.pdf",
+          "boundary": "BrainOS service agreement and optional customer accounts."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Cellular upload",
+          "data": "Limited data reaches the cloud operations environment.",
+          "direction": "forward",
+          "source": "https://www.nilfisk.com/media/cnodeeyh/sc60-machine-data-faq-letter_en.pdf",
+          "boundary": "BrainOS service agreement and optional customer accounts."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Optional customer services",
+          "data": "Operational portal access and machine notifications.",
+          "direction": "forward",
+          "source": "https://www.nilfisk.com/media/cnodeeyh/sc60-machine-data-faq-letter_en.pdf",
+          "boundary": "BrainOS service agreement and optional customer accounts."
+        }
+      ]
+    },
+    {
+      "id": "lionsbot-cloud-api",
+      "vendor": "LionsBot",
+      "name": "LionsCloud / FacilityBot integration",
+      "category": "Service robots",
+      "hosting": "Vendor cloud / authorized integration",
+      "path": [
+        "LionsBot cleaning robots",
+        "LionsCloud",
+        "FacilityBot Cloud API client"
+      ],
+      "protocols": [
+        "Cloud API polling; detailed wire protocol unspecified"
+      ],
+      "data": "Cleaning metrics, robot status and diagnostics feed a fleet dashboard; an authorized integration polls paired robots.",
+      "access": "Paired fleet and configured integration credentials.",
+      "gap": "Integration documentation does not establish a radio fingerprint or unrestricted cloud access. API coverage depends on the paired model and account.",
+      "source": "https://blog.facilitybot.co/blog/knowledge-base/integrations/lionsbot-robot-integration/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Fleet reporting",
+          "data": "Coverage, battery and maintenance information reaches LionsCloud.",
+          "direction": "forward",
+          "source": "https://www.lionsbot.com/",
+          "boundary": "Paired fleet and configured integration credentials."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Polling / telemetry response",
+          "data": "Configured API requests return operational readings for dashboard and workflow use.",
+          "direction": "both",
+          "source": "https://blog.facilitybot.co/blog/knowledge-base/integrations/lionsbot-robot-integration/",
+          "boundary": "Paired fleet and configured integration credentials."
+        }
+      ]
+    },
+    {
+      "id": "tennant-brainos",
+      "vendor": "Tennant Company",
+      "name": "Autonomous cleaners / BrainOS analytics",
+      "category": "Service robots",
+      "hosting": "Onboard / US-based cloud",
+      "path": [
+        "BrainOS-enabled Tennant cleaner",
+        "BrainOS cloud analytics",
+        "Authorized operations manager"
+      ],
+      "protocols": [
+        "Encrypted transfer; transport unpublished",
+        "Role-based dashboard access"
+      ],
+      "data": "Machine usage and performance reports provide cleaning oversight and notifications.",
+      "access": "Authorized role-based fleet access.",
+      "gap": "This describes supported BrainOS-enabled machines, not every Tennant product. The public page does not specify APIs or robot radio identifiers.",
+      "source": "https://www.tennantco.com/en_us/robotics/robotic-technology/robotic-data-and-security.html",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Operational data",
+          "data": "Selected robot information is processed in the cloud.",
+          "direction": "forward",
+          "source": "https://www.tennantco.com/en_us/robotics/robotic-technology/robotic-data-and-security.html",
+          "boundary": "Authorized role-based fleet access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Analytics / notifications",
+          "data": "Usage, performance and timely notifications support operations.",
+          "direction": "forward",
+          "source": "https://www.tennantco.com/en_us/robotics/robotic-technology/robotic-data-and-security.html",
+          "boundary": "Authorized role-based fleet access."
+        }
+      ]
+    },
+    {
+      "id": "cnh-fieldops",
+      "vendor": "CNH Industrial",
+      "name": "FieldOps / connected machine API",
+      "category": "Agricultural vehicles",
+      "hosting": "Vendor account platform",
+      "path": [
+        "Connected agricultural / construction equipment",
+        "FieldOps account",
+        "Authorized REST application"
+      ],
+      "protocols": [
+        "REST",
+        "ISO 15143-3 telemetry",
+        "OAuth-style authorization / refresh tokens"
+      ],
+      "data": "Linked equipment contributes vehicle telemetry and agronomic data for customer applications.",
+      "access": "Application registration, account authorization and scoped data availability.",
+      "gap": "This is a data API. It does not establish a remote-steering interface or prove FieldOps is the control path for Raven autonomy.",
+      "source": "https://develop.cnh.com/api-guides/fieldops-api",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Account and linked-data availability",
+          "url": "https://develop.cnh.com/get-started/fieldops-portal"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Connected equipment data",
+          "data": "Vehicle telemetry and available agronomic information reach the account platform.",
+          "direction": "forward",
+          "source": "https://develop.cnh.com/api-guides/fieldops-api",
+          "boundary": "Application registration, account authorization and scoped data availability."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Authorized REST exchange",
+          "data": "Locations, operating hours and other documented resources; configured file operations also exist.",
+          "direction": "both",
+          "source": "https://develop.cnh.com/api-guides/fieldops-api",
+          "boundary": "Application registration, account authorization and scoped data availability."
+        }
+      ]
+    },
+    {
+      "id": "hitachi-ahs-fms",
+      "vendor": "Hitachi Construction Machinery",
+      "name": "AHS / Wenco fleet management / support",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Mine operations / remote support",
+      "path": [
+        "Autonomous haul trucks",
+        "Wenco FMS / AHS mine operations",
+        "TCoE remote support center"
+      ],
+      "protocols": [
+        "Fleet integration; detailed transport unpublished"
+      ],
+      "data": "Haulage coordination and mine status support fleet operation and remote engineering assistance.",
+      "access": "Configured mine fleet and contracted remote support.",
+      "gap": "The sources establish functional integration, not a public command endpoint or a radio protocol shared by all Hitachi equipment.",
+      "source": "https://www.hitachicm.com/global/en/solutions/solution-linkage/ahs/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Haulage tasks / fleet state",
+          "data": "Fleet dispatch and equipment information support autonomous haulage.",
+          "direction": "both",
+          "source": "https://www.hitachicm.com/global/en/solutions/solution-linkage/ahs/",
+          "boundary": "Configured mine fleet and contracted remote support."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Remote monitoring",
+          "data": "Mine-control-room information is monitored for support.",
+          "direction": "forward",
+          "source": "https://www.hitachicm.com/global/en/news/press-releases/2024/24-02-01/",
+          "boundary": "Configured mine fleet and contracted remote support."
+        }
+      ]
+    },
+    {
+      "id": "liebherr-iomine-ahs",
+      "vendor": "Liebherr Mining Equipment",
+      "name": "AHS / IoMine fleet integration",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Configured mine operations",
+      "path": [
+        "AHS-enabled haul trucks",
+        "IoMine fleet management",
+        "Mine operations staff"
+      ],
+      "protocols": [
+        "Fleet integration; detailed transport unpublished"
+      ],
+      "data": "Fleet monitoring, assignment and route optimization coordinate connected mining assets.",
+      "access": "Configured mine fleet and operations systems.",
+      "gap": "AHS and FMS options vary by installation. The 2023 T 264 validation announcement does not verify the current configuration of every truck.",
+      "source": "https://www.liebherr.com/shared/media/corporate/news/news_2024/09/24/minexpo/min/iomine/liebherr-press-release-iomine-launch.pdf",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "T 264 AHS validation and FMS option",
+          "url": "https://www.liebherr.com/shared/media/corporate/news/news-2023/08/29/min/liebherr-press-release-deployment-of-ahs-fleet.pdf"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Assignments / vehicle state",
+          "data": "Connected assets exchange operating information and assignments with fleet management.",
+          "direction": "both",
+          "source": "https://www.liebherr.com/shared/media/corporate/news/news_2024/09/24/minexpo/min/iomine/liebherr-press-release-iomine-launch.pdf",
+          "boundary": "Configured mine fleet and operations systems."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Fleet oversight",
+          "data": "Integrated monitoring supplies an operations overview.",
+          "direction": "forward",
+          "source": "https://www.liebherr.com/shared/media/corporate/news/news_2024/09/24/minexpo/min/iomine/liebherr-press-release-iomine-launch.pdf",
+          "boundary": "Configured mine fleet and operations systems."
+        }
+      ]
+    },
+    {
+      "id": "seegrid-fleet-central",
+      "vendor": "Seegrid",
+      "name": "Fleet Central / facility integration",
+      "category": "Warehouse robots",
+      "hosting": "Customer facility",
+      "path": [
+        "Supported AMR fleet",
+        "Fleet Central",
+        "WMS / ERP / MES / PLCs",
+        "Authorized operator"
+      ],
+      "protocols": [
+        "Enterprise and PLC integration; detailed transport unpublished"
+      ],
+      "data": "Fleet software assigns tasks, monitors battery health and coordinates facility material movement.",
+      "access": "Configured customer fleet and enterprise integrations.",
+      "gap": "Multi-vendor support does not imply arbitrary robot compatibility. This page does not define an open radio protocol or unauthenticated API.",
+      "source": "https://seegrid.com/fleet-central/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Tasks / fleet status",
+          "data": "Assignments and status support coordinated material handling.",
+          "direction": "both",
+          "source": "https://seegrid.com/fleet-central/",
+          "boundary": "Configured customer fleet and enterprise integrations."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Facility integration",
+          "data": "Business systems and connected equipment participate in configured workflows.",
+          "direction": "unspecified",
+          "source": "https://seegrid.com/fleet-central/",
+          "boundary": "Configured customer fleet and enterprise integrations."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "Fleet interface",
+          "data": "Authorized users monitor and configure robot jobs.",
+          "direction": "both",
+          "source": "https://seegrid.com/fleet-central/",
+          "boundary": "Configured customer fleet and enterprise integrations."
+        }
+      ]
+    },
+    {
+      "id": "scythe-fleet-app",
+      "vendor": "Scythe Robotics",
+      "name": "M.52 / fleet mobile application",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Vendor application; routing unpublished",
+      "path": [
+        "M.52 mower fleet",
+        "Authorized Scythe mobile application"
+      ],
+      "protocols": [
+        "Application telemetry; transport unpublished"
+      ],
+      "data": "The vendor app displays robot location, status, battery, charging, perimeters and drive mode.",
+      "access": "Customer access to the fleet application.",
+      "gap": "The vendor-published app description establishes displayed data, not cloud topology, wire protocol, public access or remote drive controls.",
+      "source": "https://play.google.com/store/apps/details?id=com.scytherobotics.takeout",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Fleet status display",
+          "data": "Robot information appears in the fleet app; intermediate services are not documented here.",
+          "direction": "forward",
+          "source": "https://play.google.com/store/apps/details?id=com.scytherobotics.takeout",
+          "boundary": "Customer access to the fleet application."
+        }
+      ]
+    },
+    {
+      "id": "brainos-platform",
+      "vendor": "Brain Corp",
+      "name": "BrainOS / enterprise fleet ecosystem",
+      "category": "Robot fleet platforms",
+      "hosting": "Vendor cloud",
+      "path": [
+        "BrainOS-powered machine",
+        "BrainOS fleet platform",
+        "Authorized enterprise application"
+      ],
+      "protocols": [
+        "Enterprise APIs",
+        "OTA updates",
+        "Enterprise SSO / RBAC"
+      ],
+      "data": "Operational data supports fleet learning and enterprise reporting; software updates return to supported machines.",
+      "access": "Partner integration and customer fleet permissions.",
+      "gap": "Platform capabilities do not establish the exact API, network configuration or feature set of every partner model.",
+      "source": "https://www.braincorp.com/brainos",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Robot observations / updates",
+          "data": "Operational information reaches the platform; OTA improvements return to machines.",
+          "direction": "both",
+          "source": "https://www.braincorp.com/brainos",
+          "boundary": "Partner integration and customer fleet permissions."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Enterprise data integration",
+          "data": "Captured robot information is made available to authorized enterprise software.",
+          "direction": "forward",
+          "source": "https://www.braincorp.com/brainos",
+          "boundary": "Partner integration and customer fleet permissions."
+        }
+      ]
+    },
+    {
+      "id": "naver-arc",
+      "vendor": "Naver Labs",
+      "name": "ARC / local 5G cloud robotics",
+      "category": "Robot fleet platforms",
+      "hosting": "NAVER Cloud / local 5G",
+      "path": [
+        "Participating service robot",
+        "Local 5G network",
+        "ARC cloud intelligence"
+      ],
+      "protocols": [
+        "5G",
+        "Cloud robot control; application protocol unspecified"
+      ],
+      "data": "Offboard computing supports shared intelligence and multi-robot control.",
+      "access": "Configured private building deployment.",
+      "gap": "The documented example is NAVER’s second headquarters. It does not establish the topology or radio configuration of every NAVER robot.",
+      "source": "https://www.naverlabs.com/en/5gbrainlessrobot",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "5G connectivity",
+          "data": "Robot communications traverse the configured local network.",
+          "direction": "both",
+          "source": "https://www.naverlabs.com/en/5gbrainlessrobot",
+          "boundary": "Configured private building deployment."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Cloud computation / control",
+          "data": "Robot state and offboard intelligence support control through the cloud.",
+          "direction": "both",
+          "source": "https://www.naverlabs.com/en/5gbrainlessrobot",
+          "boundary": "Configured private building deployment."
+        }
+      ]
+    },
+    {
+      "id": "dusty-fieldprinter",
+      "vendor": "Dusty Robotics",
+      "name": "FieldPrinter 2 / construction layout workflow",
+      "category": "Construction robots",
+      "hosting": "Customer portal / local jobsite",
+      "path": [
+        "Revit / AutoCAD layout",
+        "Dusty Portal",
+        "Dusty app on iPad Pro",
+        "FieldPrinter 2",
+        "Tracker / positioning radio"
+      ],
+      "protocols": [
+        "Digital layout publishing",
+        "Local app / robot integration; transport unspecified"
+      ],
+      "data": "Coordinated building layouts reach a field operator and robot; the tracker establishes local printing position.",
+      "access": "Customer portal access and configured jobsite equipment.",
+      "gap": "The tracker integration is documented, but packet routing and protocol are not. Local construction coordinates are not a public GPS flight feed.",
+      "source": "https://support.dustyrobotics.com/hc/en-us/articles/53228299459355-What-Is-the-Dusty-FieldPrinter-An-Overview-of-the-Layout-Printing-Robot-and-System",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Publish layout",
+          "data": "Prepared construction geometry is published for field use.",
+          "direction": "forward",
+          "source": "https://support.dustyrobotics.com/hc/en-us/articles/53228299459355-What-Is-the-Dusty-FieldPrinter-An-Overview-of-the-Layout-Printing-Robot-and-System",
+          "boundary": "Customer portal access and configured jobsite equipment."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Retrieve field layout",
+          "data": "Authorized operators select published layouts in the tablet workflow.",
+          "direction": "forward",
+          "source": "https://support.dustyrobotics.com/hc/en-us/articles/53228299459355-What-Is-the-Dusty-FieldPrinter-An-Overview-of-the-Layout-Printing-Robot-and-System",
+          "boundary": "Customer portal access and configured jobsite equipment."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Print operation",
+          "data": "The app connects to the robot and manages layout printing.",
+          "direction": "both",
+          "source": "https://support.dustyrobotics.com/hc/en-us/articles/53228299459355-What-Is-the-Dusty-FieldPrinter-An-Overview-of-the-Layout-Printing-Robot-and-System",
+          "boundary": "Customer portal access and configured jobsite equipment."
+        },
+        {
+          "from_index": 4,
+          "to_index": 3,
+          "label": "Positioning integration",
+          "data": "The system uses a tracker and radio to establish robot position; internal routing is unspecified.",
+          "direction": "unspecified",
+          "source": "https://support.dustyrobotics.com/hc/en-us/articles/53228299459355-What-Is-the-Dusty-FieldPrinter-An-Overview-of-the-Layout-Printing-Robot-and-System",
+          "boundary": "Customer portal access and configured jobsite equipment."
+        }
+      ]
+    },
+    {
+      "id": "nomagic-platform",
+      "vendor": "Nomagic",
+      "name": "Physical AI / edge and cloud operations",
+      "category": "Warehouse robots",
+      "hosting": "On-site compute / vendor cloud",
+      "path": [
+        "On-site picking system",
+        "Cloud AI training",
+        "Remote service platform",
+        "Operational integration"
+      ],
+      "protocols": [
+        "OTA models / software",
+        "API / PLC / SCADA integration"
+      ],
+      "data": "Production observations support training; updated models return to edge systems, alongside remote operations and enterprise integration.",
+      "access": "Customer installation and vendor service permissions.",
+      "gap": "These are published logical modules. The source does not specify cloud host, robot radio protocol or an externally accessible fleet endpoint.",
+      "source": "https://nomagic.ai/technology/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Production data / models",
+          "data": "Operational data supports training; retrained models return to edge systems.",
+          "direction": "both",
+          "source": "https://nomagic.ai/technology/",
+          "boundary": "Customer installation and vendor service permissions."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Monitoring / remote operations",
+          "data": "Service tooling monitors deployed systems and supports remote operations and updates.",
+          "direction": "both",
+          "source": "https://nomagic.ai/technology/",
+          "boundary": "Customer installation and vendor service permissions."
+        },
+        {
+          "from_index": 0,
+          "to_index": 3,
+          "label": "Site integration",
+          "data": "The operational layer integrates with APIs, PLCs and SCADA; per-message direction is unpublished.",
+          "direction": "unspecified",
+          "source": "https://nomagic.ai/technology/",
+          "boundary": "Customer installation and vendor service permissions."
+        }
+      ]
+    },
+    {
+      "id": "righthand-rpcc",
+      "vendor": "RightHand Robotics",
+      "name": "RightPick Control Center",
+      "category": "Warehouse robots",
+      "hosting": "Remote fleet management",
+      "path": [
+        "RightPick installation",
+        "RightPick Control Center",
+        "Authorized fleet operator"
+      ],
+      "protocols": [
+        "Remote management; transport unpublished"
+      ],
+      "data": "Fleet monitoring, remote operations, reporting and analysis support deployed picking systems.",
+      "access": "Customer and service access to configured installations.",
+      "gap": "The product page establishes the management relationship, but not network addressing, cloud hosting or a public telemetry API.",
+      "source": "https://righthandrobotics.com/products/fleet-management",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Robot operations / status",
+          "data": "Fleet systems support remote monitoring and operational management.",
+          "direction": "both",
+          "source": "https://righthandrobotics.com/products/fleet-management",
+          "boundary": "Customer and service access to configured installations."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Fleet workspace",
+          "data": "Authorized operators use fleet information and management tools.",
+          "direction": "both",
+          "source": "https://righthandrobotics.com/products/fleet-management",
+          "boundary": "Customer and service access to configured installations."
+        }
+      ]
+    },
+    {
+      "id": "hylio-agrosol",
+      "vendor": "Hylio",
+      "name": "AgroDrone / GroundLink / AgroSol",
+      "category": "Agricultural drones",
+      "hosting": "Ground station / account cloud",
+      "path": [
+        "Hylio AgroDrone",
+        "GroundLink / AgroSol GCS",
+        "Cloud maps / treatment data",
+        "Authorized export recipient"
+      ],
+      "protocols": [
+        "2.4 GHz telemetry modem",
+        "Cloud import / export",
+        "Digital application reports"
+      ],
+      "data": "Control, drone health and spray status reach the ground station. Account workflows retain field maps and treatment reports.",
+      "access": "Operator ground station and customer account; report sharing is user-directed.",
+      "gap": "The published radio band does not establish a decodable waveform. Reports are not automatically shared to third parties or DRONEmapper.",
+      "source": "https://www.hyl.io/agrosolgcs",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Radio and reporting FAQ",
+          "url": "https://www.hyl.io/learn"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Radio control / telemetry",
+          "data": "Commands, drone vitals and spray information use the ground control link.",
+          "direction": "both",
+          "source": "https://www.hyl.io/learn",
+          "boundary": "Operator ground station and customer account; report sharing is user-directed."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Account data sync",
+          "data": "Cloud import and export support maps and treatment data across devices.",
+          "direction": "both",
+          "source": "https://www.hyl.io/agrosolgcs",
+          "boundary": "Operator ground station and customer account; report sharing is user-directed."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "Operator report export",
+          "data": "Application reports can be exported with dosage, timestamps and treatment locations.",
+          "direction": "forward",
+          "source": "https://www.hyl.io/agrosolgcs",
+          "boundary": "Operator ground station and customer account; report sharing is user-directed."
+        }
+      ]
+    },
+    {
+      "id": "karcher-kira-b50",
+      "vendor": "Kärcher",
+      "name": "KIRA B 50 / Kärcher Cloud",
+      "category": "Cleaning robots",
+      "hosting": "AWS IoT / vendor cloud",
+      "path": [
+        "KIRA B 50 / software gateway",
+        "AWS IoT Core / Kärcher Cloud",
+        "AWS IoT Jobs / update pipeline",
+        "Service technician"
+      ],
+      "protocols": [
+        "AWS IoT Core",
+        "AWS IoT Jobs",
+        "Local service connection"
+      ],
+      "data": "Robot status, configuration and metrics support cloud servicing; a deployment pipeline distributes updates with rollback.",
+      "access": "Vendor servicing and configured fleet access.",
+      "gap": "The case study is specific to KIRA B 50. It does not establish that other Kärcher robots use this stack, or identify an open fleet API.",
+      "source": "https://aws.amazon.com/solutions/case-studies/case-study-zoi/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Telemetry / remote servicing",
+          "data": "The gateway transmits operational information and supports online service interactions.",
+          "direction": "both",
+          "source": "https://aws.amazon.com/solutions/case-studies/case-study-zoi/",
+          "boundary": "Vendor servicing and configured fleet access."
+        },
+        {
+          "from_index": 2,
+          "to_index": 0,
+          "label": "Software delivery",
+          "data": "OS and application updates are distributed with rollback support.",
+          "direction": "forward",
+          "source": "https://aws.amazon.com/solutions/case-studies/case-study-zoi/",
+          "boundary": "Vendor servicing and configured fleet access."
+        },
+        {
+          "from_index": 3,
+          "to_index": 1,
+          "label": "Online maintenance",
+          "data": "Technicians interact through the vendor cloud.",
+          "direction": "both",
+          "source": "https://aws.amazon.com/solutions/case-studies/case-study-zoi/",
+          "boundary": "Vendor servicing and configured fleet access."
+        },
+        {
+          "from_index": 3,
+          "to_index": 0,
+          "label": "Offline maintenance",
+          "data": "A separate local connection supports maintenance without the cloud.",
+          "direction": "both",
+          "source": "https://aws.amazon.com/solutions/case-studies/case-study-zoi/",
+          "boundary": "Vendor servicing and configured fleet access."
+        }
+      ],
+      "map_vendor_names": [
+        {
+          "name": "Karcher",
+          "scope": "KIRA B 50 case study; unaccented inventory spelling.",
+          "source": "https://aws.amazon.com/solutions/case-studies/case-study-zoi/"
+        }
+      ]
+    },
+    {
+      "id": "gea-dairynet",
+      "vendor": "GEA Group",
+      "name": "DairyRobot R9500 / DairyNet monitoring",
+      "category": "Agricultural robots",
+      "hosting": "Farm computer / cloud backup",
+      "path": [
+        "DairyRobot R9500",
+        "Local DairyNet herd-management PC",
+        "Cloud backup service",
+        "Authorized web / mobile operator"
+      ],
+      "protocols": [
+        "Remote desktop access",
+        "Cloud backup",
+        "Web / mobile monitoring"
+      ],
+      "data": "Farm operation data supports local herd management, remote monitoring and daily cloud backups.",
+      "access": "Subscribed customer modules and authorized farm users.",
+      "gap": "Remote desktop, backup and machine control are distinct functions. The source does not disclose the network protocols or extend R9500 control functions to every GEA product.",
+      "source": "https://www.gea.com/en/products/milking-farming-barn/gea-herd-management/gea-dairynet/module-system-monitoring/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Farm management integration",
+          "data": "Machine operation is represented in the local herd-management system; internal direction is unspecified.",
+          "direction": "unspecified",
+          "source": "https://www.gea.com/en/products/milking-farming-barn/gea-herd-management/gea-dairynet/module-system-monitoring/",
+          "boundary": "Subscribed customer modules and authorized farm users."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Daily backups",
+          "data": "DairyNet backups upload to cloud storage.",
+          "direction": "forward",
+          "source": "https://www.gea.com/en/products/milking-farming-barn/gea-herd-management/gea-dairynet/module-system-monitoring/",
+          "boundary": "Subscribed customer modules and authorized farm users."
+        },
+        {
+          "from_index": 3,
+          "to_index": 1,
+          "label": "Remote desktop",
+          "data": "Authorized users remotely access local applications.",
+          "direction": "both",
+          "source": "https://www.gea.com/en/products/milking-farming-barn/gea-herd-management/gea-dairynet/module-system-monitoring/",
+          "boundary": "Subscribed customer modules and authorized farm users."
+        },
+        {
+          "from_index": 3,
+          "to_index": 0,
+          "label": "R9500 management",
+          "data": "Web or mobile system-control functions; underlying routing is unpublished.",
+          "direction": "both",
+          "source": "https://www.gea.com/en/products/milking-farming-barn/gea-herd-management/gea-dairynet/module-system-monitoring/",
+          "boundary": "Subscribed customer modules and authorized farm users."
+        }
+      ]
+    },
+    {
+      "id": "booster-sdk",
+      "vendor": "Booster Robotics",
+      "name": "Robot services / SDK / ROS 2",
+      "category": "Humanoid robots",
+      "hosting": "Onboard / operator network",
+      "path": [
+        "Booster system services",
+        "Fast DDS interface",
+        "C++ / Python SDK application",
+        "Compatible ROS 2 application"
+      ],
+      "protocols": [
+        "Fast DDS",
+        "ROS 2 DDS",
+        "RPC and publish / subscribe"
+      ],
+      "data": "High-level service calls and low-level robot-state topics share the robot service layer.",
+      "access": "Configured robot network, DDS domain and compatible message, topic and QoS definitions.",
+      "gap": "SDK documentation establishes developer interfaces, not internet exposure or support for every firmware/model combination.",
+      "source": "https://doc-dev.booster.tech/docs/developer-guide/cpp/sdk-overview/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Official SDK repository",
+          "url": "https://github.com/BoosterRobotics/booster_robotics_sdk"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Robot service interface",
+          "data": "System services expose robot capabilities through the DDS-based interface.",
+          "direction": "both",
+          "source": "https://doc-dev.booster.tech/docs/developer-guide/cpp/sdk-overview/",
+          "boundary": "Configured robot network, DDS domain and compatible message, topic and QoS definitions."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "SDK access",
+          "data": "RPC calls and topic subscriptions connect developer applications.",
+          "direction": "both",
+          "source": "https://doc-dev.booster.tech/docs/developer-guide/cpp/architecture/",
+          "boundary": "Configured robot network, DDS domain and compatible message, topic and QoS definitions."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "ROS 2 compatibility",
+          "data": "Matching message types, topics and QoS allow ROS 2 applications to use the same services.",
+          "direction": "both",
+          "source": "https://doc-dev.booster.tech/docs/developer-guide/cpp/sdk-overview/",
+          "boundary": "Configured robot network, DDS domain and compatible message, topic and QoS definitions."
+        }
+      ]
+    },
+    {
+      "id": "ascento-security",
+      "vendor": "Ascento",
+      "name": "Guard / security operations platform",
+      "category": "Security robots",
+      "hosting": "Customer security deployment",
+      "path": [
+        "Ascento Guard",
+        "Ascento app / operations platform",
+        "Existing VMS / alarm system",
+        "Authorized security staff"
+      ],
+      "protocols": [
+        "Vendor-described encrypted live communication",
+        "VMS / alarm integration"
+      ],
+      "data": "Patrol observations, video and alerts support remote security operations and configured integrations.",
+      "access": "Customer-controlled site, app and security-system access.",
+      "gap": "Encryption is a vendor claim. Public documentation does not specify protocol, key management, cloud provider or a public observation feed.",
+      "source": "https://www.ascento.ai/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Patrol supervision",
+          "data": "Robot observations and video support monitoring; the app supports remote control and scheduling.",
+          "direction": "both",
+          "source": "https://www.ascento.ai/",
+          "boundary": "Customer-controlled site, app and security-system access."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Configured security alerts",
+          "data": "Robot alerts may reach existing security systems; intermediate routing is not specified.",
+          "direction": "forward",
+          "source": "https://www.ascento.ai/resource/what-are-security-robots",
+          "boundary": "Customer-controlled site, app and security-system access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "Operator workspace",
+          "data": "Authorized staff review reports and manage patrols.",
+          "direction": "both",
+          "source": "https://www.ascento.ai/",
+          "boundary": "Customer-controlled site, app and security-system access."
+        }
+      ]
+    },
+    {
+      "id": "elliq-cloud-storage",
+      "vendor": "Intuition Robotics",
+      "name": "ElliQ / account information processing",
+      "category": "Companion robots",
+      "hosting": "Third-party cloud storage",
+      "path": [
+        "ElliQ interactions / user information",
+        "Intuition Robotics processing",
+        "Authorized cloud storage providers"
+      ],
+      "protocols": [
+        "Cloud processing; transport unpublished"
+      ],
+      "data": "The vendor privacy policy describes collection and processing of user information, including health information where provided, and storage by service providers.",
+      "access": "User consent and the service-provider roles described in the policy.",
+      "gap": "This is a documented information-handling path, not a packet-level architecture. It does not establish a named hosting provider or robot control API.",
+      "source": "https://elliq.com/pages/elliq-privacy-policy",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Service information",
+          "data": "Information supplied through product interactions is collected for the described service purposes.",
+          "direction": "forward",
+          "source": "https://elliq.com/pages/elliq-privacy-policy",
+          "boundary": "User consent and the service-provider roles described in the policy."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Processing / storage",
+          "data": "Authorized providers store and process service information.",
+          "direction": "forward",
+          "source": "https://elliq.com/pages/elliq-privacy-policy",
+          "boundary": "User consent and the service-provider roles described in the policy."
+        }
+      ]
+    },
+    {
+      "id": "orionstar-openapi",
+      "vendor": "OrionStar",
+      "name": "Robot OpenAPI / task callbacks",
+      "category": "Service robots",
+      "hosting": "Regional vendor service",
+      "path": [
+        "Supported OrionStar robot",
+        "OrionStar OpenAPI server",
+        "Authorized API client",
+        "Registered callback receiver"
+      ],
+      "protocols": [
+        "HTTPS API",
+        "Access tokens",
+        "HTTP / HTTPS POST callbacks"
+      ],
+      "data": "Authorized applications manage supported robot tasks and query information. Task status reports produce asynchronous callbacks.",
+      "access": "Vendor-issued app credentials, access tokens and registered callback URL.",
+      "gap": "Robot connectivity affects callbacks and event order is not guaranteed. The API does not establish the robot-to-server transport or compatibility with every model.",
+      "source": "https://openapi.orionstar.com/opendocs/en/index",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Credential and token workflow",
+          "url": "https://openapi.orionstar.com/opendocs/en/server_docs/api_call_guide/calling_process"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Task reports",
+          "data": "Robot task execution changes are reported to the vendor server.",
+          "direction": "forward",
+          "source": "https://openapi.orionstar.com/opendocs/en/server_docs/event_callback_guide/robot_task_event_callback",
+          "boundary": "Vendor-issued app credentials, access tokens and registered callback URL."
+        },
+        {
+          "from_index": 2,
+          "to_index": 1,
+          "label": "Authorized API calls",
+          "data": "HTTPS requests access permitted resources and supported task functions.",
+          "direction": "both",
+          "source": "https://openapi.orionstar.com/opendocs/en/server_docs/api_call_guide/calling_protocol",
+          "boundary": "Vendor-issued app credentials, access tokens and registered callback URL."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "Task callbacks",
+          "data": "The service posts asynchronous task events to a registered receiver.",
+          "direction": "forward",
+          "source": "https://openapi.orionstar.com/opendocs/en/server_docs/event_callback_guide/robot_task_event_callback",
+          "boundary": "Vendor-issued app credentials, access tokens and registered callback URL."
+        }
+      ]
+    },
+    {
+      "id": "avular-origin-network",
+      "vendor": "Avular",
+      "name": "Origin One / local SDK networking",
+      "category": "Mobile robots",
+      "hosting": "Local / onboard",
+      "path": [
+        "Origin One",
+        "Ethernet companion computer",
+        "Wi-Fi access-point client",
+        "Shared-LAN client"
+      ],
+      "protocols": [
+        "Ethernet / TCP-IP",
+        "Wi-Fi",
+        "ROS 2 or Avular SDK"
+      ],
+      "data": "Developer messages reach Origin One through wired, robot access-point or shared-network connections.",
+      "access": "Configured local robot network and compatible SDK / ROS environment.",
+      "gap": "The three paths are documented alternatives, not proof that every deployed robot enables all of them. No cloud control plane is established by this page.",
+      "source": "https://avular-robotics.github.io/origin_one/1.0-2/software_development/preparations/networking/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Wired development",
+          "data": "A companion computer connects through the robot TCP-IP connector.",
+          "direction": "both",
+          "source": "https://avular-robotics.github.io/origin_one/1.0-2/software_development/preparations/networking/",
+          "boundary": "Configured local robot network and compatible SDK / ROS environment."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Robot Wi-Fi access point",
+          "data": "A developer computer connects directly to the robot access point.",
+          "direction": "both",
+          "source": "https://avular-robotics.github.io/origin_one/1.0-2/software_development/preparations/networking/",
+          "boundary": "Configured local robot network and compatible SDK / ROS environment."
+        },
+        {
+          "from_index": 0,
+          "to_index": 3,
+          "label": "Shared network",
+          "data": "Robot and developer computer can exchange messages over their common network.",
+          "direction": "both",
+          "source": "https://avular-robotics.github.io/origin_one/1.0-2/software_development/preparations/networking/",
+          "boundary": "Configured local robot network and compatible SDK / ROS environment."
+        }
+      ]
+    },
+    {
+      "id": "ozobot-evo-app",
+      "vendor": "Ozobot",
+      "name": "Evo / mobile app management",
+      "category": "Educational robots",
+      "hosting": "Local Bluetooth / mobile application",
+      "path": [
+        "Evo robots",
+        "Evo app on phone / tablet",
+        "Teacher settings / update workflow"
+      ],
+      "protocols": [
+        "Bluetooth"
+      ],
+      "data": "The mobile app supports pairing, firmware updates and naming multiple Evo robots.",
+      "access": "Nearby compatible robots and an operator mobile device.",
+      "gap": "The legacy Classroom Communicator is discontinued. This entry does not establish an active cloud fleet API, or compatibility with every Ozobot product.",
+      "source": "https://help.ozobot.com/migration/ozobot-classroom-communicator",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Bluetooth pairing / management",
+          "data": "Paired Evo robots are managed through the supported mobile app.",
+          "direction": "both",
+          "source": "https://help.ozobot.com/migration/ozobot-classroom-communicator",
+          "boundary": "Nearby compatible robots and an operator mobile device."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Teacher workflow",
+          "data": "Application settings manage classroom behavior and update operations; this is an application role, not an additional server.",
+          "direction": "both",
+          "source": "https://help.ozobot.com/migration/classroom-mode-off/on",
+          "boundary": "Nearby compatible robots and an operator mobile device."
+        }
+      ]
     }
   ],
   "connections": [
@@ -7685,6 +9173,18 @@ export const cloudSurfaces = {
       "to_id": "flock-aerodome",
       "label": "Published sensor-triggered drone-response integration",
       "source": "https://www.flocksafety.com/blog/aerodome-and-flock-safety-forge-strategic-partnership-to-expand-drone-as-first-responder-technology-for-public-safety-agencies"
+    },
+    {
+      "from_id": "nilfisk-sc60-brainos:path:2",
+      "to_id": "brainos-platform",
+      "label": "SC60 uses BrainOS platform",
+      "source": "https://www.nilfisk.com/media/cnodeeyh/sc60-machine-data-faq-letter_en.pdf"
+    },
+    {
+      "from_id": "tennant-brainos:path:1",
+      "to_id": "brainos-platform",
+      "label": "Tennant autonomous equipment / BrainOS association",
+      "source": "https://www.tennantco.com/en_us/robotics/robotic-technology/robotic-data-and-security.html"
     }
   ]
 };
