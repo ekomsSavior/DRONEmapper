@@ -12708,6 +12708,906 @@
           "boundary": "Installed system and customer dashboard / local integration access."
         }
       ]
+    },
+    {
+      "id": "mobileye-rem",
+      "vendor": "Mobileye",
+      "name": "REM / Roadbook map-data workflow",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Vehicle / cloud / vehicle",
+      "path": [
+        "Participating vehicle observations",
+        "REM cloud aggregation",
+        "Mobileye Roadbook",
+        "Compatible vehicle localization"
+      ],
+      "protocols": [
+        "Low-bandwidth map-data upload",
+        "Roadbook distribution; transport unspecified"
+      ],
+      "data": "Participating vehicles send tagged road information; cloud aggregation builds map semantics and driving paths that return to compatible vehicles for localization.",
+      "access": "Enabled vehicle program and supported Mobileye integration.",
+      "gap": "A Mobileye-equipped vehicle is not automatically a participating REM uploader. Roadbook data is not a public vehicle-location feed or evidence that an observed car is autonomous.",
+      "source": "https://www.mobileye.com/technology/rem/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Road observations",
+          "data": "Tagged road information is uploaded for aggregation.",
+          "direction": "forward",
+          "source": "https://www.mobileye.com/technology/rem/",
+          "boundary": "Enabled vehicle program and supported Mobileye integration."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Map compilation",
+          "data": "Aligned observations build road semantics and driving paths.",
+          "direction": "forward",
+          "source": "https://www.mobileye.com/technology/rem/",
+          "boundary": "Enabled vehicle program and supported Mobileye integration."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Localization information",
+          "data": "Roadbook information is sent to supported production vehicles.",
+          "direction": "forward",
+          "source": "https://www.mobileye.com/technology/rem/",
+          "boundary": "Enabled vehicle program and supported Mobileye integration."
+        }
+      ]
+    },
+    {
+      "id": "moia-ad-maas",
+      "vendor": "MOIA",
+      "name": "ID. Buzz AD / AD MaaS platform",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Vehicle / fleet operations",
+      "path": [
+        "ID. Buzz AD / Mobileye driving system",
+        "MOIA AD MaaS platform",
+        "Fleet operator / remote supervision",
+        "Booking application"
+      ],
+      "protocols": [
+        "Fleet management / passenger assistance",
+        "Booking integration; detailed transport unpublished"
+      ],
+      "data": "The platform manages fleets, supports passenger assistance and remote supervision, and integrates existing booking applications.",
+      "access": "Configured operator deployment and supported booking integration.",
+      "gap": "The 2025 launch describes a turnkey system. It does not establish the status of a particular city deployment, wire protocols or public access to vehicle locations.",
+      "source": "https://www.moia.io/en/news/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services?_rr=1",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Fleet operations",
+          "data": "The platform manages the connected vehicle fleet.",
+          "direction": "both",
+          "source": "https://www.moia.io/en/news/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services?_rr=1",
+          "boundary": "Configured operator deployment and supported booking integration."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Supervision / support",
+          "data": "Operators monitor vehicles and handle supported exceptional situations.",
+          "direction": "both",
+          "source": "https://www.moia.io/en/news/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services?_rr=1",
+          "boundary": "Configured operator deployment and supported booking integration."
+        },
+        {
+          "from_index": 3,
+          "to_index": 1,
+          "label": "Booking integration",
+          "data": "Existing booking applications integrate with the platform; exact message direction is unpublished.",
+          "direction": "unspecified",
+          "source": "https://www.moia.io/en/news/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services?_rr=1",
+          "boundary": "Configured operator deployment and supported booking integration."
+        }
+      ],
+      "map_vendor_names": [
+        {
+          "name": "Volkswagen Group",
+          "scope": "ID. Buzz AD only; this source explicitly identifies the Volkswagen vehicle and MOIA platform.",
+          "source": "https://www.moia.io/en/news/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services?_rr=1"
+        }
+      ]
+    },
+    {
+      "id": "toyota-epalette-operations",
+      "vendor": "Toyota",
+      "name": "e-Palette / AMMS / e-TAP (2020)",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Vehicle / operations center",
+      "path": [
+        "e-Palette fleet",
+        "AMMS dispatch management",
+        "e-TAP visual operations",
+        "Operations / maintenance staff"
+      ],
+      "protocols": [
+        "Dispatch / remote stop and restart",
+        "Operational workflow; transport unspecified"
+      ],
+      "data": "AMMS adjusts dispatch and responds to vehicle abnormalities. e-TAP presents vehicle and worker status and provides operational work instructions.",
+      "access": "Configured Toyota operations-management deployment.",
+      "gap": "This is Toyota’s 2020 platform description. It does not establish that a later e-Palette using May Mobility software uses identical interfaces or communications.",
+      "source": "https://global.toyota/en/newsroom/corporate/34527472.html",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Dispatch / vehicle state",
+          "data": "Fleet operations include dispatch, abnormality handling and remote emergency stop / restart.",
+          "direction": "both",
+          "source": "https://global.toyota/en/newsroom/corporate/34527472.html",
+          "boundary": "Configured Toyota operations-management deployment."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Vehicle visibility",
+          "data": "Vehicle abnormalities are represented in e-TAP; intermediate routing is unpublished.",
+          "direction": "forward",
+          "source": "https://global.toyota/en/newsroom/corporate/34527472.html",
+          "boundary": "Configured Toyota operations-management deployment."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Work management",
+          "data": "Staff receive instructions and track operations and maintenance progress.",
+          "direction": "both",
+          "source": "https://global.toyota/en/newsroom/corporate/34527472.html",
+          "boundary": "Configured Toyota operations-management deployment."
+        }
+      ]
+    },
+    {
+      "id": "plus-superdrive-remote",
+      "vendor": "Plus",
+      "name": "SuperDrive / cloud remote operations",
+      "category": "Autonomous freight vehicles",
+      "hosting": "Onboard driving / cloud support",
+      "path": [
+        "SuperDrive onboard system",
+        "Cloud remote-operations capability",
+        "Trained support personnel"
+      ],
+      "protocols": [
+        "Remote monitoring / assistance; transport unpublished"
+      ],
+      "data": "Onboard software performs driving while trained personnel can monitor the fleet, assist with route changes and oversee overall operations through remote support.",
+      "access": "Configured fleet and trained operator access.",
+      "gap": "The vendor distinguishes onboard driving from remote support. This does not establish continuous remote steering, public telemetry or the status of every planned rollout.",
+      "source": "https://www.plus.ai/news-and-insights/2025-08-01-inside-plus-av2-approach-superdrive",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Fleet information / assistance",
+          "data": "The platform supports monitoring and human assistance while driving remains onboard.",
+          "direction": "both",
+          "source": "https://www.plus.ai/news-and-insights/2025-08-01-inside-plus-av2-approach-superdrive",
+          "boundary": "Configured fleet and trained operator access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Remote-operations workspace",
+          "data": "Trained personnel review situations and provide supported assistance.",
+          "direction": "both",
+          "source": "https://www.plus.ai/news-and-insights/2025-08-01-inside-plus-av2-approach-superdrive",
+          "boundary": "Configured fleet and trained operator access."
+        }
+      ]
+    },
+    {
+      "id": "samsung-ballie-gemini",
+      "vendor": "Samsung Electronics",
+      "name": "Ballie / announced Gemini integration (2025)",
+      "category": "Companion robots",
+      "hosting": "Announced robot / Google Cloud integration",
+      "path": [
+        "Ballie audio / visual / environmental inputs",
+        "Samsung AI / Gemini integration",
+        "Gemini on Google Cloud",
+        "Ballie responses / assistance"
+      ],
+      "protocols": [
+        "Announced multimodal AI integration; transport unpublished"
+      ],
+      "data": "Samsung described combining its models with Gemini for conversational and environmental understanding and adaptive assistance.",
+      "access": "Announced product integration; availability and customer configuration require separate confirmation.",
+      "gap": "This April 2025 announcement is not evidence of a deployed fleet or general availability. It does not identify which raw inputs leave the robot, retention rules or an API endpoint.",
+      "source": "https://news.samsung.com/us/samsung-google-cloud-expand-partnership-bring-gemini-ballie-home-ai-companion-robot-by-samsung/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Multimodal input",
+          "data": "The announcement identifies voice, visual and environmental inputs.",
+          "direction": "forward",
+          "source": "https://news.samsung.com/us/samsung-google-cloud-expand-partnership-bring-gemini-ballie-home-ai-companion-robot-by-samsung/",
+          "boundary": "Announced product integration; availability and customer configuration require separate confirmation."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Announced cloud AI relationship",
+          "data": "Gemini on Google Cloud is a named component; payload routing is unspecified.",
+          "direction": "unspecified",
+          "source": "https://news.samsung.com/us/samsung-google-cloud-expand-partnership-bring-gemini-ballie-home-ai-companion-robot-by-samsung/",
+          "boundary": "Announced product integration; availability and customer configuration require separate confirmation."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "Adaptive response",
+          "data": "Model outputs support the announced interactions and assistance.",
+          "direction": "forward",
+          "source": "https://news.samsung.com/us/samsung-google-cloud-expand-partnership-bring-gemini-ballie-home-ai-companion-robot-by-samsung/",
+          "boundary": "Announced product integration; availability and customer configuration require separate confirmation."
+        }
+      ]
+    },
+    {
+      "id": "lg-cloi-home",
+      "vendor": "LG Electronics",
+      "name": "CLOi Home / ThinQ demonstration (2018)",
+      "category": "Companion robots",
+      "hosting": "Demonstrated smart-home integration",
+      "path": [
+        "User voice request",
+        "CLOi Home assistant",
+        "Compatible LG ThinQ appliances"
+      ],
+      "protocols": [
+        "Voice-command appliance integration; transport unpublished"
+      ],
+      "data": "The demonstrated assistant checks kitchen information and issues supported commands to compatible home appliances.",
+      "access": "Compatible demonstration / customer appliance integration.",
+      "gap": "This 2018 product account does not establish current availability, routing through ThinQ cloud, or ServeBot compatibility. Assistant-brand support does not imply a specific network API.",
+      "source": "https://www.lg.com/lv/lg-experience/tech-hub/jusu-galvena-rokasgramata-par-lg-cloi-robotiem",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Voice request",
+          "data": "The assistant receives a spoken request.",
+          "direction": "forward",
+          "source": "https://www.lg.com/lv/lg-experience/tech-hub/jusu-galvena-rokasgramata-par-lg-cloi-robotiem",
+          "boundary": "Compatible demonstration / customer appliance integration."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Appliance interaction",
+          "data": "The demonstrated integration reads appliance information and issues supported commands.",
+          "direction": "both",
+          "source": "https://www.lg.com/lv/lg-experience/tech-hub/jusu-galvena-rokasgramata-par-lg-cloi-robotiem",
+          "boundary": "Compatible demonstration / customer appliance integration."
+        }
+      ]
+    },
+    {
+      "id": "lg-cloi-cloudstation",
+      "vendor": "LG Electronics",
+      "name": "Door-type CLOi ServeBot / Cloud Station",
+      "category": "Service robots",
+      "hosting": "Robot / cloud / operator",
+      "path": [
+        "Door-type CLOi ServeBot",
+        "LG CLOi Cloud Station",
+        "Operator mobile / web interface",
+        "Other compatible ServeBots"
+      ],
+      "protocols": [
+        "Fleet status / scheduling",
+        "Display-content upload",
+        "Robot coordination; transport unspecified"
+      ],
+      "data": "Cloud Station provides robot status, paging, scheduling and display-content uploads. Compatible ServeBots coordinate to avoid conflicting movements.",
+      "access": "Configured customer deployment and supported robot generation.",
+      "gap": "This source covers the door-type ServeBot, not CLOi HomeBot. Protocols, tenant endpoints and the physical route for robot-to-robot coordination are unpublished.",
+      "source": "https://www.lg.com/us/business/press-release/lg-debuts-ai-powered-door-type-service-robot-for-hospitality-and-healthcare",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Status / operational settings",
+          "data": "The platform presents robot status and sends supported schedules, paging and display content.",
+          "direction": "both",
+          "source": "https://www.lg.com/us/business/press-release/lg-debuts-ai-powered-door-type-service-robot-for-hospitality-and-healthcare",
+          "boundary": "Configured customer deployment and supported robot generation."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Authorized interface",
+          "data": "Staff use mobile or web tools for the supported operations.",
+          "direction": "both",
+          "source": "https://www.lg.com/us/business/press-release/lg-debuts-ai-powered-door-type-service-robot-for-hospitality-and-healthcare",
+          "boundary": "Configured customer deployment and supported robot generation."
+        },
+        {
+          "from_index": 0,
+          "to_index": 3,
+          "label": "Fleet coordination",
+          "data": "The source describes communication with other ServeBots; network routing is unspecified.",
+          "direction": "both",
+          "source": "https://www.lg.com/us/business/press-release/lg-debuts-ai-powered-door-type-service-robot-for-hospitality-and-healthcare",
+          "boundary": "Configured customer deployment and supported robot generation."
+        }
+      ]
+    },
+    {
+      "id": "ecovacs-goat-app",
+      "vendor": "Ecovacs Robotics",
+      "name": "GOAT A3000 LiDAR / app connectivity",
+      "category": "Agricultural robots",
+      "hosting": "Local app / home network",
+      "path": [
+        "ECOVACS HOME phone app",
+        "Bluetooth setup connection",
+        "GOAT A3000 LiDAR",
+        "Home 2.4 GHz Wi-Fi network"
+      ],
+      "protocols": [
+        "Bluetooth pairing",
+        "2.4 GHz Wi-Fi"
+      ],
+      "data": "The phone pairs with the mower over Bluetooth; Wi-Fi setup uses the same home router and enables the documented connected operation.",
+      "access": "Owner app account, nearby mower and configured home network.",
+      "gap": "The source does not publish cloud endpoints, command formats or authentication details. A Bluetooth or Wi-Fi observation alone does not identify this mower.",
+      "source": "https://www.ecovacs.com/us/blog/robot-lawn-mower-installation",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Model-specific support and manuals",
+          "url": "https://help.ecovacs.com/global/support/goat-a3000-lidar"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Local pairing",
+          "data": "The owner app initiates Bluetooth setup.",
+          "direction": "both",
+          "source": "https://www.ecovacs.com/us/blog/robot-lawn-mower-installation",
+          "boundary": "Owner app account, nearby mower and configured home network."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Mower setup",
+          "data": "Pairing connects the app with the mower.",
+          "direction": "both",
+          "source": "https://www.ecovacs.com/us/blog/robot-lawn-mower-installation",
+          "boundary": "Owner app account, nearby mower and configured home network."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Wi-Fi configuration",
+          "data": "The mower joins the configured 2.4 GHz home network.",
+          "direction": "both",
+          "source": "https://www.ecovacs.com/us/blog/robot-lawn-mower-installation",
+          "boundary": "Owner app account, nearby mower and configured home network."
+        }
+      ]
+    },
+    {
+      "id": "tensor-robocar-services",
+      "vendor": "Tensor Auto",
+      "name": "Robocar / diagnostics / OTA services",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Onboard / remote service tools",
+      "path": [
+        "Tensor Robocar",
+        "Remote diagnostics / service teams",
+        "Software / firmware update service"
+      ],
+      "protocols": [
+        "Remote diagnostics; transport unpublished",
+        "Over-the-air updates"
+      ],
+      "data": "The published architecture combines onboard diagnostics with remote service coordination and software / firmware updates.",
+      "access": "Supported vehicle configuration and authorized service access.",
+      "gap": "These vendor-described capabilities do not prove commercial availability, public telemetry access or a specific cloud provider. Diagnostic services are separate from onboard driving decisions.",
+      "source": "https://www.tensor.auto/autonomy",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Diagnostic workflow",
+          "data": "Vehicle issues are detected and coordinated with service teams; routing and payload format are unspecified.",
+          "direction": "forward",
+          "source": "https://www.tensor.auto/autonomy",
+          "boundary": "Supported vehicle configuration and authorized service access."
+        },
+        {
+          "from_index": 2,
+          "to_index": 0,
+          "label": "OTA delivery",
+          "data": "The published update system delivers software and firmware to vehicle components.",
+          "direction": "forward",
+          "source": "https://www.tensor.auto/autonomy",
+          "boundary": "Supported vehicle configuration and authorized service access."
+        }
+      ]
+    },
+    {
+      "id": "baidu-cloud-driving",
+      "vendor": "Baidu",
+      "name": "Apollo / 5G remote-driving architecture (2023)",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Vehicle / cellular / operator",
+      "path": [
+        "Equipped Apollo vehicle",
+        "5G data connection",
+        "Remote-driving console / operator"
+      ],
+      "protocols": [
+        "5G remote driving; application protocol unpublished"
+      ],
+      "data": "The white paper describes vehicle supervision and exceptional-situation remote control using a console with steering and pedal controls.",
+      "access": "Configured fleet platform and authorized remote-driving operators.",
+      "gap": "This is the white paper’s 2022–2023 deployment context. It does not document every RT6 configuration, publish customer access, or make generic 5G activity a robotaxi signature.",
+      "source": "https://huiyan.baidu.com/boswebsite/jiaotong/cms/whitepaper/%E3%80%8A%E9%9D%A2%E5%90%91%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E8%BD%A6%E8%B7%AF%E5%8D%8F%E5%90%8C%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%B1%95%E6%9C%9B2.0%E3%80%8B.pdf",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Vehicle data / controls",
+          "data": "The configured cellular connection supports remote operation.",
+          "direction": "both",
+          "source": "https://huiyan.baidu.com/boswebsite/jiaotong/cms/whitepaper/%E3%80%8A%E9%9D%A2%E5%90%91%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E8%BD%A6%E8%B7%AF%E5%8D%8F%E5%90%8C%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%B1%95%E6%9C%9B2.0%E3%80%8B.pdf",
+          "boundary": "Configured fleet platform and authorized remote-driving operators."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Remote console",
+          "data": "An authorized operator receives vehicle information and returns control input.",
+          "direction": "both",
+          "source": "https://huiyan.baidu.com/boswebsite/jiaotong/cms/whitepaper/%E3%80%8A%E9%9D%A2%E5%90%91%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E8%BD%A6%E8%B7%AF%E5%8D%8F%E5%90%8C%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%B1%95%E6%9C%9B2.0%E3%80%8B.pdf",
+          "boundary": "Configured fleet platform and authorized remote-driving operators."
+        }
+      ]
+    },
+    {
+      "id": "halter-collar-network",
+      "vendor": "Halter",
+      "name": "Smart Collar / tower and satellite paths",
+      "category": "Agricultural sensing",
+      "hosting": "Field / cloud / owner app",
+      "path": [
+        "Dairy collar",
+        "Halter farm tower",
+        "Halter cloud data platform",
+        "Owner mobile / web app",
+        "Beef collar",
+        "Satellite connection"
+      ],
+      "protocols": [
+        "Tower radio; protocol unpublished",
+        "Direct satellite; provider unspecified"
+      ],
+      "data": "Animal-location and health observations reach the platform; owners set virtual boundaries and shifting actions in the app.",
+      "access": "Configured farm system and owner access.",
+      "gap": "Dairy and beef products use different connectivity. These are animal-worn sensors, not robot cattle. Tower independence from mobile reception does not identify its backhaul, radio frequency or protocol.",
+      "source": "https://www.halterhq.com/our-technology",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Dairy field link",
+          "data": "Tower connectivity for dairy collars.",
+          "direction": "both",
+          "source": "https://www.halterhq.com/our-technology",
+          "boundary": "Configured farm system and owner access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Dairy platform path",
+          "data": "Collar information reaches the cloud; tower backhaul is unpublished.",
+          "direction": "both",
+          "source": "https://www.halterhq.com/our-technology",
+          "boundary": "Configured farm system and owner access."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Insights / owner actions",
+          "data": "Processed observations and farm-management actions.",
+          "direction": "both",
+          "source": "https://www.halterhq.com/our-technology",
+          "boundary": "Configured farm system and owner access."
+        },
+        {
+          "from_index": 4,
+          "to_index": 5,
+          "label": "Beef satellite link",
+          "data": "Beef collars connect without farm towers or cellular coverage.",
+          "direction": "both",
+          "source": "https://www.halterhq.com/our-technology",
+          "boundary": "Configured farm system and owner access."
+        },
+        {
+          "from_index": 5,
+          "to_index": 2,
+          "label": "Beef platform path",
+          "data": "The satellite-connected product uses the data platform; intermediary routing is unpublished.",
+          "direction": "both",
+          "source": "https://www.halterhq.com/our-technology",
+          "boundary": "Configured farm system and owner access."
+        }
+      ]
+    },
+    {
+      "id": "tevel-harvest-dashboard",
+      "vendor": "Tevel Aerobotics",
+      "name": "Harvesting robots / My Tevel",
+      "category": "Agricultural robots",
+      "hosting": "Field / customer cloud dashboard",
+      "path": [
+        "Tevel harvesting robots",
+        "Tevel cloud platform",
+        "Customer dashboard",
+        "CSV / JSON exports",
+        "Internet-connected base station"
+      ],
+      "protocols": [
+        "Cloud synchronization; transport unpublished",
+        "CSV / JSON dashboard exports"
+      ],
+      "data": "Active harvest metrics reach the dashboard; historical analytics follow processing. Customer widgets offer CSV and JSON downloads.",
+      "access": "Customer dashboard access and an operational base station.",
+      "gap": "The support page requires base-station internet and robots within range, but does not describe physical gateway wiring, radio protocol or a public data API.",
+      "source": "https://accounts.tevel-tech.com/support",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Harvest synchronization",
+          "data": "Powered robots in range connect to the platform.",
+          "direction": "forward",
+          "source": "https://accounts.tevel-tech.com/support",
+          "boundary": "Customer dashboard access and an operational base station."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Metrics / history",
+          "data": "Near-real-time metrics and processed historical analytics.",
+          "direction": "forward",
+          "source": "https://accounts.tevel-tech.com/support",
+          "boundary": "Customer dashboard access and an operational base station."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Customer export",
+          "data": "Widget exports support downstream customer analysis.",
+          "direction": "forward",
+          "source": "https://accounts.tevel-tech.com/support",
+          "boundary": "Customer dashboard access and an operational base station."
+        },
+        {
+          "from_index": 4,
+          "to_index": 0,
+          "label": "Connectivity requirement",
+          "data": "Base internet and robot range are documented dependencies; routing is unspecified.",
+          "direction": "unspecified",
+          "source": "https://accounts.tevel-tech.com/support",
+          "boundary": "Customer dashboard access and an operational base station."
+        }
+      ]
+    },
+    {
+      "id": "boumatic-gemini-data",
+      "vendor": "BouMatic",
+      "name": "Gemini UP MAX / HerdMetrix",
+      "category": "Agricultural robots",
+      "hosting": "Farm LAN / optional cloud",
+      "path": [
+        "Gemini UP MAX",
+        "HerdMetrix integration",
+        "Farm management reports",
+        "Optional remote monitoring"
+      ],
+      "protocols": [
+        "LAN connectivity",
+        "Cloud option; application protocol unpublished"
+      ],
+      "data": "Yield, milk-flow and activity data support group reports and robot-performance review. Optional cloud features provide remote monitoring and predictive alerts.",
+      "access": "Configured farm installation and enabled software options.",
+      "gap": "UP MAX-specific documentation does not establish interfaces on every older Gemini. Additional milk-composition alerts require MilkGenius. Cloud hosting and exact integration routing are unpublished.",
+      "source": "https://boumatic.com/us_en/products/gemini-up-max/gemini-up-max-technical_data-2-2/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "HerdMetrix management interfaces",
+          "url": "https://boumatic.com/us_en/products/herdmetrix-us/"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Management integration",
+          "data": "The model documents HerdMetrix integration.",
+          "direction": "unspecified",
+          "source": "https://boumatic.com/us_en/products/gemini-up-max/gemini-up-max-technical_data-2-2/",
+          "boundary": "Configured farm installation and enabled software options."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Production / robot reports",
+          "data": "Observed production and robot information support management reports.",
+          "direction": "forward",
+          "source": "https://boumatic.com/us_en/products/gemini-up-max/gemini-up-max-technical_data-2-2/",
+          "boundary": "Configured farm installation and enabled software options."
+        },
+        {
+          "from_index": 0,
+          "to_index": 3,
+          "label": "Optional cloud monitoring",
+          "data": "Configured cloud features expose monitoring and predictive alerts.",
+          "direction": "forward",
+          "source": "https://boumatic.com/us_en/products/gemini-up-max/gemini-up-max-technical_data-2-2/",
+          "boundary": "Configured farm installation and enabled software options."
+        }
+      ]
+    },
+    {
+      "id": "trombia-smooth",
+      "vendor": "Trombia Technologies",
+      "name": "Trombia Free / Smooth operations",
+      "category": "Autonomous maintenance vehicles",
+      "hosting": "Sweeper / remote operations",
+      "path": [
+        "Trombia Free sweeper",
+        "Trombia Free Smooth operating centre",
+        "Authorized operations staff"
+      ],
+      "protocols": [
+        "Remote monitoring / mission commands; transport unpublished"
+      ],
+      "data": "Operators monitor sweepers and plan, schedule or define their missions through Smooth.",
+      "access": "Configured Trombia deployment and operator access.",
+      "gap": "The source establishes remote-operation roles without identifying a radio, cloud provider or public API. Annual software support does not establish an OTA protocol.",
+      "source": "https://trombia.com/products/trombia-free/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Machine state / mission tasks",
+          "data": "Monitoring information and supported mission commands.",
+          "direction": "both",
+          "source": "https://trombia.com/products/trombia-free/",
+          "boundary": "Configured Trombia deployment and operator access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Operations workspace",
+          "data": "Staff review operations and configure sweeping missions.",
+          "direction": "both",
+          "source": "https://trombia.com/products/trombia-free/",
+          "boundary": "Configured Trombia deployment and operator access."
+        }
+      ]
+    },
+    {
+      "id": "primech-hytron-management",
+      "vendor": "Primech AI",
+      "name": "HYTRON / cleaning management",
+      "category": "Service robots",
+      "hosting": "Robot / management tools",
+      "path": [
+        "HYTRON robots",
+        "Intelligent Cleaning Management Platform",
+        "Operator smartphone app"
+      ],
+      "protocols": [
+        "Remote task scheduling; transport unpublished",
+        "Post-cleaning reports"
+      ],
+      "data": "Central management supports remote monitoring; the app schedules one-time or recurring tasks and reviews duration, distance and cleaning paths.",
+      "access": "Customer deployment and configured management access.",
+      "gap": "The published workflow does not establish which app traffic passes through the platform, its cloud host or its radio technology.",
+      "source": "https://primech.ai/hytron-commercial-cleaning-robot/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Central management",
+          "data": "Monitoring and centralized control are documented; internal routing is unspecified.",
+          "direction": "both",
+          "source": "https://primech.ai/hytron-commercial-cleaning-robot/",
+          "boundary": "Customer deployment and configured management access."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "App tasks / results",
+          "data": "Schedules and cleaning reports connect operators with the fleet; intermediate routing is unpublished.",
+          "direction": "both",
+          "source": "https://primech.ai/hytron-commercial-cleaning-robot/",
+          "boundary": "Customer deployment and configured management access."
+        }
+      ]
+    },
+    {
+      "id": "verobotics-facade-data",
+      "vendor": "Verobotics",
+      "name": "Facade robot / data hub / digital twin",
+      "category": "Inspection robots",
+      "hosting": "Onboard sensing / analysis platform",
+      "path": [
+        "Facade robot sensors",
+        "Verobotics data hub",
+        "Building digital twin",
+        "Owner / service company"
+      ],
+      "protocols": [
+        "Inspection data transfer; transport unpublished"
+      ],
+      "data": "Motion, location and surface observations feed analysis and a building digital twin used for maintenance planning.",
+      "access": "Configured customer inspection service.",
+      "gap": "The platform overview does not identify a cloud host, radio or model-specific API. The flow is a published platform capability, not proof of an observed Ibex configuration.",
+      "source": "https://verobotics.com/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Inspection observations",
+          "data": "Unit sensor data enters the analysis hub.",
+          "direction": "forward",
+          "source": "https://verobotics.com/",
+          "boundary": "Configured customer inspection service."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Surface analysis",
+          "data": "Analyzed datasets support a digital representation of the building.",
+          "direction": "forward",
+          "source": "https://verobotics.com/",
+          "boundary": "Configured customer inspection service."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Maintenance decisions",
+          "data": "Owners and service companies use the resulting condition information.",
+          "direction": "forward",
+          "source": "https://verobotics.com/",
+          "boundary": "Configured customer inspection service."
+        }
+      ]
+    },
+    {
+      "id": "daedong-connect",
+      "vendor": "Daedong",
+      "name": "Daedong Connect / tractor telematics",
+      "category": "Agricultural vehicles",
+      "hosting": "Vehicle / owner and service tools",
+      "path": [
+        "Supported Daedong vehicle",
+        "Daedong Connect",
+        "Owner smartphone",
+        "Authorized service technician"
+      ],
+      "protocols": [
+        "Vehicle telematics; transport unpublished",
+        "Remote diagnostics / supported start controls"
+      ],
+      "data": "Owners review location, faults, consumable condition and work logs. Supported models offer remote starting; service staff can perform an initial remote diagnosis.",
+      "access": "Compatible model, customer account and configured service support.",
+      "gap": "Telematics does not prove unmanned operation. The page scopes remote control to selected models including HX1300, HX1400 and GX tractors; it does not identify a wire protocol.",
+      "source": "https://ko.daedong.co.kr/innovation/smartmachine",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "State / supported controls",
+          "data": "Vehicle information and model-dependent remote actions.",
+          "direction": "both",
+          "source": "https://ko.daedong.co.kr/innovation/smartmachine",
+          "boundary": "Compatible model, customer account and configured service support."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Owner management",
+          "data": "Status, work records and supported owner commands.",
+          "direction": "both",
+          "source": "https://ko.daedong.co.kr/innovation/smartmachine",
+          "boundary": "Compatible model, customer account and configured service support."
+        },
+        {
+          "from_index": 0,
+          "to_index": 3,
+          "label": "Remote diagnosis",
+          "data": "Authorized service diagnosis; intermediate routing is unpublished.",
+          "direction": "unspecified",
+          "source": "https://ko.daedong.co.kr/innovation/smartmachine",
+          "boundary": "Compatible model, customer account and configured service support."
+        }
+      ]
     }
   ],
   "connections": [
@@ -12752,6 +13652,12 @@
       "to_id": "brainos-platform",
       "label": "Whiz uses BrainOS — published software relationship",
       "source": "https://us.softbankrobotics.com/whiz"
+    },
+    {
+      "from_id": "moia-ad-maas:path:0",
+      "to_id": "vendor:Mobileye",
+      "label": "ID. Buzz AD uses Mobileye self-driving system — published component relationship",
+      "source": "https://www.moia.io/en/news/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services?_rr=1"
     }
   ]
 }

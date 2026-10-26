@@ -1,4 +1,4 @@
-import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261026-networks-260';
+import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261026-networks-277';
 const $=id=>document.getElementById(id);
 const el=(tag,text)=>{const e=document.createElement(tag);e.textContent=text;return e;};
 // A protocol established by a source outranks a mention in an unknowns note.
@@ -22,7 +22,7 @@ $('cloud-hosting').addEventListener('change',render);
 $('cloud-search').addEventListener('input',render);$('cloud-category').addEventListener('change',render);render();
 
 // Shared map coverage augments, rather than replaces, documented service paths.
-import {loadMapInventory,servicesForVendor,vendorInventory,deviceLinks,researchInventory} from './map-device-coverage.mjs?v=20261026-networks-260';
+import {loadMapInventory,servicesForVendor,vendorInventory,deviceLinks,researchInventory} from './map-device-coverage.mjs?v=20261026-networks-277';
 const coverage=el('section','');coverage.className='reference-feature';coverage.id='map-device-coverage';
 coverage.append(el('h2','Map device coverage'));
 const search=el('input','');search.type='search';search.placeholder='Find a manufacturer or model';search.setAttribute('aria-label','Search map device coverage');
