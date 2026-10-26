@@ -824,7 +824,14 @@ export const cloudSurfaces = {
       "reviewed_on": "2026-10-25",
       "connector": "Reference only — no telemetry connector enabled",
       "useful": "Review the documented interface boundary and deployment scope before interpreting observations.",
-      "related": []
+      "related": [],
+      "map_vendor_names": [
+        {
+          "name": "Zeekr",
+          "scope": "Waymo-equipped Zeekr platform / Ojai; not every Zeekr consumer vehicle. The regulatory filing identifies this vehicle within the Waymo passenger service.",
+          "source": "https://www.cpuc.ca.gov/-/media/cpuc-website/divisions/consumer-protection-and-enforcement-division/documents/tlab/av-programs/tcp0038152a-waymo-al-0004.pdf"
+        }
+      ]
     },
     {
       "id": "1x-expert",
@@ -1132,6 +1139,11 @@ export const cloudSurfaces = {
           "name": "PACCAR",
           "scope": "Peterbilt 579 equipped with Aurora Driver; historical 2023 vehicle reference, not every PACCAR truck or a guarantee of identical later software.",
           "source": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-23-000016/aurora-4q22xshareholder_.htm"
+        },
+        {
+          "name": "Hirschbach Motor Lines",
+          "scope": "Aurora Driver-equipped Hirschbach operations. The 2026 announcement describes an expansion plan under a non-binding MOU; planned fleet totals are not current deployments.",
+          "source": "https://ir.aurora.tech/news-events/press-releases/detail/136/leading-carrier-selects-aurora-to-scale-autonomous-fleet-to-500-trucks"
         }
       ]
     },
@@ -16724,6 +16736,2175 @@ export const cloudSurfaces = {
           "direction": "both",
           "source": "https://www.kongsberg.com/contentassets/9fa5f801386d463a9f1008a8c139a326/km-insights-july-2024-lr.pdf",
           "boundary": "Authorized maritime operations staff and approved vessel installation."
+        }
+      ]
+    },
+    {
+      "id": "yandex-rover-orders",
+      "vendor": "Yandex",
+      "name": "Rover / partner delivery API",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Partner application / delivery service / robot",
+      "path": [
+        "Partner application",
+        "Yandex robot delivery API",
+        "Selected delivery robot"
+      ],
+      "protocols": [
+        "HTTP API",
+        "JSON order / status messages"
+      ],
+      "data": "Partners create delivery claims and check their progress. The service selects a robot and coordinates pickup and delivery.",
+      "access": "Partner API access and authorized delivery claims.",
+      "gap": "This is a delivery workflow API, not a public robot tracker or direct motor-control interface. The aircraft or robot radio and internal service-to-robot protocol are not described.",
+      "source": "https://yandex.ru/dev/sdg-robot/ru/quick-start",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Partner service overview",
+          "url": "https://yandex.ru/dev/sdg-robot/ru/"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Orders / status",
+          "data": "Delivery claims, route points and order status.",
+          "direction": "both",
+          "source": "https://yandex.ru/dev/sdg-robot/ru/quick-start",
+          "boundary": "Partner API access and authorized delivery claims."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Delivery assignment",
+          "data": "The service selects a robot and coordinates the delivery workflow.",
+          "direction": "both",
+          "source": "https://yandex.ru/dev/sdg-robot/ru/quick-start",
+          "boundary": "Partner API access and authorized delivery claims."
+        }
+      ]
+    },
+    {
+      "id": "swarmfarm-swarmview",
+      "vendor": "SwarmFarm Robotics",
+      "name": "SwarmBot / SwarmView",
+      "category": "Agricultural robots",
+      "hosting": "Robot / customer app",
+      "path": [
+        "SwarmBot",
+        "SwarmView app",
+        "Operator"
+      ],
+      "protocols": [
+        "Robot Wi-Fi for supported manual-driving configurations",
+        "Job planning and monitoring; other transport unpublished"
+      ],
+      "data": "The vendor app supports job planning, robot monitoring and control. Release notes describe manual driving on supported robot Wi-Fi networks.",
+      "access": "Configured SwarmBot and authorized app.",
+      "gap": "The app listing does not establish all traffic as direct Wi-Fi or identify a cloud backend. Version-specific features and supported robot networks matter.",
+      "source": "https://apps.apple.com/us/app/swarmview/id1464792754",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Monitoring / control",
+          "data": "Job state, camera views and supported control functions.",
+          "direction": "both",
+          "source": "https://apps.apple.com/us/app/swarmview/id1464792754",
+          "boundary": "Configured SwarmBot and authorized app."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Planning interface",
+          "data": "Operator plans jobs and reviews the fleet.",
+          "direction": "both",
+          "source": "https://apps.apple.com/us/app/swarmview/id1464792754",
+          "boundary": "Configured SwarmBot and authorized app."
+        }
+      ]
+    },
+    {
+      "id": "hyphen-makeline-orders",
+      "vendor": "Hyphen",
+      "name": "Makeline / digital ordering",
+      "category": "Food-service robots",
+      "hosting": "Restaurant ordering / preparation system",
+      "path": [
+        "App / drive-through / delivery order",
+        "Hyphen Makeline"
+      ],
+      "protocols": [
+        "Digital order integration; transport unpublished"
+      ],
+      "data": "Orders from digital channels are routed to Makeline for meal assembly, then presented to kitchen staff for consolidation.",
+      "access": "Installed restaurant system and ordering integration.",
+      "gap": "The FAQ establishes order flow, not network hosts, cloud provider, authentication or machine-level commands. Meal handoff itself is physical, not an added network edge.",
+      "source": "https://www.usehyphen.com/faq",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Order routing",
+          "data": "Digital meal orders drive the automated preparation workflow.",
+          "direction": "forward",
+          "source": "https://www.usehyphen.com/faq",
+          "boundary": "Installed restaurant system and ordering integration."
+        }
+      ]
+    },
+    {
+      "id": "dexterity-iris",
+      "vendor": "Dexterity",
+      "name": "Physical AI / IRIS hardware interface",
+      "category": "Industrial robots",
+      "hosting": "AI platform / compatible robot hardware",
+      "path": [
+        "Skill-agent orchestration",
+        "IRIS API layer",
+        "Supported arm / gripper / mobile base"
+      ],
+      "protocols": [
+        "Hardware abstraction API",
+        "Visual / tactile perception and motion control"
+      ],
+      "data": "Orchestrated skill agents use a hardware abstraction layer to act through supported robot equipment and consume physical observations.",
+      "access": "Supported Dexterity installation and integration access.",
+      "gap": "This describes the current platform. It does not establish publicly reachable endpoints, a cloud deployment or identical interfaces on all earlier DXR hardware. IRIS is distinct from the research packing challenge.",
+      "source": "https://dexterity.ai/platform",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Hardware-independent skills",
+          "data": "Skills pass through the unified hardware interface.",
+          "direction": "both",
+          "source": "https://dexterity.ai/platform",
+          "boundary": "Supported Dexterity installation and integration access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Perception / action",
+          "data": "Hardware integration includes perception and motion-control information.",
+          "direction": "both",
+          "source": "https://dexterity.ai/platform",
+          "boundary": "Supported Dexterity installation and integration access."
+        }
+      ]
+    },
+    {
+      "id": "keenon-t8-app",
+      "vendor": "KEENON Robotics",
+      "name": "DINERBOT T8 / calling and tracking",
+      "category": "Service robots",
+      "hosting": "Robot / operator tools",
+      "path": [
+        "DINERBOT T8",
+        "Remote calling interface",
+        "Tracking app"
+      ],
+      "protocols": [
+        "Remote calling; transport unpublished",
+        "App tracking; transport unpublished"
+      ],
+      "data": "The product page lists remote calling and app tracking alongside multi-robot task dispatch.",
+      "access": "Configured customer robot and compatible operator tools.",
+      "gap": "The page does not identify direct versus server-mediated paths, radio protocol or API. These T8 features do not establish the networking of every KEENON humanoid or cleaner.",
+      "source": "https://www.keenon.com/en/product/T8",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 1,
+          "to_index": 0,
+          "label": "Remote call",
+          "data": "Operator requests robot service; intermediary routing is not published.",
+          "direction": "forward",
+          "source": "https://www.keenon.com/en/product/T8",
+          "boundary": "Configured customer robot and compatible operator tools."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "App tracking",
+          "data": "Robot tracking is exposed to the app; exact fields and route are unpublished.",
+          "direction": "forward",
+          "source": "https://www.keenon.com/en/product/T8",
+          "boundary": "Configured customer robot and compatible operator tools."
+        }
+      ]
+    },
+    {
+      "id": "keenon-c40-management",
+      "vendor": "KEENON Robotics",
+      "name": "KLEENBOT C40 / app and web management",
+      "category": "Cleaning robots",
+      "hosting": "Robot / customer management interface",
+      "path": [
+        "KLEENBOT C40",
+        "App / web management",
+        "Operator"
+      ],
+      "protocols": [
+        "App / web interface; robot transport unpublished"
+      ],
+      "data": "Task management, status monitoring, remote dispatch and cleaning reports support customer operations.",
+      "access": "Configured C40 and authorized management access.",
+      "gap": "C40-specific reference. It does not prove the same management path for T8/T9 or name cloud hosts, radio protocols or public APIs.",
+      "source": "https://www.keenon.com/en/product/C40",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Status / dispatch",
+          "data": "Robot status and cleaning reports outward; task dispatch returns.",
+          "direction": "both",
+          "source": "https://www.keenon.com/en/product/C40",
+          "boundary": "Configured C40 and authorized management access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Operational management",
+          "data": "User configures work and reviews results.",
+          "direction": "both",
+          "source": "https://www.keenon.com/en/product/C40",
+          "boundary": "Configured C40 and authorized management access."
+        }
+      ]
+    },
+    {
+      "id": "kelluu-data-service",
+      "vendor": "Kelluu",
+      "name": "Airship / cloud data service",
+      "category": "Drones",
+      "hosting": "Airborne sensors / processing / browser",
+      "path": [
+        "Kelluu airship sensors",
+        "Cloud data processing",
+        "Customer browser"
+      ],
+      "protocols": [
+        "Cloud observation delivery; transport unpublished",
+        "Browser-based analysis"
+      ],
+      "data": "Airship observations enter an automated processing workflow and are made available to customers through browser-based analysis.",
+      "access": "Customer data-service agreement and access.",
+      "gap": "The published workflow does not identify a cloud provider, aircraft control channel, API route or guarantee that every product is delivered live.",
+      "source": "https://kelluu.com/solution",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Captured observations",
+          "data": "Aerial sensor data supports processing and environmental models.",
+          "direction": "forward",
+          "source": "https://kelluu.com/solution",
+          "boundary": "Customer data-service agreement and access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Customer delivery",
+          "data": "Processed data is accessed in a browser.",
+          "direction": "forward",
+          "source": "https://kelluu.com/solution",
+          "boundary": "Customer data-service agreement and access."
+        }
+      ]
+    },
+    {
+      "id": "fp-lio-onboard",
+      "vendor": "F&P Robotics",
+      "name": "Lio / local ROS and myP interfaces",
+      "category": "Service robots",
+      "hosting": "Onboard Ethernet / browser client",
+      "path": [
+        "Lio onboard computers",
+        "ROS topics / services",
+        "myP and operator interfaces",
+        "Browser client",
+        "Gripper devices"
+      ],
+      "protocols": [
+        "Internal Ethernet",
+        "ROS topics / services",
+        "Web operator interface",
+        "Gigabit Ethernet through robot arm"
+      ],
+      "data": "The 2020 research paper documents local processing, ROS communication between onboard modules and web interfaces for control and diagnostics.",
+      "access": "Configured robot and permitted local operator access.",
+      "gap": "This is the published Lio research configuration. Local compute was designed to avoid mandatory cloud processing; a browser interface does not establish internet exposure or later-model compatibility.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8043496/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Onboard module traffic",
+          "data": "ROS topics connect the embedded computers over Ethernet.",
+          "direction": "both",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8043496/",
+          "boundary": "Configured robot and permitted local operator access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "ROS / myP integration",
+          "data": "Messages and services join the software interfaces.",
+          "direction": "both",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8043496/",
+          "boundary": "Configured robot and permitted local operator access."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Browser interface",
+          "data": "Operator status, development and control views.",
+          "direction": "both",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8043496/",
+          "boundary": "Configured robot and permitted local operator access."
+        },
+        {
+          "from_index": 4,
+          "to_index": 0,
+          "label": "Arm Ethernet path",
+          "data": "Embedded arm cable connects gripper devices with internal computers.",
+          "direction": "both",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8043496/",
+          "boundary": "Configured robot and permitted local operator access."
+        }
+      ]
+    },
+    {
+      "id": "embodied-openmoxie",
+      "vendor": "Embodied",
+      "name": "Moxie / optional OpenMoxie services",
+      "category": "Social robots",
+      "hosting": "Owner LAN / optional AI provider",
+      "path": [
+        "Compatible Moxie robot",
+        "Local MQTT broker",
+        "OpenMoxie services",
+        "Configured OpenAI services",
+        "Owner web dashboard"
+      ],
+      "protocols": [
+        "MQTT / TLS in documented configuration",
+        "Local web application",
+        "Optional external speech / chat services"
+      ],
+      "data": "OpenMoxie provides an owner-run messaging hub and services for compatible robots, with optional external speech recognition and chat processing.",
+      "access": "Owner-configured robot firmware, local service and provider credentials.",
+      "gap": "Community replacement architecture, not a claim that Embodied cloud remains available. Firmware and content compatibility vary. Fully local versus external processing depends on selected services.",
+      "source": "https://github.com/jbeghtol/openmoxie",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Current Moxie operator / sunset notice",
+          "url": "https://moxierobots.com/contact"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Robot messaging",
+          "data": "Device messages through the owner-configured broker.",
+          "direction": "both",
+          "source": "https://github.com/jbeghtol/openmoxie",
+          "boundary": "Owner-configured robot firmware, local service and provider credentials."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Service messaging",
+          "data": "MQTT coordinates the robot-facing services.",
+          "direction": "both",
+          "source": "https://github.com/jbeghtol/openmoxie",
+          "boundary": "Owner-configured robot firmware, local service and provider credentials."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Configured AI processing",
+          "data": "Documented speech and chat implementations use OpenAI.",
+          "direction": "both",
+          "source": "https://github.com/jbeghtol/openmoxie",
+          "boundary": "Owner-configured robot firmware, local service and provider credentials."
+        },
+        {
+          "from_index": 4,
+          "to_index": 2,
+          "label": "Local administration",
+          "data": "Owner dashboard configures the service.",
+          "direction": "both",
+          "source": "https://github.com/jbeghtol/openmoxie",
+          "boundary": "Owner-configured robot firmware, local service and provider credentials."
+        }
+      ]
+    },
+    {
+      "id": "machinex-samurai-learning",
+      "vendor": "Machinex",
+      "name": "SamurAI / learning and performance reporting",
+      "category": "Industrial robots",
+      "hosting": "Sorting robot / learning tools / cloud subscription",
+      "path": [
+        "SamurAI sorting robot",
+        "MACH Intell reporting",
+        "MACH Cloud",
+        "Learning station"
+      ],
+      "protocols": [
+        "Automatic AI updates; transport unpublished",
+        "Sorting performance reports",
+        "Recorded-image labeling"
+      ],
+      "data": "Robot performance supports reporting. Cloud subscriptions provide AI updates, while a learning station records and labels material-stream imagery.",
+      "access": "Installed customer equipment and optional MACH Cloud subscription.",
+      "gap": "Manufacturer sheet identifies these roles without publishing network routes, API schemas or all training-data upload mechanics. The learning station can operate before robot installation.",
+      "source": "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Performance reports",
+          "data": "Robot performance is presented for analysis and reporting.",
+          "direction": "forward",
+          "source": "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf",
+          "boundary": "Installed customer equipment and optional MACH Cloud subscription."
+        },
+        {
+          "from_index": 2,
+          "to_index": 0,
+          "label": "AI updates",
+          "data": "Subscription delivers updated recognition software.",
+          "direction": "forward",
+          "source": "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf",
+          "boundary": "Installed customer equipment and optional MACH Cloud subscription."
+        },
+        {
+          "from_index": 3,
+          "to_index": 0,
+          "label": "Predeployment learning",
+          "data": "Recorded and labeled examples improve recognition; transfer mechanism is unpublished.",
+          "direction": "forward",
+          "source": "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf",
+          "boundary": "Installed customer equipment and optional MACH Cloud subscription."
+        }
+      ]
+    },
+    {
+      "id": "edge-penguin-mk2-link",
+      "vendor": "Edge Autonomy",
+      "name": "Penguin C Mk2 / ground datalink",
+      "category": "Drones",
+      "hosting": "Aircraft / tracking antenna / ground station",
+      "path": [
+        "Penguin C Mk2",
+        "Tracking antenna / digital link",
+        "Portable GCS"
+      ],
+      "protocols": [
+        "Digital MIMO radio",
+        "Encrypted datalink",
+        "MISB-compliant video"
+      ],
+      "data": "The manufacturer sheet documents a digital radio path, tracking antenna and portable ground station for the aircraft system.",
+      "access": "Configured operator equipment and compatible aircraft.",
+      "gap": "UAV Factory sheet version 08.2020, hosted by an industry publication. This is historical Mk2 hardware, not proof of every later VTOL variant, public telemetry or a decodable radio signature.",
+      "source": "https://www.unmannedsystemstechnology.com/wp-content/uploads/2015/07/UAVFactory_Penguin_C_Mk2_UAS_Datasheet.pdf",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Aircraft datalink",
+          "data": "Encrypted digital aircraft communications and video.",
+          "direction": "both",
+          "source": "https://www.unmannedsystemstechnology.com/wp-content/uploads/2015/07/UAVFactory_Penguin_C_Mk2_UAS_Datasheet.pdf",
+          "boundary": "Configured operator equipment and compatible aircraft."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Ground operations",
+          "data": "Antenna and datalink support the portable control station.",
+          "direction": "both",
+          "source": "https://www.unmannedsystemstechnology.com/wp-content/uploads/2015/07/UAVFactory_Penguin_C_Mk2_UAS_Datasheet.pdf",
+          "boundary": "Configured operator equipment and compatible aircraft."
+        }
+      ]
+    },
+    {
+      "id": "flyingbasket-fb3-control",
+      "vendor": "FlyingBasket",
+      "name": "FB3 / portable ground control",
+      "category": "Drones",
+      "hosting": "Aircraft / operator equipment",
+      "path": [
+        "FB3 aircraft",
+        "Suitcase ground control station",
+        "Operator"
+      ],
+      "protocols": [
+        "Ground control link; transport unpublished"
+      ],
+      "data": "The FB3 operating kit includes a portable station for mission oversight and aircraft control.",
+      "access": "Customer operating kit and trained operator.",
+      "gap": "The product page establishes the control relationship but does not publish the radio protocol, cloud routing or application API. Product versions and kit options differ.",
+      "source": "https://flyingbasket.com/fb3-order",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Mission oversight / control",
+          "data": "Aircraft operation through the included ground station.",
+          "direction": "both",
+          "source": "https://flyingbasket.com/fb3-order",
+          "boundary": "Customer operating kit and trained operator."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Operator controls",
+          "data": "The portable station exposes operator controls.",
+          "direction": "both",
+          "source": "https://flyingbasket.com/fb3-order",
+          "boundary": "Customer operating kit and trained operator."
+        }
+      ]
+    },
+    {
+      "id": "diodon-maritime-integration",
+      "vendor": "DIODON Drone Technology",
+      "name": "HP30 / standalone and integrated operation",
+      "category": "Drones",
+      "hosting": "Aircraft / ground station or vessel system",
+      "path": [
+        "DIODON HP30",
+        "Standalone GCS",
+        "Integrated vessel C2 / CMS"
+      ],
+      "protocols": [
+        "Ground control; radio unspecified",
+        "Video / mission-data integration; schema unpublished"
+      ],
+      "data": "Standalone operation uses a ground station. Integrated installations deliver aerial video and mission data into vessel operator systems.",
+      "access": "Configured aircraft and compatible vessel integration.",
+      "gap": "Current HP30 reference; it does not establish the same interfaces on DP3. The C2/CMS branch is deployment dependent, and no particular partner, host or radio format is implied.",
+      "source": "https://www.diodon-drone.com/integration/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Standalone control",
+          "data": "Ground-station operation without vessel software integration.",
+          "direction": "both",
+          "source": "https://www.diodon-drone.com/integration/",
+          "boundary": "Configured aircraft and compatible vessel integration."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Integrated mission data",
+          "data": "Video and mission data reach compatible operator systems; routing is unpublished.",
+          "direction": "forward",
+          "source": "https://www.diodon-drone.com/integration/",
+          "boundary": "Configured aircraft and compatible vessel integration."
+        }
+      ]
+    },
+    {
+      "id": "intbot-interaction-services",
+      "vendor": "IntBot",
+      "name": "Robot perception / conversation / administration",
+      "category": "Humanoid robots",
+      "hosting": "Robot / conditional cloud processing / admin portal",
+      "path": [
+        "Robot cameras / microphones",
+        "Onboard perception",
+        "Conversation cloud services",
+        "Administration portal",
+        "Authorized operator"
+      ],
+      "protocols": [
+        "Encrypted cloud processing; protocol unspecified",
+        "Video streaming; transport unpublished",
+        "Role-based administrative access"
+      ],
+      "data": "The privacy document describes onboard perception, optional cloud conversation processing and possible video streams, transcripts and status in the admin portal.",
+      "access": "Authenticated staff or customer roles; enabled processing depends on deployment.",
+      "gap": "OpenAI is given as an example provider, not the mandatory route of every robot. The document does not identify stream endpoints, radios or model-specific configuration.",
+      "source": "https://www.intbot.ai/privacy",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Local perception",
+          "data": "Camera and microphone observations support interaction.",
+          "direction": "forward",
+          "source": "https://www.intbot.ai/privacy",
+          "boundary": "Authenticated staff or customer roles; enabled processing depends on deployment."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Conditional conversation processing",
+          "data": "Audio may reach cloud recognition and response services.",
+          "direction": "both",
+          "source": "https://www.intbot.ai/privacy",
+          "boundary": "Authenticated staff or customer roles; enabled processing depends on deployment."
+        },
+        {
+          "from_index": 0,
+          "to_index": 3,
+          "label": "Optional monitoring stream",
+          "data": "Video may be streamed or selected sessions recorded.",
+          "direction": "forward",
+          "source": "https://www.intbot.ai/privacy",
+          "boundary": "Authenticated staff or customer roles; enabled processing depends on deployment."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Conditional conversation records",
+          "data": "Transcripts and timestamps may support admin analytics; routing is unspecified.",
+          "direction": "forward",
+          "source": "https://www.intbot.ai/privacy",
+          "boundary": "Authenticated staff or customer roles; enabled processing depends on deployment."
+        },
+        {
+          "from_index": 3,
+          "to_index": 4,
+          "label": "Role-based review",
+          "data": "Permitted users review operational information.",
+          "direction": "forward",
+          "source": "https://www.intbot.ai/privacy",
+          "boundary": "Authenticated staff or customer roles; enabled processing depends on deployment."
+        }
+      ]
+    },
+    {
+      "id": "a2z-remote-operations",
+      "vendor": "Autonomous A2Z",
+      "name": "Vehicle / 5G remote operations",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Vehicle / control center",
+      "path": [
+        "A2Z autonomous vehicle",
+        "Remote-driving cockpit",
+        "Control server / monitoring"
+      ],
+      "protocols": [
+        "5G remote driving",
+        "Vehicle status monitoring; API unpublished"
+      ],
+      "data": "Vehicle cameras support remote-driving specialists. A separate control-server role monitors location, status and operational events.",
+      "access": "Configured vehicle and authorized control-center staff.",
+      "gap": "Public platform architecture; it does not establish configuration on every vehicle, a public live feed, carrier identity or zero-latency guarantees.",
+      "source": "https://www.autoa2z.ai/RemoteControl",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Fallback policy",
+          "url": "https://www.autoa2z.ai/Safety"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Camera view / remote driving",
+          "data": "Situational information and permitted remote-driving commands.",
+          "direction": "both",
+          "source": "https://www.autoa2z.ai/RemoteControl",
+          "boundary": "Configured vehicle and authorized control-center staff."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Vehicle monitoring",
+          "data": "Location, status and operational events reach the control system.",
+          "direction": "forward",
+          "source": "https://www.autoa2z.ai/RemoteControl",
+          "boundary": "Configured vehicle and authorized control-center staff."
+        }
+      ]
+    },
+    {
+      "id": "fbr-hadrian-design",
+      "vendor": "FBR",
+      "name": "Hadrian / CAD-to-build instructions",
+      "category": "Construction robots",
+      "hosting": "Design software / construction robot",
+      "path": [
+        "CAD model",
+        "Hadrian construction system"
+      ],
+      "protocols": [
+        "Digital construction instructions; transfer unpublished"
+      ],
+      "data": "The vendor identifies the CAD model as the instruction source for robotic block construction.",
+      "access": "Customer construction workflow and configured robot.",
+      "gap": "A design-data relationship, not a claim of a cloud service. File format, transfer channel, controller API and per-generation wiring are not established by this FAQ.",
+      "source": "https://www.fbr.com.au/view/faqs",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Build instructions",
+          "data": "The digital model supplies the construction instructions.",
+          "direction": "forward",
+          "source": "https://www.fbr.com.au/view/faqs",
+          "boundary": "Customer construction workflow and configured robot."
+        }
+      ]
+    },
+    {
+      "id": "kepler-development-platform",
+      "vendor": "Kepler Robotics",
+      "name": "K2 / Studio and development interfaces",
+      "category": "Humanoid robots",
+      "hosting": "Developer tools / robot control modules",
+      "path": [
+        "Kepler Studio / developer application",
+        "Perception-decision-control tools",
+        "K2 arm / motor interfaces"
+      ],
+      "protocols": [
+        "Motor APIs",
+        "Arm control interfaces",
+        "Visual / code-based development tools"
+      ],
+      "data": "The vendor launch describes task composition tools and perception, navigation, voice and control modules for K2 development.",
+      "access": "Supported robot and developer platform access.",
+      "gap": "October 2025 announcement. The skill marketplace was described as a future update. The release does not publish a network protocol, host, API schema or cloud topology.",
+      "source": "https://www.prnewswire.com/news-releases/kepler-robotics-unveils-k2-bumblebee-at-iros-2025-building-a-global-developer-ecosystem-through-an-open-robotics-platform-302595121.html",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Task composition",
+          "data": "Visual tools or code compose robot task sequences.",
+          "direction": "forward",
+          "source": "https://www.prnewswire.com/news-releases/kepler-robotics-unveils-k2-bumblebee-at-iros-2025-building-a-global-developer-ecosystem-through-an-open-robotics-platform-302595121.html",
+          "boundary": "Supported robot and developer platform access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Hardware control interfaces",
+          "data": "Development tools expose arm control and motor APIs.",
+          "direction": "unspecified",
+          "source": "https://www.prnewswire.com/news-releases/kepler-robotics-unveils-k2-bumblebee-at-iros-2025-building-a-global-developer-ecosystem-through-an-open-robotics-platform-302595121.html",
+          "boundary": "Supported robot and developer platform access."
+        }
+      ]
+    },
+    {
+      "id": "sharpa-wave-host",
+      "vendor": "Sharpa",
+      "name": "Wave / host SDK and Avatar glove",
+      "category": "Robotic components",
+      "hosting": "Local devices / host software",
+      "path": [
+        "Sharpa Wave hand",
+        "Pilot / Wave SDK host",
+        "AvatarExo glove",
+        "Avatar App"
+      ],
+      "protocols": [
+        "Host SDK / embedded firmware",
+        "USB or 2.4 GHz wireless for AE01 glove",
+        "Hand transport unspecified"
+      ],
+      "data": "Host tools configure and monitor Wave. The Avatar glove and application support a separate hand-teleoperation workflow.",
+      "access": "Compatible Sharpa hardware and owner-controlled software.",
+      "gap": "Wave / AE01 component documentation does not establish the complete network of Sharpa North. Glove wireless capability must not be attributed to the hand or whole robot.",
+      "source": "https://github.com/sharpa-robotics",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Hand control / sensing",
+          "data": "Embedded firmware communicates with Pilot or SDK applications.",
+          "direction": "both",
+          "source": "https://github.com/sharpa-robotics",
+          "boundary": "Compatible Sharpa hardware and owner-controlled software."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Glove data / feedback",
+          "data": "The glove provides sensor input and supports haptic feedback.",
+          "direction": "both",
+          "source": "https://github.com/sharpa-robotics",
+          "boundary": "Compatible Sharpa hardware and owner-controlled software."
+        },
+        {
+          "from_index": 3,
+          "to_index": 0,
+          "label": "Hand teleoperation",
+          "data": "Avatar App supports teleoperation of Wave; intermediate routing is unspecified.",
+          "direction": "forward",
+          "source": "https://github.com/sharpa-robotics",
+          "boundary": "Compatible Sharpa hardware and owner-controlled software."
+        }
+      ]
+    },
+    {
+      "id": "xhumanoid-tiangong-sdk",
+      "vendor": "X-Humanoid",
+      "name": "Tiangong 3.0 / ROS 2 SDK",
+      "category": "Humanoid robots",
+      "hosting": "Onboard computer / developer connection",
+      "path": [
+        "Tiangong 3.0 sensors / joints",
+        "Onboard xos / ROS 2",
+        "Developer examples / operator"
+      ],
+      "protocols": [
+        "ROS 2 Jazzy",
+        "C++ / Python interfaces",
+        "Direct Ethernet / SSH development access"
+      ],
+      "data": "Official examples expose joint control, camera and depth views, LiDAR, IMU, GPS and speech interfaces through onboard ROS 2 packages.",
+      "access": "Configured Tiangong 3.0 with local development access; examples require its Ubuntu runtime.",
+      "gap": "This is the 3.0 SDK, not every Tiangong Lite/Pro generation. It does not establish cloud service endpoints or externally accessible ROS discovery.",
+      "source": "https://github.com/Open-X-Humanoid/xhumanoid_sdk",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Hardware observations / control",
+          "data": "Sensor messages and joint-control interfaces.",
+          "direction": "both",
+          "source": "https://github.com/Open-X-Humanoid/xhumanoid_sdk",
+          "boundary": "Configured Tiangong 3.0 with local development access; examples require its Ubuntu runtime."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "SDK access",
+          "data": "Python/C++ examples consume messages and invoke control services on the robot.",
+          "direction": "both",
+          "source": "https://github.com/Open-X-Humanoid/xhumanoid_sdk",
+          "boundary": "Configured Tiangong 3.0 with local development access; examples require its Ubuntu runtime."
+        }
+      ]
+    },
+    {
+      "id": "robotera-star1-sdk",
+      "vendor": "Robot Era",
+      "name": "STAR1 / ROS 2 control examples",
+      "category": "Humanoid robots",
+      "hosting": "Robot software / configured application",
+      "path": [
+        "STAR1 state / sensors",
+        "ROS 2 common interfaces",
+        "Trajectory / RL controller"
+      ],
+      "protocols": [
+        "ROS 2 messages / services / actions",
+        "TorchScript control-policy example"
+      ],
+      "data": "RobotEra publishes state, service and action definitions, trajectory feedback and a controller consuming IMU, motor feedback and remote-control inputs.",
+      "access": "Compatible STAR1 development installation and operator access.",
+      "gap": "STAR1 example package; it does not establish the same interfaces for the inventory L7, a public cloud route or a radio protocol. Simulator assets alone are not reception evidence.",
+      "source": "https://github.com/roboterax/ros2_sdk",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "State / control messages",
+          "data": "Robot state and operations through common interfaces.",
+          "direction": "both",
+          "source": "https://github.com/roboterax/ros2_sdk",
+          "boundary": "Compatible STAR1 development installation and operator access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Motion services / feedback",
+          "data": "Trajectory action interfaces and controller feedback.",
+          "direction": "both",
+          "source": "https://github.com/roboterax/ros2_sdk",
+          "boundary": "Compatible STAR1 development installation and operator access."
+        }
+      ]
+    },
+    {
+      "id": "momenta-data-loop",
+      "vendor": "Momenta Global",
+      "name": "Driving data / closed-loop development",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Vehicle data / development toolchain",
+      "path": [
+        "Driving observations",
+        "Automated filtering / labeling",
+        "Model development",
+        "Algorithm deployment"
+      ],
+      "protocols": [
+        "Data-development workflow; transfer unpublished"
+      ],
+      "data": "Momenta documents collection of diverse driving scenarios and automated processing, labeling and algorithm iteration for its driving products.",
+      "access": "Vendor and participating vehicle-development workflow.",
+      "gap": "This is a development-data loop. It does not establish continuous remote driving, a particular cloud provider, transfer protocol or the collection settings of an individual robotaxi.",
+      "source": "https://www.momenta.ai/en/technology.html",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Robotaxi product scope",
+          "url": "https://www.momenta.ai/en/ScalableRobotaxi.html"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Driving data",
+          "data": "Scenarios and corner cases enter the processing toolchain.",
+          "direction": "forward",
+          "source": "https://www.momenta.ai/en/technology.html",
+          "boundary": "Vendor and participating vehicle-development workflow."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Prepared data",
+          "data": "Filtered and labeled data supports model improvement.",
+          "direction": "forward",
+          "source": "https://www.momenta.ai/en/technology.html",
+          "boundary": "Vendor and participating vehicle-development workflow."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Algorithm iteration",
+          "data": "Improved algorithms are deployed against driving applications.",
+          "direction": "forward",
+          "source": "https://www.momenta.ai/en/technology.html",
+          "boundary": "Vendor and participating vehicle-development workflow."
+        }
+      ]
+    },
+    {
+      "id": "zf-shuttle-connectivity",
+      "vendor": "ZF Friedrichshafen",
+      "name": "2023 shuttle / ProAI and ProConnect",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Onboard processing / external connectivity",
+      "path": [
+        "Shuttle sensors",
+        "ProAI / Virtual Driver",
+        "Onboard actuators",
+        "ProConnect",
+        "Infrastructure / cloud services"
+      ],
+      "protocols": [
+        "Onboard sensor processing",
+        "Infrastructure / cloud connectivity; transport unpublished"
+      ],
+      "data": "ZF describes sensor processing and actuator instructions onboard, with ProConnect providing external infrastructure and cloud communication.",
+      "access": "Configured shuttle and operator infrastructure.",
+      "gap": "The January 2023 architecture describes the announced new shuttle generation. Beep supply volumes were prospective. It does not establish endpoint addresses, public telemetry or identical equipment on every ZF vehicle.",
+      "source": "https://press.zf.com/press/en/releases/release_49664.html",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Sensor observations",
+          "data": "Environmental measurements feed onboard computation.",
+          "direction": "forward",
+          "source": "https://press.zf.com/press/en/releases/release_49664.html",
+          "boundary": "Configured shuttle and operator infrastructure."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Driving instructions",
+          "data": "Virtual Driver supplies instructions to onboard actuators.",
+          "direction": "forward",
+          "source": "https://press.zf.com/press/en/releases/release_49664.html",
+          "boundary": "Configured shuttle and operator infrastructure."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "Vehicle platform integration",
+          "data": "ProAI and ProConnect operate together; internal transport is unspecified.",
+          "direction": "unspecified",
+          "source": "https://press.zf.com/press/en/releases/release_49664.html",
+          "boundary": "Configured shuttle and operator infrastructure."
+        },
+        {
+          "from_index": 3,
+          "to_index": 4,
+          "label": "External connectivity",
+          "data": "ProConnect supports communication with infrastructure and cloud services.",
+          "direction": "unspecified",
+          "source": "https://press.zf.com/press/en/releases/release_49664.html",
+          "boundary": "Configured shuttle and operator infrastructure."
+        }
+      ]
+    },
+    {
+      "id": "ondas-optimus",
+      "vendor": "Ondas Holdings, Inc.",
+      "name": "Optimus / airbase and remote supervision",
+      "category": "Drones",
+      "hosting": "Drone fleet / airbase / control center",
+      "path": [
+        "Optimus aircraft",
+        "Smart airbase",
+        "Remote command-and-control center"
+      ],
+      "protocols": [
+        "Automated fleet tasking; transport unpublished"
+      ],
+      "data": "The published Optimus system combines aircraft and automated airbases with remote operator oversight of the networked fleet.",
+      "access": "Authorized Optimus operator and customer deployment.",
+      "gap": "Battery and sensor handling at the base is physical automation; it is not presented as a separate data protocol. Public materials do not disclose the radio, API or a public flight feed.",
+      "source": "https://www.ondas.com/post/one-of-the-world-s-largest-semiconductor-manufacturers-renews-its-contract-with-ondas-airobotics-fo",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Aircraft / base system",
+          "data": "Documented system relationship; link implementation and direction are unspecified.",
+          "direction": "unspecified",
+          "source": "https://www.ondas.com/post/one-of-the-world-s-largest-semiconductor-manufacturers-renews-its-contract-with-ondas-airobotics-fo",
+          "boundary": "Authorized Optimus operator and customer deployment."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Remote fleet oversight",
+          "data": "Operators oversee aircraft operations; intermediate routing is unpublished.",
+          "direction": "unspecified",
+          "source": "https://www.ondas.com/post/one-of-the-world-s-largest-semiconductor-manufacturers-renews-its-contract-with-ondas-airobotics-fo",
+          "boundary": "Authorized Optimus operator and customer deployment."
+        }
+      ]
+    },
+    {
+      "id": "skyfront-perimeter-control",
+      "vendor": "Skyfront",
+      "name": "Perimeter 8 / SkyfrontGCS",
+      "category": "Drones",
+      "hosting": "Aircraft / ground station",
+      "path": [
+        "Perimeter 8 / 8+",
+        "Ground radio",
+        "SkyfrontGCS / operator controls"
+      ],
+      "protocols": [
+        "Encrypted configurable radio link",
+        "QGroundControl-derived proprietary GCS",
+        "PX4-derived proprietary firmware"
+      ],
+      "data": "The manufacturer sheet describes ground-radio connectivity and a Windows ground station with aircraft and engine telemetry and control.",
+      "access": "Paired ground station and configured aircraft.",
+      "gap": "October 2023 sheet; radio options vary. Open-source ancestry does not establish an openly decodable radio protocol or public cloud service.",
+      "source": "https://seg.org/wp-content/uploads/2023/10/Skyfront_Perimeter8_drone_Features_and_Specifications_Oct2023-1.pdf",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Vendor integration capabilities",
+          "url": "https://skyfront.com/integration"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Aircraft radio link",
+          "data": "Aircraft telemetry and operator commands.",
+          "direction": "both",
+          "source": "https://seg.org/wp-content/uploads/2023/10/Skyfront_Perimeter8_drone_Features_and_Specifications_Oct2023-1.pdf",
+          "boundary": "Paired ground station and configured aircraft."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Ground station connection",
+          "data": "Ground software and controller exchange information through station radio hardware.",
+          "direction": "both",
+          "source": "https://seg.org/wp-content/uploads/2023/10/Skyfront_Perimeter8_drone_Features_and_Specifications_Oct2023-1.pdf",
+          "boundary": "Paired ground station and configured aircraft."
+        }
+      ]
+    },
+    {
+      "id": "apellix-powerwash-control",
+      "vendor": "Apellix",
+      "name": "Power Wash / radio controller",
+      "category": "Drones",
+      "hosting": "Local aircraft control",
+      "path": [
+        "Handheld radio controller",
+        "Power Wash aircraft"
+      ],
+      "protocols": [
+        "RF control; configuration dependent"
+      ],
+      "data": "The manufacturer manual documents handheld radio control of its cleaning aircraft.",
+      "access": "Authorized pilot and configured aircraft controller.",
+      "gap": "2023 manual reference. The optional power tether is an electricity supply, not a documented data path. Later B2 configurations and cloud services require separate evidence.",
+      "source": "https://downloads.regulations.gov/FAA-2024-2209-0001/attachment_4.pdf",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Flight commands",
+          "data": "Pilot instructions are transmitted to the aircraft by radio.",
+          "direction": "forward",
+          "source": "https://downloads.regulations.gov/FAA-2024-2209-0001/attachment_4.pdf",
+          "boundary": "Authorized pilot and configured aircraft controller."
+        }
+      ]
+    },
+    {
+      "id": "lucid-sherpa-controller",
+      "vendor": "Lucid Bots",
+      "name": "Sherpa / MK15 and Mission Control",
+      "category": "Drones",
+      "hosting": "Aircraft / operator controller",
+      "path": [
+        "Sherpa aircraft",
+        "SIYI MK15 controller",
+        "Auterion Mission Control"
+      ],
+      "protocols": [
+        "Controller Ethernet interface",
+        "Aircraft radio; wire format unpublished"
+      ],
+      "data": "Lucid identifies the MK15 controller and Auterion Mission Control in its Sherpa connection workflow.",
+      "access": "Owner-controlled Sherpa and configured controller.",
+      "gap": "The documented Ethernet setting belongs to the controller; it does not mean an Ethernet cable runs to the flying drone. LTE configuration is documented separately, but its end-to-end service route is not established here.",
+      "source": "https://knowledge.lucidbots.com/why-wont-my-rc-connect-to-my-sherpa",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "MK15 controller documentation",
+          "url": "https://knowledge.lucidbots.com/sherpa"
+        },
+        {
+          "name": "LTE settings reference",
+          "url": "https://knowledge.lucidbots.com/how-to-update-your-sherpas-lte-apn-settings"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Aircraft / controller connection",
+          "data": "Configured controller links to Sherpa. Exact over-air protocol is not specified.",
+          "direction": "unspecified",
+          "source": "https://knowledge.lucidbots.com/why-wont-my-rc-connect-to-my-sherpa",
+          "boundary": "Owner-controlled Sherpa and configured controller."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Controller application",
+          "data": "Mission Control operates on the controller in the documented workflow.",
+          "direction": "unspecified",
+          "source": "https://knowledge.lucidbots.com/why-wont-my-rc-connect-to-my-sherpa",
+          "boundary": "Owner-controlled Sherpa and configured controller."
+        }
+      ]
+    },
+    {
+      "id": "dzyne-ultra-satellite",
+      "vendor": "DZYNE Technologies",
+      "name": "ULTRA / satellite operations",
+      "category": "Drones",
+      "hosting": "Aircraft / satellite / operator system",
+      "path": [
+        "ULTRA aircraft / payload",
+        "Satellite communications link",
+        "Operator command system"
+      ],
+      "protocols": [
+        "Satellite command link",
+        "ISR data transfer; detailed protocol unpublished"
+      ],
+      "data": "AFRL describes satellite-based control and a sensor-data feed to ULTRA operators.",
+      "access": "Authorized aircraft operations infrastructure.",
+      "gap": "ULTRA-specific AFRL reference. It does not identify a satellite provider, public stream, frequency signature or the architecture of every DZYNE aircraft.",
+      "source": "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Aircraft communications",
+          "data": "Control exchange and sensor data through satellite communications.",
+          "direction": "both",
+          "source": "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/",
+          "boundary": "Authorized aircraft operations infrastructure."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Operator connection",
+          "data": "Commands toward the aircraft and sensor information toward operators.",
+          "direction": "both",
+          "source": "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/",
+          "boundary": "Authorized aircraft operations infrastructure."
+        }
+      ]
+    },
+    {
+      "id": "saronic-echelon",
+      "vendor": "Saronic Technologies",
+      "name": "Echelon / vessel operations",
+      "category": "Maritime autonomy",
+      "hosting": "Vessel fleet / operator interface",
+      "path": [
+        "Saronic vessel fleet",
+        "Echelon",
+        "Authorized operator"
+      ],
+      "protocols": [
+        "Mission tasking",
+        "Video / telemetry; transport unpublished"
+      ],
+      "data": "Echelon exposes vessel tasking, planning, simulation and operational video and telemetry through a shared operator interface.",
+      "access": "Configured Saronic vessel deployment and operator access.",
+      "gap": "Platform architecture; the site does not disclose network hosts, radio technology, authentication details or every model-specific integration. Simulation is distinct from a live vessel feed.",
+      "source": "https://www.saronic.com/echelon",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Vessel data / tasks",
+          "data": "Telemetry and video reach the operations layer; tasking returns to vessels.",
+          "direction": "both",
+          "source": "https://www.saronic.com/echelon",
+          "boundary": "Configured Saronic vessel deployment and operator access."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Operations interface",
+          "data": "Authorized users view information and define missions.",
+          "direction": "both",
+          "source": "https://www.saronic.com/echelon",
+          "boundary": "Configured Saronic vessel deployment and operator access."
+        }
+      ]
+    },
+    {
+      "id": "pronto-ahs-dispatch",
+      "vendor": "ATOMS",
+      "name": "Pronto AHS / dispatcher application",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Vehicle / fleet dispatcher",
+      "path": [
+        "Truck drive-by-wire / hardware",
+        "Pronto AHS",
+        "Dispatcher app"
+      ],
+      "protocols": [
+        "Publisher / subscriber software; specific protocol unpublished",
+        "Tablet / smartphone interface"
+      ],
+      "data": "Pronto documents hardware-health monitoring, alerts and dispatch commands through a field or remote-office application.",
+      "access": "Configured AHS deployment and authorized dispatcher.",
+      "gap": "Historical Pronto architecture, now under ATOMS. Publish/subscribe does not imply MQTT. Later Vision/VLR editions may differ; no public fleet endpoint is established.",
+      "source": "https://pronto.ai/how-pronto-makes-av-easy/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Pronto acquisition by ATOMS",
+          "url": "https://pronto.ai/atoms/"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Vehicle control / health",
+          "data": "Drive-by-wire commands and monitored hardware state.",
+          "direction": "both",
+          "source": "https://pronto.ai/how-pronto-makes-av-easy/",
+          "boundary": "Configured AHS deployment and authorized dispatcher."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Fleet monitoring / dispatch",
+          "data": "Status and alerts reach the app; dispatcher commands return.",
+          "direction": "both",
+          "source": "https://pronto.ai/how-pronto-makes-av-easy/",
+          "boundary": "Configured AHS deployment and authorized dispatcher."
+        }
+      ]
+    },
+    {
+      "id": "equinor-anymal-flotilla",
+      "vendor": "Equinor",
+      "name": "ANYmal / Flotilla at Northern Lights",
+      "category": "Inspection robots",
+      "hosting": "Robot / Equinor cloud tenant / operator",
+      "path": [
+        "ANYmal D",
+        "ANYbotics software / API",
+        "Flotilla",
+        "Internal digital twin",
+        "Operator phone"
+      ],
+      "protocols": [
+        "ANYbotics API",
+        "Cloud-hosted operations; transport details unspecified"
+      ],
+      "data": "The Northern Lights deployment integrates ANYmal with Flotilla and the facility digital twin. ANYbotics software runs in Equinor’s cloud tenant.",
+      "access": "Equinor IT domain and authorized operations staff.",
+      "gap": "June 2025 site-specific architecture, not every offshore robot. The source does not disclose tenant hostnames, carrier, API credentials or a public inspection feed.",
+      "source": "https://www.anybotics.com/news/equinor-deploys-anymal-at-northern-lights-ccs-facility/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Robot operations",
+          "data": "Robot inspection and operational interface.",
+          "direction": "both",
+          "source": "https://www.anybotics.com/news/equinor-deploys-anymal-at-northern-lights-ccs-facility/",
+          "boundary": "Equinor IT domain and authorized operations staff."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Fleet integration",
+          "data": "ANYbotics API connects the robot to Flotilla.",
+          "direction": "both",
+          "source": "https://www.anybotics.com/news/equinor-deploys-anymal-at-northern-lights-ccs-facility/",
+          "boundary": "Equinor IT domain and authorized operations staff."
+        },
+        {
+          "from_index": 3,
+          "to_index": 2,
+          "label": "Facility context",
+          "data": "Digital twin supports context and high-level mission planning.",
+          "direction": "forward",
+          "source": "https://www.anybotics.com/news/equinor-deploys-anymal-at-northern-lights-ccs-facility/",
+          "boundary": "Equinor IT domain and authorized operations staff."
+        },
+        {
+          "from_index": 1,
+          "to_index": 4,
+          "label": "Authorized observation / control",
+          "data": "Operators access the system from phones; intermediate routing is unspecified.",
+          "direction": "both",
+          "source": "https://www.anybotics.com/news/equinor-deploys-anymal-at-northern-lights-ccs-facility/",
+          "boundary": "Equinor IT domain and authorized operations staff."
+        }
+      ]
+    },
+    {
+      "id": "verkada-camera-network",
+      "vendor": "Verkada",
+      "name": "Camera / Command / local viewing",
+      "category": "Video infrastructure",
+      "hosting": "Camera storage / customer LAN / cloud",
+      "path": [
+        "Verkada camera / onboard storage",
+        "Verkada Command services",
+        "Local authorized viewer",
+        "Optional cloud backup"
+      ],
+      "protocols": [
+        "TCP / UDP 443 to required cloud services",
+        "TCP / UDP 4100 local streaming",
+        "DNS / NTP network services"
+      ],
+      "data": "Camera footage is stored locally. Command provides cloud management and authorized viewing; local streaming and optional backup use separate network paths.",
+      "access": "Customer organization, camera network and Command permissions.",
+      "gap": "Region and feature determine required service domains. Camera networking is not the GW31-E gateway’s complete architecture, and shared cloud addresses do not identify a specific camera or drone.",
+      "source": "https://help.verkada.com/verkada-cameras/configuration/camera-network-settings",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Hybrid cloud overview",
+          "url": "https://docs.verkada.com/docs/hybrid_cloud_video_security_overview.pdf"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Cloud connection",
+          "data": "Camera communication with required Command endpoints.",
+          "direction": "both",
+          "source": "https://help.verkada.com/verkada-cameras/configuration/camera-network-settings",
+          "boundary": "Customer organization, camera network and Command permissions."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Local streaming",
+          "data": "Local video streaming uses the documented LAN path.",
+          "direction": "forward",
+          "source": "https://help.verkada.com/verkada-cameras/configuration/camera-network-settings",
+          "boundary": "Customer organization, camera network and Command permissions."
+        },
+        {
+          "from_index": 0,
+          "to_index": 3,
+          "label": "Optional footage backup",
+          "data": "Enabled cloud backup requires separate storage destinations.",
+          "direction": "forward",
+          "source": "https://help.verkada.com/verkada-cameras/configuration/camera-network-settings",
+          "boundary": "Customer organization, camera network and Command permissions."
+        }
+      ]
+    },
+    {
+      "id": "didi-gemini-xc90",
+      "vendor": "Didi Autonomous Driving",
+      "name": "Gemini / Volvo XC90 test platform",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Onboard vehicle integration",
+      "path": [
+        "DiDi Gemini hardware / driving software",
+        "XC90 vehicle control / backup systems"
+      ],
+      "protocols": [
+        "Onboard integration; interfaces unpublished"
+      ],
+      "data": "Volvo and DiDi describe integration of Gemini driving hardware and software into XC90 vehicles with redundant steering and braking systems.",
+      "access": "Vendor test fleet and engineering integration.",
+      "gap": "April 2021 test-platform announcement. It does not establish a current production fleet, remote-control link, radio signature or complete cloud architecture.",
+      "source": "https://www.volvocars.com/us/media/press-releases/656CC2893CD30140/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Vehicle integration",
+          "data": "Driving-system integration with the vehicle’s control and backup functions.",
+          "direction": "unspecified",
+          "source": "https://www.volvocars.com/us/media/press-releases/656CC2893CD30140/",
+          "boundary": "Vendor test fleet and engineering integration."
+        }
+      ],
+      "map_vendor_names": [
+        {
+          "name": "Didi Chuxing",
+          "scope": "DiDi Gemini / XC90 test-platform reference; not every DiDi vehicle.",
+          "source": "https://www.volvocars.com/us/media/press-releases/656CC2893CD30140/"
+        }
+      ]
+    },
+    {
+      "id": "dlr-justin-teleoperation",
+      "vendor": "DLR Institute of Robotics and Mechatronics",
+      "name": "Rollin’ Justin / HUG remote operation",
+      "category": "Research robots",
+      "hosting": "Operator interface / research robot",
+      "path": [
+        "DLR HUG operator system",
+        "Rollin’ Justin"
+      ],
+      "protocols": [
+        "Research teleoperation; network transport unspecified"
+      ],
+      "data": "DLR describes HUG-based remote control of Rollin’ Justin and EDAN in the SMiLE assistance-robotics project.",
+      "access": "Configured research installation and operator.",
+      "gap": "Project-specific teleoperation reference; no commercial cloud service, radio signature or general-purpose public control API is established.",
+      "source": "https://www.dlr.de/en/latest/news/2025/the-art-of-compliant-robotics/dlr-smile-project-application-in-assistance-robotics",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Rollin’ Justin research platform",
+          "url": "https://meteron.dlr.de/rollin-justin/index.html"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Remote operation",
+          "data": "HUG provides the remote-control interface in the research installation.",
+          "direction": "forward",
+          "source": "https://www.dlr.de/en/latest/news/2025/the-art-of-compliant-robotics/dlr-smile-project-application-in-assistance-robotics",
+          "boundary": "Configured research installation and operator."
+        }
+      ]
+    },
+    {
+      "id": "bae-atlas-interfaces",
+      "vendor": "BAE Systems",
+      "name": "ATLAS / onboard autonomy and operator",
+      "category": "Autonomous ground vehicles",
+      "hosting": "Vehicle / authorized operator",
+      "path": [
+        "Vehicle sensors",
+        "ATLAS autonomy system",
+        "Authorized user / connected assets"
+      ],
+      "protocols": [
+        "Onboard perception",
+        "Secure communications; transport unpublished"
+      ],
+      "data": "ATLAS integrates sensors with its autonomy system and supports user control and shared information with connected assets.",
+      "access": "Configured vehicle communications and authorized users.",
+      "gap": "ATLAS platform reference, not the ARCIMS maritime system also listed in the inventory. No endpoint, frequency or detailed communications implementation is published.",
+      "source": "https://www.baesystems.com/en/product/atlas",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Environmental observations",
+          "data": "Sensors supply information to onboard autonomy.",
+          "direction": "forward",
+          "source": "https://www.baesystems.com/en/product/atlas",
+          "boundary": "Configured vehicle communications and authorized users."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Control / shared information",
+          "data": "User control and communications with connected assets.",
+          "direction": "both",
+          "source": "https://www.baesystems.com/en/product/atlas",
+          "boundary": "Configured vehicle communications and authorized users."
+        }
+      ]
+    },
+    {
+      "id": "leidos-lava-vessels",
+      "vendor": "Leidos",
+      "name": "Sea Hunter / Seahawk and LAVA",
+      "category": "Maritime autonomy",
+      "hosting": "Onboard autonomy / operator communications",
+      "path": [
+        "Sea Hunter / Seahawk",
+        "LAVA autonomy",
+        "Seahawk remote-control interface"
+      ],
+      "protocols": [
+        "Onboard autonomy",
+        "Remote-control communications; transport unpublished"
+      ],
+      "data": "Leidos identifies LAVA as the autonomy layer for both vessels and documents remote control and alternate communications paths for Seahawk.",
+      "access": "Authorized vessel operations.",
+      "gap": "September 2026 public report. The remote-control description is scoped to Seahawk; no radio configuration, cloud service or public position feed is established.",
+      "source": "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Vessel autonomy",
+          "data": "LAVA provides vessel navigation and autonomy functions.",
+          "direction": "unspecified",
+          "source": "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group",
+          "boundary": "Authorized vessel operations."
+        },
+        {
+          "from_index": 2,
+          "to_index": 1,
+          "label": "Seahawk remote operation",
+          "data": "Authorized remote control supplements onboard autonomy; physical routing is unspecified.",
+          "direction": "forward",
+          "source": "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group",
+          "boundary": "Authorized vessel operations."
+        }
+      ]
+    },
+    {
+      "id": "kratos-valkyrie-interfaces",
+      "vendor": "Kratos Defense & Security Solutions",
+      "name": "Valkyrie / demonstrated control interfaces",
+      "category": "Drones",
+      "hosting": "Aircraft / ground-control interfaces",
+      "path": [
+        "USMC Valkyrie test aircraft",
+        "Kratos ground control station",
+        "Autonodyne operator interface"
+      ],
+      "protocols": [
+        "BLOS command link",
+        "A-GRA-compatible operator interface"
+      ],
+      "data": "Kratos reports a test transition between its ground station and an Autonodyne interface for beyond-line-of-sight vehicle control.",
+      "access": "Authorized test and aircraft operations infrastructure.",
+      "gap": "April 2026 test configuration, reported in August. It does not establish the same integration for every Valkyrie or UTAP-22, detailed link technology or a public telemetry endpoint.",
+      "source": "https://www.kratosdefense.com/newsroom/usmc-valkyrie-demonstrates-beyond-line-of-sight-command-and-control-in-flight-at-u-s-navy-test-range",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 1,
+          "to_index": 0,
+          "label": "Ground station control",
+          "data": "Initial aircraft-control interface in the reported test.",
+          "direction": "forward",
+          "source": "https://www.kratosdefense.com/newsroom/usmc-valkyrie-demonstrates-beyond-line-of-sight-command-and-control-in-flight-at-u-s-navy-test-range",
+          "boundary": "Authorized test and aircraft operations infrastructure."
+        },
+        {
+          "from_index": 2,
+          "to_index": 0,
+          "label": "Demonstrated BLOS control",
+          "data": "Alternate interface controlled the aircraft following handover.",
+          "direction": "forward",
+          "source": "https://www.kratosdefense.com/newsroom/usmc-valkyrie-demonstrates-beyond-line-of-sight-command-and-control-in-flight-at-u-s-navy-test-range",
+          "boundary": "Authorized test and aircraft operations infrastructure."
+        }
+      ],
+      "map_vendor_names": [
+        {
+          "name": "Kratos Defense",
+          "scope": "Valkyrie test configuration; not UTAP-22/Mako.",
+          "source": "https://www.kratosdefense.com/newsroom/usmc-valkyrie-demonstrates-beyond-line-of-sight-command-and-control-in-flight-at-u-s-navy-test-range"
+        }
+      ]
+    },
+    {
+      "id": "royal-navy-harrier-control",
+      "vendor": "Royal Navy",
+      "name": "RNMB Harrier / remote supervision",
+      "category": "Maritime autonomy",
+      "hosting": "Vessel / ship or shore control center",
+      "path": [
+        "Harrier / survey sonar",
+        "Ship or shore control center"
+      ],
+      "protocols": [
+        "Remote control / survey reporting; link unpublished"
+      ],
+      "data": "The Royal Navy describes pre-programmed operation or remote control from ship or shore, with survey information supplied to units at sea or ashore.",
+      "access": "Authorized Harrier operations.",
+      "gap": "March 2024 operational-evaluation report. It does not establish live public locations, a radio fingerprint or the wiring of every ARCIMS system.",
+      "source": "https://www.royalnavy.mod.uk/news/2024/march/13/240313-harrier-in-the-gulf",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Remote operation / survey information",
+          "data": "Operator control and survey information exchange.",
+          "direction": "both",
+          "source": "https://www.royalnavy.mod.uk/news/2024/march/13/240313-harrier-in-the-gulf",
+          "boundary": "Authorized Harrier operations."
+        }
+      ]
+    },
+    {
+      "id": "terabase-construction-data",
+      "vendor": "Terabase Energy",
+      "name": "Construct / Terafab project monitoring",
+      "category": "Construction robots",
+      "hosting": "Field data / Construct cloud / project staff",
+      "path": [
+        "Terafab construction project",
+        "Construct",
+        "Drone imagery / mobile QC inputs",
+        "Project team"
+      ],
+      "protocols": [
+        "Cloud construction management",
+        "Mobile field reporting; API unpublished"
+      ],
+      "data": "Terabase reports Terafab/Construct interoperability at White Wing Ranch. Construct combines project monitoring, imagery and mobile quality-control records.",
+      "access": "Authorized construction project users.",
+      "gap": "Project-data relationship, not evidence of cloud motor control. Direct robot telemetry wiring, APIs and the configuration of later Terafab versions remain unpublished.",
+      "source": "https://www.terabase.energy/resources/terabase-energy-completes-first-commercial-deployment-of-terafab-solar-construction-automation-system",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Project monitoring integration",
+          "data": "Construct monitored the project alongside Terafab; exact data routing is unspecified.",
+          "direction": "unspecified",
+          "source": "https://www.terabase.energy/resources/terabase-energy-completes-first-commercial-deployment-of-terafab-solar-construction-automation-system",
+          "boundary": "Authorized construction project users."
+        },
+        {
+          "from_index": 2,
+          "to_index": 1,
+          "label": "Field observations",
+          "data": "Imagery and mobile quality records support construction tracking.",
+          "direction": "forward",
+          "source": "https://www.terabase.energy/products-services/construction/construct",
+          "boundary": "Authorized construction project users."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "Progress / quality review",
+          "data": "Project users review maps and resolve quality issues.",
+          "direction": "both",
+          "source": "https://www.terabase.energy/products-services/construction/construct",
+          "boundary": "Authorized construction project users."
+        }
+      ]
+    },
+    {
+      "id": "aescape-experience-data",
+      "vendor": "Aescape",
+      "name": "Massage system / Aerview / stored preferences",
+      "category": "Service robots",
+      "hosting": "Local massage controls / vendor data storage",
+      "path": [
+        "Depth sensors",
+        "Massage system",
+        "Aerview touchscreen",
+        "Aescape data storage"
+      ],
+      "protocols": [
+        "Local touchscreen control",
+        "Account / experience data; transfer unpublished"
+      ],
+      "data": "Depth sensing builds a body model; Aerview changes the session. Performance information and user feedback are collected to personalize later experiences.",
+      "access": "Member session and vendor-managed records.",
+      "gap": "The documentation does not identify the network transport or hosting provider. A body scan described as a point cloud is a geometry format, not evidence of cloud hosting.",
+      "source": "https://aescape.zendesk.com/hc/en-us/articles/24714417712909-How-does-the-Aescape-massage-experience-work",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Current data policy",
+          "url": "https://www.aescape.com/privacy-policy"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Body model",
+          "data": "Depth observations guide the personalized massage.",
+          "direction": "forward",
+          "source": "https://aescape.zendesk.com/hc/en-us/articles/24714417712909-How-does-the-Aescape-massage-experience-work",
+          "boundary": "Member session and vendor-managed records."
+        },
+        {
+          "from_index": 2,
+          "to_index": 1,
+          "label": "Session controls",
+          "data": "Users adjust massage settings through Aerview.",
+          "direction": "forward",
+          "source": "https://aescape.zendesk.com/hc/en-us/articles/24714417712909-How-does-the-Aescape-massage-experience-work",
+          "boundary": "Member session and vendor-managed records."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "Experience data",
+          "data": "Technical performance and user feedback are stored for personalization.",
+          "direction": "forward",
+          "source": "https://aescape.zendesk.com/hc/en-us/articles/24714417712909-How-does-the-Aescape-massage-experience-work",
+          "boundary": "Member session and vendor-managed records."
+        }
+      ]
+    },
+    {
+      "id": "andromeda-abi-data",
+      "vendor": "Andromeda Robotics",
+      "name": "Abi / interaction records and storage",
+      "category": "Companion robots",
+      "hosting": "Robot / vendor records / conditional hosting",
+      "path": [
+        "Abi interactions",
+        "Andromeda service records",
+        "Vendor or third-party storage"
+      ],
+      "protocols": [
+        "Interaction-data processing; transport unpublished"
+      ],
+      "data": "Andromeda’s policy covers imagery and audio obtained through robot interactions and describes server or cloud storage of service records.",
+      "access": "Consented service use and vendor-controlled processing.",
+      "gap": "March 2025 policy scope, not an endpoint inventory. Storage locations are alternatives; no named cloud provider or routing of every interaction is established. The policy says robot information is de-identified and not disclosed.",
+      "source": "https://andromedarobotics.ai/privacy-policy-2025",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Interaction information",
+          "data": "Robot use supplies service information, including imagery and audio.",
+          "direction": "forward",
+          "source": "https://andromedarobotics.ai/privacy-policy-2025",
+          "boundary": "Consented service use and vendor-controlled processing."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Record storage",
+          "data": "Policy permits vendor servers and third-party server or cloud storage; deployment varies.",
+          "direction": "forward",
+          "source": "https://andromedarobotics.ai/privacy-policy-2025",
+          "boundary": "Consented service use and vendor-controlled processing."
+        }
+      ]
+    },
+    {
+      "id": "airforestry-ground-station",
+      "vendor": "AirForestry",
+      "name": "Harvesting drones / ground control",
+      "category": "Drones",
+      "hosting": "Drone fleet / ground station",
+      "path": [
+        "Harvesting drones",
+        "Ground Control Station",
+        "Operator"
+      ],
+      "protocols": [
+        "Fleet supervision; transport unpublished"
+      ],
+      "data": "AirForestry describes its electric harvesting drones as a multi-drone system monitored and controlled from a shared ground station.",
+      "access": "Configured forestry operation and operator.",
+      "gap": "The product is developing through field milestones. The source does not establish deployed fleet quantities, link protocols, cloud hosting or a public flight feed.",
+      "source": "https://airforestry.com/our-solution/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [
+        {
+          "name": "Technology and development milestones",
+          "url": "https://airforestry.com/technology/"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Fleet oversight",
+          "data": "Ground station provides control and supervision of the harvesting fleet.",
+          "direction": "both",
+          "source": "https://airforestry.com/our-solution/",
+          "boundary": "Configured forestry operation and operator."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Operator interface",
+          "data": "Operator oversees the system at its ground station.",
+          "direction": "both",
+          "source": "https://airforestry.com/our-solution/",
+          "boundary": "Configured forestry operation and operator."
+        }
+      ]
+    },
+    {
+      "id": "artly-order-workflow",
+      "vendor": "Artly Coffee",
+      "name": "Barista Bot / order application",
+      "category": "Service robots",
+      "hosting": "Customer app / coffee-service workflow",
+      "path": [
+        "Artly customer app",
+        "Artly coffee order service",
+        "Barista Bot fulfillment"
+      ],
+      "protocols": [
+        "Mobile ordering / status; API unpublished"
+      ],
+      "data": "The Artly app submits customized drinks, displays waiting time and tracks orders for its robotic coffee locations.",
+      "access": "Customer ordering account and configured store.",
+      "gap": "This is an order-to-fulfillment relationship. The website does not expose the robot-control API, cloud provider, internal queue or device radio.",
+      "source": "https://artly.coffee/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Orders / order status",
+          "data": "Drink preferences and order submissions; waiting time and tracking return to the app.",
+          "direction": "both",
+          "source": "https://artly.coffee/",
+          "boundary": "Customer ordering account and configured store."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Coffee fulfillment",
+          "data": "Orders are fulfilled by the coffee service; internal routing to the robot is unspecified.",
+          "direction": "forward",
+          "source": "https://artly.coffee/",
+          "boundary": "Customer ordering account and configured store."
+        }
+      ]
+    },
+    {
+      "id": "dyna-taku-model-stack",
+      "vendor": "Dyna Robotics",
+      "name": "Taku / workflow and action models",
+      "category": "Humanoid robots",
+      "hosting": "Robot-control software; hosting unspecified",
+      "path": [
+        "Workflow orchestrator",
+        "Dyna-2 action policy",
+        "Whole-body controller",
+        "Taku joints / wheels"
+      ],
+      "protocols": [
+        "Model-to-controller interfaces",
+        "URR target trajectories"
+      ],
+      "data": "Dyna describes separate workflow reasoning, action generation and whole-body control layers for Taku.",
+      "access": "Vendor robot runtime and development workflow.",
+      "gap": "September 2026 research architecture for Taku, not proof of identical Sophy Swiftfold hardware. Model placement, network transport and cloud providers are not established by these component relationships.",
+      "source": "https://www.dyna.co/dyna-2.1",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Task step",
+          "data": "The orchestrator selects the next step and steers the action model.",
+          "direction": "forward",
+          "source": "https://www.dyna.co/dyna-2.1",
+          "boundary": "Vendor robot runtime and development workflow."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Target trajectories",
+          "data": "The action model outputs targets in Unified Robot Representation.",
+          "direction": "forward",
+          "source": "https://www.dyna.co/dyna-2.1",
+          "boundary": "Vendor robot runtime and development workflow."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Joint / wheel targets",
+          "data": "The controller translates trajectories into robot motion targets.",
+          "direction": "forward",
+          "source": "https://www.dyna.co/dyna-2.1",
+          "boundary": "Vendor robot runtime and development workflow."
+        }
+      ]
+    },
+    {
+      "id": "farmwise-vulcan-controls",
+      "vendor": "FarmWise",
+      "name": "Vulcan / perception and in-cab controls",
+      "category": "Agricultural robots",
+      "hosting": "Local implement / operator cab",
+      "path": [
+        "Vision system",
+        "Vulcan weeding system",
+        "In-cab interface"
+      ],
+      "protocols": [
+        "Machine vision",
+        "Local configuration; transport unpublished"
+      ],
+      "data": "Vulcan uses camera observations for plant detection and an in-cab interface for operator configuration.",
+      "access": "Configured implement and operator cab.",
+      "gap": "Vulcan reference; it does not establish the same interfaces for the older Titan robot. No cloud service or radio fingerprint is documented on this page.",
+      "source": "https://farmwise.io/products",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Plant observations",
+          "data": "Images support detections used by the weeding system.",
+          "direction": "forward",
+          "source": "https://farmwise.io/products",
+          "boundary": "Configured implement and operator cab."
+        },
+        {
+          "from_index": 2,
+          "to_index": 1,
+          "label": "Configuration",
+          "data": "Operator adjusts and customizes settings from the cab.",
+          "direction": "forward",
+          "source": "https://farmwise.io/products",
+          "boundary": "Configured implement and operator cab."
+        }
+      ]
+    },
+    {
+      "id": "okibo-perception-guidance",
+      "vendor": "Okibo",
+      "name": "Wall-finishing robot / 3D guidance",
+      "category": "Construction robots",
+      "hosting": "Onboard sensing / guidance",
+      "path": [
+        "3D scanning",
+        "Real-time model / guidance",
+        "Wall-finishing robot"
+      ],
+      "protocols": [
+        "Onboard perception; interfaces unpublished"
+      ],
+      "data": "Okibo describes scanning and real-time modeling that guide its self-contained wall-finishing robot.",
+      "access": "Onboard robot operation.",
+      "gap": "Public functional architecture only. It does not establish network transport, a cloud service, every EG7+ component or an external scanning signature.",
+      "source": "https://okibo.com/about-us/",
+      "useful": "Follow the cited interfaces and check the exact product and software version before interpreting observations.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-10-26",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Scene observations",
+          "data": "Scanning supplies the worksite representation.",
+          "direction": "forward",
+          "source": "https://okibo.com/about-us/",
+          "boundary": "Onboard robot operation."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Robot guidance",
+          "data": "The real-time model guides the robot.",
+          "direction": "forward",
+          "source": "https://okibo.com/about-us/",
+          "boundary": "Onboard robot operation."
         }
       ]
     }
