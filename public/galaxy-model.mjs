@@ -1,5 +1,5 @@
-import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261026-networks-306';
-import {serviceConnections} from './service-connections.mjs?v=20261026-networks-306';
+import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261026-networks-333';
+import {serviceConnections} from './service-connections.mjs?v=20261026-networks-333';
 export function buildGalaxy(catalog=cloudSurfaces){
  const nodes=[],edges=[],vendors=new Map();
  const columns=catalog.services.length<=34?4:Math.ceil(Math.sqrt(catalog.services.length*430/540));
