@@ -1,5 +1,5 @@
-import {servicesForVendor,canonicalVendor} from './map-device-coverage.mjs?v=20261026-networks-196';
-import {serviceConnections} from './service-connections.mjs?v=20261026-networks-196';
+import {servicesForVendor,canonicalVendor} from './map-device-coverage.mjs?v=20261026-networks-235';
+import {serviceConnections} from './service-connections.mjs?v=20261026-networks-235';
 const lattice='https://developer.anduril.com/guides/concepts/overview';
 const api='https://developer.anduril.com/reference/overview/overview';
 export function vendorFlow(vendor){
