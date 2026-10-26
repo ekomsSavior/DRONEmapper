@@ -1,4 +1,4 @@
-import {cloudSurfaces} from './cloud-surface-data.mjs';
+import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261026-networks-167';
 const $=id=>document.getElementById(id);
 const el=(tag,text)=>{const e=document.createElement(tag);e.textContent=text;return e;};
 // A protocol established by a source outranks a mention in an unknowns note.
@@ -12,7 +12,7 @@ function render(){
  $('cloud-list').replaceChildren();
  for(const s of rows){
   const card=el('article','');card.className='reference-card';card.append(el('p',s.vendor+' · '+s.category),el('h2',s.name),el('p',s.hosting));
-  const path=el('ol','');path.setAttribute('aria-label','Documented communications path');for(const step of s.path)path.append(el('li',step));card.append(path);
+  const path=el('ul','');path.setAttribute('aria-label','Documented components');for(const step of s.path)path.append(el('li',step));card.append(path);
   for(const [label,value] of [['Protocols',s.protocols.join(' · ')],['Available data',s.data],['Access',s.access],['Useful to contributors',s.useful],['Unknowns',s.gap]]){const p=el('p','');p.append(el('strong',label+': '),document.createTextNode(value));card.append(p);}
   const a=el('a','Official documentation ↗');a.href=s.source;a.target='_blank';a.rel='noopener noreferrer';card.append(a,el('p',s.connector));for(const link of s.related||[]){const a=el('a',link.name+' ↗');a.href=link.url;a.target='_blank';a.rel='noopener noreferrer';const p=el('p','');p.append(a);card.append(p);}$('cloud-list').append(card);
  }
@@ -22,7 +22,7 @@ $('cloud-hosting').addEventListener('change',render);
 $('cloud-search').addEventListener('input',render);$('cloud-category').addEventListener('change',render);render();
 
 // Shared map coverage augments, rather than replaces, documented service paths.
-import {loadMapInventory,servicesForVendor,vendorInventory,deviceLinks,researchInventory} from './map-device-coverage.mjs';
+import {loadMapInventory,servicesForVendor,vendorInventory,deviceLinks,researchInventory} from './map-device-coverage.mjs?v=20261026-networks-167';
 const coverage=el('section','');coverage.className='reference-feature';coverage.id='map-device-coverage';
 coverage.append(el('h2','Map device coverage'));
 const search=el('input','');search.type='search';search.placeholder='Find a manufacturer or model';search.setAttribute('aria-label','Search map device coverage');

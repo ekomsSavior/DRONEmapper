@@ -1,6 +1,6 @@
 import {libraryModels} from './device-library-model.mjs';
 import {deviceReferences} from './security-device-references.mjs';
-import {cloudSurfaces} from './cloud-surface-data.mjs';
+import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261026-networks-167';
 import {companyWebsite,modelWebsite} from './company-links.mjs';
 export async function loadMapInventory(){
  let r=await fetch('/api/device-library');if(!r.ok)r=await fetch('/device-inventory.json');
@@ -23,6 +23,9 @@ export function researchInventory(mapModels){
  }
  return rows;
 }
-export function servicesForVendor(vendor){return cloudSurfaces.services.filter(s=>canonicalVendor(s.vendor)===canonicalVendor(vendor));}
+export function servicesForVendor(vendor){
+ const key=canonicalVendor(vendor);
+ return cloudSurfaces.services.filter(s=>canonicalVendor(s.vendor)===key||(s.map_vendor_names||[]).some(n=>n.source&&n.scope&&canonicalVendor(n.name)===key));
+}
 export function deviceLinks(row){return {product:row.url||modelWebsite(row.name,row.maker,row.category),manufacturer:row.manufacturer_url||companyWebsite(row.maker),library:'/devices?vendor='+encodeURIComponent(row.maker)+'&model='+encodeURIComponent(row.name),cloud:'/cloud-surface?vendor='+encodeURIComponent(row.maker),galaxy:'/galaxy?vendor='+encodeURIComponent(row.maker)};}
 export function vendorInventory(models){const vendors=new Map();for(const row of models){if(!vendors.has(row.maker))vendors.set(row.maker,[]);vendors.get(row.maker).push(row);}return [...vendors].sort(([a],[b])=>a.localeCompare(b));}

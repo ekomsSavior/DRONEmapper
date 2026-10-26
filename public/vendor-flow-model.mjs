@@ -1,4 +1,5 @@
-import {servicesForVendor,canonicalVendor} from './map-device-coverage.mjs';
+import {servicesForVendor,canonicalVendor} from './map-device-coverage.mjs?v=20261026-networks-167';
+import {serviceConnections} from './service-connections.mjs?v=20261026-networks-167';
 const lattice='https://developer.anduril.com/guides/concepts/overview';
 const api='https://developer.anduril.com/reference/overview/overview';
 export function vendorFlow(vendor){
@@ -19,9 +20,20 @@ export function vendorFlow(vendor){
    edge('objects','apps','REST','Authorized object access.',lattice,true);
    edge('video','apps','Video interface','Authorized video consumption.',api);
   }
- }else services.forEach((s,i)=>{
-  s.path.forEach((name,j)=>add(i+':'+j,name,100+j*300,150+i*360,s,j===0?'Device / upstream':j===s.path.length-1?'Application / downstream':'Service / intermediary'));
-  s.path.slice(1).forEach((_,j)=>edges.push({from:i+':'+j,to:i+':'+(j+1),label:'Documented path',data:s.data,source:s.source,service:s,boundary:s.access,bidirectional:false,directionUnverified:true}));
- });
+ }else {
+  let top=0;
+  services.forEach((s,i)=>{
+   const links=serviceConnections(s),branched=links.some(l=>Math.abs(l.from_index-l.to_index)>1);
+   const radius=Math.max(300,s.path.length*60);
+   s.path.forEach((name,j)=>{
+    const angle=-Math.PI/2+j*2*Math.PI/s.path.length;
+    const x=branched?radius+180+radius*Math.cos(angle):100+j*300;
+    const y=branched?top+radius+100+radius*Math.sin(angle):top+150;
+    add(i+':'+j,name,x,y,s,s.path_zones?.[j]||'Documented component');
+   });
+   for(const link of links)edges.push({...link,from:i+':'+link.from_index,to:i+':'+link.to_index});
+   top+=branched?radius*2+300:360;
+  });
+ }
  return {vendor,services,nodes,edges,complete:false};
 }
