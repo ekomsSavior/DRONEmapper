@@ -102,3 +102,17 @@ test('manual browser upload uses the verified session without sending or request
 test('pasted token whitespace and uppercase hex normalize without storing secrets',async()=>{
  await uploadWardriveFile(file(header,row()),'  '+ 'A'.repeat(64)+'  ','UTC',{fetcher:async(url,request)=>{assert.equal(request.headers.Authorization,'Bearer '+'a'.repeat(64));assert.equal(request.credentials,'omit');return Response.json({accepted:1,duplicates:0});}});
 });
+
+test('browser preview and batching retain all supported Wi-Fi robot patterns',async()=>{
+ const names=['Unitree_Go1ABC123','Bittle-AP','RMS1-ABC123','RMEP-12AB34'];
+ const blob=file(header,...names.map((name,i)=>row(i,name)),row(0,'Unitree_Go2ABC123'));
+ const summary=await scanWardriveFile(blob,'UTC',{now});
+ assert.equal(summary.candidates,4);assert.equal(summary.unrelated,1);
+ const result=await uploadWardriveFile(blob,'a'.repeat(64),'UTC',{now,fetcher:async(url,request)=>{
+  const parsed=parseWardrive(request.body,'UTC',now);
+  assert.equal(parsed.observations.length,4);
+  assert.ok(parsed.observations.every(r=>r.signature!=='wifi-cam-name'));
+  return Response.json({accepted:4,duplicates:0});
+ }});
+ assert.equal(result.accepted,4);
+});

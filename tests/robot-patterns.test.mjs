@@ -24,6 +24,8 @@ test('generated catalogs stay identical across Android, desktop and web',()=>{
  assert.deepEqual(robotSignatures,canonical);
  for(const file of ['android-node/app/src/main/assets/robot-signatures.json','linux-node/dronemapper_node/data/robot-signatures.json'])assert.deepEqual(JSON.parse(fs.readFileSync(file)),canonical);
  for(const rule of canonical.rules){assert.ok(rule.sources.every(s=>s.startsWith('https://')));assert.match(rule.validation,/not tested/);}
+ const bundle=fs.readFileSync("public/account.js","utf8");
+ for(const rule of canonical.rules.filter(r=>r.transport==='wifi'))assert.ok(bundle.includes(rule.id),'Rebuild the browser account/upload bundle: '+rule.id);
 });
 test('strict Wi-Fi names reject generic devices, shortened names and injected lines',()=>{
  for(const [name,id] of [['Unitree_Go1ABC123','unitree-go1-wifi-name'],['Bittle-AP','petoi-bittle-ap-name'],['RMS1-ABC123','robomaster-s1-wifi-name'],['RMEP-12AB34','robomaster-ep-wifi-name']]){
