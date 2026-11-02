@@ -8,6 +8,7 @@ import math
 import re
 import struct
 from .security_devices import vendor_hint
+from .robot_signals import wifi_robot_signature
 
 AIRFRAMES = ['Unknown airframe', 'Aeroplane', 'Helicopter / multirotor', 'Gyroplane',
              'Hybrid lift', 'Ornithopter', 'Glider', 'Kite', 'Free balloon',
@@ -72,7 +73,7 @@ def camera_signature(name):
         return 'wifi-cam-name'
     if re.fullmatch(r'TELLO-[A-Z0-9]{6}', name):
         return 'tello-name'
-    return None
+    return wifi_robot_signature(name)
 
 
 def radiotap(packet):

@@ -1,0 +1,111 @@
+/* Generated from integration/robot-signatures.json. */
+export const robotSignatures = {
+  "schema_version": 1,
+  "reviewed_on": "2026-11-01",
+  "rules": [
+    {
+      "id": "cyberdog-ble-v1",
+      "transport": "ble",
+      "family": "robot-dog",
+      "label": "Possible robot dog · CyberDog-style BLE",
+      "name_pattern": "铁蛋[!-~]{1,20}\\n?",
+      "sources": [
+        "https://github.com/MiRoboticsLab/cyberdog_ros2/blob/9a8674e5009f0ea7c0736168dfbd8d501900a4cb/cyberdog_interaction/cyberdog_wireless/bluetooth/bluetooth/gattserver.py"
+      ],
+      "scope": "Matches this CyberDog software version only; name, service UUID and manufacturer bytes all required.",
+      "validation": "published-pattern; physical reception not tested",
+      "service_uuid": "0000c420-0000-1000-8000-00805f9b34fb",
+      "manufacturer_id": 65535,
+      "manufacturer_hex": "0001020304"
+    },
+    {
+      "id": "unitree-go1-wifi-name",
+      "transport": "wifi",
+      "family": "robot-dog",
+      "label": "Possible robot dog · Unitree Go1-style Wi-Fi",
+      "name_pattern": "Unitree_Go1[A-Za-z0-9]{6}",
+      "sources": [
+        "https://www.unitree.com/mobile/download/go1/"
+      ],
+      "scope": "Default Go1 access-point name only. Renamed networks, client mode and other Unitree models do not match.",
+      "validation": "published-pattern; physical reception not tested"
+    },
+    {
+      "id": "petoi-bittle-ap-name",
+      "transport": "wifi",
+      "family": "robot-dog",
+      "label": "Possible robot dog · Petoi Bittle setup Wi-Fi",
+      "name_pattern": "Bittle-AP",
+      "sources": [
+        "https://github.com/PetoiCamp/OpenCat/blob/24563ca2e0218150f6299d013cd3a20c45433467/ModuleTests/ESP8266WiFiController/ESP8266WiFiController.ino"
+      ],
+      "scope": "Optional ESP8266 controller setup access point; a module may be detached from a robot.",
+      "validation": "published-pattern; physical reception not tested"
+    },
+    {
+      "id": "petoi-bittle-ble-name",
+      "transport": "ble",
+      "family": "robot-dog",
+      "label": "Possible robot dog · Petoi Bittle-style BLE",
+      "name_pattern": "Bittle[0-9A-F]{2}_BLE",
+      "sources": [
+        "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/configConstants.h",
+        "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/bleUart.h"
+      ],
+      "scope": "Default BiBoard firmware name only; two hexadecimal suffix characters. Custom names and other boards may not match. No service is required because this firmware does not explicitly advertise one.",
+      "validation": "published-pattern; physical reception not tested"
+    },
+    {
+      "id": "petoi-nybble-ble-name",
+      "transport": "ble",
+      "family": "ground-robot",
+      "label": "Possible ground robot · Petoi Nybble-style BLE",
+      "name_pattern": "Nybble[0-9A-F]{2}_BLE",
+      "sources": [
+        "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/configConstants.h",
+        "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/bleUart.h"
+      ],
+      "scope": "Default BiBoard firmware name only; two hexadecimal suffix characters. Custom names and other boards may not match. No service is required because this firmware does not explicitly advertise one.",
+      "validation": "published-pattern; physical reception not tested"
+    },
+    {
+      "id": "petoi-cub-ble-name",
+      "transport": "ble",
+      "family": "ground-robot",
+      "label": "Possible ground robot · Petoi Cub-style BLE",
+      "name_pattern": "Cub[0-9A-F]{2}_BLE",
+      "sources": [
+        "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/configConstants.h",
+        "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/bleUart.h"
+      ],
+      "scope": "Default BiBoard firmware name only; two hexadecimal suffix characters. Custom names and other boards may not match. No service is required because this firmware does not explicitly advertise one.",
+      "validation": "published-pattern; physical reception not tested"
+    },
+    {
+      "id": "robomaster-s1-wifi-name",
+      "transport": "wifi",
+      "family": "ground-robot",
+      "label": "Possible ground robot · RoboMaster S1-style Wi-Fi",
+      "name_pattern": "RMS1-[A-Z0-9]{6}",
+      "sources": [
+        "https://dl.djicdn.com/downloads/robomaster-s1/20191122/RoboMaster_S1_User_Manual_v1.6_EN.pdf"
+      ],
+      "scope": "Manufacturer-documented direct Wi-Fi naming pattern. Router mode, renamed access points and other models are not covered.",
+      "validation": "published-pattern; physical reception not tested"
+    },
+    {
+      "id": "robomaster-ep-wifi-name",
+      "transport": "wifi",
+      "family": "ground-robot",
+      "label": "Possible ground robot · RoboMaster EP-style Wi-Fi",
+      "name_pattern": "RMEP-[A-Z0-9]{6}",
+      "sources": [
+        "https://dl.djicdn.com/downloads/ROBOMASTER_EP/20220429UM/RoboMaster_EP_User_Manual_v1.2_EN_1.pdf"
+      ],
+      "scope": "Manufacturer-documented direct Wi-Fi naming pattern. Router mode, renamed access points and other models are not covered.",
+      "validation": "published-pattern; physical reception not tested"
+    }
+  ]
+};
+export const robotRule = id => robotSignatures.rules.find(r=>r.id===id);
+export const robotWifiSignature = name => typeof name === 'string' ? robotSignatures.rules.find(r=>r.transport==='wifi'&&new RegExp('^(?:'+r.name_pattern+')$','u').test(name)&&!/[\r\n]/.test(name))?.id || null : null;

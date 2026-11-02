@@ -1,3 +1,4 @@
+import {robotWifiSignature} from '../public/robot-signatures.mjs';
 /* Church of Malware / saviorSEC · AGPL-3.0-or-later */
 // Shared by the browser preview and server. A CSV row is receiver evidence,
 // never decoded aircraft telemetry. No OUI-only classifications are accepted.
@@ -34,7 +35,7 @@ export function wardriveTime(value,zone){
 }
 export function cameraSignature(name){
  if(/^WIFI_(?:[248]K|CAM|FPV)[_-]+[A-Z0-9_-]{3,32}$/i.test(name))return 'wifi-cam-name';
- if(/^TELLO-[A-Z0-9]{6}$/.test(name))return 'tello-name';return null;
+ if(/^TELLO-[A-Z0-9]{6}$/.test(name))return 'tello-name';return robotWifiSignature(name);
 }
 const numeric=value=>value?.trim()!==''&&Number.isFinite(Number(value))?Number(value):NaN;
 export function parseWardrive(text,zone='UTC',now=Date.now()/1000){

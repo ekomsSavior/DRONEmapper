@@ -112,7 +112,7 @@ class Store:
             # Disabling sharing cancels pending uploads immediately, not after restart.
             for row in self.db.execute("SELECT id,data FROM events WHERE state='queued'").fetchall():
                 kind = json.loads(row[1]).get('observation_type')
-                choice='share_robots' if kind=='ble-robot-candidate' else 'share_areas' if kind=='wifi-candidate' else 'share_decoded' if kind in ('adsb-uas','dji-droneid') else 'share_rid'
+                choice='share_robots' if kind in ('ble-robot-candidate','wifi-robot-candidate') else 'share_areas' if kind=='wifi-candidate' else 'share_decoded' if kind in ('adsb-uas','dji-droneid') else 'share_rid'
                 if not checked[choice]:
                     self.db.execute("UPDATE events SET state='local' WHERE id=?",(row[0],))
             self.db.commit()

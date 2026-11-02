@@ -82,3 +82,16 @@ test('robot advertisements remain coarse unconfirmed signals and cannot assert i
  assert.equal(merged.live,false);assert.deepEqual(merged.trail,[]);
  assert.equal(mergeNodeRows([{node:'a',last_seen:now,data:JSON.stringify(record)}],now+15*86400)[0].ghost,true);
 });
+
+test('robot Wi-Fi and BLE patterns bind to transport and stay on the ground',async()=>{
+ const {robotSignatures}=await import('../public/robot-signatures.mjs');
+ for(const rule of robotSignatures.rules){
+  const raw={...candidate(),signature:rule.id,observation_type:rule.transport==='wifi'?'wifi-robot-candidate':'ble-robot-candidate'};
+  if(rule.transport==='ble')delete raw.frequency_mhz;
+  assert.equal(validateBatch(batch(raw),now).length,1);
+  const record=nodeRecord(raw,'signal-test',now);
+  assert.equal(record.kind,'possible-robot');assert.equal(record.domain,'ground');assert.equal(record.model,null);assert.equal(record.name,rule.label);
+  assert.throws(()=>validateBatch(batch({...raw,observation_type:rule.transport==='wifi'?'ble-robot-candidate':'wifi-robot-candidate'}),now));
+  assert.throws(()=>validateBatch(batch({...raw,observation_type:'wifi-candidate'}),now));
+ }
+});

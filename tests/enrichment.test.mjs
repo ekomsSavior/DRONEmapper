@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import {rules} from '../worker/rid-catalog.mjs';
 import {identify} from '../worker/node-records.mjs';
 import {adapters,publicRecord} from '../worker/sources.mjs';
+import {historicalMilestones} from '../worker/reviewed-history.mjs';
 const hex=s=>Buffer.from(s).toString('hex').padEnd(40,'0');
 test('expanded FAA catalog identifies reviewed serials without bridging missing allocations',()=>{
  for(const [s,model] of [
@@ -37,7 +38,8 @@ test('all scanner catalogs contain the same rules and decimal constraints',()=>{
 });
 test('historical milestones stay historical through the public adapter',async()=>{
  const {records}=await adapters.milestones();
- assert.equal(records.length,43);
+ assert.ok(records.length>0);
+ assert.deepEqual(records,historicalMilestones);
  for(const source of records){
   const r=publicRecord(source);
   assert.equal(r.record_type,'historical');

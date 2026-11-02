@@ -130,3 +130,20 @@ test('direct CSV accepts 15,000 data rows with or without metadata and rejects 1
   assert.throws(()=>parseWardrive(input+'\n'+row(now-100,'Ordinary router'),'UTC',now),e=>e.status===422&&/Too many rows/.test(e.message));
  }
 });
+
+test('robot CSV imports stay ground signals with original times and revocable coarse locations',async t=>{
+ const h=await authHarness();t.after(()=>h.mf.dispose());
+ const network=(await h.mf.getBindings()).NODES.getByName('community');
+ const stamp=now-20*86400;
+ const result=await network.importAccountWardrive('robot-owner',csv(row(stamp,'RMS1-ABC123')),'UTC');
+ assert.equal(result.status,200);assert.equal(result.body.accepted,1);
+ const snapshot=await network.snapshot(0);assert.equal(snapshot.signals.length,1);
+ const record=snapshot.signals[0];
+ assert.equal(record.kind,'possible-robot');assert.equal(record.domain,'ground');assert.equal(record.ghost,true);
+ assert.equal(record.manufacturer,null);assert.equal(record.model,null);
+ assert.ok(!JSON.stringify(record).includes('RMS1-ABC123'));
+ assert.ok(!JSON.stringify(record).includes('C0:18:82:17:38:A0'));
+ const nodes=await network.accountNodes('robot-owner');
+ await network.revokeAccountNode('robot-owner',nodes[0].handle);
+ assert.equal((await network.snapshot(0)).signals.length,0);
+});

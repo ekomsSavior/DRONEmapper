@@ -1,5 +1,5 @@
 import {companyWebsite,modelWebsite} from './company-links.mjs';
-import {libraryModels} from './device-library-model.mjs';
+import {libraryModels} from './device-library-model.mjs?v=20261101-robots';
 import {deviceReferences} from './security-device-references.mjs';
 const $=id=>document.getElementById(id);
 let models=libraryModels();

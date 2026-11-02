@@ -94,6 +94,11 @@ def build_archive():
     lines.append(hashlib.sha256(wardrive.read_bytes()).hexdigest() + '  ' + wardrive.name)
     checksums.write_text('\n'.join(lines) + '\n')
     (ROOT / 'public/downloads/anduril-warhound.md').write_bytes((ROOT / 'docs/anduril-warhound.md').read_bytes())
+    robot = ROOT / 'public/downloads/robot-signals.md'
+    robot.write_bytes((ROOT / 'docs/robot-signals.md').read_bytes())
+    lines = [line for line in checksums.read_text().splitlines() if not line.endswith('  ' + robot.name)]
+    lines.append(hashlib.sha256(robot.read_bytes()).hexdigest() + '  ' + robot.name)
+    checksums.write_text('\n'.join(lines) + '\n')
     build_linux_archive()
     build_node_archive()
     temporary = ROOT / 'public/source.zip.tmp'

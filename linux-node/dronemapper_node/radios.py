@@ -124,12 +124,14 @@ def ble_options(adapter):
     if system()=='Linux':
         if adapter=='default':
             adapter='hci0'
-        return {'scanning_mode':'passive','bluez':{'adapter':adapter,'or_patterns':[(0,0x16,b'\xfa\xff'),(0,0x02,b'\x20\xc4'),(0,0x03,b'\x20\xc4'),(0,0x09,'铁蛋'.encode())]}}
+        return {'scanning_mode':'passive','bluez':{'adapter':adapter,'or_patterns':[(0,0x16,b'\xfa\xff'),(0,0x02,b'\x20\xc4'),(0,0x03,b'\x20\xc4'),(0,0x09,'铁蛋'.encode())]+[(0,ad_type,prefix) for ad_type in (0x08,0x09) for prefix in (b'Bittle',b'Nybble',b'Cub')]}}
     if adapter!='default':
         raise ValueError('Choose System Bluetooth on Windows / macOS')
     if system()=='Darwin':
         # CoreBluetooth has no passive mode and exposes per-host UUIDs, not radio MACs.
-        return {'scanning_mode':'active','service_uuids':['0000fffa-0000-1000-8000-00805f9b34fb',CYBERDOG_UUID]}
+        # Petoi names may arrive without advertised service UUIDs. CoreBluetooth discovery
+        # inspects metadata locally; only the explicit pattern allowlist is retained.
+        return {'scanning_mode':'active'}
     return {'scanning_mode':'passive'}
 
 

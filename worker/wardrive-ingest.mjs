@@ -1,3 +1,4 @@
+import {robotRule} from '../public/robot-signatures.mjs';
 /* Church of Malware / saviorSEC · AGPL-3.0-or-later */
 import {parseWardrive,WARD_MAX_BYTES,WARD_MAX_AGE} from './wardrive-parser.mjs';
 import {nodeRecord} from './node-records.mjs';
@@ -47,7 +48,7 @@ export async function importWardrive(network,request,node,tokenHash,now){
   const newTracks=new Set(fresh.filter(r=>![...sql.exec('SELECT 1 FROM node_profiles WHERE track=? AND node=?',r.track,node.handle)].length).map(r=>r.track));
   if([...sql.exec('SELECT COUNT(*) n FROM node_profiles')][0].n+newTracks.size>50000||[...sql.exec('SELECT COUNT(*) n FROM wardrive_receipts')][0].n+fresh.length>100000)throw error('Import capacity reached. Try again later.',409);
   for(const r of fresh){
-   const raw={...r.raw,observation_type:'wifi-candidate',received_at:r.raw.observed_at};
+   const raw={...r.raw,observation_type:robotRule(r.raw.signature)?'wifi-robot-candidate':'wifi-candidate',received_at:r.raw.observed_at};
    const record={...nodeRecord(raw,r.track,now),source_type:'wardrive-import',timestamp_basis:'log-first-seen',precision:'Approximate receiver area from a wardrive log; device location unknown'};
    const previous=[...sql.exec('SELECT data FROM node_profiles WHERE track=? AND node=?',r.track,node.handle)][0];
    const prior=previous?JSON.parse(previous.data):null,history=updateHistory(prior?.sighting_history||[],record);

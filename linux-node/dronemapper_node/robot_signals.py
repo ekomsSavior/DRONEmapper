@@ -1,16 +1,34 @@
-"""Conservative advertisement matches; never connect to a robot. AGPL-3.0-or-later."""
+"""Published broadcast clues, never authenticated robot identity. AGPL-3.0-or-later."""
+import json
 import re
+from pathlib import Path
 
-CYBERDOG_UUID = '0000c420-0000-1000-8000-00805f9b34fb'
+CATALOG = json.loads((Path(__file__).parent / 'data/robot-signatures.json').read_text())
+RULES = {r['id']: r for r in CATALOG['rules']}
+CYBERDOG_UUID = RULES['cyberdog-ble-v1']['service_uuid']
 CYBERDOG_SIGNATURE = 'cyberdog-ble-v1'
 
 
+def robot_rule(signature):
+    return RULES.get(signature)
+
+
+def wifi_robot_signature(name):
+    if not isinstance(name, str):
+        return None
+    return next((r['id'] for r in RULES.values() if r['transport'] == 'wifi'
+                 and re.fullmatch(r['name_pattern'], name)), None)
+
+
 def robot_signature(name, service_uuids, manufacturer_data):
-    # MiRoboticsLab/cyberdog_ros2 RobotAdvertisement: C420, 铁蛋 + PSN,
-    # and company 0xffff payload 00 01 02 03 04. See docs/robot-signals.md.
-    # All three are required; generic names, ports and FFE0 are not evidence.
-    if (isinstance(name, str) and re.fullmatch(r'铁蛋[!-~]{1,20}\n?', name)
-            and CYBERDOG_UUID in {str(x).lower() for x in service_uuids}
-            and manufacturer_data.get(0xffff) == bytes(range(5))):
-        return CYBERDOG_SIGNATURE
+    if not isinstance(name, str):
+        return None
+    for r in RULES.values():
+        if r['transport'] != 'ble' or not re.fullmatch(r['name_pattern'], name):
+            continue
+        if r.get('service_uuid') and r['service_uuid'] not in {str(x).lower() for x in service_uuids}:
+            continue
+        if 'manufacturer_id' in r and manufacturer_data.get(r['manufacturer_id']) != bytes.fromhex(r['manufacturer_hex']):
+            continue
+        return r['id']
     return None

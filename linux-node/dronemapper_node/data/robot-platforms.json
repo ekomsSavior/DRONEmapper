@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-01",
+  "models": [
+    {
+      "id": "unitree-robotics-unitree-go1",
+      "name": "Unitree Go1",
+      "manufacturer": "Unitree Robotics",
+      "category": "robot-dog",
+      "url": "https://www.unitree.com/mobile/download/go1/",
+      "manufacturer_url": "https://www.unitree.com/",
+      "description": "Quadruped robot with a documented direct Wi-Fi access point.",
+      "connection": "Published default SSID: Unitree_Go1 followed by six characters.",
+      "reception": "Experimental default-name match in Android 0.9.0 / Desktop 0.7.0. Possible robot dog only; no physical reception test yet.",
+      "sources": [
+        "https://www.unitree.com/mobile/download/go1/"
+      ],
+      "aliases": [
+        "Go1"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "unitree-robotics-unitree-a1",
+      "name": "Unitree A1",
+      "manufacturer": "Unitree Robotics",
+      "category": "robot-dog",
+      "url": "https://www.unitree.com/app/a1_aliengo/",
+      "manufacturer_url": "https://www.unitree.com/",
+      "description": "Quadruped supported by the A1/AlienGo application.",
+      "connection": "Model-specific broadcast identifiers are not verified.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.unitree.com/app/a1_aliengo/"
+      ],
+      "aliases": [
+        "A1"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "unitree-robotics-unitree-aliengo",
+      "name": "Unitree AlienGo",
+      "manufacturer": "Unitree Robotics",
+      "category": "robot-dog",
+      "url": "https://www.unitree.com/app/a1_aliengo/",
+      "manufacturer_url": "https://www.unitree.com/",
+      "description": "Quadruped supported by the A1/AlienGo application.",
+      "connection": "Model-specific broadcast identifiers are not verified.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.unitree.com/app/a1_aliengo/"
+      ],
+      "aliases": [
+        "AlienGo"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "unitree-robotics-unitree-go2-w",
+      "name": "Unitree Go2-W",
+      "manufacturer": "Unitree Robotics",
+      "category": "robot-dog",
+      "url": "https://www.unitree.com/mobile/go2-w/",
+      "manufacturer_url": "https://www.unitree.com/",
+      "description": "Wheeled-leg member of the Go2 family.",
+      "connection": "Model-specific broadcast identifiers are not verified.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.unitree.com/mobile/go2-w/"
+      ],
+      "aliases": [
+        "Go2-W"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "unitree-robotics-unitree-b2-w",
+      "name": "Unitree B2-W",
+      "manufacturer": "Unitree Robotics",
+      "category": "robot-dog",
+      "url": "https://www.unitree.com/b2-w/",
+      "manufacturer_url": "https://www.unitree.com/",
+      "description": "Industrial wheeled quadruped.",
+      "connection": "Model-specific broadcast identifiers are not verified.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.unitree.com/b2-w/"
+      ],
+      "aliases": [
+        "B2-W"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "unitree-robotics-unitree-a2",
+      "name": "Unitree A2",
+      "manufacturer": "Unitree Robotics",
+      "category": "robot-dog",
+      "url": "https://www.unitree.com/A2/",
+      "manufacturer_url": "https://www.unitree.com/",
+      "description": "Industrial legged robot with published OTA software updates.",
+      "connection": "Model-specific broadcast identifiers are not verified.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.unitree.com/A2/"
+      ],
+      "aliases": [
+        "A2"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "unitree-robotics-unitree-as2",
+      "name": "Unitree As2",
+      "manufacturer": "Unitree Robotics",
+      "category": "robot-dog",
+      "url": "https://www.unitree.com/As2/",
+      "manufacturer_url": "https://www.unitree.com/",
+      "description": "Compact industrial quadruped with published OTA updates.",
+      "connection": "Model-specific broadcast identifiers are not verified.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.unitree.com/As2/"
+      ],
+      "aliases": [
+        "As2"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "unitree-robotics-unitree-as2-w",
+      "name": "Unitree As2-W",
+      "manufacturer": "Unitree Robotics",
+      "category": "robot-dog",
+      "url": "https://www.unitree.com/As2-W/",
+      "manufacturer_url": "https://www.unitree.com/",
+      "description": "Wheeled-leg member of the As2 family.",
+      "connection": "Model-specific broadcast identifiers are not verified.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.unitree.com/As2-W/"
+      ],
+      "aliases": [
+        "As2-W"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "petoi-bittle",
+      "name": "Bittle",
+      "manufacturer": "Petoi",
+      "category": "robot-dog",
+      "url": "https://www.petoi.com/pages/bittle-open-source-bionic-robot-dog",
+      "manufacturer_url": "https://www.petoi.com/",
+      "description": "Open-source robot dog; controller board and optional modules vary.",
+      "connection": "Optional ESP8266 setup AP: Bittle-AP. BiBoard firmware can use Bittle plus two uppercase hexadecimal characters and _BLE.",
+      "reception": "Experimental BiBoard default-name clue when running the reviewed OpenCatEsp32 firmware. The name cannot distinguish board variants or prove that a robot is attached. Physical reception is not tested.",
+      "sources": [
+        "https://www.petoi.com/pages/bittle-open-source-bionic-robot-dog"
+      ],
+      "aliases": [],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "petoi-bittle-x",
+      "name": "Bittle X",
+      "manufacturer": "Petoi",
+      "category": "robot-dog",
+      "url": "https://docs.petoi.com/faq-frequently-asked-questions",
+      "manufacturer_url": "https://www.petoi.com/",
+      "description": "Bittle-family robot dog; refer to the model and controller-board specific guide.",
+      "connection": "Reviewed BiBoard firmware uses BittleXX_BLE, where XX is a two-digit uppercase hexadecimal suffix.",
+      "reception": "Experimental BiBoard default-name clue when running the reviewed OpenCatEsp32 firmware. The name cannot distinguish board variants or prove that a robot is attached. Physical reception is not tested.",
+      "sources": [
+        "https://docs.petoi.com/faq-frequently-asked-questions"
+      ],
+      "aliases": [],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "petoi-bittle-x-v2",
+      "name": "Bittle X V2",
+      "manufacturer": "Petoi",
+      "category": "robot-dog",
+      "url": "https://docs.petoi.com/getting-started-guide",
+      "manufacturer_url": "https://www.petoi.com/",
+      "description": "Bittle-family robot dog; refer to the model and controller-board specific guide.",
+      "connection": "Reviewed BiBoard firmware uses BittleXX_BLE, where XX is a two-digit uppercase hexadecimal suffix.",
+      "reception": "Experimental BiBoard default-name clue when running the reviewed OpenCatEsp32 firmware. The name cannot distinguish board variants or prove that a robot is attached. Physical reception is not tested.",
+      "sources": [
+        "https://docs.petoi.com/getting-started-guide"
+      ],
+      "aliases": [],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "petoi-bittle-xplusarm",
+      "name": "Bittle X+Arm",
+      "manufacturer": "Petoi",
+      "category": "robot-dog",
+      "url": "https://guide.petoi.com/arduino-ide/upload-sketch-for-biboard",
+      "manufacturer_url": "https://www.petoi.com/",
+      "description": "Bittle-family robot dog; refer to the model and controller-board specific guide.",
+      "connection": "Reviewed BiBoard firmware uses BittleXX_BLE, where XX is a two-digit uppercase hexadecimal suffix.",
+      "reception": "Experimental BiBoard default-name clue when running the reviewed OpenCatEsp32 firmware. The name cannot distinguish board variants or prove that a robot is attached. Physical reception is not tested.",
+      "sources": [
+        "https://guide.petoi.com/arduino-ide/upload-sketch-for-biboard"
+      ],
+      "aliases": [],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "petoi-nybble",
+      "name": "Nybble",
+      "manufacturer": "Petoi",
+      "category": "ground-robot",
+      "url": "https://docs.petoi.com/",
+      "manufacturer_url": "https://www.petoi.com/",
+      "description": "Programmable quadruped robot cat.",
+      "connection": "Reviewed BiBoard firmware can use NybbleXX_BLE; older boards and renamed devices differ.",
+      "reception": "Experimental BiBoard default-name clue when running the reviewed OpenCatEsp32 firmware. The name cannot distinguish board variants or prove that a robot is attached. Physical reception is not tested.",
+      "sources": [
+        "https://docs.petoi.com/"
+      ],
+      "aliases": [],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "petoi-nybble-q",
+      "name": "Nybble Q",
+      "manufacturer": "Petoi",
+      "category": "ground-robot",
+      "url": "https://www.petoi.com/products/petoi-nybble-q-robot-cat",
+      "manufacturer_url": "https://www.petoi.com/",
+      "description": "Programmable quadruped robot cat.",
+      "connection": "Reviewed BiBoard firmware can use NybbleXX_BLE; older boards and renamed devices differ.",
+      "reception": "Experimental BiBoard default-name clue when running the reviewed OpenCatEsp32 firmware. The name cannot distinguish board variants or prove that a robot is attached. Physical reception is not tested.",
+      "sources": [
+        "https://www.petoi.com/products/petoi-nybble-q-robot-cat"
+      ],
+      "aliases": [],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "petoi-opencat-cub-firmware-target",
+      "name": "OpenCat Cub firmware target",
+      "manufacturer": "Petoi",
+      "category": "ground-robot",
+      "url": "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/configConstants.h",
+      "manufacturer_url": "https://www.petoi.com/",
+      "description": "Cub is a named target in the published OpenCatEsp32 firmware; this entry does not assert a particular commercial robot.",
+      "connection": "Default CubXX_BLE firmware name.",
+      "reception": "Experimental BiBoard default-name clue when running the reviewed OpenCatEsp32 firmware. The name cannot distinguish board variants or prove that a robot is attached. Physical reception is not tested.",
+      "sources": [
+        "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/configConstants.h"
+      ],
+      "aliases": [],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "petoi-quaddle",
+      "name": "Quaddle",
+      "manufacturer": "Petoi",
+      "category": "robot-dog",
+      "url": "https://www.petoi.com/pages/quaddle-educational-robot-kit",
+      "manufacturer_url": "https://www.petoi.com/",
+      "description": "Published open-source educational physical-AI robot kit. Do not apply older Bittle radio rules to this model.",
+      "connection": "Model-specific broadcast identifiers are not verified.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.petoi.com/pages/quaddle-educational-robot-kit"
+      ],
+      "aliases": [],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "deep-robotics-lynx-m20",
+      "name": "LYNX M20",
+      "manufacturer": "DEEP Robotics",
+      "category": "robot-dog",
+      "url": "https://www.deeprobotics.cn/en/index/lynx.html",
+      "manufacturer_url": "https://www.deeprobotics.cn/en/",
+      "description": "Industrial wheeled-legged platform for inspection and difficult terrain.",
+      "connection": "Manufacturer lists RF image transmission and OTA updates; no unique over-the-air discovery signature is established here.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.deeprobotics.cn/en/index/lynx.html"
+      ],
+      "aliases": [
+        "DEEP Robotics LYNX M20"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "limx-dynamics-w1",
+      "name": "W1",
+      "manufacturer": "LimX Dynamics",
+      "category": "robot-dog",
+      "url": "https://www.limxdynamics.com/en/news/BK000028",
+      "manufacturer_url": "https://www.limxdynamics.com/en/",
+      "description": "Wheeled quadruped research platform announced by LimX Dynamics.",
+      "connection": "Model-specific broadcast identifiers are not verified.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://www.limxdynamics.com/en/news/BK000028"
+      ],
+      "aliases": [
+        "LimX W1",
+        "LimX Dynamics W1"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "sunfounder-pidog",
+      "name": "PiDog",
+      "manufacturer": "SunFounder",
+      "category": "robot-dog",
+      "url": "https://docs.sunfounder.com/projects/pidog/en/latest/",
+      "manufacturer_url": "https://www.sunfounder.com/",
+      "description": "Raspberry Pi robot-dog kit.",
+      "connection": "Setup joins a user-configured Wi-Fi network. A generic Raspberry Pi hostname or chipset is not a PiDog signature.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://docs.sunfounder.com/projects/pidog/en/latest/"
+      ],
+      "aliases": [
+        "SunFounder PiDog"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "hiwonder-puppypi",
+      "name": "PuppyPi",
+      "manufacturer": "Hiwonder",
+      "category": "robot-dog",
+      "url": "https://docs.hiwonder.com/projects/PuppyPi/en/latest/docs/1.Quick_Start_Guide.html",
+      "manufacturer_url": "https://www.hiwonder.com/",
+      "description": "Raspberry Pi quadruped robot platform.",
+      "connection": "Default access points use HW prefixes, also shared by other Hiwonder robots. This prefix is deliberately not used as a dog-specific rule.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://docs.hiwonder.com/projects/PuppyPi/en/latest/docs/1.Quick_Start_Guide.html"
+      ],
+      "aliases": [
+        "Hiwonder PuppyPi"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "mangdang-mini-pupper",
+      "name": "Mini Pupper",
+      "manufacturer": "MangDang",
+      "category": "robot-dog",
+      "url": "https://minipupperdocs.readthedocs.io/en/latest/guide/QuickStartGuide.html",
+      "manufacturer_url": "https://www.mangdang.net/",
+      "description": "Small open-source quadruped robot.",
+      "connection": "The quick-start Mangdang hotspot is supplied by the user and joined by the robot. Seeing that hotspot does not detect a Mini Pupper.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://minipupperdocs.readthedocs.io/en/latest/guide/QuickStartGuide.html"
+      ],
+      "aliases": [
+        "MangDang Mini Pupper"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "wowwee-chip",
+      "name": "CHiP",
+      "manufacturer": "WowWee",
+      "category": "robot-dog",
+      "url": "https://github.com/WowWeeLabs/CHIP-Android-SDK",
+      "manufacturer_url": "https://wowwee.com/",
+      "description": "Consumer robot dog with a published Bluetooth SDK.",
+      "connection": "BLE control is documented; a sufficiently specific passive signature is not yet implemented.",
+      "reception": "Reference only: no model-specific passive detection rule is included. Shared frequencies, generic service UUIDs and MAC vendors do not establish this model.",
+      "sources": [
+        "https://github.com/WowWeeLabs/CHIP-Android-SDK"
+      ],
+      "aliases": [
+        "WowWee CHiP"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "xiaomi-cyberdog",
+      "name": "CyberDog",
+      "manufacturer": "Xiaomi",
+      "category": "robot-dog",
+      "url": "https://github.com/MiRoboticsLab/cyberdog_ros2",
+      "manufacturer_url": "https://www.mi.com/",
+      "description": "Open-source CyberDog ROS 2 software reference.",
+      "connection": "C420 Bluetooth service, firmware name pattern and manufacturer bytes must all match.",
+      "reception": "CyberDog-style BLE pattern supported; does not cover every CyberDog generation. Physical reception remains untested.",
+      "sources": [
+        "https://github.com/MiRoboticsLab/cyberdog_ros2"
+      ],
+      "aliases": [
+        "Xiaomi CyberDog"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "dji-robomaster-s1",
+      "name": "RoboMaster S1",
+      "manufacturer": "DJI",
+      "category": "ground-robot",
+      "url": "https://dl.djicdn.com/downloads/robomaster-s1/20191122/RoboMaster_S1_User_Manual_v1.6_EN.pdf",
+      "manufacturer_url": "https://www.dji.com/",
+      "description": "Educational wheeled ground robot.",
+      "connection": "Direct Wi-Fi name RMS1-XXXXXX; router mode may hide this default name.",
+      "reception": "Experimental Wi-Fi name clue in Android 0.9.0 / Desktop 0.7.0. Possible ground robot only; not a drone, verified identity or robot position.",
+      "sources": [
+        "https://dl.djicdn.com/downloads/robomaster-s1/20191122/RoboMaster_S1_User_Manual_v1.6_EN.pdf"
+      ],
+      "aliases": [
+        "DJI RoboMaster S1"
+      ],
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "dji-robomaster-ep",
+      "name": "RoboMaster EP",
+      "manufacturer": "DJI",
+      "category": "ground-robot",
+      "url": "https://dl.djicdn.com/downloads/ROBOMASTER_EP/20220429UM/RoboMaster_EP_User_Manual_v1.2_EN_1.pdf",
+      "manufacturer_url": "https://www.dji.com/",
+      "description": "Educational wheeled ground robot.",
+      "connection": "Direct Wi-Fi name RMEP-XXXXXX; router mode may hide this default name.",
+      "reception": "Experimental Wi-Fi name clue in Android 0.9.0 / Desktop 0.7.0. Possible ground robot only; not a drone, verified identity or robot position.",
+      "sources": [
+        "https://dl.djicdn.com/downloads/ROBOMASTER_EP/20220429UM/RoboMaster_EP_User_Manual_v1.2_EN_1.pdf"
+      ],
+      "aliases": [
+        "DJI RoboMaster EP"
+      ],
+      "reviewed_on": "2026-11-01"
+    }
+  ]
+}

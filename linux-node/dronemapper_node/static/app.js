@@ -93,8 +93,9 @@ function detail(contact) {
   panel.replaceChildren(make('h3',contact.name));
   const lines = [contact.display_id ? 'Broadcast ID: '+contact.display_id : '', contact.mac ? 'Radio MAC: '+contact.mac : contact.receiver_id ? 'Local Bluetooth UUID: '+contact.receiver_id : '', contact.device_id ? 'Device ID: '+contact.device_id : '',
     contact.radio_vendor ? 'Radio vendor: '+contact.radio_vendor : '', contact.callsign ? 'Callsign: '+contact.callsign : '', contact.local_only ? 'Local receiver observation · not uploaded' : '', contact.manufacturer ? 'Manufacturer / model: '+contact.manufacturer+' / '+(contact.model||'Unknown model') : '',
+    contact.pattern_scope || '',
     contact.module ? 'Broadcast module: '+contact.module : '',contact.identification || '',
-    contact.ssid ? (contact.kind==='hardware-vendor'?'Network name: ':'Camera-link name: ')+contact.ssid+' · unconfirmed device' : '',
+    contact.ssid ? (contact.kind==='possible-robot'?'Robot-pattern network name: ':contact.kind==='hardware-vendor'?'Network name: ':'Camera-link name: ')+contact.ssid+' · unconfirmed device' : '',
     'Input: '+contact.source+(contact.protocol ? ' · '+contact.protocol : ''),
     Number.isFinite(contact.rssi_dbm) ? 'Signal: '+contact.rssi_dbm+' dBm' : '',
     Number.isFinite(contact.rssi_dbfs) ? 'Decoder signal: '+contact.rssi_dbfs+' dBFS (not dBm)' : '',
@@ -151,7 +152,7 @@ function networkDevices() {
         make('p',model.description),referenceLink('Model details ↗',model.url));
       if(model.reception)item.append(make('p',model.reception));
       const vendor=state.device_references.vendors.find(v=>v.id===model.vendor);
-      if (vendor) item.append(make('span',' · '),referenceLink('Manufacturer ↗',vendor.url));
+      if (vendor || model.manufacturer_url) item.append(make('span',' · '),referenceLink('Manufacturer ↗',vendor ? vendor.url : model.manufacturer_url));
       (model.group==='anduril'?andurilList:refs).append(item);
     }
     refs.append(andurilList);

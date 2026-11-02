@@ -36,7 +36,7 @@ class DesktopTests(unittest.TestCase):
         with patch('dronemapper_node.radios.system',return_value='Darwin'):
             options=ble_options('default')
             self.assertEqual(options['scanning_mode'],'active')
-            self.assertIn('0000fffa-0000-1000-8000-00805f9b34fb',options['service_uuids'])
+            self.assertNotIn('service_uuids',options)  # Name-only advertisements must reach the local matcher.
         with patch('dronemapper_node.radios.system',return_value='Linux'):
             self.assertEqual(ble_options('hci1')['bluez']['adapter'],'hci1')
             self.assertEqual(ble_options('hci1')['scanning_mode'],'passive')

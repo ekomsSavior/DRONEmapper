@@ -134,3 +134,7 @@ References: [Biscuit wardrive protocol](https://codehedge.github.io/Biscuit-Wiki
 [WDGWars' published integration contract](https://www.wdgwars.pl/press).
 This is an independent implementation; no API credentials or third-party data
 were pulled from those services.
+
+## Robot observations
+
+Supported Unitree Go1, Petoi Bittle setup and DJI RoboMaster Wi-Fi names are classified as possible ground-robot signals when importing WiGLE CSV. Original observation times are preserved; older reports become ghosts. These are receiver areas, not exact robot coordinates or authenticated models. DRONEmapper JSON also supports Bluetooth robot area reports from saved trips. See [robot patterns and field testing](https://dronemapper.churchofmalware.org/downloads/robot-signals.md).

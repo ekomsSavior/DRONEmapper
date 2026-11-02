@@ -5,6 +5,8 @@ import re
 
 REFERENCES = json.loads((Path(__file__).with_name('data') / 'security-device-references.json').read_text(encoding='utf-8'))
 
+ROBOT_REFERENCES = json.loads((Path(__file__).with_name('data') / 'robot-platforms.json').read_text(encoding='utf-8'))
+REFERENCES['models'].extend(ROBOT_REFERENCES['models'])
 
 def vendor_hint(address):
     if not isinstance(address, str) or not re.fullmatch(r'(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}', address):

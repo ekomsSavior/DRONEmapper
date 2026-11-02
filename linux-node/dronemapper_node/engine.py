@@ -11,6 +11,7 @@ import time
 import uuid
 from functools import partial
 from .account import Connection, Uploader
+from .robot_signals import robot_rule
 from .protocol import AIRFRAMES, bearing_distance, finite, messages, MAC
 from . import radios, serial_receiver, __version__
 from . import network_receiver
@@ -278,15 +279,21 @@ class Engine:
             if finite(event.get('rssi_dbm'),-127,20):
                 entry['rssi_dbm']=event['rssi_dbm']
             if kind=='robot-candidate':
-                if event.get('signature') != 'cyberdog-ble-v1':
+                rule = robot_rule(event.get('signature'))
+                if not rule or rule['transport'] != 'ble':
                     self.contacts.pop(key, None)
                     return
-                entry.update(kind='possible-robot',name='Possible robot dog · CyberDog-style BLE',
+                entry.update(kind='possible-robot',name=rule['label'],pattern_scope=rule['scope'],
                              signature=event['signature'],protocol='ble-robot-candidate',
                              identification='Unconfirmed advertisement pattern')
                 self._queue(key,entry,received)
             elif kind=='candidate':
-                entry.update(kind='possible-drone',name='Possible drone / camera link',ssid=event['name'],signature=event['signature'])
+                rule=robot_rule(event['signature'])
+                if rule and rule['transport'] != 'wifi':
+                    self.contacts.pop(key, None)
+                    return
+                entry.update(kind='possible-robot' if rule else 'possible-drone',name=rule['label'] if rule else 'Possible drone / camera link',ssid=event['name'],signature=event['signature'],protocol='wifi-robot-candidate' if rule else 'wifi-camera-candidate')
+                if rule: entry['pattern_scope']=rule['scope']
                 if finite(event.get('frequency_mhz'),2400,5900):
                     entry['frequency_mhz']=int(event['frequency_mhz'])
                 self._queue(key,entry,received)
@@ -340,6 +347,7 @@ class Engine:
         if entry.get('kind') in ('hardware-vendor','service-domain'):
             return
         robot=entry['kind']=='possible-robot'
+        bluetooth=robot and entry.get('protocol')=='ble-robot-candidate'
         candidate=robot or entry['kind']=='possible-drone'
         stamp=received if candidate else entry.get('observed_at')
         last=self.last_queued.get(key,(0,0))
@@ -348,15 +356,15 @@ class Engine:
         settings=self.store.settings()
         record={'event_id':str(uuid.uuid4()),'received_at':received,'observed_at':stamp}
         if candidate:
-            if settings['station'] is None or (not robot and 'frequency_mhz' not in entry):
+            if settings['station'] is None or (not bluetooth and 'frequency_mhz' not in entry):
                 return
             lat,lon=(round(math.floor(c*100)/100+.005,3) for c in settings['station'])
             # Node-specific stable pseudonym; neither full MAC nor network name is uploaded.
-            digest=hmac.new(bytes.fromhex(self.store.config['secret']),(('ble|' + entry.get('mac', entry.get('receiver_id',''))) if robot else entry['mac']).encode(),hashlib.sha256).digest()
+            digest=hmac.new(bytes.fromhex(self.store.config['secret']),(('ble|' + entry.get('mac', entry.get('receiver_id',''))) if bluetooth else entry['mac']).encode(),hashlib.sha256).digest()
             record.update(observation_type='wifi-candidate',candidate_id=str(uuid.UUID(bytes=digest[:16])),
                 signature=entry['signature'],location_grid_degrees=.01,latitude=lat,longitude=lon)
-            if robot: record['observation_type']='ble-robot-candidate'
-            else: record['frequency_mhz']=entry['frequency_mhz']
+            if robot: record['observation_type']='ble-robot-candidate' if bluetooth else 'wifi-robot-candidate'
+            if not bluetooth: record['frequency_mhz']=entry['frequency_mhz']
         else:
             for field in ('rid','id_type','aircraft_type','protocol','latitude','longitude','altitude_m','speed_mps','heading'):
                 if field in entry:

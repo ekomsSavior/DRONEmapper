@@ -7,7 +7,7 @@ import tempfile
 import time
 import unittest
 from unittest.mock import patch
-from dronemapper_node.robot_signals import robot_signature, CYBERDOG_UUID
+from dronemapper_node.robot_signals import robot_signature, CYBERDOG_UUID, wifi_robot_signature
 from dronemapper_node.radios import ble_identity, ble_options
 from dronemapper_node.engine import Engine
 from dronemapper_node.storage import Store, validate_settings
@@ -30,7 +30,7 @@ class RobotTests(unittest.TestCase):
             self.assertIn((0,0x16,b'\xfa\xff'),options['bluez']['or_patterns'])
             self.assertIn((0,0x03,b'\x20\xc4'),options['bluez']['or_patterns'])
         with patch('dronemapper_node.radios.system',return_value='Darwin'):
-            self.assertIn(CYBERDOG_UUID,ble_options('default')['service_uuids'])
+            self.assertNotIn('service_uuids',ble_options('default'))
             self.assertEqual(ble_identity('12345678-1234-1234-1234-123456789abc')['receiver_id'],'12345678-1234-1234-1234-123456789abc')
 
     def test_robot_sharing_is_separate_coarse_and_revocable(self):
@@ -66,5 +66,29 @@ class RobotTests(unittest.TestCase):
         self.assertIsNone(parser().parse_args(['configure']).share_robots)
         self.assertTrue(parser().parse_args(['configure','--share-robots']).share_robots)
         self.assertFalse(parser().parse_args(['configure','--no-share-robots']).share_robots)
+
+    def test_wifi_and_petoi_patterns_are_strict(self):
+        from dronemapper_node.protocol import camera_signature
+        for name in ('Unitree_Go1ABC123','Bittle-AP','RMS1-ABC123','RMEP-12AB34'):
+            self.assertIsNotNone(wifi_robot_signature(name))
+            self.assertEqual(camera_signature(name),wifi_robot_signature(name))
+            for bad in (name+'\n',name+'x',' '+name):self.assertIsNone(wifi_robot_signature(bad))
+        for name in ('Bittle0A_BLE','NybbleFF_BLE','Cub12_BLE'):
+            self.assertIsNotNone(robot_signature(name,[],{}))
+        for name in ('Bittle','Bittle0G_BLE','Bittle0A_SSP','Bittle0A_BLE\n','UART'):
+            self.assertIsNone(robot_signature(name,[],{}))
+
+    def test_wifi_robot_uses_robot_consent_and_frequency(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store=Store(directory);engine=Engine(store)
+            try:
+                store.config['token']='test-only';store.update({**store.settings(),'station':[37.123456,-122.123456],'share_areas':True})
+                event={'type':'candidate','source':'wifi:test','mac':'00:11:22:33:44:55','signature':'robomaster-ep-wifi-name','name':'RMEP-ABC123','frequency_mhz':2437,'received_at':time.time(),'rssi_dbm':-50}
+                engine.ingest(event);self.assertEqual(engine.snapshot()['contacts'][0]['kind'],'possible-robot');self.assertEqual(store.batch(),[])
+                store.update({**store.settings(),'share_robots':True});engine.last_queued.clear();engine.ingest({**event,'received_at':time.time()+.1})
+                row=store.batch()[0];self.assertEqual(row['observation_type'],'wifi-robot-candidate');self.assertEqual(row['frequency_mhz'],2437)
+                self.assertNotIn('ssid',row);self.assertNotIn('mac',row)
+                store.update({**store.settings(),'share_robots':False});self.assertEqual(store.batch(),[])
+            finally: engine.close();store.close()
 
 if __name__=='__main__': unittest.main()
