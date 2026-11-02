@@ -5,7 +5,7 @@ const number=n=>n.toLocaleString();
 function node(tag,text,className){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(className)el.className=className;return el;}
 function render(){
  if(loading)return;
- const size=format==='csv'?25:10;
+ const size=100;
  const result=pageRecords(rows,$('data-search').value,page,size);page=result.page;
  $('data-status').textContent=result.total?`${number(result.start+1)}–${number(result.start+result.rows.length)} of ${number(result.total)} records${$('data-search').value.trim()?' matching your search':''}.`:'No records match your search.';
  $('previous-page').disabled=page===0;$('next-page').disabled=page+1>=result.pages;
