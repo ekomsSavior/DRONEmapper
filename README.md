@@ -7,6 +7,18 @@ A free, open-source map of drones, robots and autonomous vehicles. Built by **[C
 <img width="982" height="964" alt="Screenshot_20261015_220619" src="https://github.com/user-attachments/assets/360dc6dc-3d93-4912-b674-b6dcc396375a" />
 
 
+## Research downloads
+
+[Device Library downloads](https://dronemapper.churchofmalware.org/devices#research-data)
+provide one combined **devices-global.json**, plus **oui-global.csv**,
+**rid-prefixes.csv** and **rf-channels.csv**. They combine the shared model and
+radio catalogs, public map inventory, reviewed vendor connections and contributed
+equipment records. Each keeps its evidence scope and sources.
+[Schema, examples and reuse notes](public/downloads/data/README.md) ·
+[Versions and hashes](public/downloads/data/manifest.json).
+Regenerate with `python3 scripts/export_developer_data.py`; use `--check` to detect
+stale exports. Downloads need no account or API token.
+
 ## Android app
 
 Android 8 or newer. No root or Bluetooth dongle needed.

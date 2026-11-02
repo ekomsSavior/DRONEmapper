@@ -25,3 +25,19 @@
 /downloads/wardrive-upload.py
   Content-Type: text/x-python; charset=utf-8
   Content-Disposition: attachment; filename="wardrive-upload.py"
+
+/downloads/data/*.csv
+  Content-Type: text/csv; charset=utf-8
+  Content-Disposition: attachment
+  Cache-Control: public, max-age=0, must-revalidate
+
+/downloads/data/devices-global.json
+  Content-Type: application/json; charset=utf-8
+  Content-Disposition: attachment; filename="devices-global.json"
+  Cache-Control: public, max-age=0, must-revalidate
+
+/downloads/data/manifest.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+/downloads/data/SHA256SUMS.txt
+  Cache-Control: public, max-age=0, must-revalidate

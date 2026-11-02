@@ -1,4 +1,4 @@
-import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261101-robots';
+import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261102-research';
 import {serviceConnections} from './service-connections.mjs?v=20261101-robots';
 export function buildGalaxy(catalog=cloudSurfaces){
  const nodes=[],edges=[],vendors=new Map();

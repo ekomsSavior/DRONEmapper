@@ -3,3 +3,6 @@ public/vendor/* -whitespace
 
 # Store Windows launchers normalized, with CRLF on checkout.
 *.bat text eol=crlf
+
+# Preserve CSV bytes for published SHA-256 sums on every platform.
+public/downloads/data/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol

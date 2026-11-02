@@ -1,6 +1,7 @@
+// Reviewed public service documentation.
 export const cloudSurfaces = {
   "schema_version": 1,
-  "reviewed_on": "2026-10-26",
+  "reviewed_on": "2026-11-02",
   "scope": "Public documentation; not live observations",
   "services": [
     {
@@ -22663,6 +22664,379 @@ export const cloudSurfaces = {
           "direction": "forward",
           "source": "https://4ag.ai/harvesting-robot/",
           "boundary": "Farm-installed harvesting robot."
+        }
+      ]
+    },
+    {
+      "id": "wingtra-survey",
+      "vendor": "Wingtra",
+      "name": "Wingtra survey workflow / cloud account",
+      "category": "Drones",
+      "path": [
+        "Browser planning / cloud account",
+        "Wingtra field tablet",
+        "WingtraRAY imagery / GNSS data",
+        "Geotagging / processing workspace",
+        "Authorized GIS / CAD user"
+      ],
+      "protocols": [
+        "Cloud account synchronization",
+        "Post-flight file upload / export"
+      ],
+      "data": "Mission plans, captured images, GNSS corrections and processed survey outputs. Field planning and capture can operate offline after preparation.",
+      "access": "Authorized Wingtra account and project; optional processing depends on the software plan.",
+      "gap": "No public fleet feed or radio decoder is established. Fully air-gapped operation uses a separate setup.",
+      "hosting": "Vendor service / customer devices",
+      "source": "https://wingtra.com/software/",
+      "useful": "Use the linked documentation to interpret owner-provided records and distinguish local transfers from cloud services.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-11-02",
+      "related": [
+        {
+          "name": "Wingtra knowledge base",
+          "url": "https://knowledge.wingtra.com/"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Mission sync",
+          "data": "Reviewed plans synchronized to the same account when connected.",
+          "direction": "forward",
+          "source": "https://wingtra.com/software/",
+          "boundary": "Authorized Wingtra account and project; optional processing depends on the software plan."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Field mission",
+          "data": "Tablet mission workflow and aircraft capture; radio transport unspecified.",
+          "direction": "unspecified",
+          "source": "https://wingtra.com/software/",
+          "boundary": "Authorized Wingtra account and project; optional processing depends on the software plan."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "Post-flight upload",
+          "data": "Images and correction data submitted after flight.",
+          "direction": "forward",
+          "source": "https://wingtra.com/software/",
+          "boundary": "Authorized Wingtra account and project; optional processing depends on the software plan."
+        },
+        {
+          "from_index": 3,
+          "to_index": 4,
+          "label": "Data export",
+          "data": "Geotagged images, CSV, TIFF, LAZ or OBJ according to software plan.",
+          "direction": "forward",
+          "source": "https://wingtra.com/software/",
+          "boundary": "Authorized Wingtra account and project; optional processing depends on the software plan."
+        }
+      ]
+    },
+    {
+      "id": "hover-x1-local",
+      "vendor": "Zero Zero Robotics",
+      "name": "HOVERAir X1 / local app and media",
+      "category": "Drones",
+      "path": [
+        "HOVERAir X1",
+        "Owner mobile app",
+        "Owner phone gallery",
+        "Optional user-shared content"
+      ],
+      "protocols": [
+        "Bluetooth",
+        "Local Wi-Fi"
+      ],
+      "data": "App settings, previews and selected recordings. Original media stays on the camera until downloaded; sharing is optional.",
+      "access": "Owner-controlled pairing and local camera connection.",
+      "gap": "Auth hostnames do not prove automatic video upload. No model-specific BLE advertisement or Wi-Fi signature is established by this guide.",
+      "hosting": "Local aircraft / phone; optional sharing",
+      "source": "https://hoverair.com/it-it/blogs/guide/hover-x1-app-introduction",
+      "useful": "Use the linked documentation to interpret owner-provided records and distinguish local transfers from cloud services.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-11-02",
+      "related": [
+        {
+          "name": "HOVERAir privacy and storage FAQ",
+          "url": "https://us.hoverair.com/pages/faq"
+        },
+        {
+          "name": "X1 PRO/PROMAX guide (separate model scope)",
+          "url": "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Bluetooth / local Wi-Fi",
+          "data": "Bluetooth app connection; camera Wi-Fi transfers selected media.",
+          "direction": "both",
+          "source": "https://hoverair.com/it-it/blogs/guide/hover-x1-app-introduction",
+          "boundary": "Owner-controlled pairing and local camera connection."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Local save",
+          "data": "Downloaded recordings saved on the phone.",
+          "direction": "forward",
+          "source": "https://hoverair.com/it-it/blogs/guide/hover-x1-app-introduction",
+          "boundary": "Owner-controlled pairing and local camera connection."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "Optional sharing",
+          "data": "User-chosen content shared through the app.",
+          "direction": "forward",
+          "source": "https://hoverair.com/it-it/blogs/guide/hover-x1-app-introduction",
+          "boundary": "Owner-controlled pairing and local camera connection."
+        }
+      ]
+    },
+    {
+      "id": "iai-heron-links",
+      "vendor": "Israel Aerospace Industries",
+      "name": "Heron / ground and tactical data delivery",
+      "category": "Drones",
+      "path": [
+        "Heron onboard sensors",
+        "Ground segment",
+        "Tactical end user"
+      ],
+      "protocols": [
+        "Line-of-sight datalink",
+        "SATCOM"
+      ],
+      "data": "Mission sensor feeds delivered to ground or tactical users.",
+      "access": "Configured mission communications and authorized operators.",
+      "gap": "The product page does not disclose a public endpoint, over-the-air decoder or model-specific network fingerprint.",
+      "hosting": "Aircraft / mission ground infrastructure",
+      "source": "https://www.iai.co.il/product/heron/",
+      "useful": "Use the linked documentation to interpret owner-provided records and distinguish local transfers from cloud services.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-11-02",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "LOS / SATCOM",
+          "data": "Real-time sensor information sent to the ground segment.",
+          "direction": "forward",
+          "source": "https://www.iai.co.il/product/heron/",
+          "boundary": "Configured mission communications and authorized operators."
+        },
+        {
+          "from_index": 0,
+          "to_index": 2,
+          "label": "Direct tactical delivery",
+          "data": "Sensor information may be delivered directly to tactical users.",
+          "direction": "forward",
+          "source": "https://www.iai.co.il/product/heron/",
+          "boundary": "Configured mission communications and authorized operators."
+        }
+      ]
+    },
+    {
+      "id": "primoco-gcs",
+      "vendor": "Primoco UAV",
+      "name": "One 150 / ground control station (2024 reference)",
+      "category": "Drones",
+      "path": [
+        "One 150 aircraft / sensors",
+        "Ground control station",
+        "Authorized remote data recipient"
+      ],
+      "protocols": [
+        "Encrypted datalink; AES-256 stated by vendor"
+      ],
+      "data": "Flight and sensor information, mission planning and data forwarding.",
+      "access": "Configured aircraft, ground station and authorized recipients.",
+      "gap": "Public brochure does not specify an Internet endpoint or a supported passive protocol decoder.",
+      "hosting": "Aircraft / operator ground infrastructure",
+      "source": "https://media.uav-stol.com/Primoco_UAV_H1_2024_EN_65b8c17975.pdf",
+      "useful": "Use the linked documentation to interpret owner-provided records and distinguish local transfers from cloud services.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-11-02",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Encrypted mission link",
+          "data": "Aircraft control and sensor information use the ground station.",
+          "direction": "both",
+          "source": "https://media.uav-stol.com/Primoco_UAV_H1_2024_EN_65b8c17975.pdf",
+          "boundary": "Configured aircraft, ground station and authorized recipients."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Data relay",
+          "data": "Ground station can forward received mission data remotely.",
+          "direction": "forward",
+          "source": "https://media.uav-stol.com/Primoco_UAV_H1_2024_EN_65b8c17975.pdf",
+          "boundary": "Configured aircraft, ground station and authorized recipients."
+        }
+      ]
+    },
+    {
+      "id": "rafael-drone-dome",
+      "vendor": "Rafael",
+      "name": "Drone Dome / sensor integration",
+      "category": "Drones",
+      "path": [
+        "Radar",
+        "Passive RF sensor",
+        "Electro-optical sensor",
+        "C4I center",
+        "Customer C2 systems"
+      ],
+      "protocols": [
+        "Multi-sensor integration; transport unpublished"
+      ],
+      "data": "A counter-UAS system combines sensor detections for an operator.",
+      "access": "Customer-operated sensor and command infrastructure.",
+      "gap": "Corporate test hostnames do not establish Drone Dome traffic paths. No public sensor feed or radio signature is documented here.",
+      "hosting": "Customer counter-UAS installation",
+      "source": "https://www.rafael.co.il/exhibitions/wp-content/uploads/2023/05/Drone-Dome.pdf",
+      "useful": "Use the linked documentation to interpret owner-provided records and distinguish local transfers from cloud services.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-11-02",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 3,
+          "label": "Radar observations",
+          "data": "Radar detections contribute to a combined air picture.",
+          "direction": "forward",
+          "source": "https://www.rafael.co.il/exhibitions/wp-content/uploads/2023/05/Drone-Dome.pdf",
+          "boundary": "Customer-operated sensor and command infrastructure."
+        },
+        {
+          "from_index": 1,
+          "to_index": 3,
+          "label": "RF observations",
+          "data": "Passive RF detections contribute to the combined picture.",
+          "direction": "forward",
+          "source": "https://www.rafael.co.il/exhibitions/wp-content/uploads/2023/05/Drone-Dome.pdf",
+          "boundary": "Customer-operated sensor and command infrastructure."
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "label": "EO observations",
+          "data": "Electro-optical observations contribute to the combined picture.",
+          "direction": "forward",
+          "source": "https://www.rafael.co.il/exhibitions/wp-content/uploads/2023/05/Drone-Dome.pdf",
+          "boundary": "Customer-operated sensor and command infrastructure."
+        },
+        {
+          "from_index": 3,
+          "to_index": 4,
+          "label": "Customer integration",
+          "data": "Documented integration with customer command systems; direction and transport unspecified.",
+          "direction": "unspecified",
+          "source": "https://www.rafael.co.il/exhibitions/wp-content/uploads/2023/05/Drone-Dome.pdf",
+          "boundary": "Customer-operated sensor and command infrastructure."
+        }
+      ]
+    },
+    {
+      "id": "delair-postflight",
+      "vendor": "Delair",
+      "name": "delair.ai post-flight workflow (2020 documentation)",
+      "category": "Drones",
+      "path": [
+        "UAV survey imagery / imported maps",
+        "delair.ai processing deployment",
+        "Authorized analyst"
+      ],
+      "protocols": [
+        "File ingestion; cloud / private cloud / on-premises options"
+      ],
+      "data": "Historical documentation describes processing imagery and imported geospatial data.",
+      "access": "Customer workspace and selected hosting environment.",
+      "gap": "Dated documentation; current service availability and deployment endpoints are not verified. This is not live flight telemetry.",
+      "hosting": "Cloud / private cloud / on premises (2020 reference)",
+      "source": "https://support.delair.aero/support/solutions/articles/24000050602-11-what-software-tools-do-you-offer-for-after-flight-analysis-",
+      "useful": "Use the linked documentation to interpret owner-provided records and distinguish local transfers from cloud services.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-11-02",
+      "related": [
+        {
+          "name": "UX11 flight-log retrieval",
+          "url": "https://support.delair.aero/support/solutions/articles/24000027626-faq-008-how-do-i-retrieve-the-flight-log-files-when-requested-by-delair-support-"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Post-flight ingest",
+          "data": "Images and existing maps submitted for processing.",
+          "direction": "forward",
+          "source": "https://support.delair.aero/support/solutions/articles/24000050602-11-what-software-tools-do-you-offer-for-after-flight-analysis-",
+          "boundary": "Customer workspace and selected hosting environment."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Map / model review",
+          "data": "Processed maps and models made available for analysis.",
+          "direction": "forward",
+          "source": "https://support.delair.aero/support/solutions/articles/24000050602-11-what-software-tools-do-you-offer-for-after-flight-analysis-",
+          "boundary": "Customer workspace and selected hosting environment."
+        }
+      ]
+    },
+    {
+      "id": "microdrones-mdinfinity",
+      "vendor": "Microdrones",
+      "name": "mdInfinity / survey processing",
+      "category": "Drones",
+      "path": [
+        "Drone LiDAR / photogrammetry capture",
+        "mdInfinity cloud or desktop",
+        "Survey deliverables"
+      ],
+      "protocols": [
+        "Survey-data processing; cloud / desktop options"
+      ],
+      "data": "LiDAR and photogrammetry processing, including georeferencing and trajectory processing.",
+      "access": "Authorized software user with access to the recorded dataset.",
+      "gap": "The cited 2021 article establishes a processing workflow, not current endpoints or live drone tracking.",
+      "hosting": "Cloud or local desktop (published workflow)",
+      "source": "https://www.microdrones.com/en/content/drone-lidar-data-processing-made-easy-mdinfinity/",
+      "useful": "Use the linked documentation to interpret owner-provided records and distinguish local transfers from cloud services.",
+      "connector": "Research reference — no live connector enabled",
+      "reviewed_on": "2026-11-02",
+      "related": [],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Capture import",
+          "data": "Captured survey data enters the processing suite.",
+          "direction": "forward",
+          "source": "https://www.microdrones.com/en/content/drone-lidar-data-processing-made-easy-mdinfinity/",
+          "boundary": "Authorized software user with access to the recorded dataset."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Georeferencing / trajectory processing",
+          "data": "Processed survey outputs leave the selected processing environment.",
+          "direction": "forward",
+          "source": "https://www.microdrones.com/en/content/drone-lidar-data-processing-made-easy-mdinfinity/",
+          "boundary": "Authorized software user with access to the recorded dataset."
         }
       ]
     }

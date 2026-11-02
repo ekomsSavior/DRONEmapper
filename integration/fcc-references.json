@@ -1,0 +1,810 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-02",
+  "scope": "Equipment reference index; imported claims are not scanner signatures. Only fields with primary evidence are marked verified.",
+  "inputs": [
+    {
+      "path": "data/fcc/waymo.json",
+      "sha256": "372524b5f2e4cd6ed38eaff8c554a86585f76140e05688a62078bc4729ff94db",
+      "provenance": "User-contributed research snapshot; no automatic assertion of primary-source verification."
+    },
+    {
+      "path": "data/fcc/us-drones.json",
+      "sha256": "4e38f5dbfe627b5d02b76f20737633cfeba97dd5f8c89783586d23452cc73dbf",
+      "provenance": "User-contributed research snapshot; no automatic assertion of primary-source verification."
+    },
+    {
+      "path": "data/fcc/skydio.json",
+      "sha256": "b50e14b8cb129918f81cfa00623b07257b50db524754852c283a7c75d6500213",
+      "provenance": "User-contributed research snapshot; no automatic assertion of primary-source verification."
+    },
+    {
+      "path": "data/fcc/nuro.json",
+      "sha256": "614033fcf7dc7d059cf52625418d2c5496a1f5ef67ac477a836624f0a0d4a8c0",
+      "provenance": "User-contributed research snapshot; no automatic assertion of primary-source verification."
+    }
+  ],
+  "vendors": [
+    {
+      "id": "waymo",
+      "name": "Waymo",
+      "aliases": [
+        "Waymo LLC"
+      ],
+      "fcc_grantee": "2AZKT",
+      "input": "data/fcc/waymo.json"
+    },
+    {
+      "id": "aerovironment",
+      "name": "AeroVironment",
+      "aliases": [
+        "AeroVironment, Inc."
+      ],
+      "fcc_grantee": "PZR",
+      "input": "data/fcc/us-drones.json"
+    },
+    {
+      "id": "teal",
+      "name": "Teal",
+      "aliases": [
+        "Teal Drones",
+        "Teal Drones, Inc.",
+        "Teal Drones, Inc. (Red Cat Holdings)"
+      ],
+      "fcc_grantee": "2A9Z7",
+      "input": "data/fcc/us-drones.json"
+    },
+    {
+      "id": "zipline",
+      "name": "Zipline",
+      "aliases": [
+        "Zipline International, Inc."
+      ],
+      "fcc_grantee": "2BML6",
+      "input": "data/fcc/us-drones.json"
+    },
+    {
+      "id": "skydio",
+      "name": "Skydio",
+      "aliases": [
+        "Skydio, Inc."
+      ],
+      "fcc_grantee": "2ATQR",
+      "input": "data/fcc/skydio.json"
+    },
+    {
+      "id": "nuro",
+      "name": "Nuro",
+      "aliases": [
+        "Nuro, Inc."
+      ],
+      "fcc_grantee": "2A98R",
+      "input": "data/fcc/nuro.json"
+    }
+  ],
+  "devices": [
+    {
+      "fcc_id": "2AZKTRADE8C",
+      "product": "E-band Automotive Radar Sensor",
+      "frequencies_mhz": [
+        [
+          79036,
+          80978
+        ]
+      ],
+      "latest_action": "2024-06-26",
+      "application_purpose": "Original Equipment",
+      "id": "fcc-2azktrade8c",
+      "vendor_id": "waymo",
+      "maker": "Waymo",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/waymo.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2AZKTRADE8C",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "FCC Part 95M. 79.0\u201381.0 GHz automotive radar.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2AZKT710-60000W",
+      "product": "E-band Automotive Radar Sensor",
+      "frequencies_mhz": [],
+      "latest_action": "2021-09-24",
+      "application_purpose": "Original Equipment",
+      "id": "fcc-2azkt710-60000w",
+      "vendor_id": "waymo",
+      "maker": "Waymo",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/waymo.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2AZKT710-60000W",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Earlier E-band radar sensor grant.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2AZKT710-99000W",
+      "product": "Telematics module",
+      "frequencies_mhz": [
+        [
+          2402,
+          2480
+        ]
+      ],
+      "latest_action": "2021-09-16",
+      "application_purpose": "Original Equipment",
+      "id": "fcc-2azkt710-99000w",
+      "vendor_id": "waymo",
+      "maker": "Waymo",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/waymo.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2AZKT710-99000W",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "BLE telematics module.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2AZKT71099000WIFI",
+      "product": "Communication Module",
+      "frequencies_mhz": [],
+      "latest_action": "2021-11-10",
+      "application_purpose": "Class II Permissive Change",
+      "id": "fcc-2azkt71099000wifi",
+      "vendor_id": "waymo",
+      "maker": "Waymo",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/waymo.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2AZKT71099000WIFI",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Communication module variant.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "PZR-68460",
+      "product": "Digital Data Link Transceiver",
+      "frequencies_mhz": [
+        [
+          2403,
+          2475
+        ]
+      ],
+      "output_watts": 0.4,
+      "original_grant": "2013-12-20",
+      "latest_action": "2016-04-14",
+      "application_purpose": "Class II permissive change",
+      "id": "fcc-pzr-68460",
+      "vendor_id": "aerovironment",
+      "maker": "AeroVironment",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/us-drones.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/PZR-68460",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Primary proprietary UAS C2/video link. Not 802.11.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "PZR-79902",
+      "product": "RF Module, XBee, 900 MHz",
+      "frequencies_mhz": [
+        [
+          902.4,
+          927.6
+        ]
+      ],
+      "original_grant": "2017-08-18",
+      "latest_action": "2017-09-28",
+      "application_purpose": "Change in identification from MCQ-XB900HP (Digi XBee-PRO 900HP)",
+      "id": "fcc-pzr-79902",
+      "vendor_id": "aerovironment",
+      "maker": "AeroVironment",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/us-drones.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/PZR-79902",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Backup/telemetry module.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2A9Z7-TD000",
+      "product": "Digital Transmission Radio / model 50247 Bluetooth Module",
+      "frequencies_mhz": [
+        [
+          2402,
+          2480
+        ]
+      ],
+      "original_grant": "2023-05-15",
+      "latest_action": "2023-05-15",
+      "application_purpose": "Original Equipment",
+      "id": "fcc-2a9z7-td000",
+      "vendor_id": "teal",
+      "maker": "Teal",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/us-drones.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2A9Z7-TD000",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Limited single modular BLE module; Remote ID/BLE path, not the main video/control link.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2BML6P2EV1-0",
+      "product": "Intel Wi-Fi 6E AX210",
+      "frequencies_mhz": [
+        [
+          2412,
+          2472
+        ],
+        [
+          5180,
+          5240
+        ],
+        [
+          2402,
+          2480
+        ]
+      ],
+      "original_grant": "2024-12-16",
+      "latest_action": "2024-12-23",
+      "application_purpose": "Change in identification from PD9AX210D2",
+      "id": "fcc-2bml6p2ev1-0",
+      "vendor_id": "zipline",
+      "maker": "Zipline",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/us-drones.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2BML6P2EV1-0",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Platform 2 onboard Wi-Fi/BLE module. MAC OUI is Intel, not Zipline.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2BML6P2EV3-0",
+      "product": "Platform 2 Computer",
+      "frequencies_mhz": [
+        [
+          2437,
+          2437
+        ]
+      ],
+      "original_grant": "2026-05-04",
+      "latest_action": "2026-06-04",
+      "application_purpose": "Class II permissive change",
+      "id": "fcc-2bml6p2ev3-0",
+      "vendor_id": "zipline",
+      "maker": "Zipline",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/us-drones.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2BML6P2EV3-0",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Onboard computer; 2.4 GHz Wi-Fi channel 6 test grant.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2ATQRSDRC2V1",
+      "product": "Skydio 2",
+      "product_code": "SDRC2V1",
+      "equipment_class": "Quadrocopter with 2.4 and 5 GHz WiFi",
+      "frequencies_mhz": [
+        [
+          2412,
+          2462
+        ],
+        [
+          5180,
+          5240
+        ],
+        [
+          5190,
+          5230
+        ]
+      ],
+      "original_grant": "2019-11-26",
+      "latest_action": "2020-02-28",
+      "application_purpose": "Class II permissive change",
+      "id": "fcc-2atqrsdrc2v1",
+      "vendor_id": "skydio",
+      "maker": "Skydio",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2ATQRSDRC2V1",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Primary Wi-Fi air link. 2.4 GHz channels 1-11; 5 GHz U-NII-1 only.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2ATQRSBEC1V1",
+      "product": "Skydio Beacon",
+      "product_code": "SBEC1V1",
+      "equipment_class": "Drone Range-extending Beacon",
+      "frequencies_mhz": [
+        [
+          2412,
+          2462
+        ],
+        [
+          5180,
+          5240
+        ]
+      ],
+      "original_grant": "2019-12-30",
+      "latest_action": "2020-03-27",
+      "application_purpose": "Class II permissive change",
+      "id": "fcc-2atqrsbec1v1",
+      "vendor_id": "skydio",
+      "maker": "Skydio",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2ATQRSBEC1V1",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Range extender / relay accessory.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2ATQRSMO5GV1",
+      "product": "C78 Controller",
+      "product_code": "SMO5GV1",
+      "equipment_class": "C78 Controller",
+      "frequencies_mhz": [
+        [
+          5170,
+          5240
+        ]
+      ],
+      "original_grant": "2021-04-14",
+      "latest_action": "2021-07-01",
+      "application_purpose": "Class II permissive change",
+      "id": "fcc-2atqrsmo5gv1",
+      "vendor_id": "skydio",
+      "maker": "Skydio",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2ATQRSMO5GV1",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "5 GHz-only controller grant.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2ATQRSMODBV1",
+      "product": "SkydioLink Gen 2",
+      "product_code": "SMODBV1",
+      "equipment_class": "SkydioLink Dual Band Module",
+      "frequencies_mhz": [
+        [
+          2412,
+          2462
+        ],
+        [
+          5170,
+          5240
+        ]
+      ],
+      "original_grant": "2022-07-22",
+      "latest_action": "2022-07-22",
+      "application_purpose": "Original Equipment",
+      "id": "fcc-2atqrsmodbv1",
+      "vendor_id": "skydio",
+      "maker": "Skydio",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2ATQRSMODBV1",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Dual-band link module.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2ATQRSMODBV3",
+      "product": "SkydioLink Gen 3",
+      "product_code": "SMODBV3",
+      "equipment_class": "SkydioLink Third Generation Radio Module",
+      "frequencies_mhz": [
+        [
+          2407,
+          2472
+        ],
+        [
+          5180,
+          5240
+        ],
+        [
+          5730,
+          5845
+        ]
+      ],
+      "original_grant": "2023-09-25",
+      "latest_action": "2025-01-30",
+      "application_purpose": "Class II permissive change",
+      "id": "fcc-2atqrsmodbv3",
+      "vendor_id": "skydio",
+      "maker": "Skydio",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2ATQRSMODBV3",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Adds 5.8 GHz. Used in X10, Dock for X10, R10, Connect External Radio.",
+        "status": "unverified contextual claim; not a detection rule"
+      },
+      "manufacturer_identifier_evidence": {
+        "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+        "reviewed_on": "2026-11-02",
+        "scope": "Identifier and product association only; dates and frequency claims in the supplied index still require grant review."
+      }
+    },
+    {
+      "fcc_id": "2ATQRSMODBV3S",
+      "product": "SkydioLink Gen 3 (permissive change)",
+      "product_code": "SMODBV3S",
+      "equipment_class": "SkydioLink Third Generation Radio Module",
+      "frequencies_mhz": [
+        [
+          2407,
+          2472
+        ],
+        [
+          5180,
+          5240
+        ],
+        [
+          5730,
+          5845
+        ]
+      ],
+      "original_grant": "2025-01-05",
+      "latest_action": "2025-01-30",
+      "application_purpose": "Class III permissive change",
+      "id": "fcc-2atqrsmodbv3s",
+      "vendor_id": "skydio",
+      "maker": "Skydio",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2ATQRSMODBV3S",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Variant used by X10 / X10 Controller / Dock / R10.",
+        "status": "unverified contextual claim; not a detection rule"
+      },
+      "manufacturer_identifier_evidence": {
+        "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+        "reviewed_on": "2026-11-02",
+        "scope": "Identifier and product association only; dates and frequency claims in the supplied index still require grant review."
+      }
+    },
+    {
+      "fcc_id": "2ATQRCA",
+      "product": "Skydio Controller 2 (online), SC38V1 / CA110",
+      "product_code": "CA",
+      "equipment_class": "Controller",
+      "frequencies_mhz": [
+        [
+          2412,
+          2462
+        ],
+        [
+          5740,
+          5835
+        ],
+        [
+          5955,
+          7115
+        ],
+        [
+          2402,
+          2480
+        ],
+        [
+          3555,
+          3595
+        ],
+        [
+          3750,
+          3930
+        ]
+      ],
+      "original_grant": "2026-10-04",
+      "latest_action": "2026-10-04",
+      "application_purpose": "Original Equipment",
+      "id": "fcc-2atqrca",
+      "vendor_id": "skydio",
+      "maker": "Skydio",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2ATQRCA",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Wi-Fi 2.4/5/6E-7 + BLE + 5G NR n48/n77/n78.",
+        "status": "unverified contextual claim; not a detection rule"
+      },
+      "manufacturer_identifier_evidence": {
+        "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+        "reviewed_on": "2026-11-02",
+        "scope": "Identifier and product association only; dates and frequency claims in the supplied index still require grant review."
+      }
+    },
+    {
+      "fcc_id": "2ATQRA40",
+      "product": "Fibocom FN990A40",
+      "product_code": "A40",
+      "equipment_class": "5G NR Module",
+      "frequencies_mhz": [
+        [
+          3555,
+          3595
+        ],
+        [
+          3750,
+          3930
+        ]
+      ],
+      "original_grant": "2022-12-19 (original FCC ID RI7FN990A40)",
+      "latest_action": "2025-08-20",
+      "application_purpose": "Change in identification",
+      "id": "fcc-2atqra40",
+      "vendor_id": "skydio",
+      "maker": "Skydio",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2ATQRA40",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "5G NR n48 CBRS + n77/n78. Used in X10, R10, Fusion+.",
+        "status": "unverified contextual claim; not a detection rule"
+      },
+      "manufacturer_identifier_evidence": {
+        "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+        "reviewed_on": "2026-11-02",
+        "scope": "Identifier and product association only; dates and frequency claims in the supplied index still require grant review."
+      }
+    },
+    {
+      "fcc_id": "2A98RDJZCGWA",
+      "product": "Host-based automotive module with Wi-Fi",
+      "frequencies_mhz": [
+        [
+          2412,
+          2462
+        ],
+        [
+          5180,
+          5240
+        ],
+        [
+          2402,
+          2480
+        ]
+      ],
+      "latest_action": "2023-08-23",
+      "application_purpose": "Class II Permissive Change",
+      "id": "fcc-2a98rdjzcgwa",
+      "vendor_id": "nuro",
+      "maker": "Nuro",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/nuro.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2A98RDJZCGWA",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Change-in-ID from XPYJODYW374 (2022-12-02). Wi-Fi 2.4/5.1 + BLE.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "fcc_id": "2A98RDJZCGCA",
+      "product": "LTE-A Cat 18 LGA Module",
+      "frequencies_mhz": [
+        [
+          673,
+          688
+        ],
+        [
+          2510,
+          2560
+        ]
+      ],
+      "latest_action": "2023-08-22",
+      "application_purpose": "Class II Permissive Change",
+      "id": "fcc-2a98rdjzcgca",
+      "vendor_id": "nuro",
+      "maker": "Nuro",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/nuro.json",
+      "evidence_status": "contributed-index; primary grant review pending",
+      "source": "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm",
+      "lookup_url": "https://fccid.io/2A98RDJZCGCA",
+      "scanner_signature": false,
+      "contributor_notes": {
+        "text": "Change-in-ID from XMR202002EG18NA (2020-04-06). LTE B12/B41.",
+        "status": "unverified contextual claim; not a detection rule"
+      }
+    },
+    {
+      "id": "fcc-ri7fn990a40",
+      "fcc_id": "RI7FN990A40",
+      "product": "5G radio listed for Skydio X10",
+      "vendor_id": "skydio",
+      "maker": "Skydio",
+      "kind": "regulatory-equipment",
+      "input": "manufacturer e-label",
+      "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+      "evidence_status": "manufacturer lists FCC identifier; frequency grant not reviewed",
+      "frequencies_mhz": [],
+      "scanner_signature": false
+    }
+  ],
+  "product_relationships": [
+    {
+      "product": "Skydio X10 (online)",
+      "regulatory_model": "SR47PC9I / SR47PC9V",
+      "radios": "Skydio Connect SL + 5G",
+      "fcc_ids": [
+        "2ATQRSMODBV3S",
+        "RI7FN990A40"
+      ],
+      "ic_ids": [
+        "25280-SMODBV3S",
+        "5131A-FN990A40"
+      ],
+      "vendor_id": "skydio",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "manufacturer-published product association",
+      "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+      "reviewed_on": "2026-11-02",
+      "correction": "Manufacturer e-label lists RI7FN990A40 for these X10 variants; do not substitute the related Skydio grantee ID."
+    },
+    {
+      "product": "Skydio X10 Controller (online)",
+      "regulatory_model": "SC18V1",
+      "radios": "Skydio Connect SL + 5G",
+      "fcc_ids": [
+        "2ATQRSMODBV3S"
+      ],
+      "ic_ids": [
+        "25280-SMODBV3S"
+      ],
+      "vendor_id": "skydio",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "manufacturer-published product association",
+      "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+      "reviewed_on": "2026-11-02"
+    },
+    {
+      "product": "Skydio Dock for X10",
+      "regulatory_model": "SG47PV1",
+      "radios": "Skydio Connect SL (GA010)",
+      "fcc_ids": [
+        "2ATQRSMODBV3S"
+      ],
+      "ic_ids": [
+        "25280-SMODBV3S"
+      ],
+      "vendor_id": "skydio",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "manufacturer-published product association",
+      "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+      "reviewed_on": "2026-11-02"
+    },
+    {
+      "product": "Skydio R10",
+      "regulatory_model": "SDR5PC1",
+      "radios": "Skydio Connect SL + 5G (RB110)",
+      "fcc_ids": [
+        "2ATQRSMODBV3S",
+        "2ATQRA40"
+      ],
+      "ic_ids": [
+        "25280-SMODBV3S",
+        "25280-A40"
+      ],
+      "vendor_id": "skydio",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "manufacturer-published product association",
+      "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+      "reviewed_on": "2026-11-02"
+    },
+    {
+      "product": "Skydio Connect External Radio",
+      "regulatory_model": "SC93V1",
+      "radios": "Skydio Connect SL (CB010)",
+      "fcc_ids": [
+        "2ATQRSMODBV3"
+      ],
+      "ic_ids": [
+        "25280-SMODBV3S"
+      ],
+      "vendor_id": "skydio",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "manufacturer-published product association",
+      "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+      "reviewed_on": "2026-11-02"
+    },
+    {
+      "product": "Fusion+ Attachment",
+      "regulatory_model": "SR47AFP",
+      "radios": "Skydio Connect 5G (AA100)",
+      "fcc_ids": [
+        "2ATQRA40"
+      ],
+      "ic_ids": [
+        "25280-A40"
+      ],
+      "vendor_id": "skydio",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "manufacturer-published product association",
+      "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+      "reviewed_on": "2026-11-02"
+    },
+    {
+      "product": "Skydio Controller 2 (online)",
+      "regulatory_model": "SC38V1 / CA110",
+      "radios": "Skydio Connect SL + 5G",
+      "fcc_ids": [
+        "2ATQRCA"
+      ],
+      "ic_ids": [
+        "25280-CA / CA110"
+      ],
+      "vendor_id": "skydio",
+      "input": "data/fcc/skydio.json",
+      "evidence_status": "manufacturer-published product association",
+      "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
+      "reviewed_on": "2026-11-02"
+    }
+  ]
+}

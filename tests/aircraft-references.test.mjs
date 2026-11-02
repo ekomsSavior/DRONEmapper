@@ -13,7 +13,7 @@ test('GA reference exact matches never guess a variant or classify a radio',()=>
 });
 test('offline scanner and website references use the same reviewed catalog',()=>{
  const canonical=JSON.parse(fs.readFileSync('integration/aircraft-references.json'));
- assert.deepEqual(aircraftReferences,canonical);assert.equal(canonical.models.length,29);
+ assert.deepEqual(aircraftReferences,canonical);assert.equal(canonical.models.length,34);
  for(const file of ['android-node/app/src/main/assets/aircraft-references.json','linux-node/dronemapper_node/data/aircraft-references.json'])assert.deepEqual(JSON.parse(fs.readFileSync(file)),canonical);
  for(const m of canonical.models)assert.ok(m.sources.length&&m.reception.includes('No proprietary'));
 });

@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "release": "2026-11-02",
+  "encoding": "UTF-8",
+  "line_endings": "CRLF",
+  "delimiter": ",",
+  "scope": "Complete exports of the bundled reviewed catalogs, not a worldwide inventory of every device or signal.",
+  "datasets": [
+    {
+      "file": "oui-global.csv",
+      "url": "/downloads/data/oui-global.csv",
+      "rows": 58745,
+      "bytes": 11143571,
+      "sha256": "1e99d49809d3e1eef90a0ce6b8fe9626f5cb89306dd7fe36c449c81d8695d4ee",
+      "columns": [
+        "prefix",
+        "prefix_bits",
+        "registrant",
+        "vendor_hint",
+        "evidence_scope",
+        "source",
+        "source_revision"
+      ]
+    },
+    {
+      "file": "rid-prefixes.csv",
+      "url": "/downloads/data/rid-prefixes.csv",
+      "rows": 3738,
+      "bytes": 600489,
+      "sha256": "02ca6ab416af383fb4a75e4966a804b13756deac7e5176df7b3aa07f5dc4fbb5",
+      "columns": [
+        "rule_id",
+        "manufacturer",
+        "model",
+        "device_type",
+        "manufacturer_code",
+        "length_code",
+        "serial_start",
+        "serial_end",
+        "serial_length",
+        "decimal_suffix",
+        "evidence_url",
+        "reviewed_at",
+        "identity_authenticated"
+      ]
+    },
+    {
+      "file": "rf-channels.csv",
+      "url": "/downloads/data/rf-channels.csv",
+      "rows": 148,
+      "bytes": 70895,
+      "sha256": "10d551feb687fd002a806bd11f185a3ccdcb11d97a235eda86e63f7c8a6bdc5e",
+      "columns": [
+        "id",
+        "band",
+        "system",
+        "frequency_mhz",
+        "range_start_mhz",
+        "range_end_mhz",
+        "bandwidth_mhz",
+        "bandwidth_basis",
+        "channel",
+        "decoder",
+        "decoder_scope",
+        "observation_kind",
+        "identity_scope",
+        "receiver",
+        "source",
+        "reviewed_on",
+        "notes",
+        "channel_spacing_mhz"
+      ]
+    },
+    {
+      "file": "devices-global.json",
+      "url": "/downloads/data/devices-global.json",
+      "rows": 925,
+      "bytes": 16106945,
+      "sha256": "e7615023bbdb13035f04a29d1b63356568d1bf448869b06e445fcf0fb85ef219",
+      "collections": {
+        "devices": 925,
+        "radio_allocations": 58745,
+        "remote_id_rules": 3738,
+        "rf_channels": 148,
+        "vendor_flows": 440,
+        "equipment_product_relationships": 7,
+        "cloud_services": 457,
+        "robot_signatures": 8,
+        "fcc_equipment": 20
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "android-node/app/src/main/assets/oui-vendors.tsv",
+      "sha256": "64354687a18ea854ffbe59729cf28bc8155bfdfd58142f3d61e4efb4ea6af617"
+    },
+    {
+      "path": "android-node/app/src/main/assets/oui-vendors-provenance.json",
+      "sha256": "127d37abc7f072547c91e67b59cc03a46ffc603c848dd0e9bbc91291b235f8f2"
+    },
+    {
+      "path": "worker/rid-catalog.mjs",
+      "sha256": "8f39d83840f15c781174061d7b93e853f8c4c4cf4b54ad9fec9715ae292f4c3f"
+    },
+    {
+      "path": "integration/security-device-references.json",
+      "sha256": "2737e650301cf53a7afade8a2866d90a0921335ea03e7a465b718b8c49efc780"
+    },
+    {
+      "path": "integration/rf-channels.json",
+      "sha256": "05c396baef47369b47afe7e720b37fc84b6eeee30030518f3bbda8dc2d012ef0"
+    },
+    {
+      "path": "integration/fcc-references.json",
+      "sha256": "4f3daf4847802f67d1000410d16c63aa749ff727747ad641c543d3da00fafc7e"
+    },
+    {
+      "path": "integration/robot-platforms.json",
+      "sha256": "91d5c5078e1f0a6cf8406e5188cc68ae0f05d0d3d37018fac6e470c3c9fd7101"
+    },
+    {
+      "path": "integration/robot-signatures.json",
+      "sha256": "2ccd3b1539ddd9727a3e59ab7957593c7e758b56d83c8837a090ba26e10f0733"
+    },
+    {
+      "path": "integration/aircraft-references.json",
+      "sha256": "80a3bc3518644aee18cc8a4dc7060ebe9209036e59c207d15eecac2eaba04469"
+    },
+    {
+      "path": "integration/drone-platforms.json",
+      "sha256": "35e952bca8feeccb1e79484c61776bfc0c7457bb4ac0f33ef01a12161f850466"
+    },
+    {
+      "path": "integration/cloud-surfaces.json",
+      "sha256": "6474bffa216b114a315d7456510bd198864545c9c41b703cf66fb601be726ebe"
+    },
+    {
+      "path": "public/device-inventory.json",
+      "sha256": "9f12d83b6bec7352663dcc137eaa97ed99d6f75f354b395bebd1fdc5074a85ee"
+    },
+    {
+      "path": "docs/device-links.json",
+      "sha256": "9f7b318d736a2933fbd73a5267df570577be96eb99f0af547cfce32f05379bc2"
+    },
+    {
+      "path": "scripts/export_device_catalog.mjs",
+      "sha256": "c411b7fd2bc9e74ca44dec1132ef23243a416588f36f1c984e585406b4afae2e"
+    },
+    {
+      "path": "scripts/export_developer_data.py",
+      "sha256": "61d103e843187b60faf7f433f26c63584a3da7ea39110b7a4f2d862b8e28b094"
+    }
+  ],
+  "upstream_rights": "See README.md and upstream sources; no blanket relicensing of third-party material."
+}

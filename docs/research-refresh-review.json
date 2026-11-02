@@ -1,0 +1,60 @@
+{
+  "reviewed_on": "2026-11-02",
+  "input": "User-contributed dronemapper_docs snapshot",
+  "scope": "Passive review and public-source verification; no active vendor probing.",
+  "review_counts": {
+    "files_in_manifest": 164,
+    "faa_rows": 226,
+    "unique_faa_declarations": 204,
+    "new_accepted_rid_declarations_not_in_catalog": 12,
+    "domain_lists": 32,
+    "domain_names_in_lists": 873
+  },
+  "integrated": {
+    "vendor_workflows_added": 7,
+    "aircraft_references_added": 5,
+    "combined_fcc_input_files": 4,
+    "equipment_index_entries": 20,
+    "manufacturer_product_associations_checked": 7
+  },
+  "decisions": [
+    {
+      "area": "MAC allocations",
+      "decision": "All 37 contributed prefixes already occur in the bundled 58,745-entry allocation database. Export the full existing catalog with original registrants and prefix lengths."
+    },
+    {
+      "area": "Remote ID",
+      "decision": "Export all 3,738 reviewed scanner rules. Do not import the contributed model-aggregated minimum/maximum ranges; they can include serials that belong to different models. The 12 additional declarations remain deferred pending valid, bounded allocations."
+    },
+    {
+      "area": "RF references",
+      "decision": "Reconcile supported scanner windows, protocol references and documented channel tables. Separate frequency centers, band spans, occupied bandwidth and channel spacing. Do not turn a common frequency into device identity."
+    },
+    {
+      "area": "Cloud research",
+      "decision": "Use independently sourced product/API workflows. Cert-log or DNS hostnames do not prove service reachability, vulnerabilities, control paths or live device connections."
+    },
+    {
+      "area": "Historical map",
+      "decision": "No new dated, geolocated observations established by this input review; no synthetic live or historical pins added."
+    },
+    {
+      "area": "Robot scanning",
+      "decision": "Retain the eight existing published-pattern rules and 25 platform references. Broad vendor SSID prefixes, generic UUIDs and common ports in the input are insufficient for new reliable identifiers."
+    },
+    {
+      "area": "FCC equipment",
+      "decision": "Preserve contributed equipment facts with explicit review status. Official Skydio e-label documentation supports seven product associations and corrects the X10 cellular ID. Direct FCC grant retrieval was blocked; other supplied dates/frequencies are not upgraded to verified."
+    }
+  ],
+  "collector_recommendations": [
+    {
+      "area": "Domain refresh",
+      "recommendation": "Store provider and timestamp per response. Merge partial fallback observations with dated prior evidence rather than interpreting a smaller list as disappeared hosts. Match exact domain or dot-boundary suffix."
+    },
+    {
+      "area": "FAA refresh",
+      "recommendation": "Keep declaration category, acceptance status, revision and serial-file evidence. Compare full revisions; do not infer a new model from a changed file count. Preserve prior valid data when fetches are incomplete."
+    }
+  ]
+}

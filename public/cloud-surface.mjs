@@ -1,4 +1,4 @@
-import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261101-robots';
+import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261102-research';
 const $=id=>document.getElementById(id);
 const el=(tag,text)=>{const e=document.createElement(tag);e.textContent=text;return e;};
 // A protocol established by a source outranks a mention in an unknowns note.

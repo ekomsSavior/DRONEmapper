@@ -3,6 +3,8 @@
 from pathlib import Path
 import hashlib
 import zipfile
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parent
 FILES = ['README.md', 'LICENSE', 'NOTICE.txt', '.gitignore', '.gitattributes', 'server.py', 'data_sources.py',
@@ -73,6 +75,7 @@ def build_linux_archive():
 
 
 def build_archive():
+    subprocess.run([sys.executable, str(ROOT / 'scripts/export_developer_data.py'), '--check'], check=True)
     # Publish the same guide as the source bundle, with working website links.
     guide = (ROOT / 'docs/desktop-node-setup.md').read_text()
     for relative in ('linux-node-setup.md', 'sdr-decoders.md', 'serial-receivers.md', 'security-device-discovery.md', 'carbyne-discovery.md', 'axon-air-fusus.md'):
