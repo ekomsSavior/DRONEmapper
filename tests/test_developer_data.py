@@ -70,6 +70,34 @@ class DeveloperDataTests(unittest.TestCase):
         for name,original in self.global_data['catalog_references'].items():
             self.assertEqual(original,json.loads((ROOT/'integration'/f'{name}.json').read_text()))
 
+    def test_device_radio_information_keeps_model_and_vendor_scope(self):
+        devices=self.global_data['devices']
+        get=lambda maker,name:next(r for r in devices if r['maker']==maker and r['name']==name)
+        for d in devices:
+            for key in ('mac_allocations','rf_information','scanner_signatures'):
+                self.assertIsInstance(d[key],list)
+        spot=get('Boston Dynamics','Spot')
+        self.assertEqual({r['prefix'] for r in spot['mac_allocations']},{'10364A','70B3D5292'})
+        self.assertTrue(all('not verified for this particular model' in r['scope'] for r in spot['mac_allocations']))
+        go1=get('Unitree Robotics','Unitree Go1')
+        self.assertEqual([r['id'] for r in go1['scanner_signatures']],['unitree-go1-wifi-name'])
+        self.assertEqual(get('Unitree Robotics','Unitree Go2')['scanner_signatures'],[])
+        self.assertEqual(get('Petoi','Quaddle')['scanner_signatures'],[])
+        self.assertEqual(go1['mac_allocations'],[])
+        cyberdog=get('Xiaomi','CyberDog')
+        band=next(r for r in cyberdog['rf_information'] if r['kind']=='protocol-channel-reference')
+        self.assertEqual([c['frequency_mhz'] for c in band['channels']],[2402,2426,2480])
+        x10=get('Skydio','Skydio X10')
+        variant=next(r for r in x10['rf_information'] if r['kind']=='manufacturer-listed-radio-variant')
+        self.assertIn('RI7FN990A40',variant['fcc_ids'])
+        self.assertNotIn('2ATQRA40',variant['fcc_ids'])
+        telit=next(d for d in devices if d['catalog_id']=='equipment-RI7FN990A40')
+        self.assertEqual(telit['mac_allocations'],[])
+        self.assertEqual(telit['rf_information'][0]['frequencies_mhz'],[])
+        waymo=next(d for d in devices if d['catalog_id']=='equipment-2AZKTRADE8C')
+        self.assertIn('pending',waymo['rf_information'][0]['evidence_status'])
+        self.assertEqual(waymo['rf_information'][0]['frequencies_mhz'],[[79036,80978]])
+
     def test_frequency_and_evidence_semantics(self):
         rows={r['id']:r for r in self.global_data['rf_channels']}
         self.assertEqual(rows['ble-37']['frequency_mhz'],2402)

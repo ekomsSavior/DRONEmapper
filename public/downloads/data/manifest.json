@@ -70,8 +70,8 @@
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
       "rows": 925,
-      "bytes": 5679466,
-      "sha256": "97185cc5097230bade4ad9a21f0fe03e084ce1c5f206612dc5734952e1b7ed5c",
+      "bytes": 6254659,
+      "sha256": "96d1a00580485243de9a4cf70c6cd0d8cde88d4c3ac62129ff20638fa8eaa172",
       "collections": {
         "devices": 925,
         "radio_allocations": 100,
@@ -81,7 +81,10 @@
         "equipment_product_relationships": 7,
         "cloud_services": 457,
         "robot_signatures": 8,
-        "fcc_equipment": 20
+        "fcc_equipment": 20,
+        "devices_with_mac_allocations": 165,
+        "devices_with_rf_information": 119,
+        "devices_with_scanner_signatures": 11
       }
     }
   ],
@@ -140,7 +143,11 @@
     },
     {
       "path": "scripts/export_developer_data.py",
-      "sha256": "1825b87d1102aa6db8e6179c6701260b7879590ba89972543ed351e79212651a"
+      "sha256": "83903a3af0912dac747743c6a93919ab16205cb9bf894965523d7cbf535fac25"
+    },
+    {
+      "path": "scripts/device_radio_export.py",
+      "sha256": "44a2489db84c854229a9541e9926bfc86693bc24063863da5a60f70b2cd370f6"
     }
   ],
   "upstream_rights": "See README.md and upstream sources; no blanket relicensing of third-party material."

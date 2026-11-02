@@ -38,6 +38,14 @@ precise receiver coordinates, credentials or applicant contact records are inclu
 - `remote_id_rule_ids` joins a model to `remote_id_rules` without discarding any
   serial boundaries or decimal restrictions. Exact manufacturer/model aliases
   are used; ambiguous or different names remain separate records.
+- Each `devices` entry includes `mac_allocations`, `rf_information` and
+  `scanner_signatures`. MAC entries retain exact prefixes, bit lengths, registrants
+  and manufacturer-only scope; they are not observed MAC addresses or model proof.
+  RF entries contain the available model communications, exact firmware patterns,
+  BLE channel references, or associated FCC equipment bands with their evidence
+  status. Empty arrays mean no supported association in this release. Generic
+  channels are not assigned to every device; pending FCC grant values stay pending.
+  Rules are joined by exact manufacturer/model aliases, never by similar names.
 - `radio_allocations` has the same facts as the MAC CSV; shared provenance is in
   `radio_allocation_provenance`. Only the reviewed device-manufacturer allowlist
   is included. Each record keeps its exact registrant and prefix length.
