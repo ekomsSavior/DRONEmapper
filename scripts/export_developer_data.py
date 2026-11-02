@@ -35,23 +35,28 @@ def catalog_rules():
     text=(ROOT/'worker/rid-catalog.mjs').read_text()
     return json.loads(re.search(r'export const rules\s*=\s*(\[.*\])\s*;',text,re.S)[1])
 
+def scoped_oui():
+    data=json.loads((ROOT/'integration/device-oui.json').read_text())
+    rows=data['allocations']
+    if len({r['prefix'] for r in rows})!=len(rows):
+        raise ValueError('Duplicate scoped device allocation')
+    for r in rows:
+        if not re.fullmatch(r'[0-9A-F]{6}|[0-9A-F]{7}|[0-9A-F]{9}',r['prefix']) or len(r['prefix'])*4!=r['prefix_bits']:
+            raise ValueError('Invalid scoped device allocation')
+    return data
+
 def oui_rows():
-    base=ROOT/'android-node/app/src/main/assets'
-    raw=(base/'oui-vendors.tsv').read_bytes()
-    p=json.loads((base/'oui-vendors-provenance.json').read_text())
-    if sha(raw)!=p['sha256']:
-        raise ValueError('Bundled OUI provenance hash mismatch')
-    hints={prefix:v for v in json.loads((ROOT/'integration/security-device-references.json').read_text())['vendors'] for prefix in v['prefixes']}
     rows=[]
-    for line in raw.decode().splitlines():
-        prefix,registrant=line.split('\t',1)
-        if not re.fullmatch(r'[0-9A-F]{6}|[0-9A-F]{7}|[0-9A-F]{9}',prefix):
-            raise ValueError('Invalid allocation prefix')
-        hint=hints.get(prefix,{})
-        rows.append(dict(prefix=prefix,prefix_bits=len(prefix)*4,registrant=registrant,vendor_hint=hint.get('name',''),evidence_scope='registrant-only',source=p['source']+'/tree/'+p['revision'],source_revision=p['revision']))
-    if len(rows)!=p['prefix_count'] or len({r['prefix'] for r in rows})!=len(rows):
-        raise ValueError('OUI counts or uniqueness failed')
-    return sorted(rows,key=lambda r:(r['prefix'],r['prefix_bits']))
+    for r in scoped_oui()['allocations']:
+        prefix=r['prefix']
+        # Keep full MA-M / MA-S masks; never broaden them to a 24-bit OUI.
+        if r['prefix_bits']==24:
+            oui=':'.join(prefix[i:i+2] for i in range(0,6,2))
+        else:
+            padded=prefix.ljust(12,'0')
+            oui=':'.join(padded[i:i+2] for i in range(0,12,2))+'/'+str(r['prefix_bits'])
+        rows.append(dict(device=r['device'],oui=oui))
+    return sorted(rows,key=lambda r:(r['device'].casefold(),r['oui']))
 
 def rid_rows():
     from compile_faa_evidence import valid_serial
@@ -93,8 +98,8 @@ def artifacts():
     data=(json.dumps(global_data,ensure_ascii=False,indent=2)+'\n').encode()
     outputs['devices-global.json']=data
     entries.append(dict(file='devices-global.json',url='/downloads/data/devices-global.json',rows=len(global_data['devices']),bytes=len(data),sha256=sha(data),collections=global_data['counts']))
-    inputs=['android-node/app/src/main/assets/oui-vendors.tsv','android-node/app/src/main/assets/oui-vendors-provenance.json','worker/rid-catalog.mjs','integration/security-device-references.json','integration/rf-channels.json','integration/fcc-references.json','integration/robot-platforms.json','integration/robot-signatures.json','integration/aircraft-references.json','integration/drone-platforms.json','integration/cloud-surfaces.json','public/device-inventory.json','docs/device-links.json','scripts/export_device_catalog.mjs','scripts/export_developer_data.py']
-    manifest=dict(schema_version=SCHEMA_VERSION,release='2026-11-02',encoding='UTF-8',line_endings='CRLF',delimiter=',',scope='Complete exports of the bundled reviewed catalogs, not a worldwide inventory of every device or signal.',datasets=entries,inputs=[dict(path=p,sha256=sha((ROOT/p).read_bytes())) for p in inputs],upstream_rights='See README.md and upstream sources; no blanket relicensing of third-party material.')
+    inputs=['integration/device-oui.json','worker/rid-catalog.mjs','integration/security-device-references.json','integration/rf-channels.json','integration/fcc-references.json','integration/robot-platforms.json','integration/robot-signatures.json','integration/aircraft-references.json','integration/drone-platforms.json','integration/cloud-surfaces.json','public/device-inventory.json','docs/device-links.json','scripts/export_device_catalog.mjs','scripts/export_developer_data.py']
+    manifest=dict(schema_version=SCHEMA_VERSION,release='2026-11-02',encoding='UTF-8',line_endings='CRLF',delimiter=',',scope='Drone, autonomous-vehicle, robot and associated equipment research. MAC allocations are restricted to explicitly reviewed relevant manufacturers.',datasets=entries,inputs=[dict(path=p,sha256=sha((ROOT/p).read_bytes())) for p in inputs],upstream_rights='See README.md and upstream sources; no blanket relicensing of third-party material.')
     outputs['manifest.json']=(json.dumps(manifest,indent=2)+'\n').encode()
     outputs['SHA256SUMS.txt']=''.join(sha(data)+'  '+name+'\n' for name,data in sorted(outputs.items())).encode()
     return outputs
@@ -126,9 +131,9 @@ def global_devices(collections):
     # Product associations are their own evidence records, not guessed mergers.
     rows.sort(key=lambda r:(r['maker'].casefold(),r['name'].casefold(),r['catalog_id']))
     if len({r['catalog_id'] for r in rows})!=len(rows):raise ValueError('Duplicate global catalog identities')
-    oui=[{k:r[k] for k in ('prefix','prefix_bits','registrant','vendor_hint','evidence_scope')} for r in collections[0][1]]
+    oui=[{**r,'evidence_scope':'manufacturer-only'} for r in scoped_oui()['allocations']]
     result=dict(schema_version=1,release='2026-11-02',scope='Complete snapshot of the included DRONEmapper catalogs and contributed equipment index. Not an exhaustive inventory of all products worldwide; evidence status is field-specific.',map_inventory_generated_at=website['map_inventory_generated_at'],devices=rows,
-        radio_allocations=oui,radio_allocation_provenance=read('android-node/app/src/main/assets/oui-vendors-provenance.json'),
+        radio_allocations=oui,radio_allocation_provenance={k:v for k,v in scoped_oui().items() if k!='allocations'},
         remote_id_rules=rid,rf_channels=collections[2][1],robot_signatures=read('integration/robot-signatures.json'),
         cloud_services=read('integration/cloud-surfaces.json'),vendor_flows=website['flows'],
         equipment_vendors=fcc['vendors'],equipment_product_relationships=fcc['product_relationships'],equipment_input_provenance=fcc['inputs'],

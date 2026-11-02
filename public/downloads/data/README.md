@@ -5,7 +5,7 @@ catalogs used by DRONEmapper, with reviewed additions from contributed research.
 They cover drones, aircraft, autonomous vehicles, robot dogs, other ground robots,
 and related equipment. They are not a claim to contain every product worldwide.
 
-Download from [Device Library](https://dronemapper.churchofmalware.org/devices#research-data).
+Preview and download from [Device Library](https://dronemapper.churchofmalware.org/devices#research-data).
 Source and history: [GitHub](https://github.com/ekomsSavior/DRONEmapper/tree/main/public/downloads/data)
 or [Gitea](https://git.churchofmalware.org/ek0mssavi0r/DRONEmapper/src/branch/main/public/downloads/data).
 `manifest.json` gives the release, exact record counts, column names, byte sizes,
@@ -17,7 +17,7 @@ the manifest. No account or token is needed to download them.
 | File | Contents | Appropriate use |
 | --- | --- | --- |
 | `devices-global.json` | Combined models/programs, regulatory equipment, MAC allocations, RID rules, RF references, robot patterns, cloud services, documented vendor flows, product associations and source links | Research databases and cross-referenced tools |
-| `oui-global.csv` | Complete bundled IEEE MA-L, MA-M, MA-S and IAB allocation catalog | Offline radio registrant lookup, not a drone-only list |
+| `oui-global.csv` | Simple `device,oui` list for selected drone, autonomous-vehicle, robot and related equipment manufacturers | Relevant manufacturer allocations; not model identification |
 | `rid-prefixes.csv` | Every reviewed bounded rule from the scanner's RID catalog | Model candidates for a valid full CTA-2063 serial |
 | `rf-channels.csv` | Reviewed frequency centers, channel spans and DRONEmapper spectrum profiles | Receiver planning and understanding decoder coverage |
 
@@ -39,8 +39,9 @@ precise receiver coordinates, credentials or applicant contact records are inclu
   serial boundaries or decimal restrictions. Exact manufacturer/model aliases
   are used; ambiguous or different names remain separate records.
 - `radio_allocations` has the same facts as the MAC CSV; shared provenance is in
-  `radio_allocation_provenance`. All registrants are retained, including vendors
-  unrelated to drones. A registrant does not prove a product or operator.
+  `radio_allocation_provenance`. Only the reviewed device-manufacturer allowlist
+  is included. Each record keeps its exact registrant and prefix length.
+  A registrant does not prove a particular model or operator.
 - `robot_signatures`, `rf_channels`, `cloud_services` and `vendor_flows` preserve
   their source catalogs and evidence limits. Cloud service IDs are vendor-level
   references, not an assertion that every vendor device uses those services.
@@ -75,12 +76,21 @@ for device in catalog['devices']:
 
 ## MAC allocations CSV
 
-`prefix` is uppercase hexadecimal without separators; retain it as text, including
-leading zeroes. `prefix_bits` is 24, 28 or 36. Match the longest prefix first.
-Reject multicast and locally administered/randomized addresses before lookup.
-`vendor_hint` is present only for an explicitly catalogued vendor relationship;
-`registrant` is the actual allocation name. Do not equate similar corporate names.
-`evidence_scope` is always `registrant-only`.
+Two columns: `device` and `oui`. The device label names the manufacturer family;
+it does not assert a particular model. This list includes reviewed drone,
+autonomous-vehicle, robot and associated equipment manufacturers only.
+
+Ordinary 24-bit prefixes use `00:12:1C` notation. Smaller allocations retain their
+complete masks, for example `E8:B4:70:C0:00:00/28` and
+`8C:1F:64:76:30:00/36`. Zeros after the mask boundary are padding, not additional
+fixed address bits. Never truncate these to three bytes. Keep identifiers as text,
+match the longest prefix first, and exclude multicast and locally administered
+addresses. The combined JSON retains exact hexadecimal prefixes and bit lengths.
+
+Devices with no verified allocation are omitted rather than assigned a generic
+Wi-Fi chip vendor or another company's similarly named allocation. Sources and
+snapshot dates for the selected facts are retained in `integration/device-oui.json`
+and the combined JSON. The CSV intentionally contains no source-link columns.
 
 ## Remote ID rules CSV
 
@@ -146,9 +156,9 @@ DRONEmapper compilation and code: Church of Malware / saviorSEC; see the reposit
 LICENSE and NOTICE files. Source material retains its own applicable terms;
 this download does not relicense third-party documents or datasets.
 
-MAC allocation facts: IEEE Registration Authority, obtained through
-[Ringmast4r/OUI-Master-Database](https://github.com/Ringmast4r/OUI-Master-Database/tree/b8826bb53e949822f702e63865e582955cdc3505).
-Only current allocation entries were selected; heuristic device labels were not.
+Selected MAC allocation facts were checked against IEEE Registration Authority
+snapshots dated October 20–22, 2026. No general OUI database is bundled in these
+research exports.
 Remote ID allocation evidence: linked FAA declarations. RF references credit
 Bluetooth SIG, Linux wireless, Betaflight, ExpressLRS, proto17/dji_droneid,
 readsb, FAA, USCG and regulatory publications in each row. Product and network

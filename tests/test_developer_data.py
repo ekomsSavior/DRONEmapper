@@ -27,15 +27,25 @@ class DeveloperDataTests(unittest.TestCase):
         for entry in manifest['datasets']:
             self.assertEqual(entry['sha256'],export.sha(self.artifacts[entry['file']]))
 
-    def test_oui_retains_every_original_prefix_and_registrant(self):
-        original=dict(line.split('\t',1) for line in (ROOT/'android-node/app/src/main/assets/oui-vendors.tsv').read_text().splitlines())
+    def test_oui_is_only_the_scoped_two_column_device_list(self):
         rows=list(csv.DictReader(io.StringIO(self.artifacts['oui-global.csv'].decode())))
-        unescape=lambda s:s[1:] if s.startswith("'") else s
-        self.assertEqual({r['prefix']:unescape(r['registrant']) for r in rows},original)
-        self.assertEqual({int(r['prefix_bits']) for r in rows},{24,28,36})
-        for r in rows:
-            self.assertEqual(len(r['prefix'])*4,int(r['prefix_bits']))
-            self.assertEqual(r['evidence_scope'],'registrant-only')
+        self.assertEqual(list(rows[0]),['device','oui'])
+        reviewed=export.scoped_oui()['allocations']
+        self.assertEqual(len(rows),len(reviewed))
+        self.assertEqual({r['device'] for r in rows},{r['device'] for r in reviewed})
+        self.assertEqual(self.global_data['counts']['radio_allocations'],len(rows))
+        self.assertLess(len(rows),1000)
+        by_device={r['device']:r['oui'] for r in rows}
+        self.assertEqual(by_device['Anduril Industries devices'],'E8:B4:70:C0:00:00/28')
+        self.assertEqual(by_device['Anduril Imaging devices'],'8C:1F:64:76:30:00/36')
+        for unrelated in ['Cisco','Apple','Intel','U.S. Robotics','Data Robotics','Nurotron','Autelan','Tesla Controls','Tesla Subsea','YAMAHA CORPORATION']:
+            self.assertFalse(any(r['device'].casefold().startswith(unrelated.casefold()+' ') for r in rows),unrelated)
+        for name,data in self.artifacts.items():
+            self.assertNotIn(b'ringmast4r',data.lower(),name)
+            self.assertNotIn(b'oui-master-database',data.lower(),name)
+        for r in reviewed:
+            self.assertEqual(len(r['prefix'])*4,r['prefix_bits'])
+            self.assertTrue(r['source'].startswith('https://standards-oui.ieee.org/'))
 
     def test_serial_rules_are_not_broadened_or_dropped(self):
         original=export.catalog_rules()

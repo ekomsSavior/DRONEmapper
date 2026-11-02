@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Research data — DRONEmapper</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/anduril.css"><link rel="stylesheet" href="/research-data.css"><link rel="icon" href="/icon.svg" type="image/svg+xml"></head>
+<body><main class="reference-page data-page">
+<nav aria-label="Site"><a href="/devices#research-data">← Device Library</a><a href="/">World map</a><a href="/cloud-surface">Cloud Surface</a><a href="/galaxy">Galaxy Map</a></nav>
+<p class="eyebrow">CHURCH OF MALWARE / SAVIORSEC · RESEARCH DATA</p>
+<h1 id="dataset-title">Research data.</h1>
+<p id="dataset-description" class="reference-intro">Browse a dataset, search its records, and download the complete file when you’re ready.</p>
+<div class="data-actions"><a id="download-data" class="data-download" hidden>Download file</a><a href="/downloads/data/README.md">Schema &amp; examples ↗</a><a href="/downloads/data/manifest.json">Versions &amp; checksums ↗</a></div>
+<div class="reference-controls data-controls">
+<label for="dataset">Dataset<select id="dataset"><option value="devices-global.json">Global device JSON</option><option value="oui-global.csv">Device + OUI CSV</option><option value="rid-prefixes.csv">Remote ID rules CSV</option><option value="rf-channels.csv">Radio channels CSV</option></select></label>
+<label for="collection" id="section-control" hidden>Collection<select id="collection"></select></label>
+<label for="data-search">Search records<input id="data-search" type="search" placeholder="Manufacturer, model, prefix, frequency…" disabled></label>
+</div>
+<p id="data-status" role="status" aria-live="polite">Loading preview…</p>
+<div id="data-results" aria-busy="true"></div>
+<nav class="data-pagination" aria-label="Records"><button id="previous-page" disabled>← Previous</button><span id="page-label"></span><button id="next-page" disabled>Next →</button></nav>
+<noscript><p>Enable JavaScript to browse the data, or view the files in <a href="https://github.com/ekomsSavior/DRONEmapper/tree/main/public/downloads/data">GitHub</a>.</p></noscript>
+<footer>Field definitions and sources are in the schema guide. <a href="/devices#research-data">Back to Device Library</a>.</footer>
+</main><script type="module" src="/research-data.mjs"></script></body></html>

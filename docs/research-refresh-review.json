@@ -20,7 +20,7 @@
   "decisions": [
     {
       "area": "MAC allocations",
-      "decision": "All 37 contributed prefixes already occur in the bundled 58,745-entry allocation database. Export the full existing catalog with original registrants and prefix lengths."
+      "decision": "The contributed prefixes were reviewed against IEEE allocation snapshots. The researcher export now includes only the explicit drone, autonomous-vehicle, robot and related-equipment allowlist in integration/device-oui.json; general electronics and ambiguous corporate allocations are excluded."
     },
     {
       "area": "Remote ID",

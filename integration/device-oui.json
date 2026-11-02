@@ -1,0 +1,727 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-02",
+  "scope": "Selected drone, autonomous-vehicle, robot and associated equipment manufacturers only. Allocations are manufacturer-level references, not model-specific detection signatures.",
+  "sources": [
+    {
+      "registry": "MA-L",
+      "url": "https://standards-oui.ieee.org/oui/oui.csv",
+      "snapshot_date": "2026-10-20",
+      "sha256": "de55be3b1ac2a6534add37b13b21a985eeffa6398d8d31e68b58fb0ebfa2c9f8"
+    },
+    {
+      "registry": "MA-M",
+      "url": "https://standards-oui.ieee.org/oui28/mam.csv",
+      "snapshot_date": "2026-10-22",
+      "sha256": "5d0651f7ae48c64830353ac923d0b6b9f9de957573a875b5a1f9cf2ba55483b4"
+    },
+    {
+      "registry": "MA-S",
+      "url": "https://standards-oui.ieee.org/oui36/oui36.csv",
+      "snapshot_date": "2026-10-22",
+      "sha256": "bda5972192fa5d7c17ca14d1e3fa11a79c73b896da9540bd8a9e990596205ea2"
+    }
+  ],
+  "allocations": [
+    {
+      "device": "ABB Robotics devices",
+      "prefix": "E002A5",
+      "prefix_bits": 24,
+      "registrant": "ABB Robotics",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "AeroVironment devices",
+      "prefix": "001AF9",
+      "prefix_bits": 24,
+      "registrant": "AeroVIronment (AV Inc)",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "AeroVironment devices",
+      "prefix": "8C1F64B07",
+      "prefix_bits": 36,
+      "registrant": "AeroVironment",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Agility Robotics devices",
+      "prefix": "4C74A75",
+      "prefix_bits": 28,
+      "registrant": "AGILITY ROBOTICS, INC.",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Amazon Robotics devices",
+      "prefix": "8C1F64DC4",
+      "prefix_bits": 36,
+      "registrant": "Amazon Robotics MTAC Matrix NPI",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Anduril Imaging devices",
+      "prefix": "8C1F64763",
+      "prefix_bits": 36,
+      "registrant": "Anduril Imaging",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Anduril Industries devices",
+      "prefix": "E8B470C",
+      "prefix_bits": 28,
+      "registrant": "Anduril Industries",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Apollo Intelligent Connectivity devices",
+      "prefix": "74EE8D",
+      "prefix_bits": 24,
+      "registrant": "Apollo Intelligent Connectivity (Beijing) Technology Co., Ltd.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Aselsan devices",
+      "prefix": "000373",
+      "prefix_bits": 24,
+      "registrant": "Aselsan A.S",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Autel Robotics devices",
+      "prefix": "EC5BCDE",
+      "prefix_bits": 28,
+      "registrant": "Autel Robotics USA LLC",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Boston Dynamics devices",
+      "prefix": "10364A",
+      "prefix_bits": 24,
+      "registrant": "Boston Dynamics",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Boston Dynamics devices",
+      "prefix": "70B3D5292",
+      "prefix_bits": 36,
+      "registrant": "Boston Dynamics",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Carnegie Robotics devices",
+      "prefix": "2C691D6",
+      "prefix_bits": 28,
+      "registrant": "Carnegie Robotics",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "04A85A",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "0C9AE6",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "3491F0",
+      "prefix_bits": 24,
+      "registrant": "DJI BAIWANG TECHNOLOGY CO LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "34D262",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "481CB9",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "4C43F6",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "58B858",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "60601F",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "882985",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "8C5823",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "9C5A8A",
+      "prefix_bits": 24,
+      "registrant": "DJI BAIWANG TECHNOLOGY CO LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "C8A162",
+      "prefix_bits": 24,
+      "registrant": "DJI BAIWANG TECHNOLOGY CO LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "E47A2C",
+      "prefix_bits": 24,
+      "registrant": "SZ DJI TECHNOLOGY CO.,LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "DJI devices",
+      "prefix": "EC72F7",
+      "prefix_bits": 24,
+      "registrant": "DJI BAIWANG TECHNOLOGY CO LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "001AA6",
+      "prefix_bits": 24,
+      "registrant": "Elbit Systems Deutschland GmbH & Co. KG",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "0022B1",
+      "prefix_bits": 24,
+      "registrant": "Elbit Systems Ltd.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "70B3D524F",
+      "prefix_bits": 36,
+      "registrant": "ELBIT SYSTEMS BMD AND LAND EW - ELISRA LTD",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "70B3D5826",
+      "prefix_bits": 36,
+      "registrant": "Elbit Systems of America",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "70B3D5B7E",
+      "prefix_bits": 36,
+      "registrant": "Elbit Systems of America",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "70B3D5C24",
+      "prefix_bits": 36,
+      "registrant": "Elbit Systems of America",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "8C1F642A9",
+      "prefix_bits": 36,
+      "registrant": "Elbit Systems of America, LLC",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "8C1F646ED",
+      "prefix_bits": 36,
+      "registrant": "Elbit Systems of America",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "8C1F64B87",
+      "prefix_bits": 36,
+      "registrant": "ELBIT- ROKAR",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "8C1F64FCD",
+      "prefix_bits": 36,
+      "registrant": "elbit systems - EW and sigint - Elisra",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Elbit Systems devices",
+      "prefix": "C4FF84E",
+      "prefix_bits": 28,
+      "registrant": "Elbit system EW and SIGINT Elisra ltd",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "FANUC Robotics devices",
+      "prefix": "00E0E4",
+      "prefix_bits": 24,
+      "registrant": "FANUC ROBOTICS NORTH AMERICA, Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Flirtey devices",
+      "prefix": "70B3D52AA",
+      "prefix_bits": 36,
+      "registrant": "Flirtey Inc",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "FORT Robotics devices",
+      "prefix": "0411190",
+      "prefix_bits": 28,
+      "registrant": "FORT Robotics Inc.",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Gecko Robotics devices",
+      "prefix": "70B3D504A",
+      "prefix_bits": 36,
+      "registrant": "Gecko Robotics Inc",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Ghost Autonomy devices",
+      "prefix": "D8A6FD",
+      "prefix_bits": 24,
+      "registrant": "Ghost Autonomy Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "HAI Robotics devices",
+      "prefix": "70B3D50B7",
+      "prefix_bits": 36,
+      "registrant": "HAI ROBOTICS Co., Ltd.",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "HAI Robotics devices",
+      "prefix": "C86BBCB",
+      "prefix_bits": 28,
+      "registrant": "HAI ROBOTICS Co.,Ltd.",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Hikrobot devices",
+      "prefix": "34BD20",
+      "prefix_bits": 24,
+      "registrant": "Hangzhou Hikrobot Technology Co., Ltd.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Hikrobot devices",
+      "prefix": "B0B3536",
+      "prefix_bits": 28,
+      "registrant": "Hangzhou Hikrobot Technology Co., Ltd.",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Invert Robotics devices",
+      "prefix": "70B3D5FC7",
+      "prefix_bits": 36,
+      "registrant": "Invert Robotics Ltd.",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "iRobot devices",
+      "prefix": "4CB9EA",
+      "prefix_bits": 24,
+      "registrant": "iRobot Corporation",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "iRobot devices",
+      "prefix": "501479",
+      "prefix_bits": 24,
+      "registrant": "iRobot Corporation",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "iRobot devices",
+      "prefix": "ACF473",
+      "prefix_bits": 24,
+      "registrant": "iRobot Corporation",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "JAKA Robotics devices",
+      "prefix": "08DA33A",
+      "prefix_bits": 28,
+      "registrant": "JAKA Robotics Co., Ltd.",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "KUKA Robotics devices",
+      "prefix": "0060C8",
+      "prefix_bits": 24,
+      "registrant": "KUKA WELDING SYSTEMS & ROBOTS",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Lily Robotics devices",
+      "prefix": "3C6716",
+      "prefix_bits": 24,
+      "registrant": "Lily Robotics",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Mayfield Robotics devices",
+      "prefix": "742857",
+      "prefix_bits": 24,
+      "registrant": "Mayfield Robotics",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Nuro devices",
+      "prefix": "F040AF1",
+      "prefix_bits": 28,
+      "registrant": "Nuro.ai",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "ODrive Robotics devices",
+      "prefix": "5C1715",
+      "prefix_bits": 24,
+      "registrant": "ODrive Robotics",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Parrot devices",
+      "prefix": "00121C",
+      "prefix_bits": 24,
+      "registrant": "PARROT SA",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Parrot devices",
+      "prefix": "00267E",
+      "prefix_bits": 24,
+      "registrant": "PARROT SA",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Parrot devices",
+      "prefix": "9003B7",
+      "prefix_bits": 24,
+      "registrant": "PARROT SA",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Parrot devices",
+      "prefix": "903AE6",
+      "prefix_bits": 24,
+      "registrant": "PARROT SA",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Parrot devices",
+      "prefix": "A0143D",
+      "prefix_bits": 24,
+      "registrant": "PARROT SA",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Preferred Robotics devices",
+      "prefix": "283E0C",
+      "prefix_bits": 24,
+      "registrant": "Preferred Robotics, Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Quantum Systems devices",
+      "prefix": "AC86D17",
+      "prefix_bits": 28,
+      "registrant": "Quantum-Systems GmbH",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Rafael devices",
+      "prefix": "7C051E",
+      "prefix_bits": 24,
+      "registrant": "RAFAEL LTD.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Roborock devices",
+      "prefix": "249E7D",
+      "prefix_bits": 24,
+      "registrant": "Beijing Roborock Technology Co., Ltd.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Roborock devices",
+      "prefix": "B04A39",
+      "prefix_bits": 24,
+      "registrant": "Beijing Roborock Technology Co., Ltd.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Roborock devices",
+      "prefix": "C8C992",
+      "prefix_bits": 24,
+      "registrant": "Beijing Roborock Technology Co., Ltd.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Robotic Assistance Devices devices",
+      "prefix": "ACEF92D",
+      "prefix_bits": 28,
+      "registrant": "Robotic Assistance Devices Residential Inc",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Robotic Research devices",
+      "prefix": "70B3D5EB4",
+      "prefix_bits": 36,
+      "registrant": "Robotic Research, LLC",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "ROBOTIS devices",
+      "prefix": "B863BC",
+      "prefix_bits": 24,
+      "registrant": "ROBOTIS, Co, Ltd",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Robotize devices",
+      "prefix": "3805258",
+      "prefix_bits": 28,
+      "registrant": "Robotize ApS",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Schilling Robotics devices",
+      "prefix": "0015FE",
+      "prefix_bits": 24,
+      "registrant": "SCHILLING ROBOTICS LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Sevensense Robotics devices",
+      "prefix": "70B3D59C3",
+      "prefix_bits": 36,
+      "registrant": "Sevensense Robotics AG",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "SIYI devices",
+      "prefix": "5CD5B5",
+      "prefix_bits": 24,
+      "registrant": "Shenzhen WiSiYiLink Technology Co.,Ltd",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Skydio devices",
+      "prefix": "381D14",
+      "prefix_bits": 24,
+      "registrant": "Skydio Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Strategic Robotic Systems devices",
+      "prefix": "8C1F64C57",
+      "prefix_bits": 36,
+      "registrant": "Strategic Robotic Systems",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Teal Drones devices",
+      "prefix": "B030C8",
+      "prefix_bits": 24,
+      "registrant": "Teal Drones, Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Teledyne FLIR devices",
+      "prefix": "001356",
+      "prefix_bits": 24,
+      "registrant": "FLIR Radiation Inc",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Teledyne FLIR devices",
+      "prefix": "001BD8",
+      "prefix_bits": 24,
+      "registrant": "FLIR Systems Inc",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Teledyne FLIR devices",
+      "prefix": "00407F",
+      "prefix_bits": 24,
+      "registrant": "FLIR Systems",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Teradyne Robotics devices",
+      "prefix": "D0DA249",
+      "prefix_bits": 28,
+      "registrant": "Teradyne Robotics A/S",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Tesla devices",
+      "prefix": "0C298F",
+      "prefix_bits": 24,
+      "registrant": "Tesla,Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Tesla devices",
+      "prefix": "4CFCAA",
+      "prefix_bits": 24,
+      "registrant": "Tesla,Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Tesla devices",
+      "prefix": "54F8F0",
+      "prefix_bits": 24,
+      "registrant": "Tesla Inc",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Tesla devices",
+      "prefix": "90E643",
+      "prefix_bits": 24,
+      "registrant": "Tesla,Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Tesla devices",
+      "prefix": "98ED5C",
+      "prefix_bits": 24,
+      "registrant": "Tesla,Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Tesla devices",
+      "prefix": "D44F14",
+      "prefix_bits": 24,
+      "registrant": "Tesla,Inc.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Tesla devices",
+      "prefix": "DC44271",
+      "prefix_bits": 28,
+      "registrant": "Tesla,Inc.",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Tomahawk Robotics devices",
+      "prefix": "70B3D50EB",
+      "prefix_bits": 36,
+      "registrant": "Tomahawk Robotics",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "UBTECH Robotics devices",
+      "prefix": "3C427E8",
+      "prefix_bits": 28,
+      "registrant": "UBTECH ROBOTICS CORP",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Universal Robots devices",
+      "prefix": "38B14E6",
+      "prefix_bits": 28,
+      "registrant": "Universal Robots A/S",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Universal Robots devices",
+      "prefix": "8C1F64AFD",
+      "prefix_bits": 36,
+      "registrant": "Universal Robots A/S",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "Veo Robotics devices",
+      "prefix": "70B3D56C4",
+      "prefix_bits": 36,
+      "registrant": "Veo Robotics, Inc.",
+      "source": "https://standards-oui.ieee.org/oui36/oui36.csv"
+    },
+    {
+      "device": "WB Group devices",
+      "prefix": "001904",
+      "prefix_bits": 24,
+      "registrant": "WB Electronics Sp. z o.o.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "WB Group devices",
+      "prefix": "001DA5",
+      "prefix_bits": 24,
+      "registrant": "WB Electronics",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "XAG devices",
+      "prefix": "A45129",
+      "prefix_bits": 24,
+      "registrant": "XAG",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Yuneec devices",
+      "prefix": "E0B6F58",
+      "prefix_bits": 28,
+      "registrant": "Yuneec International（China）Co.，Ltd",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    },
+    {
+      "device": "Zero Zero Robotics devices",
+      "prefix": "848319",
+      "prefix_bits": 24,
+      "registrant": "Hangzhou Zero Zero Technology Co., Ltd.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
+    },
+    {
+      "device": "Zero Zero Robotics devices",
+      "prefix": "C863144",
+      "prefix_bits": 28,
+      "registrant": "Shenzhen Zero Zero Infinity Technology Co.，Ltd.",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv"
+    }
+  ]
+}

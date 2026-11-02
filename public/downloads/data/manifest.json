@@ -4,22 +4,17 @@
   "encoding": "UTF-8",
   "line_endings": "CRLF",
   "delimiter": ",",
-  "scope": "Complete exports of the bundled reviewed catalogs, not a worldwide inventory of every device or signal.",
+  "scope": "Drone, autonomous-vehicle, robot and associated equipment research. MAC allocations are restricted to explicitly reviewed relevant manufacturers.",
   "datasets": [
     {
       "file": "oui-global.csv",
       "url": "/downloads/data/oui-global.csv",
-      "rows": 58745,
-      "bytes": 11143571,
-      "sha256": "1e99d49809d3e1eef90a0ce6b8fe9626f5cb89306dd7fe36c449c81d8695d4ee",
+      "rows": 100,
+      "bytes": 3461,
+      "sha256": "3aa63187e2e83f152897761a1a84fb0ef5366a406524cb691bc8ec7a42d0763f",
       "columns": [
-        "prefix",
-        "prefix_bits",
-        "registrant",
-        "vendor_hint",
-        "evidence_scope",
-        "source",
-        "source_revision"
+        "device",
+        "oui"
       ]
     },
     {
@@ -75,11 +70,11 @@
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
       "rows": 925,
-      "bytes": 16106945,
-      "sha256": "e7615023bbdb13035f04a29d1b63356568d1bf448869b06e445fcf0fb85ef219",
+      "bytes": 5679466,
+      "sha256": "97185cc5097230bade4ad9a21f0fe03e084ce1c5f206612dc5734952e1b7ed5c",
       "collections": {
         "devices": 925,
-        "radio_allocations": 58745,
+        "radio_allocations": 100,
         "remote_id_rules": 3738,
         "rf_channels": 148,
         "vendor_flows": 440,
@@ -92,12 +87,8 @@
   ],
   "inputs": [
     {
-      "path": "android-node/app/src/main/assets/oui-vendors.tsv",
-      "sha256": "64354687a18ea854ffbe59729cf28bc8155bfdfd58142f3d61e4efb4ea6af617"
-    },
-    {
-      "path": "android-node/app/src/main/assets/oui-vendors-provenance.json",
-      "sha256": "127d37abc7f072547c91e67b59cc03a46ffc603c848dd0e9bbc91291b235f8f2"
+      "path": "integration/device-oui.json",
+      "sha256": "78faa9fe51146926c6dfb9a7ccbd96049f50ce481becafb1de8bc53082298e14"
     },
     {
       "path": "worker/rid-catalog.mjs",
@@ -105,7 +96,7 @@
     },
     {
       "path": "integration/security-device-references.json",
-      "sha256": "2737e650301cf53a7afade8a2866d90a0921335ea03e7a465b718b8c49efc780"
+      "sha256": "2e85da6995b299f86fa2abc04077ac73d7575fc10cfdbbd9f3ddd3320b46500e"
     },
     {
       "path": "integration/rf-channels.json",
@@ -149,7 +140,7 @@
     },
     {
       "path": "scripts/export_developer_data.py",
-      "sha256": "61d103e843187b60faf7f433f26c63584a3da7ea39110b7a4f2d862b8e28b094"
+      "sha256": "1825b87d1102aa6db8e6179c6701260b7879590ba89972543ed351e79212651a"
     }
   ],
   "upstream_rights": "See README.md and upstream sources; no blanket relicensing of third-party material."
