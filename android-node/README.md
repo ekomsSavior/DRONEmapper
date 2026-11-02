@@ -22,7 +22,7 @@ Version **0.8.0** expands the shared offline FAA catalog to 3,738 rules across 1
 
 Version **0.7.2** added a direct **Open SDR** action when HackRF is selected in the Wi-Fi menu, and identifies PortaPack Mayhem serial mode. It retains the expanded offline FAA model catalog.
 
-Version **0.7.0** added **Saved wardrives · record / upload / export**.
+Version **0.7.1** added **Saved wardrives · record / upload / export**.
 Start listening, open that button, then choose **Record a wardrive**. No account
 or internet is needed to record. Live sharing pauses while the trip records.
 Tap **Finish recording** or **Stop listening**; saved trips survive app restarts.
@@ -104,4 +104,4 @@ General Atomics: shared [aircraft references](../docs/aircraft-references.md), w
 
 ## Robot scanner test release
 
-Android 0.9.0 / Desktop 0.7.0 add eight published Wi-Fi/Bluetooth patterns and 25 researched robot references. Matches remain possible robot signals; reference entries alone do not enable detection. See the [patterns, primary sources and field-test guide](../docs/robot-signals.md).
+Android 0.9.0 / Desktop 0.7.1 add eight published Wi-Fi/Bluetooth patterns and 25 researched robot references. Matches remain possible robot signals; reference entries alone do not enable detection. See the [patterns, primary sources and field-test guide](../docs/robot-signals.md).

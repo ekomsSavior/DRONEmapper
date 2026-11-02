@@ -6,6 +6,8 @@ import hashlib
 import http.client
 import json
 import os
+import re
+from urllib.parse import urljoin
 from pathlib import Path
 import struct
 import sys
@@ -295,10 +297,17 @@ class NodeTests(unittest.TestCase):
             c.request(method,path,body=body,headers=headers or {});r=c.getresponse();data=r.read();status=r.status;c.close();return status,data
         try:
             status,data=request('/api/status');self.assertEqual(status,200);csrf=json.loads(data)['csrf']
-            for module in ('drone-platforms.mjs','drone-platform-data.mjs'):
-                status,data=request('/'+module)
-                self.assertEqual(status,200)
-                self.assertIn(b'export',data)
+            pending=['/app.js']; visited=set()
+            while pending:
+                module=pending.pop()
+                if module in visited: continue
+                visited.add(module)
+                status,data=request(module)
+                self.assertEqual(status,200,module)
+                for relative in re.findall(r"from\s+['\"](\./[^'\"]+)['\"]",data.decode()):
+                    pending.append(urljoin(module,relative))
+            self.assertIn('/aircraft-reference-data.mjs',visited)
+            self.assertIn('/drone-platform-data.mjs',visited)
             self.assertEqual(request('/api/status',headers={'Host':'evil.example'})[0],403)
             self.assertEqual(request('/api/status',headers={'Sec-Fetch-Site':'cross-site'})[0],403)
             self.assertEqual(request('/api/settings','POST','{}',{'Content-Type':'application/json'})[0],403)

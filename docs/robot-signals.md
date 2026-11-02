@@ -1,6 +1,6 @@
 # Robot dogs and ground robots
 
-Church of Malware / saviorSEC · Android 0.9.0 · Desktop 0.7.0
+Church of Malware / saviorSEC · Android 0.9.0 · Desktop 0.7.1
 
 This release adds eight documented Wi-Fi/Bluetooth patterns to the scanner. Matches
 appear as **possible robot dogs** or **possible ground robots** in the live list
@@ -9,7 +9,7 @@ or copied, and a controller can be separate from its robot.
 
 ## Start a field test
 
-1. Update the Android APK over the existing app, or install Desktop 0.7.0. Keep your
+1. Update the Android APK over the existing app, or install Desktop 0.7.1. Keep your
    existing account and settings. Start listening.
 2. For Wi-Fi, enable the phone's Wi-Fi and location permissions, or select a
    dedicated desktop adapter in monitor mode. Android's built-in scans are scheduled
