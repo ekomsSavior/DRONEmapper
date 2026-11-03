@@ -15899,8 +15899,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "autel-evo-max4t",
+            "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -15909,23 +15915,87 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Aircraft storage",
+                "details": "128 GB internal, approximately 64 GB available; supplied 64 GB microSD, plus USB-C transfer.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Regional radio options",
+                "details": "802.11a/b/g/n/ac/ax; video link uses 2.4/5.2/5.8 GHz as regionally enabled, plus 902–928 MHz only in FCC/ISED versions.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Fusion 4T",
+                "details": "48 MP 1/2-inch zoom and 50 MP 1/1.28-inch wide cameras; 640×512 VOx thermal, 12 μm pixels, 13 mm lens; 905 nm rangefinder.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation and radar",
+                "details": "Multi-constellation GNSS and visual avoidance. 60–64 GHz radar version differs from regional 24.0–24.25 GHz downward-only version, whose other radars are disabled.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Interchangeable packs",
+                "details": "ABX40: 8070 mAh, 14.88 V, 120 Wh. ABX41: 9248 mAh, 14.76 V, 136.5 Wh. Both are 4S LiPo.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -15934,8 +16004,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operations",
+                "details": "Autel Enterprise application on the separate Smart Controller V3.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -15968,12 +16051,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "interfaces"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -16025,8 +16103,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "autel-evo-max4t",
+            "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -16035,23 +16119,87 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Aircraft storage",
+                "details": "128 GB internal, approximately 64 GB available; supplied 64 GB microSD, plus USB-C transfer.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Regional radio options",
+                "details": "802.11a/b/g/n/ac/ax; video link uses 2.4/5.2/5.8 GHz as regionally enabled, plus 902–928 MHz only in FCC/ISED versions.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Fusion 4T",
+                "details": "48 MP 1/2-inch zoom and 50 MP 1/1.28-inch wide cameras; 640×512 VOx thermal, 12 μm pixels, 13 mm lens; 905 nm rangefinder.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation and radar",
+                "details": "Multi-constellation GNSS and visual avoidance. 60–64 GHz radar version differs from regional 24.0–24.25 GHz downward-only version, whose other radars are disabled.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Interchangeable packs",
+                "details": "ABX40: 8070 mAh, 14.88 V, 120 Wh. ABX41: 9248 mAh, 14.76 V, 136.5 Wh. Both are 4S LiPo.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -16060,8 +16208,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operations",
+                "details": "Autel Enterprise application on the separate Smart Controller V3.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-max4t",
+                "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -16086,12 +16247,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "interfaces"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -17365,8 +17521,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ava-telepresence",
+            "configuration": "Ava telepresence reference configuration. Bare Mobile Base and security-robot payloads are separate. CPU, RAM, storage and sensor silicon part numbers are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -17380,28 +17542,106 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Site connection",
+                "details": "Wi-Fi connects the robot to its service; installed radio chipset and bands are not established by these telepresence sources.",
+                "sources": [
+                  "https://www.avarobotics.com/faq"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ava-telepresence",
+                "configuration": "Ava telepresence reference configuration. Bare Mobile Base and security-robot payloads are separate. CPU, RAM, storage and sensor silicon part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Video",
+                "details": "Main 1/2-inch 2 MP CMOS camera, 1080p up to 60 fps and 6× zoom; two 720p peripheral cameras.",
+                "sources": [
+                  "https://www.avarobotics.com/faq"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ava-telepresence",
+                "configuration": "Ava telepresence reference configuration. Bare Mobile Base and security-robot payloads are separate. CPU, RAM, storage and sensor silicon part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "3D cameras, LiDAR and IMU support localization, obstacle and cliff avoidance.",
+                "sources": [
+                  "https://www.avarobotics.com/faq"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ava-telepresence",
+                "configuration": "Ava telepresence reference configuration. Bare Mobile Base and security-robot payloads are separate. CPU, RAM, storage and sensor silicon part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Base and batteries",
+                "details": "Holonomic drive, up to 1 m/s; two or four 7300 mAh lithium-ion batteries. Up to seven hours in the cited use model; autonomous charging dock.",
+                "sources": [
+                  "https://www.avarobotics.com/faq"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ava-telepresence",
+                "configuration": "Ava telepresence reference configuration. Bare Mobile Base and security-robot payloads are separate. CPU, RAM, storage and sensor silicon part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Onboard controls",
+                "details": "Screen, physical stop button, handle, charging plate and status LEDs.",
+                "sources": [
+                  "https://www.avarobotics.com/_files/ugd/90f1de_10fdec5cff34454c8cec0ecb48576abf.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ava-telepresence",
+                "configuration": "Ava telepresence reference configuration. Bare Mobile Base and security-robot payloads are separate. CPU, RAM, storage and sensor silicon part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Remote access",
+                "details": "Ava Teleport web application and iOS access; mapped destinations, route planning and keep-out areas.",
+                "sources": [
+                  "https://www.avarobotics.com/faq",
+                  "https://www.avarobotics.com/_files/ugd/90f1de_10fdec5cff34454c8cec0ecb48576abf.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ava-telepresence",
+                "configuration": "Ava telepresence reference configuration. Bare Mobile Base and security-robot payloads are separate. CPU, RAM, storage and sensor silicon part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -17417,11 +17657,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -19447,8 +19682,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "suitable-beampro",
+            "configuration": "Suitable Technologies BeamPro brochure configuration, distinct from Beam/Beam+. CPU and RAM are undisclosed; the Intel i3 requirement in the client guide refers to the operator’s PC.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -19457,33 +19698,112 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "System media",
+                "details": "Replaceable SD card carries the Beam OS image; installed capacity is not identified.",
+                "sources": [
+                  "https://suitabletech.com/images/stories/Documentation/files/BeamPro_SD_Replacement_Instructions.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "suitable-beampro",
+                "configuration": "Suitable Technologies BeamPro brochure configuration, distinct from Beam/Beam+. CPU and RAM are undisclosed; the Intel i3 requirement in the client guide refers to the operator’s PC.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wi-Fi and optional cellular",
+                "details": "Two dual-band 802.11a/b/g/n radios, 2.4/5 GHz. LTE uses an optional USB device.",
+                "sources": [
+                  "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "suitable-beampro",
+                "configuration": "Suitable Technologies BeamPro brochure configuration, distinct from Beam/Beam+. CPU and RAM are undisclosed; the Intel i3 requirement in the client guide refers to the operator’s PC.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Audio and video",
+                "details": "Two wide-angle HD cameras, six-microphone array and front speaker. LiDAR-assisted driving is optional.",
+                "sources": [
+                  "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "suitable-beampro",
+                "configuration": "Suitable Technologies BeamPro brochure configuration, distinct from Beam/Beam+. CPU and RAM are undisclosed; the Intel i3 requirement in the client guide refers to the operator’s PC.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobility and charging",
+                "details": "Lead-acid battery, up to eight hours; five-wheel chassis, up to 2 mph. Dock accepts 100–240 V, 50–60 Hz.",
+                "sources": [
+                  "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "suitable-beampro",
+                "configuration": "Suitable Technologies BeamPro brochure configuration, distinct from Beam/Beam+. CPU and RAM are undisclosed; the Intel i3 requirement in the client guide refers to the operator’s PC.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Operator interface",
+                "details": "17-inch LCD and USB keyboard connection at the back of the head.",
+                "sources": [
+                  "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf",
+                  "https://suitabletech.com/images/stories/Documentation/files/BeamPro_SD_Replacement_Instructions.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "suitable-beampro",
+                "configuration": "Suitable Technologies BeamPro brochure configuration, distinct from Beam/Beam+. CPU and RAM are undisclosed; the Intel i3 requirement in the client guide refers to the operator’s PC.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Telepresence",
+                "details": "Beam App for remote piloting and fleet access management.",
+                "sources": [
+                  "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "suitable-beampro",
+                "configuration": "Suitable Technologies BeamPro brochure configuration, distinct from Beam/Beam+. CPU and RAM are undisclosed; the Intel i3 requirement in the client guide refers to the operator’s PC.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -19498,12 +19818,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -57709,33 +58023,104 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "freefly-alta-x-standard",
+            "configuration": "Alta X Standard aircraft-only 950-00150-XX, June 2024 component declaration. This is not Gen2 or DIU. Cube processor SKU and installed memory are not specified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flight controller",
+                "details": "CubePilot Cube (NDAA) flight-controller hardware with Freefly firmware; the declaration does not identify a silicon SKU.",
+                "sources": [
+                  "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-standard",
+                "configuration": "Alta X Standard aircraft-only 950-00150-XX, June 2024 component declaration. This is not Gen2 or DIU. Cube processor SKU and installed memory are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Flight logs",
+                "details": "microSD card for local logs; included card capacity is unspecified.",
+                "sources": [
+                  "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-standard",
+                "configuration": "Alta X Standard aircraft-only 950-00150-XX, June 2024 component declaration. This is not Gen2 or DIU. Cube processor SKU and installed memory are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Configurable radios",
+                "details": "Optional Microhard FRX Pro telemetry and TBS Unify Pro 5.8 GHz FPV transmitter. Pilot Pro with custom Herelink is a ground-control option, not fixed equipment on every airframe.",
+                "sources": [
+                  "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-standard",
+                "configuration": "Alta X Standard aircraft-only 950-00150-XX, June 2024 component declaration. This is not Gen2 or DIU. Cube processor SKU and installed memory are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Optional FPV camera",
+                "details": "RunCam Eagle2Pro-CM1200 is optional; payload camera hardware depends on operator configuration.",
+                "sources": [
+                  "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-standard",
+                "configuration": "Alta X Standard aircraft-only 950-00150-XX, June 2024 component declaration. This is not Gen2 or DIU. Cube processor SKU and installed memory are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Motor revision",
+                "details": "September 2019–May 2022 aircraft used DJI M12 motors. June 2022 onward production uses X9 motors with different ActiveBlade hardware; both use 33-inch propellers.",
+                "sources": [
+                  "https://docs.freeflysystems.com/products/products/alta-x/untitled-3/alta-x-motor-change-june-2022"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-standard",
+                "configuration": "Alta X Standard aircraft-only 950-00150-XX, June 2024 component declaration. This is not Gen2 or DIU. Cube processor SKU and installed memory are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -57744,8 +58129,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground control",
+                "details": "Freefly Alta X QGroundControl. A Samsung tablet listed in the controller package is external to the aircraft.",
+                "sources": [
+                  "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-standard",
+                "configuration": "Alta X Standard aircraft-only 950-00150-XX, June 2024 component declaration. This is not Gen2 or DIU. Cube processor SKU and installed memory are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -57777,13 +58175,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "interfaces"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -57819,13 +58211,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "freefly-alta-x-gen2",
+            "configuration": "Alta X Gen2 reference. Onboard CPU architecture is published, but processor SKU, RAM and storage are not. Payloads and radios vary by configuration.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flight and companion computer",
+                "details": "Freefly-custom Skynode with Cortex-A53 computer; Auterion Enterprise PX4 customized for Alta X.",
+                "sources": [
+                  "https://freeflysystems.com/alta-x-gen2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-gen2",
+                "configuration": "Alta X Gen2 reference. Onboard CPU architecture is published, but processor SKU, RAM and storage are not. Payloads and radios vary by configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -57834,28 +58245,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Connections",
+                "details": "Wi-Fi, USB-C and North American LTE; supported radio options include Herelink and Doodle.",
+                "sources": [
+                  "https://freeflysystems.com/alta-x-gen2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-gen2",
+                "configuration": "Alta X Gen2 reference. Onboard CPU architecture is published, but processor SKU, RAM and storage are not. Payloads and radios vary by configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and viewing",
+                "details": "Two u-blox F9P GNSS modules, vibration-isolated industrial Murata IMU, integrated FPV camera and laser rangefinder. IMU model is unspecified.",
+                "sources": [
+                  "https://freeflysystems.com/alta-x-gen2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-gen2",
+                "configuration": "Alta X Gen2 reference. Onboard CPU architecture is published, but processor SKU, RAM and storage are not. Payloads and radios vary by configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and lift",
+                "details": "Dual smart batteries; 12S system, 44.4 V nominal / 50.4 V peak with AS150U connectors. Published payload limit 15.9 kg.",
+                "sources": [
+                  "https://freeflysystems.com/alta-x-gen2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-gen2",
+                "configuration": "Alta X Gen2 reference. Onboard CPU architecture is published, but processor SKU, RAM and storage are not. Payloads and radios vary by configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload connection",
+                "details": "Smart Dovetail mechanical/electrical quick release follows the Pixhawk Payload Bus standard.",
+                "sources": [
+                  "https://freeflysystems.com/alta-x-gen2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-gen2",
+                "configuration": "Alta X Gen2 reference. Onboard CPU architecture is published, but processor SKU, RAM and storage are not. Payloads and radios vary by configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mission and fleet tools",
+                "details": "Auterion Mission Control and Auterion Suite.",
+                "sources": [
+                  "https://freeflysystems.com/alta-x-gen2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-gen2",
+                "configuration": "Alta X Gen2 reference. Onboard CPU architecture is published, but processor SKU, RAM and storage are not. Payloads and radios vary by configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -57887,13 +58363,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -70895,8 +71365,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "keenon-dinerbot-t8",
+            "configuration": "Current 34 kg DINERBOT T8 configuration. Older distributor specifications describe different revisions. Processor, RAM, storage, battery energy and radio chipset/bands are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -70915,23 +71391,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Obstacle and tray sensing",
+                "details": "Three stereo-vision sensors plus tray sensors.",
+                "sources": [
+                  "https://www.keenon.com/en/product/T8"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "keenon-dinerbot-t8",
+                "configuration": "Current 34 kg DINERBOT T8 configuration. Older distributor specifications describe different revisions. Processor, RAM, storage, battery energy and radio chipset/bands are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobile chassis",
+                "details": "Self-developed shock-absorbing chassis; 20 kg payload and 1 m/s maximum speed. Claimed runtime up to 15 hours with four-hour recharge.",
+                "sources": [
+                  "https://www.keenon.com/en/product/T8"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "keenon-dinerbot-t8",
+                "configuration": "Current 34 kg DINERBOT T8 configuration. Older distributor specifications describe different revisions. Processor, RAM, storage, battery energy and radio chipset/bands are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Interaction and accessories",
+                "details": "10.1-inch touch display and spoken/visual pickup guidance. Optional charging pile, call-button bridge and access-control module.",
+                "sources": [
+                  "https://www.keenon.com/en/product/T8"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "keenon-dinerbot-t8",
+                "configuration": "Current 34 kg DINERBOT T8 configuration. Older distributor specifications describe different revisions. Processor, RAM, storage, battery energy and radio chipset/bands are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Navigation and dispatch",
+                "details": "Mapping, obstacle avoidance, route planning, multi-robot dispatch and app-based tracking.",
+                "sources": [
+                  "https://www.keenon.com/en/product/T8"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "keenon-dinerbot-t8",
+                "configuration": "Current 34 kg DINERBOT T8 configuration. Older distributor specifications describe different revisions. Processor, RAM, storage, battery energy and radio chipset/bands are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -70948,10 +71476,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -71883,8 +72407,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "knightscope-k1-hemisphere",
+            "configuration": "Fixed K1 Hemisphere, not a mobile robot. Processor, memory, camera silicon and wireless chipset part numbers are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -71898,28 +72428,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Network paths",
+                "details": "Ethernet, Wi-Fi or cellular 4G LTE/5G/private LTE; configuration-specific bands are unspecified.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k1-hemisphere",
+                "configuration": "Fixed K1 Hemisphere, not a mobile robot. Processor, memory, camera silicon and wireless chipset part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera assembly",
+                "details": "Three HD cameras with 2.58 mm f/2.0 lenses, color night vision and infrared illumination.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k1-hemisphere",
+                "configuration": "Fixed K1 Hemisphere, not a mobile robot. Processor, memory, camera silicon and wireless chipset part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Fixed installation",
+                "details": "30 lb enclosure; 120 V / 10 A outlet requirement, wall or pole mounting; IP65 enclosure.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k1-hemisphere",
+                "configuration": "Fixed K1 Hemisphere, not a mobile robot. Processor, memory, camera silicon and wireless chipset part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Audio and alert hardware",
+                "details": "One microphone, two speakers, strobe and intercom button.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k1-hemisphere",
+                "configuration": "Fixed K1 Hemisphere, not a mobile robot. Processor, memory, camera silicon and wireless chipset part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Remote viewing",
+                "details": "Browser viewing on desktop or mobile; included 30-day raw-video retention is a service feature.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k1-hemisphere",
+                "configuration": "Fixed K1 Hemisphere, not a mobile robot. Processor, memory, camera silicon and wireless chipset part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -71935,11 +72530,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -71981,8 +72571,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "knightscope-k3-2024",
+            "configuration": "Indoor K3 described in the company’s FY2023 annual report filed April 2024. Processor, RAM, storage and individual sensor part numbers are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -71996,28 +72592,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Backhaul",
+                "details": "4G LTE and private LTE. This report described 5G as future development; it does not establish installed K3 5G hardware.",
+                "sources": [
+                  "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k3-2024",
+                "configuration": "Indoor K3 described in the company’s FY2023 annual report filed April 2024. Processor, RAM, storage and individual sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Autonomy sensing",
+                "details": "Laser ranging, ultrasonic sensing, IMU and wheel encoders feed the navigation stack.",
+                "sources": [
+                  "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k3-2024",
+                "configuration": "Indoor K3 described in the company’s FY2023 annual report filed April 2024. Processor, RAM, storage and individual sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Monitoring",
+                "details": "Day/night video and anomaly sensing; parking and license-plate analytics are disabled on the indoor K3 configuration.",
+                "sources": [
+                  "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k3-2024",
+                "configuration": "Indoor K3 described in the company’s FY2023 annual report filed April 2024. Processor, RAM, storage and individual sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Base and battery",
+                "details": "Approximately 340 lb; rechargeable batteries with autonomous docking. Reported patrol intervals are 2–3 hours, with at least about 20 minutes charging.",
+                "sources": [
+                  "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k3-2024",
+                "configuration": "Indoor K3 described in the company’s FY2023 annual report filed April 2024. Processor, RAM, storage and individual sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Audio",
+                "details": "Two-way intercom and public-address broadcasts.",
+                "sources": [
+                  "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k3-2024",
+                "configuration": "Indoor K3 described in the company’s FY2023 annual report filed April 2024. Processor, RAM, storage and individual sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "KSOC",
+                "details": "Patrol scheduling, review and export through Knightscope Security Operations Center. Weekly data generated is not a disk-capacity specification.",
+                "sources": [
+                  "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k3-2024",
+                "configuration": "Indoor K3 described in the company’s FY2023 annual report filed April 2024. Processor, RAM, storage and individual sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -72033,11 +72706,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -72081,8 +72749,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "knightscope-k5-v5",
+            "configuration": "K5 V5 datasheet configuration. Older K5 revisions differ. CPU/GPU, RAM, onboard storage capacity and battery chemistry are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -72096,28 +72770,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Cellular backhaul",
+                "details": "4G LTE, 5G and private LTE connectivity; modem part numbers and bands are unspecified.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k5-v5",
+                "configuration": "K5 V5 datasheet configuration. Older K5 revisions differ. CPU/GPU, RAM, onboard storage capacity and battery chemistry are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Video and audio",
+                "details": "Four wide-angle HD cameras, one thermal camera and four microphones; amplified speaker and four strobes.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k5-v5",
+                "configuration": "K5 V5 datasheet configuration. Older K5 revisions differ. CPU/GPU, RAM, onboard storage capacity and battery chemistry are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation sensors",
+                "details": "Six LiDAR sensors and thirteen sonar sensors.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k5-v5",
+                "configuration": "K5 V5 datasheet configuration. Older K5 revisions differ. CPU/GPU, RAM, onboard storage capacity and battery chemistry are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobile base and charging",
+                "details": "420 lb wheeled base, up to 3 mph; typical patrol 2.5–3 hours, charge 20–30 minutes. Dock requires a 120 V / 20 A outlet.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k5-v5",
+                "configuration": "K5 V5 datasheet configuration. Older K5 revisions differ. CPU/GPU, RAM, onboard storage capacity and battery chemistry are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Intercom",
+                "details": "Call button routes to a configured telephone number.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k5-v5",
+                "configuration": "K5 V5 datasheet configuration. Older K5 revisions differ. CPU/GPU, RAM, onboard storage capacity and battery chemistry are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Monitoring service",
+                "details": "Browser-based live viewing and 30-day raw-video retention. Retention is a service allowance, not onboard disk capacity.",
+                "sources": [
+                  "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "knightscope-k5-v5",
+                "configuration": "K5 V5 datasheet configuration. Older K5 revisions differ. CPU/GPU, RAM, onboard storage capacity and battery chemistry are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -72133,11 +72884,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -83036,8 +83782,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ozobot-evo-2024",
+            "configuration": "Evo described in the 2024 classroom technical sheet. Processor SKU, total RAM and flash capacity are undisclosed; host-computer requirements are not robot specifications.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -83046,33 +83798,111 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Resident program allowance",
+                "details": "Up to 2 kB of Blockly program can run on the robot without a connected PC. This is a program limit, not total RAM.",
+                "sources": [
+                  "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ozobot-evo-2024",
+                "configuration": "Evo described in the 2024 classroom technical sheet. Processor SKU, total RAM and flash capacity are undisclosed; host-computer requirements are not robot specifications.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Robot connection",
+                "details": "Bluetooth 5.0 Low Energy. The Python workflow still specifies a BLE connection to the robot; no onboard Wi-Fi radio is established.",
+                "sources": [
+                  "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ozobot-evo-2024",
+                "configuration": "Evo described in the 2024 classroom technical sheet. Processor SKU, total RAM and flash capacity are undisclosed; host-computer requirements are not robot specifications.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Line and obstacle sensing",
+                "details": "Optical line/color-code sensing and proximity sensors.",
+                "sources": [
+                  "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ozobot-evo-2024",
+                "configuration": "Evo described in the 2024 classroom technical sheet. Processor SKU, total RAM and flash capacity are undisclosed; host-computer requirements are not robot specifications.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "140 mAh rechargeable lithium-polymer battery; approximately 60 minutes operation. Micro-USB or classroom cradle charging.",
+                "sources": [
+                  "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ozobot-evo-2024",
+                "configuration": "Evo described in the 2024 classroom technical sheet. Processor SKU, total RAM and flash capacity are undisclosed; host-computer requirements are not robot specifications.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Outputs",
+                "details": "Programmable LEDs and speaker.",
+                "sources": [
+                  "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ozobot-evo-2024",
+                "configuration": "Evo described in the 2024 classroom technical sheet. Processor SKU, total RAM and flash capacity are undisclosed; host-computer requirements are not robot specifications.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Programming paths",
+                "details": "Color-code operation, Blockly and host-side Python. Host-executed programs require the robot connection to remain active.",
+                "sources": [
+                  "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ozobot-evo-2024",
+                "configuration": "Evo described in the 2024 classroom technical sheet. Processor SKU, total RAM and flash capacity are undisclosed; host-computer requirements are not robot specifications.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -83087,12 +83917,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -124501,13 +125325,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "yuneec-h520e",
+            "configuration": "Standard H520E in user manual v1.0 (October 2020), excluding H520E-RTK and older H520. Processor SKU/RAM are unspecified; payloads are interchangeable.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flight-control platform",
+                "details": "PX4-based flight controller; manufacturer does not identify its MCU/SoC part number.",
+                "sources": [
+                  "https://us.yuneec.com/about-us/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yuneec-h520e",
+                "configuration": "Standard H520E in user manual v1.0 (October 2020), excluding H520E-RTK and older H520. Processor SKU/RAM are unspecified; payloads are interchangeable.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -124516,28 +125359,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Air link",
+                "details": "OFDM link to ST16E in 2.400–2.483 GHz. Controller is a separate Android ground station.",
+                "sources": [
+                  "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf",
+                  "https://us.yuneec.com/about-us/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yuneec-h520e",
+                "configuration": "Standard H520E in user manual v1.0 (October 2020), excluding H520E-RTK and older H520. Processor SKU/RAM are unspecified; payloads are interchangeable.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "GNSS positioning, compass and inertial calibration. RTK accuracy in the adjacent manual column belongs to H520E-RTK, not this base model.",
+                "sources": [
+                  "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yuneec-h520e",
+                "configuration": "Standard H520E in user manual v1.0 (October 2020), excluding H520E-RTK and older H520. Processor SKU/RAM are unspecified; payloads are interchangeable.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and propulsion",
+                "details": "4S 6200 mAh LiHV pack; six BL3210 / 730 KV motors, 248 mm propellers; retractable landing gear.",
+                "sources": [
+                  "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yuneec-h520e",
+                "configuration": "Standard H520E in user manual v1.0 (October 2020), excluding H520E-RTK and older H520. Processor SKU/RAM are unspecified; payloads are interchangeable.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload mount",
+                "details": "X-connector gimbal payload family. Camera model depends on installed payload.",
+                "sources": [
+                  "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yuneec-h520e",
+                "configuration": "Standard H520E in user manual v1.0 (October 2020), excluding H520E-RTK and older H520. Processor SKU/RAM are unspecified; payloads are interchangeable.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mission planning",
+                "details": "DataPilot mission workflow. ST16E has its own 7-inch display, HDMI output and 31.32 Wh battery.",
+                "sources": [
+                  "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yuneec-h520e",
+                "configuration": "Standard H520E in user manual v1.0 (October 2020), excluding H520E-RTK and older H520. Processor SKU/RAM are unspecified; payloads are interchangeable.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -124561,13 +125470,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -264109,6 +265012,696 @@
             ]
           }
         ]
+      },
+      {
+        "id": "knightscope-k5-v5",
+        "manufacturer": "Knightscope",
+        "models": [
+          "Knightscope K5",
+          "K5 V5"
+        ],
+        "configuration": "K5 V5 datasheet configuration. Older K5 revisions differ. CPU/GPU, RAM, onboard storage capacity and battery chemistry are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Cellular backhaul",
+            "details": "4G LTE, 5G and private LTE connectivity; modem part numbers and bands are unspecified.",
+            "sources": [
+              "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Video and audio",
+            "details": "Four wide-angle HD cameras, one thermal camera and four microphones; amplified speaker and four strobes.",
+            "sources": [
+              "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation sensors",
+            "details": "Six LiDAR sensors and thirteen sonar sensors.",
+            "sources": [
+              "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobile base and charging",
+            "details": "420 lb wheeled base, up to 3 mph; typical patrol 2.5–3 hours, charge 20–30 minutes. Dock requires a 120 V / 20 A outlet.",
+            "sources": [
+              "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Intercom",
+            "details": "Call button routes to a configured telephone number.",
+            "sources": [
+              "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Monitoring service",
+            "details": "Browser-based live viewing and 30-day raw-video retention. Retention is a service allowance, not onboard disk capacity.",
+            "sources": [
+              "https://knightscope.com/hubfs/K5V5-5g-1.pdf?hsLang=en"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "knightscope-k3-2024",
+        "manufacturer": "Knightscope",
+        "models": [
+          "Knightscope K3",
+          "K3"
+        ],
+        "configuration": "Indoor K3 described in the company’s FY2023 annual report filed April 2024. Processor, RAM, storage and individual sensor part numbers are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Backhaul",
+            "details": "4G LTE and private LTE. This report described 5G as future development; it does not establish installed K3 5G hardware.",
+            "sources": [
+              "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Autonomy sensing",
+            "details": "Laser ranging, ultrasonic sensing, IMU and wheel encoders feed the navigation stack.",
+            "sources": [
+              "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Monitoring",
+            "details": "Day/night video and anomaly sensing; parking and license-plate analytics are disabled on the indoor K3 configuration.",
+            "sources": [
+              "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Base and battery",
+            "details": "Approximately 340 lb; rechargeable batteries with autonomous docking. Reported patrol intervals are 2–3 hours, with at least about 20 minutes charging.",
+            "sources": [
+              "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Audio",
+            "details": "Two-way intercom and public-address broadcasts.",
+            "sources": [
+              "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "KSOC",
+            "details": "Patrol scheduling, review and export through Knightscope Security Operations Center. Weekly data generated is not a disk-capacity specification.",
+            "sources": [
+              "https://cdn.kscope.io/eeefffc609544fc8274ab0fecb18f7d1.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "knightscope-k1-hemisphere",
+        "manufacturer": "Knightscope",
+        "models": [
+          "K1 Hemisphere"
+        ],
+        "configuration": "Fixed K1 Hemisphere, not a mobile robot. Processor, memory, camera silicon and wireless chipset part numbers are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Network paths",
+            "details": "Ethernet, Wi-Fi or cellular 4G LTE/5G/private LTE; configuration-specific bands are unspecified.",
+            "sources": [
+              "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera assembly",
+            "details": "Three HD cameras with 2.58 mm f/2.0 lenses, color night vision and infrared illumination.",
+            "sources": [
+              "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Audio and alert hardware",
+            "details": "One microphone, two speakers, strobe and intercom button.",
+            "sources": [
+              "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Fixed installation",
+            "details": "30 lb enclosure; 120 V / 10 A outlet requirement, wall or pole mounting; IP65 enclosure.",
+            "sources": [
+              "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Remote viewing",
+            "details": "Browser viewing on desktop or mobile; included 30-day raw-video retention is a service feature.",
+            "sources": [
+              "https://knightscope.com/hubfs/K1H-2.pdf?hsLang=en"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ozobot-evo-2024",
+        "manufacturer": "Ozobot",
+        "models": [
+          "Evo",
+          "Ozobot Evo"
+        ],
+        "configuration": "Evo described in the 2024 classroom technical sheet. Processor SKU, total RAM and flash capacity are undisclosed; host-computer requirements are not robot specifications.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "memory",
+            "component": "Resident program allowance",
+            "details": "Up to 2 kB of Blockly program can run on the robot without a connected PC. This is a program limit, not total RAM.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Robot connection",
+            "details": "Bluetooth 5.0 Low Energy. The Python workflow still specifies a BLE connection to the robot; no onboard Wi-Fi radio is established.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Line and obstacle sensing",
+            "details": "Optical line/color-code sensing and proximity sensors.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "140 mAh rechargeable lithium-polymer battery; approximately 60 minutes operation. Micro-USB or classroom cradle charging.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Outputs",
+            "details": "Programmable LEDs and speaker.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Programming paths",
+            "details": "Color-code operation, Blockly and host-side Python. Host-executed programs require the robot connection to remain active.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Evo_Technical_Specifications.pdf?v=1744393262"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ozobot-ari",
+        "manufacturer": "Ozobot",
+        "models": [
+          "Ari",
+          "Ozobot Ari"
+        ],
+        "configuration": "Ari entry-kit reference, 2025 technical sheet and current manufacturer FAQ. Processor SKU, RAM and flash capacity are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Wireless hardware",
+            "details": "Bluetooth 5.0 Low Energy and 2.4 GHz Wi-Fi.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Ari_Entry_Kit_Technical_Specifications.pdf?v=1744393246"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception and motion sensing",
+            "details": "Proximity, time-of-flight, line/color sensors, gyroscope, accelerometer, microphone and wheel encoders; pickup detection.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Ari_Entry_Kit_Technical_Specifications.pdf?v=1744393246",
+              "https://ozobot.com/pages/ari-resources"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "3.7 V / 1050 mAh lithium-polymer pack, approximately four hours operation; USB-C charging, about one hour using 5 V / 1 A.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Ari_Entry_Kit_Technical_Specifications.pdf?v=1744393246"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Interaction",
+            "details": "AMOLED screen, LED and speaker; USB connection also supports the vendor’s offline update tool.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Ari_Entry_Kit_Technical_Specifications.pdf?v=1744393246",
+              "https://ozobot.com/pages/ari-resources"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Programming",
+            "details": "Ozobot Editor supports block programs and Python; onboard apps and Color Codes can operate offline.",
+            "sources": [
+              "https://cdn.shopify.com/s/files/1/1059/8266/files/Ari_Entry_Kit_Technical_Specifications.pdf?v=1744393246",
+              "https://ozobot.com/pages/ari-resources"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "suitable-beampro",
+        "manufacturer": "Beam",
+        "models": [
+          "BeamPro",
+          "BeamPro (Suitable Technologies)"
+        ],
+        "configuration": "Suitable Technologies BeamPro brochure configuration, distinct from Beam/Beam+. CPU and RAM are undisclosed; the Intel i3 requirement in the client guide refers to the operator’s PC.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "memory",
+            "component": "System media",
+            "details": "Replaceable SD card carries the Beam OS image; installed capacity is not identified.",
+            "sources": [
+              "https://suitabletech.com/images/stories/Documentation/files/BeamPro_SD_Replacement_Instructions.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wi-Fi and optional cellular",
+            "details": "Two dual-band 802.11a/b/g/n radios, 2.4/5 GHz. LTE uses an optional USB device.",
+            "sources": [
+              "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Audio and video",
+            "details": "Two wide-angle HD cameras, six-microphone array and front speaker. LiDAR-assisted driving is optional.",
+            "sources": [
+              "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobility and charging",
+            "details": "Lead-acid battery, up to eight hours; five-wheel chassis, up to 2 mph. Dock accepts 100–240 V, 50–60 Hz.",
+            "sources": [
+              "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator interface",
+            "details": "17-inch LCD and USB keyboard connection at the back of the head.",
+            "sources": [
+              "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf",
+              "https://suitabletech.com/images/stories/Documentation/files/BeamPro_SD_Replacement_Instructions.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Telepresence",
+            "details": "Beam App for remote piloting and fleet access management.",
+            "sources": [
+              "https://suitabletech.com/images/stories/Documentation/files/12-4-Beam-Pro-brochure.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "freefly-alta-x-standard",
+        "manufacturer": "Freefly Systems",
+        "models": [
+          "Alta X",
+          "Alta X Standard"
+        ],
+        "configuration": "Alta X Standard aircraft-only 950-00150-XX, June 2024 component declaration. This is not Gen2 or DIU. Cube processor SKU and installed memory are not specified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight controller",
+            "details": "CubePilot Cube (NDAA) flight-controller hardware with Freefly firmware; the declaration does not identify a silicon SKU.",
+            "sources": [
+              "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Flight logs",
+            "details": "microSD card for local logs; included card capacity is unspecified.",
+            "sources": [
+              "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Configurable radios",
+            "details": "Optional Microhard FRX Pro telemetry and TBS Unify Pro 5.8 GHz FPV transmitter. Pilot Pro with custom Herelink is a ground-control option, not fixed equipment on every airframe.",
+            "sources": [
+              "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Optional FPV camera",
+            "details": "RunCam Eagle2Pro-CM1200 is optional; payload camera hardware depends on operator configuration.",
+            "sources": [
+              "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Motor revision",
+            "details": "September 2019–May 2022 aircraft used DJI M12 motors. June 2022 onward production uses X9 motors with different ActiveBlade hardware; both use 33-inch propellers.",
+            "sources": [
+              "https://docs.freeflysystems.com/products/products/alta-x/untitled-3/alta-x-motor-change-june-2022"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground control",
+            "details": "Freefly Alta X QGroundControl. A Samsung tablet listed in the controller package is external to the aircraft.",
+            "sources": [
+              "https://freeflysystems.com/wp-content/uploads/2024/09/Alta-X-Standard-Aircraft-Only-950-00150-XX-NDAA-Component-Origin-Compliance-2024.06.19.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "freefly-alta-x-gen2",
+        "manufacturer": "Freefly Systems",
+        "models": [
+          "Alta X Gen2"
+        ],
+        "configuration": "Alta X Gen2 reference. Onboard CPU architecture is published, but processor SKU, RAM and storage are not. Payloads and radios vary by configuration.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight and companion computer",
+            "details": "Freefly-custom Skynode with Cortex-A53 computer; Auterion Enterprise PX4 customized for Alta X.",
+            "sources": [
+              "https://freeflysystems.com/alta-x-gen2"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Connections",
+            "details": "Wi-Fi, USB-C and North American LTE; supported radio options include Herelink and Doodle.",
+            "sources": [
+              "https://freeflysystems.com/alta-x-gen2"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and viewing",
+            "details": "Two u-blox F9P GNSS modules, vibration-isolated industrial Murata IMU, integrated FPV camera and laser rangefinder. IMU model is unspecified.",
+            "sources": [
+              "https://freeflysystems.com/alta-x-gen2"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and lift",
+            "details": "Dual smart batteries; 12S system, 44.4 V nominal / 50.4 V peak with AS150U connectors. Published payload limit 15.9 kg.",
+            "sources": [
+              "https://freeflysystems.com/alta-x-gen2"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload connection",
+            "details": "Smart Dovetail mechanical/electrical quick release follows the Pixhawk Payload Bus standard.",
+            "sources": [
+              "https://freeflysystems.com/alta-x-gen2"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mission and fleet tools",
+            "details": "Auterion Mission Control and Auterion Suite.",
+            "sources": [
+              "https://freeflysystems.com/alta-x-gen2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "keenon-dinerbot-t8",
+        "manufacturer": "KEENON Robotics",
+        "models": [
+          "DINERBOT T8"
+        ],
+        "configuration": "Current 34 kg DINERBOT T8 configuration. Older distributor specifications describe different revisions. Processor, RAM, storage, battery energy and radio chipset/bands are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Obstacle and tray sensing",
+            "details": "Three stereo-vision sensors plus tray sensors.",
+            "sources": [
+              "https://www.keenon.com/en/product/T8"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobile chassis",
+            "details": "Self-developed shock-absorbing chassis; 20 kg payload and 1 m/s maximum speed. Claimed runtime up to 15 hours with four-hour recharge.",
+            "sources": [
+              "https://www.keenon.com/en/product/T8"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Interaction and accessories",
+            "details": "10.1-inch touch display and spoken/visual pickup guidance. Optional charging pile, call-button bridge and access-control module.",
+            "sources": [
+              "https://www.keenon.com/en/product/T8"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Navigation and dispatch",
+            "details": "Mapping, obstacle avoidance, route planning, multi-robot dispatch and app-based tracking.",
+            "sources": [
+              "https://www.keenon.com/en/product/T8"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yuneec-h520e",
+        "manufacturer": "Yuneec",
+        "models": [
+          "H520E"
+        ],
+        "configuration": "Standard H520E in user manual v1.0 (October 2020), excluding H520E-RTK and older H520. Processor SKU/RAM are unspecified; payloads are interchangeable.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight-control platform",
+            "details": "PX4-based flight controller; manufacturer does not identify its MCU/SoC part number.",
+            "sources": [
+              "https://us.yuneec.com/about-us/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Air link",
+            "details": "OFDM link to ST16E in 2.400–2.483 GHz. Controller is a separate Android ground station.",
+            "sources": [
+              "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf",
+              "https://us.yuneec.com/about-us/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "GNSS positioning, compass and inertial calibration. RTK accuracy in the adjacent manual column belongs to H520E-RTK, not this base model.",
+            "sources": [
+              "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and propulsion",
+            "details": "4S 6200 mAh LiHV pack; six BL3210 / 730 KV motors, 248 mm propellers; retractable landing gear.",
+            "sources": [
+              "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload mount",
+            "details": "X-connector gimbal payload family. Camera model depends on installed payload.",
+            "sources": [
+              "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mission planning",
+            "details": "DataPilot mission workflow. ST16E has its own 7-inch display, HDMI output and 31.32 Wh battery.",
+            "sources": [
+              "https://us.yuneec.com/wp-content/uploads/2021/01/H520E-_-H520E-RTK_USER-MANUAL_V1.0_20201022.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "autel-evo-max4t",
+        "manufacturer": "Autel Robotics",
+        "models": [
+          "EVO Max 4T",
+          "EVO Max"
+        ],
+        "configuration": "Original EVO Max 4T/Fusion 4T, manual v1.2.5 (February 2025). Generic EVO Max records use this named reference configuration. V2, 4N and XE are separate. CPU/RAM are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "memory",
+            "component": "Aircraft storage",
+            "details": "128 GB internal, approximately 64 GB available; supplied 64 GB microSD, plus USB-C transfer.",
+            "sources": [
+              "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Regional radio options",
+            "details": "802.11a/b/g/n/ac/ax; video link uses 2.4/5.2/5.8 GHz as regionally enabled, plus 902–928 MHz only in FCC/ISED versions.",
+            "sources": [
+              "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Fusion 4T",
+            "details": "48 MP 1/2-inch zoom and 50 MP 1/1.28-inch wide cameras; 640×512 VOx thermal, 12 μm pixels, 13 mm lens; 905 nm rangefinder.",
+            "sources": [
+              "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and radar",
+            "details": "Multi-constellation GNSS and visual avoidance. 60–64 GHz radar version differs from regional 24.0–24.25 GHz downward-only version, whose other radars are disabled.",
+            "sources": [
+              "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Interchangeable packs",
+            "details": "ABX40: 8070 mAh, 14.88 V, 120 Wh. ABX41: 9248 mAh, 14.76 V, 136.5 Wh. Both are 4S LiPo.",
+            "sources": [
+              "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operations",
+            "details": "Autel Enterprise application on the separate Smart Controller V3.",
+            "sources": [
+              "https://www.autelrobotics.com/wp-content/uploads/2025/03/EN_EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.2.5.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ava-telepresence",
+        "manufacturer": "Ava Robotics",
+        "models": [
+          "Ava",
+          "Ava Telepresence"
+        ],
+        "configuration": "Ava telepresence reference configuration. Bare Mobile Base and security-robot payloads are separate. CPU, RAM, storage and sensor silicon part numbers are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Site connection",
+            "details": "Wi-Fi connects the robot to its service; installed radio chipset and bands are not established by these telepresence sources.",
+            "sources": [
+              "https://www.avarobotics.com/faq"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Video",
+            "details": "Main 1/2-inch 2 MP CMOS camera, 1080p up to 60 fps and 6× zoom; two 720p peripheral cameras.",
+            "sources": [
+              "https://www.avarobotics.com/faq"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "3D cameras, LiDAR and IMU support localization, obstacle and cliff avoidance.",
+            "sources": [
+              "https://www.avarobotics.com/faq"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Base and batteries",
+            "details": "Holonomic drive, up to 1 m/s; two or four 7300 mAh lithium-ion batteries. Up to seven hours in the cited use model; autonomous charging dock.",
+            "sources": [
+              "https://www.avarobotics.com/faq"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Onboard controls",
+            "details": "Screen, physical stop button, handle, charging plate and status LEDs.",
+            "sources": [
+              "https://www.avarobotics.com/_files/ugd/90f1de_10fdec5cff34454c8cec0ecb48576abf.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Remote access",
+            "details": "Ava Teleport web application and iOS access; mapped destinations, route planning and keep-out areas.",
+            "sources": [
+              "https://www.avarobotics.com/faq",
+              "https://www.avarobotics.com/_files/ugd/90f1de_10fdec5cff34454c8cec0ecb48576abf.pdf"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -264125,8 +265718,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 177,
-    "devices_with_system_profiles": 178,
-    "devices_with_documented_compute": 89
+    "system_profiles": 189,
+    "devices_with_system_profiles": 190,
+    "devices_with_documented_compute": 92
   }
 }

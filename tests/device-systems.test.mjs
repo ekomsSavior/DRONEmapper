@@ -288,3 +288,31 @@ test('DJI industrial airframes keep camera, battery and controller variants dist
  assert.doesNotMatch(text(system('DJI','Agras T25').sections.power),/DB1560/);
  assert.equal(profileIds(system('DJI','Agras T50 & T25')).length,2);
 });
+
+test('security, education and aircraft profiles keep host hardware and revisions separate',()=>{
+ const evo=system('Ozobot','Evo'),ari=system('Ozobot','Ari');
+ assert.match(text(evo.sections.memory),/program limit, not total RAM/);
+ assert.match(text(evo.sections.radios),/no onboard Wi-Fi radio is established/);
+ assert.match(text(ari.sections.radios),/2.4 GHz Wi-Fi/);
+ assert.equal(evo.sections.compute.status,'not-established');
+ const beam=system('Beam','BeamPro');
+ assert.equal(beam.sections.compute.status,'not-established');
+ assert.match(beam.configurations[0].configuration,/operator’s PC/);
+ const k3=system('Knightscope','Knightscope K3'),k5=system('Knightscope','Knightscope K5');
+ assert.match(text(k3.sections.radios),/does not establish installed K3 5G/);
+ assert.doesNotMatch(text(k3.sections.sensors),/thirteen sonar/);
+ assert.match(text(k5.sections.sensors),/thirteen sonar/);
+ const alta=system('Freefly Systems','Alta X'),gen2=system('Freefly Systems','Alta X Gen2');
+ assert.match(text(alta.sections.compute),/CubePilot/);
+ assert.doesNotMatch(text(alta.sections.compute),/Cortex-A53/);
+ assert.match(text(gen2.sections.compute),/Cortex-A53/);
+ assert.equal(profileIds(system('Freefly Systems','Alta X DIU')).length,0);
+ const h520=system('Yuneec','H520E');
+ assert.match(text(h520.sections.power),/6200 mAh/);
+ assert.doesNotMatch(text(h520.sections.power),/31.32 Wh/);
+ assert.equal(profileIds(system('Yuneec','H520E-RTK')).length,0);
+ assert.equal(profileIds(system('Autel Robotics','EVO Max 4T V2')).length,0);
+ assert.match(text(system('Autel Robotics','EVO Max 4T').sections.power),/ABX41: 9248/);
+ assert.match(text(system('Ava Robotics','Ava').sections.power),/seven hours/);
+ assert.equal(profileIds(system('Ava Robotics','Ava Mobile Base')).length,0);
+});
