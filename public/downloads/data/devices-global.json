@@ -1105,8 +1105,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "acsl-soten-v38",
+            "configuration": "SOTEN manual 3.8-US1, April 2026. Includes L14 non-LTE and L22 LTE variants and Japan-only options; regional approval differs. CPU, RAM, storage chips and radio module SKUs are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -1120,33 +1126,110 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft links",
+                "details": "2.4 GHz command/telemetry/video link explicitly is not Wi-Fi. Bluetooth 4.0/5.0 carries Remote ID. Cellular modem is optional on LTE models.",
+                "sources": [
+                  "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acsl-soten-v38",
+                "configuration": "SOTEN manual 3.8-US1, April 2026. Includes L14 non-LTE and L22 LTE variants and Japan-only options; regional approval differs. CPU, RAM, storage chips and radio module SKUs are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and obstacle sensing",
+                "details": "GPS/SBAS/QZSS, forward/upward/downward stereo cameras and laser distance sensing; removable camera/gimbal.",
+                "sources": [
+                  "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acsl-soten-v38",
+                "configuration": "SOTEN manual 3.8-US1, April 2026. Includes L14 non-LTE and L22 LTE variants and Japan-only options; regional approval differs. CPU, RAM, storage chips and radio module SKUs are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "High-capacity aircraft pack",
+                "details": "BMS-managed lithium-ion: 23.1 V, 4,075 mAh, 94.1 Wh. Four propellers; 2 kg maximum takeoff mass.",
+                "sources": [
+                  "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acsl-soten-v38",
+                "configuration": "SOTEN manual 3.8-US1, April 2026. Includes L14 non-LTE and L22 LTE variants and Japan-only options; regional approval differs. CPU, RAM, storage chips and radio module SKUs are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Service and variant connections",
+                "details": "Aircraft USB-C is a service/diagnostic port, not a general payload interface. LTE variants have nano-SIM and LTE antennas.",
+                "sources": [
+                  "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acsl-soten-v38",
+                "configuration": "SOTEN manual 3.8-US1, April 2026. Includes L14 non-LTE and L22 LTE variants and Japan-only options; regional approval differs. CPU, RAM, storage chips and radio module SKUs are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground control",
+                "details": "ACSL TAKEOFF receives commands, telemetry and video. Pilot/observer controller roles are supported.",
+                "sources": [
+                  "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acsl-soten-v38",
+                "configuration": "SOTEN manual 3.8-US1, April 2026. Includes L14 non-LTE and L22 LTE variants and Japan-only options; regional approval differs. CPU, RAM, storage chips and radio module SKUs are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "identification",
+                "component": "Remote ID transport",
+                "details": "Manual specifies ASTM F3411-22A broadcast over Bluetooth. Japan-only 920 MHz training radios link controllers, not the aircraft; they are not a universal SOTEN signature.",
+                "sources": [
+                  "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acsl-soten-v38",
+                "configuration": "SOTEN manual 3.8-US1, April 2026. Includes L14 non-LTE and L22 LTE variants and Japan-only options; regional approval differs. CPU, RAM, storage chips and radio module SKUs are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Manufacturer MAC allocations",
                 "details": "8C:1F:64:A2:D0:00/36",
@@ -1174,12 +1257,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -32755,8 +32833,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-agras-t20p-2022",
+            "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -32770,23 +32854,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft link",
+                "details": "2.400–2.4835 and 5.725–5.850 GHz; regional restrictions apply.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t20p-2022",
+                "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and obstacle sensing",
+                "details": "RTK/GNSS, binocular vision and RD2484R/RD2484B radars at 24.05–24.25 GHz.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t20p-2022",
+                "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft propulsion",
+                "details": "Four 54-inch rotors; 4,000 W motors. BAX601 Li-ion pack: 52.22 V, 13 Ah, 679 Wh.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t20p-2022",
+                "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Spraying assembly",
+                "details": "20 L tank, two LX8060SZ atomizers and magnetic-drive impeller pumps.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t20p-2022",
+                "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -32825,10 +32961,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -33543,8 +33675,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-agras-t40-2022",
+            "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -33558,23 +33696,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft link",
+                "details": "2.400–2.4835 and 5.725–5.850 GHz; regional restrictions apply.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t40-2022",
+                "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and obstacle sensing",
+                "details": "RTK/GNSS, binocular vision and RD2484R/RD2484B radars at 24.05–24.25 GHz.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t40-2022",
+                "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft propulsion",
+                "details": "Eight 54-inch rotors; 4,000 W motors. BAX601 Li-ion pack: 52.22 V, 30 Ah, 1567 Wh.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t40-2022",
+                "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Spraying assembly",
+                "details": "40 L tank, two LX8060SZ atomizers and magnetic-drive impeller pumps.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t40-2022",
+                "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -33613,10 +33803,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -40036,8 +40222,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-matrice-3d",
+            "configuration": "Matrice 3D aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -40046,23 +40238,87 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording media",
+                "details": "U3/Class10/V30 microSD; no RAM specification.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3d",
+                "configuration": "Matrice 3D aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft transmission",
+                "details": "O3 Enterprise: regional 2.4, 5.1 and 5.8 GHz bands; four antennas, 2T4R.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3d",
+                "configuration": "Matrice 3D aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera payload",
+                "details": "20 MP 4/3 CMOS wide camera with mechanical shutter; 12 MP half-inch tele camera.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3d",
+                "configuration": "Matrice 3D aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Integrated RTK, GNSS and omnidirectional binocular vision.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3d",
+                "configuration": "Matrice 3D aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft powertrain",
+                "details": "4S Li-ion, 14.76 V, 7,811 mAh, 115.2 Wh; 2607 motors and 1149 propellers.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3d",
+                "configuration": "Matrice 3D aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -40071,8 +40327,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operations",
+                "details": "FlightHub 2 via Dock 2; RC Pro Enterprise supports manual control.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3d",
+                "configuration": "Matrice 3D aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -40105,12 +40374,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "interfaces"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -41611,8 +41875,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-matrice-3td",
+            "configuration": "Matrice 3TD aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -41621,23 +41891,87 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording media",
+                "details": "U3/Class10/V30 microSD; no RAM specification.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3td",
+                "configuration": "Matrice 3TD aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft transmission",
+                "details": "O3 Enterprise: regional 2.4, 5.1 and 5.8 GHz bands; four antennas, 2T4R.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3td",
+                "configuration": "Matrice 3TD aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera payload",
+                "details": "48 MP 1/1.32-inch CMOS wide camera, 12 MP half-inch tele camera and uncooled VOx thermal imager.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3td",
+                "configuration": "Matrice 3TD aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Integrated RTK, GNSS and omnidirectional binocular vision.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3td",
+                "configuration": "Matrice 3TD aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft powertrain",
+                "details": "4S Li-ion, 14.76 V, 7,811 mAh, 115.2 Wh; 2607 motors and 1149 propellers.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3td",
+                "configuration": "Matrice 3TD aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -41646,8 +41980,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operations",
+                "details": "FlightHub 2 via Dock 2; RC Pro Enterprise supports manual control.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice-3td",
+                "configuration": "Matrice 3TD aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -41680,12 +42027,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "interfaces"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -43466,8 +43808,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-mavic2-enterprise-advanced",
+            "configuration": "Mavic 2 Enterprise Advanced; distinct from Enterprise Dual and Zoom. Aircraft processor, RAM and radio chip models are not disclosed. Ground-controller storage is separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -43476,33 +43824,111 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Aircraft media storage",
+                "details": "24 GB onboard; microSD expansion up to 128 GB, UHS-I U3 required.",
+                "sources": [
+                  "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic2-enterprise-advanced",
+                "configuration": "Mavic 2 Enterprise Advanced; distinct from Enterprise Dual and Zoom. Aircraft processor, RAM and radio chip models are not disclosed. Ground-controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control/video link",
+                "details": "OcuSync 2.0: 2.400–2.4835 and 5.725–5.850 GHz, subject to regional limits.",
+                "sources": [
+                  "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic2-enterprise-advanced",
+                "configuration": "Mavic 2 Enterprise Advanced; distinct from Enterprise Dual and Zoom. Aircraft processor, RAM and radio chip models are not disclosed. Ground-controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging and positioning",
+                "details": "48 MP half-inch CMOS plus 640×512/30 Hz uncooled VOx thermal camera, three-axis gimbal, GPS/GLONASS and multidirectional obstacle sensing. RTK is an optional module.",
+                "sources": [
+                  "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic2-enterprise-advanced",
+                "configuration": "Mavic 2 Enterprise Advanced; distinct from Enterprise Dual and Zoom. Aircraft processor, RAM and radio chip models are not disclosed. Ground-controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft battery",
+                "details": "15.4 V, 3,850 mAh, 59.29 Wh LiPo with self-heating; four-rotor folding airframe.",
+                "sources": [
+                  "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic2-enterprise-advanced",
+                "configuration": "Mavic 2 Enterprise Advanced; distinct from Enterprise Dual and Zoom. Aircraft processor, RAM and radio chip models are not disclosed. Ground-controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Accessories",
+                "details": "Optional RTK module, spotlight, speaker and beacon; these are not part of every aircraft configuration.",
+                "sources": [
+                  "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic2-enterprise-advanced",
+                "configuration": "Mavic 2 Enterprise Advanced; distinct from Enterprise Dual and Zoom. Aircraft processor, RAM and radio chip models are not disclosed. Ground-controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Pilot application",
+                "details": "DJI Pilot on Android; Assistant 2 supports firmware maintenance.",
+                "sources": [
+                  "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic2-enterprise-advanced",
+                "configuration": "Mavic 2 Enterprise Advanced; distinct from Enterprise Dual and Zoom. Aircraft processor, RAM and radio chip models are not disclosed. Ground-controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -43534,13 +43960,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -71153,13 +71573,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "inspired-if1200-current",
+            "configuration": "Current IF1200/IF1200A technical guide reviewed November 2026; earlier builds can differ. The fetched guide lists Cube Orange+, despite older indexed copies naming Blue H7. Exact chip, memory, radio module and battery voltage are not established here.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flight management",
+                "details": "CubePilot Cube Orange+ flight controller in the current manufacturer technical guide.",
+                "sources": [
+                  "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if1200-current",
+                "configuration": "Current IF1200/IF1200A technical guide reviewed November 2026; earlier builds can differ. The fetched guide lists Cube Orange+, despite older indexed copies naming Blue H7. Exact chip, memory, radio module and battery voltage are not established here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -71173,23 +71612,77 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation receivers",
+                "details": "Dual CubePilot Here3 M8P GNSS/compass units.",
+                "sources": [
+                  "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if1200-current",
+                "configuration": "Current IF1200/IF1200A technical guide reviewed November 2026; earlier builds can differ. The fetched guide lists Cube Orange+, despite older indexed copies naming Blue H7. Exact chip, memory, radio module and battery voltage are not established here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and airframe",
+                "details": "Two 16 Ah batteries comprise the supplied set; six-rotor aircraft, 24.9 kg maximum takeoff mass. Do not infer battery wiring or voltage from capacity alone.",
+                "sources": [
+                  "https://shop.inspiredflight.com/products/if1200a-battery-set",
+                  "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications",
+                  "https://shop.inspiredflight.com/products/if1200a-heavy-lift"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if1200-current",
+                "configuration": "Current IF1200/IF1200A technical guide reviewed November 2026; earlier builds can differ. The fetched guide lists Cube Orange+, despite older indexed copies naming Blue H7. Exact chip, memory, radio module and battery voltage are not established here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload connections",
+                "details": "IF1200A Universal Payload Interface 2.1 or 3.0; 5 V, 12/15 V and 18 V rails. Match the installed interface revision.",
+                "sources": [
+                  "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if1200-current",
+                "configuration": "Current IF1200/IF1200A technical guide reviewed November 2026; earlier builds can differ. The fetched guide lists Cube Orange+, despite older indexed copies naming Blue H7. Exact chip, memory, radio module and battery voltage are not established here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight modes",
+                "details": "Position hold, loiter, waypoint missions, return-to-launch, landing and altitude hold are documented.",
+                "sources": [
+                  "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if1200-current",
+                "configuration": "Current IF1200/IF1200A technical guide reviewed November 2026; earlier builds can differ. The fetched guide lists Cube Orange+, despite older indexed copies naming Blue H7. Exact chip, memory, radio module and battery voltage are not established here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -71221,13 +71714,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "radios"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -71263,13 +71751,34 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "inspired-if800-documented",
+            "configuration": "IF800 documents describe different component fits: the current technical guide lists Cube Orange+, while the store and December 2023 specification list Cube Blue H7. Verify the actual build; RAM/storage and radio silicon are unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flight-controller variants",
+                "details": "CubePilot Cube Orange+ in the current technical guide; Cube Blue H7 in the store and December 2023 specification. These are alternative documented fits, not two simultaneous controllers.",
+                "sources": [
+                  "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if800-tomcat/if800-tomcat-overview/if800-specifications",
+                  "https://shop.inspiredflight.com/products/if800-tomcat",
+                  "https://assetserver.net/_assets/inspired%20flight/pdf/102830-spec.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if800-documented",
+                "configuration": "IF800 documents describe different component fits: the current technical guide lists Cube Orange+, while the store and December 2023 specification list Cube Blue H7. Verify the actual build; RAM/storage and radio silicon are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -71278,28 +71787,97 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "December 2023 link options",
+                "details": "HereLink Blue point-to-point LTE or Vision 2 with Doodle Labs Mini-OEM, both listed at 2.4 GHz. This is configuration-specific; point-to-point LTE is not evidence of a cellular subscription.",
+                "sources": [
+                  "https://assetserver.net/_assets/inspired%20flight/pdf/102830-spec.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if800-documented",
+                "configuration": "IF800 documents describe different component fits: the current technical guide lists Cube Orange+, while the store and December 2023 specification list Cube Blue H7. Verify the actual build; RAM/storage and radio silicon are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Dual Here4 GNSS/compass modules and downward LightWare SF000/B rangefinder; built-in FPV camera.",
+                "sources": [
+                  "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if800-tomcat/if800-tomcat-overview/if800-specifications",
+                  "https://shop.inspiredflight.com/products/if800-tomcat"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if800-documented",
+                "configuration": "IF800 documents describe different component fits: the current technical guide lists Cube Orange+, while the store and December 2023 specification list Cube Blue H7. Verify the actual build; RAM/storage and radio silicon are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Dual intelligent batteries",
+                "details": "Two IB388 packs; December 2023 sheet rates each at 22.8 V, 17 Ah, 387.6 Wh. BMS monitoring and hot swapping are documented; NFC battery-status reading uses PilotGO.",
+                "sources": [
+                  "https://assetserver.net/_assets/inspired%20flight/pdf/102830-spec.pdf",
+                  "https://shop.inspiredflight.com/products/if800-tomcat"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if800-documented",
+                "configuration": "IF800 documents describe different component fits: the current technical guide lists Cube Orange+, while the store and December 2023 specification list Cube Blue H7. Verify the actual build; RAM/storage and radio silicon are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload revisions",
+                "details": "Current guide: Pixhawk Payload Bus, 12 V/2 A. The 2023 sheet separately lists Ethernet, two serial links, SBus, PWM and multiple power rails; connector revision must be checked.",
+                "sources": [
+                  "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if800-tomcat/if800-tomcat-overview/if800-specifications",
+                  "https://assetserver.net/_assets/inspired%20flight/pdf/102830-spec.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if800-documented",
+                "configuration": "IF800 documents describe different component fits: the current technical guide lists Cube Orange+, while the store and December 2023 specification list Cube Blue H7. Verify the actual build; RAM/storage and radio silicon are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control stack",
+                "details": "ArduPilot Copter onboard; Inspired Ground Control derives from QGroundControl.",
+                "sources": [
+                  "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if800-tomcat/if800-tomcat-overview/if800-specifications",
+                  "https://shop.inspiredflight.com/products/if800-tomcat"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inspired-if800-documented",
+                "configuration": "IF800 documents describe different component fits: the current technical guide lists Cube Orange+, while the store and December 2023 specification list Cube Blue H7. Verify the actual build; RAM/storage and radio silicon are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -71331,13 +71909,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -101000,13 +101572,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "skyfront-perimeter8",
+            "configuration": "Manufacturer hybrid configuration. CPU, RAM, storage and sensor SKUs are undisclosed; payload and radio options vary.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Autopilot architecture",
+                "details": "Pixhawk/PX4-derived; exact board unspecified.",
+                "sources": [
+                  "https://skyfront.com/perimeter-8"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skyfront-perimeter8",
+                "configuration": "Manufacturer hybrid configuration. CPU, RAM, storage and sensor SKUs are undisclosed; payload and radio options vary.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -101015,8 +101606,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Selectable links",
+                "details": "433 MHz–5.8 GHz options from Silvus, Doodle Labs, Persistent Systems or RFD; not all bands on every unit.",
+                "sources": [
+                  "https://skyfront.com/perimeter-8"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skyfront-perimeter8",
+                "configuration": "Manufacturer hybrid configuration. CPU, RAM, storage and sensor SKUs are undisclosed; payload and radio options vary.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -101025,18 +101629,57 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Hybrid propulsion",
+                "details": "Fuel-injected gasoline-electric power with LiPo reserve. 7.5 kg maximum payload; 23 kg maximum takeoff mass.",
+                "sources": [
+                  "https://skyfront.com/perimeter-8"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skyfront-perimeter8",
+                "configuration": "Manufacturer hybrid configuration. CPU, RAM, storage and sensor SKUs are undisclosed; payload and radio options vary.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload bay",
+                "details": "Configurable imaging, thermal or LiDAR payloads; none universally installed.",
+                "sources": [
+                  "https://skyfront.com/perimeter-8"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skyfront-perimeter8",
+                "configuration": "Manufacturer hybrid configuration. CPU, RAM, storage and sensor SKUs are undisclosed; payload and radio options vary.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground station",
+                "details": "SkyfrontGCS derives from QGroundControl; Windows computer is external.",
+                "sources": [
+                  "https://skyfront.com/perimeter-8"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skyfront-perimeter8",
+                "configuration": "Manufacturer hybrid configuration. CPU, RAM, storage and sensor SKUs are undisclosed; payload and radio options vary.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -101050,13 +101693,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -269711,6 +270349,555 @@
             ]
           }
         ]
+      },
+      {
+        "id": "inspired-if800-documented",
+        "manufacturer": "Inspired Flight",
+        "models": [
+          "IF800",
+          "IF800 TOMCAT"
+        ],
+        "configuration": "IF800 documents describe different component fits: the current technical guide lists Cube Orange+, while the store and December 2023 specification list Cube Blue H7. Verify the actual build; RAM/storage and radio silicon are unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight-controller variants",
+            "details": "CubePilot Cube Orange+ in the current technical guide; Cube Blue H7 in the store and December 2023 specification. These are alternative documented fits, not two simultaneous controllers.",
+            "sources": [
+              "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if800-tomcat/if800-tomcat-overview/if800-specifications",
+              "https://shop.inspiredflight.com/products/if800-tomcat",
+              "https://assetserver.net/_assets/inspired%20flight/pdf/102830-spec.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Dual Here4 GNSS/compass modules and downward LightWare SF000/B rangefinder; built-in FPV camera.",
+            "sources": [
+              "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if800-tomcat/if800-tomcat-overview/if800-specifications",
+              "https://shop.inspiredflight.com/products/if800-tomcat"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Dual intelligent batteries",
+            "details": "Two IB388 packs; December 2023 sheet rates each at 22.8 V, 17 Ah, 387.6 Wh. BMS monitoring and hot swapping are documented; NFC battery-status reading uses PilotGO.",
+            "sources": [
+              "https://assetserver.net/_assets/inspired%20flight/pdf/102830-spec.pdf",
+              "https://shop.inspiredflight.com/products/if800-tomcat"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "December 2023 link options",
+            "details": "HereLink Blue point-to-point LTE or Vision 2 with Doodle Labs Mini-OEM, both listed at 2.4 GHz. This is configuration-specific; point-to-point LTE is not evidence of a cellular subscription.",
+            "sources": [
+              "https://assetserver.net/_assets/inspired%20flight/pdf/102830-spec.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload revisions",
+            "details": "Current guide: Pixhawk Payload Bus, 12 V/2 A. The 2023 sheet separately lists Ethernet, two serial links, SBus, PWM and multiple power rails; connector revision must be checked.",
+            "sources": [
+              "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if800-tomcat/if800-tomcat-overview/if800-specifications",
+              "https://assetserver.net/_assets/inspired%20flight/pdf/102830-spec.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control stack",
+            "details": "ArduPilot Copter onboard; Inspired Ground Control derives from QGroundControl.",
+            "sources": [
+              "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if800-tomcat/if800-tomcat-overview/if800-specifications",
+              "https://shop.inspiredflight.com/products/if800-tomcat"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inspired-if1200-current",
+        "manufacturer": "Inspired Flight",
+        "models": [
+          "IF1200A",
+          "IF1200"
+        ],
+        "configuration": "Current IF1200/IF1200A technical guide reviewed November 2026; earlier builds can differ. The fetched guide lists Cube Orange+, despite older indexed copies naming Blue H7. Exact chip, memory, radio module and battery voltage are not established here.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight management",
+            "details": "CubePilot Cube Orange+ flight controller in the current manufacturer technical guide.",
+            "sources": [
+              "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation receivers",
+            "details": "Dual CubePilot Here3 M8P GNSS/compass units.",
+            "sources": [
+              "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and airframe",
+            "details": "Two 16 Ah batteries comprise the supplied set; six-rotor aircraft, 24.9 kg maximum takeoff mass. Do not infer battery wiring or voltage from capacity alone.",
+            "sources": [
+              "https://shop.inspiredflight.com/products/if1200a-battery-set",
+              "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications",
+              "https://shop.inspiredflight.com/products/if1200a-heavy-lift"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload connections",
+            "details": "IF1200A Universal Payload Interface 2.1 or 3.0; 5 V, 12/15 V and 18 V rails. Match the installed interface revision.",
+            "sources": [
+              "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight modes",
+            "details": "Position hold, loiter, waypoint missions, return-to-launch, landing and altitude hold are documented.",
+            "sources": [
+              "https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/about-the-if1200/interfaces-and-specs/if1200-specifications"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "acsl-soten-v38",
+        "manufacturer": "ACSL",
+        "models": [
+          "SOTEN"
+        ],
+        "configuration": "SOTEN manual 3.8-US1, April 2026. Includes L14 non-LTE and L22 LTE variants and Japan-only options; regional approval differs. CPU, RAM, storage chips and radio module SKUs are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Aircraft links",
+            "details": "2.4 GHz command/telemetry/video link explicitly is not Wi-Fi. Bluetooth 4.0/5.0 carries Remote ID. Cellular modem is optional on LTE models.",
+            "sources": [
+              "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and obstacle sensing",
+            "details": "GPS/SBAS/QZSS, forward/upward/downward stereo cameras and laser distance sensing; removable camera/gimbal.",
+            "sources": [
+              "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "High-capacity aircraft pack",
+            "details": "BMS-managed lithium-ion: 23.1 V, 4,075 mAh, 94.1 Wh. Four propellers; 2 kg maximum takeoff mass.",
+            "sources": [
+              "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Service and variant connections",
+            "details": "Aircraft USB-C is a service/diagnostic port, not a general payload interface. LTE variants have nano-SIM and LTE antennas.",
+            "sources": [
+              "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground control",
+            "details": "ACSL TAKEOFF receives commands, telemetry and video. Pilot/observer controller roles are supported.",
+            "sources": [
+              "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Remote ID transport",
+            "details": "Manual specifies ASTM F3411-22A broadcast over Bluetooth. Japan-only 920 MHz training radios link controllers, not the aircraft; they are not a universal SOTEN signature.",
+            "sources": [
+              "https://acsl-usa.com/wp-content/uploads/2026/04/SOTEN-Manual_v3.8-US1.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "skyfront-perimeter8",
+        "manufacturer": "Skyfront",
+        "models": [
+          "Perimeter 8"
+        ],
+        "configuration": "Manufacturer hybrid configuration. CPU, RAM, storage and sensor SKUs are undisclosed; payload and radio options vary.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autopilot architecture",
+            "details": "Pixhawk/PX4-derived; exact board unspecified.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hybrid propulsion",
+            "details": "Fuel-injected gasoline-electric power with LiPo reserve. 7.5 kg maximum payload; 23 kg maximum takeoff mass.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Selectable links",
+            "details": "433 MHz–5.8 GHz options from Silvus, Doodle Labs, Persistent Systems or RFD; not all bands on every unit.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload bay",
+            "details": "Configurable imaging, thermal or LiDAR payloads; none universally installed.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground station",
+            "details": "SkyfrontGCS derives from QGroundControl; Windows computer is external.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "skyfront-perimeter8plus",
+        "manufacturer": "Skyfront",
+        "models": [
+          "Perimeter 8+"
+        ],
+        "configuration": "Manufacturer hybrid configuration. CPU, RAM, storage and sensor SKUs are undisclosed; payload and radio options vary.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autopilot architecture",
+            "details": "Pixhawk/PX4-derived; exact board unspecified.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hybrid propulsion",
+            "details": "Fuel-injected gasoline-electric power with LiPo reserve. 10 kg maximum payload; 26 kg maximum takeoff mass.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Selectable links",
+            "details": "433 MHz–5.8 GHz options from Silvus, Doodle Labs, Persistent Systems or RFD; not all bands on every unit.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload bay",
+            "details": "Configurable imaging, thermal or LiDAR payloads; none universally installed.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground station",
+            "details": "SkyfrontGCS derives from QGroundControl; Windows computer is external.",
+            "sources": [
+              "https://skyfront.com/perimeter-8"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-mavic2-enterprise-advanced",
+        "manufacturer": "DJI",
+        "models": [
+          "Mavic 2 Enterprise Advanced",
+          "M2EA"
+        ],
+        "configuration": "Mavic 2 Enterprise Advanced; distinct from Enterprise Dual and Zoom. Aircraft processor, RAM and radio chip models are not disclosed. Ground-controller storage is separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "memory",
+            "component": "Aircraft media storage",
+            "details": "24 GB onboard; microSD expansion up to 128 GB, UHS-I U3 required.",
+            "sources": [
+              "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Control/video link",
+            "details": "OcuSync 2.0: 2.400–2.4835 and 5.725–5.850 GHz, subject to regional limits.",
+            "sources": [
+              "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging and positioning",
+            "details": "48 MP half-inch CMOS plus 640×512/30 Hz uncooled VOx thermal camera, three-axis gimbal, GPS/GLONASS and multidirectional obstacle sensing. RTK is an optional module.",
+            "sources": [
+              "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft battery",
+            "details": "15.4 V, 3,850 mAh, 59.29 Wh LiPo with self-heating; four-rotor folding airframe.",
+            "sources": [
+              "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Accessories",
+            "details": "Optional RTK module, spotlight, speaker and beacon; these are not part of every aircraft configuration.",
+            "sources": [
+              "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Pilot application",
+            "details": "DJI Pilot on Android; Assistant 2 supports firmware maintenance.",
+            "sources": [
+              "https://www.dji.com/us/support/product/mavic-2-enterprise-advanced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-agras-t40-2022",
+        "manufacturer": "DJI",
+        "models": [
+          "Agras T40",
+          "T40"
+        ],
+        "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Aircraft propulsion",
+            "details": "Eight 54-inch rotors; 4,000 W motors. BAX601 Li-ion pack: 52.22 V, 30 Ah, 1567 Wh.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and obstacle sensing",
+            "details": "RTK/GNSS, binocular vision and RD2484R/RD2484B radars at 24.05–24.25 GHz.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft link",
+            "details": "2.400–2.4835 and 5.725–5.850 GHz; regional restrictions apply.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spraying assembly",
+            "details": "40 L tank, two LX8060SZ atomizers and magnetic-drive impeller pumps.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-agras-t20p-2022",
+        "manufacturer": "DJI",
+        "models": [
+          "Agras T20P",
+          "T20P"
+        ],
+        "configuration": "December 2022 manual configuration. Aircraft CPU/RAM undisclosed; the advertised eight-core CPU belongs to the remote controller.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Aircraft propulsion",
+            "details": "Four 54-inch rotors; 4,000 W motors. BAX601 Li-ion pack: 52.22 V, 13 Ah, 679 Wh.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and obstacle sensing",
+            "details": "RTK/GNSS, binocular vision and RD2484R/RD2484B radars at 24.05–24.25 GHz.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft link",
+            "details": "2.400–2.4835 and 5.725–5.850 GHz; regional restrictions apply.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spraying assembly",
+            "details": "20 L tank, two LX8060SZ atomizers and magnetic-drive impeller pumps.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t40_t20p/20221212/T40_T20P_User_Manual_v1.2_EN.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-matrice-3d",
+        "manufacturer": "DJI",
+        "models": [
+          "M3D",
+          "Matrice 3D"
+        ],
+        "configuration": "Matrice 3D aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera payload",
+            "details": "20 MP 4/3 CMOS wide camera with mechanical shutter; 12 MP half-inch tele camera.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Integrated RTK, GNSS and omnidirectional binocular vision.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-2"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft transmission",
+            "details": "O3 Enterprise: regional 2.4, 5.1 and 5.8 GHz bands; four antennas, 2T4R.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording media",
+            "details": "U3/Class10/V30 microSD; no RAM specification.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft powertrain",
+            "details": "4S Li-ion, 14.76 V, 7,811 mAh, 115.2 Wh; 2607 motors and 1149 propellers.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-2"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operations",
+            "details": "FlightHub 2 via Dock 2; RC Pro Enterprise supports manual control.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-matrice-3td",
+        "manufacturer": "DJI",
+        "models": [
+          "M3TD",
+          "Matrice 3TD"
+        ],
+        "configuration": "Matrice 3TD aircraft for Dock 2, August 2025 manual. Dock electronics and backup battery are separate. Aircraft CPU/RAM are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera payload",
+            "details": "48 MP 1/1.32-inch CMOS wide camera, 12 MP half-inch tele camera and uncooled VOx thermal imager.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Integrated RTK, GNSS and omnidirectional binocular vision.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-2"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft transmission",
+            "details": "O3 Enterprise: regional 2.4, 5.1 and 5.8 GHz bands; four antennas, 2T4R.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording media",
+            "details": "U3/Class10/V30 microSD; no RAM specification.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_2/User_Manual/20250828/DJI_Dock_2_User_Manual_V2.03_en.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft powertrain",
+            "details": "4S Li-ion, 14.76 V, 7,811 mAh, 115.2 Wh; 2607 motors and 1149 propellers.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-2"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operations",
+            "details": "FlightHub 2 via Dock 2; RC Pro Enterprise supports manual control.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-2"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -269727,8 +270914,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 223,
-    "devices_with_system_profiles": 221,
-    "devices_with_documented_compute": 108
+    "system_profiles": 233,
+    "devices_with_system_profiles": 230,
+    "devices_with_documented_compute": 111
   }
 }

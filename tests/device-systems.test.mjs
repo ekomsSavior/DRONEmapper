@@ -395,3 +395,27 @@ test('research robots keep onboard compute, external equipment and generations d
  assert.deepEqual(profileIds(system('Cobalt AI','Cobalt Robot')),['cobalt-security-2020']);
  assert.equal(system('Cobalt AI','Cobalt Robot').sections.radios.status,'not-established');
 });
+
+test('aircraft variants preserve controllers, radio roles and payload differences',()=>{
+ const if800=system('Inspired Flight','IF800');
+ assert.match(text(if800.sections.compute),/alternative documented fits/);
+ assert.match(text(if800.sections.compute),/Orange\+/);
+ assert.match(text(system('ACSL','SOTEN').sections.radios),/not Wi-Fi/);
+ assert.match(text(system('ACSL','SOTEN').sections.identification),/link controllers, not the aircraft/);
+ assert.equal(system('ACSL','SOTEN').sections.compute.status,'not-established');
+ assert.match(text(system('Skyfront','Perimeter 8').sections.power),/7.5 kg/);
+ assert.doesNotMatch(text(system('Skyfront','Perimeter 8').sections.power),/10 kg/);
+ assert.match(text(system('Skyfront','Perimeter 8+').sections.power),/10 kg/);
+ assert.match(text(system('DJI','Mavic 2 Enterprise Advanced').sections.memory),/24 GB/);
+ assert.doesNotMatch(text(system('DJI','Mavic 2 Enterprise Advanced').sections.memory),/16GB|16 GB/);
+ const t40=system('DJI','Agras T40'),t20=system('DJI','Agras T20P');
+ assert.match(text(t40.sections.power),/Eight.*30 Ah/);
+ assert.match(text(t20.sections.power),/Four.*13 Ah/);
+ assert.equal(t40.sections.compute.status,'not-established');
+ assert.match(text(t40.configurations),/CPU belongs to the remote controller/);
+ const m3d=system('DJI','M3D'),m3td=system('DJI','M3TD');
+ assert.match(text(m3d.sections.sensors),/mechanical shutter/);
+ assert.doesNotMatch(text(m3d.sections.sensors),/thermal imager/);
+ assert.match(text(m3td.sections.sensors),/thermal imager/);
+ assert.doesNotMatch(text(m3d.sections.power),/12 Ah|Lead-acid/);
+});
