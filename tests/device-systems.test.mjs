@@ -235,3 +235,25 @@ test('industrial controllers and service-robot variants retain hardware boundari
  assert.match(text(system('OTTO Motors','OTTO 1500').sections.power),/Battery revisions/);
  assert.equal(system('Locus Robotics','Locus Origin').sections.compute.status,'not-established');
 });
+
+
+test('DJI industrial airframes keep camera, battery and controller variants distinct',()=>{
+ const m30=system('DJI','M30'),m30t=system('DJI','M30T');
+ assert.doesNotMatch(text(m30.sections.sensors),/VOx/);
+ assert.match(text(m30t.sections.sensors),/640×512/);
+ assert.equal(profileIds(system('DJI','M30 Dock version')).length,0);
+ assert.match(text(system('DJI','M3T').sections.sensors),/12 μm/);
+ assert.doesNotMatch(text(system('DJI','M3T').sections.sensors),/8 μm/);
+ assert.match(text(system('DJI','M3TA').sections.sensors),/8 μm/);
+ assert.doesNotMatch(text(system('DJI','M3E').sections.sensors),/VOx/);
+ assert.match(text(system('DJI','Mavic 4 Pro (64 GB)').sections.memory),/42 GB/);
+ assert.doesNotMatch(text(system('DJI','Mavic 4 Pro (64 GB)').sections.memory),/460 GB/);
+ assert.match(text(system('DJI','Mavic 4 Pro (512 GB)').sections.memory),/460 GB/);
+ assert.doesNotMatch(text(system('DJI','Matrice 4D').sections.sensors),/VOx/);
+ assert.match(text(system('DJI','Matrice 4TD').sections.sensors),/VOx/);
+ assert.match(text(system('DJI','Matrice 400').sections.memory),/do not describe the aircraft/);
+ assert.equal(system('DJI','Mini 5 Pro').sections.compute.facts.length,0);
+ assert.match(text(system('DJI','Agras T25').sections.power),/DB800/);
+ assert.doesNotMatch(text(system('DJI','Agras T25').sections.power),/DB1560/);
+ assert.equal(profileIds(system('DJI','Agras T50 & T25')).length,2);
+});

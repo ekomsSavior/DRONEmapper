@@ -30792,8 +30792,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-t100",
+            "configuration": "Agras T100. Single-battery spraying, dual-battery spraying and lifting are distinct configurations. Aircraft CPU/RAM and control-link silicon remain undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -30812,18 +30818,81 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Safety System 3.0",
+                "details": "LiDAR, front/down/rear millimeter-wave radar, four-eye vision and FPV camera; RTK positioning.",
+                "sources": [
+                  "https://ag.dji.com/t100/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t100",
+                "configuration": "Agras T100. Single-battery spraying, dual-battery spraying and lifting are distinct configurations. Aircraft CPU/RAM and control-link silicon remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "DB2160 or DB2212: 41 Ah / 52 V. Dual-battery configuration has separate load limits.",
+                "sources": [
+                  "https://ag.dji.com/t100/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t100",
+                "configuration": "Agras T100. Single-battery spraying, dual-battery spraying and lifting are distinct configurations. Aircraft CPU/RAM and control-link silicon remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion",
+                "details": "62-inch composite propellers; 155×16 mm motor stators, 60 rpm/V.",
+                "sources": [
+                  "https://ag.dji.com/t100/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t100",
+                "configuration": "Agras T100. Single-battery spraying, dual-battery spraying and lifting are distinct configurations. Aircraft CPU/RAM and control-link silicon remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Spraying",
+                "details": "100 L tank; two magnetic-drive impeller pumps; two standard or four optional nozzles. Dual-battery spraying payload is 90 kg.",
+                "sources": [
+                  "https://ag.dji.com/t100/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t100",
+                "configuration": "Agras T100. Single-battery spraying, dual-battery spraying and lifting are distinct configurations. Aircraft CPU/RAM and control-link silicon remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Other attachments",
+                "details": "150 L centrifugal-disc spreader with screw feed; separate lifting configuration. Single-battery lifting rated 100 kg, dual-battery lifting 80 kg.",
+                "sources": [
+                  "https://ag.dji.com/t100/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t100",
+                "configuration": "Agras T100. Single-battery spraying, dual-battery spraying and lifting are distinct configurations. Aircraft CPU/RAM and control-link silicon remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -30863,9 +30932,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -31513,8 +31579,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-t30",
+            "configuration": "Agras T30 agricultural aircraft; T10, T25 and T40 specifications are separate. Aircraft CPU/RAM are not specified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -31528,23 +31600,87 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "OcuSync Industry Edition",
+                "details": "2.4000–2.4835 / 5.725–5.850 GHz, subject to region. These are distinct from the 24 GHz obstacle radars.",
+                "sources": [
+                  "https://www.dji.com/t30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t30",
+                "configuration": "Agras T30 agricultural aircraft; T10, T25 and T40 specifications are separate. Aircraft CPU/RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Radar and video",
+                "details": "RD2424R horizontal omnidirectional and RD2414U upward radar, both at 24.05–24.25 GHz; front/rear 1280×720 FPV cameras.",
+                "sources": [
+                  "https://www.dji.com/t30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t30",
+                "configuration": "Agras T30 agricultural aircraft; T10, T25 and T40 specifications are separate. Aircraft CPU/RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "RTK multi-band GNSS, including GPS, GLONASS, BeiDou and Galileo.",
+                "sources": [
+                  "https://www.dji.com/t30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t30",
+                "configuration": "Agras T30 agricultural aircraft; T10, T25 and T40 specifications are separate. Aircraft CPU/RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and drive",
+                "details": "29 Ah / 51.8 V battery; 38×20-inch propellers, 3.6 kW motors and ESCs rated for 60 A continuous current.",
+                "sources": [
+                  "https://www.dji.com/t30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t30",
+                "configuration": "Agras T30 agricultural aircraft; T10, T25 and T40 specifications are separate. Aircraft CPU/RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Spray hardware",
+                "details": "30 L tank, 16 nozzles, plunger pump and liquid flowmeter.",
+                "sources": [
+                  "https://www.dji.com/t30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t30",
+                "configuration": "Agras T30 agricultural aircraft; T10, T25 and T40 specifications are separate. Aircraft CPU/RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -31583,10 +31719,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -31994,8 +32126,19 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-t25",
+            "configuration": "Agras T25 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "dji-t50",
+            "configuration": "Agras T50 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -32009,23 +32152,171 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Controller link",
+                "details": "RM700B control link at 2.4000–2.4835 / 5.725–5.850 GHz, region-dependent. Controller Wi-Fi/Bluetooth are separate interfaces.",
+                "sources": [
+                  "https://ag.dji.com/t25/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t25",
+                "configuration": "Agras T25 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Controller link",
+                "details": "RM700B control link at 2.4000–2.4835 / 5.725–5.850 GHz, region-dependent. Controller Wi-Fi/Bluetooth are separate interfaces.",
+                "sources": [
+                  "https://www.dji.com/support/product/t50"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t50",
+                "configuration": "Agras T50 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Terrain and obstacles",
+                "details": "RD241608RF front and RD241608RB rear phased-array radar with binocular vision.",
+                "sources": [
+                  "https://ag.dji.com/t25/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t25",
+                "configuration": "Agras T25 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "RTK and multi-constellation GNSS; satellite signals are receive-only positioning inputs.",
+                "sources": [
+                  "https://ag.dji.com/t25/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t25",
+                "configuration": "Agras T25 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Terrain and obstacles",
+                "details": "RD241608RF front and RD241608RB rear phased-array radar with binocular vision.",
+                "sources": [
+                  "https://www.dji.com/support/product/t50"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t50",
+                "configuration": "Agras T50 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "RTK and multi-constellation GNSS; satellite signals are receive-only positioning inputs.",
+                "sources": [
+                  "https://www.dji.com/support/product/t50"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t50",
+                "configuration": "Agras T50 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "DB800: 15.5 Ah, 52.22 V.",
+                "sources": [
+                  "https://ag.dji.com/t25/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t25",
+                "configuration": "Agras T25 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion",
+                "details": "Four 50-inch propellers; 4600 W motors.",
+                "sources": [
+                  "https://ag.dji.com/t25/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t25",
+                "configuration": "Agras T25 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "DB1560: 30 Ah, 52.22 V.",
+                "sources": [
+                  "https://www.dji.com/support/product/t50"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t50",
+                "configuration": "Agras T50 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion",
+                "details": "Eight 54-inch propellers; 4000 W motors.",
+                "sources": [
+                  "https://www.dji.com/support/product/t50"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t50",
+                "configuration": "Agras T50 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Spraying assembly",
+                "details": "20 L / 20 kg tank/payload; two LX8060SZ atomizers with magnetic-drive impeller pumps. Optional four-nozzle configuration.",
+                "sources": [
+                  "https://ag.dji.com/t25/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t25",
+                "configuration": "Agras T25 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Spraying assembly",
+                "details": "40 L / 40 kg tank/payload; two LX8060SZ atomizers with magnetic-drive impeller pumps. Optional four-nozzle configuration.",
+                "sources": [
+                  "https://www.dji.com/support/product/t50"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t50",
+                "configuration": "Agras T50 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -32064,10 +32355,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -32234,8 +32521,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-t70p",
+            "configuration": "Agras T70P with DB1580 or DB2160 pack. Payload limits vary with battery and attachment; T70 and T100 are separate. CPU/RAM and aircraft control-link silicon are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -32254,18 +32547,81 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Avoidance",
+                "details": "Front and rear millimeter-wave radar plus three-eye vision; RTK positioning.",
+                "sources": [
+                  "https://ag.dji.com/t70p/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t70p",
+                "configuration": "Agras T70P with DB1580 or DB2160 pack. Payload limits vary with battery and attachment; T70 and T100 are separate. CPU/RAM and aircraft control-link silicon are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery choices",
+                "details": "DB1580: 30 Ah / 52 V; DB2160: 41 Ah / 52 V. Use the installed pack and approved configuration.",
+                "sources": [
+                  "https://ag.dji.com/t70p/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t70p",
+                "configuration": "Agras T70P with DB1580 or DB2160 pack. Payload limits vary with battery and attachment; T70 and T100 are separate. CPU/RAM and aircraft control-link silicon are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion",
+                "details": "Four 62-inch composite propellers; 155×22 mm motor stators, 65 rpm/V.",
+                "sources": [
+                  "https://ag.dji.com/t70p/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t70p",
+                "configuration": "Agras T70P with DB1580 or DB2160 pack. Payload limits vary with battery and attachment; T70 and T100 are separate. CPU/RAM and aircraft control-link silicon are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Spray and spread equipment",
+                "details": "70 L tank, two magnetic-drive pumps, two standard or four optional nozzles. Separate 100 L screw-fed spreading hopper.",
+                "sources": [
+                  "https://ag.dji.com/t70p/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t70p",
+                "configuration": "Agras T70P with DB1580 or DB2160 pack. Payload limits vary with battery and attachment; T70 and T100 are separate. CPU/RAM and aircraft control-link silicon are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Lifting option",
+                "details": "65 kg rated lifting configuration with standard 10 m cable, subject to operating restrictions.",
+                "sources": [
+                  "https://ag.dji.com/t70p/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-t70p",
+                "configuration": "Agras T70P with DB1580 or DB2160 pack. Payload limits vary with battery and attachment; T70 and T100 are separate. CPU/RAM and aircraft control-link silicon are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -32305,9 +32661,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -35121,13 +35474,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-flycart30",
+            "configuration": "FlyCart 30, with optional winch distinguished from cargo-box configuration. Aircraft processor, RAM and RF silicon undisclosed; FlyCart 100 is separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Industrial flight controller",
+                "details": "Controller integrates IMU, barometer, compass and GNSS/RTK navigation modules; processor SKU is not named.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_FlyCart_30/20250709/DJI_FlyCart_30_User_Manual_v1.1_0709.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart30",
+                "configuration": "FlyCart 30, with optional winch distinguished from cargo-box configuration. Aircraft processor, RAM and RF silicon undisclosed; FlyCart 100 is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -35136,28 +35508,106 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 link",
+                "details": "Two OcuSync transmission antennas; RC Plus connection uses regional 2.4/5.8 GHz bands.",
+                "sources": [
+                  "https://www.dji.com/flycart-30/specs",
+                  "https://dl.djicdn.com/downloads/DJI_FlyCart_30/20250709/DJI_FlyCart_30_User_Manual_v1.1_0709.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart30",
+                "configuration": "FlyCart 30, with optional winch distinguished from cargo-box configuration. Aircraft processor, RAM and RF silicon undisclosed; FlyCart 100 is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "Front/rear phased-array radars, binocular vision and FPV gimbal camera; dual RTK antennas.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_FlyCart_30/20250709/DJI_FlyCart_30_User_Manual_v1.1_0709.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart30",
+                "configuration": "FlyCart 30, with optional winch distinguished from cargo-box configuration. Aircraft processor, RAM and RF silicon undisclosed; FlyCart 100 is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Redundant battery system",
+                "details": "Two DB2000 packs, each 38 Ah, 52.22 V, 1984.4 Wh. Published payload is 30 kg with two packs or 40 kg with one.",
+                "sources": [
+                  "https://www.dji.com/flycart-30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart30",
+                "configuration": "FlyCart 30, with optional winch distinguished from cargo-box configuration. Aircraft processor, RAM and RF silicon undisclosed; FlyCart 100 is separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion",
+                "details": "Eight 54-inch propellers; motors rated 4000 W each.",
+                "sources": [
+                  "https://www.dji.com/flycart-30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart30",
+                "configuration": "FlyCart 30, with optional winch distinguished from cargo-box configuration. Aircraft processor, RAM and RF silicon undisclosed; FlyCart 100 is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cargo and recovery",
+                "details": "Weighing cargo box; optional 20 m winch. Parachute has an independent battery that remains powered after mainboard shutdown.",
+                "sources": [
+                  "https://www.dji.com/flycart-30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart30",
+                "configuration": "FlyCart 30, with optional winch distinguished from cargo-box configuration. Aircraft processor, RAM and RF silicon undisclosed; FlyCart 100 is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight operations",
+                "details": "DJI Pilot 2 and DeliveryHub.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_FlyCart_30/20250709/DJI_FlyCart_30_User_Manual_v1.1_0709.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart30",
+                "configuration": "FlyCart 30, with optional winch distinguished from cargo-box configuration. Aircraft processor, RAM and RF silicon undisclosed; FlyCart 100 is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -35189,13 +35639,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -35987,8 +36431,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-m30",
+            "configuration": "M30 standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -36002,28 +36452,106 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 Enterprise",
+                "details": "2.4000–2.4835 / 5.725–5.850 GHz; regional availability varies.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30",
+                "configuration": "M30 standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging and ranging",
+                "details": "12 MP wide and 48 MP zoom cameras; 1080p FPV and 905 nm laser rangefinder.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30",
+                "configuration": "M30 standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation sensors",
+                "details": "Six-direction stereo vision and infrared ranging; dual-antenna RTK and GNSS.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30",
+                "configuration": "M30 standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Paired TB30 batteries",
+                "details": "Two hot-swappable Li-ion 6S packs, each 5880 mAh / 131.6 Wh. No nominal voltage is inferred from the table’s 26.1 V entry.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-30/specs",
+                  "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30",
+                "configuration": "M30 standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Aircraft connections",
+                "details": "USB-C service port, microSD slot and top PSDK port.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30",
+                "configuration": "M30 standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control software",
+                "details": "DJI Pilot 2 with FlightHub 2 support.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30",
+                "configuration": "M30 standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -36056,12 +36584,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -36468,8 +36991,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-m300rtk",
+            "configuration": "Matrice 300 RTK with two TB60 batteries. M350/TB65 and optional Zenmuse payload components are separate. Aircraft CPU and RAM are not specified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -36483,23 +37012,87 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control link",
+                "details": "2.4000–2.4835 and 5.725–5.850 GHz, subject to regional availability.",
+                "sources": [
+                  "https://www.dji.com/support/product/matrice-300"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m300rtk",
+                "configuration": "Matrice 300 RTK with two TB60 batteries. M350/TB65 and optional Zenmuse payload components are separate. Aircraft CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and obstacle sensors",
+                "details": "RTK GNSS using GPS, GLONASS, BeiDou and Galileo; six-direction vision and infrared time-of-flight sensing.",
+                "sources": [
+                  "https://www.dji.com/support/product/matrice-300"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m300rtk",
+                "configuration": "Matrice 300 RTK with two TB60 batteries. M350/TB65 and optional Zenmuse payload components are separate. Aircraft CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Pilot camera",
+                "details": "960p, 30 fps FPV camera with 145° field of view. Mapping and thermal cameras are interchangeable payloads.",
+                "sources": [
+                  "https://www.dji.com/support/product/matrice-300"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m300rtk",
+                "configuration": "Matrice 300 RTK with two TB60 batteries. M350/TB65 and optional Zenmuse payload components are separate. Aircraft CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Dual TB60 packs",
+                "details": "Two 5935 mAh / 274 Wh LiPo 12S batteries. The support table lists 52.8 V without identifying it as nominal; no nominal voltage is inferred here.",
+                "sources": [
+                  "https://www.dji.com/support/product/matrice-300"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m300rtk",
+                "configuration": "Matrice 300 RTK with two TB60 batteries. M350/TB65 and optional Zenmuse payload components are separate. Aircraft CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload mounting",
+                "details": "Supports single or dual downward gimbals, an upward mount and three-gimbal arrangements; 930 g maximum per single gimbal damper.",
+                "sources": [
+                  "https://www.dji.com/support/product/matrice-300"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m300rtk",
+                "configuration": "Matrice 300 RTK with two TB60 batteries. M350/TB65 and optional Zenmuse payload components are separate. Aircraft CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -36538,10 +37131,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -36709,8 +37298,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-m30t",
+            "configuration": "M30T standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -36724,28 +37319,118 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 Enterprise",
+                "details": "2.4000–2.4835 / 5.725–5.850 GHz; regional availability varies.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t",
+                "configuration": "M30T standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging and ranging",
+                "details": "12 MP wide and 48 MP zoom cameras; 1080p FPV and 905 nm laser rangefinder.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t",
+                "configuration": "M30T standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation sensors",
+                "details": "Six-direction stereo vision and infrared ranging; dual-antenna RTK and GNSS.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t",
+                "configuration": "M30T standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Thermal imager",
+                "details": "640×512 uncooled VOx sensor. This module is absent from M30.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-30/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t",
+                "configuration": "M30T standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Paired TB30 batteries",
+                "details": "Two hot-swappable Li-ion 6S packs, each 5880 mAh / 131.6 Wh. No nominal voltage is inferred from the table’s 26.1 V entry.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-30/specs",
+                  "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t",
+                "configuration": "M30T standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Aircraft connections",
+                "details": "USB-C service port, microSD slot and top PSDK port.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t",
+                "configuration": "M30T standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control software",
+                "details": "DJI Pilot 2 with FlightHub 2 support.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t",
+                "configuration": "M30T standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -36778,12 +37463,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -37940,8 +38620,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-m3e",
+            "configuration": "Mavic 3E airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -37950,33 +38636,123 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Image storage",
+                "details": "microSD recording; no built-in media storage.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3e",
+                "configuration": "Mavic 3E airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 Enterprise",
+                "details": "2.4/5.8 GHz; availability varies by region.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3e",
+                "configuration": "Mavic 3E airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera assembly",
+                "details": "20 MP 4/3 CMOS with mechanical shutter; 12 MP telephoto camera.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3e",
+                "configuration": "Mavic 3E airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Obstacle sensors",
+                "details": "Omnidirectional stereo vision plus bottom infrared sensing.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3e",
+                "configuration": "Mavic 3E airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery variants",
+                "details": "Standard 5000 mAh / 77 Wh; EU C1 pack 4230 mAh / 65.15 Wh. Both 15.4 V nominal.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3e",
+                "configuration": "Mavic 3E airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "USB-C and microSD; optional top-mounted RTK module or speaker.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3e",
+                "configuration": "Mavic 3E airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "DJI Pilot 2",
+                "details": "Enterprise controller application; FlightHub 2 cloud connection supported.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3e",
+                "configuration": "Mavic 3E airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -38008,13 +38784,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -38181,8 +38951,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-m3m",
+            "configuration": "Mavic 3 Multispectral. Optical wavelengths below describe camera filters, not RF channels. CPU, GPU and RAM are not specified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -38191,23 +38967,99 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording",
+                "details": "microSD storage; no built-in media storage. Multispectral images use TIFF; RGB images support JPEG/DNG.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-m/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3m",
+                "configuration": "Mavic 3 Multispectral. Optical wavelengths below describe camera filters, not RF channels. CPU, GPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 Enterprise",
+                "details": "2.400–2.4835 / 5.725–5.850 GHz, subject to region.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-m/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3m",
+                "configuration": "Mavic 3 Multispectral. Optical wavelengths below describe camera filters, not RF channels. CPU, GPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "RGB and multispectral cameras",
+                "details": "20 MP 4/3 CMOS with mechanical shutter; four 5 MP 1/2.8-inch CMOS multispectral cameras.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-m/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3m",
+                "configuration": "Mavic 3 Multispectral. Optical wavelengths below describe camera filters, not RF channels. CPU, GPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Spectral filters",
+                "details": "Green 560±16 nm, red 650±16 nm, red-edge 730±16 nm and near-infrared 860±26 nm; onboard light sensor.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-m/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3m",
+                "configuration": "Mavic 3 Multispectral. Optical wavelengths below describe camera filters, not RF channels. CPU, GPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Positioning",
+                "details": "RTK module plus omnidirectional stereo vision and bottom infrared sensing.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-m/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3m",
+                "configuration": "Mavic 3 Multispectral. Optical wavelengths below describe camera filters, not RF channels. CPU, GPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "5000 mAh, 15.4 V, 77 Wh LiPo 4S.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-m/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3m",
+                "configuration": "Mavic 3 Multispectral. Optical wavelengths below describe camera filters, not RF channels. CPU, GPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -38250,10 +39102,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
           "interfaces",
           "software"
         ],
@@ -38422,8 +39270,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-m3t",
+            "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -38432,33 +39286,135 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Image storage",
+                "details": "microSD recording; no built-in media storage.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3t",
+                "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 Enterprise",
+                "details": "2.4/5.8 GHz; availability varies by region.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3t",
+                "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera assembly",
+                "details": "48 MP 1/2-inch CMOS; 12 MP telephoto camera.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3t",
+                "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Obstacle sensors",
+                "details": "Omnidirectional stereo vision plus bottom infrared sensing.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3t",
+                "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Thermal camera",
+                "details": "640×512 VOx, 30 Hz; 12 μm; 61° diagonal field.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3t",
+                "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery variants",
+                "details": "Standard 5000 mAh / 77 Wh; EU C1 pack 4230 mAh / 65.15 Wh. Both 15.4 V nominal.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3t",
+                "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "USB-C and microSD; optional top-mounted RTK module or speaker.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3t",
+                "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "DJI Pilot 2",
+                "details": "Enterprise controller application; FlightHub 2 cloud connection supported.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3t",
+                "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -38490,13 +39446,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -38662,8 +39612,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-m3ta",
+            "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -38672,33 +39628,135 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Image storage",
+                "details": "microSD recording; no built-in media storage.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3ta",
+                "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 Enterprise",
+                "details": "2.4/5.8 GHz; availability varies by region.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3ta",
+                "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera assembly",
+                "details": "48 MP 1/2-inch CMOS; 12 MP telephoto camera.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3ta",
+                "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Obstacle sensors",
+                "details": "Omnidirectional stereo vision plus bottom infrared sensing.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3ta",
+                "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Thermal camera",
+                "details": "640×512 VOx, 30 Hz; 8 μm; 41.2° diagonal field.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3ta",
+                "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery variants",
+                "details": "Standard 5000 mAh / 77 Wh; EU C1 pack 4230 mAh / 65.15 Wh. Both 15.4 V nominal.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3ta",
+                "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "USB-C and microSD; optional top-mounted RTK module or speaker.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3ta",
+                "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "DJI Pilot 2",
+                "details": "Enterprise controller application; FlightHub 2 cloud connection supported.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m3ta",
+                "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -38730,13 +39788,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -39142,38 +40194,135 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-matrice400",
+            "configuration": "Matrice 400 airframe with TB100 battery. Payload, cellular dongles and regional sub-2 GHz equipment are configuration-dependent. Aircraft CPU, GPU and RAM are not publicly identified in these sources.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flight-control architecture",
+                "details": "Redundant sensing feeds the flight controller; ESC commands have a PWM primary path and UART backup. Silicon part number is not disclosed.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/Matrice_400/DJI_Matrice_400_Redundant_Systems_Report.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice400",
+                "configuration": "Matrice 400 airframe with TB100 battery. Payload, cellular dongles and regional sub-2 GHz equipment are configuration-dependent. Aircraft CPU, GPU and RAM are not publicly identified in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Separate controller memory",
+                "details": "RC Plus 2 controller: 8 GB RAM / 128 GB UFS. These capacities do not describe the aircraft.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-400/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice400",
+                "configuration": "Matrice 400 airframe with TB100 battery. Payload, cellular dongles and regional sub-2 GHz equipment are configuration-dependent. Aircraft CPU, GPU and RAM are not publicly identified in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O4 Enterprise Enhanced",
+                "details": "2.4/5.2/5.8 GHz, with 902–928 MHz and 1.430–1.444 GHz options subject to region and fitted equipment. Cellular Dongle 2 supported.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-400/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice400",
+                "configuration": "Matrice 400 airframe with TB100 battery. Payload, cellular dongles and regional sub-2 GHz equipment are configuration-dependent. Aircraft CPU, GPU and RAM are not publicly identified in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Redundant navigation",
+                "details": "Two IMUs, two barometers and dual RTK antennas; multi-constellation GNSS.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/Matrice_400/DJI_Matrice_400_Redundant_Systems_Report.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice400",
+                "configuration": "Matrice 400 airframe with TB100 battery. Payload, cellular dongles and regional sub-2 GHz equipment are configuration-dependent. Aircraft CPU, GPU and RAM are not publicly identified in these sources.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Obstacle and traffic sensing",
+                "details": "Fisheye stereo vision, rotating 905 nm LiDAR, upper LiDAR, lower infrared ranging and six-direction mmWave radar. ADS-B In receives traffic; it is not ADS-B Out.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-400/specs",
+                  "https://dl.djicdn.com/downloads/Matrice_400/DJI_Matrice_400_Redundant_Systems_Report.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice400",
+                "configuration": "Matrice 400 airframe with TB100 battery. Payload, cellular dongles and regional sub-2 GHz equipment are configuration-dependent. Aircraft CPU, GPU and RAM are not publicly identified in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "TB100 and propulsion",
+                "details": "20,254 mAh, 48.23 V, 977 Wh Li-ion 13S battery; model 7510 motors and 25-inch propellers.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-400/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice400",
+                "configuration": "Matrice 400 airframe with TB100 battery. Payload, cellular dongles and regional sub-2 GHz equipment are configuration-dependent. Aircraft CPU, GPU and RAM are not publicly identified in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload connections",
+                "details": "Four E-Port V2 connections, each up to 120 W; USB-C debug port and two cellular-dongle interfaces.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-400/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice400",
+                "configuration": "Matrice 400 airframe with TB100 battery. Payload, cellular dongles and regional sub-2 GHz equipment are configuration-dependent. Aircraft CPU, GPU and RAM are not publicly identified in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -39210,12 +40359,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -39382,8 +40525,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-matrice4d",
+            "configuration": "Matrice 4D airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -39392,33 +40541,123 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording",
+                "details": "U3/V30 microSD cards.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4d",
+                "configuration": "Matrice 4D airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O4+ Enterprise",
+                "details": "2.4/5.2/5.8 GHz subject to region; optional Cellular Dongle 2.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4d",
+                "configuration": "Matrice 4D airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera payload",
+                "details": "20 MP 4/3 CMOS with mechanical shutter; 48 MP medium-tele and 48 MP telephoto cameras.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4d",
+                "configuration": "Matrice 4D airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Position and avoidance",
+                "details": "Integrated RTK; stereo vision, bottom 3D infrared sensor and laser rangefinder.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4d",
+                "configuration": "Matrice 4D airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "6768 mAh, 22.14 V, 149.9 Wh Li-ion 6S.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4d",
+                "configuration": "Matrice 4D airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Dock and expansion",
+                "details": "Dock 3 charging contacts; optional spotlight, speaker and Obstacle Sensing Module.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4d",
+                "configuration": "Matrice 4D airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control path",
+                "details": "Pilot 2 or Dock 3 / FlightHub 2 operation.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4d",
+                "configuration": "Matrice 4D airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -39450,13 +40689,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -40234,8 +41467,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-matrice4td",
+            "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -40244,33 +41483,135 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording",
+                "details": "U3/V30 microSD cards.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4td",
+                "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O4+ Enterprise",
+                "details": "2.4/5.2/5.8 GHz subject to region; optional Cellular Dongle 2.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4td",
+                "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera payload",
+                "details": "48 MP 1/1.3-inch CMOS; 48 MP medium-tele and 48 MP telephoto cameras.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4td",
+                "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Position and avoidance",
+                "details": "Integrated RTK; stereo vision, bottom 3D infrared sensor and laser rangefinder.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4td",
+                "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Infrared components",
+                "details": "640×512 VOx thermal imager, 12 μm pixels; NIR illumination.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4td",
+                "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "6768 mAh, 22.14 V, 149.9 Wh Li-ion 6S.",
+                "sources": [
+                  "https://www.dji.com/support/product/dock-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4td",
+                "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Dock and expansion",
+                "details": "Dock 3 charging contacts; optional spotlight, speaker and Obstacle Sensing Module.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4td",
+                "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control path",
+                "details": "Pilot 2 or Dock 3 / FlightHub 2 operation.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-matrice4td",
+                "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -40302,13 +41643,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -42904,8 +44239,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-mavic4pro-512",
+            "configuration": "Mavic 4 Pro 512 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -42914,23 +44255,87 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording capacity",
+                "details": "512 GB internal, approximately 460 GB usable; microSD expansion.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-512",
+                "configuration": "Mavic 4 Pro 512 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O4+ and wireless",
+                "details": "O4+ at regional 2.4/5.1/5.8 GHz; Wi-Fi 6 and Bluetooth 5.1.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-512",
+                "configuration": "Mavic 4 Pro 512 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Three-camera gimbal",
+                "details": "100 MP 4/3 wide, 48 MP 1/1.3-inch medium-tele and 50 MP 1/1.5-inch telephoto CMOS.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-512",
+                "configuration": "Mavic 4 Pro 512 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Obstacle sensing",
+                "details": "Stereo vision, forward LiDAR and downward infrared ranging.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-512",
+                "configuration": "Mavic 4 Pro 512 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "6654 mAh, 14.32 V, 95.3 Wh Li-ion 4S.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-512",
+                "configuration": "Mavic 4 Pro 512 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -42973,10 +44378,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
           "interfaces",
           "software"
         ],
@@ -43144,8 +44545,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-mavic4pro-64",
+            "configuration": "Mavic 4 Pro 64 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -43154,23 +44561,87 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording capacity",
+                "details": "64 GB internal, approximately 42 GB usable; microSD expansion.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-64",
+                "configuration": "Mavic 4 Pro 64 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O4+ and wireless",
+                "details": "O4+ at regional 2.4/5.1/5.8 GHz; Wi-Fi 6 and Bluetooth 5.1.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-64",
+                "configuration": "Mavic 4 Pro 64 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Three-camera gimbal",
+                "details": "100 MP 4/3 wide, 48 MP 1/1.3-inch medium-tele and 50 MP 1/1.5-inch telephoto CMOS.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-64",
+                "configuration": "Mavic 4 Pro 64 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Obstacle sensing",
+                "details": "Stereo vision, forward LiDAR and downward infrared ranging.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-64",
+                "configuration": "Mavic 4 Pro 64 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "6654 mAh, 14.32 V, 95.3 Wh Li-ion 4S.",
+                "sources": [
+                  "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mavic4pro-64",
+                "configuration": "Mavic 4 Pro 64 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -43213,10 +44684,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
           "interfaces",
           "software"
         ],
@@ -44986,8 +46453,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-mini5pro",
+            "configuration": "Mini 5 Pro with standard or Plus battery, subject to region. Mini 4 Pro components are separate. CPU and RAM are not specified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -44996,28 +46469,105 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Media storage",
+                "details": "42 GB internal plus microSD; exFAT filesystem.",
+                "sources": [
+                  "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mini5pro",
+                "configuration": "Mini 5 Pro with standard or Plus battery, subject to region. Mini 4 Pro components are separate. CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O4+",
+                "details": "2.400–2.4835, 5.170–5.250 and 5.725–5.850 GHz; regional restrictions apply.",
+                "sources": [
+                  "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mini5pro",
+                "configuration": "Mini 5 Pro with standard or Plus battery, subject to region. Mini 4 Pro components are separate. CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera and navigation",
+                "details": "50 MP one-inch CMOS on a three-axis gimbal; GPS, Galileo and BeiDou positioning.",
+                "sources": [
+                  "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mini5pro",
+                "configuration": "Mini 5 Pro with standard or Plus battery, subject to region. Mini 4 Pro components are separate. CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Obstacle sensing",
+                "details": "Omnidirectional stereo vision, forward LiDAR and downward infrared ranging.",
+                "sources": [
+                  "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mini5pro",
+                "configuration": "Mini 5 Pro with standard or Plus battery, subject to region. Mini 4 Pro components are separate. CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery alternatives",
+                "details": "Standard: 2788 mAh, 7 V, 19.52 Wh. Plus: 4680 mAh, 7.16 V, 33.51 Wh. Both lithium-ion; Plus increases aircraft mass.",
+                "sources": [
+                  "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mini5pro",
+                "configuration": "Mini 5 Pro with standard or Plus battery, subject to region. Mini 4 Pro components are separate. CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Imaging output",
+                "details": "JPEG/DNG stills and H.264/H.265 video; slow-motion frame rates differ from playback rates.",
+                "sources": [
+                  "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-mini5pro",
+                "configuration": "Mini 5 Pro with standard or Plus battery, subject to region. Mini 4 Pro components are separate. CPU and RAM are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -45055,11 +46605,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -259714,6 +261259,1180 @@
             ]
           }
         ]
+      },
+      {
+        "id": "dji-matrice400",
+        "manufacturer": "DJI",
+        "models": [
+          "Matrice 400"
+        ],
+        "configuration": "Matrice 400 airframe with TB100 battery. Payload, cellular dongles and regional sub-2 GHz equipment are configuration-dependent. Aircraft CPU, GPU and RAM are not publicly identified in these sources.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight-control architecture",
+            "details": "Redundant sensing feeds the flight controller; ESC commands have a PWM primary path and UART backup. Silicon part number is not disclosed.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/Matrice_400/DJI_Matrice_400_Redundant_Systems_Report.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Redundant navigation",
+            "details": "Two IMUs, two barometers and dual RTK antennas; multi-constellation GNSS.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/Matrice_400/DJI_Matrice_400_Redundant_Systems_Report.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Obstacle and traffic sensing",
+            "details": "Fisheye stereo vision, rotating 905 nm LiDAR, upper LiDAR, lower infrared ranging and six-direction mmWave radar. ADS-B In receives traffic; it is not ADS-B Out.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-400/specs",
+              "https://dl.djicdn.com/downloads/Matrice_400/DJI_Matrice_400_Redundant_Systems_Report.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O4 Enterprise Enhanced",
+            "details": "2.4/5.2/5.8 GHz, with 902–928 MHz and 1.430–1.444 GHz options subject to region and fitted equipment. Cellular Dongle 2 supported.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-400/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "TB100 and propulsion",
+            "details": "20,254 mAh, 48.23 V, 977 Wh Li-ion 13S battery; model 7510 motors and 25-inch propellers.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-400/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload connections",
+            "details": "Four E-Port V2 connections, each up to 120 W; USB-C debug port and two cellular-dongle interfaces.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-400/specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Separate controller memory",
+            "details": "RC Plus 2 controller: 8 GB RAM / 128 GB UFS. These capacities do not describe the aircraft.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-400/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-m300rtk",
+        "manufacturer": "DJI",
+        "models": [
+          "M300 RTK",
+          "Matrice 300 RTK"
+        ],
+        "configuration": "Matrice 300 RTK with two TB60 batteries. M350/TB65 and optional Zenmuse payload components are separate. Aircraft CPU and RAM are not specified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Navigation and obstacle sensors",
+            "details": "RTK GNSS using GPS, GLONASS, BeiDou and Galileo; six-direction vision and infrared time-of-flight sensing.",
+            "sources": [
+              "https://www.dji.com/support/product/matrice-300"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Pilot camera",
+            "details": "960p, 30 fps FPV camera with 145° field of view. Mapping and thermal cameras are interchangeable payloads.",
+            "sources": [
+              "https://www.dji.com/support/product/matrice-300"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Control link",
+            "details": "2.4000–2.4835 and 5.725–5.850 GHz, subject to regional availability.",
+            "sources": [
+              "https://www.dji.com/support/product/matrice-300"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Dual TB60 packs",
+            "details": "Two 5935 mAh / 274 Wh LiPo 12S batteries. The support table lists 52.8 V without identifying it as nominal; no nominal voltage is inferred here.",
+            "sources": [
+              "https://www.dji.com/support/product/matrice-300"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload mounting",
+            "details": "Supports single or dual downward gimbals, an upward mount and three-gimbal arrangements; 930 g maximum per single gimbal damper.",
+            "sources": [
+              "https://www.dji.com/support/product/matrice-300"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-m30",
+        "manufacturer": "DJI",
+        "models": [
+          "M30",
+          "Matrice 30"
+        ],
+        "configuration": "M30 standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Imaging and ranging",
+            "details": "12 MP wide and 48 MP zoom cameras; 1080p FPV and 905 nm laser rangefinder.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-30/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation sensors",
+            "details": "Six-direction stereo vision and infrared ranging; dual-antenna RTK and GNSS.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 Enterprise",
+            "details": "2.4000–2.4835 / 5.725–5.850 GHz; regional availability varies.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-30/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Paired TB30 batteries",
+            "details": "Two hot-swappable Li-ion 6S packs, each 5880 mAh / 131.6 Wh. No nominal voltage is inferred from the table’s 26.1 V entry.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-30/specs",
+              "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Aircraft connections",
+            "details": "USB-C service port, microSD slot and top PSDK port.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control software",
+            "details": "DJI Pilot 2 with FlightHub 2 support.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-m30t",
+        "manufacturer": "DJI",
+        "models": [
+          "M30T",
+          "Matrice 30T"
+        ],
+        "configuration": "M30T standard airframe; Dock variants and region-specific M30T (EU&KR) are not assigned this profile. Aircraft CPU/RAM undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Imaging and ranging",
+            "details": "12 MP wide and 48 MP zoom cameras; 1080p FPV and 905 nm laser rangefinder.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-30/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation sensors",
+            "details": "Six-direction stereo vision and infrared ranging; dual-antenna RTK and GNSS.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 Enterprise",
+            "details": "2.4000–2.4835 / 5.725–5.850 GHz; regional availability varies.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-30/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Paired TB30 batteries",
+            "details": "Two hot-swappable Li-ion 6S packs, each 5880 mAh / 131.6 Wh. No nominal voltage is inferred from the table’s 26.1 V entry.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-30/specs",
+              "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Aircraft connections",
+            "details": "USB-C service port, microSD slot and top PSDK port.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control software",
+            "details": "DJI Pilot 2 with FlightHub 2 support.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/matrice-30-series/20230518UM/Matrice30_Series_User_Manual_v1.4_EN0518.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Thermal imager",
+            "details": "640×512 uncooled VOx sensor. This module is absent from M30.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-30/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-m3e",
+        "manufacturer": "DJI",
+        "models": [
+          "Mavic 3E",
+          "M3E"
+        ],
+        "configuration": "Mavic 3E airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera assembly",
+            "details": "20 MP 4/3 CMOS with mechanical shutter; 12 MP telephoto camera.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Obstacle sensors",
+            "details": "Omnidirectional stereo vision plus bottom infrared sensing.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 Enterprise",
+            "details": "2.4/5.8 GHz; availability varies by region.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Image storage",
+            "details": "microSD recording; no built-in media storage.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery variants",
+            "details": "Standard 5000 mAh / 77 Wh; EU C1 pack 4230 mAh / 65.15 Wh. Both 15.4 V nominal.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "USB-C and microSD; optional top-mounted RTK module or speaker.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "DJI Pilot 2",
+            "details": "Enterprise controller application; FlightHub 2 cloud connection supported.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-m3t",
+        "manufacturer": "DJI",
+        "models": [
+          "Mavic 3T",
+          "M3T"
+        ],
+        "configuration": "Mavic 3T airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera assembly",
+            "details": "48 MP 1/2-inch CMOS; 12 MP telephoto camera.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Obstacle sensors",
+            "details": "Omnidirectional stereo vision plus bottom infrared sensing.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 Enterprise",
+            "details": "2.4/5.8 GHz; availability varies by region.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Image storage",
+            "details": "microSD recording; no built-in media storage.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery variants",
+            "details": "Standard 5000 mAh / 77 Wh; EU C1 pack 4230 mAh / 65.15 Wh. Both 15.4 V nominal.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "USB-C and microSD; optional top-mounted RTK module or speaker.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "DJI Pilot 2",
+            "details": "Enterprise controller application; FlightHub 2 cloud connection supported.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Thermal camera",
+            "details": "640×512 VOx, 30 Hz; 12 μm; 61° diagonal field.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-m3ta",
+        "manufacturer": "DJI",
+        "models": [
+          "Mavic 3TA",
+          "M3TA"
+        ],
+        "configuration": "Mavic 3TA airframe; the 3T and 3TA thermal modules differ. CPU, RAM and silicon radio model undisclosed. Controller storage is separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera assembly",
+            "details": "48 MP 1/2-inch CMOS; 12 MP telephoto camera.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Obstacle sensors",
+            "details": "Omnidirectional stereo vision plus bottom infrared sensing.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 Enterprise",
+            "details": "2.4/5.8 GHz; availability varies by region.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Image storage",
+            "details": "microSD recording; no built-in media storage.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery variants",
+            "details": "Standard 5000 mAh / 77 Wh; EU C1 pack 4230 mAh / 65.15 Wh. Both 15.4 V nominal.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "USB-C and microSD; optional top-mounted RTK module or speaker.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "DJI Pilot 2",
+            "details": "Enterprise controller application; FlightHub 2 cloud connection supported.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Mavic_3_Enterprise/20250916/DJI_Mavic_3_Enterprise_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Thermal camera",
+            "details": "640×512 VOx, 30 Hz; 8 μm; 41.2° diagonal field.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-m3m",
+        "manufacturer": "DJI",
+        "models": [
+          "Mavic 3M",
+          "M3M"
+        ],
+        "configuration": "Mavic 3 Multispectral. Optical wavelengths below describe camera filters, not RF channels. CPU, GPU and RAM are not specified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "RGB and multispectral cameras",
+            "details": "20 MP 4/3 CMOS with mechanical shutter; four 5 MP 1/2.8-inch CMOS multispectral cameras.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-m/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Spectral filters",
+            "details": "Green 560±16 nm, red 650±16 nm, red-edge 730±16 nm and near-infrared 860±26 nm; onboard light sensor.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-m/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Positioning",
+            "details": "RTK module plus omnidirectional stereo vision and bottom infrared sensing.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-m/specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 Enterprise",
+            "details": "2.400–2.4835 / 5.725–5.850 GHz, subject to region.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-m/specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording",
+            "details": "microSD storage; no built-in media storage. Multispectral images use TIFF; RGB images support JPEG/DNG.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-m/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "5000 mAh, 15.4 V, 77 Wh LiPo 4S.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-m/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-matrice4d",
+        "manufacturer": "DJI",
+        "models": [
+          "Matrice 4D"
+        ],
+        "configuration": "Matrice 4D airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera payload",
+            "details": "20 MP 4/3 CMOS with mechanical shutter; 48 MP medium-tele and 48 MP telephoto cameras.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-3"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Position and avoidance",
+            "details": "Integrated RTK; stereo vision, bottom 3D infrared sensor and laser rangefinder.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O4+ Enterprise",
+            "details": "2.4/5.2/5.8 GHz subject to region; optional Cellular Dongle 2.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-3"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording",
+            "details": "U3/V30 microSD cards.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-3"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "6768 mAh, 22.14 V, 149.9 Wh Li-ion 6S.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-3"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Dock and expansion",
+            "details": "Dock 3 charging contacts; optional spotlight, speaker and Obstacle Sensing Module.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control path",
+            "details": "Pilot 2 or Dock 3 / FlightHub 2 operation.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-matrice4td",
+        "manufacturer": "DJI",
+        "models": [
+          "Matrice 4TD"
+        ],
+        "configuration": "Matrice 4TD airframe for Dock 3; not Matrice 4E/4T or Mavic 3D/3TD. CPU and RAM undisclosed. Optional sensing module is not standard.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera payload",
+            "details": "48 MP 1/1.3-inch CMOS; 48 MP medium-tele and 48 MP telephoto cameras.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-3"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Position and avoidance",
+            "details": "Integrated RTK; stereo vision, bottom 3D infrared sensor and laser rangefinder.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O4+ Enterprise",
+            "details": "2.4/5.2/5.8 GHz subject to region; optional Cellular Dongle 2.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-3"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording",
+            "details": "U3/V30 microSD cards.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-3"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "6768 mAh, 22.14 V, 149.9 Wh Li-ion 6S.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-3"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Dock and expansion",
+            "details": "Dock 3 charging contacts; optional spotlight, speaker and Obstacle Sensing Module.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control path",
+            "details": "Pilot 2 or Dock 3 / FlightHub 2 operation.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Dock_3/UM/20251211/DJI_Matrice_4D_Series_User_Manual_DJI_Dock_3_v1.2_en.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Infrared components",
+            "details": "640×512 VOx thermal imager, 12 μm pixels; NIR illumination.",
+            "sources": [
+              "https://www.dji.com/support/product/dock-3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-mavic4pro-64",
+        "manufacturer": "DJI",
+        "models": [
+          "Mavic 4 Pro (64 GB)"
+        ],
+        "configuration": "Mavic 4 Pro 64 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Three-camera gimbal",
+            "details": "100 MP 4/3 wide, 48 MP 1/1.3-inch medium-tele and 50 MP 1/1.5-inch telephoto CMOS.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Obstacle sensing",
+            "details": "Stereo vision, forward LiDAR and downward infrared ranging.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O4+ and wireless",
+            "details": "O4+ at regional 2.4/5.1/5.8 GHz; Wi-Fi 6 and Bluetooth 5.1.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording capacity",
+            "details": "64 GB internal, approximately 42 GB usable; microSD expansion.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "6654 mAh, 14.32 V, 95.3 Wh Li-ion 4S.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-mavic4pro-512",
+        "manufacturer": "DJI",
+        "models": [
+          "Mavic 4 Pro (512 GB)"
+        ],
+        "configuration": "Mavic 4 Pro 512 GB configuration. Aircraft processor and RAM are not specified; RC Pro 2 components are separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Three-camera gimbal",
+            "details": "100 MP 4/3 wide, 48 MP 1/1.3-inch medium-tele and 50 MP 1/1.5-inch telephoto CMOS.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Obstacle sensing",
+            "details": "Stereo vision, forward LiDAR and downward infrared ranging.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O4+ and wireless",
+            "details": "O4+ at regional 2.4/5.1/5.8 GHz; Wi-Fi 6 and Bluetooth 5.1.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording capacity",
+            "details": "512 GB internal, approximately 460 GB usable; microSD expansion.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "6654 mAh, 14.32 V, 95.3 Wh Li-ion 4S.",
+            "sources": [
+              "https://www.dji.com/uk/mavic-4-pro/specs?set_region=GB&site=brandsite"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-mini5pro",
+        "manufacturer": "DJI",
+        "models": [
+          "Mini 5 Pro"
+        ],
+        "configuration": "Mini 5 Pro with standard or Plus battery, subject to region. Mini 4 Pro components are separate. CPU and RAM are not specified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera and navigation",
+            "details": "50 MP one-inch CMOS on a three-axis gimbal; GPS, Galileo and BeiDou positioning.",
+            "sources": [
+              "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Obstacle sensing",
+            "details": "Omnidirectional stereo vision, forward LiDAR and downward infrared ranging.",
+            "sources": [
+              "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O4+",
+            "details": "2.400–2.4835, 5.170–5.250 and 5.725–5.850 GHz; regional restrictions apply.",
+            "sources": [
+              "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Media storage",
+            "details": "42 GB internal plus microSD; exFAT filesystem.",
+            "sources": [
+              "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery alternatives",
+            "details": "Standard: 2788 mAh, 7 V, 19.52 Wh. Plus: 4680 mAh, 7.16 V, 33.51 Wh. Both lithium-ion; Plus increases aircraft mass.",
+            "sources": [
+              "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Imaging output",
+            "details": "JPEG/DNG stills and H.264/H.265 video; slow-motion frame rates differ from playback rates.",
+            "sources": [
+              "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-flycart30",
+        "manufacturer": "DJI",
+        "models": [
+          "FlyCart 30"
+        ],
+        "configuration": "FlyCart 30, with optional winch distinguished from cargo-box configuration. Aircraft processor, RAM and RF silicon undisclosed; FlyCart 100 is separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Industrial flight controller",
+            "details": "Controller integrates IMU, barometer, compass and GNSS/RTK navigation modules; processor SKU is not named.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_FlyCart_30/20250709/DJI_FlyCart_30_User_Manual_v1.1_0709.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Front/rear phased-array radars, binocular vision and FPV gimbal camera; dual RTK antennas.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_FlyCart_30/20250709/DJI_FlyCart_30_User_Manual_v1.1_0709.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 link",
+            "details": "Two OcuSync transmission antennas; RC Plus connection uses regional 2.4/5.8 GHz bands.",
+            "sources": [
+              "https://www.dji.com/flycart-30/specs",
+              "https://dl.djicdn.com/downloads/DJI_FlyCart_30/20250709/DJI_FlyCart_30_User_Manual_v1.1_0709.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Redundant battery system",
+            "details": "Two DB2000 packs, each 38 Ah, 52.22 V, 1984.4 Wh. Published payload is 30 kg with two packs or 40 kg with one.",
+            "sources": [
+              "https://www.dji.com/flycart-30/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion",
+            "details": "Eight 54-inch propellers; motors rated 4000 W each.",
+            "sources": [
+              "https://www.dji.com/flycart-30/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cargo and recovery",
+            "details": "Weighing cargo box; optional 20 m winch. Parachute has an independent battery that remains powered after mainboard shutdown.",
+            "sources": [
+              "https://www.dji.com/flycart-30/specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight operations",
+            "details": "DJI Pilot 2 and DeliveryHub.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_FlyCart_30/20250709/DJI_FlyCart_30_User_Manual_v1.1_0709.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-t25",
+        "manufacturer": "DJI",
+        "models": [
+          "Agras T25",
+          "Agras T50 & T25"
+        ],
+        "configuration": "Agras T25 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Terrain and obstacles",
+            "details": "RD241608RF front and RD241608RB rear phased-array radar with binocular vision.",
+            "sources": [
+              "https://ag.dji.com/t25/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "RTK and multi-constellation GNSS; satellite signals are receive-only positioning inputs.",
+            "sources": [
+              "https://ag.dji.com/t25/specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Controller link",
+            "details": "RM700B control link at 2.4000–2.4835 / 5.725–5.850 GHz, region-dependent. Controller Wi-Fi/Bluetooth are separate interfaces.",
+            "sources": [
+              "https://ag.dji.com/t25/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "DB800: 15.5 Ah, 52.22 V.",
+            "sources": [
+              "https://ag.dji.com/t25/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion",
+            "details": "Four 50-inch propellers; 4600 W motors.",
+            "sources": [
+              "https://ag.dji.com/t25/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spraying assembly",
+            "details": "20 L / 20 kg tank/payload; two LX8060SZ atomizers with magnetic-drive impeller pumps. Optional four-nozzle configuration.",
+            "sources": [
+              "https://ag.dji.com/t25/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-t50",
+        "manufacturer": "DJI",
+        "models": [
+          "Agras T50",
+          "Agras T50 & T25"
+        ],
+        "configuration": "Agras T50 configuration. The combined catalog name represents two distinct aircraft. CPU/RAM and radio chipset are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Terrain and obstacles",
+            "details": "RD241608RF front and RD241608RB rear phased-array radar with binocular vision.",
+            "sources": [
+              "https://www.dji.com/support/product/t50"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "RTK and multi-constellation GNSS; satellite signals are receive-only positioning inputs.",
+            "sources": [
+              "https://www.dji.com/support/product/t50"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Controller link",
+            "details": "RM700B control link at 2.4000–2.4835 / 5.725–5.850 GHz, region-dependent. Controller Wi-Fi/Bluetooth are separate interfaces.",
+            "sources": [
+              "https://www.dji.com/support/product/t50"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "DB1560: 30 Ah, 52.22 V.",
+            "sources": [
+              "https://www.dji.com/support/product/t50"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion",
+            "details": "Eight 54-inch propellers; 4000 W motors.",
+            "sources": [
+              "https://www.dji.com/support/product/t50"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spraying assembly",
+            "details": "40 L / 40 kg tank/payload; two LX8060SZ atomizers with magnetic-drive impeller pumps. Optional four-nozzle configuration.",
+            "sources": [
+              "https://www.dji.com/support/product/t50"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-t30",
+        "manufacturer": "DJI",
+        "models": [
+          "Agras T30"
+        ],
+        "configuration": "Agras T30 agricultural aircraft; T10, T25 and T40 specifications are separate. Aircraft CPU/RAM are not specified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Radar and video",
+            "details": "RD2424R horizontal omnidirectional and RD2414U upward radar, both at 24.05–24.25 GHz; front/rear 1280×720 FPV cameras.",
+            "sources": [
+              "https://www.dji.com/t30/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "RTK multi-band GNSS, including GPS, GLONASS, BeiDou and Galileo.",
+            "sources": [
+              "https://www.dji.com/t30/specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "OcuSync Industry Edition",
+            "details": "2.4000–2.4835 / 5.725–5.850 GHz, subject to region. These are distinct from the 24 GHz obstacle radars.",
+            "sources": [
+              "https://www.dji.com/t30/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and drive",
+            "details": "29 Ah / 51.8 V battery; 38×20-inch propellers, 3.6 kW motors and ESCs rated for 60 A continuous current.",
+            "sources": [
+              "https://www.dji.com/t30/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spray hardware",
+            "details": "30 L tank, 16 nozzles, plunger pump and liquid flowmeter.",
+            "sources": [
+              "https://www.dji.com/t30/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-t70p",
+        "manufacturer": "DJI",
+        "models": [
+          "Agras T70P"
+        ],
+        "configuration": "Agras T70P with DB1580 or DB2160 pack. Payload limits vary with battery and attachment; T70 and T100 are separate. CPU/RAM and aircraft control-link silicon are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Avoidance",
+            "details": "Front and rear millimeter-wave radar plus three-eye vision; RTK positioning.",
+            "sources": [
+              "https://ag.dji.com/t70p/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery choices",
+            "details": "DB1580: 30 Ah / 52 V; DB2160: 41 Ah / 52 V. Use the installed pack and approved configuration.",
+            "sources": [
+              "https://ag.dji.com/t70p/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion",
+            "details": "Four 62-inch composite propellers; 155×22 mm motor stators, 65 rpm/V.",
+            "sources": [
+              "https://ag.dji.com/t70p/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spray and spread equipment",
+            "details": "70 L tank, two magnetic-drive pumps, two standard or four optional nozzles. Separate 100 L screw-fed spreading hopper.",
+            "sources": [
+              "https://ag.dji.com/t70p/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Lifting option",
+            "details": "65 kg rated lifting configuration with standard 10 m cable, subject to operating restrictions.",
+            "sources": [
+              "https://ag.dji.com/t70p/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-t100",
+        "manufacturer": "DJI",
+        "models": [
+          "Agras T100"
+        ],
+        "configuration": "Agras T100. Single-battery spraying, dual-battery spraying and lifting are distinct configurations. Aircraft CPU/RAM and control-link silicon remain undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Safety System 3.0",
+            "details": "LiDAR, front/down/rear millimeter-wave radar, four-eye vision and FPV camera; RTK positioning.",
+            "sources": [
+              "https://ag.dji.com/t100/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "DB2160 or DB2212: 41 Ah / 52 V. Dual-battery configuration has separate load limits.",
+            "sources": [
+              "https://ag.dji.com/t100/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion",
+            "details": "62-inch composite propellers; 155×16 mm motor stators, 60 rpm/V.",
+            "sources": [
+              "https://ag.dji.com/t100/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spraying",
+            "details": "100 L tank; two magnetic-drive impeller pumps; two standard or four optional nozzles. Dual-battery spraying payload is 90 kg.",
+            "sources": [
+              "https://ag.dji.com/t100/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Other attachments",
+            "details": "150 L centrifugal-disc spreader with screw feed; separate lifting configuration. Single-battery lifting rated 100 kg, dual-battery lifting 80 kg.",
+            "sources": [
+              "https://ag.dji.com/t100/specs"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -259730,8 +262449,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 147,
-    "devices_with_system_profiles": 147,
-    "devices_with_documented_compute": 82
+    "system_profiles": 166,
+    "devices_with_system_profiles": 165,
+    "devices_with_documented_compute": 84
   }
 }
