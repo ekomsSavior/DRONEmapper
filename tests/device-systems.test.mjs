@@ -9,6 +9,29 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('marine and research configurations do not leak components across sibling vessels',()=>{
+ const otter=system('Maritime Robotics','Otter'), mariner=system('Maritime Robotics','Mariner X');
+ assert.match(text(otter.sections.compute),/Raspberry Pi 4/);
+ assert.match(text(otter.configurations),/NTNU Fish Otter research modification/);
+ assert.doesNotMatch(text(mariner),/Raspberry Pi|Torqeedo|3,660 Wh/);
+ assert.match(text(mariner.sections.radios),/Starlink optional/);
+ assert.equal(mariner.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Maritime Robotics','Otter (and Mariner X)')).length,3);
+ assert.equal(profileIds(system('Maritime Robotics','Otter X')).length,0);
+ const justin=system('DLR Institute of Robotics and Mechatronics','Rollin Justin');
+ assert.match(text(justin.sections.compute),/i7-7820EQ/);
+ assert.doesNotMatch(justin.sections.compute.facts.map(f=>f.details).join(' '),/Xeon|Xavier/);
+ assert.match(text(justin.configurations),/Xavier upgrade is not recorded as installed/);
+ assert.match(text(justin.sections.memory),/separate computers/);
+ const guardian=system('Cellula Robotics','Guardian AUV');
+ assert.match(text(guardian.sections.power),/conflict|headline/);
+ assert.equal(guardian.sections.compute.status,'not-established');
+ assert.deepEqual(profileIds(system('Cellula Robotics','Solus-XR XLUUV')),profileIds(guardian));
+ assert.match(text(system('Roboteam','MTGR').sections.power),/24 V/);
+ assert.doesNotMatch(text(system('Roboteam','PROBOT').sections.power),/24 V/);
+ assert.equal(system('Roboteam','PROBOT').sections.compute.status,'not-established');
+});
+
 test('agricultural, cleaning and humanoid records retain exact revision evidence',()=>{
  const sherpa=system('Lucid Bots','Sherpa 2.0');
  assert.match(text(sherpa.sections.compute),/STM32F765/);

@@ -13359,8 +13359,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "arx-gereon-rcs",
+            "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -13374,28 +13380,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Remote-control capability",
+                "details": "Manufacturer states up to 4 km control range but does not disclose RF band or radio module; range is not a scanner identification.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Driving perception",
+                "details": "Thermal night-vision camera capability; sensor models undisclosed.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Tracked electric base",
+                "details": "Rapid battery exchange; 2.5-hour charging claim, 40 km travel range, 15 km/h maximum speed and up to 500 kg load. Published 72-hour operating time is not 72 hours of continuous maximum-speed driving.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular carrier",
+                "details": "Tool-free ARX payload interfaces support configurable logistics, inspection and other applications.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control architecture",
+                "details": "Manual and supervised autonomous operation; ARX describes the GEREON fleet as using the ARX Robotics Framework with Mithra OS, linking sensors, autonomy and open interfaces.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon",
+                  "https://www.arx-robotics.com/article/arx-robotics-secures-major-order-in-ukraine"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -13411,11 +13483,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -13459,8 +13526,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "arx-gereon-rcs",
+            "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -13474,28 +13547,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Remote-control capability",
+                "details": "Manufacturer states up to 4 km control range but does not disclose RF band or radio module; range is not a scanner identification.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Driving perception",
+                "details": "Thermal night-vision camera capability; sensor models undisclosed.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Tracked electric base",
+                "details": "Rapid battery exchange; 2.5-hour charging claim, 40 km travel range, 15 km/h maximum speed and up to 500 kg load. Published 72-hour operating time is not 72 hours of continuous maximum-speed driving.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular carrier",
+                "details": "Tool-free ARX payload interfaces support configurable logistics, inspection and other applications.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control architecture",
+                "details": "Manual and supervised autonomous operation; ARX describes the GEREON fleet as using the ARX Robotics Framework with Mithra OS, linking sensors, autonomy and open interfaces.",
+                "sources": [
+                  "https://www.arx-robotics.com/solutions/gereon",
+                  "https://www.arx-robotics.com/article/arx-robotics-secures-major-order-in-ukraine"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "arx-gereon-rcs",
+                "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -13511,11 +13650,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -26775,8 +26909,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "cellula-guardian-variants",
+            "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -26790,28 +26930,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Communications scope",
+                "details": "Manufacturer describes satellite reporting through the mast; radio/modem type and bands are not specified.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Optional survey and navigation packages",
+                "details": "Mission-specific sensor payloads; optional pipe/cable tracking and terrain/feature navigation. Towed arrays and off-platform equipment are options, not baseline fit.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Separate energy configurations",
+                "details": "Lithium-ion battery variant: 480 hours/2,650 km published. Hydrogen fuel-cell variant: 925 hours/5,000 km in the specification table; headline says over 45 days, so no single reconciled endurance is asserted. Redundant propellers and hover/station-keeping capability.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle and payload modules",
+                "details": "11.7 m long, 1.66 m wide/high. Two 1.2 × 1.2 × 1.7 m payload bays or a single bay; retractable communication/sensor mast. Depth-rating options are 300, 1,000 or 3,000 m.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy integration",
+                "details": "Adaptive mission planning and optional third-party autonomy packages; operating system unspecified.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -26827,11 +27032,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -26873,8 +27073,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "cellula-guardian-variants",
+            "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -26888,28 +27094,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Communications scope",
+                "details": "Manufacturer describes satellite reporting through the mast; radio/modem type and bands are not specified.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Optional survey and navigation packages",
+                "details": "Mission-specific sensor payloads; optional pipe/cable tracking and terrain/feature navigation. Towed arrays and off-platform equipment are options, not baseline fit.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Separate energy configurations",
+                "details": "Lithium-ion battery variant: 480 hours/2,650 km published. Hydrogen fuel-cell variant: 925 hours/5,000 km in the specification table; headline says over 45 days, so no single reconciled endurance is asserted. Redundant propellers and hover/station-keeping capability.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle and payload modules",
+                "details": "11.7 m long, 1.66 m wide/high. Two 1.2 × 1.2 × 1.7 m payload bays or a single bay; retractable communication/sensor mast. Depth-rating options are 300, 1,000 or 3,000 m.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy integration",
+                "details": "Adaptive mission planning and optional third-party autonomy packages; operating system unspecified.",
+                "sources": [
+                  "https://cellula.com/guardian-auv/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cellula-guardian-variants",
+                "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -26925,11 +27196,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -50194,43 +50460,141 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dlr-rollin-justin-2022",
+            "configuration": "November 2022 research configuration, thesis Table 2.2 (PDF page 33). Planned Xavier upgrade is not recorded as installed. Decker is an external console. Storage and radio chipset unspecified; later research revisions may differ.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Distributed onboard computers",
+                "details": "Hannibal: Intel Core i7-7820EQ. Face: Core 2 Quad Q9000. Three NVIDIA Jetson TX2/Tegra X2 modules on Auvidea J140 carriers preprocess sensors. Amit handles real-time arm/hand control; its CPU is unspecified.",
+                "sources": [
+                  "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dlr-rollin-justin-2022",
+                "configuration": "November 2022 research configuration, thesis Table 2.2 (PDF page 33). Planned Xavier upgrade is not recorded as installed. Decker is an external console. Storage and radio chipset unspecified; later research revisions may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Per-computer memory",
+                "details": "Hannibal 32 GB DDR4; Face 4 GB RAM; each TX2 8 GB LPDDR4. These are separate computers, not a shared memory pool.",
+                "sources": [
+                  "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dlr-rollin-justin-2022",
+                "configuration": "November 2022 research configuration, thesis Table 2.2 (PDF page 33). Planned Xavier upgrade is not recorded as installed. Decker is an external console. Storage and radio chipset unspecified; later research revisions may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "External connection",
+                "details": "WLAN and wired Ethernet connect external operators; frequency and module part number unspecified.",
+                "sources": [
+                  "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dlr-rollin-justin-2022",
+                "configuration": "November 2022 research configuration, thesis Table 2.2 (PDF page 33). Planned Xavier upgrade is not recorded as installed. Decker is an external console. Storage and radio chipset unspecified; later research revisions may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "2022 perception assembly",
+                "details": "Five Intel RealSense D435i RGB-D cameras: four at the base and one in the forehead, plus a stereo eye pair. Joint torque and balance sensing are also documented by DLR.",
+                "sources": [
+                  "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf",
+                  "https://www.dlr.de/en/rm/research/robotic-systems/humanoids/rollin-justin"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dlr-rollin-justin-2022",
+                "configuration": "November 2022 research configuration, thesis Table 2.2 (PDF page 33). Planned Xavier upgrade is not recorded as installed. Decker is an external console. Storage and radio chipset unspecified; later research revisions may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobile manipulation platform",
+                "details": "DLR lists 51 degrees of freedom, approximately 200 kg, 20 kg nominal load and battery operation exceeding 60 minutes; battery voltage/capacity unspecified.",
+                "sources": [
+                  "https://www.dlr.de/en/rm/research/robotic-systems/humanoids/rollin-justin"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dlr-rollin-justin-2022",
+                "configuration": "November 2022 research configuration, thesis Table 2.2 (PDF page 33). Planned Xavier upgrade is not recorded as installed. Decker is an external console. Storage and radio chipset unspecified; later research revisions may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Internal buses",
+                "details": "Ethernet sensor transport and EtherCAT real-time control; sensor management distributed across head and base.",
+                "sources": [
+                  "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dlr-rollin-justin-2022",
+                "configuration": "November 2022 research configuration, thesis Table 2.2 (PDF page 33). Planned Xavier upgrade is not recorded as installed. Decker is an external console. Storage and radio chipset unspecified; later research revisions may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Published control stack",
+                "details": "Debian 9 on Hannibal; Debian 9 PREEMPT_RT on Face; QNX on Amit; Jetson OS on sensor modules. DLR Links and Nodes coordinates software processes.",
+                "sources": [
+                  "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dlr-rollin-justin-2022",
+                "configuration": "November 2022 research configuration, thesis Table 2.2 (PDF page 33). Planned Xavier upgrade is not recorded as installed. Decker is an external console. Storage and radio chipset unspecified; later research revisions may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -50244,13 +50608,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -77597,8 +77954,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "liquid-waveglider-family-current",
+            "configuration": "Manufacturer family comparison reviewed November 2026, plus an explicitly identified WHOI SV3 Block II example. Specifications are variant-dependent; CPU, RAM, battery chemistry and radio module SKU are not established for current production.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -77612,28 +77975,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Documented operator example",
+                "details": "WHOI SV3 Block II uses Iridium for shore links and a custom WHOI acoustic modem for subsea communication. Operator lists satellite, cellular, Wi-Fi and line-of-sight radio options; this does not establish every Wave Glider’s installed radio.",
+                "sources": [
+                  "https://nautiluslive.org/tech/waveglider"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "liquid-waveglider-family-current",
+                "configuration": "Manufacturer family comparison reviewed November 2026, plus an explicitly identified WHOI SV3 Block II example. Specifications are variant-dependent; CPU, RAM, battery chemistry and radio module SKU are not established for current production.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Mission-dependent instrumentation",
+                "details": "Sensor payloads mount on the mast, float or submerged body, or are towed/cast; WHOI configuration relays underwater-vehicle acoustic messages.",
+                "sources": [
+                  "https://nautiluslive.org/tech/waveglider"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "liquid-waveglider-family-current",
+                "configuration": "Manufacturer family comparison reviewed November 2026, plus an explicitly identified WHOI SV3 Block II example. Specifications are variant-dependent; CPU, RAM, battery chemistry and radio module SKU are not established for current production.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Wave propulsion and solar electrical power",
+                "details": "SV3: up to 6.8 kWh/225 W solar; SV5: 15.7 kWh/525 W; SV6: 30 kWh/900 W. SV6 introduces native 48 V payload support. These are maxima, not every installation.",
+                "sources": [
+                  "https://www.liquid-robotics.com/wave-gliders/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "liquid-waveglider-family-current",
+                "configuration": "Manufacturer family comparison reviewed November 2026, plus an explicitly identified WHOI SV3 Block II example. Specifications are variant-dependent; CPU, RAM, battery chemistry and radio module SKU are not established for current production.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Variant payload capacity",
+                "details": "SV3/SV5/SV6 respectively: 7/21/40 modular bays and maximum 70/215/450 kg payload. Floats measure 3.05/5.15/5.6 m.",
+                "sources": [
+                  "https://www.liquid-robotics.com/wave-gliders/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "liquid-waveglider-family-current",
+                "configuration": "Manufacturer family comparison reviewed November 2026, plus an explicitly identified WHOI SV3 Block II example. Specifications are variant-dependent; CPU, RAM, battery chemistry and radio module SKU are not established for current production.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mission architecture",
+                "details": "WGMS provides fleet health, waypoint control and data access; deployment options include commercial/government cloud or on-premises infrastructure. WHOI’s SV3 Block II identifies onboard Regulus software.",
+                "sources": [
+                  "https://www.liquid-robotics.com/data-interoperability/",
+                  "https://nautiluslive.org/tech/waveglider"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "liquid-waveglider-family-current",
+                "configuration": "Manufacturer family comparison reviewed November 2026, plus an explicitly identified WHOI SV3 Block II example. Specifications are variant-dependent; CPU, RAM, battery chemistry and radio module SKU are not established for current production.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -77658,12 +78087,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -79140,43 +79564,272 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "maritime-otter-current",
+            "configuration": "Current Otter manufacturer specification, separate from Mariner X and customer-modified research craft. Embedded processor, RAM, storage and battery-pack SKU undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "maritime-marinerx-current",
+            "configuration": "Mariner X manufacturer specification. This larger vessel is distinct from Otter. CPU, memory, engine, battery and modem part numbers are not stated.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "maritime-otter-ntnu-research",
+            "configuration": "NTNU Fish Otter research modification: hardware notes dated March 2021, navigation notes February 2020 and software page January 2025. Not the factory specification or a Mariner X configuration. Storage and exact radio-band setup unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Research control computer",
+                "details": "Raspberry Pi 4 with GPIO-connected Strato Pi CAN board and independent hardware watchdog; CAN links the Torqeedo interface board.",
+                "sources": [
+                  "https://otter.itk.ntnu.no/doku.php?id=hw"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-ntnu-research",
+                "configuration": "NTNU Fish Otter research modification: hardware notes dated March 2021, navigation notes February 2020 and software page January 2025. Not the factory specification or a Mariner X configuration. Storage and exact radio-band setup unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Controller RAM",
+                "details": "4 GB RAM on the Raspberry Pi 4.",
+                "sources": [
+                  "https://otter.itk.ntnu.no/doku.php?id=hw"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-ntnu-research",
+                "configuration": "NTNU Fish Otter research modification: hardware notes dated March 2021, navigation notes February 2020 and software page January 2025. Not the factory specification or a Mariner X configuration. Storage and exact radio-band setup unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Communications",
+                "details": "5 GHz MIMO radio/Wi-Fi; MBR, VHF and 4G are additional options.",
+                "sources": [
+                  "https://www.maritimerobotics.com/otter"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-current",
+                "configuration": "Current Otter manufacturer specification, separate from Mariner X and customer-modified research craft. Embedded processor, RAM, storage and battery-pack SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Communications",
+                "details": "LTE/4G standard high-bandwidth link; MBR and Starlink optional.",
+                "sources": [
+                  "https://www.maritimerobotics.com/mariner-x"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-marinerx-current",
+                "configuration": "Mariner X manufacturer specification. This larger vessel is distinct from Otter. CPU, memory, engine, battery and modem part numbers are not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "External radio",
+                "details": "BulletAC IP67 radio powered by passive PoE; no vehicle-specific MAC asserted.",
+                "sources": [
+                  "https://otter.itk.ntnu.no/doku.php?id=hw"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-ntnu-research",
+                "configuration": "NTNU Fish Otter research modification: hardware notes dated March 2021, navigation notes February 2020 and software page January 2025. Not the factory specification or a Mariner X configuration. Storage and exact radio-band setup unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Awareness and survey payloads",
+                "details": "Camera and Class B AIS; optional SeaSight enhanced perception. Survey sonar and other payloads depend on configuration.",
+                "sources": [
+                  "https://www.maritimerobotics.com/otter"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-current",
+                "configuration": "Current Otter manufacturer specification, separate from Mariner X and customer-modified research craft. Embedded processor, RAM, storage and battery-pack SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation and situational awareness",
+                "details": "GNSS compass, cameras, radar and Class B AIS; SeaSight, Class A AIS and VHF are optional upgrades.",
+                "sources": [
+                  "https://www.maritimerobotics.com/mariner-x"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-marinerx-current",
+                "configuration": "Mariner X manufacturer specification. This larger vessel is distinct from Otter. CPU, memory, engine, battery and modem part numbers are not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Position and acoustic payload",
+                "details": "Hemisphere V104s dual-GPS heading/position receiver with gyro and tilt sensors; RS-232 through USB adapter and PPS. Control box supports TBR-700-/RT hydrophone via a SLIM RS-485 board.",
+                "sources": [
+                  "https://otter.itk.ntnu.no/doku.php?id=hw",
+                  "https://otter.itk.ntnu.no/doku.php?id=navigation_sensors"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-ntnu-research",
+                "configuration": "NTNU Fish Otter research modification: hardware notes dated March 2021, navigation notes February 2020 and software page January 2025. Not the factory specification or a Mariner X configuration. Storage and exact radio-band setup unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric catamaran",
+                "details": "Two electric thrusters and up to four interchangeable battery packs; up to 20 hours at 2 knots, dependent on load and conditions. Published dry weight 62 kg and payload 30 kg.",
+                "sources": [
+                  "https://www.maritimerobotics.com/otter"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-current",
+                "configuration": "Current Otter manufacturer specification, separate from Mariner X and customer-modified research craft. Embedded processor, RAM, storage and battery-pack SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion and environment",
+                "details": "Redundant propulsion, bow thrusters and temperature-controlled equipment space/radome. Published 5,000 kg dry weight, 1,200 kg payload, up to 12 knots and up to 25 days endurance depend on configuration.",
+                "sources": [
+                  "https://www.maritimerobotics.com/mariner-x"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-marinerx-current",
+                "configuration": "Mariner X manufacturer specification. This larger vessel is distinct from Otter. CPU, memory, engine, battery and modem part numbers are not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion and batteries",
+                "details": "Two Torqeedo Ultralight 403 thrusters; four replaceable Torqeedo packs totaling 3,660 Wh/124 Ah in the documented build.",
+                "sources": [
+                  "https://otter.itk.ntnu.no/doku.php?id=hw"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-ntnu-research",
+                "configuration": "NTNU Fish Otter research modification: hardware notes dated March 2021, navigation notes February 2020 and software page January 2025. Not the factory specification or a Mariner X configuration. Storage and exact radio-band setup unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular payload integration",
+                "details": "Modular hull and plug-and-play payload mounting; subsystems can be separated into units under 20 kg for transport.",
+                "sources": [
+                  "https://www.maritimerobotics.com/otter"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-current",
+                "configuration": "Current Otter manufacturer specification, separate from Mariner X and customer-modified research craft. Embedded processor, RAM, storage and battery-pack SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Payload deck",
+                "details": "Railed aft deck, two moonpool elevators and two dedicated sensor positions. Winches, generators and vehicle launch/recovery equipment are selectable payloads.",
+                "sources": [
+                  "https://www.maritimerobotics.com/mariner-x"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-marinerx-current",
+                "configuration": "Mariner X manufacturer specification. This larger vessel is distinct from Otter. CPU, memory, engine, battery and modem part numbers are not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Internal connections",
+                "details": "CAN, GPIO, RS-485 hydrophone interface, serial-to-USB navigation link and passive PoE radio power.",
+                "sources": [
+                  "https://otter.itk.ntnu.no/doku.php?id=hw",
+                  "https://otter.itk.ntnu.no/doku.php?id=navigation_sensors"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-ntnu-research",
+                "configuration": "NTNU Fish Otter research modification: hardware notes dated March 2021, navigation notes February 2020 and software page January 2025. Not the factory specification or a Mariner X configuration. Storage and exact radio-band setup unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Navigation and control",
+                "details": "Vehicle Control Station provides waypoint/course/heading control and live sensor views; rugged-laptop control and mobile manual-control app. SeaCapture data software is optional.",
+                "sources": [
+                  "https://www.maritimerobotics.com/otter"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-current",
+                "configuration": "Current Otter manufacturer specification, separate from Mariner X and customer-modified research craft. Embedded processor, RAM, storage and battery-pack SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Autonomous navigation",
+                "details": "Maritime Robotics Autonomous Navigation System supports remote/autonomous navigation and coordinated vessel operation. SeaCapture is optional.",
+                "sources": [
+                  "https://www.maritimerobotics.com/mariner-x"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-marinerx-current",
+                "configuration": "Mariner X manufacturer specification. This larger vessel is distinct from Otter. CPU, memory, engine, battery and modem part numbers are not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Research vehicle stack",
+                "details": "Customized DUNE on Ubuntu Server 20.04, Neptus operator console and IMC messaging from the LSTS toolchain.",
+                "sources": [
+                  "https://otter.itk.ntnu.no/doku.php?id=sw"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "maritime-otter-ntnu-research",
+                "configuration": "NTNU Fish Otter research modification: hardware notes dated March 2021, navigation notes February 2020 and software page January 2025. Not the factory specification or a Mariner X configuration. Storage and exact radio-band setup unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -79190,13 +79843,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -95872,8 +96518,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "roboteam-mtgr-rt20-2025",
+            "configuration": "RT-20/MTGR manufacturer sheet in the July 2025 publication path. Specifications differ from older MTGR brochures; CPU, RAM, storage, radio chipset and battery capacity are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -95887,28 +96539,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control network",
+                "details": "Secure IP mobile ad-hoc network; RF frequency and modem SKU unspecified.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-mtgr-rt20-2025",
+                "configuration": "RT-20/MTGR manufacturer sheet in the July 2025 publication path. Specifications differ from older MTGR brochures; CPU, RAM, storage, radio chipset and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and interaction",
+                "details": "Four chassis cameras, two on the manipulator, and optional mast camera; day/night imagery, near-IR illumination and two-way audio. Arm includes 30× optical-zoom autofocus and close-range gripper cameras.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-mtgr-rt20-2025",
+                "configuration": "RT-20/MTGR manufacturer sheet in the July 2025 publication path. Specifications differ from older MTGR brochures; CPU, RAM, storage, radio chipset and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Power and mobility",
+                "details": "24 V battery; three-hour stated runtime. Tracked chassis with wheel kit option; published weight 9.4 kg or 11.5 kg with wheels, 10 kg payload.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-mtgr-rt20-2025",
+                "configuration": "RT-20/MTGR manufacturer sheet in the July 2025 publication path. Specifications differ from older MTGR brochures; CPU, RAM, storage, radio chipset and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload ports and arm",
+                "details": "Two IOP connections carry Ethernet and 24 V power; CAN bus and mounting rails. Four-axis manipulator has 49 cm reach and 5 kg fully extended lifting capacity.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-mtgr-rt20-2025",
+                "configuration": "RT-20/MTGR manufacturer sheet in the July 2025 publication path. Specifications differ from older MTGR brochures; CPU, RAM, storage, radio chipset and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operator control",
+                "details": "ROCU external controller; onboard computer and operating-system details are not given.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-mtgr-rt20-2025",
+                "configuration": "RT-20/MTGR manufacturer sheet in the July 2025 publication path. Specifications differ from older MTGR brochures; CPU, RAM, storage, radio chipset and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -95924,11 +96641,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -95972,8 +96684,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "roboteam-probot-rt1000-2025",
+            "configuration": "RT-1000/PROBOT manufacturer sheet in the August 2025 publication path. Brochure configuration; newer website weights and dimensions differ. CPU, memory, battery capacity and radio chip are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -95987,28 +96705,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control network",
+                "details": "Secure IP mobile ad-hoc network; stated standard-gear line-of-sight reach up to 1 km is a manufacturer claim, not a guaranteed detection radius.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-probot-rt1000-2025",
+                "configuration": "RT-1000/PROBOT manufacturer sheet in the August 2025 publication path. Brochure configuration; newer website weights and dimensions differ. CPU, memory, battery capacity and radio chip are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and observation",
+                "details": "360-degree day/night video, near-IR illumination and GPS waypoint navigation. Camera and GNSS part numbers unspecified.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-probot-rt1000-2025",
+                "configuration": "RT-1000/PROBOT manufacturer sheet in the August 2025 publication path. Brochure configuration; newer website weights and dimensions differ. CPU, memory, battery capacity and radio chip are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electrical system",
+                "details": "Nominal 48 V rechargeable batteries, eight-hour stated operation; 750 kg payload and 8 km/h brochure speed.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-probot-rt1000-2025",
+                "configuration": "RT-1000/PROBOT manufacturer sheet in the August 2025 publication path. Brochure configuration; newer website weights and dimensions differ. CPU, memory, battery capacity and radio chip are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload integration",
+                "details": "External power, Ethernet RJ45, 24 V output, GPS/RF antenna and communication connections.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-probot-rt1000-2025",
+                "configuration": "RT-1000/PROBOT manufacturer sheet in the August 2025 publication path. Brochure configuration; newer website weights and dimensions differ. CPU, memory, battery capacity and radio chip are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control modes",
+                "details": "Dedicated joystick and external ROCU-7 control/display unit; follow-me kit and GPS waypoint modes. Controller hardware is not an onboard CPU identification.",
+                "sources": [
+                  "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "roboteam-probot-rt1000-2025",
+                "configuration": "RT-1000/PROBOT manufacturer sheet in the August 2025 publication path. Brochure configuration; newer website weights and dimensions differ. CPU, memory, battery capacity and radio chip are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -96024,11 +96807,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -271826,6 +272604,512 @@
             ]
           }
         ]
+      },
+      {
+        "id": "roboteam-mtgr-rt20-2025",
+        "manufacturer": "Roboteam",
+        "models": [
+          "MTGR",
+          "RT-20"
+        ],
+        "configuration": "RT-20/MTGR manufacturer sheet in the July 2025 publication path. Specifications differ from older MTGR brochures; CPU, RAM, storage, radio chipset and battery capacity are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Control network",
+            "details": "Secure IP mobile ad-hoc network; RF frequency and modem SKU unspecified.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and interaction",
+            "details": "Four chassis cameras, two on the manipulator, and optional mast camera; day/night imagery, near-IR illumination and two-way audio. Arm includes 30× optical-zoom autofocus and close-range gripper cameras.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Power and mobility",
+            "details": "24 V battery; three-hour stated runtime. Tracked chassis with wheel kit option; published weight 9.4 kg or 11.5 kg with wheels, 10 kg payload.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload ports and arm",
+            "details": "Two IOP connections carry Ethernet and 24 V power; CAN bus and mounting rails. Four-axis manipulator has 49 cm reach and 5 kg fully extended lifting capacity.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operator control",
+            "details": "ROCU external controller; onboard computer and operating-system details are not given.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/07/RT-20.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "roboteam-probot-rt1000-2025",
+        "manufacturer": "Roboteam",
+        "models": [
+          "PROBOT",
+          "RT-1000"
+        ],
+        "configuration": "RT-1000/PROBOT manufacturer sheet in the August 2025 publication path. Brochure configuration; newer website weights and dimensions differ. CPU, memory, battery capacity and radio chip are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Control network",
+            "details": "Secure IP mobile ad-hoc network; stated standard-gear line-of-sight reach up to 1 km is a manufacturer claim, not a guaranteed detection radius.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and observation",
+            "details": "360-degree day/night video, near-IR illumination and GPS waypoint navigation. Camera and GNSS part numbers unspecified.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electrical system",
+            "details": "Nominal 48 V rechargeable batteries, eight-hour stated operation; 750 kg payload and 8 km/h brochure speed.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload integration",
+            "details": "External power, Ethernet RJ45, 24 V output, GPS/RF antenna and communication connections.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control modes",
+            "details": "Dedicated joystick and external ROCU-7 control/display unit; follow-me kit and GPS waypoint modes. Controller hardware is not an onboard CPU identification.",
+            "sources": [
+              "https://robo-team.com/wp-content/uploads/2025/08/RT-1000.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "maritime-otter-current",
+        "manufacturer": "Maritime Robotics",
+        "models": [
+          "Otter",
+          "Otter (and Mariner X)"
+        ],
+        "configuration": "Current Otter manufacturer specification, separate from Mariner X and customer-modified research craft. Embedded processor, RAM, storage and battery-pack SKU undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Communications",
+            "details": "5 GHz MIMO radio/Wi-Fi; MBR, VHF and 4G are additional options.",
+            "sources": [
+              "https://www.maritimerobotics.com/otter"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Awareness and survey payloads",
+            "details": "Camera and Class B AIS; optional SeaSight enhanced perception. Survey sonar and other payloads depend on configuration.",
+            "sources": [
+              "https://www.maritimerobotics.com/otter"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric catamaran",
+            "details": "Two electric thrusters and up to four interchangeable battery packs; up to 20 hours at 2 knots, dependent on load and conditions. Published dry weight 62 kg and payload 30 kg.",
+            "sources": [
+              "https://www.maritimerobotics.com/otter"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular payload integration",
+            "details": "Modular hull and plug-and-play payload mounting; subsystems can be separated into units under 20 kg for transport.",
+            "sources": [
+              "https://www.maritimerobotics.com/otter"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Navigation and control",
+            "details": "Vehicle Control Station provides waypoint/course/heading control and live sensor views; rugged-laptop control and mobile manual-control app. SeaCapture data software is optional.",
+            "sources": [
+              "https://www.maritimerobotics.com/otter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "maritime-marinerx-current",
+        "manufacturer": "Maritime Robotics",
+        "models": [
+          "Mariner X",
+          "Otter (and Mariner X)"
+        ],
+        "configuration": "Mariner X manufacturer specification. This larger vessel is distinct from Otter. CPU, memory, engine, battery and modem part numbers are not stated.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Communications",
+            "details": "LTE/4G standard high-bandwidth link; MBR and Starlink optional.",
+            "sources": [
+              "https://www.maritimerobotics.com/mariner-x"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and situational awareness",
+            "details": "GNSS compass, cameras, radar and Class B AIS; SeaSight, Class A AIS and VHF are optional upgrades.",
+            "sources": [
+              "https://www.maritimerobotics.com/mariner-x"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion and environment",
+            "details": "Redundant propulsion, bow thrusters and temperature-controlled equipment space/radome. Published 5,000 kg dry weight, 1,200 kg payload, up to 12 knots and up to 25 days endurance depend on configuration.",
+            "sources": [
+              "https://www.maritimerobotics.com/mariner-x"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload deck",
+            "details": "Railed aft deck, two moonpool elevators and two dedicated sensor positions. Winches, generators and vehicle launch/recovery equipment are selectable payloads.",
+            "sources": [
+              "https://www.maritimerobotics.com/mariner-x"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomous navigation",
+            "details": "Maritime Robotics Autonomous Navigation System supports remote/autonomous navigation and coordinated vessel operation. SeaCapture is optional.",
+            "sources": [
+              "https://www.maritimerobotics.com/mariner-x"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "maritime-otter-ntnu-research",
+        "manufacturer": "Maritime Robotics",
+        "models": [
+          "Otter",
+          "Otter (and Mariner X)",
+          "Otter NTNU Fish Otter"
+        ],
+        "configuration": "NTNU Fish Otter research modification: hardware notes dated March 2021, navigation notes February 2020 and software page January 2025. Not the factory specification or a Mariner X configuration. Storage and exact radio-band setup unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Research control computer",
+            "details": "Raspberry Pi 4 with GPIO-connected Strato Pi CAN board and independent hardware watchdog; CAN links the Torqeedo interface board.",
+            "sources": [
+              "https://otter.itk.ntnu.no/doku.php?id=hw"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Controller RAM",
+            "details": "4 GB RAM on the Raspberry Pi 4.",
+            "sources": [
+              "https://otter.itk.ntnu.no/doku.php?id=hw"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "External radio",
+            "details": "BulletAC IP67 radio powered by passive PoE; no vehicle-specific MAC asserted.",
+            "sources": [
+              "https://otter.itk.ntnu.no/doku.php?id=hw"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Position and acoustic payload",
+            "details": "Hemisphere V104s dual-GPS heading/position receiver with gyro and tilt sensors; RS-232 through USB adapter and PPS. Control box supports TBR-700-/RT hydrophone via a SLIM RS-485 board.",
+            "sources": [
+              "https://otter.itk.ntnu.no/doku.php?id=hw",
+              "https://otter.itk.ntnu.no/doku.php?id=navigation_sensors"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion and batteries",
+            "details": "Two Torqeedo Ultralight 403 thrusters; four replaceable Torqeedo packs totaling 3,660 Wh/124 Ah in the documented build.",
+            "sources": [
+              "https://otter.itk.ntnu.no/doku.php?id=hw"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Internal connections",
+            "details": "CAN, GPIO, RS-485 hydrophone interface, serial-to-USB navigation link and passive PoE radio power.",
+            "sources": [
+              "https://otter.itk.ntnu.no/doku.php?id=hw",
+              "https://otter.itk.ntnu.no/doku.php?id=navigation_sensors"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Research vehicle stack",
+            "details": "Customized DUNE on Ubuntu Server 20.04, Neptus operator console and IMC messaging from the LSTS toolchain.",
+            "sources": [
+              "https://otter.itk.ntnu.no/doku.php?id=sw"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "liquid-waveglider-family-current",
+        "manufacturer": "Liquid Robotics",
+        "models": [
+          "Wave Glider"
+        ],
+        "configuration": "Manufacturer family comparison reviewed November 2026, plus an explicitly identified WHOI SV3 Block II example. Specifications are variant-dependent; CPU, RAM, battery chemistry and radio module SKU are not established for current production.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Wave propulsion and solar electrical power",
+            "details": "SV3: up to 6.8 kWh/225 W solar; SV5: 15.7 kWh/525 W; SV6: 30 kWh/900 W. SV6 introduces native 48 V payload support. These are maxima, not every installation.",
+            "sources": [
+              "https://www.liquid-robotics.com/wave-gliders/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Variant payload capacity",
+            "details": "SV3/SV5/SV6 respectively: 7/21/40 modular bays and maximum 70/215/450 kg payload. Floats measure 3.05/5.15/5.6 m.",
+            "sources": [
+              "https://www.liquid-robotics.com/wave-gliders/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Documented operator example",
+            "details": "WHOI SV3 Block II uses Iridium for shore links and a custom WHOI acoustic modem for subsea communication. Operator lists satellite, cellular, Wi-Fi and line-of-sight radio options; this does not establish every Wave Glider’s installed radio.",
+            "sources": [
+              "https://nautiluslive.org/tech/waveglider"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Mission-dependent instrumentation",
+            "details": "Sensor payloads mount on the mast, float or submerged body, or are towed/cast; WHOI configuration relays underwater-vehicle acoustic messages.",
+            "sources": [
+              "https://nautiluslive.org/tech/waveglider"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mission architecture",
+            "details": "WGMS provides fleet health, waypoint control and data access; deployment options include commercial/government cloud or on-premises infrastructure. WHOI’s SV3 Block II identifies onboard Regulus software.",
+            "sources": [
+              "https://www.liquid-robotics.com/data-interoperability/",
+              "https://nautiluslive.org/tech/waveglider"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cellula-guardian-variants",
+        "manufacturer": "Cellula Robotics",
+        "models": [
+          "Guardian AUV",
+          "Solus-XR XLUUV"
+        ],
+        "configuration": "Manufacturer identifies Guardian as the successor name to Solus-XR. Battery and hydrogen configurations are separate. CPU, memory, modem and sensor part numbers are not disclosed; publication gives conflicting fuel-cell endurance figures.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Separate energy configurations",
+            "details": "Lithium-ion battery variant: 480 hours/2,650 km published. Hydrogen fuel-cell variant: 925 hours/5,000 km in the specification table; headline says over 45 days, so no single reconciled endurance is asserted. Redundant propellers and hover/station-keeping capability.",
+            "sources": [
+              "https://cellula.com/guardian-auv/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle and payload modules",
+            "details": "11.7 m long, 1.66 m wide/high. Two 1.2 × 1.2 × 1.7 m payload bays or a single bay; retractable communication/sensor mast. Depth-rating options are 300, 1,000 or 3,000 m.",
+            "sources": [
+              "https://cellula.com/guardian-auv/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Optional survey and navigation packages",
+            "details": "Mission-specific sensor payloads; optional pipe/cable tracking and terrain/feature navigation. Towed arrays and off-platform equipment are options, not baseline fit.",
+            "sources": [
+              "https://cellula.com/guardian-auv/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Communications scope",
+            "details": "Manufacturer describes satellite reporting through the mast; radio/modem type and bands are not specified.",
+            "sources": [
+              "https://cellula.com/guardian-auv/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy integration",
+            "details": "Adaptive mission planning and optional third-party autonomy packages; operating system unspecified.",
+            "sources": [
+              "https://cellula.com/guardian-auv/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "arx-gereon-rcs",
+        "manufacturer": "ARX Robotics",
+        "models": [
+          "GEREON UGV",
+          "Combat GEREON",
+          "GEREON RCS"
+        ],
+        "configuration": "GEREON RCS common mobility/control base; mission payloads vary. A combat-labelled record does not identify an installed payload. Processor, RAM, modem, battery chemistry and capacity remain unpublished in these sources.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Driving perception",
+            "details": "Thermal night-vision camera capability; sensor models undisclosed.",
+            "sources": [
+              "https://www.arx-robotics.com/solutions/gereon"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Tracked electric base",
+            "details": "Rapid battery exchange; 2.5-hour charging claim, 40 km travel range, 15 km/h maximum speed and up to 500 kg load. Published 72-hour operating time is not 72 hours of continuous maximum-speed driving.",
+            "sources": [
+              "https://www.arx-robotics.com/solutions/gereon"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular carrier",
+            "details": "Tool-free ARX payload interfaces support configurable logistics, inspection and other applications.",
+            "sources": [
+              "https://www.arx-robotics.com/solutions/gereon"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Remote-control capability",
+            "details": "Manufacturer states up to 4 km control range but does not disclose RF band or radio module; range is not a scanner identification.",
+            "sources": [
+              "https://www.arx-robotics.com/solutions/gereon"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control architecture",
+            "details": "Manual and supervised autonomous operation; ARX describes the GEREON fleet as using the ARX Robotics Framework with Mithra OS, linking sensors, autonomy and open interfaces.",
+            "sources": [
+              "https://www.arx-robotics.com/solutions/gereon",
+              "https://www.arx-robotics.com/article/arx-robotics-secures-major-order-in-ukraine"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dlr-rollin-justin-2022",
+        "manufacturer": "DLR Institute of Robotics and Mechatronics",
+        "models": [
+          "Rollin Justin",
+          "Rollin’ Justin"
+        ],
+        "configuration": "November 2022 research configuration, thesis Table 2.2 (PDF page 33). Planned Xavier upgrade is not recorded as installed. Decker is an external console. Storage and radio chipset unspecified; later research revisions may differ.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Distributed onboard computers",
+            "details": "Hannibal: Intel Core i7-7820EQ. Face: Core 2 Quad Q9000. Three NVIDIA Jetson TX2/Tegra X2 modules on Auvidea J140 carriers preprocess sensors. Amit handles real-time arm/hand control; its CPU is unspecified.",
+            "sources": [
+              "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Per-computer memory",
+            "details": "Hannibal 32 GB DDR4; Face 4 GB RAM; each TX2 8 GB LPDDR4. These are separate computers, not a shared memory pool.",
+            "sources": [
+              "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "2022 perception assembly",
+            "details": "Five Intel RealSense D435i RGB-D cameras: four at the base and one in the forehead, plus a stereo eye pair. Joint torque and balance sensing are also documented by DLR.",
+            "sources": [
+              "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf",
+              "https://www.dlr.de/en/rm/research/robotic-systems/humanoids/rollin-justin"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "External connection",
+            "details": "WLAN and wired Ethernet connect external operators; frequency and module part number unspecified.",
+            "sources": [
+              "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Internal buses",
+            "details": "Ethernet sensor transport and EtherCAT real-time control; sensor management distributed across head and base.",
+            "sources": [
+              "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Published control stack",
+            "details": "Debian 9 on Hannibal; Debian 9 PREEMPT_RT on Face; QNX on Amit; Jetson OS on sensor modules. DLR Links and Nodes coordinates software processes.",
+            "sources": [
+              "https://elib.dlr.de/191646/1/MA_Luo_MMVO.release_DLR.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobile manipulation platform",
+            "details": "DLR lists 51 degrees of freedom, approximately 200 kg, 20 kg nominal load and battery operation exceeding 60 minutes; battery voltage/capacity unspecified.",
+            "sources": [
+              "https://www.dlr.de/en/rm/research/robotic-systems/humanoids/rollin-justin"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -271842,8 +273126,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 241,
-    "devices_with_system_profiles": 236,
-    "devices_with_documented_compute": 113
+    "system_profiles": 250,
+    "devices_with_system_profiles": 245,
+    "devices_with_documented_compute": 115
   }
 }
