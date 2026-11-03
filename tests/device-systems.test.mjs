@@ -162,3 +162,19 @@ test('global JSON and website use the same per-record system evidence',()=>{
  assert.equal(data.counts.system_profiles,deviceSystems.profiles.length);
  assert.equal(data.counts.devices_with_system_profiles,data.devices.filter(d=>d.system_breakdown.configurations.length).length);
 });
+
+
+test('aircraft storage, radio directions and regional radar configurations remain separate',()=>{
+ const base=system('DJI','Mavic 3'),cine=system('DJI','Mavic 3 Cine');
+ assert.match(text(base.sections.memory),/8 GB/);
+ assert.doesNotMatch(text(base.sections.memory),/1 TB/);
+ assert.match(text(cine.sections.memory),/1 TB/);
+ assert.deepEqual(profileIds(system('DJI','Mavic 3 Pro')),['dji-mavic-3-pro']);
+ const avata=system('DJI','AVATA');
+ assert.match(text(avata.sections.radios),/receive-only/);
+ assert.doesNotMatch(text(system('DJI','Avata 2').sections.radios),/receive-only/);
+ assert.match(text(system('Autel Robotics','Autel Alpha').sections.sensors),/disables other radar directions/);
+ assert.match(text(system('DJI','Mini 3 Pro').sections.radios),/Bluetooth 5.2/);
+ assert.doesNotMatch(text(system('DJI','Mini 3 Pro').sections.radios),/Bluetooth 4.2/);
+ assert.equal(system('DJI','FPV').sections.compute.status,'not-established');
+});
