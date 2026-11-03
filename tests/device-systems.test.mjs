@@ -419,3 +419,30 @@ test('aircraft variants preserve controllers, radio roles and payload difference
  assert.match(text(m3td.sections.sensors),/thermal imager/);
  assert.doesNotMatch(text(m3d.sections.power),/12 Ah|Lead-acid/);
 });
+
+test('delivery and companion robot evidence keeps revision and accessory boundaries',()=>{
+ const kiwi=system('Kiwibot','Kiwibot 4.0');
+ assert.match(text(kiwi.sections.compute),/Jetson AGX Xavier 32 GB/);
+ assert.match(text(kiwi.sections.sensors),/RPLIDAR S1/);
+ assert.match(text(kiwi.sections.radios),/LPAM-BC3G-26/);
+ assert.equal(profileIds(system('Kiwibot','Rkiwi')).length,0);
+ const chip=system('WowWee','CHiP');
+ assert.match(text(chip.sections.power),/7.4 V, 1,800 mAh/);
+ assert.doesNotMatch(text(chip.sections.power),/130 mAh|AAA/);
+ assert.match(text(chip.sections.interfaces),/3.7 V, 130 mAh/);
+ const miko=system('Miko','Miko 3');
+ assert.equal(miko.sections.compute.facts.length,0);
+ assert.match(text(miko.sections.interfaces),/not a 5 V battery/);
+ assert.equal(profileIds(system('Miko','Miko Mini')).length,0);
+ assert.match(text(system('Neubility','Neubie').sections.power),/20 kg safe payload/);
+ assert.doesNotMatch(text(system('Neubility','Neubie').sections.power),/150 kg/);
+ assert.match(text(system('Hanson Robotics','Sophia').configurations),/June 2023/);
+ assert.match(text(system('Hanson Robotics','Sophia').sections.compute),/part|SKU/);
+ assert.equal(profileIds(system('Geek+','Geek+ P-Series')).length,3);
+ const cards=includeReviewedSystemModels(libraryModels());
+ const p500=cards.find(m=>m.maker==='Geek+'&&m.name==='P500R');
+ assert.deepEqual(profileIds(systemBreakdown(p500)),['geekplus-p500r-brochure']);
+ assert.match(text(system('Geek+','P500R').sections.power),/51.8 V\/40.3 Ah/);
+ assert.doesNotMatch(text(system('Geek+','P800R').sections.power),/40.3 Ah/);
+ assert.equal(profileIds(system('Geek+','P800R V6')).length,0);
+});

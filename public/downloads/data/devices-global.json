@@ -61211,8 +61211,24 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "geekplus-p500r-brochure",
+            "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "geekplus-p800r-brochure",
+            "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "geekplus-p1200r-brochure",
+            "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -61231,23 +61247,171 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Inertial/QR navigation; IWD V5.1 infrared, LNU V5.2 LiDAR obstacle sensing.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/P-series.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p500r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Inertial/QR navigation and LiDAR; EWE/EWS visual sensing is optional.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/P-series.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p800r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Inertial/QR navigation and LiDAR; EWE/EWS visual sensing is optional.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/P-series.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p1200r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "IWD V5.1: 51.1 V/30 Ah; LNU V5.2: 51.8 V/40.3 Ah lithium packs.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/P-series.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p500r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "51.1 V/27.9 Ah lithium pack.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/P-series.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p800r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "51.1 V/27.9 Ah lithium pack.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/P-series.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p1200r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Shelf-lifting and safety",
+                "details": "600 kg payload, 60 mm lift; emergency stops and bumper strips.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/P-series.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p500r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Shelf-lifting and safety",
+                "details": "1,000 kg payload, 55 mm lift; emergency stops and bumper strips.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/P-series.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p800r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Shelf-lifting and safety",
+                "details": "1,200 kg payload, 60 mm lift; emergency stops and bumper strips.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/P-series.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p1200r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet integration",
+                "details": "Geekplus Software Suite provides warehouse orchestration and integration interfaces; embedded OS is unspecified.",
+                "sources": [
+                  "https://www.geekplus.com/technology-detail-page/p-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p500r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Fleet integration",
+                "details": "Geekplus Software Suite provides warehouse orchestration and integration interfaces; embedded OS is unspecified.",
+                "sources": [
+                  "https://www.geekplus.com/technology-detail-page/p-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p800r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Fleet integration",
+                "details": "Geekplus Software Suite provides warehouse orchestration and integration interfaces; embedded OS is unspecified.",
+                "sources": [
+                  "https://www.geekplus.com/technology-detail-page/p-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geekplus-p1200r-brochure",
+                "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -61264,10 +61428,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -67736,13 +67896,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hanson-sophia-utility-2023",
+            "configuration": "Sophia Utility Platform shown in Hanson’s June 2023 presentation, slide 22. Modular options vary; this is not a universal description of the original 2016 Sophia. CPU/NPU part numbers, RAM, storage, radio and battery ratings remain undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Embedded control computer",
+                "details": "Embedded PC with NPU running Hanson-AI NLU+MP; processor manufacturer and SKU are not given.",
+                "sources": [
+                  "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hanson-sophia-utility-2023",
+                "configuration": "Sophia Utility Platform shown in Hanson’s June 2023 presentation, slide 22. Modular options vary; this is not a universal description of the original 2016 Sophia. CPU/NPU part numbers, RAM, storage, radio and battery ratings remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -67756,23 +67935,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Interaction and navigation array",
+                "details": "Camera eyes, microphones, touch sensing, IMUs, 3D camera, FLIR, surrounding cameras, time-of-flight and proximity sensors; navigation base includes LiDAR.",
+                "sources": [
+                  "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hanson-sophia-utility-2023",
+                "configuration": "Sophia Utility Platform shown in Hanson’s June 2023 presentation, slide 22. Modular options vary; this is not a universal description of the original 2016 Sophia. CPU/NPU part numbers, RAM, storage, radio and battery ratings remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Articulated body and mobile option",
+                "details": "32 facial degrees of freedom; articulated neck, arms/hands, torso and spine. Diagram marks legs optional and describes self-charging mobility with emergency bumpers; battery capacity unspecified.",
+                "sources": [
+                  "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hanson-sophia-utility-2023",
+                "configuration": "Sophia Utility Platform shown in Hanson’s June 2023 presentation, slide 22. Modular options vary; this is not a universal description of the original 2016 Sophia. CPU/NPU part numbers, RAM, storage, radio and battery ratings remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Human interaction",
+                "details": "Speaker, microphone array and touch-sensitive face, shoulders, arms and hands.",
+                "sources": [
+                  "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hanson-sophia-utility-2023",
+                "configuration": "Sophia Utility Platform shown in Hanson’s June 2023 presentation, slide 22. Modular options vary; this is not a universal description of the original 2016 Sophia. CPU/NPU part numbers, RAM, storage, radio and battery ratings remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy and modular functions",
+                "details": "Hanson-AI language/motion processing and SLAM navigation; navigation/control modules vary by ordered configuration.",
+                "sources": [
+                  "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hanson-sophia-utility-2023",
+                "configuration": "Sophia Utility Platform shown in Hanson’s June 2023 presentation, slide 22. Modular options vary; this is not a universal description of the original 2016 Sophia. CPU/NPU part numbers, RAM, storage, radio and battery ratings remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -67786,13 +68017,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -74026,43 +74252,140 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "kiwibot-4-winchester-2023",
+            "configuration": "May 2023 manufacturer presentation filed with Winchester, page 4. This documented build is not a specification for later Rkiwi or Cargo robots. Storage, modem and motor SKUs are not identified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard computer",
+                "details": "NVIDIA Jetson AGX Xavier 32 GB module identified in the component diagram.",
+                "sources": [
+                  "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kiwibot-4-winchester-2023",
+                "configuration": "May 2023 manufacturer presentation filed with Winchester, page 4. This documented build is not a specification for later Rkiwi or Cargo robots. Storage, modem and motor SKUs are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Module memory",
+                "details": "32 GB configuration; separate persistent storage is unspecified.",
+                "sources": [
+                  "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kiwibot-4-winchester-2023",
+                "configuration": "May 2023 manufacturer presentation filed with Winchester, page 4. This documented build is not a specification for later Rkiwi or Cargo robots. Storage, modem and motor SKUs are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Cellular assembly",
+                "details": "Router and LPAM-BC3G-26 magnetic MIMO cellular antenna. Antenna identification does not establish the installed modem or active network bands.",
+                "sources": [
+                  "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kiwibot-4-winchester-2023",
+                "configuration": "May 2023 manufacturer presentation filed with Winchester, page 4. This documented build is not a specification for later Rkiwi or Cargo robots. Storage, modem and motor SKUs are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and safety",
+                "details": "RPLIDAR S1; stereo, zoom, inner IR USB and rear USB cameras; GPS, IMU, cliff, distance and ambient-light sensors.",
+                "sources": [
+                  "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kiwibot-4-winchester-2023",
+                "configuration": "May 2023 manufacturer presentation filed with Winchester, page 4. This documented build is not a specification for later Rkiwi or Cargo robots. Storage, modem and motor SKUs are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and running gear",
+                "details": "14.8 V, 39.8 Ah, 589 Wh pack; skid-steer chassis V3.3. Approximately seven hours claimed; 20.5 kg with battery.",
+                "sources": [
+                  "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kiwibot-4-winchester-2023",
+                "configuration": "May 2023 manufacturer presentation filed with Winchester, page 4. This documented build is not a specification for later Rkiwi or Cargo robots. Storage, modem and motor SKUs are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cargo and human interface",
+                "details": "Lockable 19.2 L cargo compartment with cooling, front LED display, lights and sound/alarm system.",
+                "sources": [
+                  "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kiwibot-4-winchester-2023",
+                "configuration": "May 2023 manufacturer presentation filed with Winchester, page 4. This documented build is not a specification for later Rkiwi or Cargo robots. Storage, modem and motor SKUs are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operating scope",
+                "details": "The filed configuration is described as level 2 autonomy with remote operational supervision.",
+                "sources": [
+                  "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kiwibot-4-winchester-2023",
+                "configuration": "May 2023 manufacturer presentation filed with Winchester, page 4. This documented build is not a specification for later Rkiwi or Cargo robots. Storage, modem and motor SKUs are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -74076,13 +74399,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -79960,8 +80276,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "miko3-documented",
+            "configuration": "Miko 3 manufacturer product page and brochure. CPU/accelerator, RAM, flash, battery capacity and sensor chip part numbers are not established; Miko Mini specifications are separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -79975,28 +80297,95 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Network setup",
+                "details": "Wi-Fi connection through the Miko parent application; the reviewed setup instructions do not identify radio chip or RF band.",
+                "sources": [
+                  "https://miko.ai/pages/miko-3-faqs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "miko3-documented",
+                "configuration": "Miko 3 manufacturer product page and brochure. CPU/accelerator, RAM, flash, battery capacity and sensor chip part numbers are not established; Miko Mini specifications are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and audio",
+                "details": "Wide-angle HD camera, dual MEMS microphones, time-of-flight range and odometric sensing. Manufacturer brochure describes visual SLAM, face recognition and acoustic localization.",
+                "sources": [
+                  "https://miko.ai/products/miko-3",
+                  "https://5.imimg.com/data5/SELLER/Doc/2023/8/338492359/NG/JX/ZG/49843013/miko-3.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "miko3-documented",
+                "configuration": "Miko 3 manufacturer product page and brochure. CPU/accelerator, RAM, flash, battery capacity and sensor chip part numbers are not established; Miko Mini specifications are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobile and rechargeable platform",
+                "details": "Rubberized wheels and rechargeable power. Product page estimates roughly four hours charging at 15 W; operating duration depends on use.",
+                "sources": [
+                  "https://miko.ai/products/miko-3"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "miko3-documented",
+                "configuration": "Miko 3 manufacturer product page and brochure. CPU/accelerator, RAM, flash, battery capacity and sensor chip part numbers are not established; Miko Mini specifications are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "User interface and charging",
+                "details": "IPS touch display and speaker; USB-C charging. January 2022 charging guide specifies 5 V/3 A input for its recommended 15 W charging setup, not a 5 V battery.",
+                "sources": [
+                  "https://miko.ai/products/miko-3",
+                  "https://miko.ai/blogs/explore-miko/miko-3-charging-specification"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "miko3-documented",
+                "configuration": "Miko 3 manufacturer product page and brochure. CPU/accelerator, RAM, flash, battery capacity and sensor chip part numbers are not established; Miko Mini specifications are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Onboard and cloud functions",
+                "details": "Manufacturer describes hybrid edge/cloud processing, educational apps and Mikonnect parent video calling/remote navigation. This is an architecture description, not a processor identification.",
+                "sources": [
+                  "https://5.imimg.com/data5/SELLER/Doc/2023/8/338492359/NG/JX/ZG/49843013/miko-3.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "miko3-documented",
+                "configuration": "Miko 3 manufacturer product page and brochure. CPU/accelerator, RAM, flash, battery capacity and sensor chip part numbers are not established; Miko Mini specifications are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -80012,11 +80401,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -82354,8 +82738,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "neubility-neubie-current",
+            "configuration": "Current manufacturer specification: delivery, patrol and open-cargo applications share a configurable robot base. CPU, RAM, storage, radio SKU and battery chemistry are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -82369,28 +82759,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "LTE antenna and cellular connection; modem model and operating bands unspecified.",
+                "sources": [
+                  "https://www.neubility.ai/en/product"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "neubility-neubie-current",
+                "configuration": "Current manufacturer specification: delivery, patrol and open-cargo applications share a configurable robot base. CPU, RAM, storage, radio SKU and battery chemistry are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and safety",
+                "details": "Multiple monocular/depth cameras, side ultrasonic sensors and GPS; camera-based sensor fusion reduces reliance on precise GPS. No LiDAR is asserted for this specification.",
+                "sources": [
+                  "https://www.neubility.ai/en/product"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "neubility-neubie-current",
+                "configuration": "Current manufacturer specification: delivery, patrol and open-cargo applications share a configurable robot base. CPU, RAM, storage, radio SKU and battery chemistry are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and drivetrain",
+                "details": "Manufacturer lists 25.9 V, 60 Ah and approximately 1,500 Wh; charger output 29.4 V/6 A. Four-wheel drive, independent double-wishbone suspension and skid steering; 20 kg safe payload, 61.5 kg unladen.",
+                "sources": [
+                  "https://www.neubility.ai/en/product"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "neubility-neubie-current",
+                "configuration": "Current manufacturer specification: delivery, patrol and open-cargo applications share a configurable robot base. CPU, RAM, storage, radio SKU and battery chemistry are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Application hardware",
+                "details": "Headlamp, LED indicators, cargo door/lock and charging station. CCTV patrol and open-cargo configurations are separate options; IoT integration supports service-space interaction.",
+                "sources": [
+                  "https://www.neubility.ai/en/product"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "neubility-neubie-current",
+                "configuration": "Current manufacturer specification: delivery, patrol and open-cargo applications share a configurable robot base. CPU, RAM, storage, radio SKU and battery chemistry are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet and delivery tools",
+                "details": "Neubie-Go monitors robot state; Neubie Manager handles orders/delivery status; Neubility Order provides the delivery platform.",
+                "sources": [
+                  "https://www.neubility.ai/en/product"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "neubility-neubie-current",
+                "configuration": "Current manufacturer specification: delivery, patrol and open-cargo applications share a configurable robot base. CPU, RAM, storage, radio SKU and battery chemistry are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -82406,11 +82861,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -125682,8 +126132,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "wowwee-chip-2016",
+            "configuration": "CHiP robot dog and its 2016 accessory ecosystem. CPU, memory and radio chip identities are not disclosed in the reviewed manufacturer documents.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -125697,8 +126153,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Control and accessory communication",
+                "details": "Bluetooth Low Energy connects the phone application. SmartBand and SmartBall interactions combine Bluetooth and infrared; BeaconSense is the manufacturer’s accessory-location technology.",
+                "sources": [
+                  "https://wowwee.com/chip",
+                  "https://wowmeta.s3.amazonaws.com/files/147555405674dba194362238b58770b5700fd22d7b.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wowwee-chip-2016",
+                "configuration": "CHiP robot dog and its 2016 accessory ecosystem. CPU, memory and radio chip identities are not disclosed in the reviewed manufacturer documents.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Published model communications",
                 "details": "BLE control is documented; a sufficiently specific passive signature is not yet implemented.",
@@ -125711,23 +126180,77 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception and interaction",
+                "details": "Infrared sensing, capacitive touch, gyroscope/accelerometer and voice recognition. These component classes do not identify a unique broadcast.",
+                "sources": [
+                  "https://wowwee.com/chip"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wowwee-chip-2016",
+                "configuration": "CHiP robot dog and its 2016 accessory ecosystem. CPU, memory and radio chip identities are not disclosed in the reviewed manufacturer documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Robot power and locomotion",
+                "details": "7.4 V, 1,800 mAh lithium-ion robot battery; direct charging or automatic return to SmartBed. Four mecanum wheels provide omnidirectional motion.",
+                "sources": [
+                  "https://wowwee.com/chip",
+                  "https://wowmeta.s3.amazonaws.com/files/147555405674dba194362238b58770b5700fd22d7b.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wowwee-chip-2016",
+                "configuration": "CHiP robot dog and its 2016 accessory ecosystem. CPU, memory and radio chip identities are not disclosed in the reviewed manufacturer documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Separate accessory power",
+                "details": "SmartBand has its own 3.7 V, 130 mAh rechargeable pack and micro-USB charging. SmartBall uses four AAA cells; neither is the robot’s battery.",
+                "sources": [
+                  "https://wowmeta.s3.amazonaws.com/files/147555405674dba194362238b58770b5700fd22d7b.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wowwee-chip-2016",
+                "configuration": "CHiP robot dog and its 2016 accessory ecosystem. CPU, memory and radio chip identities are not disclosed in the reviewed manufacturer documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Application and standalone operation",
+                "details": "iOS/Android CHiP application supports remote control, sensor feedback and firmware updates. Core play functions also operate without a phone.",
+                "sources": [
+                  "https://wowwee.com/chip",
+                  "https://wowmeta.s3.amazonaws.com/files/147555405674dba194362238b58770b5700fd22d7b.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wowwee-chip-2016",
+                "configuration": "CHiP robot dog and its 2016 accessory ecosystem. CPU, memory and radio chip identities are not disclosed in the reviewed manufacturer documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -125752,11 +126275,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -270898,6 +271417,415 @@
             ]
           }
         ]
+      },
+      {
+        "id": "kiwibot-4-winchester-2023",
+        "manufacturer": "Kiwibot",
+        "models": [
+          "Kiwibot 4.0"
+        ],
+        "configuration": "May 2023 manufacturer presentation filed with Winchester, page 4. This documented build is not a specification for later Rkiwi or Cargo robots. Storage, modem and motor SKUs are not identified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard computer",
+            "details": "NVIDIA Jetson AGX Xavier 32 GB module identified in the component diagram.",
+            "sources": [
+              "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Module memory",
+            "details": "32 GB configuration; separate persistent storage is unspecified.",
+            "sources": [
+              "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and safety",
+            "details": "RPLIDAR S1; stereo, zoom, inner IR USB and rear USB cameras; GPS, IMU, cliff, distance and ambient-light sensors.",
+            "sources": [
+              "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Cellular assembly",
+            "details": "Router and LPAM-BC3G-26 magnetic MIMO cellular antenna. Antenna identification does not establish the installed modem or active network bands.",
+            "sources": [
+              "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and running gear",
+            "details": "14.8 V, 39.8 Ah, 589 Wh pack; skid-steer chassis V3.3. Approximately seven hours claimed; 20.5 kg with battery.",
+            "sources": [
+              "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cargo and human interface",
+            "details": "Lockable 19.2 L cargo compartment with cooling, front LED display, lights and sound/alarm system.",
+            "sources": [
+              "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operating scope",
+            "details": "The filed configuration is described as level 2 autonomy with remote operational supervision.",
+            "sources": [
+              "https://winchesterva.civicweb.net/document/77993/Presentation%20on%20Kiwibot%20Personal%20Delivery%20Devic.pdf?handle=BF72B57EEFE04479986A9D0666631FDB"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "wowwee-chip-2016",
+        "manufacturer": "WowWee",
+        "models": [
+          "CHiP"
+        ],
+        "configuration": "CHiP robot dog and its 2016 accessory ecosystem. CPU, memory and radio chip identities are not disclosed in the reviewed manufacturer documents.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Control and accessory communication",
+            "details": "Bluetooth Low Energy connects the phone application. SmartBand and SmartBall interactions combine Bluetooth and infrared; BeaconSense is the manufacturer’s accessory-location technology.",
+            "sources": [
+              "https://wowwee.com/chip",
+              "https://wowmeta.s3.amazonaws.com/files/147555405674dba194362238b58770b5700fd22d7b.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception and interaction",
+            "details": "Infrared sensing, capacitive touch, gyroscope/accelerometer and voice recognition. These component classes do not identify a unique broadcast.",
+            "sources": [
+              "https://wowwee.com/chip"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Robot power and locomotion",
+            "details": "7.4 V, 1,800 mAh lithium-ion robot battery; direct charging or automatic return to SmartBed. Four mecanum wheels provide omnidirectional motion.",
+            "sources": [
+              "https://wowwee.com/chip",
+              "https://wowmeta.s3.amazonaws.com/files/147555405674dba194362238b58770b5700fd22d7b.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Separate accessory power",
+            "details": "SmartBand has its own 3.7 V, 130 mAh rechargeable pack and micro-USB charging. SmartBall uses four AAA cells; neither is the robot’s battery.",
+            "sources": [
+              "https://wowmeta.s3.amazonaws.com/files/147555405674dba194362238b58770b5700fd22d7b.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Application and standalone operation",
+            "details": "iOS/Android CHiP application supports remote control, sensor feedback and firmware updates. Core play functions also operate without a phone.",
+            "sources": [
+              "https://wowwee.com/chip",
+              "https://wowmeta.s3.amazonaws.com/files/147555405674dba194362238b58770b5700fd22d7b.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "miko3-documented",
+        "manufacturer": "Miko",
+        "models": [
+          "Miko 3"
+        ],
+        "configuration": "Miko 3 manufacturer product page and brochure. CPU/accelerator, RAM, flash, battery capacity and sensor chip part numbers are not established; Miko Mini specifications are separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Vision and audio",
+            "details": "Wide-angle HD camera, dual MEMS microphones, time-of-flight range and odometric sensing. Manufacturer brochure describes visual SLAM, face recognition and acoustic localization.",
+            "sources": [
+              "https://miko.ai/products/miko-3",
+              "https://5.imimg.com/data5/SELLER/Doc/2023/8/338492359/NG/JX/ZG/49843013/miko-3.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "User interface and charging",
+            "details": "IPS touch display and speaker; USB-C charging. January 2022 charging guide specifies 5 V/3 A input for its recommended 15 W charging setup, not a 5 V battery.",
+            "sources": [
+              "https://miko.ai/products/miko-3",
+              "https://miko.ai/blogs/explore-miko/miko-3-charging-specification"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobile and rechargeable platform",
+            "details": "Rubberized wheels and rechargeable power. Product page estimates roughly four hours charging at 15 W; operating duration depends on use.",
+            "sources": [
+              "https://miko.ai/products/miko-3"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Network setup",
+            "details": "Wi-Fi connection through the Miko parent application; the reviewed setup instructions do not identify radio chip or RF band.",
+            "sources": [
+              "https://miko.ai/pages/miko-3-faqs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Onboard and cloud functions",
+            "details": "Manufacturer describes hybrid edge/cloud processing, educational apps and Mikonnect parent video calling/remote navigation. This is an architecture description, not a processor identification.",
+            "sources": [
+              "https://5.imimg.com/data5/SELLER/Doc/2023/8/338492359/NG/JX/ZG/49843013/miko-3.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "neubility-neubie-current",
+        "manufacturer": "Neubility",
+        "models": [
+          "Neubie"
+        ],
+        "configuration": "Current manufacturer specification: delivery, patrol and open-cargo applications share a configurable robot base. CPU, RAM, storage, radio SKU and battery chemistry are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "LTE antenna and cellular connection; modem model and operating bands unspecified.",
+            "sources": [
+              "https://www.neubility.ai/en/product"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and safety",
+            "details": "Multiple monocular/depth cameras, side ultrasonic sensors and GPS; camera-based sensor fusion reduces reliance on precise GPS. No LiDAR is asserted for this specification.",
+            "sources": [
+              "https://www.neubility.ai/en/product"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and drivetrain",
+            "details": "Manufacturer lists 25.9 V, 60 Ah and approximately 1,500 Wh; charger output 29.4 V/6 A. Four-wheel drive, independent double-wishbone suspension and skid steering; 20 kg safe payload, 61.5 kg unladen.",
+            "sources": [
+              "https://www.neubility.ai/en/product"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Application hardware",
+            "details": "Headlamp, LED indicators, cargo door/lock and charging station. CCTV patrol and open-cargo configurations are separate options; IoT integration supports service-space interaction.",
+            "sources": [
+              "https://www.neubility.ai/en/product"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet and delivery tools",
+            "details": "Neubie-Go monitors robot state; Neubie Manager handles orders/delivery status; Neubility Order provides the delivery platform.",
+            "sources": [
+              "https://www.neubility.ai/en/product"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hanson-sophia-utility-2023",
+        "manufacturer": "Hanson Robotics",
+        "models": [
+          "Sophia",
+          "Sophia Utility Platform"
+        ],
+        "configuration": "Sophia Utility Platform shown in Hanson’s June 2023 presentation, slide 22. Modular options vary; this is not a universal description of the original 2016 Sophia. CPU/NPU part numbers, RAM, storage, radio and battery ratings remain undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Embedded control computer",
+            "details": "Embedded PC with NPU running Hanson-AI NLU+MP; processor manufacturer and SKU are not given.",
+            "sources": [
+              "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Interaction and navigation array",
+            "details": "Camera eyes, microphones, touch sensing, IMUs, 3D camera, FLIR, surrounding cameras, time-of-flight and proximity sensors; navigation base includes LiDAR.",
+            "sources": [
+              "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Articulated body and mobile option",
+            "details": "32 facial degrees of freedom; articulated neck, arms/hands, torso and spine. Diagram marks legs optional and describes self-charging mobility with emergency bumpers; battery capacity unspecified.",
+            "sources": [
+              "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Human interaction",
+            "details": "Speaker, microphone array and touch-sensitive face, shoulders, arms and hands.",
+            "sources": [
+              "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy and modular functions",
+            "details": "Hanson-AI language/motion processing and SLAM navigation; navigation/control modules vary by ordered configuration.",
+            "sources": [
+              "https://www.european-lotteries.org/system/files/inline-files/Hanson_2023-06-14.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "geekplus-p500r-brochure",
+        "manufacturer": "Geek+",
+        "models": [
+          "P500R",
+          "Geek+ P-Series"
+        ],
+        "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "IWD V5.1: 51.1 V/30 Ah; LNU V5.2: 51.8 V/40.3 Ah lithium packs.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/P-series.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Inertial/QR navigation; IWD V5.1 infrared, LNU V5.2 LiDAR obstacle sensing.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/P-series.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Shelf-lifting and safety",
+            "details": "600 kg payload, 60 mm lift; emergency stops and bumper strips.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/P-series.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet integration",
+            "details": "Geekplus Software Suite provides warehouse orchestration and integration interfaces; embedded OS is unspecified.",
+            "sources": [
+              "https://www.geekplus.com/technology-detail-page/p-series"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "geekplus-p800r-brochure",
+        "manufacturer": "Geek+",
+        "models": [
+          "P800R",
+          "Geek+ P-Series"
+        ],
+        "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "51.1 V/27.9 Ah lithium pack.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/P-series.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Inertial/QR navigation and LiDAR; EWE/EWS visual sensing is optional.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/P-series.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Shelf-lifting and safety",
+            "details": "1,000 kg payload, 55 mm lift; emergency stops and bumper strips.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/P-series.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet integration",
+            "details": "Geekplus Software Suite provides warehouse orchestration and integration interfaces; embedded OS is unspecified.",
+            "sources": [
+              "https://www.geekplus.com/technology-detail-page/p-series"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "geekplus-p1200r-brochure",
+        "manufacturer": "Geek+",
+        "models": [
+          "P1200R",
+          "Geek+ P-Series"
+        ],
+        "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "51.1 V/27.9 Ah lithium pack.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/P-series.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Inertial/QR navigation and LiDAR; EWE/EWS visual sensing is optional.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/P-series.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Shelf-lifting and safety",
+            "details": "1,200 kg payload, 60 mm lift; emergency stops and bumper strips.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/P-series.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet integration",
+            "details": "Geekplus Software Suite provides warehouse orchestration and integration interfaces; embedded OS is unspecified.",
+            "sources": [
+              "https://www.geekplus.com/technology-detail-page/p-series"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -270914,8 +271842,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 233,
-    "devices_with_system_profiles": 230,
-    "devices_with_documented_compute": 111
+    "system_profiles": 241,
+    "devices_with_system_profiles": 236,
+    "devices_with_documented_compute": 113
   }
 }
