@@ -3342,6 +3342,649 @@
           ]
         }
       ]
+    },
+    {
+      "id": "petoi-nybble-q",
+      "manufacturer": "Petoi",
+      "models": [
+        "Nybble Q"
+      ],
+      "configuration": "Nybble Q with BiBoard V1 as identified by its manual. The product table also lists WROOM-32D; board revision must be checked before assuming that module instead of the V1 manual’s MINI-1.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "BiBoard V1 controller",
+          "details": "ESP32-MINI-1 / ESP32-U4WDH, dual Xtensa LX6 cores.",
+          "sources": [
+            "https://guide.petoi.com/product/nybble-q.md",
+            "https://guide.petoi.com/biboard/biboard-v1-guide.md"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Controller memory",
+          "details": "520 KB SRAM, 448 KB ROM, 4 MB flash; external EEPROM is optional with current firmware.",
+          "sources": [
+            "https://guide.petoi.com/biboard/biboard-v1-guide.md"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Integrated wireless",
+          "details": "2.4 GHz 802.11b/g/n; Bluetooth 4.2 BR/EDR and BLE.",
+          "sources": [
+            "https://guide.petoi.com/biboard/biboard-v1-guide.md"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "USB and expansion",
+          "details": "CH343P serial bridge; twelve PWM channels, Grove UART/I2C/analog and optional Raspberry Pi connector.",
+          "sources": [
+            "https://guide.petoi.com/biboard/biboard-v1-guide.md"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Programming",
+          "details": "Petoi Coding Blocks, C++ and Python; onboard voice-command support.",
+          "sources": [
+            "https://guide.petoi.com/product/nybble-q.md"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Inertial sensing",
+          "details": "MPU6050 or ICM42670 six-axis IMU, depending on component availability.",
+          "sources": [
+            "https://www.petoi.com/pages/robot-cat-nybble-q-technical-specifications"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Servos and battery",
+          "details": "Eleven servo-driven joints; P1S or P1L coreless servos. 7.4 V, 1000 mAh Li-ion pack with 5 V / 1 A USB charging.",
+          "sources": [
+            "https://www.petoi.com/pages/robot-cat-nybble-q-technical-specifications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "petoi-bittle-x-arm",
+      "manufacturer": "Petoi",
+      "models": [
+        "Bittle X+Arm"
+      ],
+      "configuration": "Bittle X+Arm configuration in the Bittle X V2+Arm manual: BiBoard V1. Does not establish the earlier BiBoard V0 Bittle X hardware.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "BiBoard V1 controller",
+          "details": "ESP32-MINI-1 / ESP32-U4WDH, dual Xtensa LX6 cores.",
+          "sources": [
+            "https://guide.petoi.com/product/bittle-x-v2+arm.md",
+            "https://guide.petoi.com/biboard/biboard-v1-guide.md"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Controller memory",
+          "details": "520 KB SRAM, 448 KB ROM, 4 MB flash; external EEPROM is optional with current firmware.",
+          "sources": [
+            "https://guide.petoi.com/biboard/biboard-v1-guide.md"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Integrated wireless",
+          "details": "2.4 GHz 802.11b/g/n; Bluetooth 4.2 BR/EDR and BLE.",
+          "sources": [
+            "https://guide.petoi.com/biboard/biboard-v1-guide.md"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "USB and expansion",
+          "details": "CH343P serial bridge; twelve PWM channels, Grove UART/I2C/analog and optional Raspberry Pi connector.",
+          "sources": [
+            "https://guide.petoi.com/biboard/biboard-v1-guide.md"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Programming",
+          "details": "Petoi Coding Blocks, C++ and Python; onboard voice-command support.",
+          "sources": [
+            "https://guide.petoi.com/product/bittle-x-v2+arm.md"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Motion and contact sensing",
+          "details": "Onboard gyroscope and back touch sensor; feedback servos support recorded motions.",
+          "sources": [
+            "https://guide.petoi.com/product/bittle-x-v2+arm.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "petoi-quaddle",
+      "manufacturer": "Petoi",
+      "models": [
+        "Quaddle"
+      ],
+      "configuration": "Quaddle Builder, Buddy and Scout are distinct configurations; AI and perception additions below are tier-specific.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "ESP32-S3 MotionCore",
+          "details": "MotionCore controller; Buddy and Scout add an AICore board. The cited guide does not specify the AICore processor SKU.",
+          "sources": [
+            "https://guide.petoi.com/product/quaddle-under-construction.md"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Four-servo mechanism",
+          "details": "Four servo motors drive the quadruped linkage; Buddy/Scout add teach-and-replay behavior.",
+          "sources": [
+            "https://guide.petoi.com/product/quaddle-under-construction.md",
+            "https://www.petoi.com/pages/quaddle-educational-robot-kit"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Scout perception options",
+          "details": "Scout adds gesture, light and infrared distance sensing. AI vision is optional; it is not established as standard on every Quaddle.",
+          "sources": [
+            "https://www.petoi.com/pages/quaddle-educational-robot-kit"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Expansion",
+          "details": "Raspberry Pi Zero socket on all three tiers; a Pi is an expansion option.",
+          "sources": [
+            "https://www.petoi.com/pages/quaddle-educational-robot-kit"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "OpenCat",
+          "details": "Open firmware with Coding Blocks, Python and C++ programming.",
+          "sources": [
+            "https://guide.petoi.com/product/quaddle-under-construction.md",
+            "https://www.petoi.com/pages/quaddle-educational-robot-kit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deep-lite3",
+      "manufacturer": "DEEP Robotics",
+      "models": [
+        "DEEP Robotics Lite3",
+        "Lite3",
+        "Jueying Lite3"
+      ],
+      "configuration": "Lite3 motion manual V2.0.1-0 and perception manual V2.2.2-0. Xavier NX and D435i are documented for Pro/LiDAR, not every Lite3.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Motion processor",
+          "details": "ARM RK3588 motion host.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/10/Jueying-Lite3-Motion-Development-Manual-beta-V2.0.1-0.pdf"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Pro/LiDAR perception computer",
+          "details": "NVIDIA Jetson Xavier NX handles perception in Pro/LiDAR configurations.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/10/Jueying-Lite3-Perception-Development-Manual-beta-V2.2.2-0.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Joint and inertial feedback",
+          "details": "Absolute encoders in the twelve motor/reducer joints, plus IMU feedback.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/10/Jueying-Lite3-Motion-Development-Manual-beta-V2.0.1-0.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Pro/LiDAR camera",
+          "details": "Intel RealSense D435i; LiDAR configurations have additional laser sensing.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/10/Jueying-Lite3-Perception-Development-Manual-beta-V2.2.2-0.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Leg actuation and runtime",
+          "details": "Twelve DC motor/reducer joints. Published battery runtime is 1.5–2 hours, dependent on operation.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/10/Jueying-Lite3-Motion-Development-Manual-beta-V2.0.1-0.pdf",
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/file/Jueying%20Lite3.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Configuration-dependent ports",
+          "details": "Basic has no external development ports; Venture adds Ethernet and power outputs. Pro/LiDAR add Type-C, USB 3.0 and HDMI.",
+          "sources": [
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/file/Jueying%20Lite3.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Local Wi-Fi",
+          "details": "Perception manual documents a local Wi-Fi connection for development; no unique passive identity is established.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/10/Jueying-Lite3-Perception-Development-Manual-beta-V2.2.2-0.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Perception middleware",
+          "details": "Ubuntu 20; ROS 1/2 options depend on installed firmware. UDP bridges connect perception, motion and app messages.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/10/Jueying-Lite3-Perception-Development-Manual-beta-V2.2.2-0.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deep-x20",
+      "manufacturer": "DEEP Robotics",
+      "models": [
+        "DEEP Robotics X20",
+        "X20",
+        "Jueying X20"
+      ],
+      "configuration": "Jueying X20 manufacturer brochure. Payload modules are optional; the source does not identify processor or radio-chip part numbers.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Perception and AI modules",
+          "details": "ROS-based perception and artificial-intelligence computing modules; CPU SKU unspecified.",
+          "sources": [
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/file/Jueying%20X20.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Depth and lidar configuration",
+          "details": "Brochure describes depth-camera/lidar perception. Dual-light pan/tilt, BeiDou/GPS/RTK and robotic-arm packages are optional.",
+          "sources": [
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/file/Jueying%20X20.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi and optional cellular",
+          "details": "Wi-Fi is listed; 4G/5G requires an optional module.",
+          "sources": [
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/file/Jueying%20X20.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "External connections",
+          "details": "Ethernet, USB, RS485 and RS232; 5/12/24 V and 72 V battery power outputs.",
+          "sources": [
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/file/Jueying%20X20.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and charging",
+          "details": "Autonomous charging; brochure runtime is four hours unloaded or two hours with 20 kg payload.",
+          "sources": [
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/file/Jueying%20X20.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "ROS perception",
+          "details": "ROS-based mapping/navigation integration; environmental-perception SDK is optional.",
+          "sources": [
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/file/Jueying%20X20.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deep-x30",
+      "manufacturer": "DEEP Robotics",
+      "models": [
+        "DEEP Robotics X30",
+        "X30",
+        "Jueying X30"
+      ],
+      "configuration": "X30 and X30 Pro are distinguished in the manufacturer’s published table; processor and memory components remain undisclosed there.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Standard versus Pro",
+          "details": "Standard X30: Ethernet and 72 V battery output. X30 Pro: Ethernet, USB 2.0/3.0 and 5/12/24 V outputs.",
+          "sources": [
+            "https://en.deeprobotics.cn/en/wap/product3.html"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Pro Wi-Fi",
+          "details": "Wi-Fi is listed for X30 Pro; this table does not establish a Wi-Fi interface on the standard X30.",
+          "sources": [
+            "https://en.deeprobotics.cn/en/wap/product3.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Integrated perception",
+          "details": "Manufacturer describes fused perception for navigation in darkness; sensor chip/model identifiers are not published on this page.",
+          "sources": [
+            "https://en.deeprobotics.cn/en/wap/product3.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Quick-change battery",
+          "details": "Published runtime 2.5–4 hours. Battery-inclusive mass is 56 kg for X30 or 59 kg for Pro; IP67 enclosure.",
+          "sources": [
+            "https://en.deeprobotics.cn/en/wap/product3.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deep-lynx-m20",
+      "manufacturer": "DEEP Robotics",
+      "models": [
+        "LYNX M20",
+        "Lynx M20"
+      ],
+      "configuration": "LYNX M20 hardware manual V0.0.4-0. CPU-103/105/106 are diagram node labels, not processor part numbers; Pro-only hardware stays identified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Controller architecture",
+          "details": "M20 has CPU-103 and CPU-105 nodes, DCU motor control and a separate MCU. Pro adds CPU-106; chip SKUs are not identified.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/08/Lynx-M20-Series-Hardware-Development-Manual-V0.0.4-0.pdf"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Published processor configuration",
+          "details": "M20: two 64-bit octa-core industrial processors; Pro: three. Manufacturer does not name the silicon part numbers.",
+          "sources": [
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/app/M20%E5%8D%95%E9%A1%B5-%E8%8B%B1%E6%96%87.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Published capacity",
+          "details": "Both configurations list 16 GB + 128 GB; the brochure does not state memory technology or per-node allocation.",
+          "sources": [
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/app/M20%E5%8D%95%E9%A1%B5-%E8%8B%B1%E6%96%87.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Bidirectional perception",
+          "details": "Front/rear lidar and cameras, IMU and GPS inputs are shown in the hardware architecture.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/08/Lynx-M20-Series-Hardware-Development-Manual-V0.0.4-0.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Controller links",
+          "details": "Internal Wi-Fi and a separate controller radio receiver are shown; no RF band or unique broadcast pattern is specified.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/08/Lynx-M20-Series-Hardware-Development-Manual-V0.0.4-0.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Internal and external buses",
+          "details": "Switched Ethernet connects compute and lidar; UART connects MCU/IMU. Standard exposes Ethernet/72 V; Pro adds USB 3.0 Type-C and 24 V/Ethernet payload ports.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/08/Lynx-M20-Series-Hardware-Development-Manual-V0.0.4-0.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Wheel-leg drive and battery",
+          "details": "Sixteen joints and two batteries in the architecture. Hot-swap support; brochure runtime three hours unloaded or 2.5 hours loaded.",
+          "sources": [
+            "https://www.deeprobotics.us/wp-content/uploads/2025/08/Lynx-M20-Series-Hardware-Development-Manual-V0.0.4-0.pdf",
+            "https://deep-website.oss-cn-hangzhou.aliyuncs.com/app/M20%E5%8D%95%E9%A1%B5-%E8%8B%B1%E6%96%87.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xiaomi-cyberdog",
+      "manufacturer": "Xiaomi",
+      "models": [
+        "CyberDog",
+        "Xiaomi CyberDog"
+      ],
+      "configuration": "Original CyberDog engineering edition; processor architecture and storage are from Xiaomi’s product page. Do not transfer CyberDog 2 sensor/storage specifications.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA edge AI computer",
+          "details": "Six Carmel ARM CPU cores, 384 CUDA cores, 48 Tensor cores and two deep-learning accelerators; 21 TOPS advertised.",
+          "sources": [
+            "https://www.mi.com/cyberdog",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog/index.2e091939.js"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Storage",
+          "details": "128 GB SSD.",
+          "sources": [
+            "https://www.mi.com/cyberdog",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog/index.2e091939.js"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision system",
+          "details": "Intel RealSense D450 depth module, AI interaction camera and binocular ultrawide cameras; eleven sensors across the platform.",
+          "sources": [
+            "https://www.mi.com/cyberdog",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog/index.2e091939.js"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Servo actuators",
+          "details": "Xiaomi-developed servos rated up to 32 Nm and 220 rpm; battery details are not established by this source.",
+          "sources": [
+            "https://www.mi.com/cyberdog",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog/index.2e091939.js"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Peripheral connections",
+          "details": "Three USB-C ports and one HDMI.",
+          "sources": [
+            "https://www.mi.com/cyberdog",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog/index.2e091939.js"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "ROS 2 stack",
+          "details": "Manufacturer repository documents ROS 2 Galactic with Cyclone DDS, adapted to Ubuntu 18.04 on Jetson.",
+          "sources": [
+            "https://github.com/MiRoboticsLab/cyberdog_ros2/blob/main/README_EN.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xiaomi-cyberdog-2",
+      "manufacturer": "Xiaomi",
+      "models": [
+        "Xiaomi CyberDog 2",
+        "CyberDog 2",
+        "CyberDog2"
+      ],
+      "configuration": "CyberDog 2 model MS2242CN; Xiaomi’s published specification, separate from the original engineering edition.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA CPU / GPU",
+          "details": "Six 64-bit Carmel ARMv8.2 CPU cores; 384-core Volta GPU with 48 Tensor cores.",
+          "sources": [
+            "https://www.mi.com/cyberdog2/specs",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog2/specs.74df51bf.js"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "RAM and storage",
+          "details": "8 GB 128-bit LPDDR4x; 16 GB eMMC 5.1; 32 GB Class-10 industrial SD.",
+          "sources": [
+            "https://www.mi.com/cyberdog2/specs",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog2/specs.74df51bf.js"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Cameras and lidar",
+          "details": "RealSense D430, 13 MP interaction camera, 1 MP RGB, 146° fisheye and YDLIDAR TG30.",
+          "sources": [
+            "https://www.mi.com/cyberdog2/specs",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog2/specs.74df51bf.js"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Other sensors",
+          "details": "Touch, ultrasound, ToF, microphones, UWB and IMU.",
+          "sources": [
+            "https://www.mi.com/cyberdog2/specs",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog2/specs.74df51bf.js"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless interfaces",
+          "details": "802.11a/b/g/n/ac Wi-Fi and Bluetooth 5.0; supplied Bluetooth controller includes UWB localization.",
+          "sources": [
+            "https://www.mi.com/cyberdog2/specs",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog2/specs.74df51bf.js"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "USB",
+          "details": "One USB-C port.",
+          "sources": [
+            "https://www.mi.com/cyberdog2/specs",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog2/specs.74df51bf.js"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and joints",
+          "details": "21.6 V, 4500 mAh, 97.2 Wh Li-ion polymer pack; twelve degrees of freedom. Around 90 minutes of mixed basic activity in manufacturer testing.",
+          "sources": [
+            "https://www.mi.com/cyberdog2/specs",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog2/specs.74df51bf.js"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operating system",
+          "details": "Ubuntu 18.04 and ROS 2.",
+          "sources": [
+            "https://www.mi.com/cyberdog2/specs",
+            "https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/pro/js/product/cyberdog2/specs.74df51bf.js"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boston-dynamics-stretch",
+      "manufacturer": "Boston Dynamics",
+      "models": [
+        "Stretch"
+      ],
+      "configuration": "Boston Dynamics warehouse Stretch, production configuration. This is a different product from Hello Robot Stretch; processor and memory part numbers are not public in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard control and safety",
+          "details": "Base houses onboard computing; a separate dedicated safety computer supervises redundant safety sensors.",
+          "sources": [
+            "https://bostondynamics.com/video/the-evolution-of-stretch/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception and gripper sensing",
+          "details": "Actuated mast with 2D/3D cameras, base lidar and a vacuum gripper with individually controlled cups and embedded sensing.",
+          "sources": [
+            "https://bostondynamics.com/webinars/impact-your-inbound-automate-unloading-with-stretch/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Safety sensing",
+          "details": "Safety-rated base lidar detects people approaching the robot.",
+          "sources": [
+            "https://bostondynamics.com/video/the-evolution-of-stretch/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Conveyor wireless link",
+          "details": "Documented wireless connection to the telescopic conveyor; protocol/band unspecified. Warehouse internet is not required for unloading.",
+          "sources": [
+            "https://bostondynamics.com/case-studies/stretch-helps-gap-inc-deliver-for-its-customers/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator controls",
+          "details": "Wired operator pendant and touchscreen tablet.",
+          "sources": [
+            "https://bostondynamics.com/case-studies/stretch-helps-gap-inc-deliver-for-its-customers/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and handling",
+          "details": "Up to sixteen hours battery operation; fast charge to 90% in 1 hour 45 minutes. Case payload up to 23 kg.",
+          "sources": [
+            "https://bostondynamics.com/wp-content/uploads/2024/01/Stretch-Brochure-2025-compressed.pdf"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -56,6 +56,24 @@ test('unknown hardware and software entries retain explicit gaps',()=>{
  assert.equal(system('Example','Robot family',{category:'family'}).record_scope,'program-or-family');
 });
 
+test('robot generations and optional perception computers remain distinct',()=>{
+ const first=system('Xiaomi','CyberDog'), second=system('Xiaomi','Xiaomi CyberDog 2');
+ assert.match(text(first),/D450/);
+ assert.match(text(first),/128 GB SSD/);
+ assert.doesNotMatch(text(first),/D430|TG30/);
+ assert.match(text(second),/D430/);
+ assert.match(text(second),/16 GB eMMC/);
+ assert.doesNotMatch(text(second),/D450|128 GB SSD/);
+ const lite=system('DEEP Robotics','DEEP Robotics Lite3');
+ assert.match(text(lite),/RK3588/);
+ const nx=lite.sections.compute.facts.find(f=>/Xavier NX/.test(f.details));
+ assert.match(nx.details,/Pro\/LiDAR/);
+ assert.match(text(system('Petoi','Bittle X+Arm')),/4 MB/);
+ assert.doesNotMatch(text(system('Petoi','Bittle X+Arm')),/16 MB/);
+ assert.deepEqual(profileIds(system('Hello Robot','Stretch')),[]);
+ assert.deepEqual(profileIds(system('Boston Dynamics','Stretch')),['boston-dynamics-stretch']);
+});
+
 test('radio references do not become model identity or unreviewed scanner signatures',()=>{
  const go1=system('Unitree','Go1'),go2=system('Unitree','Go2');
  assert.ok(go1.sections.identification.facts.some(f=>f.pattern?.id==='unitree-go1-wifi-name'));
