@@ -721,18 +721,51 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "abb-irb6700-irc5",
+            "configuration": "IRB 6700 on IRC5, using the DSQC1000-era controller documented in ABB revisions Z/AO. OmniCore and earlier IRC5 generations are separate configurations.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "IRC5 main computer",
+                "details": "DSQC1000 main computer, with separate axis computer. Silicon processor model is not specified in the reviewed product specifications.",
+                "sources": [
+                  "https://library.e.abb.com/public/1191b23d5d564388a77d636084b9ae0e/3HAC044265%20PS%20IRB%206700%20on%20IRC5-en.pdf",
+                  "https://library.e.abb.com/public/db54411674b54938a3de7ef82e7c33e6/3HAC047400%20PS%20IRC5-en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "abb-irb6700-irc5",
+                "configuration": "IRB 6700 on IRC5, using the DSQC1000-era controller documented in ABB revisions Z/AO. OmniCore and earlier IRC5 generations are separate configurations.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "IRC5 memory",
+                "details": "1 GB DRAM and 2 GB mass storage; FAT32 support. These are controller capacities, not per-joint memory.",
+                "sources": [
+                  "https://library.e.abb.com/public/db54411674b54938a3de7ef82e7c33e6/3HAC047400%20PS%20IRC5-en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "abb-irb6700-irc5",
+                "configuration": "IRB 6700 on IRC5, using the DSQC1000-era controller documented in ABB revisions Z/AO. OmniCore and earlier IRC5 generations are separate configurations.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
@@ -751,13 +784,52 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Controller ports",
+                "details": "10/100 Ethernet service and network interfaces, four USB ports and two PCIe expansion slots. Optional RS-232 supports up to 115.2 kbit/s.",
+                "sources": [
+                  "https://library.e.abb.com/public/db54411674b54938a3de7ef82e7c33e6/3HAC047400%20PS%20IRC5-en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "abb-irb6700-irc5",
+                "configuration": "IRB 6700 on IRC5, using the DSQC1000-era controller documented in ABB revisions Z/AO. OmniCore and earlier IRC5 generations are separate configurations.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Optional arm cabling",
+                "details": "DressPack option 455-8 supplies CAT5e Ethernet through M12 connections; installation and fieldbus options must be checked on the actual arm.",
+                "sources": [
+                  "https://library.e.abb.com/public/1191b23d5d564388a77d636084b9ae0e/3HAC044265%20PS%20IRB%206700%20on%20IRC5-en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "abb-irb6700-irc5",
+                "configuration": "IRB 6700 on IRC5, using the DSQC1000-era controller documented in ABB revisions Z/AO. OmniCore and earlier IRC5 generations are separate configurations.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control environment",
+                "details": "RobotWare 6-era controller, RAPID programming and RobotStudio. Network options include EtherNet/IP and PROFINET.",
+                "sources": [
+                  "https://library.e.abb.com/public/1191b23d5d564388a77d636084b9ae0e/3HAC044265%20PS%20IRB%206700%20on%20IRC5-en.pdf",
+                  "https://library.e.abb.com/public/db54411674b54938a3de7ef82e7c33e6/3HAC047400%20PS%20IRC5-en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "abb-irb6700-irc5",
+                "configuration": "IRB 6700 on IRC5, using the DSQC1000-era controller documented in ABB revisions Z/AO. OmniCore and earlier IRC5 generations are separate configurations.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -781,13 +853,9 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
           "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "power"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -258862,6 +258930,7 @@
         "id": "abb-irb6700-irc5",
         "manufacturer": "ABB Robotics",
         "models": [
+          "ABB IRB 6700",
           "ABB IRB6700",
           "IRB 6700"
         ],
@@ -259662,7 +259731,7 @@
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
     "system_profiles": 147,
-    "devices_with_system_profiles": 146,
-    "devices_with_documented_compute": 81
+    "devices_with_system_profiles": 147,
+    "devices_with_documented_compute": 82
   }
 }
