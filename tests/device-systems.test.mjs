@@ -366,3 +366,32 @@ test('electric and service robot revisions keep their processor and power bounda
  assert.match(text(system('Scythe Robotics','M.52').sections.compute),/May 2022/);
  assert.equal(system('Relay Robotics','Relay').sections.compute.status,'not-established');
 });
+
+
+test('research robots keep onboard compute, external equipment and generations distinct',()=>{
+ const lio=system('F&P Robotics','Lio');
+ assert.match(text(lio.sections.compute),/AGX Xavier/);
+ assert.match(text(lio.sections.sensors),/D435/);
+ assert.equal(lio.sections.memory.status,'not-established');
+ const spirit=system('Ghost Robotics','Ghost Robotics Spirit 40');
+ assert.match(text(spirit.sections.compute),/Jetson TX2/);
+ assert.match(text(spirit.sections.compute),/remote laptop, not the robot/);
+ assert.equal(spirit.sections.memory.status,'not-established');
+ const fp=system('Dusty Robotics','FieldPrinter');
+ assert.match(text(fp.sections.sensors),/external equipment, not onboard GPS/);
+ assert.match(text(fp.sections.power),/two supplied, used individually/);
+ assert.equal(profileIds(system('Dusty Robotics','FieldPrinter 1')).length,0);
+ assert.equal(profileIds(system('Nauticus Robotics','Aquanaut Mark 2')).length,0);
+ assert.match(text(system('Nauticus Robotics','Aquanaut 2.1').sections.software),/future update/);
+ assert.match(system('Saga Robotics','Thorvald').configurations[0].configuration,/2017/);
+ assert.match(text(system('Saga Robotics','Thorvald').sections.power),/1,024/);
+ assert.equal(profileIds(system('Intuition Robotics','ElliQ 2')).length,0);
+ assert.match(text(system('Intuition Robotics','ElliQ 3').sections.compute),/MediaTek/);
+ assert.equal(system('PARO Robots','PARO').sections.radios.status,'not-established');
+ assert.match(text(system('PARO Robots','PARO').sections.identification),/no Wi-Fi\/BLE/);
+ const nao=system('NAO Robot','NAO');
+ assert.deepEqual(profileIds(nao),['nao-v6']);
+ assert.equal(profileIds(system('NAO Robot','NAO V5')).length,0);
+ assert.deepEqual(profileIds(system('Cobalt AI','Cobalt Robot')),['cobalt-security-2020']);
+ assert.equal(system('Cobalt AI','Cobalt Robot').sections.radios.status,'not-established');
+});

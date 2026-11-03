@@ -11790,6 +11790,482 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fp-lio-2020",
+      "manufacturer": "F&P Robotics",
+      "models": [
+        "Lio"
+      ],
+      "configuration": "Lio configuration in the manufacturer-authored 2020 research paper. Later builds may differ. Exact NUC/Atom/Raspberry Pi SKUs, RAM, storage, radio modules and battery energy are not specified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Four onboard computers",
+          "details": "Intel NUC, NVIDIA Jetson AGX Xavier, Raspberry Pi and an embedded Intel Atom PC; each runs separate modules.",
+          "sources": [
+            "https://arxiv.org/pdf/2006.09019"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation array",
+          "details": "Two LiDARs, ultrasonic proximity sensors, four bumpers and four downward infrared edge sensors; two Intel RealSense D435 cameras and a 170° fisheye camera.",
+          "sources": [
+            "https://arxiv.org/pdf/2006.09019"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Manipulation feedback",
+          "details": "Six-axis P-Rob 3 arm uses optical pseudo-absolute encoders. P-Grip has one base proximity sensor and four infrared proximity sensors per finger.",
+          "sources": [
+            "https://arxiv.org/pdf/2006.09019"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mobility and manipulation",
+          "details": "Differential-drive base with two casters; arm payload 3–5 kg and gripper opening 130 mm. Automatic charging-station return.",
+          "sources": [
+            "https://arxiv.org/pdf/2006.09019"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Internal and tool links",
+          "details": "Ethernet connects computers; the arm carries gigabit Ethernet, signal pins and 24 V tool power. Front display is non-touch; microphone and speakers support voice interaction.",
+          "sources": [
+            "https://arxiv.org/pdf/2006.09019"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control architecture",
+          "details": "myP and ROS topics connect control modules; gmapping and adaptive Monte Carlo localization provide mapped navigation.",
+          "sources": [
+            "https://arxiv.org/pdf/2006.09019"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cobalt-security-2020",
+      "manufacturer": "Cobalt Robotics",
+      "models": [
+        "Cobalt Security Robot",
+        "Cobalt Robot"
+      ],
+      "configuration": "Historical Cobalt specification published in 2020. Cobalt Robotics became Cobalt AI in June 2024; this does not establish unchanged hardware in later deployments. Processor/GPU models, RAM, storage, radio modules and battery capacity are unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard graphics processing",
+          "details": "An onboard GPU is listed; manufacturer and chip model are not disclosed.",
+          "sources": [
+            "https://cobaltrobotics.com/wp-content/uploads/2020/06/Cobalt-Robot-Spec-Sheet.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception hardware",
+          "details": "More than 60 sensors in total, including 360° imaging, thermal and depth cameras, ultrasound, LiDAR and environmental sensing.",
+          "sources": [
+            "https://cobaltrobotics.com/wp-content/uploads/2020/06/Cobalt-Robot-Spec-Sheet.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging",
+          "details": "Autonomous docking; pack chemistry, energy and drive-motor specifications are not given.",
+          "sources": [
+            "https://cobaltrobotics.com/wp-content/uploads/2020/06/Cobalt-Robot-Spec-Sheet.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator interaction",
+          "details": "Two-way video touchscreen, badge readers, PA/siren and LED status ring.",
+          "sources": [
+            "https://cobaltrobotics.com/wp-content/uploads/2020/06/Cobalt-Robot-Spec-Sheet.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Patrol and remote assistance",
+          "details": "LiDAR mapping, anomaly alerts and a customer dashboard, with human specialists supporting interactions.",
+          "sources": [
+            "https://cobaltrobotics.com/wp-content/uploads/2020/06/Cobalt-Robot-Spec-Sheet.pdf"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Manufacturer continuity",
+          "details": "Cobalt AI is the renamed Cobalt Robotics company, confirmed by its June 2024 announcement.",
+          "sources": [
+            "https://www.cobaltai.com/dean-drako-acquires-cobalt-ai-enterprise-security-automation-leader/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dusty-fieldprinter2",
+      "manufacturer": "Dusty Robotics",
+      "models": [
+        "FieldPrinter 2",
+        "FP2",
+        "FieldPrinter"
+      ],
+      "configuration": "FieldPrinter 2 specification updated September 21, 2026. A generic FieldPrinter record does not identify its generation. CPU, RAM, storage and radio chipsets are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Obstacle and cliff sensors",
+          "details": "Three forward infrared time-of-flight sensors and four cliff sensors, two front and two rear.",
+          "sources": [
+            "https://support.dustyrobotics.com/hc/en-us/articles/52682349645851-FieldPrinter-Specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "External positioning reference",
+          "details": "Leica AT500, AT930 or AT930-NRT laser tracker measures robot position; it is external equipment, not onboard GPS.",
+          "sources": [
+            "https://support.dustyrobotics.com/hc/en-us/articles/52682349645851-FieldPrinter-Specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Three connections",
+          "details": "Self-hosted Wi-Fi connects the iPad; onboard LTE exchanges files/reports with Dusty Portal; Dusty Radio Box links the external tracker. Bands are unspecified.",
+          "sources": [
+            "https://support.dustyrobotics.com/hc/en-us/articles/52682349645851-FieldPrinter-Specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Robot battery",
+          "details": "Milwaukee M18 18 V 5 Ah (90 Wh), rated 2–3 hours per battery; two supplied, used individually. Thirty-second hot-swap window. The Radio 2 accessory’s 2 Ah pack is separate.",
+          "sources": [
+            "https://support.dustyrobotics.com/hc/en-us/articles/52682349645851-FieldPrinter-Specs"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Printing assembly",
+          "details": "Two 1-inch inkjet heads, 308 DPI; specified ±1.6 mm placement accuracy depends on surveyed control.",
+          "sources": [
+            "https://support.dustyrobotics.com/hc/en-us/articles/52682349645851-FieldPrinter-Specs"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Layout workflow",
+          "details": "Dusty Portal/AutoCAD preparation and iPad control. Printing works offline after loading the layout.",
+          "sources": [
+            "https://support.dustyrobotics.com/hc/en-us/articles/52682349645851-FieldPrinter-Specs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nauticus-aquanaut21",
+      "manufacturer": "Nauticus Robotics",
+      "models": [
+        "Aquanaut 2.1"
+      ],
+      "configuration": "Aquanaut 2.1 commercial configuration advertised November 2026. Do not transfer its specifications to earlier Mark 2 vehicles. Processor, memory, sensor models, communication modules and frequencies are unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electric subsea vehicle",
+          "details": "Untethered; configurable battery up to 101.1 kWh, approximately eight-hour full recharge and maximum published endurance 72 hours. Final fit and mission alter performance.",
+          "sources": [
+            "https://nauticusrobotics.com/aquanaut/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Underwater and surface links",
+          "details": "Acoustic and RF communication are listed, with optical communication fielded subsea. These do not imply reception by Wi-Fi or BLE scanners.",
+          "sources": [
+            "https://nauticusrobotics.com/aquanaut/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload and depth configuration",
+          "details": "90 kg payload, 3,850 kg vehicle; configurable up to a 3,000 m design rating. The separate Mark 2 platform demonstrated 2,300 m.",
+          "sources": [
+            "https://nauticusrobotics.com/aquanaut/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy and development status",
+          "details": "ToolKITT behavior trees, route replanning and station-keeping. Cable/pipeline following is targeted; autonomous manipulation is a future update, not established current functionality.",
+          "sources": [
+            "https://nauticusrobotics.com/aquanaut/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "righthand-rightpick4",
+      "manufacturer": "RightHand Robotics",
+      "models": [
+        "RightPick 4"
+      ],
+      "configuration": "RightPick 4, announced January 2024, with current product documentation. Compute, RAM, storage, camera models and power input are not disclosed; industrial arm choice is installation-specific.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Grasp and vision feedback",
+          "details": "Industrial vision system plus grasp and suction-seal quality detection; sensor part numbers are unspecified.",
+          "sources": [
+            "https://righthandrobotics.com/the-latest/righthand-robotics-introduces-the-rightpick-4-system",
+            "https://righthandrobotics.com/products"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Gripping hardware",
+          "details": "Three compliant fingers combined with suction; optional barcode-scanning and automatic suction-cup swapping accessories.",
+          "sources": [
+            "https://righthandrobotics.com/products"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Picking and integration",
+          "details": "RightPick AI performs item recognition, planning and exception handling. An integration API connects warehouse workflows; fleet learning shares operational experience.",
+          "sources": [
+            "https://righthandrobotics.com/products"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "saga-thorvald2-2017",
+      "manufacturer": "Saga Robotics",
+      "models": [
+        "Thorvald II",
+        "Thorvald"
+      ],
+      "configuration": "Thorvald II modular research architecture, 2017. It is not a universal configuration for current Thorvald UV-treatment robots. CPU, RAM, storage, wireless modules and sensor SKUs are unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Distributed control",
+          "details": "Main computer and custom power-control board in the main battery enclosure; steering modules contain two-channel motor controllers.",
+          "sources": [
+            "https://mdpi-res.com/d_attachment/robotics/robotics-06-00024/article_deploy/robotics-06-00024.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery architecture",
+          "details": "48 V lithium-ion packs; each enclosure accepts one 70 Ah pack or up to two 35 Ah packs. Additional enclosures can be connected in parallel.",
+          "sources": [
+            "https://mdpi-res.com/d_attachment/robotics/robotics-06-00024/article_deploy/robotics-06-00024.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Drive modules",
+          "details": "500 W brushless DC drive motor, belt and planetary transmission; Hall sensing and 1,024-pulse/revolution encoders. Drive/steering module counts vary by build.",
+          "sources": [
+            "https://mdpi-res.com/d_attachment/robotics/robotics-06-00024/article_deploy/robotics-06-00024.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Configurable sensor rack",
+          "details": "Documented prototype carries an IMU and 2D LiDAR; different projects fit different sensor packages.",
+          "sources": [
+            "https://mdpi-res.com/d_attachment/robotics/robotics-06-00024/article_deploy/robotics-06-00024.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Module buses",
+          "details": "CAN for controllers and battery status; sensor modules support Ethernet, USB and DC conversion. Emergency-stop circuits interrupt motor power.",
+          "sources": [
+            "https://mdpi-res.com/d_attachment/robotics/robotics-06-00024/article_deploy/robotics-06-00024.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Configurable autonomy stack",
+          "details": "ROS nodes load hardware parameters from build-specific configuration files.",
+          "sources": [
+            "https://mdpi-res.com/d_attachment/robotics/robotics-06-00024/article_deploy/robotics-06-00024.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intuition-elliq3",
+      "manufacturer": "Intuition Robotics",
+      "models": [
+        "ElliQ 3",
+        "ElliQ"
+      ],
+      "configuration": "Third-generation ElliQ announced January 2024. Generic ElliQ entries do not establish generation. Exact MediaTek SKU, RAM/storage capacity, sensor part numbers and radio chipset/bands are unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "MediaTek processing",
+          "details": "Octa-core SoC with a dual-core AI processing unit; exact chip model is not identified.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/intuition-robotics-launches-elliq-3-built-for-scale-to-meet-increasing-demand-as-partnerships-expand-and-adoption-grows-302030137.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Integrated interface",
+          "details": "Generation 3 integrates the screen into the device rather than using the older separated arrangement.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/intuition-robotics-launches-elliq-3-built-for-scale-to-meet-increasing-demand-as-partnerships-expand-and-adoption-grows-302030137.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Interaction inputs",
+          "details": "Product support describes microphones and cameras for presence detection, voice interaction and user-initiated video calls; camera resolution is unspecified.",
+          "sources": [
+            "https://elliq.com/pages/faqs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Connectivity",
+          "details": "Wi-Fi internet connection required for features, communication and updates; no unique broadcast pattern is established.",
+          "sources": [
+            "https://elliq.com/pages/faqs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Power supply",
+          "details": "External power connection required; voltage and supply rating are not given by these sources.",
+          "sources": [
+            "https://elliq.com/pages/faqs"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Conversation stack",
+          "details": "Relationship Orchestration Engine combines scripted actions, context/memory and generative-language interaction.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/intuition-robotics-launches-elliq-3-built-for-scale-to-meet-increasing-demand-as-partnerships-expand-and-adoption-grows-302030137.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paro-ninth-generation",
+      "manufacturer": "PARO Robots",
+      "models": [
+        "PARO ninth generation",
+        "PARO"
+      ],
+      "configuration": "Ninth-generation PARO described by AIST in 2014, with interaction details from the 2015 manufacturer manual. Later revisions are not assumed identical. Exact CPU SKU, RAM, storage and battery rating are not established.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Embedded processing",
+          "details": "AIST identifies a 32-bit CPU; clock, part number and processor count are unspecified for this reference.",
+          "sources": [
+            "https://www.aist.go.jp/pdf/aist_e/aist_story/en_aist_story_no3.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Interaction sensors",
+          "details": "Surface touch sensing, three microphones, stereo optical sensing, temperature sensor and three-axis acceleration for posture.",
+          "sources": [
+            "https://www.aist.go.jp/pdf/aist_e/aist_story/en_aist_story_no3.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Actuation",
+          "details": "Actuated neck, front and rear flippers and eyelids; electrical motor and battery specifications are not established here.",
+          "sources": [
+            "https://www.aist.go.jp/pdf/aist_e/aist_story/en_aist_story_no3.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Charging and sound",
+          "details": "Pacifier-shaped charging connector and onboard speaker.",
+          "sources": [
+            "https://www.aist.go.jp/pdf/aist_e/aist_story/en_aist_story_no3.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Local interaction",
+          "details": "Recognizes words and a learned name, locates sound direction and responds to touch, light and posture.",
+          "sources": [
+            "https://www.paroseal.co.uk/public/site/pdf/manual/PARO-Manual-2015-09.pdf"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Reception evidence",
+          "details": "These documents establish no Wi-Fi/BLE radio or unique over-the-air detection pattern; its components are not a scanner signature.",
+          "sources": [
+            "https://www.aist.go.jp/pdf/aist_e/aist_story/en_aist_story_no3.pdf",
+            "https://www.paroseal.co.uk/public/site/pdf/manual/PARO-Manual-2015-09.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ghost-spirit40-cmu2022",
+      "manufacturer": "Ghost Robotics",
+      "models": [
+        "Spirit 40",
+        "Ghost Robotics Spirit 40"
+      ],
+      "configuration": "CMU Quad-SDK experimental Spirit 40 configuration, Norby dissertation (2022), section 3.3. Research setup only; factory configurations may differ. RAM, storage, radio chipset and battery capacity are unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard robot computer",
+          "details": "NVIDIA Jetson TX2 runs the Robot Driver. The Intel i7-10750H and 16 GB RAM belong to the remote laptop, not the robot.",
+          "sources": [
+            "https://www.andrew.cmu.edu/user/amj1/papers/Norby2022.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Experiment connection",
+          "details": "Ethernet connects the robot and planning laptop; the robot operates from its own power.",
+          "sources": [
+            "https://www.andrew.cmu.edu/user/amj1/papers/Norby2022.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control partition",
+          "details": "Quad-SDK Global and Local Planners execute offboard on Ubuntu 18.04, with Robot Driver on the onboard computer.",
+          "sources": [
+            "https://www.andrew.cmu.edu/user/amj1/papers/Norby2022.pdf"
+          ]
+        }
+      ]
     }
   ]
 }
