@@ -133,6 +133,26 @@ test('new robot profiles distinguish generations, optional radios and connector 
  assert.equal(profileIds(system('UBTech Robotics','Walker S1')).length,0);
 });
 
+test('humanoid variant tables do not transfer enhanced hardware into base models',()=>{
+ const x2=system('AgiBot','X2'), ultra=system('AgiBot','X2 Ultra');
+ assert.match(text(x2.sections.compute),/RK3588/);
+ assert.doesNotMatch(text(x2.sections.compute),/Orin/);
+ assert.match(text(x2.sections.sensors),/no lidar or RGB-D/);
+ assert.match(text(ultra.sections.compute),/Orin NX/);
+ assert.equal(profileIds(system('AgiBot','AgiBot Lingxi X2')).length,2);
+ assert.doesNotMatch(text(system('AgiBot','A2 Lite').sections.compute),/Orin 64G/);
+ assert.match(text(system('AgiBot','A2 Ultra').sections.compute),/Orin 64G/);
+ const kuavo=system('Leju Robotics','KUAVO 4pro Standard');
+ assert.match(text(kuavo.sections.memory),/Motion computer: 64 GB/);
+ assert.match(text(kuavo.sections.memory),/Orin computer: 8 GB/);
+ assert.equal(profileIds(system('Leju Robotics','KUAVO 5')).length,0);
+ assert.equal(profileIds(system('1X Technologies','NEO Beta')).length,0);
+ assert.doesNotMatch(text(system('Fourier Intelligence','GR-2').sections.compute),/Ryzen|RK3588/);
+ const franka=system('Franka Robotics','Franka Research 3');
+ assert.match(text(franka.sections.compute),/external equipment/);
+ assert.match(text(franka.sections.software),/not arm X5/);
+});
+
 test('global JSON and website use the same per-record system evidence',()=>{
  const data=JSON.parse(fs.readFileSync(new URL('../public/downloads/data/devices-global.json',import.meta.url)));
  for(const d of data.devices){

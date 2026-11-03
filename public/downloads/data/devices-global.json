@@ -142,13 +142,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "1x-neo-consumer",
+            "configuration": "Current consumer NEO specification, separate from NEO Beta/Gamma. RAM, storage and radio chip SKUs are not published in these sources.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "AI computer",
+                "details": "1X NEO Cortex based on NVIDIA Jetson Thor, advertised up to 2070 FP4 TFLOPS.",
+                "sources": [
+                  "https://www.1x.tech/neo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-neo-consumer",
+                "configuration": "Current consumer NEO specification, separate from NEO Beta/Gamma. RAM, storage and radio chip SKUs are not published in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -157,18 +176,69 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless",
+                "details": "Wi-Fi, Bluetooth and 5G; supported bands not listed.",
+                "sources": [
+                  "https://www.1x.tech/neo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-neo-consumer",
+                "configuration": "Current consumer NEO specification, separate from NEO Beta/Gamma. RAM, storage and radio chip SKUs are not published in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and audio",
+                "details": "Two 8.85 MP stereo-fisheye cameras at 90 Hz, four beamforming microphones and linkwise differential IMUs.",
+                "sources": [
+                  "https://www.1x.tech/neo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-neo-consumer",
+                "configuration": "Current consumer NEO specification, separate from NEO Beta/Gamma. RAM, storage and radio chip SKUs are not published in these sources.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Hand sensing",
+                "details": "July 2026 hand: tactile pressure/shear sensing and force feedback. Its 25-DoF count includes 22 finger/palm axes plus three wrist axes.",
+                "sources": [
+                  "https://www.1x.tech/discover/neos-hands"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-neo-consumer",
+                "configuration": "Current consumer NEO specification, separate from NEO Beta/Gamma. RAM, storage and radio chip SKUs are not published in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and drive",
+                "details": "842 Wh battery, nominal four-hour runtime; tendon-driven low-inertia actuators. Body IP44, hands IP68.",
+                "sources": [
+                  "https://www.1x.tech/neo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-neo-consumer",
+                "configuration": "Current consumer NEO specification, separate from NEO Beta/Gamma. RAM, storage and radio chip SKUs are not published in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -177,8 +247,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control services",
+                "details": "Redwood AI, mobile/VR remote operation and scheduled expert assistance; manufacturer describes early-access autonomy as limited.",
+                "sources": [
+                  "https://www.1x.tech/neo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-neo-consumer",
+                "configuration": "Current consumer NEO specification, separate from NEO Beta/Gamma. RAM, storage and radio chip SKUs are not published in these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -192,13 +275,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -2930,13 +3008,49 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "agibot-a2-ultra",
+            "configuration": "A2 Ultra column; the unversioned A2 entry also has a separate Lite configuration.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "agibot-a2-lite",
+            "configuration": "A2 Lite column; Ultra components are not standard here.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Computers",
+                "details": "16-core base CPU, SKU unspecified; separate NVIDIA Jetson Orin 64G board.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-ultra",
+                "configuration": "A2 Ultra column; the unversioned A2 entry also has a separate Lite configuration.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Base computer",
+                "details": "16-core CPU, SKU unspecified; no high-performance Orin board listed.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-lite",
+                "configuration": "A2 Lite column; Ultra components are not standard here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -2945,23 +3059,123 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi and 4G/5G.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-ultra",
+                "configuration": "A2 Ultra column; the unversioned A2 entry also has a separate Lite configuration.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi; cellular not listed.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-lite",
+                "configuration": "A2 Lite column; Ultra components are not standard here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "3D lidar, RGB-D, RGB and fisheye cameras; microphone array.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-ultra",
+                "configuration": "A2 Ultra column; the unversioned A2 entry also has a separate Lite configuration.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Perception configuration",
+                "details": "Lidar, RGB-D, RGB and fisheye cameras are absent in this comparison.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-lite",
+                "configuration": "A2 Lite column; Ultra components are not standard here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Actuation and energy",
+                "details": "40 DoF; 14.4 Ah swappable battery, walking endurance over 1.5 hours.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-ultra",
+                "configuration": "A2 Ultra column; the unversioned A2 entry also has a separate Lite configuration.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Actuation and energy",
+                "details": "23 DoF; 14.4 Ah swappable battery, walking endurance over 1.5 hours.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-lite",
+                "configuration": "A2 Lite column; Ultra components are not standard here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Interaction",
+                "details": "Facial display, speaker and handheld remote.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-ultra",
+                "configuration": "A2 Ultra column; the unversioned A2 entry also has a separate Lite configuration.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Interaction",
+                "details": "Speaker and handheld remote; no facial screen.",
+                "sources": [
+                  "https://agibot.com/products/A2_Ultra"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2-lite",
+                "configuration": "A2 Lite column; Ultra components are not standard here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -2980,12 +3194,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -3028,13 +3237,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "agibot-a2w",
+            "configuration": "A2-W product-page configuration. Its 275T performance figure does not establish a specific processor or memory capacity.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Published computing capacity",
+                "details": "Manufacturer lists 275T computing power; silicon SKU undisclosed.",
+                "sources": [
+                  "https://agibot.com/products/A2_W"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2w",
+                "configuration": "A2-W product-page configuration. Its 275T performance figure does not establish a specific processor or memory capacity.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -3053,8 +3281,33 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Drive and arms",
+                "details": "Four-wheel drive with crab steering; two seven-axis arms, 5 kg per arm, 22 total DoF.",
+                "sources": [
+                  "https://agibot.com/products/A2_W"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2w",
+                "configuration": "A2-W product-page configuration. Its 275T performance figure does not establish a specific processor or memory capacity.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "2 kWh, hot-swappable; advertised five-hour runtime and two-hour charge. Robot mass 230 kg.",
+                "sources": [
+                  "https://agibot.com/products/A2_W"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2w",
+                "configuration": "A2-W product-page configuration. Its 275T performance figure does not establish a specific processor or memory capacity.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -3063,8 +3316,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Manipulation stack",
+                "details": "UniGrasp, Uni6DPose and UniPlug support grasping, pose estimation and insertion.",
+                "sources": [
+                  "https://agibot.com/products/A2_W"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-a2w",
+                "configuration": "A2-W product-page configuration. Its 275T performance figure does not establish a specific processor or memory capacity.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -3078,13 +3344,10 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
           "sensors",
-          "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -3126,38 +3389,122 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "agibot-g2",
+            "configuration": "July 2026 G2 manual; Standard and High-Computing are distinct configurations. CPU architectures are retained as published, without inferring silicon SKUs.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Compute variants",
+                "details": "Standard: 24 A78 cores, 500 INT8 TOPS. High-Computing: 14 Poseidon-AE cores, 2070 FP4 TFLOPS.",
+                "sources": [
+                  "https://agibot.com/filepage/296.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-g2",
+                "configuration": "July 2026 G2 manual; Standard and High-Computing are distinct configurations. CPU architectures are retained as published, without inferring silicon SKUs.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "RAM and storage",
+                "details": "Standard: 64 GB RAM; High-Computing: 128 GB. Both: 2 TB NVMe SSD.",
+                "sources": [
+                  "https://agibot.com/filepage/296.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-g2",
+                "configuration": "July 2026 G2 manual; Standard and High-Computing are distinct configurations. CPU architectures are retained as published, without inferring silicon SKUs.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless",
+                "details": "Wi-Fi and Bluetooth; 4G/5G optional.",
+                "sources": [
+                  "https://agibot.com/filepage/296.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-g2",
+                "configuration": "July 2026 G2 manual; Standard and High-Computing are distinct configurations. CPU architectures are retained as published, without inferring silicon SKUs.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "Head stereo pair, three fisheye cameras, head/two wrist RGB-D cameras; two chassis lidars, eight ultrasonic sensors, IMU and four-microphone array. Torque sensing in arm joints.",
+                "sources": [
+                  "https://agibot.com/filepage/296.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-g2",
+                "configuration": "July 2026 G2 manual; Standard and High-Computing are distinct configurations. CPU architectures are retained as published, without inferring silicon SKUs.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Energy and mobility",
+                "details": "Two hot-swappable batteries totaling 1652 Wh (34 Ah), 48 V; about four hours. Four-wheel steering, two seven-axis arms; 185 kg.",
+                "sources": [
+                  "https://agibot.com/filepage/296.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-g2",
+                "configuration": "July 2026 G2 manual; Standard and High-Computing are distinct configurations. CPU architectures are retained as published, without inferring silicon SKUs.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Wired connections",
+                "details": "Two 1 GbE ports and one 10 GbE; USB-C, plus USB-A on Standard. Wrist: 24 V, two RS485 interfaces and CAN-FD.",
+                "sources": [
+                  "https://agibot.com/filepage/296.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-g2",
+                "configuration": "July 2026 G2 manual; Standard and High-Computing are distinct configurations. CPU architectures are retained as published, without inferring silicon SKUs.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -3176,12 +3523,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -3224,13 +3565,49 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "agibot-x2-base",
+            "configuration": "Base X2 configuration; Ultra-specific sensors are excluded.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "agibot-x2-ultra",
+            "configuration": "X2 Ultra configuration of the unversioned Lingxi X2 entry.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Main boards",
+                "details": "Two RK3588; no high-performance board.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-base",
+                "configuration": "Base X2 configuration; Ultra-specific sensors are excluded.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Main and AI boards",
+                "details": "Two RK3588 plus Orin NX, advertised 157 TOPS.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-ultra",
+                "configuration": "X2 Ultra configuration of the unversioned Lingxi X2 entry.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -3239,23 +3616,123 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless",
+                "details": "Wi-Fi and Bluetooth.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-base",
+                "configuration": "Base X2 configuration; Ultra-specific sensors are excluded.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Wireless",
+                "details": "Wi-Fi, Bluetooth and 4G/5G module.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-ultra",
+                "configuration": "X2 Ultra configuration of the unversioned Lingxi X2 entry.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Sensors",
+                "details": "Interactive RGB camera, head touch sensor, microphone array; no lidar or RGB-D camera.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-base",
+                "configuration": "Base X2 configuration; Ultra-specific sensors are excluded.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Sensors",
+                "details": "Lidar, RGB-D, interactive/front stereo/rear RGB cameras, head touch sensor and microphone array.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-ultra",
+                "configuration": "X2 Ultra configuration of the unversioned Lingxi X2 entry.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and joints",
+                "details": "Approximately 500 Wh, swappable; two-hour walking runtime at 0.5 m/s, 25 DoF.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-base",
+                "configuration": "Base X2 configuration; Ultra-specific sensors are excluded.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery and joints",
+                "details": "Approximately 500 Wh, swappable; two-hour walking runtime at 0.5 m/s, 30 DoF.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-ultra",
+                "configuration": "X2 Ultra configuration of the unversioned Lingxi X2 entry.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "One USB-A and one USB-C; no RJ45 listed.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-base",
+                "configuration": "Base X2 configuration; Ultra-specific sensors are excluded.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "Two USB-A, two USB-C and two RJ45 ports.",
+                "sources": [
+                  "https://agibot.com/products/X2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agibot-x2-ultra",
+                "configuration": "X2 Ultra configuration of the unversioned Lingxi X2 entry.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -3274,12 +3751,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -52396,38 +52868,122 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "fourier-gr2",
+            "configuration": "GR-2 manual configuration. Exact Core i7 and perception-SoC SKUs are not named; the ARM architecture is not converted into an inferred chip identifier.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Two computers",
+                "details": "Motion: 14-core Intel Core i7, up to 4.5 GHz. Perception: four Cortex-A76 plus four Cortex-A55 cores, Mali-G610 MC4, advertised 6 TOPS.",
+                "sources": [
+                  "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fourier-gr2",
+                "configuration": "GR-2 manual configuration. Exact Core i7 and perception-SoC SKUs are not named; the ARM architecture is not converted into an inferred chip identifier.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "RAM and storage by role",
+                "details": "Motion: 16 GB RAM / 512 GB storage. Perception: 8 GB / 64 GB.",
+                "sources": [
+                  "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fourier-gr2",
+                "configuration": "GR-2 manual configuration. Exact Core i7 and perception-SoC SKUs are not named; the ARM architecture is not converted into an inferred chip identifier.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless",
+                "details": "Both computer modules list Wi-Fi 6.",
+                "sources": [
+                  "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fourier-gr2",
+                "configuration": "GR-2 manual configuration. Exact Core i7 and perception-SoC SKUs are not named; the ARM architecture is not converted into an inferred chip identifier.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Feedback",
+                "details": "Stereo camera, six-axis IMU and dual joint encoders; microphone on perception module.",
+                "sources": [
+                  "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fourier-gr2",
+                "configuration": "GR-2 manual configuration. Exact Core i7 and perception-SoC SKUs are not named; the ARM architecture is not converted into an inferred chip identifier.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Actuation and battery",
+                "details": "FSA 2.0 actuators; up to 53 DoF with optional twelve-axis hands. 39.6 V lithium-ion battery, approximately 950 Wh and two-hour runtime.",
+                "sources": [
+                  "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fourier-gr2",
+                "configuration": "GR-2 manual configuration. Exact Core i7 and perception-SoC SKUs are not named; the ARM architecture is not converted into an inferred chip identifier.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Ports",
+                "details": "USB-C and USB 3, external 100 Mbps/Gigabit Ethernet, 16 V DC / 6 A payload output.",
+                "sources": [
+                  "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fourier-gr2",
+                "configuration": "GR-2 manual configuration. Exact Core i7 and perception-SoC SKUs are not named; the ARM architecture is not converted into an inferred chip identifier.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -52446,12 +53002,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -52494,13 +53044,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "franka-research3",
+            "configuration": "FR3 manual R02210/1.5.2. Arm, separate Control and external workstation are distinct. Control CPU/RAM parts are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Controller architecture",
+                "details": "Separate 19-inch Control unit runs the robot; the recommended Linux workstation is external equipment, not its onboard processor.",
+                "sources": [
+                  "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "franka-research3",
+                "configuration": "FR3 manual R02210/1.5.2. Arm, separate Control and external workstation are distinct. Control CPU/RAM parts are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -52514,23 +53083,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Force and motion feedback",
+                "details": "Link-side torque sensing on all seven axes; monitored joint position, velocity and torque plus Cartesian pose/force.",
+                "sources": [
+                  "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "franka-research3",
+                "configuration": "FR3 manual R02210/1.5.2. Arm, separate Control and external workstation are distinct. Control CPU/RAM parts are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Arm and supply",
+                "details": "Seven axes, 3 kg payload, 855 mm reach. Control: 100–240 V AC, approximately 80 W. Arm IP40; Control IP20.",
+                "sources": [
+                  "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "franka-research3",
+                "configuration": "FR3 manual R02210/1.5.2. Arm, separate Control and external workstation are distinct. Control CPU/RAM parts are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Networks and I/O",
+                "details": "Arm X5: Ethernet for Desk UI. Control C2: Ethernet for shop-floor connectivity and FCI. Safety-rated stop/enabling inputs and two configurable safety inputs.",
+                "sources": [
+                  "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "franka-research3",
+                "configuration": "FR3 manual R02210/1.5.2. Arm, separate Control and external workstation are distinct. Control CPU/RAM parts are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control interfaces",
+                "details": "Browser-based Desk; 1 kHz Franka Control Interface via Control C2, not arm X5. Modbus/TCP and OPC UA are listed add-ons.",
+                "sources": [
+                  "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "franka-research3",
+                "configuration": "FR3 manual R02210/1.5.2. Arm, separate Control and external workstation are distinct. Control CPU/RAM parts are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -52544,13 +53165,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -53111,38 +53727,122 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "galaxea-r1pro-2026",
+            "configuration": "2026 R1 Pro manual configuration; earlier R1 Pro sensor layouts and the R1/R1 Lite are separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Core computer",
+                "details": "NVIDIA Jetson AGX Orin 32GB, rated 200 TOPS; CPU up to 2.2 GHz.",
+                "sources": [
+                  "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galaxea-r1pro-2026",
+                "configuration": "2026 R1 Pro manual configuration; earlier R1 Pro sensor layouts and the R1/R1 Lite are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "RAM and storage",
+                "details": "32 GB LPDDR5 and 1 TB SSD.",
+                "sources": [
+                  "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galaxea-r1pro-2026",
+                "configuration": "2026 R1 Pro manual configuration; earlier R1 Pro sensor layouts and the R1/R1 Lite are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless modules",
+                "details": "AX210 module, described as Wi-Fi 6; Bluetooth 5.2. Separate 2.4 GHz remote-control link.",
+                "sources": [
+                  "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galaxea-r1pro-2026",
+                "configuration": "2026 R1 Pro manual configuration; earlier R1 Pro sensor layouts and the R1/R1 Lite are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and localization",
+                "details": "Two head cameras (1920×1536 at 30 fps), chest/chassis IMUs, 360° chassis lidar. Wrist depth or fisheye cameras are optional.",
+                "sources": [
+                  "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galaxea-r1pro-2026",
+                "configuration": "2026 R1 Pro manual configuration; earlier R1 Pro sensor layouts and the R1/R1 Lite are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and actuators",
+                "details": "48 V, 35 Ah, 1680 Wh battery with BMS. 26 DoF with two A2 seven-axis arms, G1 grippers, four-axis torso and omnidirectional chassis; 126 kg including battery.",
+                "sources": [
+                  "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galaxea-r1pro-2026",
+                "configuration": "2026 R1 Pro manual configuration; earlier R1 Pro sensor layouts and the R1/R1 Lite are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "Four Gigabit Ethernet ports; USB 3 and HDMI. Lidar: 100BASE-TX, 905 nm. External power: 24 V/12 A and 5 V/3 A.",
+                "sources": [
+                  "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galaxea-r1pro-2026",
+                "configuration": "2026 R1 Pro manual configuration; earlier R1 Pro sensor layouts and the R1/R1 Lite are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -53161,12 +53861,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -68646,38 +69340,122 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "leju-kuavo4pro-standard",
+            "configuration": "KUAVO 4pro Standard manual configuration, attached to the unversioned Kuavo reference; other Kuavo generations are not assigned these components.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Motion and application computers",
+                "details": "Motion: Intel Core i9-13900H with Iris Xe. Application: Orin NX with six Cortex-A78AE CPU cores and 1,024 CUDA cores.",
+                "sources": [
+                  "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leju-kuavo4pro-standard",
+                "configuration": "KUAVO 4pro Standard manual configuration, attached to the unversioned Kuavo reference; other Kuavo generations are not assigned these components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Separate memories",
+                "details": "Motion computer: 64 GB DDR5, 500 GB SSD. Orin computer: 8 GB RAM, 256 GB storage.",
+                "sources": [
+                  "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leju-kuavo4pro-standard",
+                "configuration": "KUAVO 4pro Standard manual configuration, attached to the unversioned Kuavo reference; other Kuavo generations are not assigned these components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless",
+                "details": "AX211 module: Wi-Fi 6E and Bluetooth 5.2.",
+                "sources": [
+                  "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leju-kuavo4pro-standard",
+                "configuration": "KUAVO 4pro Standard manual configuration, attached to the unversioned Kuavo reference; other Kuavo generations are not assigned these components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception and feedback",
+                "details": "Gemini 335L stereo depth camera; Mid-360 lidar with ICM40609 IMU. Separate body IMU, joint-temperature sensors and six-microphone array.",
+                "sources": [
+                  "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leju-kuavo4pro-standard",
+                "configuration": "KUAVO 4pro Standard manual configuration, attached to the unversioned Kuavo reference; other Kuavo generations are not assigned these components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Body and energy",
+                "details": "22 DoF excluding end effectors, 55 kg. 60 V, 6 Ah battery; nominal walking runtime one hour.",
+                "sources": [
+                  "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leju-kuavo4pro-standard",
+                "configuration": "KUAVO 4pro Standard manual configuration, attached to the unversioned Kuavo reference; other Kuavo generations are not assigned these components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Connections",
+                "details": "Motion computer: two 2.5 GbE ports; application computer: one GbE port. Internal battery/arm CAN, dexterous-hand RS485 and remote-receiver SBUS.",
+                "sources": [
+                  "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leju-kuavo4pro-standard",
+                "configuration": "KUAVO 4pro Standard manual configuration, attached to the unversioned Kuavo reference; other Kuavo generations are not assigned these components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -68696,12 +69474,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -253178,6 +253950,606 @@
             ]
           }
         ]
+      },
+      {
+        "id": "galaxea-r1pro-2026",
+        "manufacturer": "Galaxea Dynamics",
+        "models": [
+          "Galaxea R1 Pro",
+          "R1 Pro 2026"
+        ],
+        "configuration": "2026 R1 Pro manual configuration; earlier R1 Pro sensor layouts and the R1/R1 Lite are separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Core computer",
+            "details": "NVIDIA Jetson AGX Orin 32GB, rated 200 TOPS; CPU up to 2.2 GHz.",
+            "sources": [
+              "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "RAM and storage",
+            "details": "32 GB LPDDR5 and 1 TB SSD.",
+            "sources": [
+              "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless modules",
+            "details": "AX210 module, described as Wi-Fi 6; Bluetooth 5.2. Separate 2.4 GHz remote-control link.",
+            "sources": [
+              "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and localization",
+            "details": "Two head cameras (1920×1536 at 30 fps), chest/chassis IMUs, 360° chassis lidar. Wrist depth or fisheye cameras are optional.",
+            "sources": [
+              "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "Four Gigabit Ethernet ports; USB 3 and HDMI. Lidar: 100BASE-TX, 905 nm. External power: 24 V/12 A and 5 V/3 A.",
+            "sources": [
+              "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and actuators",
+            "details": "48 V, 35 Ah, 1680 Wh battery with BMS. 26 DoF with two A2 seven-axis arms, G1 grippers, four-axis torso and omnidirectional chassis; 126 kg including battery.",
+            "sources": [
+              "https://docs.galaxea-dynamics.com/R1Pro/en/docs/2026/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "leju-kuavo4pro-standard",
+        "manufacturer": "Leju Robotics",
+        "models": [
+          "Leju Kuavo",
+          "KUAVO 4pro Standard"
+        ],
+        "configuration": "KUAVO 4pro Standard manual configuration, attached to the unversioned Kuavo reference; other Kuavo generations are not assigned these components.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Motion and application computers",
+            "details": "Motion: Intel Core i9-13900H with Iris Xe. Application: Orin NX with six Cortex-A78AE CPU cores and 1,024 CUDA cores.",
+            "sources": [
+              "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Separate memories",
+            "details": "Motion computer: 64 GB DDR5, 500 GB SSD. Orin computer: 8 GB RAM, 256 GB storage.",
+            "sources": [
+              "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless",
+            "details": "AX211 module: Wi-Fi 6E and Bluetooth 5.2.",
+            "sources": [
+              "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception and feedback",
+            "details": "Gemini 335L stereo depth camera; Mid-360 lidar with ICM40609 IMU. Separate body IMU, joint-temperature sensors and six-microphone array.",
+            "sources": [
+              "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Connections",
+            "details": "Motion computer: two 2.5 GbE ports; application computer: one GbE port. Internal battery/arm CAN, dexterous-hand RS485 and remote-receiver SBUS.",
+            "sources": [
+              "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Body and energy",
+            "details": "22 DoF excluding end effectors, 55 kg. 60 V, 6 Ah battery; nominal walking runtime one hour.",
+            "sources": [
+              "https://kuavo.lejurobot.com/manual/basic_usage/kuavo-ros-control/docs/1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/KUAVO_4PRO%20%E6%A0%87%E5%87%86%E7%89%88%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fourier-gr2",
+        "manufacturer": "Fourier Intelligence",
+        "models": [
+          "Fourier GR-2",
+          "GR-2"
+        ],
+        "configuration": "GR-2 manual configuration. Exact Core i7 and perception-SoC SKUs are not named; the ARM architecture is not converted into an inferred chip identifier.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Two computers",
+            "details": "Motion: 14-core Intel Core i7, up to 4.5 GHz. Perception: four Cortex-A76 plus four Cortex-A55 cores, Mali-G610 MC4, advertised 6 TOPS.",
+            "sources": [
+              "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "RAM and storage by role",
+            "details": "Motion: 16 GB RAM / 512 GB storage. Perception: 8 GB / 64 GB.",
+            "sources": [
+              "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless",
+            "details": "Both computer modules list Wi-Fi 6.",
+            "sources": [
+              "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Feedback",
+            "details": "Stereo camera, six-axis IMU and dual joint encoders; microphone on perception module.",
+            "sources": [
+              "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Ports",
+            "details": "USB-C and USB 3, external 100 Mbps/Gigabit Ethernet, 16 V DC / 6 A payload output.",
+            "sources": [
+              "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Actuation and battery",
+            "details": "FSA 2.0 actuators; up to 53 DoF with optional twelve-axis hands. 39.6 V lithium-ion battery, approximately 950 Wh and two-hour runtime.",
+            "sources": [
+              "https://support-old.fftai.com/docs/GR-X-Humanoid-Robot/GR2/GR-2_Introduction/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1x-neo-consumer",
+        "manufacturer": "1X Technologies",
+        "models": [
+          "NEO"
+        ],
+        "configuration": "Current consumer NEO specification, separate from NEO Beta/Gamma. RAM, storage and radio chip SKUs are not published in these sources.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "AI computer",
+            "details": "1X NEO Cortex based on NVIDIA Jetson Thor, advertised up to 2070 FP4 TFLOPS.",
+            "sources": [
+              "https://www.1x.tech/neo"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless",
+            "details": "Wi-Fi, Bluetooth and 5G; supported bands not listed.",
+            "sources": [
+              "https://www.1x.tech/neo"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and audio",
+            "details": "Two 8.85 MP stereo-fisheye cameras at 90 Hz, four beamforming microphones and linkwise differential IMUs.",
+            "sources": [
+              "https://www.1x.tech/neo"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Hand sensing",
+            "details": "July 2026 hand: tactile pressure/shear sensing and force feedback. Its 25-DoF count includes 22 finger/palm axes plus three wrist axes.",
+            "sources": [
+              "https://www.1x.tech/discover/neos-hands"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and drive",
+            "details": "842 Wh battery, nominal four-hour runtime; tendon-driven low-inertia actuators. Body IP44, hands IP68.",
+            "sources": [
+              "https://www.1x.tech/neo"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control services",
+            "details": "Redwood AI, mobile/VR remote operation and scheduled expert assistance; manufacturer describes early-access autonomy as limited.",
+            "sources": [
+              "https://www.1x.tech/neo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agibot-a2-ultra",
+        "manufacturer": "AgiBot",
+        "models": [
+          "AgiBot A2",
+          "A2 Ultra"
+        ],
+        "configuration": "A2 Ultra column; the unversioned A2 entry also has a separate Lite configuration.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Computers",
+            "details": "16-core base CPU, SKU unspecified; separate NVIDIA Jetson Orin 64G board.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi and 4G/5G.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "3D lidar, RGB-D, RGB and fisheye cameras; microphone array.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Interaction",
+            "details": "Facial display, speaker and handheld remote.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Actuation and energy",
+            "details": "40 DoF; 14.4 Ah swappable battery, walking endurance over 1.5 hours.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agibot-a2-lite",
+        "manufacturer": "AgiBot",
+        "models": [
+          "AgiBot A2",
+          "A2 Lite"
+        ],
+        "configuration": "A2 Lite column; Ultra components are not standard here.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Base computer",
+            "details": "16-core CPU, SKU unspecified; no high-performance Orin board listed.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi; cellular not listed.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception configuration",
+            "details": "Lidar, RGB-D, RGB and fisheye cameras are absent in this comparison.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Interaction",
+            "details": "Speaker and handheld remote; no facial screen.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Actuation and energy",
+            "details": "23 DoF; 14.4 Ah swappable battery, walking endurance over 1.5 hours.",
+            "sources": [
+              "https://agibot.com/products/A2_Ultra"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agibot-a2w",
+        "manufacturer": "AgiBot",
+        "models": [
+          "AgiBot A2-W"
+        ],
+        "configuration": "A2-W product-page configuration. Its 275T performance figure does not establish a specific processor or memory capacity.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Published computing capacity",
+            "details": "Manufacturer lists 275T computing power; silicon SKU undisclosed.",
+            "sources": [
+              "https://agibot.com/products/A2_W"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Manipulation stack",
+            "details": "UniGrasp, Uni6DPose and UniPlug support grasping, pose estimation and insertion.",
+            "sources": [
+              "https://agibot.com/products/A2_W"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Drive and arms",
+            "details": "Four-wheel drive with crab steering; two seven-axis arms, 5 kg per arm, 22 total DoF.",
+            "sources": [
+              "https://agibot.com/products/A2_W"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "2 kWh, hot-swappable; advertised five-hour runtime and two-hour charge. Robot mass 230 kg.",
+            "sources": [
+              "https://agibot.com/products/A2_W"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agibot-x2-base",
+        "manufacturer": "AgiBot",
+        "models": [
+          "AgiBot Lingxi X2",
+          "X2"
+        ],
+        "configuration": "Base X2 configuration; Ultra-specific sensors are excluded.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Main boards",
+            "details": "Two RK3588; no high-performance board.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless",
+            "details": "Wi-Fi and Bluetooth.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Sensors",
+            "details": "Interactive RGB camera, head touch sensor, microphone array; no lidar or RGB-D camera.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "One USB-A and one USB-C; no RJ45 listed.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and joints",
+            "details": "Approximately 500 Wh, swappable; two-hour walking runtime at 0.5 m/s, 25 DoF.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agibot-x2-ultra",
+        "manufacturer": "AgiBot",
+        "models": [
+          "AgiBot Lingxi X2",
+          "X2 Ultra"
+        ],
+        "configuration": "X2 Ultra configuration of the unversioned Lingxi X2 entry.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Main and AI boards",
+            "details": "Two RK3588 plus Orin NX, advertised 157 TOPS.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless",
+            "details": "Wi-Fi, Bluetooth and 4G/5G module.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Sensors",
+            "details": "Lidar, RGB-D, interactive/front stereo/rear RGB cameras, head touch sensor and microphone array.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "Two USB-A, two USB-C and two RJ45 ports.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and joints",
+            "details": "Approximately 500 Wh, swappable; two-hour walking runtime at 0.5 m/s, 30 DoF.",
+            "sources": [
+              "https://agibot.com/products/X2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agibot-g2",
+        "manufacturer": "AgiBot",
+        "models": [
+          "AgiBot G2"
+        ],
+        "configuration": "July 2026 G2 manual; Standard and High-Computing are distinct configurations. CPU architectures are retained as published, without inferring silicon SKUs.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Compute variants",
+            "details": "Standard: 24 A78 cores, 500 INT8 TOPS. High-Computing: 14 Poseidon-AE cores, 2070 FP4 TFLOPS.",
+            "sources": [
+              "https://agibot.com/filepage/296.html"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "RAM and storage",
+            "details": "Standard: 64 GB RAM; High-Computing: 128 GB. Both: 2 TB NVMe SSD.",
+            "sources": [
+              "https://agibot.com/filepage/296.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless",
+            "details": "Wi-Fi and Bluetooth; 4G/5G optional.",
+            "sources": [
+              "https://agibot.com/filepage/296.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Head stereo pair, three fisheye cameras, head/two wrist RGB-D cameras; two chassis lidars, eight ultrasonic sensors, IMU and four-microphone array. Torque sensing in arm joints.",
+            "sources": [
+              "https://agibot.com/filepage/296.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Wired connections",
+            "details": "Two 1 GbE ports and one 10 GbE; USB-C, plus USB-A on Standard. Wrist: 24 V, two RS485 interfaces and CAN-FD.",
+            "sources": [
+              "https://agibot.com/filepage/296.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Energy and mobility",
+            "details": "Two hot-swappable batteries totaling 1652 Wh (34 Ah), 48 V; about four hours. Four-wheel steering, two seven-axis arms; 185 kg.",
+            "sources": [
+              "https://agibot.com/filepage/296.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "franka-research3",
+        "manufacturer": "Franka Robotics",
+        "models": [
+          "Franka Research 3"
+        ],
+        "configuration": "FR3 manual R02210/1.5.2. Arm, separate Control and external workstation are distinct. Control CPU/RAM parts are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Controller architecture",
+            "details": "Separate 19-inch Control unit runs the robot; the recommended Linux workstation is external equipment, not its onboard processor.",
+            "sources": [
+              "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Force and motion feedback",
+            "details": "Link-side torque sensing on all seven axes; monitored joint position, velocity and torque plus Cartesian pose/force.",
+            "sources": [
+              "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Networks and I/O",
+            "details": "Arm X5: Ethernet for Desk UI. Control C2: Ethernet for shop-floor connectivity and FCI. Safety-rated stop/enabling inputs and two configurable safety inputs.",
+            "sources": [
+              "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control interfaces",
+            "details": "Browser-based Desk; 1 kHz Franka Control Interface via Control C2, not arm X5. Modbus/TCP and OPC UA are listed add-ons.",
+            "sources": [
+              "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Arm and supply",
+            "details": "Seven axes, 3 kg payload, 855 mm reach. Control: 100–240 V AC, approximately 80 W. Arm IP40; Control IP20.",
+            "sources": [
+              "https://franka.de/hubfs/Product%20Manual%20Franka%20Research%203_R02210_1.5.2_EN.pdf?hsLang=en"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -253194,8 +254566,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 96,
-    "devices_with_system_profiles": 98,
-    "devices_with_documented_compute": 61
+    "system_profiles": 107,
+    "devices_with_system_profiles": 107,
+    "devices_with_documented_compute": 70
   }
 }
