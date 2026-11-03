@@ -1,17 +1,38 @@
 device,oui
 ABB Robotics devices,E0:02:A5
+ACSL devices,8C:1F:64:A2:D0:00/36
 AeroVironment devices,00:1A:F9
 AeroVironment devices,8C:1F:64:B0:70:00/36
 Agility Robotics devices,4C:74:A7:50:00:00/28
+Also devices,58:AD:08:C0:00:00/28
+AM General devices,94:3E:FD:50:00:00/28
 Amazon Robotics devices,8C:1F:64:DC:40:00/36
 Anduril Imaging devices,8C:1F:64:76:30:00/36
 Anduril Industries devices,E8:B4:70:C0:00:00/28
 Apollo Intelligent Connectivity devices,74:EE:8D
 Aselsan devices,00:03:73
+Aurora Innovation devices,5C:68:D0
 Autel Robotics devices,EC:5B:CD:E0:00:00/28
+Avidbots devices,70:B3:D5:B4:D0:00/36
+BAE Systems devices,00:0B:F3
+BAE Systems devices,00:50:C2:EA:A0:00/36
+BAE Systems devices,00:90:25
+BAE Systems devices,18:F9:C4
+BAE Systems devices,70:B3:D5:02:A0:00/36
+BAE Systems devices,70:B3:D5:05:50:00/36
+BAE Systems devices,70:B3:D5:1D:70:00/36
+BAE Systems devices,70:B3:D5:AF:C0:00/36
+BAE Systems devices,70:B3:D5:E2:D0:00/36
+BAE Systems devices,8C:1F:64:55:60:00/36
+BAE Systems devices,94:05:BB:E0:00:00/28
+BAE Systems devices,BC:D7:67
+BAE Systems devices,CC:3F:EA
 Boston Dynamics devices,10:36:4A
 Boston Dynamics devices,70:B3:D5:29:20:00/36
 Carnegie Robotics devices,2C:69:1D:60:00:00/28
+Caterpillar devices,00:0A:75
+Caterpillar devices,7C:6F:06
+DeLaval devices,A4:8E:0A
 DJI devices,04:A8:5A
 DJI devices,0C:9A:E6
 DJI devices,34:91:F0
@@ -28,6 +49,11 @@ DJI devices,E4:7A:2C
 DJI devices,EC:72:F7
 Elbit Systems devices,00:1A:A6
 Elbit Systems devices,00:22:B1
+Elbit Systems devices,00:50:C2:0D:C0:00/36
+Elbit Systems devices,00:50:C2:4C:20:00/36
+Elbit Systems devices,00:50:C2:76:10:00/36
+Elbit Systems devices,00:50:C2:CF:90:00/36
+Elbit Systems devices,00:50:C2:FB:A0:00/36
 Elbit Systems devices,70:B3:D5:24:F0:00/36
 Elbit Systems devices,70:B3:D5:82:60:00/36
 Elbit Systems devices,70:B3:D5:B7:E0:00/36
@@ -38,22 +64,57 @@ Elbit Systems devices,8C:1F:64:B8:70:00/36
 Elbit Systems devices,8C:1F:64:FC:D0:00/36
 Elbit Systems devices,C4:FF:84:E0:00:00/28
 FANUC Robotics devices,00:E0:E4
+FIMI devices,6C:DF:FB:E0:00:00/28
 Flirtey devices,70:B3:D5:2A:A0:00/36
+Flock Safety devices,B4:1E:52
 FORT Robotics devices,04:11:19:00:00:00/28
+Fortem Technologies devices,7C:BA:CC:50:00:00/28
+Freefly Systems devices,EC:71:5E
+GEA Group devices,00:50:C2:CB:40:00/36
+GEA Group devices,EC:D0:40
 Gecko Robotics devices,70:B3:D5:04:A0:00/36
+General Dynamics Land Systems devices,00:26:89
 Ghost Autonomy devices,D8:A6:FD
 HAI Robotics devices,70:B3:D5:0B:70:00/36
 HAI Robotics devices,C8:6B:BC:B0:00:00/28
 Hikrobot devices,34:BD:20
 Hikrobot devices,B0:B3:53:60:00:00/28
+Hilti devices,00:6A:5E:80:00:00/28
+Hilti devices,DC:44:B1
+Husqvarna devices,94:BB:AE
+Insitu devices,00:50:C2:C3:50:00/36
+Insitu devices,00:50:C2:FD:40:00/36
+Insitu devices,70:B3:D5:7A:D0:00/36
+Insitu devices,70:B3:D5:86:50:00/36
+Insitu devices,70:B3:D5:B3:B0:00/36
+Insitu devices,70:B3:D5:D3:60:00/36
+Insitu devices,70:B3:D5:DD:20:00/36
+Inspired Flight devices,34:B5:F3:20:00:00/28
 Invert Robotics devices,70:B3:D5:FC:70:00/36
 iRobot devices,4C:B9:EA
 iRobot devices,50:14:79
 iRobot devices,AC:F4:73
+Israel Aerospace Industries devices,70:B3:D5:E4:C0:00/36
 JAKA Robotics devices,08:DA:33:A0:00:00/28
+John Deere devices,F8:AE:27
+Karcher devices,A4:09:CB
+Komatsu devices,00:C0:6F
+Komatsu devices,CC:3F:8A
 KUKA Robotics devices,00:60:C8
+Leidos devices,70:B3:D5:00:40:00/36
+Leidos devices,70:B3:D5:E1:00:00/36
+Leidos devices,8C:1F:64:0D:F0:00/36
+Leidos devices,8C:1F:64:17:60:00/36
 Lily Robotics devices,3C:67:16
+Liquid Robotics devices,00:50:C2:EC:70:00/36
 Mayfield Robotics devices,74:28:57
+Mobileye devices,00:50:C2:B4:60:00/36
+Mobileye devices,58:AD:08:80:00:00/28
+Mobileye devices,8C:1F:64:B6:A0:00/36
+Mobileye devices,8C:1F:64:D6:30:00/36
+Nilfisk devices,90:80:60
+Northrop Grumman devices,00:19:8A
+Northrop Grumman devices,50:19:11:E0:00:00/28
 Nuro devices,F0:40:AF:10:00:00/28
 ODrive Robotics devices,5C:17:15
 Parrot devices,00:12:1C
@@ -61,9 +122,15 @@ Parrot devices,00:26:7E
 Parrot devices,90:03:B7
 Parrot devices,90:3A:E6
 Parrot devices,A0:14:3D
+Pony AI devices,C0:22:F1:60:00:00/28
 Preferred Robotics devices,28:3E:0C
+QinetiQ devices,00:11:F1
+QinetiQ devices,94:75:6E
 Quantum Systems devices,AC:86:D1:70:00:00/28
 Rafael devices,7C:05:1E
+Rheinmetall devices,00:14:3C
+Rheinmetall devices,70:B3:D5:9F:10:00/36
+Rheinmetall devices,A4:59:D3:10:00:00/28
 Roborock devices,24:9E:7D
 Roborock devices,B0:4A:39
 Roborock devices,C8:C9:92
@@ -71,12 +138,17 @@ Robotic Assistance Devices devices,AC:EF:92:D0:00:00/28
 Robotic Research devices,70:B3:D5:EB:40:00/36
 ROBOTIS devices,B8:63:BC
 Robotize devices,38:05:25:80:00:00/28
+Saab Seaeye devices,5C:6A:EC:E0:00:00/28
+Scania devices,7C:45:F9:E0:00:00/28
 Schilling Robotics devices,00:15:FE
 Sevensense Robotics devices,70:B3:D5:9C:30:00/36
+Shield AI devices,14:DD:48
 SIYI devices,5C:D5:B5
 Skydio devices,38:1D:14
 Strategic Robotic Systems devices,8C:1F:64:C5:70:00/36
+Symbotic devices,14:37:5E
 Teal Drones devices,B0:30:C8
+TechnipFMC devices,8C:1F:64:0C:50:00/36
 Teledyne FLIR devices,00:13:56
 Teledyne FLIR devices,00:1B:D8
 Teledyne FLIR devices,00:40:7F
@@ -90,12 +162,22 @@ Tesla devices,D4:4F:14
 Tesla devices,DC:44:27:10:00:00/28
 Tomahawk Robotics devices,70:B3:D5:0E:B0:00/36
 UBTECH Robotics devices,3C:42:7E:80:00:00/28
+UISEE devices,8C:1F:64:3F:F0:00/36
 Universal Robots devices,38:B1:4E:60:00:00/28
 Universal Robots devices,8C:1F:64:AF:D0:00/36
 Veo Robotics devices,70:B3:D5:6C:40:00/36
+Verity devices,70:B3:D5:7A:C0:00/36
+Verkada devices,E0:A7:00
+Volkswagen Group devices,00:7D:FA
 WB Group devices,00:19:04
 WB Group devices,00:1D:A5
+Westwell devices,70:B3:D5:85:60:00/36
+WowWee devices,00:18:76
 XAG devices,A4:51:29
 Yuneec devices,E0:B6:F5:80:00:00/28
+Yunji Technology devices,B8:4C:87:B0:00:00/28
 Zero Zero Robotics devices,84:83:19
 Zero Zero Robotics devices,C8:63:14:40:00:00/28
+ZF Friedrichshafen devices,7C:97:63
+Zipline devices,74:B8:0F
+Zoox devices,B0:B3:53:B0:00:00/28

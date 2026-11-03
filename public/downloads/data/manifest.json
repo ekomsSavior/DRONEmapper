@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "2026-11-02",
+  "release": "2026-11-03",
   "encoding": "UTF-8",
   "line_endings": "CRLF",
   "delimiter": ",",
@@ -9,9 +9,9 @@
     {
       "file": "oui-global.csv",
       "url": "/downloads/data/oui-global.csv",
-      "rows": 100,
-      "bytes": 3461,
-      "sha256": "3aa63187e2e83f152897761a1a84fb0ef5366a406524cb691bc8ec7a42d0763f",
+      "rows": 182,
+      "bytes": 6443,
+      "sha256": "34703dc1a13bc2598b31b1d132ef5fe3e17c42688c7df37bb482d032954b53dc",
       "columns": [
         "device",
         "oui"
@@ -70,11 +70,11 @@
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
       "rows": 925,
-      "bytes": 6254659,
-      "sha256": "96d1a00580485243de9a4cf70c6cd0d8cde88d4c3ac62129ff20638fa8eaa172",
+      "bytes": 6368499,
+      "sha256": "986182920e29e8ee2ca830c056ceef5009cd7f716fd3f5eeae61225ac27b61b6",
       "collections": {
         "devices": 925,
-        "radio_allocations": 100,
+        "radio_allocations": 182,
         "remote_id_rules": 3738,
         "rf_channels": 148,
         "vendor_flows": 440,
@@ -82,7 +82,7 @@
         "cloud_services": 457,
         "robot_signatures": 8,
         "fcc_equipment": 20,
-        "devices_with_mac_allocations": 165,
+        "devices_with_mac_allocations": 236,
         "devices_with_rf_information": 119,
         "devices_with_scanner_signatures": 11
       }
@@ -91,7 +91,7 @@
   "inputs": [
     {
       "path": "integration/device-oui.json",
-      "sha256": "78faa9fe51146926c6dfb9a7ccbd96049f50ce481becafb1de8bc53082298e14"
+      "sha256": "b529c9b2403827a1be1af0e059aa433a9ac7640f3c3cd05b4a63a41a245cf4f9"
     },
     {
       "path": "worker/rid-catalog.mjs",
@@ -143,11 +143,11 @@
     },
     {
       "path": "scripts/export_developer_data.py",
-      "sha256": "83903a3af0912dac747743c6a93919ab16205cb9bf894965523d7cbf535fac25"
+      "sha256": "24d6ff9403e8e376963b44b588d1ab74a4ab67a404763a6723cf245ad5a107aa"
     },
     {
       "path": "scripts/device_radio_export.py",
-      "sha256": "44a2489db84c854229a9541e9926bfc86693bc24063863da5a60f70b2cd370f6"
+      "sha256": "bc119debcf0fb8c92edecb67c93b6b47b69ddd6f947eb99b0628662362cc0475"
     }
   ],
   "upstream_rights": "See README.md and upstream sources; no blanket relicensing of third-party material."

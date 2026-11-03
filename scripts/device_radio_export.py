@@ -37,8 +37,8 @@ def names(record,makers):
         values.update(v[len('unitree '):] for v in list(values) if v.startswith('unitree '))
     return values
 
-def enrich_radio(devices,allocations,references,signatures,channels,fcc):
-    by_maker={}; maker_aliases=dict(MAKER_ALIASES)
+def enrich_radio(devices,allocations,references,signatures,channels,fcc,allocation_aliases=None):
+    by_maker={}; maker_aliases={**MAKER_ALIASES,**{norm(k):v for k,v in (allocation_aliases or {}).items()}}
     for allocation in allocations:
         maker=allocation['device'].removesuffix(' devices')
         by_maker.setdefault(norm(maker),[]).append(allocation)

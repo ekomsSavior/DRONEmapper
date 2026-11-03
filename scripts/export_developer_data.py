@@ -99,7 +99,7 @@ def artifacts():
     outputs['devices-global.json']=data
     entries.append(dict(file='devices-global.json',url='/downloads/data/devices-global.json',rows=len(global_data['devices']),bytes=len(data),sha256=sha(data),collections=global_data['counts']))
     inputs=['integration/device-oui.json','worker/rid-catalog.mjs','integration/security-device-references.json','integration/rf-channels.json','integration/fcc-references.json','integration/robot-platforms.json','integration/robot-signatures.json','integration/aircraft-references.json','integration/drone-platforms.json','integration/cloud-surfaces.json','public/device-inventory.json','docs/device-links.json','scripts/export_device_catalog.mjs','scripts/export_developer_data.py','scripts/device_radio_export.py']
-    manifest=dict(schema_version=SCHEMA_VERSION,release='2026-11-02',encoding='UTF-8',line_endings='CRLF',delimiter=',',scope='Drone, autonomous-vehicle, robot and associated equipment research. MAC allocations are restricted to explicitly reviewed relevant manufacturers.',datasets=entries,inputs=[dict(path=p,sha256=sha((ROOT/p).read_bytes())) for p in inputs],upstream_rights='See README.md and upstream sources; no blanket relicensing of third-party material.')
+    manifest=dict(schema_version=SCHEMA_VERSION,release=scoped_oui()['reviewed_on'],encoding='UTF-8',line_endings='CRLF',delimiter=',',scope='Drone, autonomous-vehicle, robot and associated equipment research. MAC allocations are restricted to explicitly reviewed relevant manufacturers.',datasets=entries,inputs=[dict(path=p,sha256=sha((ROOT/p).read_bytes())) for p in inputs],upstream_rights='See README.md and upstream sources; no blanket relicensing of third-party material.')
     outputs['manifest.json']=(json.dumps(manifest,indent=2)+'\n').encode()
     outputs['SHA256SUMS.txt']=''.join(sha(data)+'  '+name+'\n' for name,data in sorted(outputs.items())).encode()
     return outputs
@@ -132,7 +132,7 @@ def global_devices(collections):
     rows.sort(key=lambda r:(r['maker'].casefold(),r['name'].casefold(),r['catalog_id']))
     if len({r['catalog_id'] for r in rows})!=len(rows):raise ValueError('Duplicate global catalog identities')
     oui=[{**r,'evidence_scope':'manufacturer-only'} for r in scoped_oui()['allocations']]
-    result=dict(schema_version=1,release='2026-11-02',scope='Complete snapshot of the included DRONEmapper catalogs and contributed equipment index. Not an exhaustive inventory of all products worldwide; evidence status is field-specific.',map_inventory_generated_at=website['map_inventory_generated_at'],devices=rows,
+    result=dict(schema_version=1,release=scoped_oui()['reviewed_on'],scope='Complete snapshot of the included DRONEmapper catalogs and contributed equipment index. Not an exhaustive inventory of all products worldwide; evidence status is field-specific.',map_inventory_generated_at=website['map_inventory_generated_at'],devices=rows,
         radio_allocations=oui,radio_allocation_provenance={k:v for k,v in scoped_oui().items() if k!='allocations'},
         remote_id_rules=rid,rf_channels=collections[2][1],robot_signatures=read('integration/robot-signatures.json'),
         cloud_services=read('integration/cloud-surfaces.json'),vendor_flows=website['flows'],
@@ -140,7 +140,7 @@ def global_devices(collections):
         device_links=read('docs/device-links.json'),
         catalog_references={n:read('integration/'+n+'.json') for n in ('robot-platforms','aircraft-references','security-device-references','drone-platforms')})
     from device_radio_export import enrich_radio
-    enrich_radio(rows,oui,result['catalog_references'],result['robot_signatures'],result['rf_channels'],fcc)
+    enrich_radio(rows,oui,result['catalog_references'],result['robot_signatures'],result['rf_channels'],fcc,scoped_oui().get('manufacturer_aliases',{}))
     result['counts']={k:len(result[k]) for k in ('devices','radio_allocations','remote_id_rules','rf_channels','vendor_flows','equipment_product_relationships')}
     result['counts'].update(cloud_services=len(result['cloud_services']['services']),robot_signatures=len(result['robot_signatures']['rules']),fcc_equipment=len(fcc['devices']),devices_with_mac_allocations=sum(bool(d['mac_allocations']) for d in rows),devices_with_rf_information=sum(bool(d['rf_information']) for d in rows),devices_with_scanner_signatures=sum(bool(d['scanner_signatures']) for d in rows))
     return result

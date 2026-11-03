@@ -100,6 +100,12 @@ Wi-Fi chip vendor or another company's similarly named allocation. Sources and
 snapshot dates for the selected facts are retained in `integration/device-oui.json`
 and the combined JSON. The CSV intentionally contains no source-link columns.
 
+The Device Library cards and this download use the same reviewed allocation
+catalog, including exact manufacturer aliases. The review covers MA-L, MA-M,
+MA-S and legacy IAB registrations. An empty result means no supported association
+in this catalog; it does not prove that the device has no MAC address. A physical
+unit's complete address must be obtained from that unit or an observed interface.
+
 ## Remote ID rules CSV
 
 Despite its legacy filename, this file contains bounded serial rules, not loose
@@ -149,7 +155,9 @@ From the source repository, with Python 3 and Node.js available:
 
 ```sh
 python3 scripts/export_developer_data.py
+python3 scripts/sync-device-mac.py
 python3 scripts/export_developer_data.py --check
+python3 scripts/sync-device-mac.py --check
 python3 -m unittest discover -s tests -p 'test_developer_data.py'
 ```
 
@@ -165,7 +173,7 @@ LICENSE and NOTICE files. Source material retains its own applicable terms;
 this download does not relicense third-party documents or datasets.
 
 Selected MAC allocation facts were checked against IEEE Registration Authority
-snapshots dated October 20–22, 2026. No general OUI database is bundled in these
+snapshots downloaded November 3, 2026. No general OUI database is bundled in these
 research exports.
 Remote ID allocation evidence: linked FAA declarations. RF references credit
 Bluetooth SIG, Linux wireless, Betaflight, ExpressLRS, proto17/dji_droneid,

@@ -76,6 +76,7 @@ def build_linux_archive():
 
 def build_archive():
     subprocess.run([sys.executable, str(ROOT / 'scripts/export_developer_data.py'), '--check'], check=True)
+    subprocess.run([sys.executable, str(ROOT / 'scripts/sync-device-mac.py'), '--check'], check=True)
     # Publish the same guide as the source bundle, with working website links.
     guide = (ROOT / 'docs/desktop-node-setup.md').read_text()
     for relative in ('linux-node-setup.md', 'sdr-decoders.md', 'serial-receivers.md', 'security-device-discovery.md', 'carbyne-discovery.md', 'axon-air-fusus.md'):

@@ -1,6 +1,6 @@
 import {companyWebsite,modelWebsite} from './company-links.mjs';
 import {libraryModels} from './device-library-model.mjs?v=20261101-robots';
-import {deviceReferences} from './security-device-references.mjs';
+import {macAllocationsFor,formatMacPrefix,macReviewedOn} from './device-mac-model.mjs';
 const $=id=>document.getElementById(id);
 let models=libraryModels();
 let inventoryStatus='Loading map inventory…';
@@ -25,8 +25,14 @@ function render(){
   const card=make('article','','reference-card');
   card.append(make('p',m.maker+' · '+m.category,'eyebrow'),make('h2',m.name),make('p',m.description));
   if(m.records)card.append(make('p',`${m.records.toLocaleString()} map records · ${Object.entries(m.record_types).map(([k,v])=>`${k}: ${v}`).join(' · ')}`),make('p',m.operators.length?'Reported operators: '+m.operators.join(', '):''));
-  const allocations=deviceReferences.vendors.filter(v=>[v.name,...(v.aliases||[])].some(n=>n.toLowerCase()===m.maker.toLowerCase())).flatMap(v=>(v.prefixes||[]).map(p=>`${p}… / ${p.length*4}-bit allocation`));
-  card.append(make('p',allocations.length?'Manufacturer MAC allocation (not model-specific): '+allocations.join(' · '):'MAC allocation: not verified for this manufacturer.'));
+  const allocations=macAllocationsFor(m.maker);
+  card.append(make('p',allocations.length?'Manufacturer MAC prefixes: '+allocations.map(formatMacPrefix).join(' · '):m.maker==='Unknown manufacturer'?'MAC prefix: manufacturer not identified in the source record.':'MAC prefix: no verified match in the reviewed registries.'));
+  if(allocations.length){
+   const registrations=make('details');registrations.append(make('summary','MAC registration sources'));
+   registrations.append(make('p',`Manufacturer allocations; use on this particular model is not verified. Reviewed ${macReviewedOn}.`));
+   for(const allocation of allocations){const row=make('p');row.append(link(formatMacPrefix(allocation)+' · '+allocation.registrant,allocation.source));registrations.append(row);}
+   card.append(registrations);
+  }
   if(m.last_seen)card.append(make('p','Latest dated observation: '+new Date(m.last_seen*1000).toLocaleString()));
   const comms=make('p');comms.append(make('strong','Published communications: '),document.createTextNode(m.connection));card.append(comms,make('p',m.reception,'reference-reception'));
   const links=make('p');if(m.url)links.append(link('Product / program ↗',m.url));if(m.manufacturer_url)links.append(document.createTextNode(' · '),link('Manufacturer ↗',m.manufacturer_url));const cloud=make('a','Cloud Surface ↗');cloud.href='/cloud-surface?vendor='+encodeURIComponent(m.maker);const galaxy=make('a','Galaxy ↗');galaxy.href='/galaxy?vendor='+encodeURIComponent(m.maker);links.append(document.createTextNode(' · '),cloud,document.createTextNode(' · '),galaxy);card.append(links);
