@@ -2007,6 +2007,474 @@
           ]
         }
       ]
+    },
+    {
+      "id": "unitree-a1",
+      "manufacturer": "Unitree Robotics",
+      "models": [
+        "Unitree A1",
+        "A1"
+      ],
+      "configuration": "A1 Standard / Exploration configurations; Exploration adds lidar and an AI module. The cited page does not name the CPU silicon.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Stereo depth camera and foot sensing",
+          "details": "Active-infrared stereo depth camera, up to 1080p video, and four foot-end pressure sensors. Exploration adds lidar.",
+          "sources": [
+            "https://www.unitree.com/a1/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "HDMI, Ethernet and USB",
+          "details": "Published external connections: two HDMI, two Ethernet and four USB ports.",
+          "sources": [
+            "https://www.unitree.com/a1/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Joint actuators",
+          "details": "Removable joint assemblies support individual position, speed and torque control; quoted maximum joint torque 33.5 N·m.",
+          "sources": [
+            "https://www.unitree.com/a1/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "High- and low-level APIs",
+          "details": "Secondary-development interfaces expose sensor data and motor commands. Optional microphone, voice and ultrasonic modules depend on configuration.",
+          "sources": [
+            "https://www.unitree.com/a1/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unitree-aliengo",
+      "manufacturer": "Unitree Robotics",
+      "models": [
+        "Unitree AlienGo",
+        "AlienGo"
+      ],
+      "configuration": "AlienGo developer configuration. Onboard PC and peripheral choices vary; no specific CPU part is established.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Developer onboard PC",
+          "details": "The developer version includes an onboard PC; its processor SKU is not specified on this product page.",
+          "sources": [
+            "https://www.unitree.com/aliengo/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Stereo depth and visual odometry",
+          "details": "Two depth-camera sets and one visual-odometry camera; joint motor/output encoders.",
+          "sources": [
+            "https://www.unitree.com/aliengo/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Developer expansion",
+          "details": "Two Ethernet, two USB 3.0, one USB 2.0 and one RS-485 connection.",
+          "sources": [
+            "https://www.unitree.com/aliengo/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Twelve servo motors",
+          "details": "Quadruped actuation with high-level body control and lower-level single-leg or motor control.",
+          "sources": [
+            "https://www.unitree.com/aliengo/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "C/C++ and ROS",
+          "details": "Manufacturer documents high- and low-level control interfaces; custom lidar, arm and GNSS modules are optional.",
+          "sources": [
+            "https://www.unitree.com/aliengo/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unitree-go2-w",
+      "manufacturer": "Unitree Robotics",
+      "models": [
+        "Unitree Go2-W",
+        "Go2-W"
+      ],
+      "configuration": "Go2-W wheeled quadruped; this is separate from the leg-only Go2. Expansion compute is optional.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Eight-core processor",
+          "details": "Base CPU core count is published; its silicon part number is not identified. Orin NX is one optional expansion module.",
+          "sources": [
+            "https://www.unitree.com/go2-w/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi 6, Bluetooth and 4G",
+          "details": "Published radio capabilities; availability and configuration must be checked on the unit.",
+          "sources": [
+            "https://www.unitree.com/go2-w/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Wide-angle 3D lidar and HD camera",
+          "details": "Published perception package.",
+          "sources": [
+            "https://www.unitree.com/go2-w/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Wheels, joints and battery",
+          "details": "Sixteen motors including in-wheel drive; seven-inch pneumatic tires; 15,000 mAh battery and 33.6 V system.",
+          "sources": [
+            "https://www.unitree.com/go2-w/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "App, development and OTA",
+          "details": "Manufacturer lists app support, secondary development and over-the-air updates.",
+          "sources": [
+            "https://www.unitree.com/go2-w/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unitree-b2-w",
+      "manufacturer": "Unitree Robotics",
+      "models": [
+        "Unitree B2-W",
+        "B2-W"
+      ],
+      "configuration": "B2-W wheeled configuration, distinct from B2. Extra computers are optional and do not identify the installed configuration.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Intel Core i5 and Core i7",
+          "details": "Standard specification assigns Core i5 to platform functions and Core i7 to user development; exact SKUs are not named.",
+          "sources": [
+            "https://www.unitree.com/b2-w/"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Optional expansion computers",
+          "details": "Additional Core i7 or Orin NX modules, with up to three devices, are offered.",
+          "sources": [
+            "https://www.unitree.com/b2-w/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and wheel drivetrain",
+          "details": "58 V battery above 2 kWh; 225 mm wheels. Quoted wheel torque is 40 N·m.",
+          "sources": [
+            "https://www.unitree.com/b2-w/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "OTA updates and configurable motion",
+          "details": "Software updates and application-dependent configurations are documented; some capabilities need operator control or development.",
+          "sources": [
+            "https://www.unitree.com/b2-w/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unitree-a2",
+      "manufacturer": "Unitree Robotics",
+      "models": [
+        "Unitree A2",
+        "A2"
+      ],
+      "configuration": "A2 / A2-PRO specification. Sensors and cellular/GNSS options differ by trim; not an A2-W component assignment.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Eight-core platform CPU plus Intel Core i7",
+          "details": "Both trims list an unnamed eight-core processor and a Core i7 development computer. PRO offers an optional compute expansion dock.",
+          "sources": [
+            "https://www.unitree.com/A2/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi 6, Bluetooth 5.2 and optional 4G",
+          "details": "Wi-Fi/Bluetooth are listed for both trims; 4G is optional on A2 and expanded on PRO.",
+          "sources": [
+            "https://www.unitree.com/A2/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Lidar, camera, encoders and microphones",
+          "details": "A2 lists one lidar; PRO lists two. Both include an HD camera, microphone array and dual joint encoders. GNSS is configuration-dependent.",
+          "sources": [
+            "https://www.unitree.com/A2/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "CAN, RS-485, Ethernet and USB-C",
+          "details": "Two CAN, two RS-485, two Gigabit Ethernet and four USB 3.0 Type-C interfaces; 12 V / 24 V / battery power outputs.",
+          "sources": [
+            "https://www.unitree.com/A2/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Hot-swappable dual batteries",
+          "details": "50.4 V; each 9 Ah pack stores 453.6 Wh, or 907.2 Wh with both. Twelve permanent-magnet synchronous joint motors.",
+          "sources": [
+            "https://www.unitree.com/A2/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "OTA and developer support",
+          "details": "Published secondary-development support and continuous software updates.",
+          "sources": [
+            "https://www.unitree.com/A2/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unitree-as2",
+      "manufacturer": "Unitree Robotics",
+      "models": [
+        "Unitree As2",
+        "As2"
+      ],
+      "configuration": "As2 AIR / PRO / X / EDU comparison. Lidar, battery, cellular and development features are trim-dependent.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Eight-core platform CPU",
+          "details": "All listed trims have an eight-core processor; no silicon SKU is supplied. EDU offers optional compute expansion such as Orin NX.",
+          "sources": [
+            "https://www.unitree.com/As2/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi 6 and Bluetooth 5.2",
+          "details": "All trims. PRO/X/EDU list 4G, initially disabled until authorized; AIR does not list it.",
+          "sources": [
+            "https://www.unitree.com/As2/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Lidar, HD camera and joint encoders",
+          "details": "AIR lists Unitree L2; other trims list industrial 64–128-line lidar. All include a camera and dual joint encoders.",
+          "sources": [
+            "https://www.unitree.com/As2/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ethernet and SBUS",
+          "details": "One Gigabit Ethernet and one SBUS connection, plus battery power output.",
+          "sources": [
+            "https://www.unitree.com/As2/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Twelve PMSM motors and Li-ion battery",
+          "details": "36–50.4 V; AIR has an 8 Ah pack, other trims 15 Ah. EDU supports a charging dock.",
+          "sources": [
+            "https://www.unitree.com/As2/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Trim-specific development",
+          "details": "Secondary development is listed for X and EDU; OTA updates and UniStore support are listed separately.",
+          "sources": [
+            "https://www.unitree.com/As2/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unitree-as2-w",
+      "manufacturer": "Unitree Robotics",
+      "models": [
+        "Unitree As2-W",
+        "As2-W"
+      ],
+      "configuration": "As2-W X / EDU wheeled configurations; do not substitute the leg-only As2 specification.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Eight-core CPU with optional EDU expansion",
+          "details": "Base silicon SKU is not specified; EDU offers an expansion dock including Orin NX options.",
+          "sources": [
+            "https://www.unitree.com/As2-W/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi 6, Bluetooth 5.2 and 4G",
+          "details": "Cellular and GNSS are listed as disabled until authorized; regional features and configuration vary.",
+          "sources": [
+            "https://www.unitree.com/As2-W/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Industrial lidar and HD camera",
+          "details": "64–128-line lidar, camera, microphone and dual joint encoders.",
+          "sources": [
+            "https://www.unitree.com/As2-W/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Gigabit Ethernet and SBUS",
+          "details": "One of each connection plus battery power output.",
+          "sources": [
+            "https://www.unitree.com/As2-W/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Sixteen motors and 15 Ah battery",
+          "details": "36–50.4 V supply, seven-inch wheels, PMSM joints. EDU offers a charging dock.",
+          "sources": [
+            "https://www.unitree.com/As2-W/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Developer support and OTA",
+          "details": "Both trims list secondary development, UniStore and software updates.",
+          "sources": [
+            "https://www.unitree.com/As2-W/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unitree-r1",
+      "manufacturer": "Unitree Robotics",
+      "models": [
+        "Unitree R1",
+        "R1"
+      ],
+      "configuration": "R1 AIR / R1 / R1 EDU comparison; EDU compute and camera variants must not be assumed on AIR.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Eight-core processor",
+          "details": "Published for all three variants without a silicon SKU. Only EDU lists optional Orin-class expansion, quoted at 40–100 TOPS.",
+          "sources": [
+            "https://www.unitree.com/R1/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera and audio inputs",
+          "details": "AIR lists a monocular camera; R1 and EDU list binocular cameras. All list a four-microphone array and joint encoders.",
+          "sources": [
+            "https://www.unitree.com/R1/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi 6 and Bluetooth 5.2",
+          "details": "Shared wireless standards, not model-specific identification evidence.",
+          "sources": [
+            "https://www.unitree.com/R1/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Quick-release lithium battery",
+          "details": "Electric PMSM actuation; manufacturer quotes about one hour of operation, dependent on use.",
+          "sources": [
+            "https://www.unitree.com/R1/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "OTA and EDU development",
+          "details": "OTA updates on all trims; secondary development is listed for EDU only.",
+          "sources": [
+            "https://www.unitree.com/R1/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skydio-2",
+      "manufacturer": "Skydio",
+      "models": [
+        "Skydio 2",
+        "Skydio 2 Enterprise"
+      ],
+      "configuration": "Skydio 2 platform described by the Enterprise datasheet; this does not establish later 2+ radio revisions.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA Tegra TX2",
+          "details": "The manufacturer identifies Tegra TX2 / X2 with 256 GPU cores for onboard autonomy.",
+          "sources": [
+            "https://pages.skydio.com/rs/784-TUF-591/images/skydio-2-enterprise-datasheet-res-pg.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Sony imaging and six navigation cameras",
+          "details": "Main camera: Sony 1/2.3-inch 12.3 MP CMOS on a three-axis gimbal. Six Sony 1/3.06-inch 4K navigation cameras provide surrounding coverage.",
+          "sources": [
+            "https://pages.skydio.com/rs/784-TUF-591/images/skydio-2-enterprise-datasheet-res-pg.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Magnetic-mount LiPo battery",
+          "details": "Removable battery; published maximum flight time 23 minutes.",
+          "sources": [
+            "https://pages.skydio.com/rs/784-TUF-591/images/skydio-2-enterprise-datasheet-res-pg.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Skydio Autonomy and optional enterprise software",
+          "details": "Enterprise Foundation, 3D Scan and House Scan are optional software packages; Beacon and Controller are separate accessories.",
+          "sources": [
+            "https://pages.skydio.com/rs/784-TUF-591/images/skydio-2-enterprise-datasheet-res-pg.pdf"
+          ]
+        }
+      ]
     }
   ]
 }
