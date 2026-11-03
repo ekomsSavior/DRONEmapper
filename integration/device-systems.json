@@ -2473,6 +2473,873 @@
           "sources": [
             "https://pages.skydio.com/rs/784-TUF-591/images/skydio-2-enterprise-datasheet-res-pg.pdf"
           ]
+        },
+        {
+          "section": "compute",
+          "component": "Qualcomm image processor",
+          "details": "QCS605 imaging platform with Kryo 300 CPU, Adreno 615 GPU and Hexagon 685 DSP.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/15085615535387"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "RAM and media",
+          "details": "4 GB, 128-bit LPDDR4 and removable microSD recording.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/15085615535387"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-air-3",
+      "manufacturer": "DJI",
+      "models": [
+        "Air 3",
+        "DJI Air 3"
+      ],
+      "configuration": "Air 3 aircraft specification; controller hardware is separate. Processor part numbers are not published in this source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "memory",
+          "component": "Onboard media storage",
+          "details": "8 GB internal storage; microSD support.",
+          "sources": [
+            "https://www.dji.com/air-3/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging system",
+          "details": "Two 48 MP, 1/1.3-inch CMOS cameras: wide and medium telephoto.",
+          "sources": [
+            "https://www.dji.com/air-3/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation sensors",
+          "details": "Omnidirectional stereo vision with downward infrared sensing. GPS, Galileo and BeiDou reception.",
+          "sources": [
+            "https://www.dji.com/air-3/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "O4 aircraft link",
+          "details": "Six antennas, 2T4R; 2400–2483.5, 5170–5250 and 5725–5850 MHz, subject to regional availability.",
+          "sources": [
+            "https://www.dji.com/air-3/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi and Bluetooth",
+          "details": "802.11a/b/g/n/ac and Bluetooth 5.2; these shared standards are not unique model identifiers.",
+          "sources": [
+            "https://www.dji.com/air-3/specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight battery",
+          "details": "4241 mAh, 14.76 V, 62.6 Wh, four-cell Li-ion.",
+          "sources": [
+            "https://www.dji.com/air-3/specs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-air-3s",
+      "manufacturer": "DJI",
+      "models": [
+        "Air 3S",
+        "DJI Air 3S"
+      ],
+      "configuration": "Air 3S aircraft specification; controller hardware is separate. Processor part numbers are not published in this source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "memory",
+          "component": "Onboard media storage",
+          "details": "42 GB internal storage; microSD support.",
+          "sources": [
+            "https://www.dji.com/air-3s/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging system",
+          "details": "50 MP, one-inch wide camera plus 48 MP, 1/1.3-inch medium telephoto.",
+          "sources": [
+            "https://www.dji.com/air-3s/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation sensors",
+          "details": "Omnidirectional stereo vision, forward lidar and downward infrared sensing. GPS, Galileo and BeiDou reception.",
+          "sources": [
+            "https://www.dji.com/air-3s/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "O4 aircraft link",
+          "details": "Six antennas, 2T4R; 2400–2483.5, 5170–5250 and 5725–5850 MHz, subject to regional availability.",
+          "sources": [
+            "https://www.dji.com/air-3s/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi and Bluetooth",
+          "details": "802.11a/b/g/n/ac and Bluetooth 5.2; these shared standards are not unique model identifiers.",
+          "sources": [
+            "https://www.dji.com/air-3s/specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight battery",
+          "details": "4276 mAh, 14.6 V, 62.5 Wh, four-cell Li-ion.",
+          "sources": [
+            "https://www.dji.com/air-3s/specs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-mini-3",
+      "manufacturer": "DJI",
+      "models": [
+        "Mini 3",
+        "DJI Mini 3"
+      ],
+      "configuration": "Mini 3, not Mini 3 Pro. Standard and Plus battery configurations are separate; the Plus battery is region-dependent.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Camera and gimbal",
+          "details": "48 MP, 1/1.3-inch CMOS on a three-axis mechanical gimbal.",
+          "sources": [
+            "https://www.dji.com/mini-3/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning",
+          "details": "Downward vision plus GPS, GLONASS and Galileo; this model is not specified with omnidirectional obstacle sensing.",
+          "sources": [
+            "https://www.dji.com/mini-3/specs"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Removable media",
+          "details": "No internal media storage; microSD recording.",
+          "sources": [
+            "https://www.dji.com/mini-3/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "O2 link",
+          "details": "Two antennas, 1T2R; 2400–2483.5 and 5725–5850 MHz, region-dependent.",
+          "sources": [
+            "https://www.dji.com/mini-3/specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Standard / Plus battery",
+          "details": "Standard: 2453 mAh, 18.1 Wh. Optional Plus: 3850 mAh, 28.4 Wh. Both nominally 7.38 V.",
+          "sources": [
+            "https://www.dji.com/mini-3/specs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-mavic-3-classic",
+      "manufacturer": "DJI",
+      "models": [
+        "Mavic 3 Classic",
+        "DJI Mavic 3 Classic"
+      ],
+      "configuration": "Mavic 3 Classic single-camera configuration; does not establish Mavic 3 Pro or Cine hardware.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Hasselblad camera",
+          "details": "20 MP Four Thirds CMOS sensor, three-axis gimbal.",
+          "sources": [
+            "https://www.dji.com/mavic-3-classic/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Obstacle sensing",
+          "details": "Omnidirectional stereo vision plus downward infrared sensing.",
+          "sources": [
+            "https://www.dji.com/mavic-3-classic/specs"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Media storage",
+          "details": "8 GB internal storage plus microSD.",
+          "sources": [
+            "https://www.dji.com/mavic-3-classic/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "O3+ and Wi-Fi transfer",
+          "details": "Four antennas, 2T4R; O3+ uses 2400–2483.5 / 5725–5850 MHz by region. Wi-Fi 6 is listed for file transfer.",
+          "sources": [
+            "https://www.dji.com/mavic-3-classic/specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight battery",
+          "details": "5000 mAh, 15.4 V, 77 Wh, four-cell Li-ion.",
+          "sources": [
+            "https://www.dji.com/mavic-3-classic/specs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-mavic-3-pro",
+      "manufacturer": "DJI",
+      "models": [
+        "Mavic 3 Pro",
+        "DJI Mavic 3 Pro"
+      ],
+      "configuration": "Mavic 3 Pro configuration; Cine storage and codecs must not be assigned to the standard Pro.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Three-camera payload",
+          "details": "20 MP Four Thirds wide, 48 MP 1/1.3-inch medium telephoto, and 12 MP 1/2-inch telephoto CMOS sensors.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation sensing",
+          "details": "Omnidirectional stereo vision with downward infrared sensing.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Internal media storage",
+          "details": "8 GB internal; microSD also supported.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "O3+ aircraft link",
+          "details": "Four antennas, 2T4R; 2400–2483.5 / 5725–5850 MHz by region.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Four-cell Li-ion pack",
+          "details": "5000 mAh, 15.4 V, 77 Wh.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-mavic-3-pro-cine",
+      "manufacturer": "DJI",
+      "models": [
+        "Mavic 3 Pro Cine",
+        "DJI Mavic 3 Pro Cine"
+      ],
+      "configuration": "Mavic 3 Pro Cine configuration; Cine storage and codecs must not be assigned to the standard Pro.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Three-camera payload",
+          "details": "20 MP Four Thirds wide, 48 MP 1/1.3-inch medium telephoto, and 12 MP 1/2-inch telephoto CMOS sensors.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation sensing",
+          "details": "Omnidirectional stereo vision with downward infrared sensing.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Internal media storage",
+          "details": "1 TB SSD; microSD also supported.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "O3+ aircraft link",
+          "details": "Four antennas, 2T4R; 2400–2483.5 / 5725–5850 MHz by region.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Four-cell Li-ion pack",
+          "details": "5000 mAh, 15.4 V, 77 Wh.",
+          "sources": [
+            "https://www.dji.com/mavic-3-pro/specs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-avata-2",
+      "manufacturer": "DJI",
+      "models": [
+        "Avata 2",
+        "DJI Avata 2"
+      ],
+      "configuration": "Avata 2 aircraft; goggles and controllers have their own processors and batteries.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "memory",
+          "component": "Internal media storage",
+          "details": "46 GB internal storage plus microSD.",
+          "sources": [
+            "https://www.dji.com/avata-2/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera and positioning",
+          "details": "12 MP, 1/1.3-inch CMOS; downward and rear visual positioning, plus downward time-of-flight sensing.",
+          "sources": [
+            "https://www.dji.com/avata-2/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "O4 aircraft link",
+          "details": "Four antennas, 2T4R; 2400–2483.5, 5170–5250 and 5725–5850 MHz, region-dependent.",
+          "sources": [
+            "https://www.dji.com/avata-2/specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi and Bluetooth",
+          "details": "802.11a/b/g/n/ac and Bluetooth 5.0.",
+          "sources": [
+            "https://www.dji.com/avata-2/specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight battery",
+          "details": "2150 mAh, 14.76 V, 31.7 Wh Li-ion battery.",
+          "sources": [
+            "https://www.dji.com/avata-2/specs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-mavic-2-pro",
+      "manufacturer": "DJI",
+      "models": [
+        "Mavic 2 Pro",
+        "DJI Mavic 2 Pro"
+      ],
+      "configuration": "Mavic 2 Pro consumer configuration; Enterprise payloads are not implied.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Camera",
+          "details": "20 MP, one-inch CMOS.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning and obstacle sensing",
+          "details": "GPS/GLONASS and multidirectional obstacle sensors; lateral sensing is mode-dependent.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Storage",
+          "details": "8 GB internal plus microSD, up to 128 GB per published specification.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "OcuSync 2.0",
+          "details": "2400–2483 / 5725–5850 MHz, regional. Aircraft control requires the remote controller; Wi-Fi control is not supported.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery",
+          "details": "3850 mAh, 15.4 V, 59.29 Wh LiPo 4S.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control app",
+          "details": "DJI GO 4.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-mavic-2-zoom",
+      "manufacturer": "DJI",
+      "models": [
+        "Mavic 2 Zoom",
+        "DJI Mavic 2 Zoom"
+      ],
+      "configuration": "Mavic 2 Zoom consumer configuration; Enterprise payloads are not implied.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Camera",
+          "details": "12 MP, 1/2.3-inch CMOS; 24–48 mm equivalent optical zoom.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning and obstacle sensing",
+          "details": "GPS/GLONASS and multidirectional obstacle sensors; lateral sensing is mode-dependent.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Storage",
+          "details": "8 GB internal plus microSD, up to 128 GB per published specification.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "OcuSync 2.0",
+          "details": "2400–2483 / 5725–5850 MHz, regional. Aircraft control requires the remote controller; Wi-Fi control is not supported.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery",
+          "details": "3850 mAh, 15.4 V, 59.29 Wh LiPo 4S.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control app",
+          "details": "DJI GO 4.",
+          "sources": [
+            "https://www.dji.com/mavic-2/info"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autel-nano",
+      "manufacturer": "Autel Robotics",
+      "models": [
+        "EVO Nano"
+      ],
+      "configuration": "EVO Nano aircraft, manual V3.0.9; processor SKU is not specified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Camera and perception",
+          "details": "48 MP, 1/2-inch CMOS, f/2.8 fixed-focus. Three-axis gimbal; front, rear and downward stereo vision.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Media storage",
+          "details": "No internal media storage; removable microSD.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Aircraft/RC link",
+          "details": "Regional 2.4 / 5.2 / 5.8 GHz operation; 5.2 GHz is FCC-region only in this manual. Wi-Fi media transfer operates after landing.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight battery",
+          "details": "2250 mAh, 7.7 V, 17.32 Wh LiPo 2S.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control app",
+          "details": "Autel Sky.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autel-nano-plus",
+      "manufacturer": "Autel Robotics",
+      "models": [
+        "EVO Nano+"
+      ],
+      "configuration": "EVO Nano+ aircraft, manual V3.0.9; processor SKU is not specified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Camera and perception",
+          "details": "50 MP, 1/1.28-inch CMOS, f/1.9. Three-axis gimbal; front, rear and downward stereo vision.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Media storage",
+          "details": "No internal media storage; removable microSD.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Aircraft/RC link",
+          "details": "Regional 2.4 / 5.2 / 5.8 GHz operation; 5.2 GHz is FCC-region only in this manual. Wi-Fi media transfer operates after landing.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight battery",
+          "details": "2250 mAh, 7.7 V, 17.32 Wh LiPo 2S.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control app",
+          "details": "Autel Sky.",
+          "sources": [
+            "https://www.autelrobotics.com/wp-content/uploads/2025/01/EN_EVO-Nano-Series-Multi-rotor-Drone-User-Manual_V3.0.9.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skydio-2-plus",
+      "manufacturer": "Skydio",
+      "models": [
+        "Skydio 2+",
+        "2+ SDR35V1",
+        "2+ SDR35V2"
+      ],
+      "configuration": "Skydio 2+ platform, operator manual v24.1 (May 2023). This establishes shared platform components, not the differences between SDR35V1 and SDR35V2 revisions.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA autonomy SoC",
+          "details": "Tegra X2: two Denver 2 and four ARM Cortex-A57 CPU cores, with a 256-core Pascal GPU.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/15085615535387"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Qualcomm image processor",
+          "details": "QCS605 imaging platform: octa-core Kryo 300, Adreno 615 and Hexagon 685 DSP.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/15085615535387"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "RAM and media",
+          "details": "4 GB, 128-bit LPDDR4; removable microSD media.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/15085615535387"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera suite",
+          "details": "Sony IMX577 12.3 MP main camera; six Sony 4K navigation cameras, plus GPS/GLONASS.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/15085615535387"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi / Skydio Link",
+          "details": "5180–5240 and 5725–5850 MHz. Wi-Fi channel widths 20/40/80 MHz; Skydio Link widths 5/10 MHz. Region and hardware revision remain relevant.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/15085615535387"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "double-3",
+      "manufacturer": "Double Robotics",
+      "models": [
+        "Double 3"
+      ],
+      "configuration": "Double 3 developer hardware; the head can also be fitted to a Double 2 base, whose drivetrain is not established by this profile.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Jetson and balance controller",
+          "details": "NVIDIA Jetson TX2-4GB module; separate real-time microcontroller and IMU handle self-balancing.",
+          "sources": [
+            "https://www.doublerobotics.com/developer.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Depth, imaging and range",
+          "details": "Two Intel RealSense D430 depth modules, two 13 MP cameras (wide/zoom), five ultrasonic range finders and motor encoders.",
+          "sources": [
+            "https://www.doublerobotics.com/developer.html"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Intel wireless and BLE",
+          "details": "Dual-band Wireless-AC, 2.4/5 GHz; Bluetooth 4.2 Low Energy.",
+          "sources": [
+            "https://www.doublerobotics.com/developer.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Drive and battery",
+          "details": "Two coreless DC wheel motors, powered height adjustment, deployable kickstands and a 72 Wh Li-ion battery.",
+          "sources": [
+            "https://www.doublerobotics.com/developer.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "USB and display",
+          "details": "Two USB 3.1 ports and a 9.7-inch touch display.",
+          "sources": [
+            "https://www.doublerobotics.com/developer.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Linux and developer API",
+          "details": "Ubuntu 18.04 LTS on ARM64. Manufacturer API exposes autonomous functions and sensors; the cited implementation does not use ROS.",
+          "sources": [
+            "https://www.doublerobotics.com/developer.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pal-talos",
+      "manufacturer": "PAL Robotics",
+      "models": [
+        "PAL TALOS",
+        "TALOS"
+      ],
+      "configuration": "TALOS configuration in the manufacturer technical datasheet; modular head/grippers and later computers may differ.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Two Intel Core i7 computers",
+          "details": "COM Express Type-6 control and multimedia PCs; exact i7 SKUs are not specified.",
+          "sources": [
+            "https://pal-robotics.com/wp-content/uploads/2024/05/Datasheet-TALOS.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Dual-band Wi-Fi",
+          "details": "802.11a/b/g/n, 2.4/5 GHz; access-point or client operation.",
+          "sources": [
+            "https://pal-robotics.com/wp-content/uploads/2024/05/Datasheet-TALOS.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Force, torque and inertial sensing",
+          "details": "Four six-axis force/torque sensors at wrists/ankles; joint torque sensing except head, wrists and grippers; 1 kHz AHRS/IMU.",
+          "sources": [
+            "https://pal-robotics.com/wp-content/uploads/2024/05/Datasheet-TALOS.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "RGB/depth camera",
+          "details": "1280×720 RGB and 640×480 depth, both at 30 fps; head is configurable.",
+          "sources": [
+            "https://pal-robotics.com/wp-content/uploads/2024/05/Datasheet-TALOS.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ethernet and EtherCAT",
+          "details": "RJ45 access to onboard PCs, external EtherCAT master support and tethered emergency-stop service port.",
+          "sources": [
+            "https://pal-robotics.com/wp-content/uploads/2024/05/Datasheet-TALOS.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and articulated body",
+          "details": "1080 Wh Li-ion; 32 degrees of freedom. Arm payload quoted at 6 kg.",
+          "sources": [
+            "https://pal-robotics.com/wp-content/uploads/2024/05/Datasheet-TALOS.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Real-time Linux / ROS",
+          "details": "Ubuntu LTS with RT Preempt, ROS, OROCOS, ros_control, MoveIt and Gazebo/URDF models.",
+          "sources": [
+            "https://pal-robotics.com/wp-content/uploads/2024/05/Datasheet-TALOS.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nao-v6",
+      "manufacturer": "Aldebaran Robotics",
+      "models": [
+        "NAO",
+        "NAO V6",
+        "NAO6"
+      ],
+      "configuration": "NAO V6 H25600 only, Aldebaran datasheet version 10/2024. Generic NAO records do not establish that the observed robot is V6; earlier generations have different processors.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Intel Atom E3845",
+          "details": "1.91 GHz processor with 2 MB cache.",
+          "sources": [
+            "https://maxtronics.com/wp-content/uploads/2024/12/NAO6-DatasheetEN.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "RAM and flash",
+          "details": "4 GB DDR3 and 32 GB eMMC.",
+          "sources": [
+            "https://maxtronics.com/wp-content/uploads/2024/12/NAO6-DatasheetEN.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision, audio and motion",
+          "details": "Two OV5640 5 MP cameras, four microphones, inertial sensing, 40 kHz sonar, touch/bump sensors and four force-sensitive resistors in each foot.",
+          "sources": [
+            "https://maxtronics.com/wp-content/uploads/2024/12/NAO6-DatasheetEN.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi and Bluetooth",
+          "details": "802.11a/b/g/n and Bluetooth 4.0 LE.",
+          "sources": [
+            "https://maxtronics.com/wp-content/uploads/2024/12/NAO6-DatasheetEN.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Gigabit Ethernet",
+          "details": "One RJ45 10/100/1000 BASE-T connection.",
+          "sources": [
+            "https://maxtronics.com/wp-content/uploads/2024/12/NAO6-DatasheetEN.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Actuation and battery",
+          "details": "Coreless brushed DC joint motors; 21.6 V, 2.9 Ah, 62.5 Wh Li-ion pack.",
+          "sources": [
+            "https://maxtronics.com/wp-content/uploads/2024/12/NAO6-DatasheetEN.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "OpenNAO Linux",
+          "details": "Gentoo-based embedded GNU/Linux; C++/Python development and remote Java interfaces.",
+          "sources": [
+            "https://maxtronics.com/wp-content/uploads/2024/12/NAO6-DatasheetEN.pdf"
+          ]
         }
       ]
     }
