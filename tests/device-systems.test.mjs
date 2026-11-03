@@ -31,7 +31,8 @@ test('similar products never inherit exact-model processor assignments',()=>{
  assert.doesNotMatch(text(system('Parrot','ANAFI Ai')),/Ambarella|QRB5165/);
  assert.equal(profileIds(system('Unknown manufacturer','X10')).length,0);
  assert.equal(profileIds(system('Unitree Robotics','Unknown model')).length,0);
- assert.equal(profileIds(system('DJI','RoboMaster EP')).length,0);
+ assert.deepEqual(profileIds(system('DJI','RoboMaster EP')),['dji-robomaster-ep']);
+ assert.doesNotMatch(text(system('DJI','RoboMaster EP')),/Cortex-A|Tegra|Snapdragon/);
 });
 
 test('optional payloads and board revisions preserve their configuration boundaries',()=>{
@@ -84,6 +85,27 @@ test('radio references do not become model identity or unreviewed scanner signat
  assert.equal(equipment.sections.compute.facts.length,0);
  assert.equal(equipment.sections.identification.facts.length,0);
  assert.equal(equipment.sections.radios.facts[0].evidence,'pending-primary-review');
+});
+
+test('RID generations and aircraft variants preserve their documented hardware',()=>{
+ const first=system('Dronetag','Beacon'),second=system('Dronetag','Beacon gen.2');
+ assert.match(text(first),/Micro USB/);
+ assert.match(text(first),/conflicts on the USB connector/);
+ assert.match(text(second),/USB-C/);
+ assert.match(text(second),/BeiDou B1C/);
+ assert.doesNotMatch(text(first.sections.sensors),/BeiDou B1C/);
+ const dri=system('Dronetag','DRI');
+ assert.match(text(dri.sections.sensors),/No onboard sensors/);
+ assert.match(text(dri.sections.interfaces),/MAVLink 2/);
+ assert.match(text(system('Dronetag','BS').sections.sensors),/Onboard GNSS/);
+ const lite=system('Autel Robotics','EVO Lite'),plus=system('Autel Robotics','EVO Lite+');
+ assert.match(text(lite.sections.sensors),/four-axis/);
+ assert.doesNotMatch(text(plus.sections.sensors),/four-axis/);
+ assert.match(text(plus.sections.sensors),/three-axis/);
+ assert.equal(profileIds(system('Autel Robotics','EVO Lite Enterprise')).length,0);
+ const rtk=system('DJI','Phantom 4 RTK');
+ assert.match(text(rtk.sections.memory),/Standard Android controller: 4 GB RAM/);
+ assert.equal(profileIds(system('DJI','Phantom 4 Pro')).length,0);
 });
 
 test('global JSON and website use the same per-record system evidence',()=>{

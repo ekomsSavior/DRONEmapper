@@ -14481,8 +14481,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "autel-evo-lite",
+            "configuration": "Consumer EVO Lite; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -14491,23 +14497,87 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Storage",
+                "details": "6 GB internal; microSD up to 256 GB.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite",
+                "configuration": "Consumer EVO Lite; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "SkyLink",
+                "details": "2.4/5.2/5.8 GHz bands, region-dependent.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite",
+                "configuration": "Consumer EVO Lite; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera",
+                "details": "1/1.28-inch 50 MP CMOS; four-axis gimbal.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite",
+                "configuration": "Consumer EVO Lite; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "GPS/GLONASS/Galileo; forward, backward and downward vision.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite",
+                "configuration": "Consumer EVO Lite; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft battery",
+                "details": "6175 mAh, 11.13 V, 68.7 Wh LiPo 3S.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite",
+                "configuration": "Consumer EVO Lite; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -14516,8 +14586,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "App",
+                "details": "Autel Sky.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite",
+                "configuration": "Consumer EVO Lite; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -14551,12 +14634,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "interfaces"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -14592,8 +14670,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "autel-evo-lite-plus",
+            "configuration": "Consumer EVO Lite+; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -14602,23 +14686,87 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Storage",
+                "details": "6 GB internal; microSD up to 256 GB.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite-plus",
+                "configuration": "Consumer EVO Lite+; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "SkyLink",
+                "details": "2.4/5.2/5.8 GHz bands, region-dependent.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite-plus",
+                "configuration": "Consumer EVO Lite+; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera",
+                "details": "1-inch 20 MP CMOS; f/2.8–11 aperture, three-axis gimbal.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite-plus",
+                "configuration": "Consumer EVO Lite+; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "GPS/GLONASS/Galileo; forward, backward and downward vision.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite-plus",
+                "configuration": "Consumer EVO Lite+; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft battery",
+                "details": "6175 mAh, 11.13 V, 68.7 Wh LiPo 3S.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite-plus",
+                "configuration": "Consumer EVO Lite+; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -14627,8 +14775,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "App",
+                "details": "Autel Sky.",
+                "sources": [
+                  "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-lite-plus",
+                "configuration": "Consumer EVO Lite+; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -14661,12 +14822,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "interfaces"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -42891,8 +43047,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-phantom4-pro-v2",
+            "configuration": "Phantom 4 Pro V2.0 sections of DJI’s combined Pro/Pro+ manual v2.0. Earlier non-V2 aircraft use a different transmission system; CPU and RAM chips are not specified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -42901,33 +43063,123 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Removable media",
+                "details": "MicroSD up to 128 GB.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-pro-v2",
+                "configuration": "Phantom 4 Pro V2.0 sections of DJI’s combined Pro/Pro+ manual v2.0. Earlier non-V2 aircraft use a different transmission system; CPU and RAM chips are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "OcuSync",
+                "details": "V2.0 OcuSync link: 2.400–2.483 and 5.725–5.850 GHz, region-dependent.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-pro-v2",
+                "configuration": "Phantom 4 Pro V2.0 sections of DJI’s combined Pro/Pro+ manual v2.0. Earlier non-V2 aircraft use a different transmission system; CPU and RAM chips are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation redundancy",
+                "details": "Dual IMUs and compasses; GPS/GLONASS, forward/rear/downward vision and lateral infrared obstacle sensing.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-pro-v2",
+                "configuration": "Phantom 4 Pro V2.0 sections of DJI’s combined Pro/Pro+ manual v2.0. Earlier non-V2 aircraft use a different transmission system; CPU and RAM chips are not specified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Imaging",
+                "details": "1-inch 20 MP CMOS, mechanical shutter and three-axis gimbal.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-pro-v2",
+                "configuration": "Phantom 4 Pro V2.0 sections of DJI’s combined Pro/Pro+ manual v2.0. Earlier non-V2 aircraft use a different transmission system; CPU and RAM chips are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "PH4-5870mAh-15.2V: 5870 mAh, 15.2 V, 89.2 Wh LiPo 4S.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-pro-v2",
+                "configuration": "Phantom 4 Pro V2.0 sections of DJI’s combined Pro/Pro+ manual v2.0. Earlier non-V2 aircraft use a different transmission system; CPU and RAM chips are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Aircraft USB",
+                "details": "Micro USB for media/firmware connection.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-pro-v2",
+                "configuration": "Phantom 4 Pro V2.0 sections of DJI’s combined Pro/Pro+ manual v2.0. Earlier non-V2 aircraft use a different transmission system; CPU and RAM chips are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight app",
+                "details": "DJI GO 4.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-pro-v2",
+                "configuration": "Phantom 4 Pro V2.0 sections of DJI’s combined Pro/Pro+ manual v2.0. Earlier non-V2 aircraft use a different transmission system; CPU and RAM chips are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -42959,13 +43211,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -43131,43 +43377,152 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-phantom4-rtk",
+            "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "TimeSync architecture",
+                "details": "Synchronizes camera, flight controller and RTK receiver; processor part numbers are not published.",
+                "sources": [
+                  "https://www.dji.com/phantom-4-rtk/info"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-rtk",
+                "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Aircraft media / controller memory",
+                "details": "Aircraft: microSD up to 128 GB. Standard Android controller: 4 GB RAM and 16 GB storage.",
+                "sources": [
+                  "https://www.dji.com/phantom-4-rtk/info"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-rtk",
+                "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "OcuSync",
+                "details": "Regional 2.400–2.483 or 5.725–5.850 GHz versions.",
+                "sources": [
+                  "https://www.dji.com/phantom-4-rtk/info"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-rtk",
+                "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "RTK and perception",
+                "details": "GPS L1/L2, GLONASS L1/L2, BeiDou B1/B2 and Galileo E1/E5a; forward/rear/downward vision and infrared obstacle sensing.",
+                "sources": [
+                  "https://www.dji.com/phantom-4-rtk/info"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-rtk",
+                "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Mapping camera",
+                "details": "1-inch 20 MP CMOS, mechanical shutter, three-axis gimbal.",
+                "sources": [
+                  "https://www.dji.com/phantom-4-rtk/info"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-rtk",
+                "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft battery",
+                "details": "5870 mAh, 15.2 V, 89.2 Wh LiPo 4S.",
+                "sources": [
+                  "https://www.dji.com/phantom-4-rtk/info"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-rtk",
+                "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Correction data",
+                "details": "RTCM differential data through D-RTK 2 or network NTRIP. Network access uses controller Wi-Fi or optional 4G dongle.",
+                "sources": [
+                  "https://www.dji.com/phantom-4-rtk/info"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-rtk",
+                "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mapping applications",
+                "details": "GS RTK and DJI Terra; alternative SDK controller supports compatible Mobile SDK applications.",
+                "sources": [
+                  "https://www.dji.com/phantom-4-rtk/info"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-phantom4-rtk",
+                "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -43198,15 +43553,7 @@
             "facts": []
           }
         },
-        "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
-        ],
+        "missing_sections": [],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
     },
@@ -43421,23 +43768,67 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-robomaster-ep",
+            "configuration": "RoboMaster EP published specifications. Intelligent Controller is named, but DJI does not identify its CPU or RAM here; S1 chip assignments are not inherited.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Intelligent Controller",
+                "details": "Onboard controller handles Wi-Fi/router connection and 720p30 live view; silicon SKU unspecified.",
+                "sources": [
+                  "https://www.dji.com/robomaster-ep/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-robomaster-ep",
+                "configuration": "RoboMaster EP published specifications. Intelligent Controller is named, but DJI does not identify its CPU or RAM here; S1 chip assignments are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Removable storage",
+                "details": "MicroSD support up to 64 GB.",
+                "sources": [
+                  "https://www.dji.com/robomaster-ep/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-robomaster-ep",
+                "configuration": "RoboMaster EP published specifications. Intelligent Controller is named, but DJI does not identify its CPU or RAM here; S1 chip assignments are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Wi-Fi",
+                "details": "802.11a/b/g/n; 2.400–2.4835, 5.170–5.250 and 5.725–5.850 GHz, subject to regional configuration.",
+                "sources": [
+                  "https://www.dji.com/robomaster-ep/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-robomaster-ep",
+                "configuration": "RoboMaster EP published specifications. Intelligent Controller is named, but DJI does not identify its CPU or RAM here; S1 chip assignments are not inherited.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Published model communications",
                 "details": "Direct Wi-Fi name RMEP-XXXXXX; router mode may hide this default name.",
@@ -43450,23 +43841,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and ranging",
+                "details": "1/4-inch 5 MP CMOS camera; infrared distance sensor measures 0.1–10 m.",
+                "sources": [
+                  "https://www.dji.com/robomaster-ep/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-robomaster-ep",
+                "configuration": "RoboMaster EP published specifications. Intelligent Controller is named, but DJI does not identify its CPU or RAM here; S1 chip assignments are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Motors and battery",
+                "details": "M3508I brushless motors with FOC and closed-loop speed control; 2400 mAh, 10.8 V, 25.92 Wh LiPo 3S.",
+                "sources": [
+                  "https://www.dji.com/robomaster-ep/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-robomaster-ep",
+                "configuration": "RoboMaster EP published specifications. Intelligent Controller is named, but DJI does not identify its CPU or RAM here; S1 chip assignments are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "Power module exposes five CAN-bus ports; sensor adapter has two IO/AD ports. USB-A, pin-header and TX30 power outputs.",
+                "sources": [
+                  "https://www.dji.com/robomaster-ep/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-robomaster-ep",
+                "configuration": "RoboMaster EP published specifications. Intelligent Controller is named, but DJI does not identify its CPU or RAM here; S1 chip assignments are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Companion app",
+                "details": "RoboMaster app.",
+                "sources": [
+                  "https://www.dji.com/robomaster-ep/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-robomaster-ep",
+                "configuration": "RoboMaster EP published specifications. Intelligent Controller is named, but DJI does not identify its CPU or RAM here; S1 chip assignments are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -43510,14 +43953,7 @@
             "facts": []
           }
         },
-        "missing_sections": [
-          "compute",
-          "memory",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
-        ],
+        "missing_sections": [],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
     },
@@ -44741,8 +45177,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dronetag-beacon",
+            "configuration": "Original Beacon: manufacturer-authored product sheet and generation-1 introduction. The current gen.1 specification table conflicts on the USB connector; Micro USB here follows the original sheet and introduction. Not Beacon gen.2.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -44756,28 +45198,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Bluetooth broadcast",
+                "details": "Bluetooth 4/5-compatible radio with internal antenna; optional external antenna via MMCX.",
+                "sources": [
+                  "https://itgdronesolutions.com/wp-content/uploads/2024/12/dronetag-beacon-productsheet-2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon",
+                "configuration": "Original Beacon: manufacturer-authored product sheet and generation-1 introduction. The current gen.1 specification table conflicts on the USB connector; Micro USB here follows the original sheet and introduction. Not Beacon gen.2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "GNSS and inertial sensing",
+                "details": "GPS, GLONASS, Galileo and SBAS; barometer and accelerometer.",
+                "sources": [
+                  "https://itgdronesolutions.com/wp-content/uploads/2024/12/dronetag-beacon-productsheet-2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon",
+                "configuration": "Original Beacon: manufacturer-authored product sheet and generation-1 introduction. The current gen.1 specification table conflicts on the USB connector; Micro USB here follows the original sheet and introduction. Not Beacon gen.2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Internal battery",
+                "details": "200 mAh LiPo; 5 V charging input.",
+                "sources": [
+                  "https://itgdronesolutions.com/wp-content/uploads/2024/12/dronetag-beacon-productsheet-2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon",
+                "configuration": "Original Beacon: manufacturer-authored product sheet and generation-1 introduction. The current gen.1 specification table conflicts on the USB connector; Micro USB here follows the original sheet and introduction. Not Beacon gen.2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Original connector layout",
+                "details": "Micro USB charging/data and four-pin JST SH expansion.",
+                "sources": [
+                  "https://itgdronesolutions.com/wp-content/uploads/2024/12/dronetag-beacon-productsheet-2.pdf",
+                  "https://help.dronetag.com/dronetag-beacon/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon",
+                "configuration": "Original Beacon: manufacturer-authored product sheet and generation-1 introduction. The current gen.1 specification table conflicts on the USB connector; Micro USB here follows the original sheet and introduction. Not Beacon gen.2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Module identity",
+                "details": "Standalone ASTM F3411 / EN 4709-002 broadcast module; Dronetag app integration. Its identity does not identify the airframe it is attached to.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-beacon/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon",
+                "configuration": "Original Beacon: manufacturer-authored product sheet and generation-1 introduction. The current gen.1 specification table conflicts on the USB connector; Micro USB here follows the original sheet and introduction. Not Beacon gen.2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -44801,12 +45309,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -44831,8 +45334,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dronetag-beacon-gen2",
+            "configuration": "Beacon generation 2; separate from the original Micro USB Beacon. CPU and memory SKUs are not disclosed in this specification.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -44846,28 +45355,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Bluetooth radio",
+                "details": "2.4 GHz, 8 dBm; internal Bluetooth and GNSS antennas.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon-gen2",
+                "configuration": "Beacon generation 2; separate from the original Micro USB Beacon. CPU and memory SKUs are not disclosed in this specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "GNSS and motion sensors",
+                "details": "GPS L1, GLONASS L1, Galileo E1, BeiDou B1C, SBAS and QZSS; barometer and accelerometer.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon-gen2",
+                "configuration": "Beacon generation 2; separate from the original Micro USB Beacon. CPU and memory SKUs are not disclosed in this specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and enclosure",
+                "details": "3.7 V, 200 mAh LiPo; up to ten hours depending on configuration. 17 g, IP43.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon-gen2",
+                "configuration": "Beacon generation 2; separate from the original Micro USB Beacon. CPU and memory SKUs are not disclosed in this specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "USB-C",
+                "details": "USB-C external connection and 5 V charging.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon-gen2",
+                "configuration": "Beacon generation 2; separate from the original Micro USB Beacon. CPU and memory SKUs are not disclosed in this specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Broadcast Remote ID",
+                "details": "Position and identity broadcast using ASTM F3411 / EN 4709-002 standards.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-beacon-gen2",
+                "configuration": "Beacon generation 2; separate from the original Micro USB Beacon. CPU and memory SKUs are not disclosed in this specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -44891,12 +45465,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -44921,8 +45490,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dronetag-bs",
+            "configuration": "BS generation 1 (green PCB). The manufacturer distinguishes black-PCB BS gen.2; this profile does not assign gen.2 hardware to gen.1.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -44936,18 +45511,58 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Bluetooth Remote ID",
+                "details": "Bluetooth 4 legacy and Bluetooth 5 long-range; 2.4 GHz, 8 dBm.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-bs/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-bs",
+                "configuration": "BS generation 1 (green PCB). The manufacturer distinguishes black-PCB BS gen.2; this profile does not assign gen.2 hardware to gen.1.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Internal GNSS",
+                "details": "Onboard GNSS receiver, with separate supplied 1.575 GHz GNSS and 2.4 GHz Bluetooth wire antennas.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-bs/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-bs",
+                "configuration": "BS generation 1 (green PCB). The manufacturer distinguishes black-PCB BS gen.2; this profile does not assign gen.2 hardware to gen.1.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Externally powered module",
+                "details": "3.3–17 V input through a low-noise buck regulator; 15 mA average, 50 mA maximum. An external battery is optional, not included.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-bs/specification/",
+                  "https://help.dronetag.com/dronetag-bs/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-bs",
+                "configuration": "BS generation 1 (green PCB). The manufacturer distinguishes black-PCB BS gen.2; this profile does not assign gen.2 hardware to gen.1.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -44956,8 +45571,22 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "App and broadcast format",
+                "details": "Dronetag app configuration; ASTM F3411-22 / EN 4709-002 broadcast identity.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-bs/specification/",
+                  "https://help.dronetag.com/dronetag-bs/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-bs",
+                "configuration": "BS generation 1 (green PCB). The manufacturer distinguishes black-PCB BS gen.2; this profile does not assign gen.2 hardware to gen.1.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -44982,11 +45611,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "interfaces"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -45011,8 +45636,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dronetag-dri",
+            "configuration": "DRI with standard flight-controller-fed firmware. This is not a self-contained GNSS beacon; alternate external-GNSS firmware is a separate configuration.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -45026,28 +45657,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Bluetooth broadcast",
+                "details": "Bluetooth 4 legacy and Bluetooth 5 long-range; 2.4 GHz, 8 dBm. Internal-antenna or external U.FL variants.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-dri/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-dri",
+                "configuration": "DRI with standard flight-controller-fed firmware. This is not a self-contained GNSS beacon; alternate external-GNSS firmware is a separate configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Flight-controller data input",
+                "details": "No onboard sensors in the documented configuration; position and identity data come from the flight controller.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-dri/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-dri",
+                "configuration": "DRI with standard flight-controller-fed firmware. This is not a self-contained GNSS beacon; alternate external-GNSS firmware is a separate configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Power regulation",
+                "details": "3.3–17 V input via low-noise buck regulator; 3 mA average, 10 mA maximum.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-dri/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-dri",
+                "configuration": "DRI with standard flight-controller-fed firmware. This is not a self-contained GNSS beacon; alternate external-GNSS firmware is a separate configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "UART and MAVLink",
+                "details": "Two six-pin JST GH connectors, 1.25 mm pitch; UART with 3.3–5 V tolerance and MAVLink 2.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-dri/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-dri",
+                "configuration": "DRI with standard flight-controller-fed firmware. This is not a self-contained GNSS beacon; alternate external-GNSS firmware is a separate configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Remote ID format",
+                "details": "ASTM F3411-22 and EN 4709-002 broadcast identification.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-dri/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-dri",
+                "configuration": "DRI with standard flight-controller-fed firmware. This is not a self-contained GNSS beacon; alternate external-GNSS firmware is a separate configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -45071,12 +45767,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -45101,8 +45792,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dronetag-mini",
+            "configuration": "Original Dronetag Mini, not Mini 4G. Standalone identification module; processor and memory part numbers are not specified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -45116,28 +45813,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Cellular and Bluetooth",
+                "details": "LTE-M/NB-IoT: EU bands 3/8/20, US 2/4/12. Bluetooth at 2.4 GHz, 8 dBm.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-mini/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-mini",
+                "configuration": "Original Dronetag Mini, not Mini 4G. Standalone identification module; processor and memory part numbers are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Position and motion",
+                "details": "GPS L1, GLONASS L1, Galileo E1 and SBAS; barometer and accelerometer.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-mini/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-mini",
+                "configuration": "Original Dronetag Mini, not Mini 4G. Standalone identification module; processor and memory part numbers are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "3.7 V, 500 mAh LiPo; 5 V Micro USB charging. Manufacturer runtime 8–14 hours, configuration-dependent.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-mini/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-mini",
+                "configuration": "Original Dronetag Mini, not Mini 4G. Standalone identification module; processor and memory part numbers are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Antennas, SIM and connectors",
+                "details": "Integrated SIM; internal LTE/Bluetooth/GNSS antennas. Optional external LTE/Bluetooth via MMCX; 3.3 V logic extension and Micro USB.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-mini/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-mini",
+                "configuration": "Original Dronetag Mini, not Mini 4G. Standalone identification module; processor and memory part numbers are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Remote ID",
+                "details": "Broadcast and network identification; manufacturer references ASTM F3411 and EN 4709-002.",
+                "sources": [
+                  "https://help.dronetag.com/dronetag-mini/specification/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dronetag-mini",
+                "configuration": "Original Dronetag Mini, not Mini 4G. Standalone identification module; processor and memory part numbers are not specified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -45161,12 +45923,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -250455,6 +251212,584 @@
             ]
           }
         ]
+      },
+      {
+        "id": "dronetag-mini",
+        "manufacturer": "Dronetag",
+        "models": [
+          "Mini"
+        ],
+        "configuration": "Original Dronetag Mini, not Mini 4G. Standalone identification module; processor and memory part numbers are not specified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Cellular and Bluetooth",
+            "details": "LTE-M/NB-IoT: EU bands 3/8/20, US 2/4/12. Bluetooth at 2.4 GHz, 8 dBm.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-mini/specification/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Position and motion",
+            "details": "GPS L1, GLONASS L1, Galileo E1 and SBAS; barometer and accelerometer.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-mini/specification/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Antennas, SIM and connectors",
+            "details": "Integrated SIM; internal LTE/Bluetooth/GNSS antennas. Optional external LTE/Bluetooth via MMCX; 3.3 V logic extension and Micro USB.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-mini/specification/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "3.7 V, 500 mAh LiPo; 5 V Micro USB charging. Manufacturer runtime 8–14 hours, configuration-dependent.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-mini/specification/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Remote ID",
+            "details": "Broadcast and network identification; manufacturer references ASTM F3411 and EN 4709-002.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-mini/specification/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dronetag-beacon",
+        "manufacturer": "Dronetag",
+        "models": [
+          "Beacon"
+        ],
+        "configuration": "Original Beacon: manufacturer-authored product sheet and generation-1 introduction. The current gen.1 specification table conflicts on the USB connector; Micro USB here follows the original sheet and introduction. Not Beacon gen.2.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Bluetooth broadcast",
+            "details": "Bluetooth 4/5-compatible radio with internal antenna; optional external antenna via MMCX.",
+            "sources": [
+              "https://itgdronesolutions.com/wp-content/uploads/2024/12/dronetag-beacon-productsheet-2.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "GNSS and inertial sensing",
+            "details": "GPS, GLONASS, Galileo and SBAS; barometer and accelerometer.",
+            "sources": [
+              "https://itgdronesolutions.com/wp-content/uploads/2024/12/dronetag-beacon-productsheet-2.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Original connector layout",
+            "details": "Micro USB charging/data and four-pin JST SH expansion.",
+            "sources": [
+              "https://itgdronesolutions.com/wp-content/uploads/2024/12/dronetag-beacon-productsheet-2.pdf",
+              "https://help.dronetag.com/dronetag-beacon/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Internal battery",
+            "details": "200 mAh LiPo; 5 V charging input.",
+            "sources": [
+              "https://itgdronesolutions.com/wp-content/uploads/2024/12/dronetag-beacon-productsheet-2.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Module identity",
+            "details": "Standalone ASTM F3411 / EN 4709-002 broadcast module; Dronetag app integration. Its identity does not identify the airframe it is attached to.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-beacon/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dronetag-beacon-gen2",
+        "manufacturer": "Dronetag",
+        "models": [
+          "Beacon gen.2",
+          "Beacon gen 2"
+        ],
+        "configuration": "Beacon generation 2; separate from the original Micro USB Beacon. CPU and memory SKUs are not disclosed in this specification.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Bluetooth radio",
+            "details": "2.4 GHz, 8 dBm; internal Bluetooth and GNSS antennas.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "GNSS and motion sensors",
+            "details": "GPS L1, GLONASS L1, Galileo E1, BeiDou B1C, SBAS and QZSS; barometer and accelerometer.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "USB-C",
+            "details": "USB-C external connection and 5 V charging.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and enclosure",
+            "details": "3.7 V, 200 mAh LiPo; up to ten hours depending on configuration. 17 g, IP43.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Broadcast Remote ID",
+            "details": "Position and identity broadcast using ASTM F3411 / EN 4709-002 standards.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-beacon-gen2/specification/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dronetag-bs",
+        "manufacturer": "Dronetag",
+        "models": [
+          "BS"
+        ],
+        "configuration": "BS generation 1 (green PCB). The manufacturer distinguishes black-PCB BS gen.2; this profile does not assign gen.2 hardware to gen.1.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Bluetooth Remote ID",
+            "details": "Bluetooth 4 legacy and Bluetooth 5 long-range; 2.4 GHz, 8 dBm.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-bs/specification/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Internal GNSS",
+            "details": "Onboard GNSS receiver, with separate supplied 1.575 GHz GNSS and 2.4 GHz Bluetooth wire antennas.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-bs/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Externally powered module",
+            "details": "3.3–17 V input through a low-noise buck regulator; 15 mA average, 50 mA maximum. An external battery is optional, not included.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-bs/specification/",
+              "https://help.dronetag.com/dronetag-bs/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "App and broadcast format",
+            "details": "Dronetag app configuration; ASTM F3411-22 / EN 4709-002 broadcast identity.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-bs/specification/",
+              "https://help.dronetag.com/dronetag-bs/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dronetag-dri",
+        "manufacturer": "Dronetag",
+        "models": [
+          "DRI"
+        ],
+        "configuration": "DRI with standard flight-controller-fed firmware. This is not a self-contained GNSS beacon; alternate external-GNSS firmware is a separate configuration.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Bluetooth broadcast",
+            "details": "Bluetooth 4 legacy and Bluetooth 5 long-range; 2.4 GHz, 8 dBm. Internal-antenna or external U.FL variants.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-dri/specification/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Flight-controller data input",
+            "details": "No onboard sensors in the documented configuration; position and identity data come from the flight controller.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-dri/specification/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "UART and MAVLink",
+            "details": "Two six-pin JST GH connectors, 1.25 mm pitch; UART with 3.3–5 V tolerance and MAVLink 2.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-dri/specification/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Power regulation",
+            "details": "3.3–17 V input via low-noise buck regulator; 3 mA average, 10 mA maximum.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-dri/specification/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Remote ID format",
+            "details": "ASTM F3411-22 and EN 4709-002 broadcast identification.",
+            "sources": [
+              "https://help.dronetag.com/dronetag-dri/specification/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-robomaster-ep",
+        "manufacturer": "DJI",
+        "models": [
+          "RoboMaster EP"
+        ],
+        "configuration": "RoboMaster EP published specifications. Intelligent Controller is named, but DJI does not identify its CPU or RAM here; S1 chip assignments are not inherited.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Intelligent Controller",
+            "details": "Onboard controller handles Wi-Fi/router connection and 720p30 live view; silicon SKU unspecified.",
+            "sources": [
+              "https://www.dji.com/robomaster-ep/specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Removable storage",
+            "details": "MicroSD support up to 64 GB.",
+            "sources": [
+              "https://www.dji.com/robomaster-ep/specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wi-Fi",
+            "details": "802.11a/b/g/n; 2.400–2.4835, 5.170–5.250 and 5.725–5.850 GHz, subject to regional configuration.",
+            "sources": [
+              "https://www.dji.com/robomaster-ep/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and ranging",
+            "details": "1/4-inch 5 MP CMOS camera; infrared distance sensor measures 0.1–10 m.",
+            "sources": [
+              "https://www.dji.com/robomaster-ep/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "Power module exposes five CAN-bus ports; sensor adapter has two IO/AD ports. USB-A, pin-header and TX30 power outputs.",
+            "sources": [
+              "https://www.dji.com/robomaster-ep/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Motors and battery",
+            "details": "M3508I brushless motors with FOC and closed-loop speed control; 2400 mAh, 10.8 V, 25.92 Wh LiPo 3S.",
+            "sources": [
+              "https://www.dji.com/robomaster-ep/specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Companion app",
+            "details": "RoboMaster app.",
+            "sources": [
+              "https://www.dji.com/robomaster-ep/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-phantom4-pro-v2",
+        "manufacturer": "DJI",
+        "models": [
+          "Phantom 4 Pro V2.0"
+        ],
+        "configuration": "Phantom 4 Pro V2.0 sections of DJI’s combined Pro/Pro+ manual v2.0. Earlier non-V2 aircraft use a different transmission system; CPU and RAM chips are not specified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Navigation redundancy",
+            "details": "Dual IMUs and compasses; GPS/GLONASS, forward/rear/downward vision and lateral infrared obstacle sensing.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging",
+            "details": "1-inch 20 MP CMOS, mechanical shutter and three-axis gimbal.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "OcuSync",
+            "details": "V2.0 OcuSync link: 2.400–2.483 and 5.725–5.850 GHz, region-dependent.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Removable media",
+            "details": "MicroSD up to 128 GB.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Aircraft USB",
+            "details": "Micro USB for media/firmware connection.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "PH4-5870mAh-15.2V: 5870 mAh, 15.2 V, 89.2 Wh LiPo 4S.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight app",
+            "details": "DJI GO 4.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/phantom_4_pro/20211129/UM/Phantom_4_Pro_Pro_Plus_Series_User_Manual_EN.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-phantom4-rtk",
+        "manufacturer": "DJI",
+        "models": [
+          "Phantom 4 RTK"
+        ],
+        "configuration": "Phantom 4 RTK with standard integrated-display controller; SDK controller is an alternative. Controller memory below is not aircraft RAM.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "TimeSync architecture",
+            "details": "Synchronizes camera, flight controller and RTK receiver; processor part numbers are not published.",
+            "sources": [
+              "https://www.dji.com/phantom-4-rtk/info"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Aircraft media / controller memory",
+            "details": "Aircraft: microSD up to 128 GB. Standard Android controller: 4 GB RAM and 16 GB storage.",
+            "sources": [
+              "https://www.dji.com/phantom-4-rtk/info"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "RTK and perception",
+            "details": "GPS L1/L2, GLONASS L1/L2, BeiDou B1/B2 and Galileo E1/E5a; forward/rear/downward vision and infrared obstacle sensing.",
+            "sources": [
+              "https://www.dji.com/phantom-4-rtk/info"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Mapping camera",
+            "details": "1-inch 20 MP CMOS, mechanical shutter, three-axis gimbal.",
+            "sources": [
+              "https://www.dji.com/phantom-4-rtk/info"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "OcuSync",
+            "details": "Regional 2.400–2.483 or 5.725–5.850 GHz versions.",
+            "sources": [
+              "https://www.dji.com/phantom-4-rtk/info"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Correction data",
+            "details": "RTCM differential data through D-RTK 2 or network NTRIP. Network access uses controller Wi-Fi or optional 4G dongle.",
+            "sources": [
+              "https://www.dji.com/phantom-4-rtk/info"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft battery",
+            "details": "5870 mAh, 15.2 V, 89.2 Wh LiPo 4S.",
+            "sources": [
+              "https://www.dji.com/phantom-4-rtk/info"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mapping applications",
+            "details": "GS RTK and DJI Terra; alternative SDK controller supports compatible Mobile SDK applications.",
+            "sources": [
+              "https://www.dji.com/phantom-4-rtk/info"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "autel-evo-lite",
+        "manufacturer": "Autel Robotics",
+        "models": [
+          "EVO Lite"
+        ],
+        "configuration": "Consumer EVO Lite; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "memory",
+            "component": "Storage",
+            "details": "6 GB internal; microSD up to 256 GB.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "SkyLink",
+            "details": "2.4/5.2/5.8 GHz bands, region-dependent.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera",
+            "details": "1/1.28-inch 50 MP CMOS; four-axis gimbal.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "GPS/GLONASS/Galileo; forward, backward and downward vision.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft battery",
+            "details": "6175 mAh, 11.13 V, 68.7 Wh LiPo 3S.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "App",
+            "details": "Autel Sky.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "autel-evo-lite-plus",
+        "manufacturer": "Autel Robotics",
+        "models": [
+          "EVO Lite+"
+        ],
+        "configuration": "Consumer EVO Lite+; not EVO Lite Enterprise. CPU and RAM chip identities are unpublished in the specification.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "memory",
+            "component": "Storage",
+            "details": "6 GB internal; microSD up to 256 GB.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "SkyLink",
+            "details": "2.4/5.2/5.8 GHz bands, region-dependent.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera",
+            "details": "1-inch 20 MP CMOS; f/2.8–11 aperture, three-axis gimbal.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "GPS/GLONASS/Galileo; forward, backward and downward vision.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft battery",
+            "details": "6175 mAh, 11.13 V, 68.7 Wh LiPo 3S.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "App",
+            "details": "Autel Sky.",
+            "sources": [
+              "https://www.autelrobotics.com/productdetail/evo-lite-series-drones/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -250471,8 +251806,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 76,
-    "devices_with_system_profiles": 80,
-    "devices_with_documented_compute": 52
+    "system_profiles": 86,
+    "devices_with_system_profiles": 90,
+    "devices_with_documented_compute": 54
   }
 }
