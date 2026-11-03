@@ -1,12 +1,39 @@
 import {companyWebsite,modelWebsite} from './company-links.mjs';
 import {libraryModels} from './device-library-model.mjs?v=20261101-robots';
 import {macAllocationsFor,formatMacPrefix,macReviewedOn} from './device-mac-model.mjs';
+import {systemBreakdown} from './device-system-model.mjs?v=20261103-systems';
 const $=id=>document.getElementById(id);
 let models=libraryModels();
 let inventoryStatus='Loading map inventory…';
 let limit=60;
 const make=(tag,text,className)=>{const e=document.createElement(tag);e.textContent=text;if(className)e.className=className;return e;};
+const systems=new WeakMap();
+function systemFor(model){if(!systems.has(model))systems.set(model,systemBreakdown(model));return systems.get(model);}
+function componentText(model){return Object.values(systemFor(model).sections).flatMap(s=>s.facts.map(f=>f.component+' '+f.details)).join(' ');}
 function link(label,url){const a=make('a',label);if(/^https:\/\//.test(url))a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;}
+function systemPanel(model){
+ const system=systemFor(model),panel=make('details','','system-breakdown');
+ panel.append(make('summary','System breakdown'));
+ for(const config of system.configurations)panel.append(make('p',config.configuration+' Reviewed '+config.reviewed_on+'.','system-configuration'));
+ if(system.record_scope==='unidentified-model')panel.append(make('p','This entry groups records without an identified model; a component list cannot be assigned to it.'));
+ if(system.record_scope==='software-platform'||system.record_scope==='program-or-family')panel.append(make('p','This is a platform, program or family reference. Hardware depends on the selected device and configuration.'));
+ for(const [key,section] of Object.entries(system.sections)){
+  if(key==='other'&&!section.facts.length)continue;
+  const group=make('section','','system-section');group.append(make('h3',section.title));
+  if(!section.facts.length)group.append(make('p','Not established in this catalog.','system-missing'));
+  for(const fact of section.facts){
+   const row=make('div','','system-fact');row.append(make('strong',fact.component),make('p',fact.details));
+   if(fact.configuration&&!fact.profile_id)row.append(make('p',fact.configuration,'system-configuration'));
+   if(fact.pattern){const detail=make('details');detail.append(make('summary','Exact firmware pattern'),make('pre',JSON.stringify(fact.pattern,null,2)));row.append(detail);}
+   const sources=make('p','','system-sources');
+   fact.sources.forEach((url,i)=>{if(i)sources.append(document.createTextNode(' · '));sources.append(link('Source '+(i+1)+' ↗',url));});
+   sources.append(document.createTextNode(' · '+fact.evidence.replaceAll('-',' ')));row.append(sources);group.append(row);
+  }
+  panel.append(group);
+ }
+ panel.append(make('p',system.identification_note,'reference-reception'));
+ return panel;
+}
 function filters(){
 $('reference-category').length=1;$('reference-vendor').length=1;
 for(const category of [...new Set(models.map(m=>m.category))].sort())$('reference-category').append(new Option(category,category));
@@ -18,7 +45,7 @@ $('reference-search').value=new URLSearchParams(location.search).get('model')||(
 function render(){
  const q=$('reference-search').value.trim().toLowerCase(),category=$('reference-category').value;
  const vendor=$('reference-vendor').value;
- const matches=models.filter(m=>(!vendor||m.maker===vendor)&&(!category||m.category===category)&&(!q||[m.maker,m.name,m.category,m.connection,m.description,m.reception,...m.aliases].join(' ').toLowerCase().includes(q)));
+ const matches=models.filter(m=>(!vendor||m.maker===vendor)&&(!category||m.category===category)&&(!q||[m.maker,m.name,m.category,m.connection,m.description,m.reception,...m.aliases,componentText(m)].join(' ').toLowerCase().includes(q)));
  $('reference-count').textContent=`${matches.length} of ${models.length} device / program entries · ${inventoryStatus}`;
  const list=$('reference-list');list.replaceChildren();
  for(const m of matches.slice(0,limit)){
@@ -34,7 +61,12 @@ function render(){
    card.append(registrations);
   }
   if(m.last_seen)card.append(make('p','Latest dated observation: '+new Date(m.last_seen*1000).toLocaleString()));
-  const comms=make('p');comms.append(make('strong','Published communications: '),document.createTextNode(m.connection));card.append(comms,make('p',m.reception,'reference-reception'));
+  const processors=systemFor(m).sections.compute.facts;
+  if(processors.length)card.append(make('p','Documented compute: '+processors.map(f=>f.component).join(' · '),'system-compute'));
+  card.append(systemPanel(m));
+  const radioFacts=systemFor(m).sections.radios.facts.filter(f=>f.evidence==='reviewed-primary-source');
+  const communications=radioFacts.length&&/not (?:yet )?verified|not established|unknown/i.test(m.connection||'')?radioFacts.map(f=>f.component).join(' · '):m.connection;
+  const comms=make('p');comms.append(make('strong','Published communications: '),document.createTextNode(communications));card.append(comms,make('p',m.reception,'reference-reception'));
   const links=make('p');if(m.url)links.append(link('Product / program ↗',m.url));if(m.manufacturer_url)links.append(document.createTextNode(' · '),link('Manufacturer ↗',m.manufacturer_url));const cloud=make('a','Cloud Surface ↗');cloud.href='/cloud-surface?vendor='+encodeURIComponent(m.maker);const galaxy=make('a','Galaxy ↗');galaxy.href='/galaxy?vendor='+encodeURIComponent(m.maker);links.append(document.createTextNode(' · '),cloud,document.createTextNode(' · '),galaxy);card.append(links);
   if(m.specs&&Object.keys(m.specs).length){const specs=make('dl');for(const [k,v] of Object.entries(m.specs)){specs.append(make('dt',k.replaceAll('_',' ')),make('dd',typeof v==='object'?JSON.stringify(v):String(v)));}card.append(specs);}
   const evidence=make('details');evidence.append(make('summary','Reference details'));if(m.source)evidence.append(link('Published source ↗',m.source));if(m.reference_notes)evidence.append(make('p',m.reference_notes));

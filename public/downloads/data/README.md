@@ -46,6 +46,18 @@ precise receiver coordinates, credentials or applicant contact records are inclu
   status. Empty arrays mean no supported association in this release. Generic
   channels are not assigned to every device; pending FCC grant values stay pending.
   Rules are joined by exact manufacturer/model aliases, never by similar names.
+- Each entry also includes `system_breakdown`: processors/controllers, memory,
+  radios, sensors, power/mobility, ports, software and identification references.
+  `system_profiles` preserves the newly reviewed manufacturer configurations.
+  Every fact has source links and an evidence label; reviewed component facts
+  also retain their configuration, profile ID and review date. Optional payloads,
+  historical versions and board options are explicitly scoped. Manufacturer MAC
+  allocations and pending FCC equipment data keep their narrower evidence scope.
+  `missing_sections` identifies research gaps and `complete_bill_of_materials`
+  remains false. This is not a complete teardown or BOM for every model.
+  Software platforms, model families and unidentified records cannot establish
+  an individual unit's hardware. Component names and shared RF bands are not
+  unique passive detection signatures and do not install new scanner decoders.
 - `radio_allocations` has the same facts as the MAC CSV; shared provenance is in
   `radio_allocation_provenance`. Only the reviewed device-manufacturer allowlist
   is included. Each record keeps its exact registrant and prefix length.
@@ -154,8 +166,10 @@ from text cells to recover the original value. JSON retains the original text.
 From the source repository, with Python 3 and Node.js available:
 
 ```sh
+python3 scripts/sync-device-systems.py
 python3 scripts/export_developer_data.py
 python3 scripts/sync-device-mac.py
+python3 scripts/sync-device-systems.py --check
 python3 scripts/export_developer_data.py --check
 python3 scripts/sync-device-mac.py --check
 python3 -m unittest discover -s tests -p 'test_developer_data.py'

@@ -70,8 +70,8 @@
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
       "rows": 925,
-      "bytes": 6368499,
-      "sha256": "986182920e29e8ee2ca830c056ceef5009cd7f716fd3f5eeae61225ac27b61b6",
+      "bytes": 8715636,
+      "sha256": "de44d88cdc63b4019364343f46c306a102d28e6f9b5f2fc4de5494ba09cfa899",
       "collections": {
         "devices": 925,
         "radio_allocations": 182,
@@ -84,7 +84,10 @@
         "fcc_equipment": 20,
         "devices_with_mac_allocations": 236,
         "devices_with_rf_information": 119,
-        "devices_with_scanner_signatures": 11
+        "devices_with_scanner_signatures": 11,
+        "system_profiles": 42,
+        "devices_with_system_profiles": 46,
+        "devices_with_documented_compute": 31
       }
     }
   ],
@@ -143,11 +146,31 @@
     },
     {
       "path": "scripts/export_developer_data.py",
-      "sha256": "24d6ff9403e8e376963b44b588d1ab74a4ab67a404763a6723cf245ad5a107aa"
+      "sha256": "405327230121411339714f4dc79d681cc323efb822d36c4b5d260192b0ea1cf0"
     },
     {
       "path": "scripts/device_radio_export.py",
       "sha256": "bc119debcf0fb8c92edecb67c93b6b47b69ddd6f947eb99b0628662362cc0475"
+    },
+    {
+      "path": "integration/device-systems.json",
+      "sha256": "0f6b45cbfcda3e3e9f620b8f665934759e0e3f2b23dae2eed95c6d750a346c55"
+    },
+    {
+      "path": "public/device-system-model.mjs",
+      "sha256": "93f4b713b5637370dc0905362c80a733a87f1c123a80b29a642400cb7e0d6491"
+    },
+    {
+      "path": "public/device-system-data.mjs",
+      "sha256": "84a44a11c987d1d593f7dad7ff5c593b87859f8d26534d1f25216f09ecc53386"
+    },
+    {
+      "path": "scripts/enrich_device_systems.mjs",
+      "sha256": "12791a545eafe8dc053277957eb855c04695612291612df768f05c463fdc8979"
+    },
+    {
+      "path": "scripts/sync-device-systems.py",
+      "sha256": "f3396f119e64ec60bc48a94b9423a204b04d1edb9e5c964274c83ac4f2461fb8"
     }
   ],
   "upstream_rights": "See README.md and upstream sources; no blanket relicensing of third-party material."
