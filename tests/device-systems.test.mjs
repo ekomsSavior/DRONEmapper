@@ -210,3 +210,28 @@ test('aircraft storage, radio directions and regional radar configurations remai
  assert.doesNotMatch(text(system('DJI','Mini 3 Pro').sections.radios),/Bluetooth 4.2/);
  assert.equal(system('DJI','FPV').sections.compute.status,'not-established');
 });
+
+
+test('industrial controllers and service-robot variants retain hardware boundaries',()=>{
+ const agilus=system('KUKA Industrial','KR AGILUS');
+ assert.match(text(agilus.sections.compute),/Intel x86/);
+ assert.match(text(agilus.sections.memory),/60 GB/);
+ const quantec=system('KUKA AG','KUKA KR QUANTEC');
+ assert.doesNotMatch(text(quantec.sections.compute),/Intel x86/);
+ assert.equal(quantec.sections.memory.status,'not-established');
+ assert.match(text(system('ABB Robotics','ABB IRB6700').sections.memory),/1 GB DRAM/);
+ const mini=system('OrionStar','GreetingBot Mini'),ad=system('OrionStar','GreetingBot AD');
+ assert.doesNotMatch(text(mini),/QCS6490|128 GB/);
+ assert.match(text(ad.sections.compute),/QCS6490/);
+ assert.equal(profileIds(system('OrionStar','GreetingBot')).length,2);
+ const cards=includeReviewedSystemModels(libraryModels());
+ const miniCard=cards.find(m=>m.maker==='OrionStar'&&m.name==='GreetingBot Mini');
+ const adCard=cards.find(m=>m.maker==='OrionStar'&&m.name==='GreetingBot AD');
+ assert.deepEqual(profileIds(systemBreakdown(miniCard)),['orionstar-greetingbot-mini']);
+ assert.deepEqual(profileIds(systemBreakdown(adCard)),['orionstar-greetingbot-ad']);
+ assert.equal(profileIds(system('Husqvarna','Automower 450X NERA')).length,0);
+ assert.equal(profileIds(system('Ecovacs Robotics','GOAT A3000 LiDAR PRO')).length,0);
+ assert.equal(system('Avidbots','Avidbots Kas').sections.radios.status,'not-established');
+ assert.match(text(system('OTTO Motors','OTTO 1500').sections.power),/Battery revisions/);
+ assert.equal(system('Locus Robotics','Locus Origin').sections.compute.status,'not-established');
+});

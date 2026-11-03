@@ -1,4 +1,4 @@
-import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b09';
+import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b10';
 import {libraryModels} from './device-library-model.mjs';
 import {macAllocationsFor,formatMacPrefix} from './device-mac-model.mjs';
 import {robotSignatures} from './robot-signatures.mjs';
@@ -111,9 +111,12 @@ export function systemSearchText(record){
 export function includeReviewedSystemModels(records){
  const models=[...records];
  for(const profile of deviceSystems.profiles){
-  if(models.some(record=>matches(record,profile)))continue;
+  const primary=profile.models[0];
+  if(models.some(record=>matches(record,{...profile,models:[primary]})))continue;
   const source=profile.facts.flatMap(f=>f.sources)[0];
-  models.push({maker:profile.manufacturer,name:profile.models[0],aliases:profile.models.slice(1),
+  // A family alias can intentionally match several configurations. Do not put
+  // that alias on a specific model card and thereby import its siblings' parts.
+  models.push({maker:profile.manufacturer,name:primary,aliases:[],
    category:'Device configuration',description:profile.configuration,source,url:source,
    connection:profile.facts.filter(f=>f.section==='radios').map(f=>f.component).join(' · ')||'Radio details not established in this configuration.',
    reception:'Published hardware reference; this does not establish a map observation or scanner signature.'});

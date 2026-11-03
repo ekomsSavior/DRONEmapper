@@ -7119,6 +7119,847 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fanuc-m20id25",
+      "manufacturer": "FANUC Corporation",
+      "models": [
+        "FANUC M-20iD",
+        "M-20iD/25"
+      ],
+      "configuration": "M-20iD/25 with R-30iB Plus controller. Other M-20iD variants have different payloads and dimensions. Processor SKU, RAM and standard radio hardware are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "FANUC R-30iB Plus",
+          "details": "External robot controller; silicon part number is not specified.",
+          "sources": [
+            "https://www.fanucamerica.com/products/robot/m-20id-25"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Six-axis arm",
+          "details": "25 kg payload; 1831 mm reach; 250 kg mechanical weight; average consumption 1 kW.",
+          "sources": [
+            "https://www.fanucamerica.com/products/robot/m-20id-25"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cable routing",
+          "details": "Internal routing through the arm; floor, angled or inverted installation.",
+          "sources": [
+            "https://www.fanucamerica.com/products/robot/m-20id-25"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Programming and simulation",
+          "details": "ROBOGUIDE offline simulation; R-30iB Plus uses iHMI on its iPendant.",
+          "sources": [
+            "https://www.fanucamerica.com/products/robot/m-20id-25",
+            "https://www.fanucamerica.com/products/controller-series/r-30ib-plus"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Optional controller connectivity",
+          "details": "MQTT requires the KAREL option; encrypted MQTT requires the additional TLS option. These are configured controller capabilities, not evidence of a publicly reachable service.",
+          "sources": [
+            "https://www.fanucamerica.com/products/controller-series/r-30ib-plus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abb-irb6700-irc5",
+      "manufacturer": "ABB Robotics",
+      "models": [
+        "ABB IRB6700",
+        "IRB 6700"
+      ],
+      "configuration": "IRB 6700 on IRC5, using the DSQC1000-era controller documented in ABB revisions Z/AO. OmniCore and earlier IRC5 generations are separate configurations.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "IRC5 main computer",
+          "details": "DSQC1000 main computer, with separate axis computer. Silicon processor model is not specified in the reviewed product specifications.",
+          "sources": [
+            "https://library.e.abb.com/public/1191b23d5d564388a77d636084b9ae0e/3HAC044265%20PS%20IRB%206700%20on%20IRC5-en.pdf",
+            "https://library.e.abb.com/public/db54411674b54938a3de7ef82e7c33e6/3HAC047400%20PS%20IRC5-en.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "IRC5 memory",
+          "details": "1 GB DRAM and 2 GB mass storage; FAT32 support. These are controller capacities, not per-joint memory.",
+          "sources": [
+            "https://library.e.abb.com/public/db54411674b54938a3de7ef82e7c33e6/3HAC047400%20PS%20IRC5-en.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Controller ports",
+          "details": "10/100 Ethernet service and network interfaces, four USB ports and two PCIe expansion slots. Optional RS-232 supports up to 115.2 kbit/s.",
+          "sources": [
+            "https://library.e.abb.com/public/db54411674b54938a3de7ef82e7c33e6/3HAC047400%20PS%20IRC5-en.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Optional arm cabling",
+          "details": "DressPack option 455-8 supplies CAT5e Ethernet through M12 connections; installation and fieldbus options must be checked on the actual arm.",
+          "sources": [
+            "https://library.e.abb.com/public/1191b23d5d564388a77d636084b9ae0e/3HAC044265%20PS%20IRB%206700%20on%20IRC5-en.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control environment",
+          "details": "RobotWare 6-era controller, RAPID programming and RobotStudio. Network options include EtherNet/IP and PROFINET.",
+          "sources": [
+            "https://library.e.abb.com/public/1191b23d5d564388a77d636084b9ae0e/3HAC044265%20PS%20IRB%206700%20on%20IRC5-en.pdf",
+            "https://library.e.abb.com/public/db54411674b54938a3de7ef82e7c33e6/3HAC047400%20PS%20IRC5-en.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kuka-agilus-c5micro",
+      "manufacturer": "KUKA Industrial",
+      "models": [
+        "KR AGILUS"
+      ],
+      "configuration": "KR AGILUS with original KR C5 micro controller, as documented in the 2024 brochure. C4 compact and newer C5 micro-2 systems are not assigned these components.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Separate main and safety processors",
+          "details": "Intel x86 main processor plus ARM processor for safety functions; exact CPU SKUs are not named.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-downloads/files/87f2706ce77c4318877932fb36f6002d/kuka_kr_c5_micro_en.pdf?hash=49C2B207C9D9DB508D0C56A160AB4077&rev=ab367e8f73e6423d865f1c51d9002571"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Controller storage",
+          "details": "60 GB M.2 SSD. RAM capacity is not specified.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-downloads/files/87f2706ce77c4318877932fb36f6002d/kuka_kr_c5_micro_en.pdf?hash=49C2B207C9D9DB508D0C56A160AB4077&rev=ab367e8f73e6423d865f1c51d9002571"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Controller and drives",
+          "details": "200–240 VAC input; six drive axes, active cooling and external battery box.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-downloads/files/87f2706ce77c4318877932fb36f6002d/kuka_kr_c5_micro_en.pdf?hash=49C2B207C9D9DB508D0C56A160AB4077&rev=ab367e8f73e6423d865f1c51d9002571"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Control I/O and fieldbus",
+          "details": "16 digital inputs and 16 outputs. Integration options include EtherCAT/KEB, PROFINET with PROFIsafe and EtherNet/IP with CIP Safety; EtherCAT-slave/FSoE needs an external gateway.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-downloads/files/87f2706ce77c4318877932fb36f6002d/kuka_kr_c5_micro_en.pdf?hash=49C2B207C9D9DB508D0C56A160AB4077&rev=ab367e8f73e6423d865f1c51d9002571"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Service ports",
+          "details": "Two USB connections, DisplayPort and SSD slot; 24 V I/O connections.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-corporate/countries/france/documents/kr_c5_micro_2pager_en.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operator interface",
+          "details": "smartPAD with KUKA System Software, or smartPAD pro with iiQKA.OS; operating environment depends on configuration.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-downloads/files/87f2706ce77c4318877932fb36f6002d/kuka_kr_c5_micro_en.pdf?hash=49C2B207C9D9DB508D0C56A160AB4077&rev=ab367e8f73e6423d865f1c51d9002571"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Robot family",
+          "details": "Compact six-axis industrial arm family with integrated energy supply and multiple mounting positions.",
+          "sources": [
+            "https://www.kuka.cn/en-cn/products/robotics-systems/industrial-robots/kr-agilus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kuka-quantec-r2700",
+      "manufacturer": "KUKA AG",
+      "models": [
+        "KUKA KR QUANTEC",
+        "KR 210 R2700-2"
+      ],
+      "configuration": "KR 210 R2700-2 reference within the broader KR QUANTEC family. Do not transfer its reach, mass or controller options to every QUANTEC variant.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Robot controller alternatives",
+          "details": "Published configuration supports KR C5 or KR C4. The brochure does not identify CPU or RAM; KR C5 micro components are not assigned here.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-downloads/files/87f2706ce77c4318877932fb36f6002d/kuka-brochure_kr_quantec_en.pdf?hash=BE83E71707CFD36089F3CC7455ED77A1&rev=adc8cdbe12ab4e888907149a0b1760aa"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Arm and load",
+          "details": "Six axes; 210 kg rated payload, 2701 mm reach and 1077 kg mass.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-downloads/files/87f2706ce77c4318877932fb36f6002d/kuka-brochure_kr_quantec_en.pdf?hash=BE83E71707CFD36089F3CC7455ED77A1&rev=adc8cdbe12ab4e888907149a0b1760aa"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Integrated cabling",
+          "details": "Integrated cabling and energy-supply arrangement; connectors depend on application package.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-downloads/files/87f2706ce77c4318877932fb36f6002d/kuka-brochure_kr_quantec_en.pdf?hash=BE83E71707CFD36089F3CC7455ED77A1&rev=adc8cdbe12ab4e888907149a0b1760aa"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Motion software options",
+          "details": "Path Mode targets continuous-path accuracy; Dynamic Mode changes motion for higher speed. These are configuration-dependent plug-ins.",
+          "sources": [
+            "https://www.kuka.com/-/media/kuka-downloads/files/87f2706ce77c4318877932fb36f6002d/kuka-brochure_kr_quantec_en.pdf?hash=BE83E71707CFD36089F3CC7455ED77A1&rev=adc8cdbe12ab4e888907149a0b1760aa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otto1500-v2",
+      "manufacturer": "OTTO Motors",
+      "models": [
+        "OTTO 1500"
+      ],
+      "configuration": "OTTO 1500 v2, with August 2026 sheet and revision-specific manual. Battery voltage differs between the sheet and manual; use the installed battery label and serial revision.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Industrial computer and GPU",
+          "details": "Solid-state industrial computer with dedicated GPU; CPU/GPU SKUs and RAM are not disclosed.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/65f37f30ec55c632329ba48e31cb7013ca96c80d.pdf?dl="
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and safety",
+          "details": "Four Intel RealSense cameras, two SICK microScan3 scanners covering 360°, and six-axis IMU.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/65f37f30ec55c632329ba48e31cb7013ca96c80d.pdf?dl="
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi link",
+          "details": "2.4/5 GHz 802.11a/b/g/n/ac with two omnidirectional antennas.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/65f37f30ec55c632329ba48e31cb7013ca96c80d.pdf?dl="
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Attachment connections",
+          "details": "Ethernet, USB 3.1, HDMI, CAN and five GPIO, including two safety-rated signals. Separate dual-channel emergency-stop interface and regulated 24 V / 10 A supply.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/65f37f30ec55c632329ba48e31cb7013ca96c80d.pdf?dl="
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Payload and mobility",
+          "details": "Up to 1900 kg including attachment; 2 m/s maximum speed; passive rocker suspension.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/65f37f30ec55c632329ba48e31cb7013ca96c80d.pdf?dl="
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery revisions",
+          "details": "Manual: units before serial B10-001121011 use 70 Ah / 52.8 V; later units use 80 Ah / 51.2 V. Both are LiFePO4 configurations; they are not interchangeable specifications.",
+          "sources": [
+            "https://docs.ottomotors.com/en/127045-85485-otto-1500-v2-robot-and-manuals.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control and charging",
+          "details": "Software-guided autonomous operation or pendant control; autonomous opportunity charging.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/65f37f30ec55c632329ba48e31cb7013ca96c80d.pdf?dl="
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otto100",
+      "manufacturer": "Clearpath Robotics / OTTO Motors",
+      "models": [
+        "OTTO 100",
+        "OTTO AMR"
+      ],
+      "configuration": "OTTO 100 configuration from the August 2026 sheet, supplied as a named reference under the generic OTTO AMR catalog entry. It does not describe all OTTO models.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Safety and perception",
+          "details": "Hokuyo safety laser; front 3D camera and rear time-of-flight sensing, each covering 90°. Inductive sensor detects the cart.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/09a9a89cb03ecf15c4a6621d9a1b387b49a9ae4b.pdf?dl="
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi",
+          "details": "2.4/5 GHz 802.11a/b/g/n/ac. Radio chipset is not specified.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/09a9a89cb03ecf15c4a6621d9a1b387b49a9ae4b.pdf?dl="
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Attachment interfaces",
+          "details": "Ethernet, USB 3, RS-232, eight digital I/O, two dry relays and emergency-stop extensions; 26.4 V / 12 A maximum attachment supply.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/09a9a89cb03ecf15c4a6621d9a1b387b49a9ae4b.pdf?dl="
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and lift",
+          "details": "35 Ah / 26.4 V battery; published six-hour runtime and 18-minute 10–90% charge. Lift travel 62 mm; 150 kg total payload including cart; up to 2 m/s.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/09a9a89cb03ecf15c4a6621d9a1b387b49a9ae4b.pdf?dl="
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operating controls",
+          "details": "Pendant manual control and OTTO software-guided autonomous operation.",
+          "sources": [
+            "https://cdn.sanity.io/files/armc7p5y/production/09a9a89cb03ecf15c4a6621d9a1b387b49a9ae4b.pdf?dl="
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mir250",
+      "manufacturer": "Mobile Industrial Robots",
+      "models": [
+        "MiR250",
+        "MiR AMR"
+      ],
+      "configuration": "MiR250 reference configuration. The generic MiR AMR entry covers a larger family and does not establish that every deployment is a MiR250. CPU and RAM are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Safety and navigation",
+          "details": "Two SICK nanoScan3 scanners, front and rear, provide 360° protection; two 3D cameras and eight proximity sensors.",
+          "sources": [
+            "https://www.mobile-industrial-robots.com.cn/zh/products/robots/mir250/specifications"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless interface",
+          "details": "Wi-Fi at 2.4 and 5 GHz with two external antennas.",
+          "sources": [
+            "https://www.mobile-industrial-robots.com.cn/zh/products/robots/mir250/specifications"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload connections",
+          "details": "Four digital inputs, four outputs, Ethernet and auxiliary emergency stop.",
+          "sources": [
+            "https://www.mobile-industrial-robots.com.cn/zh/products/robots/mir250/specifications"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Drive and charging",
+          "details": "250 kg maximum payload, 2 m/s maximum speed, 94 kg robot mass. Lithium-ion battery; charging up to 35 A. Capacity is not stated on this specification page.",
+          "sources": [
+            "https://www.mobile-industrial-robots.com.cn/zh/products/robots/mir250/specifications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avidbots-kas",
+      "manufacturer": "Avidbots",
+      "models": [
+        "Avidbots Kas",
+        "Kas"
+      ],
+      "configuration": "Kas 22-inch disc configuration, specification TS-KAS-08112025. Neo battery and radio details are not transferred. CPU, RAM and radio module remain undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and cliff sensors",
+          "details": "Two 2D infrared LiDAR sensors, three 3D infrared sensors and four 1D infrared cliff sensors.",
+          "sources": [
+            "https://avidbots.com/assets/Uploads/KAS_TECHSPECS_1page_v8_0811.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera layout",
+          "details": "Six RGB cameras: two front, two side, one rear and one top.",
+          "sources": [
+            "https://avidbots.com/assets/Uploads/KAS_TECHSPECS_1page_v8_0811.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and drive",
+          "details": "25.6 VDC system with 200 Ah LFP battery; up to four hours runtime and 4 km/h working speed.",
+          "sources": [
+            "https://avidbots.com/assets/Uploads/KAS_TECHSPECS_1page_v8_0811.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cleaning system",
+          "details": "Two nominal 279 mm pads; 552 mm scrubbing path; 45 L solution and 46 L recovery tanks.",
+          "sources": [
+            "https://avidbots.com/assets/Uploads/KAS_TECHSPECS_1page_v8_0811.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy stack",
+          "details": "Proprietary Avidbots Autonomy for navigation and cleaning.",
+          "sources": [
+            "https://avidbots.com/assets/Uploads/KAS_TECHSPECS_1page_v8_0811.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avidbots-neo2",
+      "manufacturer": "Avidbots",
+      "models": [
+        "Avidbots Neo",
+        "Neo 2"
+      ],
+      "configuration": "Neo 2 disc configurations, with the dated Neo security architecture as a separate platform reference. Neo 2W and Kas are different configurations; CPU/RAM are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Range sensing",
+          "details": "20 m, 360° 2D LiDAR plus 3D sensors with 3 m range.",
+          "sources": [
+            "https://avidbots.com/assets/Knowledge/Neo_2_Disc_Cleaning_Head_Technical_Specifications_Brochure.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and motors",
+          "details": "36 V system: six 6 V AGM batteries, 250 Ah at the 20-hour rate. Drive motor 500 W, cleaning head 750 W and vacuum 565 W.",
+          "sources": [
+            "https://avidbots.com/assets/Knowledge/Neo_2_Disc_Cleaning_Head_Technical_Specifications_Brochure.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cleaning hardware",
+          "details": "26- or 32-inch disc head alternatives, 109 L solution tank and 135 L recovery tank.",
+          "sources": [
+            "https://avidbots.com/assets/Knowledge/Neo_2_Disc_Cleaning_Head_Technical_Specifications_Brochure.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Neo platform networking",
+          "details": "Dated security reference documents Wi-Fi and 3G/4G LTE gateway connectivity with optional cellular failover; fitted modem and region require verification.",
+          "sources": [
+            "https://avidbots.com/assets/Knowledge/Avidbots_Neo_Security_Info_compressed_10-21.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet data path",
+          "details": "Avidbots Autonomy and AWS-hosted Command Center. Security document describes TLS 1.2, SSH and OpenVPN; these are documented architecture choices, not a device identity or current audit.",
+          "sources": [
+            "https://avidbots.com/assets/Knowledge/Avidbots_Neo_Security_Info_compressed_10-21.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "softbank-whiz",
+      "manufacturer": "SoftBank Robotics",
+      "models": [
+        "SoftBank Whiz",
+        "Whiz"
+      ],
+      "configuration": "Whiz specification from SoftBank Robotics APAC. Whiz i and other cleaning robots are separate. Processor SKU, RAM and radio module are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Safety sensors",
+          "details": "LiDAR, 3D camera, bumper impact sensor, cliff sensors and wheel-contact sensing.",
+          "sources": [
+            "https://apac.softbankrobotics.com/apac/solution/whiz-maximum-cleaning-efficiency-with-cutting-edge-ai/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and motion",
+          "details": "25.2 V / 23.7 Ah lithium-ion battery; roughly three hours normal-mode or 1.5 hours maximum-power cleaning; four-hour charge. Maximum speed 1.8 km/h.",
+          "sources": [
+            "https://apac.softbankrobotics.com/apac/solution/whiz-maximum-cleaning-efficiency-with-cutting-edge-ai/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cleaning and notification hardware",
+          "details": "Four-litre paper bag, HEPA filter, brush and notification pager; status can also be viewed on a phone or PC.",
+          "sources": [
+            "https://apac.softbankrobotics.com/apac/solution/whiz-maximum-cleaning-efficiency-with-cutting-edge-ai/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "BrainOS",
+          "details": "Onboard BrainOS learns operator-taught cleaning routes; up to six routes per Home Location Code.",
+          "sources": [
+            "https://apac.softbankrobotics.com/apac/solution/whiz-maximum-cleaning-efficiency-with-cutting-edge-ai/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "locus-origin",
+      "manufacturer": "Locus Robotics",
+      "models": [
+        "Locus Origin",
+        "LocusBot"
+      ],
+      "configuration": "Locus Origin reference configuration. The generic LocusBot label does not identify every warehouse robot; CPU, RAM and RF hardware are not established.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception",
+          "details": "Multisensor and camera navigation with obstacle avoidance; individual sensor SKUs are not published here.",
+          "sources": [
+            "https://locusrobotics.com/platform/locus-origin/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mobile platform",
+          "details": "80 lb / 36 kg payload; published 14-hour runtime and 50-minute charge.",
+          "sources": [
+            "https://locusrobotics.com/platform/locus-origin/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator display",
+          "details": "iPad user interface. The tablet is not evidence of the onboard autonomy processor.",
+          "sources": [
+            "https://locusrobotics.com/platform/locus-origin/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet coordination",
+          "details": "LocusONE fleet and workflow platform; multilingual picking interface.",
+          "sources": [
+            "https://locusrobotics.com/platform/locus-origin/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecovacs-goat-a3000",
+      "manufacturer": "Ecovacs Robotics",
+      "models": [
+        "Ecovacs Goat A3000 LiDAR",
+        "GOAT A3000 LiDAR"
+      ],
+      "configuration": "Original GOAT A3000 LiDAR, not the later A3000 LiDAR PRO. CPU/RAM and radio module are not identified by this source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and avoidance",
+          "details": "LELS dual-LiDAR navigation combines a top 360° LiDAR and front 3D time-of-flight sensing. AI camera supports AIVI 3D obstacle avoidance.",
+          "sources": [
+            "https://www.ecovacs.com/us/shop/goat-robotic-lawn-mower/goat-a3000-lidar"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and cutting",
+          "details": "32 V motor platform with 5 Ah lithium-ion battery; advertised 45-minute charge. Dual cutting discs provide a 33 cm cutting width at 3000 RPM.",
+          "sources": [
+            "https://www.ecovacs.com/us/shop/goat-robotic-lawn-mower/goat-a3000-lidar"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mowing setup",
+          "details": "Electric cutting-height adjustment through the app; navigation needs neither boundary wire nor a separate RTK base station.",
+          "sources": [
+            "https://www.ecovacs.com/us/shop/goat-robotic-lawn-mower/goat-a3000-lidar"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mapping",
+          "details": "App-controlled mapping, scheduled mowing and boundary configuration.",
+          "sources": [
+            "https://www.ecovacs.com/us/shop/goat-robotic-lawn-mower/goat-a3000-lidar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "husqvarna-450x-wired",
+      "manufacturer": "Husqvarna",
+      "models": [
+        "Husqvarna Automower 450X",
+        "Automower 450X"
+      ],
+      "configuration": "Wired-boundary 450X in manual 1201-007, dated February 20, 2023. NERA and EPOS variants are separate. CPU and RAM are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and protection",
+          "details": "GPS-assisted navigation, ultrasonic obstacle sensing, lift/tilt sensing and boundary/guide-wire detection.",
+          "sources": [
+            "https://www.husqvarna.com/hbd/tdrdownload/v2/pub000091122/doc000217817/OM/pQKSkezea5LfPWtSyTgai2IrTjM?httproute=True"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "App connectivity",
+          "details": "Bluetooth and cellular Automower Connect; modem generation/bands vary by module and region. This non-NERA model does not have the newer Wi-Fi interface.",
+          "sources": [
+            "https://www.husqvarna.com/hbd/tdrdownload/v2/pub000091122/doc000217817/OM/pQKSkezea5LfPWtSyTgai2IrTjM?httproute=True",
+            "https://us-support.husqvarna.com/en/automower/KA-70106"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery alternatives",
+          "details": "Two 18 V lithium-ion batteries; each is 4.9, 5.0 or 5.2 Ah according to its part number. Published 270-minute mowing and 60-minute charge times.",
+          "sources": [
+            "https://www.husqvarna.com/hbd/tdrdownload/v2/pub000091122/doc000217817/OM/pQKSkezea5LfPWtSyTgai2IrTjM?httproute=True"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Charging and cutting",
+          "details": "28 VDC charging supply; 24 cm cutting width with three pivoting razor blades. Boundary and guide loops connect to the charging station.",
+          "sources": [
+            "https://www.husqvarna.com/hbd/tdrdownload/v2/pub000091122/doc000217817/OM/pQKSkezea5LfPWtSyTgai2IrTjM?httproute=True"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mowing controls",
+          "details": "Automower Connect app plus onboard scheduling and PIN-protected controls.",
+          "sources": [
+            "https://www.husqvarna.com/hbd/tdrdownload/v2/pub000091122/doc000217817/OM/pQKSkezea5LfPWtSyTgai2IrTjM?httproute=True"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "civdot",
+      "manufacturer": "Civ Robotics",
+      "models": [
+        "CivDot"
+      ],
+      "configuration": "CivDot point-marking robot; CivDot+ laser guidance and CivDot Mini line-marking specifications are separate. CPU/RAM and radio module are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Position and heading",
+          "details": "Dual RTK positioning with IMU tilt correction; obstacle detection. The robot stops moving/marking when RTK fix is lost.",
+          "sources": [
+            "https://www.civrobotics.com/faq"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Survey integration",
+          "details": "Accepts NTRIP/VRS corrections or supported survey base stations including Trimble, Leica and Topcon; module frequencies are not specified.",
+          "sources": [
+            "https://www.civrobotics.com/faq"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery operation",
+          "details": "Manufacturer states ten hours with one battery swap and a four-hour charge; battery capacity is not published in the FAQ.",
+          "sources": [
+            "https://www.civrobotics.com/faq"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Marking and manual control",
+          "details": "Inverted marking spray-paint mechanism, emergency stop and manual-drive mode.",
+          "sources": [
+            "https://www.civrobotics.com/faq"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "CivPlan",
+          "details": "CSV point lists and DXF line work; coordinate records include name, northing, easting, elevation and annotation.",
+          "sources": [
+            "https://www.civrobotics.com/faq"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orionstar-greetingbot-mini",
+      "manufacturer": "OrionStar",
+      "models": [
+        "GreetingBot Mini",
+        "GreetingBot"
+      ],
+      "configuration": "GreetingBot Mini configuration within the broader GreetingBot family. Snapdragon SKU, RAM and RF module are not specified; AD hardware is separate.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Qualcomm Snapdragon processor",
+          "details": "Manufacturer identifies an eight-core Snapdragon CPU without a specific silicon part number.",
+          "sources": [
+            "https://en.orionstar.com/mini.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception and audio",
+          "details": "LiDAR plus depth camera; 13 MP imaging and six-microphone circular array.",
+          "sources": [
+            "https://en.orionstar.com/mini.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Display and sound",
+          "details": "14-inch HD display; 30 W audio system with five sound modules.",
+          "sources": [
+            "https://en.orionstar.com/mini.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Autonomous charging",
+          "details": "Returns to its charger below 10% battery; battery capacity is not established here.",
+          "sources": [
+            "https://en.orionstar.com/mini.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Development platform",
+          "details": "Custom application development supports voice, vision, movement and robot controls.",
+          "sources": [
+            "https://en.orionstar.com/mini.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orionstar-greetingbot-ad",
+      "manufacturer": "OrionStar",
+      "models": [
+        "GreetingBot AD",
+        "GreetingBot"
+      ],
+      "configuration": "GreetingBot AD configuration shown in the current manufacturer technical table. Mini and earlier GreetingBot hardware are separate.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Qualcomm QCS6490",
+          "details": "Onboard Qualcomm QCS6490 platform.",
+          "sources": [
+            "https://en.orionstar.com/greetingbot-ad.html"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "System memory",
+          "details": "8 GB RAM and 128 GB storage.",
+          "sources": [
+            "https://en.orionstar.com/greetingbot-ad.html"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi and cellular",
+          "details": "Dual-band 2.4/5 GHz Wi-Fi 6, backward-compatible with Wi-Fi 5; standard TDD/FDD-LTE 4G module.",
+          "sources": [
+            "https://en.orionstar.com/greetingbot-ad.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and interaction",
+          "details": "LiDAR, two wheel odometers, IMU, 2 MP wide-angle and 13 MP HD cameras; six-microphone array.",
+          "sources": [
+            "https://en.orionstar.com/greetingbot-ad.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and chassis",
+          "details": "20 Ah NMC battery; 29.4 V / 8 A dock. Two 5.5-inch hub motors, four caster wheels; 4 kg payload.",
+          "sources": [
+            "https://en.orionstar.com/greetingbot-ad.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Displays and expansion",
+          "details": "14-inch FHD touchscreen, 21.5-inch FHD advertising display and two USB-A ports.",
+          "sources": [
+            "https://en.orionstar.com/greetingbot-ad.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Agent OS",
+          "details": "Manufacturer robot operating system based on Android 13.",
+          "sources": [
+            "https://en.orionstar.com/greetingbot-ad.html"
+          ]
+        }
+      ]
     }
   ]
 }
