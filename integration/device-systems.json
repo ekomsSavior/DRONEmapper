@@ -6428,6 +6428,697 @@
           ]
         }
       ]
+    },
+    {
+      "id": "dobot-magician",
+      "manufacturer": "Dobot",
+      "models": [
+        "DOBOT Magician",
+        "Magician"
+      ],
+      "configuration": "Original four-axis Magician, with optional wireless modules. Magician Lite, E6 and Go have different hardware.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Integrated controller",
+          "details": "Dobot integrated ARM controller; exact processor SKU is not published in the reviewed specification.",
+          "sources": [
+            "https://www.dobot-robots.com/products/education/magician.html"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Command storage",
+          "details": "Onboard command storage is documented; capacity and RAM are not specified.",
+          "sources": [
+            "https://www.dobot-robots.com/products/education/magician.html"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Optional wireless modules",
+          "details": "Wi-Fi and Bluetooth are optional kits, not standard equipment.",
+          "sources": [
+            "https://www.dobot-robots.com/products/education/magician.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "External I/O",
+          "details": "USB; ten configurable analog/PWM I/O, four switched 12 V outputs, UART and two stepper connections.",
+          "sources": [
+            "https://www.dobot-robots.com/products/education/magician.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Documented protocol interfaces",
+          "details": "USB serial and TTL: 115200 baud, 8 data bits, one stop bit, no parity. Wi-Fi port 8899. BLE service UUID 0003CDD0-0000-1000-8000-00805F9B0131, read/write characteristics ending CDD1/CDD2. These are service interfaces, not a verified passive advertising signature.",
+          "sources": [
+            "https://download.dobot.cc/product-manual/dobot-magician/pdf/en/Dobot-Communication-Protocol-V1.1.5.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Arm and supply",
+          "details": "Four axes, 500 g payload, 320 mm reach; 12 V / 6.5 A DC input, maximum 78 W.",
+          "sources": [
+            "https://www.dobot-robots.com/products/education/magician.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Development tools",
+          "details": "DobotLab, DobotStudio and DobotBlockly; protocol and programming library available.",
+          "sources": [
+            "https://www.dobot-robots.com/products/education/magician.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fetch-research-edition",
+      "manufacturer": "Fetch Robotics",
+      "models": [
+        "Fetch AMR",
+        "Fetch Research Edition"
+      ],
+      "configuration": "Fetch Research Edition mobile manipulator configuration. The generic catalog name does not establish that every Fetch warehouse AMR uses this hardware.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Distributed motion controllers",
+          "details": "ROS computer communicates over Ethernet with mainboard and gripper; dedicated joint microcontrollers run real-time loops over half-duplex RS-485. Exact CPU/MCU SKUs are not established here.",
+          "sources": [
+            "https://fetchrobotics.github.io/docs/robot_hardware.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Range and inertial sensing",
+          "details": "SICK TIM571: 25 m range, 220° scan, 15 Hz. Six-axis IMUs in mainboard and gripper; Primesense Carmine 1.09 RGB-D head camera.",
+          "sources": [
+            "https://fetchrobotics.github.io/docs/robot_hardware.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and motion",
+          "details": "Two 12 V sealed lead-acid batteries in series provide a nominal 24 V rail. Brushless motors with per-joint control boards.",
+          "sources": [
+            "https://fetchrobotics.github.io/docs/robot_hardware.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Computer and gripper connections",
+          "details": "Base access panel: two USB ports, Ethernet and HD video; extra head USB. Gripper interface uses Ethernet and 24 V.",
+          "sources": [
+            "https://fetchrobotics.github.io/docs/robot_hardware.html"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "External wireless networking",
+          "details": "External wireless network interface; Bluetooth joystick services are documented. Radio chipset and supported RF bands are not specified on this page.",
+          "sources": [
+            "https://fetchrobotics.github.io/docs/computer.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Robot software",
+          "details": "Ubuntu LTS and ROS LTS; internal Ethernet connects computer, laser, mainboard and gripper, separate from external networking.",
+          "sources": [
+            "https://fetchrobotics.github.io/docs/computer.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "universal-robots-ur5e",
+      "manufacturer": "Universal Robots",
+      "models": [
+        "UR5e"
+      ],
+      "configuration": "UR5e e-Series configuration documented in the SW5.19 manual. CPU, RAM and radio hardware are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Control box",
+          "details": "Separate control box; 500 Hz system update rate. This rate does not identify the CPU.",
+          "sources": [
+            "https://www.universal-robots.com/manuals/EN/PDF/SW5_19/user-manual-UR5e-PDF_online/710-965-00_UR5e_User_Manual_en_Global.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Force and torque sensing",
+          "details": "Integrated force/torque sensing; published force accuracy 4 N.",
+          "sources": [
+            "https://www.universal-robots.com/manuals/EN/PDF/SW5_19/user-manual-UR5e-PDF_online/710-965-00_UR5e_User_Manual_en_Global.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Arm and power input",
+          "details": "Six rotating joints, 5 kg payload, 850 mm reach. Control box takes 100–240 VAC; typical-program consumption approximately 250 W.",
+          "sources": [
+            "https://www.universal-robots.com/manuals/EN/PDF/SW5_19/user-manual-UR5e-PDF_online/710-965-00_UR5e_User_Manual_en_Global.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Industrial networking",
+          "details": "1000BASE-T Ethernet with TCP/IP sockets, Modbus TCP, EtherNet/IP adapter and Profinet.",
+          "sources": [
+            "https://www.universal-robots.com/manuals/EN/PDF/SW5_19/user-manual-UR5e-PDF_online/710-965-00_UR5e_User_Manual_en_Global.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tool and control I/O",
+          "details": "Control box: 16 digital inputs, 16 outputs, two analog inputs and two outputs. Tool: two digital inputs/outputs, two analog inputs, RS-485 communication and 12/24 V supply.",
+          "sources": [
+            "https://www.universal-robots.com/manuals/EN/PDF/SW5_19/user-manual-UR5e-PDF_online/710-965-00_UR5e_User_Manual_en_Global.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Programming",
+          "details": "PolyScope interface on a 12-inch teach-pendant touchscreen.",
+          "sources": [
+            "https://www.universal-robots.com/manuals/EN/PDF/SW5_19/user-manual-UR5e-PDF_online/710-965-00_UR5e_User_Manual_en_Global.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cartken-courier",
+      "manufacturer": "Cartken",
+      "models": [
+        "Cartken Courier"
+      ],
+      "configuration": "Current Courier reference with Cartken platform-level navigation and connectivity. The 2022 Jetson AGX Orin deployment report does not identify the board revision of every present Courier.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Visual navigation",
+          "details": "Depth and color camera perception with sensor fusion; visual localization supports operation without GPS. LiDAR is not required by the documented camera-first design.",
+          "sources": [
+            "https://cartken.com/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Remote assistance",
+          "details": "Cartken documents LTE/4G for remote operator assistance; modem SKU and cellular bands are not disclosed.",
+          "sources": [
+            "https://cartken.com/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Vehicle and charging",
+          "details": "Courier: 20 kg payload, 83 × 51 × 62 cm footprint, published runtime over 13 hours. Fleet robots support autonomous charging.",
+          "sources": [
+            "https://cartken.com/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Building integration",
+          "details": "Platform integration with doors, gates and elevators; protocol and interface hardware depend on installation.",
+          "sources": [
+            "https://cartken.com/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation and fleet control",
+          "details": "Mapped operating areas, predefined driving corridors, adjustable delivery routes and fleet management with remote assistance.",
+          "sources": [
+            "https://cartken.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bear-servi",
+      "manufacturer": "Bear Robotics",
+      "models": [
+        "Servi"
+      ],
+      "configuration": "Servi full-height two-tray configuration; Servi mini and Servi Plus are separate models. CPU, RAM and radio module are not identified by this source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and load detection",
+          "details": "LiDAR and cameras for mapping/obstacle avoidance; internal weight sensors detect completed deliveries.",
+          "sources": [
+            "https://www.bearrobotics.ai/servi"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mobility and charging",
+          "details": "0.1–1.2 m/s drive speed, two trays plus bus tub, 30 kg total payload. Published 10–12 hour runtime and four-hour wall charging.",
+          "sources": [
+            "https://www.bearrobotics.ai/servi"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator controls",
+          "details": "Seven-inch touchscreen or external tablet.",
+          "sources": [
+            "https://www.bearrobotics.ai/servi"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet functions",
+          "details": "Cloud-based Fleet Control Suite for usage data and remote troubleshooting; centralized multi-robot coordination.",
+          "sources": [
+            "https://www.bearrobotics.ai/servi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pudu-cc1",
+      "manufacturer": "Pudu Robotics",
+      "models": [
+        "Pudu CC1",
+        "CC1"
+      ],
+      "configuration": "CCBC01 configuration in Pudu Academy, revised May 6, 2026. CC1 Pro and Pro Disc specifications are not inherited.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation sensors",
+          "details": "RGB-D, RGB and top-view cameras; LiDAR, solid-state LiDAR and ultrasonic sensing. Navigation combines visual SLAM and LiDAR.",
+          "sources": [
+            "https://academy.pudutech.com/en/docs/chan-pin-jian-jie-url0"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Connectivity",
+          "details": "4G, Wi-Fi and Bluetooth supported; LoRa optional. Chipsets and regional RF bands are not specified.",
+          "sources": [
+            "https://academy.pudutech.com/en/docs/chan-pin-jian-jie-url0"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and drive",
+          "details": "50 Ah battery; DC operating range 23–29.2 V. Charger output 29.2 V / 15 A; charging under three hours. Drive wheels with 0.2–1.2 m/s cruise speed.",
+          "sources": [
+            "https://academy.pudutech.com/en/docs/chan-pin-jian-jie-url0"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator and cleaning hardware",
+          "details": "10.1-inch LCD, emergency stop, key switch and charging contacts. Separate 15 L clean/recovery tanks, 2.5 L dustbin, scrubbing/sweeping brushes and squeegee.",
+          "sources": [
+            "https://academy.pudutech.com/en/docs/chan-pin-jian-jie-url0"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operating system",
+          "details": "Android; manual/automatic control and mobile app. Optional dock enables automatic charging and water filling/draining.",
+          "sources": [
+            "https://academy.pudutech.com/en/docs/chan-pin-jian-jie-url0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reach-bravo7",
+      "manufacturer": "Reach Robotics",
+      "models": [
+        "Reach Bravo 7"
+      ],
+      "configuration": "Current Reach Bravo 7 product-page configuration. The older linked brochure gives different power/depth figures; those revisions are not combined. Processor SKUs remain undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electric manipulator",
+          "details": "Seven functions, 900 mm reach, 10 kg lift capacity; 24–48 V and nominal 400 W in the current table. Weight 9.5 kg in air.",
+          "sources": [
+            "https://reachrobotics.com/products/reach-bravo/reach-bravo-7"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Wired communications",
+          "details": "RS-232, RS-485 and Ethernet. Eight-pin Subconn communications connector and four-pin Subconn power connector.",
+          "sources": [
+            "https://reachrobotics.com/products/reach-bravo/reach-bravo-7"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control modes",
+          "details": "Position, velocity and Cartesian-velocity control; telemetry visualization and collision-aware planning.",
+          "sources": [
+            "https://reachrobotics.com/products/reach-bravo/reach-bravo-7"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Subsea enclosure",
+          "details": "Current product page rates depth to 450 m seawater; older datasheet depth limits must not be treated as the same revision.",
+          "sources": [
+            "https://reachrobotics.com/products/reach-bravo/reach-bravo-7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blueye-x3",
+      "manufacturer": "Blueye Robotics",
+      "models": [
+        "X3",
+        "Blueye X3"
+      ],
+      "configuration": "Original X3, not X3 Ultra. CPU and RAM are not disclosed; do not transfer the X7/Ultra Jetson specification to this model.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "memory",
+          "component": "Recording storage",
+          "details": "256 GB SD storage for video and dive data.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x3"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera and navigation",
+          "details": "1/2.8-inch Exmor R CMOS, 1080p video, ±30° mechanical tilt. Three-axis gyro, accelerometer and magnetometer; depth and temperature sensors.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x3"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Propulsion and batteries",
+          "details": "Four 350 W thrusters. Standard battery: 14.8 V, 6500 mAh, 96.2 Wh. High-capacity alternative: 14.4 V, 14750 mAh, 212.4 Wh.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x3"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tether and guest ports",
+          "details": "Copper twisted-pair tether up to 300 m. Three guest ports support Ethernet 10/100BASE-T/TX, serial, I2C, PWM and UART; port 1 offers RS-485/422, port 3 USB.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x3"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control and payload options",
+          "details": "iOS/Android control; sonars, manipulators and acoustic positioning are optional payloads, not built-in sensors.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blueye-x7",
+      "manufacturer": "Blueye Robotics",
+      "models": [
+        "Blueye X7",
+        "X7"
+      ],
+      "configuration": "X7 published configuration; optional external storage, topside power and payloads are separate. Jetson RAM variant is not specified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA Jetson Orin NX",
+          "details": "Onboard Orin NX edge-computing SoC for AI and computer vision.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x7"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Recording storage",
+          "details": "512 GB SD card; removable external storage offered separately.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x7"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging and navigation",
+          "details": "4K HDR camera with −70° to +90° tilt; gyro, accelerometer, magnetometer, depth and temperature sensors. Sonar and DVL are optional payloads.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x7"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Propulsion and supply",
+          "details": "Seven thrusters, dual batteries, optional topside power. Standard batteries: 2 × 6.3 Ah at 14.4 V, 2 × 90.7 Wh. USB-C charging rated 240 W.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x7"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Expansion and tether",
+          "details": "Seven guest ports; Ethernet 10/100BASE-T/TX, RS-232/485/422, USB 2/3, I2C, PWM and UART. Copper twisted-pair tether up to 700 m.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x7"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Onboard image processing",
+          "details": "Real-time turbidity, color and lens-correction filters.",
+          "sources": [
+            "https://www.blueyerobotics.com/rov/x7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emesent-hovermap-st",
+      "manufacturer": "Emesent",
+      "models": [
+        "Hovermap ST",
+        "Hovermap"
+      ],
+      "configuration": "Hovermap ST configuration; model-specific LiDAR details. CPU and RAM are not disclosed. This is a sensor/autonomy payload, not a complete aircraft.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Rotating LiDAR",
+          "details": "16 lasers; range up to 100 m; up to 300,000 points/s in single-return mode.",
+          "sources": [
+            "https://knowledge.emesent.com/docs/hovermap-1"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Scan storage",
+          "details": "512 GB onboard storage.",
+          "sources": [
+            "https://knowledge.emesent.com/v1/docs/hovermap-specifications"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi",
+          "details": "Internal Wi-Fi antenna; radio chipset/bands not specified.",
+          "sources": [
+            "https://knowledge.emesent.com/v1/docs/hovermap-specifications"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Supply and mounting",
+          "details": "14–54 V external supply; 1.6 kg payload. Handheld, vehicle, ground-robot or supported-drone mounting.",
+          "sources": [
+            "https://knowledge.emesent.com/v1/docs/hovermap-specifications"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Data offload",
+          "details": "USB 3 data offload and proprietary auxiliary connector.",
+          "sources": [
+            "https://knowledge.emesent.com/v1/docs/hovermap-specifications"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Processing chain",
+          "details": "Cortex onboard SLAM/sensor recording; Commander mission controls; Aura post-processing.",
+          "sources": [
+            "https://knowledge.emesent.com/docs/hovermap-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emesent-hovermap-stx",
+      "manufacturer": "Emesent",
+      "models": [
+        "Hovermap ST-X",
+        "Hovermap"
+      ],
+      "configuration": "Hovermap ST-X configuration; model-specific LiDAR details. CPU and RAM are not disclosed. This is a sensor/autonomy payload, not a complete aircraft.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Hesai XT32M2X",
+          "details": "Emesent’s February 2026 product guide identifies this LiDAR in Hovermap STX.",
+          "sources": [
+            "https://emesent.com/hubfs/AEC%20Product%20Guide%20Feb2026.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Rotating LiDAR",
+          "details": "32 lasers; range up to 300 m; up to 640,000 points/s in single-return mode.",
+          "sources": [
+            "https://knowledge.emesent.com/docs/hovermap-1"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Scan storage",
+          "details": "512 GB onboard storage.",
+          "sources": [
+            "https://knowledge.emesent.com/v1/docs/hovermap-specifications"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi",
+          "details": "Internal Wi-Fi antenna; radio chipset/bands not specified.",
+          "sources": [
+            "https://knowledge.emesent.com/v1/docs/hovermap-specifications"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Supply and mounting",
+          "details": "14–54 V external supply; 1.57 kg payload. Handheld, vehicle, ground-robot or supported-drone mounting.",
+          "sources": [
+            "https://knowledge.emesent.com/v1/docs/hovermap-specifications"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Data offload",
+          "details": "USB 3 data offload and proprietary auxiliary connector.",
+          "sources": [
+            "https://knowledge.emesent.com/v1/docs/hovermap-specifications"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Processing chain",
+          "details": "Cortex onboard SLAM/sensor recording; Commander mission controls; Aura post-processing.",
+          "sources": [
+            "https://knowledge.emesent.com/docs/hovermap-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flyability-elios3",
+      "manufacturer": "Flyability",
+      "models": [
+        "Elios 3"
+      ],
+      "configuration": "Elios 3 manual v1.3 configuration with original LiDAR and battery. Later surveying payloads and high-capacity batteries have separate specifications.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard flight computer",
+          "details": "Manual identifies an onboard computer and flight controller; exact processor and RAM SKUs are not established.",
+          "sources": [
+            "https://www.flyability.com/hubfs/Knowledge%20Base%20Files/Documents/Manuals/E3%20and%20equipments/Elios%203%20User%20Manual%20v1.3.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Media and flight storage",
+          "details": "128 GB camera SD storage plus 500 GB onboard-computer SSD. Camera card is not user-removable in this manual.",
+          "sources": [
+            "https://www.flyability.com/hubfs/Knowledge%20Base%20Files/Documents/Manuals/E3%20and%20equipments/Elios%203%20User%20Manual%20v1.3.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Inspection and LiDAR",
+          "details": "4K30 optical camera, 12 MP stills, thermal camera and Ouster OS0-32 LiDAR in this configuration.",
+          "sources": [
+            "https://www.flyability.com/hubfs/Knowledge%20Base%20Files/Documents/Manuals/E3%20and%20equipments/Elios%203%20User%20Manual%20v1.3.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "GPS-denied navigation",
+          "details": "LiDAR and visual-inertial cameras feed SLAM-based positioning and stabilization.",
+          "sources": [
+            "https://www.flyability.com/elios-3"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight battery",
+          "details": "6S1P Li-HV pack, 22.8 V, 4350 mAh, 99.18 Wh; swappable battery.",
+          "sources": [
+            "https://www.flyability.com/hubfs/Knowledge%20Base%20Files/Documents/Manuals/E3%20and%20equipments/Elios%203%20User%20Manual%20v1.3.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Data transfer",
+          "details": "Aircraft USB-C exposes recorded content through Flyability Inspector.",
+          "sources": [
+            "https://www.flyability.com/hubfs/Knowledge%20Base%20Files/Documents/Manuals/E3%20and%20equipments/Elios%203%20User%20Manual%20v1.3.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Ground-station link",
+          "details": "Wireless link carries video, control and telemetry. This manual does not specify its radio chipset or operating bands.",
+          "sources": [
+            "https://www.flyability.com/hubfs/Knowledge%20Base%20Files/Documents/Manuals/E3%20and%20equipments/Elios%203%20User%20Manual%20v1.3.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Inspection workflow",
+          "details": "Cockpit app for flight and live mapping; Inspector for analysis and recorded data.",
+          "sources": [
+            "https://www.flyability.com/elios-3"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -2,11 +2,43 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {deviceSystems} from '../public/device-system-data.mjs';
-import {systemBreakdown} from '../public/device-system-model.mjs';
+import {systemBreakdown,includeReviewedSystemModels} from '../public/device-system-model.mjs';
+import {libraryModels} from '../public/device-library-model.mjs';
 
 const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
+
+test('reviewed models are searchable library references even before map observations',()=>{
+ const models=includeReviewedSystemModels(libraryModels());
+ const represented=new Set(models.flatMap(m=>profileIds(systemBreakdown(m))));
+ for(const profile of deviceSystems.profiles)assert.ok(represented.has(profile.id),profile.id);
+ assert.equal(includeReviewedSystemModels(models).length,models.length);
+ const alpha=models.find(m=>m.maker==='Autel Robotics'&&m.name==='Autel Alpha');
+ assert.ok(alpha);
+ assert.equal(alpha.records,undefined);
+ assert.equal(models.filter(m=>m.maker==='Skydio'&&m.name==='Skydio X10').length<=1,true);
+ assert.ok(models.every(m=>m.aliases&&m.source));
+});
+
+test('ground and underwater profiles preserve optional components and generations',()=>{
+ const x3=system('Blueye Robotics','X3'),x7=system('Blueye Robotics','Blueye X7');
+ assert.equal(x3.sections.compute.facts.length,0);
+ assert.match(text(x7.sections.compute),/Orin NX/);
+ assert.match(text(x3.sections.power),/Four 350 W/);
+ assert.match(text(x7.sections.power),/Seven thrusters/);
+ const cc1=system('Pudu Robotics','Pudu CC1');
+ assert.match(text(cc1.sections.radios),/LoRa optional/);
+ assert.equal(profileIds(system('Pudu Robotics','CC1 Pro')).length,0);
+ assert.match(text(system('Dobot','DOBOT Magician').sections.radios),/optional kits/);
+ assert.equal(system('Dobot','DOBOT Magician').sections.identification.facts.some(f=>f.pattern),false);
+ assert.equal(profileIds(system('Dobot','Magician E6')).length,0);
+ assert.match(system('Fetch Robotics','Fetch AMR').configurations[0].configuration,/Research Edition/);
+ assert.equal(profileIds(system('Zebra Technologies','Fetch AMR line')).length,0);
+ assert.equal(profileIds(system('Emesent','Hovermap')).length,2);
+ assert.doesNotMatch(text(system('Emesent','Hovermap ST').sections.sensors),/Hesai XT32M2X/);
+ assert.match(text(system('Emesent','Hovermap ST-X').sections.sensors),/Hesai XT32M2X/);
+});
 
 test('reviewed components have sources, explicit models and no complete-BOM claim',()=>{
  const canonical=JSON.parse(fs.readFileSync(new URL('../integration/device-systems.json',import.meta.url)));

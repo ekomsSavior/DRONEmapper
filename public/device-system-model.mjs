@@ -1,4 +1,4 @@
-import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b08';
+import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b09';
 import {libraryModels} from './device-library-model.mjs';
 import {macAllocationsFor,formatMacPrefix} from './device-mac-model.mjs';
 import {robotSignatures} from './robot-signatures.mjs';
@@ -104,4 +104,19 @@ export function systemBreakdown(record){
 export function systemSearchText(record){
  const system=systemBreakdown(record);
  return Object.values(system.sections).flatMap(s=>s.facts.map(f=>[f.component,f.details].join(' '))).join(' ');
+}
+
+// Reviewed models can originate in declaration catalogs before appearing on the
+// map. Expose those references in the library without creating observations.
+export function includeReviewedSystemModels(records){
+ const models=[...records];
+ for(const profile of deviceSystems.profiles){
+  if(models.some(record=>matches(record,profile)))continue;
+  const source=profile.facts.flatMap(f=>f.sources)[0];
+  models.push({maker:profile.manufacturer,name:profile.models[0],aliases:profile.models.slice(1),
+   category:'Device configuration',description:profile.configuration,source,url:source,
+   connection:profile.facts.filter(f=>f.section==='radios').map(f=>f.component).join(' · ')||'Radio details not established in this configuration.',
+   reception:'Published hardware reference; this does not establish a map observation or scanner signature.'});
+ }
+ return models.sort((a,b)=>a.maker.localeCompare(b.maker)||a.name.localeCompare(b.name));
 }

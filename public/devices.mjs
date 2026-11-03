@@ -1,9 +1,9 @@
 import {companyWebsite,modelWebsite} from './company-links.mjs';
 import {libraryModels} from './device-library-model.mjs?v=20261101-robots';
 import {macAllocationsFor,formatMacPrefix,macReviewedOn} from './device-mac-model.mjs';
-import {systemBreakdown} from './device-system-model.mjs?v=20261103-systems-b08';
+import {systemBreakdown,includeReviewedSystemModels} from './device-system-model.mjs?v=20261103-systems-b09';
 const $=id=>document.getElementById(id);
-let models=libraryModels();
+let models=includeReviewedSystemModels(libraryModels());
 let inventoryStatus='Loading map inventory…';
 let limit=60;
 const make=(tag,text,className)=>{const e=document.createElement(tag);e.textContent=text;if(className)e.className=className;return e;};
