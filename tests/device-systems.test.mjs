@@ -108,6 +108,31 @@ test('RID generations and aircraft variants preserve their documented hardware',
  assert.equal(profileIds(system('DJI','Phantom 4 Pro')).length,0);
 });
 
+test('new robot profiles distinguish generations, optional radios and connector types',()=>{
+ const t1=system('Booster Robotics','Booster T1');
+ assert.match(text(t1.sections.compute),/Basic: one Jetson AGX Orin 32GB/);
+ assert.match(text(t1.sections.compute),/Standard: Express-i7/);
+ assert.match(text(t1.sections.memory),/motion board 8 GB/);
+ const hb4=system('MAB Robotics','Honey Badger 4.0'),hb5=system('MAB Robotics','Honey Badger 5.0');
+ assert.doesNotMatch(text(hb4),/Orin Nano|UP Squared/);
+ assert.match(text(hb5.sections.compute),/Orin Nano Super/);
+ assert.match(hb5.configurations[0].configuration,/conflicting revision/);
+ assert.match(text(hb5.sections.identification),/changeable\/spoofable/);
+ assert.ok(hb5.sections.identification.facts.every(f=>!f.pattern));
+ const lovot2=system('Groove X','LOVOT 2.0'),lovot3=system('Groove X','LOVOT 3.0');
+ assert.doesNotMatch(text(lovot2),/Orin NX|512 GB/);
+ assert.match(text(lovot3.sections.compute),/Orin NX/);
+ assert.equal(system('Groove X','Lovot').configurations.length,2);
+ const ohmni=system('OhmniLabs','Ohmni');
+ assert.match(text(ohmni.sections.interfaces),/not Ethernet/);
+ assert.match(text(ohmni.sections.radios),/not established as built-in/);
+ assert.equal(profileIds(system('OhmniLabs','OhmniCare')).length,0);
+ const s2=system('UBTech Robotics','Walker S2');
+ assert.match(text(s2.sections.compute),/x86 computer plus NVIDIA Jetson Orin/);
+ assert.doesNotMatch(text(s2.sections.compute),/1185G7|64 GB|275 TOPS/);
+ assert.equal(profileIds(system('UBTech Robotics','Walker S1')).length,0);
+});
+
 test('global JSON and website use the same per-record system evidence',()=>{
  const data=JSON.parse(fs.readFileSync(new URL('../public/downloads/data/devices-global.json',import.meta.url)));
  for(const d of data.devices){

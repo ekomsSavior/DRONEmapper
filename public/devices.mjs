@@ -1,7 +1,7 @@
 import {companyWebsite,modelWebsite} from './company-links.mjs';
 import {libraryModels} from './device-library-model.mjs?v=20261101-robots';
 import {macAllocationsFor,formatMacPrefix,macReviewedOn} from './device-mac-model.mjs';
-import {systemBreakdown} from './device-system-model.mjs?v=20261103-systems-b05';
+import {systemBreakdown} from './device-system-model.mjs?v=20261103-systems-b06';
 const $=id=>document.getElementById(id);
 let models=libraryModels();
 let inventoryStatus='Loading map inventory…';

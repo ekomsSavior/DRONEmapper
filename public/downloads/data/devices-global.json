@@ -11569,43 +11569,141 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "anymal-x-current",
+            "configuration": "Current ANYmal X brochure configuration, reviewed November 2026. Preliminary specifications; do not transfer these ratings to earlier X hardware. CPU and RAM parts are not published.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard autonomy",
+                "details": "Localization, route planning, motion control and diagnostics execute on the robot.",
+                "sources": [
+                  "https://www.anybotics.com/robotics/anymal-x/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-x-current",
+                "configuration": "Current ANYmal X brochure configuration, reviewed November 2026. Preliminary specifications; do not transfer these ratings to earlier X hardware. CPU and RAM parts are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Offline recording",
+                "details": "Inspection data buffer onboard when disconnected, then synchronize with Shift; storage capacity unspecified.",
+                "sources": [
+                  "https://www.anybotics.com/robotics/anymal-x/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-x-current",
+                "configuration": "Current ANYmal X brochure configuration, reviewed November 2026. Preliminary specifications; do not transfer these ratings to earlier X hardware. CPU and RAM parts are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Network interfaces",
+                "details": "Wi-Fi 6 at 2.4/5 GHz and built-in 5G/4G LTE.",
+                "sources": [
+                  "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-x-current",
+                "configuration": "Current ANYmal X brochure configuration, reviewed November 2026. Preliminary specifications; do not transfer these ratings to earlier X hardware. CPU and RAM parts are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Inspection payload",
+                "details": "Zoom camera, 640×512 radiometric thermal camera, acoustic imager and microphone. Gas sensing is an optional module.",
+                "sources": [
+                  "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-x-current",
+                "configuration": "Current ANYmal X brochure configuration, reviewed November 2026. Preliminary specifications; do not transfer these ratings to earlier X hardware. CPU and RAM parts are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and docking",
+                "details": "42.9 V DC, 28 Ah, 1.2 kWh Li-ion; over three hours per charge and automatic docking.",
+                "sources": [
+                  "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-x-current",
+                "configuration": "Current ANYmal X brochure configuration, reviewed November 2026. Preliminary specifications; do not transfer these ratings to earlier X hardware. CPU and RAM parts are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload connection",
+                "details": "Protected pan-tilt unit with USB and Ethernet; IP65 robot, IP67 inspection payload.",
+                "sources": [
+                  "https://www.anybotics.com/robotics/anymal-x/",
+                  "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-x-current",
+                "configuration": "Current ANYmal X brochure configuration, reviewed November 2026. Preliminary specifications; do not transfer these ratings to earlier X hardware. CPU and RAM parts are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Inspection management",
+                "details": "ANYbotics Shift and REST API; managed cloud, customer cloud or on-premises hosting.",
+                "sources": [
+                  "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-x-current",
+                "configuration": "Current ANYmal X brochure configuration, reviewed November 2026. Preliminary specifications; do not transfer these ratings to earlier X hardware. CPU and RAM parts are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -11619,13 +11717,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -19494,38 +19585,122 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "booster-t1",
+            "configuration": "23-DoF T1 Basic and Standard configurations. The Standard has two computers; the Basic combines their roles. The precise Express-i7 CPU SKU is not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Locomotion and perception computers",
+                "details": "Basic: one Jetson AGX Orin 32GB. Standard: Express-i7 motion controller (6 performance + 8 efficiency cores) plus Jetson AGX Orin 32GB perception computer.",
+                "sources": [
+                  "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "booster-t1",
+                "configuration": "23-DoF T1 Basic and Standard configurations. The Standard has two computers; the Basic combines their roles. The precise Express-i7 CPU SKU is not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "RAM and storage",
+                "details": "Basic: 32 GB RAM, 512 GB storage. Standard: motion board 8 GB / 512 GB; perception board 32 GB / 512 GB.",
+                "sources": [
+                  "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "booster-t1",
+                "configuration": "23-DoF T1 Basic and Standard configurations. The Standard has two computers; the Basic combines their roles. The precise Express-i7 CPU SKU is not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless",
+                "details": "Wi-Fi 6 and Bluetooth 5.2.",
+                "sources": [
+                  "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "booster-t1",
+                "configuration": "23-DoF T1 Basic and Standard configurations. The Standard has two computers; the Basic combines their roles. The precise Express-i7 CPU SKU is not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Head sensors",
+                "details": "Depth camera and microphone array; speaker for audio output.",
+                "sources": [
+                  "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "booster-t1",
+                "configuration": "23-DoF T1 Basic and Standard configurations. The Standard has two computers; the Basic combines their roles. The precise Express-i7 CPU SKU is not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Actuation and battery",
+                "details": "23 joints: six per leg, four per arm, one waist and two head. Published battery runtime two hours; charging at most two hours.",
+                "sources": [
+                  "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "booster-t1",
+                "configuration": "23-DoF T1 Basic and Standard configurations. The Standard has two computers; the Basic combines their roles. The precise Express-i7 CPU SKU is not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Wired networking",
+                "details": "Two Gigabit Ethernet ports per computer.",
+                "sources": [
+                  "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "booster-t1",
+                "configuration": "23-DoF T1 Basic and Standard configurations. The Standard has two computers; the Basic combines their roles. The precise Express-i7 CPU SKU is not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -19544,12 +19719,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -59831,38 +60000,199 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "groovex-lovot3",
+            "configuration": "LOVOT 3.0 configuration. The unversioned Lovot catalog entry also has a separate 2.0 reference; its components are not combined with this model.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "groovex-lovot2",
+            "configuration": "LOVOT 2.0 column of the manufacturer comparison table. Main/subcomputer and Nest are distinct; the 3.0 Jetson specification is not assigned here.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "AI module",
+                "details": "NVIDIA Jetson Orin NX: eight CPU cores, 1,024 GPU cores and 32 Tensor cores; up to 100 TOPS in the published configuration.",
+                "sources": [
+                  "https://lovot.life/en/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot3",
+                "configuration": "LOVOT 3.0 configuration. The unversioned Lovot catalog entry also has a separate 2.0 reference; its components are not combined with this model.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Distributed computing",
+                "details": "x86 main computer (published as 4–2 cores), six-core ARM subcomputer and FPGA; Nest has a separate two-core processor. Chip SKUs unspecified.",
+                "sources": [
+                  "https://lovot.life/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot2",
+                "configuration": "LOVOT 2.0 column of the manufacturer comparison table. Main/subcomputer and Nest are distinct; the 3.0 Jetson specification is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Storage",
+                "details": "512 GB; RAM capacity is not listed.",
+                "sources": [
+                  "https://lovot.life/en/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot3",
+                "configuration": "LOVOT 3.0 configuration. The unversioned Lovot catalog entry also has a separate 2.0 reference; its components are not combined with this model.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "memory",
+                "component": "Separate storage",
+                "details": "Main computer 64 GB, subcomputer 8 GB, Nest 256 GB.",
+                "sources": [
+                  "https://lovot.life/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot2",
+                "configuration": "LOVOT 2.0 column of the manufacturer comparison table. Main/subcomputer and Nest are distinct; the 3.0 Jetson specification is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Communications",
+                "details": "Wireless LAN, Bluetooth, infrared and NFC; chipset and band details are not listed.",
+                "sources": [
+                  "https://lovot.life/en/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot3",
+                "configuration": "LOVOT 3.0 configuration. The unversioned Lovot catalog entry also has a separate 2.0 reference; its components are not combined with this model.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Communications",
+                "details": "Bluetooth, infrared, wireless LAN, NFC and cellular data; wired LAN at the Nest.",
+                "sources": [
+                  "https://lovot.life/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot2",
+                "configuration": "LOVOT 2.0 column of the manufacturer comparison table. Main/subcomputer and Nest are distinct; the 3.0 Jetson specification is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "Horn-top, horn-front and depth cameras; illumination, temperature/humidity, IMU, distance, obstacle and touch sensors. Four microphones.",
+                "sources": [
+                  "https://lovot.life/en/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot3",
+                "configuration": "LOVOT 3.0 configuration. The unversioned Lovot catalog entry also has a separate 2.0 reference; its components are not combined with this model.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "Half-sphere camera, thermal camera and depth camera; light, temperature/humidity, IMU, distance, obstacle and touch sensors.",
+                "sources": [
+                  "https://lovot.life/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot2",
+                "configuration": "LOVOT 2.0 column of the manufacturer comparison table. Main/subcomputer and Nest are distinct; the 3.0 Jetson specification is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Drive and battery",
+                "details": "Two powered wheels and caster, 11 total DoF; 52 Wh LFP battery, approximately 50 W draw. Typical cycle: 30–45 minutes operation then 15–30 minutes charging.",
+                "sources": [
+                  "https://lovot.life/en/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot3",
+                "configuration": "LOVOT 3.0 configuration. The unversioned Lovot catalog entry also has a separate 2.0 reference; its components are not combined with this model.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Charging cycle",
+                "details": "About 30–45 minutes operation followed by 15–30 minutes charging; 4.3 kg robot excluding clothing.",
+                "sources": [
+                  "https://lovot.life/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot2",
+                "configuration": "LOVOT 2.0 column of the manufacturer comparison table. Main/subcomputer and Nest are distinct; the 3.0 Jetson specification is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Display and update port",
+                "details": "Two OLED eye displays; USB-C for dedicated software-update media.",
+                "sources": [
+                  "https://lovot.life/en/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot3",
+                "configuration": "LOVOT 3.0 configuration. The unversioned Lovot catalog entry also has a separate 2.0 reference; its components are not combined with this model.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Eyes",
+                "details": "Two LCD eye displays.",
+                "sources": [
+                  "https://lovot.life/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "groovex-lovot2",
+                "configuration": "LOVOT 2.0 column of the manufacturer comparison table. Main/subcomputer and Nest are distinct; the 3.0 Jetson specification is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -59881,12 +60211,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -69357,13 +69681,37 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "mab-honey-badger4",
+            "configuration": "Honey Badger 4.0 reference for the unversioned catalog entry. This earlier platform is separate from 5.0; processor, RAM and sensor SKUs are not identified on its product page.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "mab-honey-badger5",
+            "configuration": "HB50 developer-manual configuration. Its manual lists IP51, 16 kg and 3 kg payload, while the current sales page lists IP66, 17 kg and 5 kg. These are conflicting revision/configuration references, not interchangeable ratings.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Separate locomotion and application PCs",
+                "details": "LPC: UP Squared Pro 7000 board. APC: NVIDIA Jetson Orin Nano Super. Exact LPC CPU SKU and installed RAM/storage are not specified.",
+                "sources": [
+                  "https://mabrobotics.github.io/hb-docs/Software/Platform.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger5",
+                "configuration": "HB50 developer-manual configuration. Its manual lists IP51, 16 kg and 3 kg payload, while the current sales page lists IP66, 17 kg and 5 kg. These are conflicting revision/configuration references, not interchangeable ratings.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -69372,49 +69720,171 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control link",
+                "details": "Wi-Fi or optical-fibre control from a PC/remote. The page’s “5G Wi-Fi” wording does not establish cellular 5G.",
+                "sources": [
+                  "https://www.mabrobotics.pl/honey-badger"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger4",
+                "configuration": "Honey Badger 4.0 reference for the unversioned catalog entry. This earlier platform is separate from 5.0; processor, RAM and sensor SKUs are not identified on its product page.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Wireless controller network",
+                "details": "Wi-Fi 5 access point. Documented SSIDs: hb50_XXXX at 2.4 GHz and hb50_XXXX_5G at 5 GHz, with four hexadecimal characters.",
+                "sources": [
+                  "https://mabrobotics.github.io/hb-docs/intro.html",
+                  "https://mabrobotics.github.io/hb-docs/Software/Networking.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger5",
+                "configuration": "HB50 developer-manual configuration. Its manual lists IP51, 16 kg and 3 kg payload, while the current sales page lists IP66, 17 kg and 5 kg. These are conflicting revision/configuration references, not interchangeable ratings.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Locomotion feedback",
+                "details": "IMU orientation/angular velocity/acceleration, joint position/velocity/torque estimates and actuator temperatures are exposed in hardware-state messages.",
+                "sources": [
+                  "https://mabrobotics.github.io/hb-docs/Software/Messages.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger5",
+                "configuration": "HB50 developer-manual configuration. Its manual lists IP51, 16 kg and 3 kg payload, while the current sales page lists IP66, 17 kg and 5 kg. These are conflicting revision/configuration references, not interchangeable ratings.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Platform and runtime",
+                "details": "12 kg quadruped with up to 4 kg payload and up to two hours battery operation.",
+                "sources": [
+                  "https://www.mabrobotics.pl/honey-badger"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger4",
+                "configuration": "Honey Badger 4.0 reference for the unversioned catalog entry. This earlier platform is separate from 5.0; processor, RAM and sensor SKUs are not identified on its product page.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Manual battery specification",
+                "details": "276.5 Wh, 50.4 V maximum; nominal walking runtime 1.5 hours. Sales-page maximum runtime is two hours.",
+                "sources": [
+                  "https://mabrobotics.github.io/hb-docs/intro.html",
+                  "https://www.mabrobotics.pl/honey-badger-5"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger5",
+                "configuration": "HB50 developer-manual configuration. Its manual lists IP51, 16 kg and 3 kg payload, while the current sales page lists IP66, 17 kg and 5 kg. These are conflicting revision/configuration references, not interchangeable ratings.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular payload",
+                "details": "Platform accepts configurable sensors and tools; no particular camera or lidar is established as standard.",
+                "sources": [
+                  "https://www.mabrobotics.pl/honey-badger"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger4",
+                "configuration": "Honey Badger 4.0 reference for the unversioned catalog entry. This earlier platform is separate from 5.0; processor, RAM and sensor SKUs are not identified on its product page.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "Two USB 3 ports (one per PC), LAN plus WAN/LAN Ethernet, AUX FDCAN and isolated 5 V supply/e-stop connections.",
+                "sources": [
+                  "https://mabrobotics.github.io/hb-docs/Physical/Connectors.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger5",
+                "configuration": "HB50 developer-manual configuration. Its manual lists IP51, 16 kg and 3 kg payload, while the current sales page lists IP66, 17 kg and 5 kg. These are conflicting revision/configuration references, not interchangeable ratings.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control software",
+                "details": "ROS 2 locomotion stack runs on LPC; APC is available for user perception/planning applications.",
+                "sources": [
+                  "https://mabrobotics.github.io/hb-docs/Software/Platform.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger5",
+                "configuration": "HB50 developer-manual configuration. Its manual lists IP51, 16 kg and 3 kg payload, while the current sales page lists IP66, 17 kg and 5 kg. These are conflicting revision/configuration references, not interchangeable ratings.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Observed-name candidate",
+                "details": "The documented SSID pattern can guide passive observation but is changeable/spoofable; it does not establish a unique robot identity.",
+                "sources": [
+                  "https://mabrobotics.github.io/hb-docs/Software/Networking.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger5",
+                "configuration": "HB50 developer-manual configuration. Its manual lists IP51, 16 kg and 3 kg payload, while the current sales page lists IP66, 17 kg and 5 kg. These are conflicting revision/configuration references, not interchangeable ratings.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "other",
+                "component": "Published enclosure rating",
+                "details": "Up to IP67 for the 4.0 configuration.",
+                "sources": [
+                  "https://www.mabrobotics.pl/honey-badger"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mab-honey-badger4",
+                "configuration": "Honey Badger 4.0 reference for the unversioned catalog entry. This earlier platform is separate from 5.0; processor, RAM and sensor SKUs are not identified on its product page.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -75491,13 +75961,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ohmni-up-atom",
+            "configuration": "UP-board / Atom generation documented by OhmniLabs. Later Pentium-based units and OhmniCare are not covered by these component assignments.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Main processor and power controller",
+                "details": "AAEON UP board: Intel Atom x5-Z8350, 64-bit quad-core, up to 1.92 GHz. Separate Core Board manages battery, charging and power distribution.",
+                "sources": [
+                  "https://docs.ohmnilabs.com/hardware/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ohmni-up-atom",
+                "configuration": "UP-board / Atom generation documented by OhmniLabs. Later Pentium-based units and OhmniCare are not covered by these component assignments.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -75506,28 +75995,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wi-Fi and optional BLE",
+                "details": "Dual-band 802.11ac USB adapter; Bluetooth LE can be added with a USB dongle and is not established as built-in here.",
+                "sources": [
+                  "https://docs.ohmnilabs.com/hardware/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ohmni-up-atom",
+                "configuration": "UP-board / Atom generation documented by OhmniLabs. Later Pentium-based units and OhmniCare are not covered by these component assignments.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Video and audio",
+                "details": "Front and downward cameras, speakerphone; servo-tilted 10.1-inch 1280×800 touch display.",
+                "sources": [
+                  "https://docs.ohmnilabs.com/hardware/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ohmni-up-atom",
+                "configuration": "UP-board / Atom generation documented by OhmniLabs. Later Pentium-based units and OhmniCare are not covered by these component assignments.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Power and drives",
+                "details": "Core Board lithium-battery balancing/charging, 5 V 3 A main-board supply; separate left/right drives. Neck has another 5 V 3 A converter.",
+                "sources": [
+                  "https://docs.ohmnilabs.com/hardware/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ohmni-up-atom",
+                "configuration": "UP-board / Atom generation documented by OhmniLabs. Later Pentium-based units and OhmniCare are not covered by these component assignments.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Physical buses",
+                "details": "USB/HDMI connect the upper electronics. Core Board RJ45-shaped jacks carry power and multidrop serial, not Ethernet.",
+                "sources": [
+                  "https://docs.ohmnilabs.com/hardware/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ohmni-up-atom",
+                "configuration": "UP-board / Atom generation documented by OhmniLabs. Later Pentium-based units and OhmniCare are not covered by these component assignments.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Serial expansion",
+                "details": "115200-bit/s multidrop serial protocol for onboard devices.",
+                "sources": [
+                  "https://docs.ohmnilabs.com/customdevices/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ohmni-up-atom",
+                "configuration": "UP-board / Atom generation documented by OhmniLabs. Later Pentium-based units and OhmniCare are not covered by these component assignments.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Robot OS",
+                "details": "OhmniLabs custom Android distribution.",
+                "sources": [
+                  "https://docs.ohmnilabs.com/hardware/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ohmni-up-atom",
+                "configuration": "UP-board / Atom generation documented by OhmniLabs. Later Pentium-based units and OhmniCare are not covered by these component assignments.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -75541,13 +76107,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -84147,8 +84707,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "reconrobotics-throwbot2",
+            "configuration": "Throwbot 2 base configuration and OCU II. Carry/Tow and Rugged XL are optional conversions. Processor, memory and exact RF configuration require unit-specific documentation.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -84162,23 +84728,76 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Matched radio channels",
+                "details": "Robot and OCU use matching preset radio-channel configurations for control/video/audio; no Wi-Fi MAC or universal frequency is established here.",
+                "sources": [
+                  "https://reconrobotics.com/products/throwbot-2-robot/",
+                  "https://reconrobotics.com/wp-content/uploads/2018/06/ReconRobotics_Throwbot2_Instruction-Manual_v2.0.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "reconrobotics-throwbot2",
+                "configuration": "Throwbot 2 base configuration and OCU II. Carry/Tow and Rugged XL are optional conversions. Processor, memory and exact RF configuration require unit-specific documentation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Reconnaissance sensors",
+                "details": "Color camera: 60° view, 30 fps; ambient-light-triggered infrared illumination and one-way microphone audio.",
+                "sources": [
+                  "https://reconrobotics.com/products/throwbot-2-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "reconrobotics-throwbot2",
+                "configuration": "Throwbot 2 base configuration and OCU II. Carry/Tow and Rugged XL are optional conversions. Processor, memory and exact RF configuration require unit-specific documentation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and motion",
+                "details": "LiPo robot and OCU batteries. Robot runtime: typically 110 minutes, or 160 in stationary observation. Base drive speed up to 0.6 m/s.",
+                "sources": [
+                  "https://reconrobotics.com/wp-content/uploads/2018/06/ReconRobotics_Throwbot2_Instruction-Manual_v2.0.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "reconrobotics-throwbot2",
+                "configuration": "Throwbot 2 base configuration and OCU II. Carry/Tow and Rugged XL are optional conversions. Processor, memory and exact RF configuration require unit-specific documentation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Operator equipment",
+                "details": "OCU II display/joystick; OCU audio/video output supports external monitoring or recording.",
+                "sources": [
+                  "https://reconrobotics.com/wp-content/uploads/2018/06/ReconRobotics_Throwbot2_Instruction-Manual_v2.0.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "reconrobotics-throwbot2",
+                "configuration": "Throwbot 2 base configuration and OCU II. Carry/Tow and Rugged XL are optional conversions. Processor, memory and exact RF configuration require unit-specific documentation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -84192,17 +84811,26 @@
           },
           "other": {
             "title": "Other published specifications",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "other",
+                "component": "Enclosure",
+                "details": "Robot rated IP66/IP67; this rating does not cover the OCU or added payloads.",
+                "sources": [
+                  "https://reconrobotics.com/wp-content/uploads/2018/06/ReconRobotics_Throwbot2_Instruction-Manual_v2.0.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "reconrobotics-throwbot2",
+                "configuration": "Throwbot 2 base configuration and OCU II. Carry/Tow and Rugged XL are optional conversions. Processor, memory and exact RF configuration require unit-specific documentation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           }
         },
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -95734,13 +96362,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "temi-current-v3",
+            "configuration": "Current temi V3 product specification. Historical units and V2-to-V3 upgrades may differ; processor architecture is documented but silicon SKU and RAM are not.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Two independent computers",
+                "details": "Interaction and navigation each use dual Cortex-A72 at 1.8 GHz plus quad Cortex-A53 at 1.4 GHz.",
+                "sources": [
+                  "https://www.robotemi.com/product/temi/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "temi-current-v3",
+                "configuration": "Current temi V3 product specification. Historical units and V2-to-V3 upgrades may differ; processor architecture is documented but silicon SKU and RAM are not.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -95749,28 +96396,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Dual-band 802.11a/b/g/n/ac Wi-Fi; Bluetooth 5.1 BLE. Cellular hardware is optional.",
+                "sources": [
+                  "https://www.robotemi.com/product/temi/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "temi-current-v3",
+                "configuration": "Current temi V3 product specification. Historical units and V2-to-V3 upgrades may differ; processor architecture is documented but silicon SKU and RAM are not.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and interaction",
+                "details": "360° lidar, two depth cameras, RGB camera, IMU and six linear ToF sensors. Interaction camera: 13 MP, 1080p30; four microphones.",
+                "sources": [
+                  "https://www.robotemi.com/product/temi/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "temi-current-v3",
+                "configuration": "Current temi V3 product specification. Historical units and V2-to-V3 upgrades may differ; processor architecture is documented but silicon SKU and RAM are not.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Drive and charging",
+                "details": "Two independent 50 W brushless motors with magnetic encoders; Li-ion battery, automatic docking, up to eight hours operation.",
+                "sources": [
+                  "https://www.robotemi.com/product/temi/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "temi-current-v3",
+                "configuration": "Current temi V3 product specification. Historical units and V2-to-V3 upgrades may differ; processor architecture is documented but silicon SKU and RAM are not.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "External ports and display",
+                "details": "USB 3 Type-C, USB 2 Type-A; 13.3-inch 1920×1080 touchscreen. Factory V3 tray has 12 V DC output; the V2 upgrade tray differs.",
+                "sources": [
+                  "https://www.robotemi.com/product/temi/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "temi-current-v3",
+                "configuration": "Current temi V3 product specification. Historical units and V2-to-V3 upgrades may differ; processor architecture is documented but silicon SKU and RAM are not.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operating environments",
+                "details": "Interaction: Android 11 with temi launcher. Navigation: Linux ROBOX. Third-party application SDK and temi Center management.",
+                "sources": [
+                  "https://www.robotemi.com/product/temi/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "temi-current-v3",
+                "configuration": "Current temi V3 product specification. Historical units and V2-to-V3 upgrades may differ; processor architecture is documented but silicon SKU and RAM are not.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -95784,13 +96496,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -98958,13 +99664,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ubtech-walker-s2",
+            "configuration": "Walker S2 manufacturer-authored manual (public copy) and UBTECH product page. The manual identifies processor families, not an i7 SKU, Orin memory tier or complete BOM.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Computing architecture",
+                "details": "x86 computer plus NVIDIA Jetson Orin.",
+                "sources": [
+                  "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ubtech-walker-s2",
+                "configuration": "Walker S2 manufacturer-authored manual (public copy) and UBTECH product page. The manual identifies processor families, not an i7 SKU, Orin memory tier or complete BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -98973,28 +99698,95 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wi-Fi",
+                "details": "Robot hotspot and connection to external Wi-Fi are documented; radio chipset and bands unspecified.",
+                "sources": [
+                  "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ubtech-walker-s2",
+                "configuration": "Walker S2 manufacturer-authored manual (public copy) and UBTECH product page. The manual identifies processor families, not an i7 SKU, Orin memory tier or complete BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "State and perception",
+                "details": "Manual: depth and fisheye cameras, six-axis force sensing and IMU. Product page describes head-mounted passive RGB stereo depth estimation.",
+                "sources": [
+                  "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf",
+                  "https://www.ubtrobot.com/en/humanoid/products/walker-s2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ubtech-walker-s2",
+                "configuration": "Walker S2 manufacturer-authored manual (public copy) and UBTECH product page. The manual identifies processor families, not an i7 SKU, Orin memory tier or complete BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Batteries and actuation",
+                "details": "48 V lithium system; autonomous dual-battery swapping. Two head joints, two waist joints, six per leg, seven per arm excluding hands; 15 kg combined arm load.",
+                "sources": [
+                  "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf",
+                  "https://www.ubtrobot.com/en/humanoid/products/walker-s2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ubtech-walker-s2",
+                "configuration": "Walker S2 manufacturer-authored manual (public copy) and UBTECH product page. The manual identifies processor families, not an i7 SKU, Orin memory tier or complete BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Human and wired interfaces",
+                "details": "Four-inch circular display, microphone array and speaker; Gigabit Ethernet network support.",
+                "sources": [
+                  "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ubtech-walker-s2",
+                "configuration": "Walker S2 manufacturer-authored manual (public copy) and UBTECH product page. The manual identifies processor families, not an i7 SKU, Orin memory tier or complete BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operating stack",
+                "details": "Ubuntu with ROSA 2.0 and OTA updates.",
+                "sources": [
+                  "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ubtech-walker-s2",
+                "configuration": "Walker S2 manufacturer-authored manual (public copy) and UBTECH product page. The manual identifies processor families, not an i7 SKU, Orin memory tier or complete BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -99018,13 +99810,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -251790,6 +252576,608 @@
             ]
           }
         ]
+      },
+      {
+        "id": "booster-t1",
+        "manufacturer": "Booster Robotics",
+        "models": [
+          "Booster T1",
+          "T1"
+        ],
+        "configuration": "23-DoF T1 Basic and Standard configurations. The Standard has two computers; the Basic combines their roles. The precise Express-i7 CPU SKU is not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Locomotion and perception computers",
+            "details": "Basic: one Jetson AGX Orin 32GB. Standard: Express-i7 motion controller (6 performance + 8 efficiency cores) plus Jetson AGX Orin 32GB perception computer.",
+            "sources": [
+              "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "RAM and storage",
+            "details": "Basic: 32 GB RAM, 512 GB storage. Standard: motion board 8 GB / 512 GB; perception board 32 GB / 512 GB.",
+            "sources": [
+              "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless",
+            "details": "Wi-Fi 6 and Bluetooth 5.2.",
+            "sources": [
+              "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Wired networking",
+            "details": "Two Gigabit Ethernet ports per computer.",
+            "sources": [
+              "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Head sensors",
+            "details": "Depth camera and microphone array; speaker for audio output.",
+            "sources": [
+              "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Actuation and battery",
+            "details": "23 joints: six per leg, four per arm, one waist and two head. Published battery runtime two hours; charging at most two hours.",
+            "sources": [
+              "https://docs.booster.tech/docs/product-manual/t1/getting-started/specifications/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "temi-current-v3",
+        "manufacturer": "Temi",
+        "models": [
+          "Temi",
+          "Temi V3"
+        ],
+        "configuration": "Current temi V3 product specification. Historical units and V2-to-V3 upgrades may differ; processor architecture is documented but silicon SKU and RAM are not.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Two independent computers",
+            "details": "Interaction and navigation each use dual Cortex-A72 at 1.8 GHz plus quad Cortex-A53 at 1.4 GHz.",
+            "sources": [
+              "https://www.robotemi.com/product/temi/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operating environments",
+            "details": "Interaction: Android 11 with temi launcher. Navigation: Linux ROBOX. Third-party application SDK and temi Center management.",
+            "sources": [
+              "https://www.robotemi.com/product/temi/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Dual-band 802.11a/b/g/n/ac Wi-Fi; Bluetooth 5.1 BLE. Cellular hardware is optional.",
+            "sources": [
+              "https://www.robotemi.com/product/temi/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and interaction",
+            "details": "360° lidar, two depth cameras, RGB camera, IMU and six linear ToF sensors. Interaction camera: 13 MP, 1080p30; four microphones.",
+            "sources": [
+              "https://www.robotemi.com/product/temi/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "External ports and display",
+            "details": "USB 3 Type-C, USB 2 Type-A; 13.3-inch 1920×1080 touchscreen. Factory V3 tray has 12 V DC output; the V2 upgrade tray differs.",
+            "sources": [
+              "https://www.robotemi.com/product/temi/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Drive and charging",
+            "details": "Two independent 50 W brushless motors with magnetic encoders; Li-ion battery, automatic docking, up to eight hours operation.",
+            "sources": [
+              "https://www.robotemi.com/product/temi/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "anymal-x-current",
+        "manufacturer": "ANYbotics",
+        "models": [
+          "ANYmal X"
+        ],
+        "configuration": "Current ANYmal X brochure configuration, reviewed November 2026. Preliminary specifications; do not transfer these ratings to earlier X hardware. CPU and RAM parts are not published.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard autonomy",
+            "details": "Localization, route planning, motion control and diagnostics execute on the robot.",
+            "sources": [
+              "https://www.anybotics.com/robotics/anymal-x/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Offline recording",
+            "details": "Inspection data buffer onboard when disconnected, then synchronize with Shift; storage capacity unspecified.",
+            "sources": [
+              "https://www.anybotics.com/robotics/anymal-x/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Network interfaces",
+            "details": "Wi-Fi 6 at 2.4/5 GHz and built-in 5G/4G LTE.",
+            "sources": [
+              "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Inspection payload",
+            "details": "Zoom camera, 640×512 radiometric thermal camera, acoustic imager and microphone. Gas sensing is an optional module.",
+            "sources": [
+              "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload connection",
+            "details": "Protected pan-tilt unit with USB and Ethernet; IP65 robot, IP67 inspection payload.",
+            "sources": [
+              "https://www.anybotics.com/robotics/anymal-x/",
+              "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and docking",
+            "details": "42.9 V DC, 28 Ah, 1.2 kWh Li-ion; over three hours per charge and automatic docking.",
+            "sources": [
+              "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Inspection management",
+            "details": "ANYbotics Shift and REST API; managed cloud, customer cloud or on-premises hosting.",
+            "sources": [
+              "https://info.anybotics.com/hubfs/Technical%20Documents/ANYmalX_Brochure_web.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mab-honey-badger4",
+        "manufacturer": "MAB Robotics",
+        "models": [
+          "MAB Honey Badger",
+          "Honey Badger 4.0"
+        ],
+        "configuration": "Honey Badger 4.0 reference for the unversioned catalog entry. This earlier platform is separate from 5.0; processor, RAM and sensor SKUs are not identified on its product page.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Control link",
+            "details": "Wi-Fi or optical-fibre control from a PC/remote. The page’s “5G Wi-Fi” wording does not establish cellular 5G.",
+            "sources": [
+              "https://www.mabrobotics.pl/honey-badger"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Platform and runtime",
+            "details": "12 kg quadruped with up to 4 kg payload and up to two hours battery operation.",
+            "sources": [
+              "https://www.mabrobotics.pl/honey-badger"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular payload",
+            "details": "Platform accepts configurable sensors and tools; no particular camera or lidar is established as standard.",
+            "sources": [
+              "https://www.mabrobotics.pl/honey-badger"
+            ]
+          },
+          {
+            "section": "other",
+            "component": "Published enclosure rating",
+            "details": "Up to IP67 for the 4.0 configuration.",
+            "sources": [
+              "https://www.mabrobotics.pl/honey-badger"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mab-honey-badger5",
+        "manufacturer": "MAB Robotics",
+        "models": [
+          "MAB Honey Badger",
+          "Honey Badger 5.0"
+        ],
+        "configuration": "HB50 developer-manual configuration. Its manual lists IP51, 16 kg and 3 kg payload, while the current sales page lists IP66, 17 kg and 5 kg. These are conflicting revision/configuration references, not interchangeable ratings.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Separate locomotion and application PCs",
+            "details": "LPC: UP Squared Pro 7000 board. APC: NVIDIA Jetson Orin Nano Super. Exact LPC CPU SKU and installed RAM/storage are not specified.",
+            "sources": [
+              "https://mabrobotics.github.io/hb-docs/Software/Platform.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control software",
+            "details": "ROS 2 locomotion stack runs on LPC; APC is available for user perception/planning applications.",
+            "sources": [
+              "https://mabrobotics.github.io/hb-docs/Software/Platform.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless controller network",
+            "details": "Wi-Fi 5 access point. Documented SSIDs: hb50_XXXX at 2.4 GHz and hb50_XXXX_5G at 5 GHz, with four hexadecimal characters.",
+            "sources": [
+              "https://mabrobotics.github.io/hb-docs/intro.html",
+              "https://mabrobotics.github.io/hb-docs/Software/Networking.html"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Observed-name candidate",
+            "details": "The documented SSID pattern can guide passive observation but is changeable/spoofable; it does not establish a unique robot identity.",
+            "sources": [
+              "https://mabrobotics.github.io/hb-docs/Software/Networking.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Locomotion feedback",
+            "details": "IMU orientation/angular velocity/acceleration, joint position/velocity/torque estimates and actuator temperatures are exposed in hardware-state messages.",
+            "sources": [
+              "https://mabrobotics.github.io/hb-docs/Software/Messages.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "Two USB 3 ports (one per PC), LAN plus WAN/LAN Ethernet, AUX FDCAN and isolated 5 V supply/e-stop connections.",
+            "sources": [
+              "https://mabrobotics.github.io/hb-docs/Physical/Connectors.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Manual battery specification",
+            "details": "276.5 Wh, 50.4 V maximum; nominal walking runtime 1.5 hours. Sales-page maximum runtime is two hours.",
+            "sources": [
+              "https://mabrobotics.github.io/hb-docs/intro.html",
+              "https://www.mabrobotics.pl/honey-badger-5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "groovex-lovot3",
+        "manufacturer": "Groove X",
+        "models": [
+          "Lovot",
+          "LOVOT 3.0"
+        ],
+        "configuration": "LOVOT 3.0 configuration. The unversioned Lovot catalog entry also has a separate 2.0 reference; its components are not combined with this model.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "AI module",
+            "details": "NVIDIA Jetson Orin NX: eight CPU cores, 1,024 GPU cores and 32 Tensor cores; up to 100 TOPS in the published configuration.",
+            "sources": [
+              "https://lovot.life/en/technology/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Storage",
+            "details": "512 GB; RAM capacity is not listed.",
+            "sources": [
+              "https://lovot.life/en/technology/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Communications",
+            "details": "Wireless LAN, Bluetooth, infrared and NFC; chipset and band details are not listed.",
+            "sources": [
+              "https://lovot.life/en/technology/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Horn-top, horn-front and depth cameras; illumination, temperature/humidity, IMU, distance, obstacle and touch sensors. Four microphones.",
+            "sources": [
+              "https://lovot.life/en/technology/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Display and update port",
+            "details": "Two OLED eye displays; USB-C for dedicated software-update media.",
+            "sources": [
+              "https://lovot.life/en/technology/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Drive and battery",
+            "details": "Two powered wheels and caster, 11 total DoF; 52 Wh LFP battery, approximately 50 W draw. Typical cycle: 30–45 minutes operation then 15–30 minutes charging.",
+            "sources": [
+              "https://lovot.life/en/technology/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "groovex-lovot2",
+        "manufacturer": "Groove X",
+        "models": [
+          "Lovot",
+          "LOVOT 2.0"
+        ],
+        "configuration": "LOVOT 2.0 column of the manufacturer comparison table. Main/subcomputer and Nest are distinct; the 3.0 Jetson specification is not assigned here.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Distributed computing",
+            "details": "x86 main computer (published as 4–2 cores), six-core ARM subcomputer and FPGA; Nest has a separate two-core processor. Chip SKUs unspecified.",
+            "sources": [
+              "https://lovot.life/technology/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Separate storage",
+            "details": "Main computer 64 GB, subcomputer 8 GB, Nest 256 GB.",
+            "sources": [
+              "https://lovot.life/technology/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Communications",
+            "details": "Bluetooth, infrared, wireless LAN, NFC and cellular data; wired LAN at the Nest.",
+            "sources": [
+              "https://lovot.life/technology/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Half-sphere camera, thermal camera and depth camera; light, temperature/humidity, IMU, distance, obstacle and touch sensors.",
+            "sources": [
+              "https://lovot.life/technology/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Eyes",
+            "details": "Two LCD eye displays.",
+            "sources": [
+              "https://lovot.life/technology/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Charging cycle",
+            "details": "About 30–45 minutes operation followed by 15–30 minutes charging; 4.3 kg robot excluding clothing.",
+            "sources": [
+              "https://lovot.life/technology/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ohmni-up-atom",
+        "manufacturer": "OhmniLabs",
+        "models": [
+          "Ohmni"
+        ],
+        "configuration": "UP-board / Atom generation documented by OhmniLabs. Later Pentium-based units and OhmniCare are not covered by these component assignments.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Main processor and power controller",
+            "details": "AAEON UP board: Intel Atom x5-Z8350, 64-bit quad-core, up to 1.92 GHz. Separate Core Board manages battery, charging and power distribution.",
+            "sources": [
+              "https://docs.ohmnilabs.com/hardware/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Robot OS",
+            "details": "OhmniLabs custom Android distribution.",
+            "sources": [
+              "https://docs.ohmnilabs.com/hardware/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wi-Fi and optional BLE",
+            "details": "Dual-band 802.11ac USB adapter; Bluetooth LE can be added with a USB dongle and is not established as built-in here.",
+            "sources": [
+              "https://docs.ohmnilabs.com/hardware/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Video and audio",
+            "details": "Front and downward cameras, speakerphone; servo-tilted 10.1-inch 1280×800 touch display.",
+            "sources": [
+              "https://docs.ohmnilabs.com/hardware/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Physical buses",
+            "details": "USB/HDMI connect the upper electronics. Core Board RJ45-shaped jacks carry power and multidrop serial, not Ethernet.",
+            "sources": [
+              "https://docs.ohmnilabs.com/hardware/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Serial expansion",
+            "details": "115200-bit/s multidrop serial protocol for onboard devices.",
+            "sources": [
+              "https://docs.ohmnilabs.com/customdevices/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Power and drives",
+            "details": "Core Board lithium-battery balancing/charging, 5 V 3 A main-board supply; separate left/right drives. Neck has another 5 V 3 A converter.",
+            "sources": [
+              "https://docs.ohmnilabs.com/hardware/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ubtech-walker-s2",
+        "manufacturer": "UBTech Robotics",
+        "models": [
+          "Walker S2"
+        ],
+        "configuration": "Walker S2 manufacturer-authored manual (public copy) and UBTECH product page. The manual identifies processor families, not an i7 SKU, Orin memory tier or complete BOM.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Computing architecture",
+            "details": "x86 computer plus NVIDIA Jetson Orin.",
+            "sources": [
+              "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "State and perception",
+            "details": "Manual: depth and fisheye cameras, six-axis force sensing and IMU. Product page describes head-mounted passive RGB stereo depth estimation.",
+            "sources": [
+              "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf",
+              "https://www.ubtrobot.com/en/humanoid/products/walker-s2"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Human and wired interfaces",
+            "details": "Four-inch circular display, microphone array and speaker; Gigabit Ethernet network support.",
+            "sources": [
+              "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wi-Fi",
+            "details": "Robot hotspot and connection to external Wi-Fi are documented; radio chipset and bands unspecified.",
+            "sources": [
+              "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Batteries and actuation",
+            "details": "48 V lithium system; autonomous dual-battery swapping. Two head joints, two waist joints, six per leg, seven per arm excluding hands; 15 kg combined arm load.",
+            "sources": [
+              "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf",
+              "https://www.ubtrobot.com/en/humanoid/products/walker-s2"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operating stack",
+            "details": "Ubuntu with ROSA 2.0 and OTA updates.",
+            "sources": [
+              "https://a.storyblok.com/f/298593/x/3ca9617eee/walker-s2-product-manual1011.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "reconrobotics-throwbot2",
+        "manufacturer": "ReconRobotics",
+        "models": [
+          "Throwbot 2"
+        ],
+        "configuration": "Throwbot 2 base configuration and OCU II. Carry/Tow and Rugged XL are optional conversions. Processor, memory and exact RF configuration require unit-specific documentation.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Reconnaissance sensors",
+            "details": "Color camera: 60° view, 30 fps; ambient-light-triggered infrared illumination and one-way microphone audio.",
+            "sources": [
+              "https://reconrobotics.com/products/throwbot-2-robot/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Matched radio channels",
+            "details": "Robot and OCU use matching preset radio-channel configurations for control/video/audio; no Wi-Fi MAC or universal frequency is established here.",
+            "sources": [
+              "https://reconrobotics.com/products/throwbot-2-robot/",
+              "https://reconrobotics.com/wp-content/uploads/2018/06/ReconRobotics_Throwbot2_Instruction-Manual_v2.0.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator equipment",
+            "details": "OCU II display/joystick; OCU audio/video output supports external monitoring or recording.",
+            "sources": [
+              "https://reconrobotics.com/wp-content/uploads/2018/06/ReconRobotics_Throwbot2_Instruction-Manual_v2.0.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and motion",
+            "details": "LiPo robot and OCU batteries. Robot runtime: typically 110 minutes, or 160 in stationary observation. Base drive speed up to 0.6 m/s.",
+            "sources": [
+              "https://reconrobotics.com/wp-content/uploads/2018/06/ReconRobotics_Throwbot2_Instruction-Manual_v2.0.pdf"
+            ]
+          },
+          {
+            "section": "other",
+            "component": "Enclosure",
+            "details": "Robot rated IP66/IP67; this rating does not cover the OCU or added payloads.",
+            "sources": [
+              "https://reconrobotics.com/wp-content/uploads/2018/06/ReconRobotics_Throwbot2_Instruction-Manual_v2.0.pdf"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -251806,8 +253194,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 86,
-    "devices_with_system_profiles": 90,
-    "devices_with_documented_compute": 54
+    "system_profiles": 96,
+    "devices_with_system_profiles": 98,
+    "devices_with_documented_compute": 61
   }
 }
