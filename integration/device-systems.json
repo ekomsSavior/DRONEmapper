@@ -10480,6 +10480,578 @@
           ]
         }
       ]
+    },
+    {
+      "id": "boston-atlas-electric-2026",
+      "manufacturer": "Boston Dynamics",
+      "models": [
+        "Atlas",
+        "Atlas Electric"
+      ],
+      "configuration": "Electric Atlas reference, specification revision October 15, 2026. These parts do not describe the retired hydraulic Atlas. RAM, storage, radio chipset and individual actuator/sensor SKUs are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard AI platform",
+          "details": "Boston Dynamics identifies NVIDIA Jetson Thor for electric Atlas; exact module SKU and installed memory are not specified.",
+          "sources": [
+            "https://bostondynamics.com/news/boston-dynamics-expands-collaboration-with-nvidia/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception and touch",
+          "details": "Surrounding camera coverage and tactile sensing in fingers and palms; human-detection safety system.",
+          "sources": [
+            "https://bostondynamics.com/wp-content/uploads/2026/01/atlas-spec-sheet.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric body",
+          "details": "56 degrees of freedom; 1.9 m, 90 kg; 30 kg sustained load and 20 kg one-handed capacity.",
+          "sources": [
+            "https://bostondynamics.com/wp-content/uploads/2026/01/atlas-spec-sheet.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery servicing",
+          "details": "Nominal runtime four hours, two under heavy lifting. Autonomous battery exchange takes about three minutes; recharge 1.5 hours with 110 V or optional 220 V supply.",
+          "sources": [
+            "https://bostondynamics.com/wp-content/uploads/2026/01/atlas-spec-sheet.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operation and workflow",
+          "details": "Autonomous, VR teleoperation and tablet modes. Barcode and RFID workflow integration; reader frequency and part number are unspecified.",
+          "sources": [
+            "https://bostondynamics.com/wp-content/uploads/2026/01/atlas-spec-sheet.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet and control stack",
+          "details": "Orbit links to MES/WMS. Jetson inference works with Boston Dynamics whole-body and manipulation controllers; Isaac Lab is a development/simulation tool.",
+          "sources": [
+            "https://bostondynamics.com/wp-content/uploads/2026/01/atlas-spec-sheet.pdf",
+            "https://bostondynamics.com/news/boston-dynamics-expands-collaboration-with-nvidia/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scythe-m52",
+      "manufacturer": "Scythe Robotics",
+      "models": [
+        "M.52",
+        "M52"
+      ],
+      "configuration": "M.52 current published mechanical/sensor specification, with the separately dated 2022 compute reference retained below. Current CPU revision, RAM, disk and battery energy are not established.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "2022 compute reference",
+          "details": "NVIDIA documented Jetson AGX Xavier modules in M.52 in May 2022. That establishes the earlier design, not the processor installed in every later machine.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/scythe-autonomous-lawnmower/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Published connections",
+          "details": "Wi-Fi and 4G LTE; modem and Wi-Fi chipset/bands unspecified. GNSS is a positioning input.",
+          "sources": [
+            "https://scytherobotics.com/meet-m-52"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Current perception array",
+          "details": "Eight HDR cameras, two IMUs, twelve ultrasonic sensors and GNSS.",
+          "sources": [
+            "https://scytherobotics.com/meet-m-52"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric mowing platform",
+          "details": "52-inch side-discharge deck, 1425 lb; maximum autonomous speed 6.5 mph. Published 240 V recharge time is 6–8 hours.",
+          "sources": [
+            "https://scytherobotics.com/meet-m-52"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mapping workflow",
+          "details": "An operator drives each zone boundary before autonomous repeat mowing.",
+          "sources": [
+            "https://scytherobotics.com/meet-m-52"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet operation",
+          "details": "Scythe Sight perception, stored mowing zones, fleet management and software updates.",
+          "sources": [
+            "https://scytherobotics.com/meet-m-52"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoverair-x1",
+      "manufacturer": "Zero Zero Robotics",
+      "models": [
+        "HOVERAir X1"
+      ],
+      "configuration": "Original 125 g X1; not X1 Pro, ProMax, Smart or Aqua. CPU/MCU SKU, RAM and radio silicon are undisclosed by this product specification.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "memory",
+          "component": "Media storage",
+          "details": "16 GB and 32 GB internal-storage versions; this is storage capacity, not RAM.",
+          "sources": [
+            "https://hoverair.com/pages/x1"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning",
+          "details": "Visual-inertial odometry plus downward time-of-flight sensing; this specification does not establish a GNSS receiver.",
+          "sources": [
+            "https://hoverair.com/pages/x1"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera and stabilization",
+          "details": "12 MP stills, 2.7K/30 video; 19 mm-equivalent f/2.4 lens with 90° view. Pitch-axis mechanical gimbal plus electronic stabilization.",
+          "sources": [
+            "https://hoverair.com/pages/x1"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight battery",
+          "details": "1050 mAh, 7.7 V, 8.085 Wh lithium-ion pack; 11.5-minute rated flight time.",
+          "sources": [
+            "https://hoverair.com/pages/x1"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Optional controller accessories",
+          "details": "Beacon and joysticks are supported accessories; listed X1 link range is 50 m. Accessory batteries are separate from the aircraft pack.",
+          "sources": [
+            "https://hoverair.com/pages/x1"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control and media",
+          "details": "Hover X1 mobile app and onboard programmed flight modes; H.264 video and JPEG photos.",
+          "sources": [
+            "https://hoverair.com/pages/x1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gausium-phantas-2026",
+      "manufacturer": "Gausium",
+      "models": [
+        "Gausium Phantas",
+        "Phantas"
+      ],
+      "configuration": "65 kg Phantas configuration shown in the June 2026 brochure. Older 48 kg Phantas specifications are not merged. CPU, RAM, disk, battery capacity and radio bands are undisclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and cleaning perception",
+          "details": "2D LiDAR, depth cameras, RGB camera, drop and collision sensors.",
+          "sources": [
+            "https://gausium.com/specs/phantas/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Cleaning chassis",
+          "details": "465 mm sweeping/vacuum width, 330 mm scrub width; 11.5 L fresh and 10.5 L waste tanks, 6 L dust bag and 1 L debris tray.",
+          "sources": [
+            "https://gausium.com/specs/phantas/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Runtime and charging",
+          "details": "Scrub/vacuum up to 4.5 hours, sweep six hours, dust-mop ten hours; recharge approximately two hours.",
+          "sources": [
+            "https://gausium.com/specs/phantas/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Service accessories",
+          "details": "Optional workstation automates charging and water handling; mobile water tank optional. Smart handle changes manual/automatic mode.",
+          "sources": [
+            "https://gausium.com/wp-content/uploads/2022/10/EN_Brochure_Phantas-Extra_260616.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Cleaning behavior",
+          "details": "Visual floor recognition adjusts brush height; object classification guides avoidance. Spot cleaning is an OTA-enabled feature in the brochure.",
+          "sources": [
+            "https://gausium.com/wp-content/uploads/2022/10/EN_Brochure_Phantas-Extra_260616.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gausium-scrubber50-v42",
+      "manufacturer": "Gausium",
+      "models": [
+        "Gausium Scrubber 50",
+        "Scrubber 50"
+      ],
+      "configuration": "Scrubber 50 V4.2 brochure configuration: separate disc and roller brush builds. CPU, RAM, storage and wireless silicon/bands are undisclosed; do not substitute older V4.1 measurements.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and cleaning perception",
+          "details": "2D LiDAR, depth and RGB cameras, collision sensing; individual sensor models are unspecified.",
+          "sources": [
+            "https://gausium.com/wp-content/uploads/2022/04/EN_Brochure_Scrubber-50-V4.2_250513.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electrical system",
+          "details": "24 VDC, 60 Ah lithium iron phosphate battery; about two-hour charging.",
+          "sources": [
+            "https://gausium.com/fr/specs/scrubber50/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Brush variants",
+          "details": "Disc: 157 kg, 460 mm width, 25 kg brush pressure. Roller: 148 kg, 406 mm width or 780 mm with side brushes, 18 kg pressure.",
+          "sources": [
+            "https://gausium.com/wp-content/uploads/2022/04/EN_Brochure_Scrubber-50-V4.2_250513.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Service hardware",
+          "details": "30 L clean / 24 L waste tanks and multi-stage water recycling; quick-release filter and squeegee assemblies. Automatic water/charging workstation is optional.",
+          "sources": [
+            "https://gausium.com/wp-content/uploads/2022/04/EN_Brochure_Scrubber-50-V4.2_250513.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Cleaning control",
+          "details": "Autonomous obstacle-aware routes and RGB-guided spot cleaning; scrubbing, sweeping and dust-mopping modes.",
+          "sources": [
+            "https://gausium.com/wp-content/uploads/2022/04/EN_Brochure_Scrubber-50-V4.2_250513.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diligent-moxi-xavier",
+      "manufacturer": "Diligent Robotics",
+      "models": [
+        "Moxi",
+        "Moxi 1.0"
+      ],
+      "configuration": "Deployed Moxi described by NVIDIA in August 2025, before the Moxi 2.0 announcement. Xavier module subtype, RAM, disk, radio and battery capacity are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard AI computer",
+          "details": "NVIDIA Jetson Xavier modules run a distilled vision-language model. The source does not identify AGX versus NX or installed RAM.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/2-million-robotics-developers/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision and manipulation",
+          "details": "Camera inputs support semantic scene understanding and depth estimation; robot arm operates doors and elevator buttons.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/2-million-robotics-developers/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Autonomous charging",
+          "details": "Mobile base returns to charging docks; battery chemistry and energy are not specified.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/2-million-robotics-developers/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Secure delivery",
+          "details": "Staff badge access unlocks the cargo container; staff can request delivery through an app.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/2-million-robotics-developers/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Hospital workflows",
+          "details": "Delivery routing and recorded handoff identities; Isaac Sim used for development of manipulation behavior.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/2-million-robotics-developers/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diligent-moxi2-thor",
+      "manufacturer": "Diligent Robotics",
+      "models": [
+        "Moxi 2.0"
+      ],
+      "configuration": "Moxi 2.0 as announced October 28, 2025. Announcement-stage configuration; deployment status and full production bill of materials are not established by this source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Thor generation",
+          "details": "Manufacturer identifies NVIDIA Thor for Moxi 2.0 and describes early adoption of IGX Thor. Exact board configuration, RAM and storage are not disclosed.",
+          "sources": [
+            "https://www.diligentrobots.com/blog/moxi2-0"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Reworked service access",
+          "details": "Revised handles and servicing panels are part of the announced hardware redesign.",
+          "sources": [
+            "https://www.diligentrobots.com/blog/moxi2-0"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy stack",
+          "details": "Diligent describes a developing end-to-end action model for predictive indoor navigation and manipulation. Training-corpus size is not onboard storage capacity.",
+          "sources": [
+            "https://www.diligentrobots.com/blog/moxi2-0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dexmate-vega1-pro",
+      "manufacturer": "Dexmate",
+      "models": [
+        "Vega 1 Pro",
+        "Vega"
+      ],
+      "configuration": "Current mobile Vega 1 Pro. Earlier Vega was reported with AGX Orin in August 2025; this is a Thor reference configuration, not a retrospective assignment. RAM, SSD and wireless modules are unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Current onboard module",
+          "details": "NVIDIA Jetson AGX Thor; the earlier NVIDIA Vega report identified AGX Orin, demonstrating a hardware revision.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-pro",
+            "https://blogs.nvidia.com/blog/2-million-robotics-developers/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Head and base",
+          "details": "Stereo RGB head camera; front/rear LiDAR and four RGB base cameras. Optional force/torque add-on for arm compliance.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-pro"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mobile manipulation",
+          "details": "24 degrees of freedom: two seven-axis arms, three-axis torso/head and four base axes. 135 kg; battery operation rated 20 hours; pack energy unspecified.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-pro"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Exposed connections",
+          "details": "Two USB-A, two USB-C, 5GbE Ethernet and DisplayPort; published tool interface accepts separately purchased end effectors.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-pro"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Developer platform",
+          "details": "Python, C++ and Rust APIs, URDF/USD simulation assets, fleet management and VR/exoskeleton teleoperation. Task autonomy is not bundled.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-pro"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dexmate-vega1-u",
+      "manufacturer": "Dexmate",
+      "models": [
+        "Vega 1 U",
+        "Vega U"
+      ],
+      "configuration": "Current Vega 1 U stationary upper-body configuration. No mobile base, powered torso or onboard battery. RAM, storage and wireless hardware are unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard module",
+          "details": "NVIDIA Jetson Orin Nano; do not import the mobile Vega 1 Pro’s AGX Thor specification.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-u"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision",
+          "details": "Stereo RGB/depth sensing and point-cloud output from the three-axis head; optional force/torque add-on.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-u"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Arm and mounting assembly",
+          "details": "17 powered axes: two seven-axis arms and three-axis head. Corded power, manual stand-height adjustment; about 5 kg payload per arm.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-u"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "External connections",
+          "details": "One USB-A, one USB-C, Ethernet and DisplayPort. Third-party tool mounting interface; end effectors ordered separately.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-u"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Development tools",
+          "details": "Python/C++/Rust SDK, URDF/USD models, fleet management and VR/exoskeleton operation.",
+          "sources": [
+            "https://www.dexmate.com/product/vega-1-u"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relay-delivery-current",
+      "manufacturer": "Relay Robotics",
+      "models": [
+        "Relay"
+      ],
+      "configuration": "Current Relay delivery-platform reference; early Savioke Relay revisions are not assigned these measurements. Processor, memory, radio bands and battery capacity are unpublished on this source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation hardware",
+          "details": "Cameras, LiDAR and safety sensors build a changing environment map; sensor part numbers are unspecified.",
+          "sources": [
+            "https://relayrobotics.com/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging system",
+          "details": "Battery monitoring and autonomous dock return; charging dock supplied. Continuous availability is not a single-charge endurance specification.",
+          "sources": [
+            "https://relayrobotics.com/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cargo and buildings",
+          "details": "10-gallon compartment with configurable bins; no active refrigeration/heating specified. Installed elevator interfaces call cars and select floors.",
+          "sources": [
+            "https://relayrobotics.com/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Delivery control",
+          "details": "Authenticated handoffs, live delivery maps, delivery history and autonomous routing through configured doors and elevators.",
+          "sources": [
+            "https://relayrobotics.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "richtech-adam",
+      "manufacturer": "Richtech Robotics",
+      "models": [
+        "ADAM"
+      ],
+      "configuration": "ADAM is a configurable fixed beverage-service system. Sources document different compute revisions: AGX Orin in December 2025 and Thor in a June 2026 installation. RAM, disk and wireless hardware are unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Documented compute revisions",
+          "details": "NVIDIA’s December 2025 report specifies Jetson AGX Orin. Richtech’s June 2026 livestream unit uses Jetson Thor. Neither source establishes one module for every ADAM.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/adam-robot-vegas-golden-knights-thor/",
+            "https://ir.richtechrobotics.com/news-releases/news-release-details/richtech-robotics-launches-interactive-livestream-featuring-ai"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Visual feedback",
+          "details": "Cameras provide object and liquid-level perception and workspace calibration; camera module identities are not disclosed.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/adam-robot-vegas-golden-knights-thor/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Manipulator and supply",
+          "details": "Two six-axis arms; approximately 5 kg payload per arm. Product page lists AC supply and 540 W, without input voltage.",
+          "sources": [
+            "https://ir.richtechrobotics.com/node/7096/html",
+            "https://richtechrobotics.com/solutions/adam"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Workstation",
+          "details": "Site-configured beverage equipment integration; two-arm mixing, pouring and serving.",
+          "sources": [
+            "https://richtechrobotics.com/solutions/adam"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Perception software",
+          "details": "The 2025 NVIDIA configuration uses Isaac ROS 2 libraries, TAO Toolkit and TensorRT; Isaac Sim supports workstation simulation.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/adam-robot-vegas-golden-knights-thor/"
+          ]
+        }
+      ]
     }
   ]
 }

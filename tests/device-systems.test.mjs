@@ -316,3 +316,25 @@ test('security, education and aircraft profiles keep host hardware and revisions
  assert.match(text(system('Ava Robotics','Ava').sections.power),/seven hours/);
  assert.equal(profileIds(system('Ava Robotics','Ava Mobile Base')).length,0);
 });
+
+
+test('electric and service robot revisions keep their processor and power boundaries',()=>{
+ const atlas=system('Boston Dynamics','Atlas');
+ assert.match(text(atlas.sections.compute),/Jetson Thor/);
+ assert.match(atlas.configurations[0].configuration,/not describe the retired hydraulic/);
+ assert.equal(profileIds(system('Boston Dynamics','Atlas Hydraulic')).length,0);
+ const moxi=system('Diligent Robotics','Moxi'),moxi2=system('Diligent Robotics','Moxi 2.0');
+ assert.match(text(moxi.sections.compute),/Xavier/);
+ assert.doesNotMatch(text(moxi.sections.compute),/Thor/);
+ assert.match(text(moxi2.sections.compute),/Thor/);
+ const pro=system('Dexmate','Vega 1 Pro'),upper=system('Dexmate','Vega 1 U');
+ assert.match(text(pro.sections.compute),/AGX Thor/);
+ assert.match(text(upper.sections.compute),/Orin Nano/);
+ assert.match(upper.configurations[0].configuration,/No mobile base/);
+ assert.match(text(upper.sections.power),/Corded/);
+ assert.match(system('Gausium','Phantas').configurations[0].configuration,/65 kg/);
+ assert.doesNotMatch(text(system('Gausium','Phantas').sections.power.facts.map(f=>f.details)),/48 kg/);
+ assert.equal(profileIds(system('Zero Zero Robotics','HOVERAir X1 Pro')).length,0);
+ assert.match(text(system('Scythe Robotics','M.52').sections.compute),/May 2022/);
+ assert.equal(system('Relay Robotics','Relay').sections.compute.status,'not-established');
+});
