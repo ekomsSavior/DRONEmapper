@@ -22147,8 +22147,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "brinc-guardian",
+            "configuration": "Guardian airframe and documented station integration. CPU/RAM, modem SKUs and battery energy remain undisclosed. Station payload storage is not onboard aircraft storage.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -22162,28 +22168,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "BRINC Connect 2.0",
+                "details": "Local mesh, dual-SIM 5G/LTE and satellite communication paths.",
+                "sources": [
+                  "https://brincdrones.com/guardian/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-guardian",
+                "configuration": "Guardian airframe and documented station integration. CPU/RAM, modem SKUs and battery energy remain undisclosed. Station payload storage is not onboard aircraft storage.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging",
+                "details": "Dual 4K visible cameras and dual 1280-pixel thermal cameras; exact thermal height/chip unspecified. Integrated laser rangefinder.",
+                "sources": [
+                  "https://brincdrones.com/guardian/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-guardian",
+                "configuration": "Guardian airframe and documented station integration. CPU/RAM, modem SKUs and battery energy remain undisclosed. Station payload storage is not onboard aircraft storage.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation and traffic",
+                "details": "Dual RTK GNSS, obstacle radars, four visual cameras and downward LiDAR. ADS-B receiver is traffic reception, not ADS-B Out.",
+                "sources": [
+                  "https://brincdrones.com/guardian/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-guardian",
+                "configuration": "Guardian airframe and documented station integration. CPU/RAM, modem SKUs and battery energy remain undisclosed. Station payload storage is not onboard aircraft storage.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and airframe",
+                "details": "Hot-swappable batteries and folding arms; automated battery exchange with Guardian Station.",
+                "sources": [
+                  "https://brincdrones.com/guardian/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-guardian",
+                "configuration": "Guardian airframe and documented station integration. CPU/RAM, modem SKUs and battery energy remain undisclosed. Station payload storage is not onboard aircraft storage.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload and audio",
+                "details": "Integrated spotlight, parachute, siren and loudspeaker; 10 lb payload capacity. Station supports robotic payload loading.",
+                "sources": [
+                  "https://brincdrones.com/guardian/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-guardian",
+                "configuration": "Guardian airframe and documented station integration. CPU/RAM, modem SKUs and battery energy remain undisclosed. Station payload storage is not onboard aircraft storage.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operations integration",
+                "details": "BRINC LiveOps with documented dispatch, call-handling and RTCC integrations.",
+                "sources": [
+                  "https://brincdrones.com/guardian/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-guardian",
+                "configuration": "Guardian airframe and documented station integration. CPU/RAM, modem SKUs and battery energy remain undisclosed. Station payload storage is not onboard aircraft storage.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -22199,11 +22282,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -22247,8 +22325,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "brinc-lemur2",
+            "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -22262,28 +22346,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Mesh and cellular",
+                "details": "2.10–2.50 GHz configurable control link with AES-256; mesh-compatible radios and 4G LTE video to LiveOps.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging",
+                "details": "13 MP visible camera on a single-axis gimbal; FLIR Lepton thermal sensor, 160×120 at 7 Hz.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Autonomy sensors",
+                "details": "Forward LiDAR, two forward tracking cameras, downward LiDAR altimeter and redundant IMUs.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "97.2 Wh; 10.8 V nominal, 12.6 V maximum. Published maximum flight time is 20 minutes.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Audio and attachments",
+                "details": "Front microphone and speaker for two-way audio; optional payload dropper rated 1 lb.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mapping output",
+                "details": "2D floor plans on BRINC Controller or LiveOps; 3D display through LiveOps.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -22299,11 +22460,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -22347,13 +22503,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "brinc-responder",
+            "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard autonomy computer",
+                "details": "Onboard processing supports obstacle avoidance and automated nest landings; silicon SKU is unspecified.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -22362,28 +22537,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Communications",
+                "details": "4G LTE teleoperation plus mesh networking and local pilot handover.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging payload",
+                "details": "Dual visible cameras on a three-axis gimbal; LWIR thermal imaging with 640-pixel published width. Sensor height and chip model are unspecified.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "RTK GNSS and visual-inertial odometry; forward obstacle avoidance.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight platform",
+                "details": "Battery-powered folding quadrotor; up to 42 minutes stated flight time.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Audio and attachments",
+                "details": "Two-way audio, attachment rail and optional parachute, spotlight or payload dropper.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "LiveOps",
+                "details": "Browser-based teleoperation, video, fleet access and evidence storage; station-based dispatch integration.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -22397,13 +22649,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -22598,8 +22844,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "brinc-lemur2",
+            "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -22613,28 +22865,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Mesh and cellular",
+                "details": "2.10–2.50 GHz configurable control link with AES-256; mesh-compatible radios and 4G LTE video to LiveOps.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging",
+                "details": "13 MP visible camera on a single-axis gimbal; FLIR Lepton thermal sensor, 160×120 at 7 Hz.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Autonomy sensors",
+                "details": "Forward LiDAR, two forward tracking cameras, downward LiDAR altimeter and redundant IMUs.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "97.2 Wh; 10.8 V nominal, 12.6 V maximum. Published maximum flight time is 20 minutes.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Audio and attachments",
+                "details": "Front microphone and speaker for two-way audio; optional payload dropper rated 1 lb.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mapping output",
+                "details": "2D floor plans on BRINC Controller or LiveOps; 3D display through LiveOps.",
+                "sources": [
+                  "https://brincdrones.com/lemur-2/specifications/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-lemur2",
+                "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -22658,12 +22987,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -23866,13 +24190,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "brinc-responder",
+            "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard autonomy computer",
+                "details": "Onboard processing supports obstacle avoidance and automated nest landings; silicon SKU is unspecified.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -23881,28 +24224,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Communications",
+                "details": "4G LTE teleoperation plus mesh networking and local pilot handover.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging payload",
+                "details": "Dual visible cameras on a three-axis gimbal; LWIR thermal imaging with 640-pixel published width. Sensor height and chip model are unspecified.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "RTK GNSS and visual-inertial odometry; forward obstacle avoidance.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight platform",
+                "details": "Battery-powered folding quadrotor; up to 42 minutes stated flight time.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Audio and attachments",
+                "details": "Two-way audio, attachment rail and optional parachute, spotlight or payload dropper.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "LiveOps",
+                "details": "Browser-based teleoperation, video, fleet access and evidence storage; station-based dispatch integration.",
+                "sources": [
+                  "https://brincdrones.com/responder/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brinc-responder",
+                "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -23925,13 +24345,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -24696,13 +25110,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "carbon-laserweeder-2022",
+            "configuration": "2022 commercial tractor-mounted LaserWeeder. The 2021 self-propelled demonstrator and G2 modules have different hardware. CPU/GPU SKUs and memory are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Vision processing",
+                "details": "Onboard NVIDIA GPU processing runs crop/weed computer vision; exact GPU model is not named.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeding-technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-2022",
+                "configuration": "2022 commercial tractor-mounted LaserWeeder. The 2021 self-propelled demonstrator and G2 modules have different hardware. CPU/GPU SKUs and memory are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -24716,23 +25149,76 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging and illumination",
+                "details": "42 high-resolution cameras and nine LED light bars.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-2022",
+                "configuration": "2022 commercial tractor-mounted LaserWeeder. The 2021 self-propelled demonstrator and G2 modules have different hardware. CPU/GPU SKUs and memory are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Implement power",
+                "details": "Front PTO generator; CAT 3 three-point tractor hitch. This implement is not a self-propelled robot.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-2022",
+                "configuration": "2022 commercial tractor-mounted LaserWeeder. The 2021 self-propelled demonstrator and G2 modules have different hardware. CPU/GPU SKUs and memory are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Weeding actuators",
+                "details": "30 × 150 W lasers. The 2022 manufacturer datasheet identifies CO₂ at 10.6 μm; the current product page instead says diode. Laser type is conflicting in the published sources.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder",
+                  "https://carbonrobotics.com/s/CarbonRobotics_2022LaserWeeder_OnePager_v3_220817_digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-2022",
+                "configuration": "2022 commercial tractor-mounted LaserWeeder. The 2021 self-propelled demonstrator and G2 modules have different hardware. CPU/GPU SKUs and memory are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operator and cloud tools",
+                "details": "iPad operator application, Carbon Ops Center and Carbon Companion monitoring app.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-2022",
+                "configuration": "2022 commercial tractor-mounted LaserWeeder. The 2021 self-propelled demonstrator and G2 modules have different hardware. CPU/GPU SKUs and memory are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -24746,13 +25232,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -24794,13 +25275,33 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "carbon-laserweeder-g2600",
+            "configuration": "G2 600 twelve-module tractor implement. Other G2 widths have different module counts. CPU/GPU SKUs and memory capacities are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Distributed GPU processing",
+                "details": "Two NVIDIA GPUs per weeding module; twelve modules on G2 600. The sources do not identify a Jetson generation.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder-g2-600",
+                  "https://carbonrobotics.com/laserweeder-g2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-g2600",
+                "configuration": "G2 600 twelve-module tractor implement. Other G2 widths have different module counts. CPU/GPU SKUs and memory capacities are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -24809,28 +25310,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Field connectivity",
+                "details": "Satellite Internet and LTE connectivity; exact modem, bands and satellite terminal are not specified.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder-g2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-g2600",
+                "configuration": "G2 600 twelve-module tractor implement. Other G2 widths have different module counts. CPU/GPU SKUs and memory capacities are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Cameras and lighting",
+                "details": "36 high-resolution cameras and 240 LED bed lights.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder-g2-600"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-g2600",
+                "configuration": "G2 600 twelve-module tractor implement. Other G2 widths have different module counts. CPU/GPU SKUs and memory capacities are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Power and cooling",
+                "details": "Front PTO generator and tractor hitch; liquid-cooled modules with laser chiller. Minimum rated PTO power is 100 hp.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder-g2-600",
+                  "https://carbonrobotics.com/laserweeder-g2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-g2600",
+                "configuration": "G2 600 twelve-module tractor implement. Other G2 widths have different module counts. CPU/GPU SKUs and memory capacities are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Weeding modules",
+                "details": "24 × 240 W diode lasers in twelve modules.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder-g2-600"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-g2600",
+                "configuration": "G2 600 twelve-module tractor implement. Other G2 widths have different module counts. CPU/GPU SKUs and memory capacities are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operator and monitoring tools",
+                "details": "iPad operator application, Carbon Ops Center and Carbon Companion.",
+                "sources": [
+                  "https://carbonrobotics.com/laserweeder-g2-600"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "carbon-laserweeder-g2600",
+                "configuration": "G2 600 twelve-module tractor implement. Other G2 widths have different module counts. CPU/GPU SKUs and memory capacities are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -24844,13 +25411,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -28634,8 +29195,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "delair-ux11-rgb",
+            "configuration": "UX11 RGB mapping configuration. Camera internals are proprietary; CPU/RAM and battery capacity are not established. UX11 IR payloads are separate.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -28644,13 +29211,38 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Onboard flight storage",
+                "details": "SSD holds images, autopilot logs and GNSS data in per-flight folders. Capacity is not specified.",
+                "sources": [
+                  "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/delair-ux11-frequently-asked-questions/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "delair-ux11-rgb",
+                "configuration": "UX11 RGB mapping configuration. Camera internals are proprietary; CPU/RAM and battery capacity are not established. UX11 IR payloads are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Communications",
+                "details": "3G/4G cellular and optional Delair Link radio; AES-128 listed for the radio path. Cellular service depends on network coverage.",
+                "sources": [
+                  "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "delair-ux11-rgb",
+                "configuration": "UX11 RGB mapping configuration. Camera internals are proprietary; CPU/RAM and battery capacity are not established. UX11 IR payloads are separate.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Published model communications",
                 "details": "Flight-log retrieval from operator devices; logs require interpretation before any map import.",
@@ -28663,13 +29255,52 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "GNSS board",
+                "details": "Septentrio AsteRx-m2 UAS, configured for GPS/GLONASS L1/L2 and PPK processing.",
+                "sources": [
+                  "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/delair-ux11-frequently-asked-questions/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "delair-ux11-rgb",
+                "configuration": "UX11 RGB mapping configuration. Camera internals are proprietary; CPU/RAM and battery capacity are not established. UX11 IR payloads are separate.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Mapping camera",
+                "details": "21.4 MP industrial CMOS with global shutter; integrated proprietary imaging hardware, not an interchangeable off-the-shelf camera.",
+                "sources": [
+                  "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/",
+                  "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/delair-ux11-frequently-asked-questions/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "delair-ux11-rgb",
+                "configuration": "UX11 RGB mapping configuration. Camera internals are proprietary; CPU/RAM and battery capacity are not established. UX11 IR payloads are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Fixed-wing platform",
+                "details": "1.6 kg including payload, 1.2 m wingspan; hand launch and belly landing.",
+                "sources": [
+                  "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "delair-ux11-rgb",
+                "configuration": "UX11 RGB mapping configuration. Camera internals are proprietary; CPU/RAM and battery capacity are not established. UX11 IR payloads are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -28678,8 +29309,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Data pipeline",
+                "details": "Android Delair Flight Deck and desktop Delair After Flight; PPK, image checks and geotagged image exports.",
+                "sources": [
+                  "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/delair-ux11-frequently-asked-questions/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "delair-ux11-rgb",
+                "configuration": "UX11 RGB mapping configuration. Camera internals are proprietary; CPU/RAM and battery capacity are not established. UX11 IR payloads are separate.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -28694,11 +29338,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "sensors",
-          "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -28958,8 +29598,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "deltaquad-evo-enterprise",
+            "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -28973,23 +29619,88 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Enterprise control link",
+                "details": "DeltaQuad Controller link in the 2.4 GHz band; advertised options reach 30 km under suitable conditions.",
+                "sources": [
+                  "https://docs.deltaquad.com/evo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Airspeed and status",
+                "details": "Pitot airspeed sensing and onboard OLED status display.",
+                "sources": [
+                  "https://docs.deltaquad.com/evo/flight/pre-flight-checks"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery configuration",
+                "details": "Six-cell, 22 Ah semi-solid lithium-ion packs. One- and two-battery loadouts have different payload allowances.",
+                "sources": [
+                  "https://docs.deltaquad.com/evo/vehicle-specifications"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "VTOL airframe",
+                "details": "269 cm wingspan; separate lift motors and pusher motor, elevons and retractable landing gear. Maximum takeoff mass 10 kg.",
+                "sources": [
+                  "https://docs.deltaquad.com/evo/vehicle-specifications",
+                  "https://docs.deltaquad.com/evo/flight/pre-flight-checks"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular payload architecture",
+                "details": "Dual-payload architecture with open integration interface. Published options include Sony RGB cameras, RedEdge-P and stabilized visible/thermal gimbals; fit depends on configuration.",
+                "sources": [
+                  "https://www.deltaquad.com/products/evo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -29010,10 +29721,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -29139,8 +29846,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "deltaquad-evo-enterprise",
+            "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -29154,23 +29867,88 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Enterprise control link",
+                "details": "DeltaQuad Controller link in the 2.4 GHz band; advertised options reach 30 km under suitable conditions.",
+                "sources": [
+                  "https://docs.deltaquad.com/evo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Airspeed and status",
+                "details": "Pitot airspeed sensing and onboard OLED status display.",
+                "sources": [
+                  "https://docs.deltaquad.com/evo/flight/pre-flight-checks"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery configuration",
+                "details": "Six-cell, 22 Ah semi-solid lithium-ion packs. One- and two-battery loadouts have different payload allowances.",
+                "sources": [
+                  "https://docs.deltaquad.com/evo/vehicle-specifications"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "VTOL airframe",
+                "details": "269 cm wingspan; separate lift motors and pusher motor, elevons and retractable landing gear. Maximum takeoff mass 10 kg.",
+                "sources": [
+                  "https://docs.deltaquad.com/evo/vehicle-specifications",
+                  "https://docs.deltaquad.com/evo/flight/pre-flight-checks"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular payload architecture",
+                "details": "Dual-payload architecture with open integration interface. Published options include Sony RGB cameras, RedEdge-P and stabilized visible/thermal gimbals; fit depends on configuration.",
+                "sources": [
+                  "https://www.deltaquad.com/products/evo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deltaquad-evo-enterprise",
+                "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -29200,10 +29978,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -52896,13 +53670,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "engineered-arts-ameca-26",
+            "configuration": "Full-size Ameca, generation 2.6 (2024) in the current specifications. This is not the desktop model. CPU, GPU, RAM and storage part numbers are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Embedded robot PC",
+                "details": "Embedded PC in the lower body; the manufacturer does not identify its processor SKU.",
+                "sources": [
+                  "https://engineeredarts.com/tritium/robots/ameca"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineered-arts-ameca-26",
+                "configuration": "Full-size Ameca, generation 2.6 (2024) in the current specifications. This is not the desktop model. CPU, GPU, RAM and storage part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -52911,28 +53704,106 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless status",
+                "details": "The full-size specification still marks Wi-Fi as forthcoming. Desktop Wi-Fi support is not assigned to this model.",
+                "sources": [
+                  "https://engineeredarts.com/tritium/robots/ameca/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineered-arts-ameca-26",
+                "configuration": "Full-size Ameca, generation 2.6 (2024) in the current specifications. This is not the desktop model. CPU, GPU, RAM and storage part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and audio",
+                "details": "Two eye-mounted 8 MP cameras; two ear microphones and a four-channel chest microphone; 20 W chest speaker.",
+                "sources": [
+                  "https://engineeredarts.com/tritium/robots/ameca/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineered-arts-ameca-26",
+                "configuration": "Full-size Ameca, generation 2.6 (2024) in the current specifications. This is not the desktop model. CPU, GPU, RAM and storage part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Safety sensing",
+                "details": "360° LiDAR safety coverage.",
+                "sources": [
+                  "https://engineeredarts.com/tritium/robots/ameca/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineered-arts-ameca-26",
+                "configuration": "Full-size Ameca, generation 2.6 (2024) in the current specifications. This is not the desktop model. CPU, GPU, RAM and storage part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Actuation and power",
+                "details": "61 actuated degrees of freedom. Two 24 V DC / 200 W supplies; mains input 110–240 V AC, 50/60 Hz.",
+                "sources": [
+                  "https://engineeredarts.com/tritium/robots/ameca/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineered-arts-ameca-26",
+                "configuration": "Full-size Ameca, generation 2.6 (2024) in the current specifications. This is not the desktop model. CPU, GPU, RAM and storage part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Physical connections",
+                "details": "RJ45 Ethernet, two Thunderbolt ports and two USB ports; 3.5 mm audio output.",
+                "sources": [
+                  "https://engineeredarts.com/tritium/robots/ameca",
+                  "https://engineeredarts.com/tritium/robots/ameca/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineered-arts-ameca-26",
+                "configuration": "Full-size Ameca, generation 2.6 (2024) in the current specifications. This is not the desktop model. CPU, GPU, RAM and storage part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Tritium platform",
+                "details": "Tritium robotOS and Tritium AI; REST/WebSocket interfaces and Python/Node.js SDKs.",
+                "sources": [
+                  "https://engineeredarts.com/tritium/robots/ameca/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineered-arts-ameca-26",
+                "configuration": "Full-size Ameca, generation 2.6 (2024) in the current specifications. This is not the desktop model. CPU, GPU, RAM and storage part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -52946,13 +53817,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -120675,8 +121540,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "wingtraone-gen2",
+            "configuration": "WingtraOne GEN II reference configuration. Aircraft CPU/RAM are not disclosed. Interchangeable camera/LiDAR payloads and the Samsung control tablet have separate hardware.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -120690,28 +121561,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Telemetry 2.4",
+                "details": "2.4016–2.4776 GHz GFSK with frequency hopping, 76 channels and 57.6 kb/s typical data rate.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraone-gen2",
+                "configuration": "WingtraOne GEN II reference configuration. Aircraft CPU/RAM are not disclosed. Interchangeable camera/LiDAR payloads and the Samsung control tablet have separate hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Redundant GPS/GLONASS L1/L2 plus Galileo/BeiDou L1 positioning.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraone-gen2",
+                "configuration": "WingtraOne GEN II reference configuration. Aircraft CPU/RAM are not disclosed. Interchangeable camera/LiDAR payloads and the Samsung control tablet have separate hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery 2 packs",
+                "details": "Two 99 Wh packs, each 14.4 V nominal; Samsung INR18650-25R cells in 4S3P. Battery model 10.00342.02.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraone-gen2",
+                "configuration": "WingtraOne GEN II reference configuration. Aircraft CPU/RAM are not disclosed. Interchangeable camera/LiDAR payloads and the Samsung control tablet have separate hardware.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Airframe",
+                "details": "Tailsitter VTOL; 4.8 kg maximum takeoff mass and 800 g payload capacity.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraone-gen2",
+                "configuration": "WingtraOne GEN II reference configuration. Aircraft CPU/RAM are not disclosed. Interchangeable camera/LiDAR payloads and the Samsung control tablet have separate hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Interchangeable payloads",
+                "details": "RGB61, Sony a6100/oblique a6100, RedEdge-P and LiDAR configurations. Payloads are alternatives, not simultaneous standard equipment.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraone-gen2",
+                "configuration": "WingtraOne GEN II reference configuration. Aircraft CPU/RAM are not disclosed. Interchangeable camera/LiDAR payloads and the Samsung control tablet have separate hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight control workflow",
+                "details": "WingtraPilot mission software; the supplied Galaxy Tab Active 3 is a separate ground-control device.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraone-gen2",
+                "configuration": "WingtraOne GEN II reference configuration. Aircraft CPU/RAM are not disclosed. Interchangeable camera/LiDAR payloads and the Samsung control tablet have separate hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -120735,12 +121683,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -120812,8 +121755,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "wingtraray",
+            "configuration": "July 2026 specifications, version 2.9. Aircraft processor and memory are undisclosed. Tablet processors, interchangeable payloads and parachute add-on are separate components.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -120827,8 +121776,20 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Telemetry and optional parachute link",
+                "details": "2.4016–2.4776 GHz, FHSS/GFSK, 76 channels, 57.6 kb/s. Optional parachute trigger uses 868 or 915 MHz by region.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraray",
+                "configuration": "July 2026 specifications, version 2.9. Aircraft processor and memory are undisclosed. Tablet processors, interchangeable payloads and parachute add-on are separate components.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Published model communications",
                 "details": "Tablet mission workflow; post-flight cloud or customer processing. No RF signature is inferred.",
@@ -120841,23 +121802,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and avoidance",
+                "details": "Redundant multi-constellation GNSS; forward 60–64 GHz radar with 12 virtual antennas, where regionally enabled.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraray",
+                "configuration": "July 2026 specifications, version 2.9. Aircraft processor and memory are undisclosed. Tablet processors, interchangeable payloads and parachute add-on are separate components.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Optional LiDAR payload",
+                "details": "Hesai XT32M2X, 905 nm; Inertial Labs IMU-P. This is a mapping payload, separate from the obstacle radar.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraray",
+                "configuration": "July 2026 specifications, version 2.9. Aircraft processor and memory are undisclosed. Tablet processors, interchangeable payloads and parachute add-on are separate components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "WRB01 batteries",
+                "details": "Two 99 Wh, 30.8 V nominal, 8S lithium-polymer packs are required as a pair.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraray",
+                "configuration": "July 2026 specifications, version 2.9. Aircraft processor and memory are undisclosed. Tablet processors, interchangeable payloads and parachute add-on are separate components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Camera alternatives",
+                "details": "MAP61: 61 MP/17 mm; SURVEY61: 61 MP/35 mm leaf shutter; INSPECT: 61 MP/85 mm; SURVEY24: APS-C/20 mm. RedEdge-P multispectral option.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraray",
+                "configuration": "July 2026 specifications, version 2.9. Aircraft processor and memory are undisclosed. Tablet processors, interchangeable payloads and parachute add-on are separate components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Survey workflow",
+                "details": "Wingtra software provides flight planning, geotagging and cloud survey processing.",
+                "sources": [
+                  "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wingtraray",
+                "configuration": "July 2026 specifications, version 2.9. Aircraft processor and memory are undisclosed. Tablet processors, interchangeable payloads and parachute add-on are separate components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -120881,11 +121906,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -262433,6 +263454,661 @@
             ]
           }
         ]
+      },
+      {
+        "id": "engineered-arts-ameca-26",
+        "manufacturer": "Engineered Arts",
+        "models": [
+          "Ameca",
+          "Ameca Gen 2.6"
+        ],
+        "configuration": "Full-size Ameca, generation 2.6 (2024) in the current specifications. This is not the desktop model. CPU, GPU, RAM and storage part numbers are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Embedded robot PC",
+            "details": "Embedded PC in the lower body; the manufacturer does not identify its processor SKU.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and audio",
+            "details": "Two eye-mounted 8 MP cameras; two ear microphones and a four-channel chest microphone; 20 W chest speaker.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety sensing",
+            "details": "360° LiDAR safety coverage.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Actuation and power",
+            "details": "61 actuated degrees of freedom. Two 24 V DC / 200 W supplies; mains input 110–240 V AC, 50/60 Hz.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Physical connections",
+            "details": "RJ45 Ethernet, two Thunderbolt ports and two USB ports; 3.5 mm audio output.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca",
+              "https://engineeredarts.com/tritium/robots/ameca/specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless status",
+            "details": "The full-size specification still marks Wi-Fi as forthcoming. Desktop Wi-Fi support is not assigned to this model.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca/specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Tritium platform",
+            "details": "Tritium robotOS and Tritium AI; REST/WebSocket interfaces and Python/Node.js SDKs.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "engineered-arts-ameca-desktop3",
+        "manufacturer": "Engineered Arts",
+        "models": [
+          "Ameca Desktop Gen 3"
+        ],
+        "configuration": "Desktop generation 3, released 22 June 2026. CPU, RAM and storage capacities are undisclosed; full-size Ameca components are separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Perception and audio",
+            "details": "Two HD eye cameras plus wide-angle HD chest camera; chest microphone array, 40 W speaker and mmWave radar.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca-desktop/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Actuation and supplies",
+            "details": "32 degrees of freedom: 27 facial and five neck. Two 24 V DC / 200 W power supplies; mains powered.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca-desktop/specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless connection",
+            "details": "Wi-Fi is listed; chipset, bands and antenna identifiers are unspecified.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca-desktop/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Wired interfaces",
+            "details": "RJ45 Ethernet, external USB microphone support and 3.5 mm audio output.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca-desktop/specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control and AI",
+            "details": "Tritium robotOS / Tritium AI; REST, WebSocket, Python and Node.js integration.",
+            "sources": [
+              "https://engineeredarts.com/tritium/robots/ameca-desktop/specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "carbon-laserweeder-2022",
+        "manufacturer": "Carbon Robotics",
+        "models": [
+          "LaserWeeder"
+        ],
+        "configuration": "2022 commercial tractor-mounted LaserWeeder. The 2021 self-propelled demonstrator and G2 modules have different hardware. CPU/GPU SKUs and memory are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Vision processing",
+            "details": "Onboard NVIDIA GPU processing runs crop/weed computer vision; exact GPU model is not named.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeding-technology"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging and illumination",
+            "details": "42 high-resolution cameras and nine LED light bars.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Implement power",
+            "details": "Front PTO generator; CAT 3 three-point tractor hitch. This implement is not a self-propelled robot.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Weeding actuators",
+            "details": "30 × 150 W lasers. The 2022 manufacturer datasheet identifies CO₂ at 10.6 μm; the current product page instead says diode. Laser type is conflicting in the published sources.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder",
+              "https://carbonrobotics.com/s/CarbonRobotics_2022LaserWeeder_OnePager_v3_220817_digital.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operator and cloud tools",
+            "details": "iPad operator application, Carbon Ops Center and Carbon Companion monitoring app.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "carbon-laserweeder-g2600",
+        "manufacturer": "Carbon Robotics",
+        "models": [
+          "LaserWeeder G2 600",
+          "LaserWeeder G2"
+        ],
+        "configuration": "G2 600 twelve-module tractor implement. Other G2 widths have different module counts. CPU/GPU SKUs and memory capacities are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Distributed GPU processing",
+            "details": "Two NVIDIA GPUs per weeding module; twelve modules on G2 600. The sources do not identify a Jetson generation.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder-g2-600",
+              "https://carbonrobotics.com/laserweeder-g2"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Cameras and lighting",
+            "details": "36 high-resolution cameras and 240 LED bed lights.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder-g2-600"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Field connectivity",
+            "details": "Satellite Internet and LTE connectivity; exact modem, bands and satellite terminal are not specified.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder-g2"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Power and cooling",
+            "details": "Front PTO generator and tractor hitch; liquid-cooled modules with laser chiller. Minimum rated PTO power is 100 hp.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder-g2-600",
+              "https://carbonrobotics.com/laserweeder-g2"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Weeding modules",
+            "details": "24 × 240 W diode lasers in twelve modules.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder-g2-600"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operator and monitoring tools",
+            "details": "iPad operator application, Carbon Ops Center and Carbon Companion.",
+            "sources": [
+              "https://carbonrobotics.com/laserweeder-g2-600"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "wingtraone-gen2",
+        "manufacturer": "Wingtra",
+        "models": [
+          "WingtraOne Gen II"
+        ],
+        "configuration": "WingtraOne GEN II reference configuration. Aircraft CPU/RAM are not disclosed. Interchangeable camera/LiDAR payloads and the Samsung control tablet have separate hardware.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Telemetry 2.4",
+            "details": "2.4016–2.4776 GHz GFSK with frequency hopping, 76 channels and 57.6 kb/s typical data rate.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery 2 packs",
+            "details": "Two 99 Wh packs, each 14.4 V nominal; Samsung INR18650-25R cells in 4S3P. Battery model 10.00342.02.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Airframe",
+            "details": "Tailsitter VTOL; 4.8 kg maximum takeoff mass and 800 g payload capacity.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Redundant GPS/GLONASS L1/L2 plus Galileo/BeiDou L1 positioning.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Interchangeable payloads",
+            "details": "RGB61, Sony a6100/oblique a6100, RedEdge-P and LiDAR configurations. Payloads are alternatives, not simultaneous standard equipment.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight control workflow",
+            "details": "WingtraPilot mission software; the supplied Galaxy Tab Active 3 is a separate ground-control device.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/Wingtra-Technical-Specifications.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "wingtraray",
+        "manufacturer": "Wingtra",
+        "models": [
+          "WingtraRAY"
+        ],
+        "configuration": "July 2026 specifications, version 2.9. Aircraft processor and memory are undisclosed. Tablet processors, interchangeable payloads and parachute add-on are separate components.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Telemetry and optional parachute link",
+            "details": "2.4016–2.4776 GHz, FHSS/GFSK, 76 channels, 57.6 kb/s. Optional parachute trigger uses 868 or 915 MHz by region.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and avoidance",
+            "details": "Redundant multi-constellation GNSS; forward 60–64 GHz radar with 12 virtual antennas, where regionally enabled.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Optional LiDAR payload",
+            "details": "Hesai XT32M2X, 905 nm; Inertial Labs IMU-P. This is a mapping payload, separate from the obstacle radar.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Camera alternatives",
+            "details": "MAP61: 61 MP/17 mm; SURVEY61: 61 MP/35 mm leaf shutter; INSPECT: 61 MP/85 mm; SURVEY24: APS-C/20 mm. RedEdge-P multispectral option.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "WRB01 batteries",
+            "details": "Two 99 Wh, 30.8 V nominal, 8S lithium-polymer packs are required as a pair.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Survey workflow",
+            "details": "Wingtra software provides flight planning, geotagging and cloud survey processing.",
+            "sources": [
+              "https://wingtra.com/wp-content/uploads/WingtraRAY-Technical-Specifications.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "brinc-lemur2",
+        "manufacturer": "BRINC",
+        "models": [
+          "LEMUR 2",
+          "BRINC LEMUR 2"
+        ],
+        "configuration": "LEMUR 2 reference airframe. CPU/GPU, RAM and radio chipset part numbers are not disclosed. LEMUR S, Responder and Guardian are separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Mesh and cellular",
+            "details": "2.10–2.50 GHz configurable control link with AES-256; mesh-compatible radios and 4G LTE video to LiveOps.",
+            "sources": [
+              "https://brincdrones.com/lemur-2/specifications/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging",
+            "details": "13 MP visible camera on a single-axis gimbal; FLIR Lepton thermal sensor, 160×120 at 7 Hz.",
+            "sources": [
+              "https://brincdrones.com/lemur-2/specifications/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Autonomy sensors",
+            "details": "Forward LiDAR, two forward tracking cameras, downward LiDAR altimeter and redundant IMUs.",
+            "sources": [
+              "https://brincdrones.com/lemur-2/specifications/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "97.2 Wh; 10.8 V nominal, 12.6 V maximum. Published maximum flight time is 20 minutes.",
+            "sources": [
+              "https://brincdrones.com/lemur-2/specifications/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Audio and attachments",
+            "details": "Front microphone and speaker for two-way audio; optional payload dropper rated 1 lb.",
+            "sources": [
+              "https://brincdrones.com/lemur-2/specifications/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mapping output",
+            "details": "2D floor plans on BRINC Controller or LiveOps; 3D display through LiveOps.",
+            "sources": [
+              "https://brincdrones.com/lemur-2/specifications/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "brinc-responder",
+        "manufacturer": "BRINC",
+        "models": [
+          "Responder",
+          "BRINC Responder"
+        ],
+        "configuration": "BRINC Responder. The manufacturer identifies onboard compute but does not name CPU/GPU, RAM, storage or battery capacity. Guardian hardware is not assigned here.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard autonomy computer",
+            "details": "Onboard processing supports obstacle avoidance and automated nest landings; silicon SKU is unspecified.",
+            "sources": [
+              "https://brincdrones.com/responder/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Communications",
+            "details": "4G LTE teleoperation plus mesh networking and local pilot handover.",
+            "sources": [
+              "https://brincdrones.com/responder/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging payload",
+            "details": "Dual visible cameras on a three-axis gimbal; LWIR thermal imaging with 640-pixel published width. Sensor height and chip model are unspecified.",
+            "sources": [
+              "https://brincdrones.com/responder/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "RTK GNSS and visual-inertial odometry; forward obstacle avoidance.",
+            "sources": [
+              "https://brincdrones.com/responder/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight platform",
+            "details": "Battery-powered folding quadrotor; up to 42 minutes stated flight time.",
+            "sources": [
+              "https://brincdrones.com/responder/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Audio and attachments",
+            "details": "Two-way audio, attachment rail and optional parachute, spotlight or payload dropper.",
+            "sources": [
+              "https://brincdrones.com/responder/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "LiveOps",
+            "details": "Browser-based teleoperation, video, fleet access and evidence storage; station-based dispatch integration.",
+            "sources": [
+              "https://brincdrones.com/responder/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "brinc-guardian",
+        "manufacturer": "BRINC",
+        "models": [
+          "BRINC Guardian",
+          "Guardian"
+        ],
+        "configuration": "Guardian airframe and documented station integration. CPU/RAM, modem SKUs and battery energy remain undisclosed. Station payload storage is not onboard aircraft storage.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "BRINC Connect 2.0",
+            "details": "Local mesh, dual-SIM 5G/LTE and satellite communication paths.",
+            "sources": [
+              "https://brincdrones.com/guardian/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging",
+            "details": "Dual 4K visible cameras and dual 1280-pixel thermal cameras; exact thermal height/chip unspecified. Integrated laser rangefinder.",
+            "sources": [
+              "https://brincdrones.com/guardian/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and traffic",
+            "details": "Dual RTK GNSS, obstacle radars, four visual cameras and downward LiDAR. ADS-B receiver is traffic reception, not ADS-B Out.",
+            "sources": [
+              "https://brincdrones.com/guardian/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and airframe",
+            "details": "Hot-swappable batteries and folding arms; automated battery exchange with Guardian Station.",
+            "sources": [
+              "https://brincdrones.com/guardian/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload and audio",
+            "details": "Integrated spotlight, parachute, siren and loudspeaker; 10 lb payload capacity. Station supports robotic payload loading.",
+            "sources": [
+              "https://brincdrones.com/guardian/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operations integration",
+            "details": "BRINC LiveOps with documented dispatch, call-handling and RTCC integrations.",
+            "sources": [
+              "https://brincdrones.com/guardian/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deltaquad-evo-enterprise",
+        "manufacturer": "DeltaQuad",
+        "models": [
+          "DeltaQuad Evo",
+          "Evo",
+          "Evo Enterprise"
+        ],
+        "configuration": "Evo Enterprise edition, operations manual v2.0 (27 June 2024). Tactical/Government/Stealth radios and navigation options are separate. CPU, RAM and flight-controller SKU are not identified by these sources.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Enterprise control link",
+            "details": "DeltaQuad Controller link in the 2.4 GHz band; advertised options reach 30 km under suitable conditions.",
+            "sources": [
+              "https://docs.deltaquad.com/evo"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery configuration",
+            "details": "Six-cell, 22 Ah semi-solid lithium-ion packs. One- and two-battery loadouts have different payload allowances.",
+            "sources": [
+              "https://docs.deltaquad.com/evo/vehicle-specifications"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "VTOL airframe",
+            "details": "269 cm wingspan; separate lift motors and pusher motor, elevons and retractable landing gear. Maximum takeoff mass 10 kg.",
+            "sources": [
+              "https://docs.deltaquad.com/evo/vehicle-specifications",
+              "https://docs.deltaquad.com/evo/flight/pre-flight-checks"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Airspeed and status",
+            "details": "Pitot airspeed sensing and onboard OLED status display.",
+            "sources": [
+              "https://docs.deltaquad.com/evo/flight/pre-flight-checks"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular payload architecture",
+            "details": "Dual-payload architecture with open integration interface. Published options include Sony RGB cameras, RedEdge-P and stabilized visible/thermal gimbals; fit depends on configuration.",
+            "sources": [
+              "https://www.deltaquad.com/products/evo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "delair-ux11-rgb",
+        "manufacturer": "Delair",
+        "models": [
+          "UX11",
+          "Delair UX11"
+        ],
+        "configuration": "UX11 RGB mapping configuration. Camera internals are proprietary; CPU/RAM and battery capacity are not established. UX11 IR payloads are separate.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "GNSS board",
+            "details": "Septentrio AsteRx-m2 UAS, configured for GPS/GLONASS L1/L2 and PPK processing.",
+            "sources": [
+              "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/delair-ux11-frequently-asked-questions/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Mapping camera",
+            "details": "21.4 MP industrial CMOS with global shutter; integrated proprietary imaging hardware, not an interchangeable off-the-shelf camera.",
+            "sources": [
+              "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/",
+              "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/delair-ux11-frequently-asked-questions/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Onboard flight storage",
+            "details": "SSD holds images, autopilot logs and GNSS data in per-flight folders. Capacity is not specified.",
+            "sources": [
+              "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/delair-ux11-frequently-asked-questions/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Communications",
+            "details": "3G/4G cellular and optional Delair Link radio; AES-128 listed for the radio path. Cellular service depends on network coverage.",
+            "sources": [
+              "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Fixed-wing platform",
+            "details": "1.6 kg including payload, 1.2 m wingspan; hand launch and belly landing.",
+            "sources": [
+              "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Data pipeline",
+            "details": "Android Delair Flight Deck and desktop Delair After Flight; PPK, image checks and geotagged image exports.",
+            "sources": [
+              "https://delair.aero/delair-commercial-drones-2/professional-mapping-drone-delair-ux11-2/delair-ux11-frequently-asked-questions/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -262449,8 +264125,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 166,
-    "devices_with_system_profiles": 165,
-    "devices_with_documented_compute": 84
+    "system_profiles": 177,
+    "devices_with_system_profiles": 178,
+    "devices_with_documented_compute": 89
   }
 }

@@ -9,6 +9,37 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('survey drone and robot configurations retain their component boundaries',()=>{
+ const ameca=system('Engineered Arts','Ameca'),desktop=system('Engineered Arts','Ameca Desktop Gen 3');
+ assert.match(text(ameca.sections.radios),/forthcoming/);
+ assert.match(text(desktop.sections.sensors),/mmWave/);
+ assert.doesNotMatch(text(desktop.sections.sensors),/8 MP|360° LiDAR/);
+ assert.equal(profileIds(system('Engineered Arts','Ameca Desktop Gen 2')).length,0);
+ const gen2=system('Wingtra','WingtraOne Gen II'),ray=system('Wingtra','WingtraRAY');
+ assert.match(text(gen2.sections.power),/INR18650-25R/);
+ assert.doesNotMatch(text(ray.sections.power),/INR18650-25R|14.4 V/);
+ assert.match(text(ray.sections.power),/30.8 V/);
+ assert.equal(ray.sections.compute.facts.length,0);
+ assert.doesNotMatch(text(ray.sections.compute),/6490|SnapDragon/);
+ const lemur=system('BRINC','LEMUR 2'),guardian=system('BRINC','BRINC Guardian');
+ assert.match(text(lemur.sections.sensors),/FLIR Lepton/);
+ assert.doesNotMatch(text(guardian.sections.sensors),/FLIR Lepton/);
+ assert.match(text(guardian.sections.sensors),/not ADS-B Out/);
+ assert.equal(profileIds(system('Delair','UX11 IR')).length,0);
+ assert.match(text(system('Delair','UX11').sections.sensors),/AsteRx-m2/);
+ assert.equal(profileIds(system('DeltaQuad','Evo Tactical')).length,0);
+});
+
+test('a specific G2 size never inherits a different module count through its family card',()=>{
+ const models=includeReviewedSystemModels(libraryModels());
+ const g2600=models.find(m=>m.maker==='Carbon Robotics'&&m.name==='LaserWeeder G2 600');
+ assert.ok(g2600);
+ assert.deepEqual(profileIds(systemBreakdown(g2600)),['carbon-laserweeder-g2600']);
+ assert.equal(profileIds(system('Carbon Robotics','LaserWeeder G2 200')).length,0);
+ assert.match(text(system('Carbon Robotics','LaserWeeder').sections.interfaces),/conflicting/);
+ assert.doesNotMatch(text(system('Carbon Robotics','LaserWeeder').sections.sensors),/36 high-resolution/);
+});
+
 test('reviewed models are searchable library references even before map observations',()=>{
  const models=includeReviewedSystemModels(libraryModels());
  const represented=new Set(models.flatMap(m=>profileIds(systemBreakdown(m))));
