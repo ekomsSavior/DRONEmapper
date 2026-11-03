@@ -4025,13 +4025,44 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "agility-digit5-announced",
+            "configuration": "Announced Digit 5; early access planned for first half of 2027. This is not a deployed Digit 4 hardware assignment. RAM, storage capacity and radio modules are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Planned production compute",
+                "details": "October 22, 2026 announcement specifies NVIDIA IGX Thor modules for the general-availability version; transition is forward-looking.",
+                "sources": [
+                  "https://www.agilityrobotics.com/content/agility-robotics-expands-nvidia-collaboration-as-it-prepares-digit-5-for-commercial-scale"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agility-digit5-announced",
+                "configuration": "Announced Digit 5; early access planned for first half of 2027. This is not a deployed Digit 4 hardware assignment. RAM, storage capacity and radio modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Safety controller",
+                "details": "Separate safety controller supervises motion response to nearby people; controller SKU unspecified.",
+                "sources": [
+                  "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agility-digit5-announced",
+                "configuration": "Announced Digit 5; early access planned for first half of 2027. This is not a deployed Digit 4 hardware assignment. RAM, storage capacity and radio modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -4045,23 +4076,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and safety",
+                "details": "Onboard cameras, depth sensing and IMUs; sensory processing occurs locally.",
+                "sources": [
+                  "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agility-digit5-announced",
+                "configuration": "Announced Digit 5; early access planned for first half of 2027. This is not a deployed Digit 4 hardware assignment. RAM, storage capacity and radio modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Body and power system",
+                "details": "129 kg, 1.81 m tall; cycloidal leg actuators and 22.7 kg lifting capacity. Announced 90-minute battery runtime with nine-minute charging.",
+                "sources": [
+                  "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agility-digit5-announced",
+                "configuration": "Announced Digit 5; early access planned for first half of 2027. This is not a deployed Digit 4 hardware assignment. RAM, storage capacity and radio modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Tool connection",
+                "details": "Exchangeable end effectors use ISO-standard mounting flanges; specified reach 2.2 m.",
+                "sources": [
+                  "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agility-digit5-announced",
+                "configuration": "Announced Digit 5; early access planned for first half of 2027. This is not a deployed Digit 4 hardware assignment. RAM, storage capacity and radio modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet connection",
+                "details": "Agility Arc integrates warehouse/manufacturing systems and receives health diagnostics. Vendor specifies mTLS/TLS 1.2+ and encrypted local storage.",
+                "sources": [
+                  "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "agility-digit5-announced",
+                "configuration": "Announced Digit 5; early access planned for first half of 2027. This is not a deployed Digit 4 hardware assignment. RAM, storage capacity and radio modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -4085,13 +4168,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "radios"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -12690,13 +12768,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "apptronik-apollo-first",
+            "configuration": "First Apollo configuration announced August 2023, with January 2025 TI component-family evidence. Exact MCU/CPU SKUs, RAM, storage, radio modules and sensor parts remain unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Motor-control electronics",
+                "details": "Texas Instruments confirms TI microcontrollers, gate drivers and analog components in Apollo’s motor-control system; no chip part numbers are identified.",
+                "sources": [
+                  "https://www.ti.com/zh-tw/about-ti/behind-chip/customer-stories/apptronik.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apptronik-apollo-first",
+                "configuration": "First Apollo configuration announced August 2023, with January 2025 TI component-family evidence. Exact MCU/CPU SKUs, RAM, storage, radio modules and sensor parts remain unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -12715,18 +12812,58 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Actuation and battery",
+                "details": "Custom linear and rotary actuators. Original platform: 160 lb, 55 lb lift; replaceable battery rated four hours.",
+                "sources": [
+                  "https://www.ti.com/zh-tw/about-ti/behind-chip/customer-stories/apptronik.html",
+                  "https://apptronik.com/news-collection/apptronik-unveils-apollo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apptronik-apollo-first",
+                "configuration": "First Apollo configuration announced August 2023, with January 2025 TI component-family evidence. Exact MCU/CPU SKUs, RAM, storage, radio modules and sensor parts remain unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Mechanical configurations",
+                "details": "Biped, wheeled torso or stationary mounting; face/chest status displays.",
+                "sources": [
+                  "https://apptronik.com/news-collection/apptronik-unveils-apollo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apptronik-apollo-first",
+                "configuration": "First Apollo configuration announced August 2023, with January 2025 TI component-family evidence. Exact MCU/CPU SKUs, RAM, storage, radio modules and sensor parts remain unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Motion control",
+                "details": "Force-control architecture designed for work around people; later Apollo 2 software is not assigned to this revision.",
+                "sources": [
+                  "https://apptronik.com/news-collection/apptronik-unveils-apollo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apptronik-apollo-first",
+                "configuration": "First Apollo configuration announced August 2023, with January 2025 TI component-family evidence. Exact MCU/CPU SKUs, RAM, storage, radio modules and sensor parts remain unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -12740,13 +12877,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -12788,8 +12921,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "apptronik-apollo2",
+            "configuration": "Apollo 2 current product description. Processor/controller models, RAM, disk, radio modules, battery capacity and exact perception sensors are not disclosed; Apollo 1 specifications are not inherited.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -12808,23 +12947,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Safety behavior",
+                "details": "Configured proximity/impact zones trigger motion responses; the page does not identify the underlying sensor technology or range.",
+                "sources": [
+                  "https://apptronik.com/apollo/apollo-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apptronik-apollo2",
+                "configuration": "Apollo 2 current product description. Processor/controller models, RAM, disk, radio modules, battery capacity and exact perception sensors are not disclosed; Apollo 1 specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Modular actuation and mobility",
+                "details": "Apptronik actuator system with bipedal or wheeled configurations.",
+                "sources": [
+                  "https://apptronik.com/apollo/apollo-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apptronik-apollo2",
+                "configuration": "Apollo 2 current product description. Processor/controller models, RAM, disk, radio modules, battery capacity and exact perception sensors are not disclosed; Apollo 1 specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Power servicing",
+                "details": "Swappable batteries, opportunity charging and tethered power; single-pack runtime is unspecified.",
+                "sources": [
+                  "https://apptronik.com/apollo/apollo-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apptronik-apollo2",
+                "configuration": "Apollo 2 current product description. Processor/controller models, RAM, disk, radio modules, battery capacity and exact perception sensors are not disclosed; Apollo 1 specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Human interface",
+                "details": "LED mouth, chest status display, microphone/speech interaction and coordinated lighting.",
+                "sources": [
+                  "https://apptronik.com/apollo/apollo-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apptronik-apollo2",
+                "configuration": "Apollo 2 current product description. Processor/controller models, RAM, disk, radio modules, battery capacity and exact perception sensors are not disclosed; Apollo 1 specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Local and fleet software",
+                "details": "Artemis coordinates perception, planning, controls, safety and tasks. Fleet Connect monitors robot health, orchestrates jobs and collects deployment data.",
+                "sources": [
+                  "https://apptronik.com/apollo/apollo-2"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apptronik-apollo2",
+                "configuration": "Apollo 2 current product description. Processor/controller models, RAM, disk, radio modules, battery capacity and exact perception sensors are not disclosed; Apollo 1 specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -12841,10 +13044,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -55272,8 +55471,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "farmdroid-fd20-current",
+            "configuration": "Current 1,250 kg FD20 product configuration. Processor, RAM, communications chipset and installed battery SKU are not established; older 900 kg sheets are not substituted.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -55292,23 +55497,89 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Seed-coordinate navigation",
+                "details": "GNSS RTK positioning with published 8 mm precision; weeding references recorded seed positions rather than camera plant recognition.",
+                "sources": [
+                  "https://farmdroid.com/products/farmdroid-fd20/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "farmdroid-fd20-current",
+                "configuration": "Current 1,250 kg FD20 product configuration. Processor, RAM, communications chipset and installed battery SKU are not established; older 900 kg sheets are not substituted.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Solar and battery supply",
+                "details": "Four photovoltaic panels and two battery packs. FarmDroid distinguishes four AGM batteries through 2020 from two lithium packs from 2021.",
+                "sources": [
+                  "https://farmdroid.com/products/farmdroid-fd20/",
+                  "https://knowledge.farmdroid.io/battery-levels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "farmdroid-fd20-current",
+                "configuration": "Current 1,250 kg FD20 product configuration. Processor, RAM, communications chipset and installed battery SKU are not established; older 900 kg sheets are not substituted.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery manufacturer reference",
+                "details": "FarmDroid links a WS Technicals battery manual, but that general manual does not identify the installed FD20 pack model or capacity.",
+                "sources": [
+                  "https://knowledge.farmdroid.io/batteries-user-manual"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "farmdroid-fd20-current",
+                "configuration": "Current 1,250 kg FD20 product configuration. Processor, RAM, communications chipset and installed battery SKU are not established; older 900 kg sheets are not substituted.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cultivation tools",
+                "details": "Configurable 2–12 row setup, maximum 3.5 m working width; +SEED, +WEED and optional +SPRAY tool configurations.",
+                "sources": [
+                  "https://farmdroid.com/products/farmdroid-fd20/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "farmdroid-fd20-current",
+                "configuration": "Current 1,250 kg FD20 product configuration. Processor, RAM, communications chipset and installed battery SKU are not established; older 900 kg sheets are not substituted.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Monitoring and field work",
+                "details": "Field/seed maps support autonomous operations. Energy status is available through the local HMI, FarmDroid app and VictronConnect.",
+                "sources": [
+                  "https://farmdroid.com/products/farmdroid-fd20/",
+                  "https://knowledge.farmdroid.io/energy-info"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "farmdroid-fd20-current",
+                "configuration": "Current 1,250 kg FD20 product configuration. Processor, RAM, communications chipset and installed battery SKU are not established; older 900 kg sheets are not substituted.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -55325,10 +55596,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -55848,8 +56115,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "figure03",
+            "configuration": "Figure 03 announced October 2025. CPU/GPU SKU, RAM, disk, radio channel and individual camera/actuator part numbers are not disclosed by these sources.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -55863,28 +56136,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "High-rate data link",
+                "details": "10 Gbps mmWave offload; exact band, channel, chipset and broadcast identifier are unspecified.",
+                "sources": [
+                  "https://www.figure.ai/news/introducing-figure-03"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "figure03",
+                "configuration": "Figure 03 announced October 2025. CPU/GPU SKU, RAM, disk, radio channel and individual camera/actuator part numbers are not disclosed by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Hand and body perception",
+                "details": "Head/body vision with palm cameras in both hands; custom fingertip tactile sensors with published 3 g force sensitivity.",
+                "sources": [
+                  "https://www.figure.ai/news/introducing-figure-03"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "figure03",
+                "configuration": "Figure 03 announced October 2025. CPU/GPU SKU, RAM, disk, radio channel and individual camera/actuator part numbers are not disclosed by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery pack",
+                "details": "Custom torso-integrated 2.3 kWh pack, rated five-hour runtime; custom BMS, forced-air cooling and fusible cell interconnects.",
+                "sources": [
+                  "https://www.figure.ai/news/f-03-battery-development"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "figure03",
+                "configuration": "Figure 03 announced October 2025. CPU/GPU SKU, RAM, disk, radio channel and individual camera/actuator part numbers are not disclosed by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Charging and audio",
+                "details": "Foot-mounted coils enable 2 kW inductive charging; microphone and speaker provide speech interaction.",
+                "sources": [
+                  "https://www.figure.ai/news/introducing-figure-03"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "figure03",
+                "configuration": "Figure 03 announced October 2025. CPU/GPU SKU, RAM, disk, radio channel and individual camera/actuator part numbers are not disclosed by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control stack",
+                "details": "Helix vision-language-action system combines perception and manipulation; fleet data offload supports model development.",
+                "sources": [
+                  "https://www.figure.ai/news/introducing-figure-03"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "figure03",
+                "configuration": "Figure 03 announced October 2025. CPU/GPU SKU, RAM, disk, radio channel and individual camera/actuator part numbers are not disclosed by these sources.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -55900,11 +56238,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -69552,13 +69885,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ice-cobi18",
+            "configuration": "Cobi 18 user manual linked by ICE Cobotics support, checked November 2026. CPU/SoC, RAM, storage and wireless modules are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Navigation control unit",
+                "details": "Dedicated computing/control unit combines sensor input, chassis commands and the user display; processor model not published.",
+                "sources": [
+                  "https://www.icecobotics.com/wp-content/uploads/2025/07/Cobi-18-Manual.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ice-cobi18",
+                "configuration": "Cobi 18 user manual linked by ICE Cobotics support, checked November 2026. CPU/SoC, RAM, storage and wireless modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -69572,23 +69924,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Position and obstacle sensing",
+                "details": "2D laser LiDAR, stereo camera/IMU module, 3D time-of-flight, ultrasonic and triangulation cliff sensors, plus contact bumper.",
+                "sources": [
+                  "https://www.icecobotics.com/wp-content/uploads/2025/07/Cobi-18-Manual.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ice-cobi18",
+                "configuration": "Cobi 18 user manual linked by ICE Cobotics support, checked November 2026. CPU/SoC, RAM, storage and wireless modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electrical and cleaning assembly",
+                "details": "24 V system, 25 Ah pack; roughly 1–1.5 hours runtime and five-hour recharge. Two 60 W drive motors, 100 W main brush and 300 W vacuum motor.",
+                "sources": [
+                  "https://www.icecobotics.com/wp-content/uploads/2025/07/Cobi-18-Manual.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ice-cobi18",
+                "configuration": "Cobi 18 user manual linked by ICE Cobotics support, checked November 2026. CPU/SoC, RAM, storage and wireless modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cleaning hardware",
+                "details": "480 mm cleaning path, 10 L solution and 11 L recovery tanks.",
+                "sources": [
+                  "https://www.icecobotics.com/wp-content/uploads/2025/07/Cobi-18-Manual.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ice-cobi18",
+                "configuration": "Cobi 18 user manual linked by ICE Cobotics support, checked November 2026. CPU/SoC, RAM, storage and wireless modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Local routes and fleet reports",
+                "details": "Taught route replay with i-SYNERGY cleaning maps and performance reports.",
+                "sources": [
+                  "https://www.icecobotics.com/cobi-18/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ice-cobi18",
+                "configuration": "Cobi 18 user manual linked by ICE Cobotics support, checked November 2026. CPU/SoC, RAM, storage and wireless modules are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -69602,13 +70006,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -71503,8 +71902,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "karcher-kira-b50",
+            "configuration": "KIRA B 50 manual BTA-5817109-000-01. CPU, memory, radio modules and individual sensor models are not named.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -71523,23 +71928,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception array",
+                "details": "Laser, 3D and ultrasonic sensing with cameras; class-1 laser scanner.",
+                "sources": [
+                  "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "karcher-kira-b50",
+                "configuration": "KIRA B 50 manual BTA-5817109-000-01. CPU, memory, radio modules and individual sensor models are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electrical system",
+                "details": "25.6 V lithium-ion system, total 160 Ah. Rated operation 3.5 hours and recharge eight hours.",
+                "sources": [
+                  "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "karcher-kira-b50",
+                "configuration": "KIRA B 50 manual BTA-5817109-000-01. CPU, memory, radio modules and individual sensor models are not named.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Drive and cleaning motors",
+                "details": "Two 280 W traction motors, 630 W suction turbine and 600 W brush drive; 550 mm cleaning width.",
+                "sources": [
+                  "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "karcher-kira-b50",
+                "configuration": "KIRA B 50 manual BTA-5817109-000-01. CPU, memory, radio modules and individual sensor models are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "User and service connections",
+                "details": "Touchscreen, emergency stop and manual controls; optional dock handles charging, clean-water filling and wastewater emptying.",
+                "sources": [
+                  "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "karcher-kira-b50",
+                "configuration": "KIRA B 50 manual BTA-5817109-000-01. CPU, memory, radio modules and individual sensor models are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Route operation",
+                "details": "Taught routes with obstacle avoidance and Smart Fill coverage. Major floor-layout changes require reteaching; this manual excludes autonomous elevator/automatic-door traversal.",
+                "sources": [
+                  "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "karcher-kira-b50",
+                "configuration": "KIRA B 50 manual BTA-5817109-000-01. CPU, memory, radio modules and individual sensor models are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -71565,11 +72034,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "radios"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -75645,8 +76110,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "lionsbot-r3-scrub-pro-current",
+            "configuration": "Current 85.5 kg R3 Scrub Pro reference; older 82.5 kg brochures are not merged. Compute, memory, radio bands and battery capacity are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -75665,23 +76136,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Mapping hardware",
+                "details": "Standard LiDAR coverage 25 m; optional 3D LiDAR coverage 240 m diameter. Specific sensor SKUs are not given.",
+                "sources": [
+                  "https://www.lionsbot.com/robots/r3-scrub-pro"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "lionsbot-r3-scrub-pro-current",
+                "configuration": "Current 85.5 kg R3 Scrub Pro reference; older 82.5 kg brochures are not merged. Compute, memory, radio bands and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Cleaning system",
+                "details": "366 mm scrub width, 21 L clean / 24 L waste tanks; rated three-hour use and two-hour recharge.",
+                "sources": [
+                  "https://www.lionsbot.com/robots/r3-scrub-pro"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "lionsbot-r3-scrub-pro-current",
+                "configuration": "Current 85.5 kg R3 Scrub Pro reference; older 82.5 kg brochures are not merged. Compute, memory, radio bands and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Zone and station hardware",
+                "details": "MagicTag sets a cleaning zone; optional refuelling and charging stations automate servicing.",
+                "sources": [
+                  "https://www.lionsbot.com/robots/r3-scrub-pro"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "lionsbot-r3-scrub-pro-current",
+                "configuration": "Current 85.5 kg R3 Scrub Pro reference; older 82.5 kg brochures are not merged. Compute, memory, radio bands and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Cleaning and fleet stack",
+                "details": "AI SmartClean plans paths, adapts to obstacles and recovers interrupted routes; LionsCloud provides fleet cleaning records.",
+                "sources": [
+                  "https://www.lionsbot.com/robots/r3-scrub-pro"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "lionsbot-r3-scrub-pro-current",
+                "configuration": "Current 85.5 kg R3 Scrub Pro reference; older 82.5 kg brochures are not merged. Compute, memory, radio bands and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -75698,10 +76221,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -79677,8 +80196,24 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "naio-oz-current",
+            "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "naio-ted-current",
+            "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "naio-orio-historical",
+            "configuration": "Historical Orio: Naio SAS reports sales/manufacture ended and support ceased June 15, 2026. CPU, RAM, radio module and battery energy remain unverified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -79697,23 +80232,171 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Positioning",
+                "details": "GNSS RTK guidance; stored field routes support repeat operations.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/oz-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-oz-current",
+                "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "GNSS RTK follows a recorded vineyard map.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/ted-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-ted-current",
+                "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Guidance and tool alignment",
+                "details": "GNSS RTK with camera-guided lateral tool correction.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/orio-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-orio-historical",
+                "configuration": "Historical Orio: Naio SAS reports sales/manufacture ended and support ceased June 15, 2026. CPU, RAM, radio module and battery energy remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric work platform",
+                "details": "Rated endurance up to eight hours; 60 kg lifting capacity.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/oz-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-oz-current",
+                "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Electric tool carrier",
+                "details": "600 kg lifting capacity; rechargeable battery-powered drive. The published hectares/day figure is work coverage, not battery endurance.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/ted-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-ted-current",
+                "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Electric carrier",
+                "details": "700 kg lifting capacity; battery-powered platform. Adjustable wheel-track options are 150–175 cm or 180–215 cm.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/orio-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-orio-historical",
+                "configuration": "Historical Orio: Naio SAS reports sales/manufacture ended and support ceased June 15, 2026. CPU, RAM, radio module and battery energy remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Tool carrier",
+                "details": "Supports more than 35 implements for seeding, weeding and transport; maximum working width 100 cm.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/oz-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-oz-current",
+                "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Powered implements",
+                "details": "Secured auxiliary smart plug supplies compatible electric tools; agricultural tool mounting is configurable.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/ted-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-ted-current",
+                "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Implement connection",
+                "details": "Three-point hitch accepts compatible farming tools.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/orio-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-orio-historical",
+                "configuration": "Historical Orio: Naio SAS reports sales/manufacture ended and support ceased June 15, 2026. CPU, RAM, radio module and battery energy remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomous field work",
+                "details": "Mapped routes and tool-dependent agricultural tasks; operator supervision requirements remain site-dependent.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/oz-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-oz-current",
+                "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Vineyard operation",
+                "details": "Naio Augmented Autonomy uses mapped rows for repeated tool operations.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/ted-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-ted-current",
+                "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Field mapping",
+                "details": "Recorded seed positions and RTK routes support repeat cultivation; maps can be recorded with a tractor.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/orio-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-orio-historical",
+                "configuration": "Historical Orio: Naio SAS reports sales/manufacture ended and support ceased June 15, 2026. CPU, RAM, radio module and battery energy remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -79730,10 +80413,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -79777,8 +80456,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "naio-oz-current",
+            "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -79797,23 +80482,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Positioning",
+                "details": "GNSS RTK guidance; stored field routes support repeat operations.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/oz-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-oz-current",
+                "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric work platform",
+                "details": "Rated endurance up to eight hours; 60 kg lifting capacity.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/oz-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-oz-current",
+                "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Tool carrier",
+                "details": "Supports more than 35 implements for seeding, weeding and transport; maximum working width 100 cm.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/oz-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-oz-current",
+                "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomous field work",
+                "details": "Mapped routes and tool-dependent agricultural tasks; operator supervision requirements remain site-dependent.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/oz-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-oz-current",
+                "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -79830,10 +80567,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -79877,8 +80610,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "naio-ted-current",
+            "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -79897,23 +80636,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "GNSS RTK follows a recorded vineyard map.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/ted-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-ted-current",
+                "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric tool carrier",
+                "details": "600 kg lifting capacity; rechargeable battery-powered drive. The published hectares/day figure is work coverage, not battery endurance.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/ted-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-ted-current",
+                "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Powered implements",
+                "details": "Secured auxiliary smart plug supplies compatible electric tools; agricultural tool mounting is configurable.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/ted-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-ted-current",
+                "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Vineyard operation",
+                "details": "Naio Augmented Autonomy uses mapped rows for repeated tool operations.",
+                "sources": [
+                  "https://www.naio-technologies.com/en/ted-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "naio-ted-current",
+                "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -79930,10 +80721,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -95932,7 +96719,7 @@
         "configurations": [
           {
             "id": "serve-gen3",
-            "configuration": "Third-generation platform announced October 2024; not the earlier Xavier-based Serve robot.",
+            "configuration": "Third-generation Serve platform. NVIDIA identifies the progression from Xavier to AGX Orin; memory capacity and radio modules remain unspecified. Earlier robots are not assigned this configuration.",
             "reviewed_on": "2026-11-03"
           }
         ],
@@ -95943,14 +96730,14 @@
             "facts": [
               {
                 "section": "compute",
-                "component": "NVIDIA Jetson Orin",
-                "details": "Onboard autonomy module; the announcement does not specify the Orin SKU or memory capacity.",
+                "component": "NVIDIA Jetson AGX Orin",
+                "details": "NVIDIA’s customer study identifies AGX Orin for the current generation, with JetPack and TensorRT for onboard inference; RAM capacity is not stated.",
                 "sources": [
-                  "https://investors.serverobotics.com/news-releases/news-release-details/serve-robotics-rolls-out-third-generation-autonomous-delivery"
+                  "https://www.nvidia.com/en-au/customer-stories/serve-robotics/"
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "serve-gen3",
-                "configuration": "Third-generation platform announced October 2024; not the earlier Xavier-based Serve robot.",
+                "configuration": "Third-generation Serve platform. NVIDIA identifies the progression from Xavier to AGX Orin; memory capacity and radio modules remain unspecified. Earlier robots are not assigned this configuration.",
                 "reviewed_on": "2026-11-03"
               }
             ]
@@ -95978,7 +96765,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "serve-gen3",
-                "configuration": "Third-generation platform announced October 2024; not the earlier Xavier-based Serve robot.",
+                "configuration": "Third-generation Serve platform. NVIDIA identifies the progression from Xavier to AGX Orin; memory capacity and radio modules remain unspecified. Earlier robots are not assigned this configuration.",
                 "reviewed_on": "2026-11-03"
               }
             ]
@@ -95996,20 +96783,46 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "serve-gen3",
-                "configuration": "Third-generation platform announced October 2024; not the earlier Xavier-based Serve robot.",
+                "configuration": "Third-generation Serve platform. NVIDIA identifies the progression from Xavier to AGX Orin; memory capacity and radio modules remain unspecified. Earlier robots are not assigned this configuration.",
                 "reviewed_on": "2026-11-03"
               }
             ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Delivery and access",
+                "details": "Recipient phone unlocks the delivery compartment; fleet status and routing are managed through connected software.",
+                "sources": [
+                  "https://www.serverobotics.com/robot/index.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "serve-gen3",
+                "configuration": "Third-generation Serve platform. NVIDIA identifies the progression from Xavier to AGX Orin; memory capacity and radio modules remain unspecified. Earlier robots are not assigned this configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Simulation and fleet control",
+                "details": "NVIDIA Isaac Sim supports training/validation; on-robot perception combines image and LiDAR inputs for sidewalk navigation.",
+                "sources": [
+                  "https://www.nvidia.com/en-au/customer-stories/serve-robotics/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "serve-gen3",
+                "configuration": "Third-generation Serve platform. NVIDIA identifies the progression from Xavier to AGX Orin; memory capacity and radio modules remain unspecified. Earlier robots are not assigned this configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -96025,8 +96838,6 @@
         "missing_sections": [
           "memory",
           "radios",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -104172,8 +104983,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tennant-x4-rovr",
+            "configuration": "X4 ROVR North American specification, revision March 2024. Processor, RAM, onboard storage and wireless/sensor part numbers are unpublished here.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -104192,23 +105009,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Vision-based perception for autonomous aisle navigation; sensor module identities are unspecified.",
+                "sources": [
+                  "https://www.tennantco.com/en_us/1/machines/robotics/product.x4-rovr.autonomous-floor-scrubber.2000084.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-x4-rovr",
+                "configuration": "X4 ROVR North American specification, revision March 2024. Processor, RAM, onboard storage and wireless/sensor part numbers are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and charger",
+                "details": "25.6 V system with one 90 Ah lithium-ion pack, up to 2.5 hours of scrubbing. Onboard charger accepts 100–240 VAC, 50/60 Hz.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20walk-behinds/x4-rovr/x4-rovr-specifications-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-x4-rovr",
+                "configuration": "X4 ROVR North American specification, revision March 2024. Processor, RAM, onboard storage and wireless/sensor part numbers are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Cleaning hardware",
+                "details": "500 mm dual-disc assembly at 220 rpm, 450 W vacuum motor; 38 L solution and recovery tanks.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20walk-behinds/x4-rovr/x4-rovr-specifications-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-x4-rovr",
+                "configuration": "X4 ROVR North American specification, revision March 2024. Processor, RAM, onboard storage and wireless/sensor part numbers are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Serviceable brush attachment",
+                "details": "Insta-Click tool connection; 551 mm squeegee.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20walk-behinds/x4-rovr/x4-rovr-specifications-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-x4-rovr",
+                "configuration": "X4 ROVR North American specification, revision March 2024. Processor, RAM, onboard storage and wireless/sensor part numbers are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy software",
+                "details": "BrainOS with Teach & Repeat and Area Fill; speed-dependent solution delivery.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20walk-behinds/x4-rovr/x4-rovr-specifications-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-x4-rovr",
+                "configuration": "X4 ROVR North American specification, revision March 2024. Processor, RAM, onboard storage and wireless/sensor part numbers are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -104225,10 +105106,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -257373,15 +258250,15 @@
         "models": [
           "Serve Gen 3"
         ],
-        "configuration": "Third-generation platform announced October 2024; not the earlier Xavier-based Serve robot.",
+        "configuration": "Third-generation Serve platform. NVIDIA identifies the progression from Xavier to AGX Orin; memory capacity and radio modules remain unspecified. Earlier robots are not assigned this configuration.",
         "reviewed_on": "2026-11-03",
         "facts": [
           {
             "section": "compute",
-            "component": "NVIDIA Jetson Orin",
-            "details": "Onboard autonomy module; the announcement does not specify the Orin SKU or memory capacity.",
+            "component": "NVIDIA Jetson AGX Orin",
+            "details": "NVIDIA’s customer study identifies AGX Orin for the current generation, with JetPack and TensorRT for onboard inference; RAM capacity is not stated.",
             "sources": [
-              "https://investors.serverobotics.com/news-releases/news-release-details/serve-robotics-rolls-out-third-generation-autonomous-delivery"
+              "https://www.nvidia.com/en-au/customer-stories/serve-robotics/"
             ]
           },
           {
@@ -257398,6 +258275,22 @@
             "details": "Revised drivetrain and suspension with mechanical and emergency braking; battery cell details are not published here.",
             "sources": [
               "https://investors.serverobotics.com/news-releases/news-release-details/serve-robotics-rolls-out-third-generation-autonomous-delivery"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Delivery and access",
+            "details": "Recipient phone unlocks the delivery compartment; fleet status and routing are managed through connected software.",
+            "sources": [
+              "https://www.serverobotics.com/robot/index.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Simulation and fleet control",
+            "details": "NVIDIA Isaac Sim supports training/validation; on-robot perception combines image and LiDAR inputs for sidewalk navigation.",
+            "sources": [
+              "https://www.nvidia.com/en-au/customer-stories/serve-robotics/"
             ]
           }
         ]
@@ -266896,6 +267789,728 @@
             ]
           }
         ]
+      },
+      {
+        "id": "lucid-sherpa-v2-2024",
+        "manufacturer": "Lucid Bots",
+        "models": [
+          "Sherpa 2.0",
+          "Sherpa V2.0",
+          "Sherpa"
+        ],
+        "configuration": "September 2024 Sherpa V2.0 reference. Later standard/NDAA builds require separate confirmation; ground-station hardware is not aircraft hardware.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Mission computer",
+            "details": "Quad Cortex-A53 at 1.8 GHz; GCNanoUltra 3D and GC320 2D graphics. Exact SoC unspecified.",
+            "sources": [
+              "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Flight controller",
+            "details": "FMUv5X: STM32F765 with 2 MiB flash/512 KiB RAM; STM32F103 I/O coprocessor.",
+            "sources": [
+              "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Mission-computer memory",
+            "details": "4 GB LPDDR4, 16 GB eMMC and 32 GB internal SD.",
+            "sources": [
+              "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless modules",
+            "details": "QCA9377: 2.4/5 GHz 802.11a/b/g/n/ac and Bluetooth 5 as published. Cat-4 LTE: HL7588 (US) or RC7620 (EMEA); special-order disabling available.",
+            "sources": [
+              "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Dual u-blox F9P L1/L2 GNSS, triple-redundant IMUs, GNSS/compass/GSF heading.",
+            "sources": [
+              "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion and batteries",
+            "details": "Six brushless motors; two parallel 10,000 mAh 12S 44.4 V LiPo packs.",
+            "sources": [
+              "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Wired buses",
+            "details": "100Base-T, USB 2.0/OTG and redundant CAN.",
+            "sources": [
+              "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autopilot and telemetry",
+            "details": "Auterion Enterprise PX4; Auterion Suite receives LTE health/log telemetry.",
+            "sources": [
+              "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Published Remote ID support",
+            "details": "ASTM F3411-19 equipped. Transport-specific reception still needs confirmation.",
+            "sources": [
+              "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "naio-oz-current",
+        "manufacturer": "Naio Technologies",
+        "models": [
+          "Oz",
+          "Naio weeding robots (Ted / Oz / Orio)"
+        ],
+        "configuration": "Current Oz agricultural platform; older camera/laser-guided revisions are not merged. CPU, RAM, radio module and battery energy are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Positioning",
+            "details": "GNSS RTK guidance; stored field routes support repeat operations.",
+            "sources": [
+              "https://www.naio-technologies.com/en/oz-robot/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric work platform",
+            "details": "Rated endurance up to eight hours; 60 kg lifting capacity.",
+            "sources": [
+              "https://www.naio-technologies.com/en/oz-robot/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Tool carrier",
+            "details": "Supports more than 35 implements for seeding, weeding and transport; maximum working width 100 cm.",
+            "sources": [
+              "https://www.naio-technologies.com/en/oz-robot/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomous field work",
+            "details": "Mapped routes and tool-dependent agricultural tasks; operator supervision requirements remain site-dependent.",
+            "sources": [
+              "https://www.naio-technologies.com/en/oz-robot/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "naio-ted-current",
+        "manufacturer": "Naio Technologies",
+        "models": [
+          "Ted",
+          "Naio weeding robots (Ted / Oz / Orio)"
+        ],
+        "configuration": "Current Ted vineyard straddle robot. Compute, RAM, radio silicon and battery pack capacity are not specified by this source.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "GNSS RTK follows a recorded vineyard map.",
+            "sources": [
+              "https://www.naio-technologies.com/en/ted-robot/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric tool carrier",
+            "details": "600 kg lifting capacity; rechargeable battery-powered drive. The published hectares/day figure is work coverage, not battery endurance.",
+            "sources": [
+              "https://www.naio-technologies.com/en/ted-robot/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Powered implements",
+            "details": "Secured auxiliary smart plug supplies compatible electric tools; agricultural tool mounting is configurable.",
+            "sources": [
+              "https://www.naio-technologies.com/en/ted-robot/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Vineyard operation",
+            "details": "Naio Augmented Autonomy uses mapped rows for repeated tool operations.",
+            "sources": [
+              "https://www.naio-technologies.com/en/ted-robot/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "naio-orio-historical",
+        "manufacturer": "Naio Technologies",
+        "models": [
+          "Orio",
+          "Naio weeding robots (Ted / Oz / Orio)"
+        ],
+        "configuration": "Historical Orio: Naio SAS reports sales/manufacture ended and support ceased June 15, 2026. CPU, RAM, radio module and battery energy remain unverified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Guidance and tool alignment",
+            "details": "GNSS RTK with camera-guided lateral tool correction.",
+            "sources": [
+              "https://www.naio-technologies.com/en/orio-robot/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric carrier",
+            "details": "700 kg lifting capacity; battery-powered platform. Adjustable wheel-track options are 150–175 cm or 180–215 cm.",
+            "sources": [
+              "https://www.naio-technologies.com/en/orio-robot/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Implement connection",
+            "details": "Three-point hitch accepts compatible farming tools.",
+            "sources": [
+              "https://www.naio-technologies.com/en/orio-robot/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Field mapping",
+            "details": "Recorded seed positions and RTK routes support repeat cultivation; maps can be recorded with a tractor.",
+            "sources": [
+              "https://www.naio-technologies.com/en/orio-robot/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "naio-jo-historical",
+        "manufacturer": "Naio Technologies",
+        "models": [
+          "Jo"
+        ],
+        "configuration": "Historical Jo: Naio SAS reports sales/manufacture ended and support ceased June 15, 2026. Processor, memory, radio modules and battery energy are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Guidance",
+            "details": "GNSS RTK positioning with a recorded vineyard map.",
+            "sources": [
+              "https://www.naio-technologies.com/en/jo-robot/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Tracked electric base",
+            "details": "Crawler platform; published endurance up to ten hours and lifting capacity 250 kg.",
+            "sources": [
+              "https://www.naio-technologies.com/en/jo-robot/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Tool power",
+            "details": "Secured auxiliary smart plug for compatible powered agricultural tools.",
+            "sources": [
+              "https://www.naio-technologies.com/en/jo-robot/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Vineyard routing",
+            "details": "Naio Augmented Autonomy follows mapped vineyard work routes.",
+            "sources": [
+              "https://www.naio-technologies.com/en/jo-robot/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "farmdroid-fd20-current",
+        "manufacturer": "FarmDroid",
+        "models": [
+          "FD20"
+        ],
+        "configuration": "Current 1,250 kg FD20 product configuration. Processor, RAM, communications chipset and installed battery SKU are not established; older 900 kg sheets are not substituted.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Seed-coordinate navigation",
+            "details": "GNSS RTK positioning with published 8 mm precision; weeding references recorded seed positions rather than camera plant recognition.",
+            "sources": [
+              "https://farmdroid.com/products/farmdroid-fd20/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Solar and battery supply",
+            "details": "Four photovoltaic panels and two battery packs. FarmDroid distinguishes four AGM batteries through 2020 from two lithium packs from 2021.",
+            "sources": [
+              "https://farmdroid.com/products/farmdroid-fd20/",
+              "https://knowledge.farmdroid.io/battery-levels"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery manufacturer reference",
+            "details": "FarmDroid links a WS Technicals battery manual, but that general manual does not identify the installed FD20 pack model or capacity.",
+            "sources": [
+              "https://knowledge.farmdroid.io/batteries-user-manual"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cultivation tools",
+            "details": "Configurable 2–12 row setup, maximum 3.5 m working width; +SEED, +WEED and optional +SPRAY tool configurations.",
+            "sources": [
+              "https://farmdroid.com/products/farmdroid-fd20/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Monitoring and field work",
+            "details": "Field/seed maps support autonomous operations. Energy status is available through the local HMI, FarmDroid app and VictronConnect.",
+            "sources": [
+              "https://farmdroid.com/products/farmdroid-fd20/",
+              "https://knowledge.farmdroid.io/energy-info"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "karcher-kira-b50",
+        "manufacturer": "Karcher",
+        "models": [
+          "Karcher KIRA B 50",
+          "KIRA B 50",
+          "KIRA B50"
+        ],
+        "configuration": "KIRA B 50 manual BTA-5817109-000-01. CPU, memory, radio modules and individual sensor models are not named.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Perception array",
+            "details": "Laser, 3D and ultrasonic sensing with cameras; class-1 laser scanner.",
+            "sources": [
+              "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electrical system",
+            "details": "25.6 V lithium-ion system, total 160 Ah. Rated operation 3.5 hours and recharge eight hours.",
+            "sources": [
+              "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Drive and cleaning motors",
+            "details": "Two 280 W traction motors, 630 W suction turbine and 600 W brush drive; 550 mm cleaning width.",
+            "sources": [
+              "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "User and service connections",
+            "details": "Touchscreen, emergency stop and manual controls; optional dock handles charging, clean-water filling and wastewater emptying.",
+            "sources": [
+              "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Route operation",
+            "details": "Taught routes with obstacle avoidance and Smart Fill coverage. Major floor-layout changes require reteaching; this manual excludes autonomous elevator/automatic-door traversal.",
+            "sources": [
+              "https://s1.kaercher-media.com/documents/manuals/html/BTA-5817109-000-01/EN.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lionsbot-r3-scrub-pro-current",
+        "manufacturer": "LionsBot",
+        "models": [
+          "LionsBot R3 Scrub Pro",
+          "R3 Scrub Pro"
+        ],
+        "configuration": "Current 85.5 kg R3 Scrub Pro reference; older 82.5 kg brochures are not merged. Compute, memory, radio bands and battery capacity are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Mapping hardware",
+            "details": "Standard LiDAR coverage 25 m; optional 3D LiDAR coverage 240 m diameter. Specific sensor SKUs are not given.",
+            "sources": [
+              "https://www.lionsbot.com/robots/r3-scrub-pro"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Cleaning system",
+            "details": "366 mm scrub width, 21 L clean / 24 L waste tanks; rated three-hour use and two-hour recharge.",
+            "sources": [
+              "https://www.lionsbot.com/robots/r3-scrub-pro"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Zone and station hardware",
+            "details": "MagicTag sets a cleaning zone; optional refuelling and charging stations automate servicing.",
+            "sources": [
+              "https://www.lionsbot.com/robots/r3-scrub-pro"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Cleaning and fleet stack",
+            "details": "AI SmartClean plans paths, adapts to obstacles and recovers interrupted routes; LionsCloud provides fleet cleaning records.",
+            "sources": [
+              "https://www.lionsbot.com/robots/r3-scrub-pro"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tennant-x4-rovr",
+        "manufacturer": "Tennant Company",
+        "models": [
+          "Tennant X4 ROVR",
+          "X4 ROVR"
+        ],
+        "configuration": "X4 ROVR North American specification, revision March 2024. Processor, RAM, onboard storage and wireless/sensor part numbers are unpublished here.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Vision-based perception for autonomous aisle navigation; sensor module identities are unspecified.",
+            "sources": [
+              "https://www.tennantco.com/en_us/1/machines/robotics/product.x4-rovr.autonomous-floor-scrubber.2000084.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and charger",
+            "details": "25.6 V system with one 90 Ah lithium-ion pack, up to 2.5 hours of scrubbing. Onboard charger accepts 100–240 VAC, 50/60 Hz.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20walk-behinds/x4-rovr/x4-rovr-specifications-en-noam.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Cleaning hardware",
+            "details": "500 mm dual-disc assembly at 220 rpm, 450 W vacuum motor; 38 L solution and recovery tanks.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20walk-behinds/x4-rovr/x4-rovr-specifications-en-noam.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Serviceable brush attachment",
+            "details": "Insta-Click tool connection; 551 mm squeegee.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20walk-behinds/x4-rovr/x4-rovr-specifications-en-noam.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy software",
+            "details": "BrainOS with Teach & Repeat and Area Fill; speed-dependent solution delivery.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20walk-behinds/x4-rovr/x4-rovr-specifications-en-noam.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ice-cobi18",
+        "manufacturer": "ICE Cobotics",
+        "models": [
+          "ICE Cobi 18",
+          "Cobi 18"
+        ],
+        "configuration": "Cobi 18 user manual linked by ICE Cobotics support, checked November 2026. CPU/SoC, RAM, storage and wireless modules are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Navigation control unit",
+            "details": "Dedicated computing/control unit combines sensor input, chassis commands and the user display; processor model not published.",
+            "sources": [
+              "https://www.icecobotics.com/wp-content/uploads/2025/07/Cobi-18-Manual.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Position and obstacle sensing",
+            "details": "2D laser LiDAR, stereo camera/IMU module, 3D time-of-flight, ultrasonic and triangulation cliff sensors, plus contact bumper.",
+            "sources": [
+              "https://www.icecobotics.com/wp-content/uploads/2025/07/Cobi-18-Manual.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electrical and cleaning assembly",
+            "details": "24 V system, 25 Ah pack; roughly 1–1.5 hours runtime and five-hour recharge. Two 60 W drive motors, 100 W main brush and 300 W vacuum motor.",
+            "sources": [
+              "https://www.icecobotics.com/wp-content/uploads/2025/07/Cobi-18-Manual.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cleaning hardware",
+            "details": "480 mm cleaning path, 10 L solution and 11 L recovery tanks.",
+            "sources": [
+              "https://www.icecobotics.com/wp-content/uploads/2025/07/Cobi-18-Manual.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Local routes and fleet reports",
+            "details": "Taught route replay with i-SYNERGY cleaning maps and performance reports.",
+            "sources": [
+              "https://www.icecobotics.com/cobi-18/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agility-digit5-announced",
+        "manufacturer": "Agility Robotics",
+        "models": [
+          "Digit v5",
+          "Digit 5"
+        ],
+        "configuration": "Announced Digit 5; early access planned for first half of 2027. This is not a deployed Digit 4 hardware assignment. RAM, storage capacity and radio modules are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Planned production compute",
+            "details": "October 22, 2026 announcement specifies NVIDIA IGX Thor modules for the general-availability version; transition is forward-looking.",
+            "sources": [
+              "https://www.agilityrobotics.com/content/agility-robotics-expands-nvidia-collaboration-as-it-prepares-digit-5-for-commercial-scale"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Safety controller",
+            "details": "Separate safety controller supervises motion response to nearby people; controller SKU unspecified.",
+            "sources": [
+              "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and safety",
+            "details": "Onboard cameras, depth sensing and IMUs; sensory processing occurs locally.",
+            "sources": [
+              "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Body and power system",
+            "details": "129 kg, 1.81 m tall; cycloidal leg actuators and 22.7 kg lifting capacity. Announced 90-minute battery runtime with nine-minute charging.",
+            "sources": [
+              "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Tool connection",
+            "details": "Exchangeable end effectors use ISO-standard mounting flanges; specified reach 2.2 m.",
+            "sources": [
+              "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet connection",
+            "details": "Agility Arc integrates warehouse/manufacturing systems and receives health diagnostics. Vendor specifies mTLS/TLS 1.2+ and encrypted local storage.",
+            "sources": [
+              "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apptronik-apollo-first",
+        "manufacturer": "Apptronik",
+        "models": [
+          "Apollo",
+          "Apollo 1"
+        ],
+        "configuration": "First Apollo configuration announced August 2023, with January 2025 TI component-family evidence. Exact MCU/CPU SKUs, RAM, storage, radio modules and sensor parts remain unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Motor-control electronics",
+            "details": "Texas Instruments confirms TI microcontrollers, gate drivers and analog components in Apollo’s motor-control system; no chip part numbers are identified.",
+            "sources": [
+              "https://www.ti.com/zh-tw/about-ti/behind-chip/customer-stories/apptronik.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Actuation and battery",
+            "details": "Custom linear and rotary actuators. Original platform: 160 lb, 55 lb lift; replaceable battery rated four hours.",
+            "sources": [
+              "https://www.ti.com/zh-tw/about-ti/behind-chip/customer-stories/apptronik.html",
+              "https://apptronik.com/news-collection/apptronik-unveils-apollo"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Mechanical configurations",
+            "details": "Biped, wheeled torso or stationary mounting; face/chest status displays.",
+            "sources": [
+              "https://apptronik.com/news-collection/apptronik-unveils-apollo"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Motion control",
+            "details": "Force-control architecture designed for work around people; later Apollo 2 software is not assigned to this revision.",
+            "sources": [
+              "https://apptronik.com/news-collection/apptronik-unveils-apollo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apptronik-apollo2",
+        "manufacturer": "Apptronik",
+        "models": [
+          "Apollo 2"
+        ],
+        "configuration": "Apollo 2 current product description. Processor/controller models, RAM, disk, radio modules, battery capacity and exact perception sensors are not disclosed; Apollo 1 specifications are not inherited.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Modular actuation and mobility",
+            "details": "Apptronik actuator system with bipedal or wheeled configurations.",
+            "sources": [
+              "https://apptronik.com/apollo/apollo-2"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Power servicing",
+            "details": "Swappable batteries, opportunity charging and tethered power; single-pack runtime is unspecified.",
+            "sources": [
+              "https://apptronik.com/apollo/apollo-2"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Human interface",
+            "details": "LED mouth, chest status display, microphone/speech interaction and coordinated lighting.",
+            "sources": [
+              "https://apptronik.com/apollo/apollo-2"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Local and fleet software",
+            "details": "Artemis coordinates perception, planning, controls, safety and tasks. Fleet Connect monitors robot health, orchestrates jobs and collects deployment data.",
+            "sources": [
+              "https://apptronik.com/apollo/apollo-2"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety behavior",
+            "details": "Configured proximity/impact zones trigger motion responses; the page does not identify the underlying sensor technology or range.",
+            "sources": [
+              "https://apptronik.com/apollo/apollo-2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "figure03",
+        "manufacturer": "Figure AI",
+        "models": [
+          "Figure 03",
+          "Figure 3"
+        ],
+        "configuration": "Figure 03 announced October 2025. CPU/GPU SKU, RAM, disk, radio channel and individual camera/actuator part numbers are not disclosed by these sources.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Hand and body perception",
+            "details": "Head/body vision with palm cameras in both hands; custom fingertip tactile sensors with published 3 g force sensitivity.",
+            "sources": [
+              "https://www.figure.ai/news/introducing-figure-03"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "High-rate data link",
+            "details": "10 Gbps mmWave offload; exact band, channel, chipset and broadcast identifier are unspecified.",
+            "sources": [
+              "https://www.figure.ai/news/introducing-figure-03"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery pack",
+            "details": "Custom torso-integrated 2.3 kWh pack, rated five-hour runtime; custom BMS, forced-air cooling and fusible cell interconnects.",
+            "sources": [
+              "https://www.figure.ai/news/f-03-battery-development"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Charging and audio",
+            "details": "Foot-mounted coils enable 2 kW inductive charging; microphone and speaker provide speech interaction.",
+            "sources": [
+              "https://www.figure.ai/news/introducing-figure-03"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control stack",
+            "details": "Helix vision-language-action system combines perception and manipulation; fleet data offload supports model development.",
+            "sources": [
+              "https://www.figure.ai/news/introducing-figure-03"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -266912,8 +268527,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 200,
-    "devices_with_system_profiles": 199,
-    "devices_with_documented_compute": 97
+    "system_profiles": 214,
+    "devices_with_system_profiles": 211,
+    "devices_with_documented_compute": 100
   }
 }

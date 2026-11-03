@@ -9,6 +9,34 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('agricultural, cleaning and humanoid records retain exact revision evidence',()=>{
+ const sherpa=system('Lucid Bots','Sherpa 2.0');
+ assert.match(text(sherpa.sections.compute),/STM32F765/);
+ assert.match(text(sherpa.sections.memory),/4 GB LPDDR4/);
+ assert.doesNotMatch(text(sherpa.sections.memory),/2 GB RAM|16 GB ROM/);
+ assert.equal(profileIds(system('Lucid Bots','Sherpa NDAA')).length,0);
+ assert.equal(profileIds(system('Naio Technologies','Naio weeding robots (Ted / Oz / Orio)')).length,3);
+ const cards=includeReviewedSystemModels(libraryModels());
+ const orio=cards.find(m=>m.maker==='Naio Technologies'&&m.name==='Orio');
+ assert.deepEqual(profileIds(systemBreakdown(orio)),['naio-orio-historical']);
+ assert.match(text(system('Naio Technologies','Jo').configurations),/support ceased June 15, 2026/);
+ assert.doesNotMatch(text(system('Naio Technologies','Ted').sections.power),/6.5 hours/);
+ assert.match(text(system('FarmDroid','FD20').sections.sensors),/rather than camera/);
+ assert.match(text(system('Karcher','KIRA B 50').sections.power),/total 160 Ah/);
+ assert.match(text(system('ICE Cobotics','Cobi 18').sections.sensors),/stereo camera\/IMU/);
+ assert.match(text(system('LionsBot','R3 Scrub Pro').sections.sensors),/optional 3D/);
+ const d5=system('Agility Robotics','Digit 5');
+ assert.match(text(d5.configurations),/planned for first half of 2027/);
+ assert.match(text(d5.sections.compute),/forward-looking/);
+ assert.doesNotMatch(text(system('Agility Robotics','Digit').sections.compute),/IGX Thor/);
+ const apollo=system('Apptronik','Apollo'),apollo2=system('Apptronik','Apollo 2');
+ assert.match(text(apollo.sections.compute),/Texas Instruments/);
+ assert.doesNotMatch(text(apollo2.sections.compute),/Texas Instruments/);
+ assert.doesNotMatch(text(apollo2.sections.power),/four hours|four-hour|55 lb/);
+ assert.match(text(system('Figure AI','Figure 03').sections.radios),/exact band, channel, chipset.*unspecified/);
+ assert.doesNotMatch(text(system('Figure AI','Figure 02').sections.radios),/10 Gbps/);
+});
+
 test('survey drone and robot configurations retain their component boundaries',()=>{
  const ameca=system('Engineered Arts','Ameca'),desktop=system('Engineered Arts','Ameca Desktop Gen 3');
  assert.match(text(ameca.sections.radios),/forthcoming/);
