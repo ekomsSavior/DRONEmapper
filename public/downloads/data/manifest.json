@@ -70,25 +70,25 @@
     {
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
-      "rows": 925,
-      "bytes": 15450859,
-      "sha256": "58ef097fc1be0b9c85b2404da5770607aa98c37acaa6768cd1a200b00a2ef040",
+      "rows": 1324,
+      "bytes": 19029120,
+      "sha256": "e23d931046661a8dd3181e1cc968e9ddc73a1f662866ffb6d0ea43eccb95d77a",
       "collections": {
-        "devices": 925,
+        "devices": 1324,
         "radio_allocations": 182,
         "remote_id_rules": 3738,
         "rf_channels": 195,
-        "vendor_flows": 440,
+        "vendor_flows": 442,
         "equipment_product_relationships": 7,
         "cloud_services": 457,
         "robot_signatures": 9,
         "fcc_equipment": 20,
-        "devices_with_mac_allocations": 236,
-        "devices_with_rf_information": 524,
+        "devices_with_mac_allocations": 321,
+        "devices_with_rf_information": 741,
         "devices_with_scanner_signatures": 12,
         "system_profiles": 926,
-        "devices_with_system_profiles": 838,
-        "devices_with_documented_compute": 413
+        "devices_with_system_profiles": 1237,
+        "devices_with_documented_compute": 599
       }
     }
   ],
@@ -143,7 +143,7 @@
     },
     {
       "path": "scripts/export_device_catalog.mjs",
-      "sha256": "c411b7fd2bc9e74ca44dec1132ef23243a416588f36f1c984e585406b4afae2e"
+      "sha256": "703c1b3750055f82c055cff241e56233e222b5399b30d5adc8646f79e38ccb99"
     },
     {
       "path": "scripts/export_developer_data.py",

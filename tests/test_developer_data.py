@@ -98,6 +98,23 @@ class DeveloperDataTests(unittest.TestCase):
         self.assertIn('pending',waymo['rf_information'][0]['evidence_status'])
         self.assertEqual(waymo['rf_information'][0]['frequencies_mhz'],[[79036,80978]])
 
+    def test_researched_configurations_without_map_records_are_exported(self):
+        devices=self.global_data['devices']
+        # These previously existed only in system_profiles and on the website,
+        # but were absent from the flat devices collection used by developers.
+        for maker,name in [('ACSL','PF4'),('ACUA Ocean','Pioneer Mk2'),('AeiROBOT','ALICE 5')]:
+            device=next(d for d in devices if d['maker']==maker and d['name']==name)
+            self.assertEqual(device['catalog_evidence'],'reviewed-system-configuration')
+            self.assertTrue(device['system_breakdown']['configurations'])
+            self.assertFalse(device.get('records'))
+            self.assertFalse(device['scanner_signatures'])
+        profiles=self.global_data['system_profiles']['profiles']
+        equipment={d['fcc_id'] for d in devices if d['kind']=='regulatory-equipment'}
+        for profile in profiles:
+            self.assertTrue(set(profile.get('fcc_ids',[]))<=equipment,profile['id'])
+        represented={c['id'] for d in devices for c in d['system_breakdown']['configurations']}
+        self.assertEqual(represented,{p['id'] for p in profiles})
+
     def test_frequency_and_evidence_semantics(self):
         rows={r['id']:r for r in self.global_data['rf_channels']}
         self.assertEqual(rows['ble-37']['frequency_mhz'],2402)
