@@ -46787,6 +46787,308 @@
           ]
         }
       ]
+    },
+    {
+      "id": "andromeda-abi-2026-care",
+      "manufacturer": "Andromeda Robotics",
+      "models": [
+        "Abi — 2026 care-home configuration"
+      ],
+      "configuration": "Updated Abi documented by mecwacare in April 2026, with supplier interviews about the 2026 fleet. Lidar is not assigned to earlier prototypes. Processor, RAM, battery, radio chipset and sensor part numbers remain unpublished.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Updated navigation and recognition",
+          "details": "The April 2026 operator release specifically identifies lidar navigation; manufacturer describes facial recognition without identifying camera hardware.",
+          "sources": [
+            "https://www.mecwacare.org.au/wp-content/uploads/2026/04/Media-Release_Abi-Deployment-17-April-2026.pdf",
+            "https://andromedarobotics.ai/product"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Care-home Wi-Fi",
+          "details": "Andromeda engineers describe robots connecting to care-home access points and diagnosing weak Wi-Fi. Band, protocol revision and chipset are unspecified.",
+          "sources": [
+            "https://www.usealloy.ai/post/andromeda"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Interaction hardware",
+          "details": "Updated audio for older hearing profiles; supplier interviews confirm an onboard speaker/audio stack. Amplifier and microphone parts are not disclosed.",
+          "sources": [
+            "https://www.mecwacare.org.au/wp-content/uploads/2026/04/Media-Release_Abi-Deployment-17-April-2026.pdf",
+            "https://www.usealloy.ai/post/andromeda"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Companion and support systems",
+          "details": "Multilingual conversation with remembered interactions. Fleet support uses Grafana logs, Jira/GitHub and Alloy investigations in Slack; these are support services, not onboard processors.",
+          "sources": [
+            "https://andromedarobotics.ai/product",
+            "https://www.usealloy.ai/post/andromeda"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Andromeda Robotics",
+          "models": [
+            "Abi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "braga-laserweeder-deployment-reference",
+      "manufacturer": "Braga Fresh Partners",
+      "models": [
+        "Smart farming — original LaserWeeder reference"
+      ],
+      "configuration": "Braga is the operator. Western Growers documents its original Carbon Robotics LaserWeeders; the 2022 implement specification supplies the hardware reference, not a verified serial-level build. This is not G2 or the self-propelled 2021 demonstrator. Processor SKU, RAM and radio hardware are unpublished.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "identification",
+          "component": "Operator and equipment distinction",
+          "details": "Braga operates Carbon Robotics LaserWeeders. The case study describes two machines; this profile does not characterize every system on the farm.",
+          "sources": [
+            "https://www.wga.com/wp-content/uploads/2024/04/cit_case-study_carbon-robotics.pdf"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "LaserWeeder processing reference",
+          "details": "Manufacturer describes onboard NVIDIA GPUs running crop/weed vision; exact GPU and CPU models are not named.",
+          "sources": [
+            "https://carbonrobotics.com/laserweeding-technology"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Original implement imaging",
+          "details": "2022 sheet specifies 12 prediction cameras plus laser-tracking cameras and nine LED lighting bars.",
+          "sources": [
+            "https://carbonrobotics.com/s/CarbonRobotics_2022LaserWeeder_OnePager_v3_220817_digital.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Tractor-mounted implement",
+          "details": "PTO or generator powered; CAT 3 three-point hitch and 20-foot coverage width. The implement is not itself an autonomous tractor.",
+          "sources": [
+            "https://carbonrobotics.com/s/CarbonRobotics_2022LaserWeeder_OnePager_v3_220817_digital.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator and weeding hardware",
+          "details": "ISOBUS touchscreen; 30 laser units in the 2022 reference. No G2 satellite terminal or modern autonomous-drive kit is inferred.",
+          "sources": [
+            "https://carbonrobotics.com/s/CarbonRobotics_2022LaserWeeder_OnePager_v3_220817_digital.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Field configuration",
+          "details": "Computer-vision crop/weed classification. Western Growers describes manufacturer updates for Braga’s arugula varieties and OTA service.",
+          "sources": [
+            "https://carbonrobotics.com/s/CarbonRobotics_2022LaserWeeder_OnePager_v3_220817_digital.pdf",
+            "https://www.wga.com/wp-content/uploads/2024/04/cit_case-study_carbon-robotics.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Braga Fresh Partners",
+          "models": [
+            "Braga Smart Farming System"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boonray-bleb145a1-operator-2026",
+      "manufacturer": "Boonray Technology",
+      "models": [
+        "BLEB145A1 — 2026 operator configuration"
+      ],
+      "configuration": "Tongyue’s August 2026 procurement report names BLEB145A1. Power, connectivity and workflow below are specific to that report. Sensor architecture is separately labeled as the manufacturer’s Electric Bull family reference; exact BLEB145A1 sensor/CPU parts, RAM and modem are not established.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Operator-reported battery",
+          "details": "Tongyue reports an 800 kWh battery and unmanned battery exchange for its BLEB145A1 fleet. Do not interpret “145” as verified payload capacity.",
+          "sources": [
+            "https://www.ty-new.com/index/detail?cid=23&did=130&id=14"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Site wireless connection",
+          "details": "Operator reports radio/base-station coverage affecting data transmission and positioning updates. No cellular generation, frequency or modem is identified.",
+          "sources": [
+            "https://www.ty-new.com/index/detail?cid=23&did=130&id=14"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Related family architecture",
+          "details": "Electric Bull manufacturer diagram shows RTK antenna, lidar, cameras and front/rear millimetre-wave radar. This is family context, not a verified BLEB145A1 bill of materials.",
+          "sources": [
+            "https://en.boonray.com/p/zccp.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle integration",
+          "details": "Manufacturer’s family design integrates drive-by-wire, electric drive and battery exchange. Exact controller part numbers are not published.",
+          "sources": [
+            "https://en.boonray.com/p/zccp.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operator-described transport workflow",
+          "details": "Automated loading, haulage, unloading, battery exchange and remote dispatch are documented in the delivered fleet’s system integration.",
+          "sources": [
+            "https://www.ty-new.com/index/detail?cid=23&did=130&id=14"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Boonray Technology",
+          "models": [
+            "Boonray BLEB145A1 Driverless Mining Truck"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eca-alistar-3000-historical",
+      "manufacturer": "ECA Group",
+      "models": [
+        "Alistar 3000 — historical inspection configuration"
+      ],
+      "configuration": "Historical ECA brochure, marked May 2007, preserved by a document archive. Representative 3000 configuration for the broad Alistar family record, not Alistar 300. CPU, RAM, storage capacity, battery capacity and modem part numbers are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and payloads",
+          "details": "INS, DVL, depth sensor, altimeter and obstacle sonar; payload options include side-scan sonar, multibeam, sub-bottom profiler, camera/light and CTD or sound-velocity probe.",
+          "sources": [
+            "https://studyres.com/doc/7807530/fiche-alistar-3000_2010.qxd"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Surface and underwater links",
+          "details": "Two-way RF link with GPS/DGPS; acoustic transponder and acoustic modem. Underwater acoustic communication is not Wi-Fi or Bluetooth.",
+          "sources": [
+            "https://studyres.com/doc/7807530/fiche-alistar-3000_2010.qxd"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and propulsion",
+          "details": "Rechargeable batteries power eight thrusters: four horizontal, two vertical and two lateral. Brochure states 20-hour endurance; chemistry/capacity unspecified here.",
+          "sources": [
+            "https://studyres.com/doc/7807530/fiche-alistar-3000_2010.qxd"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Mission recording",
+          "details": "Video and sonar recording for retrieval and review; storage medium and size unspecified.",
+          "sources": [
+            "https://studyres.com/doc/7807530/fiche-alistar-3000_2010.qxd"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy architecture",
+          "details": "Mission planning, simulation, monitoring and replay. ECA’s 2004 paper describes an autonomy supervisor, two databases and four autonomy functions; no processor SKU.",
+          "sources": [
+            "https://studyres.com/doc/7807530/fiche-alistar-3000_2010.qxd",
+            "https://publications.isope.org/proceedings/ISOPE/ISOPE%202004/volume2/2004-hw-01.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload and safety integration",
+          "details": "Open payload architecture; water-ingress sensor, recovery weight, pinger, flasher and radio beacon.",
+          "sources": [
+            "https://studyres.com/doc/7807530/fiche-alistar-3000_2010.qxd"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "ECA Group",
+          "models": [
+            "Alistar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rn-harrier-operator-configuration",
+      "manufacturer": "Royal Navy",
+      "models": [
+        "RNMB Harrier — operator-documented configuration"
+      ],
+      "configuration": "Royal Navy operator record for the ATLAS-supplied vessel, using 2020 and 2024 reports. This is the 11 m Harrier, not the larger Hebe. CPU, RAM, engine model, radio bands and particular sonar part numbers are not published in these sources.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "identification",
+          "component": "Surface platform",
+          "details": "Royal Navy describes Harrier as an 11-metre vessel; Hebe’s 15-metre hull and onboard operations centre must not be transferred to it.",
+          "sources": [
+            "https://www.royalnavy.mod.uk/news/2020/august/21/20200821-future-mine-hunting-system-comes-to-clyde"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Survey payload",
+          "details": "Operator confirms a towed side-scan sonar. Sonar is an acoustic sensor, not an RF detection pattern.",
+          "sources": [
+            "https://www.royalnavy.mod.uk/news/2024/march/13/240313-harrier-in-the-gulf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mission-system deployment",
+          "details": "Supports deployment of towed sonar and autonomous underwater vehicles; 2024 trials also used remotely operated underwater vehicles and a minesweeping system.",
+          "sources": [
+            "https://www.royalnavy.mod.uk/news/2020/august/21/20200821-future-mine-hunting-system-comes-to-clyde",
+            "https://www.royalnavy.mod.uk/news/2024/march/13/240313-harrier-in-the-gulf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control architecture",
+          "details": "Manual, remote and autonomous operation. Pre-programmed missions or control from ship/shore centres; operator equipment is not an onboard CPU specification.",
+          "sources": [
+            "https://www.royalnavy.mod.uk/news/2020/august/21/20200821-future-mine-hunting-system-comes-to-clyde",
+            "https://www.royalnavy.mod.uk/news/2024/march/13/240313-harrier-in-the-gulf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Royal Navy",
+          "models": [
+            "RNMB Harrier"
+          ]
+        }
+      ]
     }
   ]
 }

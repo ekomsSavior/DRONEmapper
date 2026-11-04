@@ -2693,3 +2693,28 @@ test('batch 83 preserves component, vessel and research configuration boundaries
  assert.match(text(equinor.sections.radios),/not confirmation/);
  assert.equal(profileIds(system('Garuda Aerospace','Kisan Drone',{kind:'regulatory-equipment'})).length,0);
 });
+
+test('batch 84 distinguishes operator systems, revisions and underwater acoustics',()=>{
+ const abi=system('Andromeda Robotics','Abi');
+ assert.match(text(abi.sections.sensors),/April 2026.*lidar/);
+ assert.equal(abi.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Andromeda Robotics','Abi 2023 prototype')).length,0);
+ const braga=system('Braga Fresh Partners','Braga Smart Farming System');
+ assert.match(text(braga.sections.compute),/NVIDIA/);
+ assert.match(text(braga.sections.power),/not itself an autonomous tractor/);
+ assert.equal(braga.sections.radios.status,'not-established');
+ const truck=system('Boonray Technology','Boonray BLEB145A1 Driverless Mining Truck');
+ assert.match(text(truck.sections.power),/800 kWh/);
+ assert.match(text(truck.sections.sensors),/not a verified BLEB145A1 bill/);
+ assert.equal(truck.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Boonray Technology','RTE156')).length,0);
+ const alistar=system('ECA Group','Alistar');
+ assert.match(text(alistar.sections.radios),/acoustic communication is not Wi-Fi/);
+ assert.match(text(alistar.sections.power),/eight thrusters/);
+ assert.equal(profileIds(system('ECA Group','Alistar 300')).length,0);
+ const harrier=system('Royal Navy','RNMB Harrier');
+ assert.match(text(harrier.sections.sensors),/towed side-scan sonar/);
+ assert.match(text(harrier.configurations),/not the larger Hebe/);
+ assert.equal(profileIds(system('Royal Navy','RNMB Hebe')).length,0);
+ assert.equal(profileIds(system('Boonray Technology','Boonray BLEB145A1 Driverless Mining Truck',{kind:'regulatory-equipment'})).length,0);
+});
