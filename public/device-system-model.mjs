@@ -1,4 +1,4 @@
-import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b36';
+import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b37';
 import {libraryModels} from './device-library-model.mjs';
 import {macAllocationsFor,formatMacPrefix} from './device-mac-model.mjs';
 import {robotSignatures} from './robot-signatures.mjs';
@@ -8,6 +8,7 @@ const aliases=new Map([
  ['unitree','unitree robotics'],['parrot drones','parrot'],['parrot drones sas','parrot'],
  ['skydio, inc.','skydio'],['anduril','anduril industries'],['aurora','aurora innovation'],
  ['nao robot','aldebaran robotics'],['cobalt ai','cobalt robotics'],
+ ['percepto airmax','percepto'],
 ]);
 const makerOf=r=>aliases.get(norm(r.maker||r.manufacturer))||norm(r.maker||r.manufacturer);
 const namesOf=r=>new Set([r.name,r.model,...(r.aliases||[]),...(r.models||[])].filter(Boolean).map(norm));

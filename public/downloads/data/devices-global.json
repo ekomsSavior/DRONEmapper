@@ -99354,8 +99354,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "pazzi-pizza-system-public",
+            "configuration": "Kickmaker’s PAZZI Robotics integration account and current operator workflow. Historical prototype architecture is not a complete specification for every later restaurant. CPU, arm models, sensors, electrical ratings and wireless protocol are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -99384,13 +99390,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Pizza preparation modules",
+                "details": "Operator describes dough pressing, sauce/topping application, cutting and serving, with kiosk or web ordering. Exact robot-arm and end-effector models are not identified.",
+                "sources": [
+                  "https://pazzi.es/en/los-robots"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pazzi-pizza-system-public",
+                "configuration": "Kickmaker’s PAZZI Robotics integration account and current operator workflow. Historical prototype architecture is not a complete specification for every later restaurant. CPU, arm models, sensors, electrical ratings and wireless protocol are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Integrator architecture",
+                "details": "Kickmaker documents a cloud-connected machine-learning platform coordinating robots and robotic modules. This names a system architecture, not an installed cloud server or radio chipset.",
+                "sources": [
+                  "https://kickmaker.io/first-automated-pizza-making-store/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pazzi-pizza-system-public",
+                "configuration": "Kickmaker’s PAZZI Robotics integration account and current operator workflow. Historical prototype architecture is not a complete specification for every later restaurant. CPU, arm models, sensors, electrical ratings and wireless protocol are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -99409,8 +99441,6 @@
           "radios",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -99473,8 +99503,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "percepto-airmax-2022-visual",
+            "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -99488,23 +99524,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft data link",
+                "details": "LTE; carrier bands and modem part number are not specified.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Visual and thermal payload",
+                "details": "24 MP RGB camera plus thermal imager in the visual/thermal configuration.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft envelope",
+                "details": "9.5 kg aircraft, 157 cm propeller-tip diagonal, IP55.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Matching Percepto Base",
+                "details": "166 × 162 × 168 cm, 350 kg, IP56 enclosure.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -99540,10 +99628,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -99577,8 +99661,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "percepto-airmax-2022-ogi",
+            "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -99592,13 +99682,39 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft data link",
+                "details": "LTE; modem model and carrier bands unspecified.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Gas imaging payload",
+                "details": "16 MP RGB camera plus optical gas imaging camera; separate from the 24 MP visual/thermal configuration.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -99607,8 +99723,21 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Dock configuration",
+                "details": "Air Max column specifies the 350 kg, IP56 Percepto Base. Camera part number is not given in this brochure.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -99642,10 +99771,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -99689,8 +99815,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "percepto-air-aim-family",
+            "configuration": "Family-level 2022 inspection architecture. The map label does not select Air Max, Air Mobile or a specific payload; no model-specific processor, battery or camera is assigned.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -99724,8 +99856,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "AIM inspection workflow",
+                "details": "AIM combines drone and other robot/sensor data, remote operations, analysis and geotagged issues accessible on smartphones. Air Max and Air Mobile are separate hardware configurations.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-air-aim-family",
+                "configuration": "Family-level 2022 inspection architecture. The map label does not select Air Max, Air Mobile or a specific payload; no model-specific processor, battery or camera is assigned.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -99745,7 +99890,6 @@
           "sensors",
           "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -99771,8 +99915,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "percepto-airmax-2022-ogi",
+            "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -99786,13 +99936,39 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft data link",
+                "details": "LTE; modem model and carrier bands unspecified.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Gas imaging payload",
+                "details": "16 MP RGB camera plus optical gas imaging camera; separate from the 24 MP visual/thermal configuration.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -99801,8 +99977,21 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Dock configuration",
+                "details": "Air Max column specifies the 350 kg, IP56 Percepto Base. Camera part number is not given in this brochure.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -99832,10 +100021,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -99892,8 +100078,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "percepto-airmax-2022-visual",
+            "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -99907,23 +100099,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft data link",
+                "details": "LTE; carrier bands and modem part number are not specified.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Visual and thermal payload",
+                "details": "24 MP RGB camera plus thermal imager in the visual/thermal configuration.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft envelope",
+                "details": "9.5 kg aircraft, 157 cm propeller-tip diagonal, IP55.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Matching Percepto Base",
+                "details": "166 × 162 × 168 cm, 350 kg, IP56 enclosure.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -99960,10 +100204,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -100008,8 +100248,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "percepto-airmax-2022-ogi",
+            "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -100023,13 +100269,39 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft data link",
+                "details": "LTE; modem model and carrier bands unspecified.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Gas imaging payload",
+                "details": "16 MP RGB camera plus optical gas imaging camera; separate from the 24 MP visual/thermal configuration.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -100038,8 +100310,21 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Dock configuration",
+                "details": "Air Max column specifies the 350 kg, IP56 Percepto Base. Camera part number is not given in this brochure.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -100076,10 +100361,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -100108,8 +100390,19 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "percepto-airmax-2022-visual",
+            "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "percepto-airmax-2022-ogi",
+            "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -100123,23 +100416,111 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft data link",
+                "details": "LTE; carrier bands and modem part number are not specified.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Aircraft data link",
+                "details": "LTE; modem model and carrier bands unspecified.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Visual and thermal payload",
+                "details": "24 MP RGB camera plus thermal imager in the visual/thermal configuration.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Gas imaging payload",
+                "details": "16 MP RGB camera plus optical gas imaging camera; separate from the 24 MP visual/thermal configuration.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft envelope",
+                "details": "9.5 kg aircraft, 157 cm propeller-tip diagonal, IP55.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Matching Percepto Base",
+                "details": "166 × 162 × 168 cm, 350 kg, IP56 enclosure.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-visual",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Dock configuration",
+                "details": "Air Max column specifies the 350 kg, IP56 Percepto Base. Camera part number is not given in this brochure.",
+                "sources": [
+                  "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "percepto-airmax-2022-ogi",
+                "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -100169,10 +100550,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -100214,8 +100591,19 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "perceptual-eve-mavic3e",
+            "configuration": "Perceptual Robotics explicitly identifies Mavic 3E and Matrice 4E as EVE platforms in July 2025. This profile covers only the Mavic 3E configuration; CPU/RAM and additional integrator hardware are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "perceptual-eve-matrice4e",
+            "configuration": "July 2025 EVE integration reference and DJI Matrice 4E specifications. CPU/RAM are not published. This is the 4E configuration, not a 4T or a retrofit specification for Mavic 3E.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -100224,33 +100612,184 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording storage",
+                "details": "MicroSD U3/Class10/V30 or better; no installed RAM capacity is established.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-mavic3e",
+                "configuration": "Perceptual Robotics explicitly identifies Mavic 3E and Matrice 4E as EVE platforms in July 2025. This profile covers only the Mavic 3E configuration; CPU/RAM and additional integrator hardware are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "memory",
+                "component": "Recording storage",
+                "details": "MicroSD cards rated U3/Class10/V30 or above; installed RAM unspecified.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-4-series/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-matrice4e",
+                "configuration": "July 2025 EVE integration reference and DJI Matrice 4E specifications. CPU/RAM are not published. This is the 4E configuration, not a 4T or a retrofit specification for Mavic 3E.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 Enterprise",
+                "details": "2.400–2.4835 and 5.725–5.850 GHz aircraft transmission, subject to region. Controller Wi-Fi/Bluetooth specifications are not assigned to the aircraft.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-mavic3e",
+                "configuration": "Perceptual Robotics explicitly identifies Mavic 3E and Matrice 4E as EVE platforms in July 2025. This profile covers only the Mavic 3E configuration; CPU/RAM and additional integrator hardware are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "O4 Enterprise",
+                "details": "Aircraft transmission at 2.400–2.4835 and 5.725–5.850 GHz; 5.15–5.25 GHz availability is region-dependent. This does not establish a unique identifying broadcast.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-4-series/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-matrice4e",
+                "configuration": "July 2025 EVE integration reference and DJI Matrice 4E specifications. CPU/RAM are not published. This is the 4E configuration, not a 4T or a retrofit specification for Mavic 3E.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Mavic 3E imaging and navigation",
+                "details": "20 MP 4/3 CMOS wide camera with mechanical shutter and 12 MP tele camera; GNSS and omnidirectional binocular sensing with a downward infrared sensor. Mavic 3T thermal hardware is not included.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-mavic3e",
+                "configuration": "Perceptual Robotics explicitly identifies Mavic 3E and Matrice 4E as EVE platforms in July 2025. This profile covers only the Mavic 3E configuration; CPU/RAM and additional integrator hardware are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Matrice 4E payload",
+                "details": "20 MP 4/3 wide camera with mechanical shutter; 48 MP medium-tele and tele cameras, laser rangefinder, GNSS and vision sensing. No 4T thermal camera is assigned.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-4-series/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-matrice4e",
+                "configuration": "July 2025 EVE integration reference and DJI Matrice 4E specifications. CPU/RAM are not published. This is the 4E configuration, not a 4T or a retrofit specification for Mavic 3E.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mavic 3 battery options",
+                "details": "Standard 5000 mAh, 15.4 V, 77 Wh LiPo 4S; separate EU C1 battery is 4230 mAh, 15.4 V, 65.15 Wh. Actual EVE battery fit must be checked.",
+                "sources": [
+                  "https://enterprise.dji.com/mavic-3-enterprise/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-mavic3e",
+                "configuration": "Perceptual Robotics explicitly identifies Mavic 3E and Matrice 4E as EVE platforms in July 2025. This profile covers only the Mavic 3E configuration; CPU/RAM and additional integrator hardware are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "6741 mAh, 14.76 V, 99.5 Wh Li-ion 4S battery.",
+                "sources": [
+                  "https://enterprise.dji.com/matrice-4-series/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-matrice4e",
+                "configuration": "July 2025 EVE integration reference and DJI Matrice 4E specifications. CPU/RAM are not published. This is the 4E configuration, not a 4T or a retrofit specification for Mavic 3E.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Documented host aircraft",
+                "details": "EVE inspection workflow on DJI Mavic 3E; integration does not make the two EVE host aircraft interchangeable hardware revisions.",
+                "sources": [
+                  "https://www.perceptual-robotics.com/one-stop-inspection-of-wind-turbines-with-eve-mini-drone-high-data-quality/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-mavic3e",
+                "configuration": "Perceptual Robotics explicitly identifies Mavic 3E and Matrice 4E as EVE platforms in July 2025. This profile covers only the Mavic 3E configuration; CPU/RAM and additional integrator hardware are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Documented host aircraft",
+                "details": "EVE inspection workflow on DJI Matrice 4E. E-Port/E-Port Lite are host expansion interfaces, not evidence that optional accessories are fitted to every EVE.",
+                "sources": [
+                  "https://www.perceptual-robotics.com/one-stop-inspection-of-wind-turbines-with-eve-mini-drone-high-data-quality/",
+                  "https://enterprise.dji.com/matrice-4-series/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-matrice4e",
+                "configuration": "July 2025 EVE integration reference and DJI Matrice 4E specifications. CPU/RAM are not published. This is the 4E configuration, not a 4T or a retrofit specification for Mavic 3E.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Inspection automation",
+                "details": "EVE automates wind-turbine blade inspection; the integration announcement does not disclose an additional onboard processor.",
+                "sources": [
+                  "https://www.perceptual-robotics.com/one-stop-inspection-of-wind-turbines-with-eve-mini-drone-high-data-quality/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-mavic3e",
+                "configuration": "Perceptual Robotics explicitly identifies Mavic 3E and Matrice 4E as EVE platforms in July 2025. This profile covers only the Mavic 3E configuration; CPU/RAM and additional integrator hardware are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Inspection automation",
+                "details": "EVE’s automated wind-turbine inspection is the integrator layer above this DJI host platform.",
+                "sources": [
+                  "https://www.perceptual-robotics.com/one-stop-inspection-of-wind-turbines-with-eve-mini-drone-high-data-quality/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "perceptual-eve-matrice4e",
+                "configuration": "July 2025 EVE integration reference and DJI Matrice 4E specifications. CPU/RAM are not published. This is the 4E configuration, not a 4T or a retrofit specification for Mavic 3E.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -100265,12 +100804,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -102724,8 +103257,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "picnic-pizza-station-system",
+            "configuration": "Manufacturer’s two- and three-base product configurations and fact sheet. Stationary food-assembly equipment; CPU, RAM, sensor models, network protocol and motor part numbers are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -102749,18 +103288,69 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Installation supply",
+                "details": "208 V outlet; manufacturer says no additional plumbing is required. Per-module current and motor specifications are not listed.",
+                "sources": [
+                  "https://www.picnicworks.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "picnic-pizza-station-system",
+                "configuration": "Manufacturer’s two- and three-base product configurations and fact sheet. Stationary food-assembly equipment; CPU, RAM, sensor models, network protocol and motor part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Ingredient modules",
+                "details": "Michelangelo/Mikey has two bases for sauce, cheese and pepperoni. Leonardo/Leo has three bases and supports additional toppings; not all stations have the third base.",
+                "sources": [
+                  "https://www.picnicworks.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "picnic-pizza-station-system",
+                "configuration": "Manufacturer’s two- and three-base product configurations and fact sheet. Stationary food-assembly equipment; CPU, RAM, sensor models, network protocol and motor part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Process equipment",
+                "details": "Temperature-controlled assembly line and precision ingredient dispensing; individual measurement sensors are not specified.",
+                "sources": [
+                  "https://picnicworks.com/picnic-fact-sheet.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "picnic-pizza-station-system",
+                "configuration": "Manufacturer’s two- and three-base product configurations and fact sheet. Stationary food-assembly equipment; CPU, RAM, sensor models, network protocol and motor part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operator workflow",
+                "details": "Touchscreen operation, programmable recipes and updateable software. These do not identify the controller processor or its operating system.",
+                "sources": [
+                  "https://picnicworks.com/picnic-fact-sheet.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "picnic-pizza-station-system",
+                "configuration": "Manufacturer’s two- and three-base product configurations and fact sheet. Stationary food-assembly equipment; CPU, RAM, sensor models, network protocol and motor part numbers are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -102778,9 +103368,6 @@
           "memory",
           "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -103044,13 +103631,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "pony-gen7-robotaxi-system",
+            "configuration": "Seventh-generation architecture in Pony.ai’s world-model article and October 2025 filing (printed pages 122 and 135–136). Vehicle platform and battery vary; memory capacity and network hardware are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Four NVIDIA DRIVE Orin-X SoCs",
+                "details": "Three Orin-X processors serve the primary system; a fourth runs a separate redundant driving system. Manufacturer reports 1,016 TOPS across the onboard platform.",
+                "sources": [
+                  "https://blog.pony.ai/the-evolution-of-pony-ais-world-model/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pony-gen7-robotaxi-system",
+                "configuration": "Seventh-generation architecture in Pony.ai’s world-model article and October 2025 filing (printed pages 122 and 135–136). Vehicle platform and battery vary; memory capacity and network hardware are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -103064,8 +103670,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Gen-7 perception and localization",
+                "details": "Nine LiDAR units, 14 cameras, four millimeter-wave radars, four microphones, two water-level sensors and a collision-sensor suite. GNSS and IMUs support localization; exact sensor part numbers are not given.",
+                "sources": [
+                  "https://ir.pony.ai/static-files/72e4a778-3329-4504-ba9a-ba08ae8cbfb0"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pony-gen7-robotaxi-system",
+                "configuration": "Seventh-generation architecture in Pony.ai’s world-model article and October 2025 filing (printed pages 122 and 135–136). Vehicle platform and battery vary; memory capacity and network hardware are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -103074,13 +103693,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle integration",
+                "details": "Gen-7 ADK is integrated with Toyota bZ4X, BAIC Alpha-T5 and GAC AION V platforms. This does not imply identical batteries or vehicle ECUs across the three.",
+                "sources": [
+                  "https://ir.pony.ai/static-files/72e4a778-3329-4504-ba9a-ba08ae8cbfb0"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pony-gen7-robotaxi-system",
+                "configuration": "Seventh-generation architecture in Pony.ai’s world-model article and October 2025 filing (printed pages 122 and 135–136). Vehicle platform and battery vary; memory capacity and network hardware are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Onboard driving and cloud training",
+                "details": "Sensor inputs feed onboard driving actions. PonyWorld training and improvement infrastructure is a separate layer; cloud compute is not assigned as an installed vehicle component.",
+                "sources": [
+                  "https://blog.pony.ai/the-evolution-of-pony-ais-world-model/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pony-gen7-robotaxi-system",
+                "configuration": "Seventh-generation architecture in Pony.ai’s world-model article and October 2025 filing (printed pages 122 and 135–136). Vehicle platform and battery vary; memory capacity and network hardware are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -103104,13 +103749,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "power"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -103136,8 +103777,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "potensic-atom2-hardware",
+            "configuration": "DSDR23A aircraft and DSRC23A controller specifications. Processor, RAM and radio-chip models are not disclosed. The separate RID-916 module is not treated as an installed aircraft component.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -103146,28 +103793,117 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Removable recording storage",
+                "details": "MicroSD recording with U3/V30 cards; FAT32/exFAT support. Installed working RAM is unspecified.",
+                "sources": [
+                  "https://www.potensic.com/atom-2-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-atom2-hardware",
+                "configuration": "DSDR23A aircraft and DSRC23A controller specifications. Processor, RAM and radio-chip models are not disclosed. The separate RID-916 module is not treated as an installed aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "PixSync 4.0",
+                "details": "Dual-antenna 2.400–2.4835 GHz video/control link, 1080p/30 live view and up to 6 Mbps. This is not a unique passive identification signature.",
+                "sources": [
+                  "https://www.potensic.com/atom-2-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-atom2-hardware",
+                "configuration": "DSDR23A aircraft and DSRC23A controller specifications. Processor, RAM and radio-chip models are not disclosed. The separate RID-916 module is not treated as an installed aircraft component.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Media transfer",
+                "details": "Separate 5 GHz Wi-Fi 5 download function; do not confuse it with the 2.4 GHz flight link.",
+                "sources": [
+                  "https://www.potensic.com/atom-2-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-atom2-hardware",
+                "configuration": "DSDR23A aircraft and DSRC23A controller specifications. Processor, RAM and radio-chip models are not disclosed. The separate RID-916 module is not treated as an installed aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera and stabilization",
+                "details": "48 MP, 1/2-inch CMOS camera, f/1.8 lens and three-axis gimbal; video up to 4K/30.",
+                "sources": [
+                  "https://www.potensic.com/atom-2-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-atom2-hardware",
+                "configuration": "DSDR23A aircraft and DSRC23A controller specifications. Processor, RAM and radio-chip models are not disclosed. The separate RID-916 module is not treated as an installed aircraft component.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Positioning",
+                "details": "GPS, GLONASS, Galileo and BeiDou; downward visual positioning has a specified 0.3–5 m operating range.",
+                "sources": [
+                  "https://www.potensic.com/atom-2-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-atom2-hardware",
+                "configuration": "DSDR23A aircraft and DSRC23A controller specifications. Processor, RAM and radio-chip models are not disclosed. The separate RID-916 module is not treated as an installed aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "DSBT02B flight battery",
+                "details": "2230 mAh, 7.7 V, 17.18 Wh Li-ion pack. Aircraft USB-C charging up to 5 V/3 A, or a parallel charging hub.",
+                "sources": [
+                  "https://www.potensic.com/atom-2-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-atom2-hardware",
+                "configuration": "DSDR23A aircraft and DSRC23A controller specifications. Processor, RAM and radio-chip models are not disclosed. The separate RID-916 module is not treated as an installed aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "DSRC23A controller",
+                "details": "Separate 18.72 Wh controller battery and USB-C charging with up to 18 W PD. Mobile-device connection supports USB-C, Lightning or an optional Micro-USB cable.",
+                "sources": [
+                  "https://www.potensic.com/atom-2-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-atom2-hardware",
+                "configuration": "DSDR23A aircraft and DSRC23A controller specifications. Processor, RAM and radio-chip models are not disclosed. The separate RID-916 module is not treated as an installed aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -103196,11 +103932,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -103226,8 +103957,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "potensic-rid916-module",
+            "configuration": "External Remote ID transmitter. CPU, radio-chip, GNSS-chip and RAM part numbers are not published. Bluetooth capability alone does not authenticate a device.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -103241,28 +103978,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Bluetooth broadcast radio",
+                "details": "Manufacturer specifies Bluetooth 5.1 or later support and 8 dBm transmit power. Its advertised reception distance is not a guaranteed scanner range.",
+                "sources": [
+                  "https://www.potensic.com/rid-916-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-rid916-module",
+                "configuration": "External Remote ID transmitter. CPU, radio-chip, GNSS-chip and RAM part numbers are not published. Bluetooth capability alone does not authenticate a device.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Satellite positioning",
+                "details": "GPS, GLONASS, BeiDou and QZSS receiver; GNSS chipset unspecified.",
+                "sources": [
+                  "https://www.potensic.com/rid-916-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-rid916-module",
+                "configuration": "External Remote ID transmitter. CPU, radio-chip, GNSS-chip and RAM part numbers are not published. Bluetooth capability alone does not authenticate a device.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Self-contained module",
+                "details": "310 mAh, 3.7 V, 1.15 Wh single-cell lithium battery; advertised operation up to four hours. Module weighs under 20 g and is rated IP54.",
+                "sources": [
+                  "https://www.potensic.com/rid-916-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-rid916-module",
+                "configuration": "External Remote ID transmitter. CPU, radio-chip, GNSS-chip and RAM part numbers are not published. Bluetooth capability alone does not authenticate a device.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "USB-C charging",
+                "details": "5 V, 140 mA rated charging; maximum startup current 200 mA.",
+                "sources": [
+                  "https://www.potensic.com/rid-916-specs.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-rid916-module",
+                "configuration": "External Remote ID transmitter. CPU, radio-chip, GNSS-chip and RAM part numbers are not published. Bluetooth capability alone does not authenticate a device.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Remote ID configuration",
+                "details": "Manufacturer provides a management tool for device upgrades and data entry. Broadcast information includes identity, position and velocity; this is a transmitter, not a drone-control receiver.",
+                "sources": [
+                  "https://www.potensic.com/rid-916.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "potensic-rid916-module",
+                "configuration": "External Remote ID transmitter. CPU, radio-chip, GNSS-chip and RAM part numbers are not published. Bluetooth capability alone does not authenticate a device.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -103286,12 +104088,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -103567,13 +104364,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "primoco-one150-system",
+            "configuration": "January 2024 manufacturer prospectus plus current One 150 system page. Payloads and links vary by customer; CPU, RAM, autopilot manufacturer and modem models are not established.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Autopilot subsystem",
+                "details": "The 2024 prospectus identifies an imported autopilot from Spain but gives no maker or CPU model; supplier country is not enough to assign a specific autopilot.",
+                "sources": [
+                  "https://media.uav-stol.com/Primoco_UAV_SE_prospekt_SCHVALENO_240124_23ddebcbc2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "primoco-one150-system",
+                "configuration": "January 2024 manufacturer prospectus plus current One 150 system page. Payloads and links vary by customer; CPU, RAM, autopilot manufacturer and modem models are not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -103582,8 +104398,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Ground data link",
+                "details": "Manufacturer describes AES-256-protected communications and a direct GCS link; the 2024 prospectus identifies Norway as datalink source. RF band, waveform and terminal model remain unspecified.",
+                "sources": [
+                  "https://www.uav-stol.com/en/primoco-one-150",
+                  "https://media.uav-stol.com/Primoco_UAV_SE_prospekt_SCHVALENO_240124_23ddebcbc2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "primoco-one150-system",
+                "configuration": "January 2024 manufacturer prospectus plus current One 150 system page. Payloads and links vary by customer; CPU, RAM, autopilot manufacturer and modem models are not established.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Published model communications",
                 "details": "Encrypted aircraft / ground-station communications; optional forwarding of mission data.",
@@ -103596,18 +104425,57 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Mission-dependent payload",
+                "details": "Manufacturer shows an Epsilon 180 EO/MWIR camera integration and offers other optical, LiDAR and radar payloads. These are configuration choices, not a standard all-sensor installation.",
+                "sources": [
+                  "https://www.uav-stol.com/en/primoco-one-150"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "primoco-one150-system",
+                "configuration": "January 2024 manufacturer prospectus plus current One 150 system page. Payloads and links vary by customer; CPU, RAM, autopilot manufacturer and modem models are not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Engine revision",
+                "details": "2024 prospectus specifies the manufacturer’s four-stroke Primoco Engine 340, replacing its earlier two-stroke Engine 500. Do not apply the new engine to every historical aircraft.",
+                "sources": [
+                  "https://media.uav-stol.com/Primoco_UAV_SE_prospekt_SCHVALENO_240124_23ddebcbc2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "primoco-one150-system",
+                "configuration": "January 2024 manufacturer prospectus plus current One 150 system page. Payloads and links vary by customer; CPU, RAM, autopilot manufacturer and modem models are not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Ground station",
+                "details": "Two operator roles—pilot and sensor operator—with vehicle-mounted or demountable GCS. A side-stick control revision was completed in 2023.",
+                "sources": [
+                  "https://www.uav-stol.com/en/primoco-one-150"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "primoco-one150-system",
+                "configuration": "January 2024 manufacturer prospectus plus current One 150 system page. Payloads and links vary by customer; CPU, RAM, autopilot manufacturer and modem models are not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -103626,11 +104494,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -293178,6 +294042,514 @@
             ]
           }
         ]
+      },
+      {
+        "id": "potensic-atom2-hardware",
+        "manufacturer": "Potensic",
+        "models": [
+          "ATOM 2"
+        ],
+        "configuration": "DSDR23A aircraft and DSRC23A controller specifications. Processor, RAM and radio-chip models are not disclosed. The separate RID-916 module is not treated as an installed aircraft component.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera and stabilization",
+            "details": "48 MP, 1/2-inch CMOS camera, f/1.8 lens and three-axis gimbal; video up to 4K/30.",
+            "sources": [
+              "https://www.potensic.com/atom-2-specs.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Positioning",
+            "details": "GPS, GLONASS, Galileo and BeiDou; downward visual positioning has a specified 0.3–5 m operating range.",
+            "sources": [
+              "https://www.potensic.com/atom-2-specs.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "PixSync 4.0",
+            "details": "Dual-antenna 2.400–2.4835 GHz video/control link, 1080p/30 live view and up to 6 Mbps. This is not a unique passive identification signature.",
+            "sources": [
+              "https://www.potensic.com/atom-2-specs.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Media transfer",
+            "details": "Separate 5 GHz Wi-Fi 5 download function; do not confuse it with the 2.4 GHz flight link.",
+            "sources": [
+              "https://www.potensic.com/atom-2-specs.html"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Removable recording storage",
+            "details": "MicroSD recording with U3/V30 cards; FAT32/exFAT support. Installed working RAM is unspecified.",
+            "sources": [
+              "https://www.potensic.com/atom-2-specs.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "DSBT02B flight battery",
+            "details": "2230 mAh, 7.7 V, 17.18 Wh Li-ion pack. Aircraft USB-C charging up to 5 V/3 A, or a parallel charging hub.",
+            "sources": [
+              "https://www.potensic.com/atom-2-specs.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "DSRC23A controller",
+            "details": "Separate 18.72 Wh controller battery and USB-C charging with up to 18 W PD. Mobile-device connection supports USB-C, Lightning or an optional Micro-USB cable.",
+            "sources": [
+              "https://www.potensic.com/atom-2-specs.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "potensic-rid916-module",
+        "manufacturer": "Potensic",
+        "models": [
+          "RID-916"
+        ],
+        "configuration": "External Remote ID transmitter. CPU, radio-chip, GNSS-chip and RAM part numbers are not published. Bluetooth capability alone does not authenticate a device.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Bluetooth broadcast radio",
+            "details": "Manufacturer specifies Bluetooth 5.1 or later support and 8 dBm transmit power. Its advertised reception distance is not a guaranteed scanner range.",
+            "sources": [
+              "https://www.potensic.com/rid-916-specs.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Satellite positioning",
+            "details": "GPS, GLONASS, BeiDou and QZSS receiver; GNSS chipset unspecified.",
+            "sources": [
+              "https://www.potensic.com/rid-916-specs.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Self-contained module",
+            "details": "310 mAh, 3.7 V, 1.15 Wh single-cell lithium battery; advertised operation up to four hours. Module weighs under 20 g and is rated IP54.",
+            "sources": [
+              "https://www.potensic.com/rid-916-specs.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "USB-C charging",
+            "details": "5 V, 140 mA rated charging; maximum startup current 200 mA.",
+            "sources": [
+              "https://www.potensic.com/rid-916-specs.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Remote ID configuration",
+            "details": "Manufacturer provides a management tool for device upgrades and data entry. Broadcast information includes identity, position and velocity; this is a transmitter, not a drone-control receiver.",
+            "sources": [
+              "https://www.potensic.com/rid-916.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pony-gen7-robotaxi-system",
+        "manufacturer": "Pony AI",
+        "models": [
+          "Pony Gen-7 Robotaxi"
+        ],
+        "configuration": "Seventh-generation architecture in Pony.ai’s world-model article and October 2025 filing (printed pages 122 and 135–136). Vehicle platform and battery vary; memory capacity and network hardware are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Four NVIDIA DRIVE Orin-X SoCs",
+            "details": "Three Orin-X processors serve the primary system; a fourth runs a separate redundant driving system. Manufacturer reports 1,016 TOPS across the onboard platform.",
+            "sources": [
+              "https://blog.pony.ai/the-evolution-of-pony-ais-world-model/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Gen-7 perception and localization",
+            "details": "Nine LiDAR units, 14 cameras, four millimeter-wave radars, four microphones, two water-level sensors and a collision-sensor suite. GNSS and IMUs support localization; exact sensor part numbers are not given.",
+            "sources": [
+              "https://ir.pony.ai/static-files/72e4a778-3329-4504-ba9a-ba08ae8cbfb0"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle integration",
+            "details": "Gen-7 ADK is integrated with Toyota bZ4X, BAIC Alpha-T5 and GAC AION V platforms. This does not imply identical batteries or vehicle ECUs across the three.",
+            "sources": [
+              "https://ir.pony.ai/static-files/72e4a778-3329-4504-ba9a-ba08ae8cbfb0"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Onboard driving and cloud training",
+            "details": "Sensor inputs feed onboard driving actions. PonyWorld training and improvement infrastructure is a separate layer; cloud compute is not assigned as an installed vehicle component.",
+            "sources": [
+              "https://blog.pony.ai/the-evolution-of-pony-ais-world-model/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "percepto-airmax-2022-visual",
+        "manufacturer": "Percepto",
+        "models": [
+          "AirMax (2022 visual/thermal)",
+          "AirMax",
+          "Percepto AirMax",
+          "Percepto AirMax OGI, Percepto Airmax"
+        ],
+        "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Visual and thermal payload",
+            "details": "24 MP RGB camera plus thermal imager in the visual/thermal configuration.",
+            "sources": [
+              "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft data link",
+            "details": "LTE; carrier bands and modem part number are not specified.",
+            "sources": [
+              "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft envelope",
+            "details": "9.5 kg aircraft, 157 cm propeller-tip diagonal, IP55.",
+            "sources": [
+              "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Matching Percepto Base",
+            "details": "166 × 162 × 168 cm, 350 kg, IP56 enclosure.",
+            "sources": [
+              "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "percepto-airmax-2022-ogi",
+        "manufacturer": "Percepto",
+        "models": [
+          "AirMax OGI (2022 configuration)",
+          "AirMax OGI",
+          "OGI",
+          "Percepto AirMax OGI",
+          "Percepto AirMax OGI, Percepto Airmax"
+        ],
+        "configuration": "2022 Percepto Air brochure, revision OP-3-01-4/2022. Legacy configuration; not the newer Ranger/Harbor system. CPU, RAM, battery capacity and LTE modem model are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Gas imaging payload",
+            "details": "16 MP RGB camera plus optical gas imaging camera; separate from the 24 MP visual/thermal configuration.",
+            "sources": [
+              "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft data link",
+            "details": "LTE; modem model and carrier bands unspecified.",
+            "sources": [
+              "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Dock configuration",
+            "details": "Air Max column specifies the 350 kg, IP56 Percepto Base. Camera part number is not given in this brochure.",
+            "sources": [
+              "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "percepto-air-aim-family",
+        "manufacturer": "Percepto",
+        "models": [
+          "Percepto Air (AIM)"
+        ],
+        "configuration": "Family-level 2022 inspection architecture. The map label does not select Air Max, Air Mobile or a specific payload; no model-specific processor, battery or camera is assigned.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "software",
+            "component": "AIM inspection workflow",
+            "details": "AIM combines drone and other robot/sensor data, remote operations, analysis and geotagged issues accessible on smartphones. Air Max and Air Mobile are separate hardware configurations.",
+            "sources": [
+              "https://percepto.co/wp-content/uploads/2022/05/Percepto-Air-data-sheet-WEB-new.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "perceptual-eve-mavic3e",
+        "manufacturer": "Perceptual Robotics",
+        "models": [
+          "EVE (DJI Mavic 3E configuration)",
+          "EVE Mini Drone"
+        ],
+        "configuration": "Perceptual Robotics explicitly identifies Mavic 3E and Matrice 4E as EVE platforms in July 2025. This profile covers only the Mavic 3E configuration; CPU/RAM and additional integrator hardware are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Documented host aircraft",
+            "details": "EVE inspection workflow on DJI Mavic 3E; integration does not make the two EVE host aircraft interchangeable hardware revisions.",
+            "sources": [
+              "https://www.perceptual-robotics.com/one-stop-inspection-of-wind-turbines-with-eve-mini-drone-high-data-quality/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Mavic 3E imaging and navigation",
+            "details": "20 MP 4/3 CMOS wide camera with mechanical shutter and 12 MP tele camera; GNSS and omnidirectional binocular sensing with a downward infrared sensor. Mavic 3T thermal hardware is not included.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 Enterprise",
+            "details": "2.400–2.4835 and 5.725–5.850 GHz aircraft transmission, subject to region. Controller Wi-Fi/Bluetooth specifications are not assigned to the aircraft.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording storage",
+            "details": "MicroSD U3/Class10/V30 or better; no installed RAM capacity is established.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mavic 3 battery options",
+            "details": "Standard 5000 mAh, 15.4 V, 77 Wh LiPo 4S; separate EU C1 battery is 4230 mAh, 15.4 V, 65.15 Wh. Actual EVE battery fit must be checked.",
+            "sources": [
+              "https://enterprise.dji.com/mavic-3-enterprise/specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Inspection automation",
+            "details": "EVE automates wind-turbine blade inspection; the integration announcement does not disclose an additional onboard processor.",
+            "sources": [
+              "https://www.perceptual-robotics.com/one-stop-inspection-of-wind-turbines-with-eve-mini-drone-high-data-quality/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "perceptual-eve-matrice4e",
+        "manufacturer": "Perceptual Robotics",
+        "models": [
+          "EVE (DJI Matrice 4E configuration)",
+          "EVE Mini Drone"
+        ],
+        "configuration": "July 2025 EVE integration reference and DJI Matrice 4E specifications. CPU/RAM are not published. This is the 4E configuration, not a 4T or a retrofit specification for Mavic 3E.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Documented host aircraft",
+            "details": "EVE inspection workflow on DJI Matrice 4E. E-Port/E-Port Lite are host expansion interfaces, not evidence that optional accessories are fitted to every EVE.",
+            "sources": [
+              "https://www.perceptual-robotics.com/one-stop-inspection-of-wind-turbines-with-eve-mini-drone-high-data-quality/",
+              "https://enterprise.dji.com/matrice-4-series/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Matrice 4E payload",
+            "details": "20 MP 4/3 wide camera with mechanical shutter; 48 MP medium-tele and tele cameras, laser rangefinder, GNSS and vision sensing. No 4T thermal camera is assigned.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-4-series/specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O4 Enterprise",
+            "details": "Aircraft transmission at 2.400–2.4835 and 5.725–5.850 GHz; 5.15–5.25 GHz availability is region-dependent. This does not establish a unique identifying broadcast.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-4-series/specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording storage",
+            "details": "MicroSD cards rated U3/Class10/V30 or above; installed RAM unspecified.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-4-series/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "6741 mAh, 14.76 V, 99.5 Wh Li-ion 4S battery.",
+            "sources": [
+              "https://enterprise.dji.com/matrice-4-series/specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Inspection automation",
+            "details": "EVE’s automated wind-turbine inspection is the integrator layer above this DJI host platform.",
+            "sources": [
+              "https://www.perceptual-robotics.com/one-stop-inspection-of-wind-turbines-with-eve-mini-drone-high-data-quality/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "picnic-pizza-station-system",
+        "manufacturer": "Picnic Works",
+        "models": [
+          "Picnic Pizza Station"
+        ],
+        "configuration": "Manufacturer’s two- and three-base product configurations and fact sheet. Stationary food-assembly equipment; CPU, RAM, sensor models, network protocol and motor part numbers are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Ingredient modules",
+            "details": "Michelangelo/Mikey has two bases for sauce, cheese and pepperoni. Leonardo/Leo has three bases and supports additional toppings; not all stations have the third base.",
+            "sources": [
+              "https://www.picnicworks.com/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Process equipment",
+            "details": "Temperature-controlled assembly line and precision ingredient dispensing; individual measurement sensors are not specified.",
+            "sources": [
+              "https://picnicworks.com/picnic-fact-sheet.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Installation supply",
+            "details": "208 V outlet; manufacturer says no additional plumbing is required. Per-module current and motor specifications are not listed.",
+            "sources": [
+              "https://www.picnicworks.com/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operator workflow",
+            "details": "Touchscreen operation, programmable recipes and updateable software. These do not identify the controller processor or its operating system.",
+            "sources": [
+              "https://picnicworks.com/picnic-fact-sheet.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pazzi-pizza-system-public",
+        "manufacturer": "PAZZI",
+        "models": [
+          "PAZZI Pizza Robot"
+        ],
+        "configuration": "Kickmaker’s PAZZI Robotics integration account and current operator workflow. Historical prototype architecture is not a complete specification for every later restaurant. CPU, arm models, sensors, electrical ratings and wireless protocol are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Pizza preparation modules",
+            "details": "Operator describes dough pressing, sauce/topping application, cutting and serving, with kiosk or web ordering. Exact robot-arm and end-effector models are not identified.",
+            "sources": [
+              "https://pazzi.es/en/los-robots"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Integrator architecture",
+            "details": "Kickmaker documents a cloud-connected machine-learning platform coordinating robots and robotic modules. This names a system architecture, not an installed cloud server or radio chipset.",
+            "sources": [
+              "https://kickmaker.io/first-automated-pizza-making-store/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "primoco-one150-system",
+        "manufacturer": "Primoco UAV",
+        "models": [
+          "One 150"
+        ],
+        "configuration": "January 2024 manufacturer prospectus plus current One 150 system page. Payloads and links vary by customer; CPU, RAM, autopilot manufacturer and modem models are not established.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autopilot subsystem",
+            "details": "The 2024 prospectus identifies an imported autopilot from Spain but gives no maker or CPU model; supplier country is not enough to assign a specific autopilot.",
+            "sources": [
+              "https://media.uav-stol.com/Primoco_UAV_SE_prospekt_SCHVALENO_240124_23ddebcbc2.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Engine revision",
+            "details": "2024 prospectus specifies the manufacturer’s four-stroke Primoco Engine 340, replacing its earlier two-stroke Engine 500. Do not apply the new engine to every historical aircraft.",
+            "sources": [
+              "https://media.uav-stol.com/Primoco_UAV_SE_prospekt_SCHVALENO_240124_23ddebcbc2.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Mission-dependent payload",
+            "details": "Manufacturer shows an Epsilon 180 EO/MWIR camera integration and offers other optical, LiDAR and radar payloads. These are configuration choices, not a standard all-sensor installation.",
+            "sources": [
+              "https://www.uav-stol.com/en/primoco-one-150"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Ground data link",
+            "details": "Manufacturer describes AES-256-protected communications and a direct GCS link; the 2024 prospectus identifies Norway as datalink source. RF band, waveform and terminal model remain unspecified.",
+            "sources": [
+              "https://www.uav-stol.com/en/primoco-one-150",
+              "https://media.uav-stol.com/Primoco_UAV_SE_prospekt_SCHVALENO_240124_23ddebcbc2.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Ground station",
+            "details": "Two operator roles—pilot and sensor operator—with vehicle-mounted or demountable GCS. A side-stick control revision was completed in 2023.",
+            "sources": [
+              "https://www.uav-stol.com/en/primoco-one-150"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -293194,8 +294566,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 437,
-    "devices_with_system_profiles": 385,
-    "devices_with_documented_compute": 179
+    "system_profiles": 448,
+    "devices_with_system_profiles": 399,
+    "devices_with_documented_compute": 181
   }
 }
