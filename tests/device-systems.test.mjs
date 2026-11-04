@@ -9,6 +9,30 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 73 separates delivery revisions, ground compute and radio evidence',()=>{
+ const manna=system('Manna Aero','Manna Delivery Drone');
+ assert.match(text(manna.sections.compute),/Three flight-control computers/);
+ assert.match(text(manna.sections.software),/does not establish an RF mesh protocol/);
+ assert.equal(manna.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Manna Air Delivery','Manna Delivery Drone')).length,1);
+ const dexa=system('DEXA','DE-2020');
+ assert.match(text(dexa.sections.radios),/900 MHz/);
+ assert.match(text(dexa.configurations),/v5 configuration/);
+ assert.equal(profileIds(system('DEXA','Quadra')).length,0);
+ assert.equal(dexa.sections.compute.status,'not-established');
+ const one=system('Airobotics','Optimus 1-EX');
+ assert.match(text(one.sections.interfaces),/ParaZero/);
+ assert.equal(one.sections.compute.status,'not-established');
+ const platform=system('Ondas Holdings, Inc.','Optimus Autonomous Drone System');
+ assert.match(text(platform.sections.compute),/ground infrastructure/);
+ assert.match(text(platform.sections.sensors),/alternatives selected by mission/);
+ const ultra=system('DZYNE Technologies','ULTRA (Unmanned Long-endurance Tactical Reconnaissance Aircraft)');
+ assert.match(text(ultra.sections.radios),/Satellite/);
+ assert.doesNotMatch(text(ultra.sections.compute.facts),/SPARK/);
+ assert.equal(ultra.sections.power.status,'not-established');
+ assert.equal(profileIds(system('Airobotics','Optimus 1-EX',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 72 scopes field robot hardware and separates test instruments',()=>{
  const ultra=system('Overland AI','ULTRA');
  assert.match(text(ultra.sections.compute),/SPARK/);

@@ -6157,8 +6157,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "airobotics-optimus-1ex-2023",
+            "configuration": "2022 FAA aircraft-design background and September 2023 supplier description of the 1-EX safety installation. Airworthiness requirements are not treated as a component inventory. CPU, RAM, sensor models, battery capacity and RF bands remain unspecified.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -6172,8 +6178,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft command links",
+                "details": "FAA background identifies communication links as associated system elements; no frequency, modem or protocol is established by this source.",
+                "sources": [
+                  "https://www.govinfo.gov/content/pkg/FR-2022-03-28/pdf/2022-06380.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-1ex-2023",
+                "configuration": "2022 FAA aircraft-design background and September 2023 supplier description of the 1-EX safety installation. Airworthiness requirements are not treated as a component inventory. CPU, RAM, sensor models, battery capacity and RF bands remain unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -6182,18 +6201,69 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery-electric rotorcraft",
+                "details": "FAA design background identifies battery-powered electric motors for vertical and forward flight; motor count and part numbers are not supplied.",
+                "sources": [
+                  "https://www.govinfo.gov/content/pkg/FR-2022-03-28/pdf/2022-06380.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-1ex-2023",
+                "configuration": "2022 FAA aircraft-design background and September 2023 supplier description of the 1-EX safety installation. Airworthiness requirements are not treated as a component inventory. CPU, RAM, sensor models, battery capacity and RF bands remain unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Customized ParaZero SafeAir",
+                "details": "Supplier identifies a parachute-based safety system developed with Airobotics specifically for Optimus-1EX.",
+                "sources": [
+                  "https://www.globenewswire.com/en/news-release/2023/09/08/2740105/0/en/Airobotics-Optimus-1-EX-Drone-Receives-Historic-U-S-FAA-Type-Certification-Using-ParaZero-SafeAir-Safety-System.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-1ex-2023",
+                "configuration": "2022 FAA aircraft-design background and September 2023 supplier description of the 1-EX safety installation. Airworthiness requirements are not treated as a component inventory. CPU, RAM, sensor models, battery capacity and RF bands remain unspecified.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Automated airbase exchange",
+                "details": "The associated base changes batteries and loads mission-specific sensor payloads; these are ground-system functions, not an onboard battery-changing mechanism.",
+                "sources": [
+                  "https://www.globenewswire.com/en/news-release/2023/09/08/2740105/0/en/Airobotics-Optimus-1-EX-Drone-Receives-Historic-U-S-FAA-Type-Certification-Using-ParaZero-SafeAir-Safety-System.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-1ex-2023",
+                "configuration": "2022 FAA aircraft-design background and September 2023 supplier description of the 1-EX safety installation. Airworthiness requirements are not treated as a component inventory. CPU, RAM, sensor models, battery capacity and RF bands remain unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Remote command-and-control supervision",
+                "details": "Supplier describes missions overseen from a remote command-and-control center. This does not establish public access to flight data.",
+                "sources": [
+                  "https://www.globenewswire.com/en/news-release/2023/09/08/2740105/0/en/Airobotics-Optimus-1-EX-Drone-Receives-Historic-U-S-FAA-Type-Certification-Using-ParaZero-SafeAir-Safety-System.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-1ex-2023",
+                "configuration": "2022 FAA aircraft-design background and September 2023 supplier description of the 1-EX safety installation. Airworthiness requirements are not treated as a component inventory. CPU, RAM, sensor models, battery capacity and RF bands remain unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -6218,11 +6288,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "sensors"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -39671,8 +39737,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dexa-de2020-v5",
+            "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -39686,8 +39758,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "AeroGRID+ and 900 MHz links",
+                "details": "Manufacturer lists 4G LTE AeroGRID+ mesh and 900 MHz communication systems. This establishes connectivity categories, not a unique broadcast signature or one universal cellular band.",
+                "sources": [
+                  "https://flydexa.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexa-de2020-v5",
+                "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -39696,18 +39781,57 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flat-six electric propulsion",
+                "details": "Six-rotor electric arrangement; motor, ESC and battery part numbers are unspecified.",
+                "sources": [
+                  "https://flydexa.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexa-de2020-v5",
+                "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Parachute recovery",
+                "details": "Emergency parachute system; make and model are not stated.",
+                "sources": [
+                  "https://flydexa.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexa-de2020-v5",
+                "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Manual and autonomous flight",
+                "details": "Supports both control modes and one-to-many pilot supervision; fleet software coordinates routing and dispatch.",
+                "sources": [
+                  "https://flydexa.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexa-de2020-v5",
+                "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -39723,11 +39847,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -39769,8 +39889,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dexa-de2020-v5",
+            "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -39784,8 +39910,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "AeroGRID+ and 900 MHz links",
+                "details": "Manufacturer lists 4G LTE AeroGRID+ mesh and 900 MHz communication systems. This establishes connectivity categories, not a unique broadcast signature or one universal cellular band.",
+                "sources": [
+                  "https://flydexa.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexa-de2020-v5",
+                "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -39794,18 +39933,57 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flat-six electric propulsion",
+                "details": "Six-rotor electric arrangement; motor, ESC and battery part numbers are unspecified.",
+                "sources": [
+                  "https://flydexa.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexa-de2020-v5",
+                "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Parachute recovery",
+                "details": "Emergency parachute system; make and model are not stated.",
+                "sources": [
+                  "https://flydexa.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexa-de2020-v5",
+                "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Manual and autonomous flight",
+                "details": "Supports both control modes and one-to-many pilot supervision; fleet software coordinates routing and dispatch.",
+                "sources": [
+                  "https://flydexa.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexa-de2020-v5",
+                "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -39821,11 +39999,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -62217,13 +62391,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dzyne-ultra-afrl-system",
+            "configuration": "AFRL’s documented DZYNE ULTRA architecture. Distinct from Overland AI’s ULTRA ground vehicle and DZYNE’s later ULTRA TURBO variant. Processor, memory, engine model, radio bands and installed payload part numbers are not established.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "COTS and custom avionics",
+                "details": "A converted commercial sport glider combines off-the-shelf UAS electronics with limited custom avionics. The source does not name a processor or flight-control board.",
+                "sources": [
+                  "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dzyne-ultra-afrl-system",
+                "configuration": "AFRL’s documented DZYNE ULTRA architecture. Distinct from Overland AI’s ULTRA ground vehicle and DZYNE’s later ULTRA TURBO variant. Processor, memory, engine model, radio bands and installed payload part numbers are not established.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -62232,13 +62425,39 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Satellite command and payload links",
+                "details": "Satellite connectivity carries command/control and a high-rate sensor-data feed. Satellite service, bands, modem and waveform are unspecified.",
+                "sources": [
+                  "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dzyne-ultra-afrl-system",
+                "configuration": "AFRL’s documented DZYNE ULTRA architecture. Distinct from Overland AI’s ULTRA ground vehicle and DZYNE’s later ULTRA TURBO variant. Processor, memory, engine model, radio bands and installed payload part numbers are not established.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Reconfigurable ISR payloads",
+                "details": "EO/IR, RF and other sensor payloads are configurable; GPS-hardened navigation is described without receiver or sensor models. Not every payload is installed on every aircraft.",
+                "sources": [
+                  "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dzyne-ultra-afrl-system",
+                "configuration": "AFRL’s documented DZYNE ULTRA architecture. Distinct from Overland AI’s ULTRA ground vehicle and DZYNE’s later ULTRA TURBO variant. Processor, memory, engine model, radio bands and installed payload part numbers are not established.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -62252,8 +62471,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operator mission control",
+                "details": "Ground control supports point-and-click tasking. Published architecture is not a decodable RF signature.",
+                "sources": [
+                  "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dzyne-ultra-afrl-system",
+                "configuration": "AFRL’s documented DZYNE ULTRA architecture. Distinct from Overland AI’s ULTRA ground vehicle and DZYNE’s later ULTRA TURBO variant. Processor, memory, engine model, radio bands and installed payload part numbers are not established.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -62267,13 +62499,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -98672,13 +98900,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "manna-delivery-aircraft-2026",
+            "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Three flight computers",
+                "details": "Three flight-control computers cross-check one another; processor and board part numbers are not identified.",
+                "sources": [
+                  "https://www.manna.aero/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -98692,23 +98939,77 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Redundant sensors and delivery camera",
+                "details": "February 2026 fleet description specifies redundant sensors without naming them. June 2026 camera policy describes a low-resolution drop-zone check image deleted after delivery; this is the manufacturer’s stated behavior, not an independent audit.",
+                "sources": [
+                  "https://www.manna.aero/blog/advanced-tech-behind-manna",
+                  "https://www.manna.aero/blog/what-do-our-drones-see"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric propulsion and removable batteries",
+                "details": "Manna 2 is all-electric with replaceable batteries at landing bases. The February 2026 fleet description reports eight motor pods and coaxial propulsion; it does not identify a motor model or map that count to every historical revision.",
+                "sources": [
+                  "https://www.manna.aero/technology",
+                  "https://www.manna.aero/blog/advanced-tech-behind-manna"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Tether and emergency parachute",
+                "details": "Packages descend on a tether while the aircraft remains airborne; a parachute provides emergency recovery.",
+                "sources": [
+                  "https://www.manna.aero/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Manna OS fleet coordination",
+                "details": "Assigns aircraft, plans routes and supports multi-aircraft operator supervision. “Manna Mesh Network” describes connected delivery bases; it does not establish an RF mesh protocol or radio chipset.",
+                "sources": [
+                  "https://www.manna.aero/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -98722,13 +99023,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -98770,13 +99066,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "manna-delivery-aircraft-2026",
+            "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Three flight computers",
+                "details": "Three flight-control computers cross-check one another; processor and board part numbers are not identified.",
+                "sources": [
+                  "https://www.manna.aero/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -98790,23 +99105,77 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Redundant sensors and delivery camera",
+                "details": "February 2026 fleet description specifies redundant sensors without naming them. June 2026 camera policy describes a low-resolution drop-zone check image deleted after delivery; this is the manufacturer’s stated behavior, not an independent audit.",
+                "sources": [
+                  "https://www.manna.aero/blog/advanced-tech-behind-manna",
+                  "https://www.manna.aero/blog/what-do-our-drones-see"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric propulsion and removable batteries",
+                "details": "Manna 2 is all-electric with replaceable batteries at landing bases. The February 2026 fleet description reports eight motor pods and coaxial propulsion; it does not identify a motor model or map that count to every historical revision.",
+                "sources": [
+                  "https://www.manna.aero/technology",
+                  "https://www.manna.aero/blog/advanced-tech-behind-manna"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Tether and emergency parachute",
+                "details": "Packages descend on a tether while the aircraft remains airborne; a parachute provides emergency recovery.",
+                "sources": [
+                  "https://www.manna.aero/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Manna OS fleet coordination",
+                "details": "Assigns aircraft, plans routes and supports multi-aircraft operator supervision. “Manna Mesh Network” describes connected delivery bases; it does not establish an RF mesh protocol or radio chipset.",
+                "sources": [
+                  "https://www.manna.aero/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "manna-delivery-aircraft-2026",
+                "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -98820,13 +99189,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -108103,13 +108467,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "airobotics-optimus-system-2026",
+            "configuration": "Current platform description, linked to the Ondas catalog record through its Airobotics subsidiary. Platform-level payload choices and airbase processing must not be assigned to every 1-EX airframe. No processor, RAM, sensor part numbers, radio bands or propulsion revision are specified.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Airbase edge processing",
+                "details": "The ground infrastructure processes and analyzes mission data on site; the manufacturer does not identify its CPU or an onboard aircraft processor.",
+                "sources": [
+                  "https://www.airoboticsdrones.com/optimus/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-system-2026",
+                "configuration": "Current platform description, linked to the Ondas catalog record through its Airobotics subsidiary. Platform-level payload choices and airbase processing must not be assigned to every 1-EX airframe. No processor, RAM, sensor part numbers, radio bands or propulsion revision are specified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -108123,23 +108506,76 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Selectable mission payloads",
+                "details": "Listed choices include dual EO/IR video, LiDAR and mapping payloads. These are alternatives selected by mission, not a verified simultaneous installation.",
+                "sources": [
+                  "https://www.airoboticsdrones.com/optimus/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-system-2026",
+                "configuration": "Current platform description, linked to the Ondas catalog record through its Airobotics subsidiary. Platform-level payload choices and airbase processing must not be assigned to every 1-EX airframe. No processor, RAM, sensor part numbers, radio bands or propulsion revision are specified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Automatic battery exchange",
+                "details": "Airbase swaps aircraft batteries between missions; chemistry, voltage and capacity are not published here.",
+                "sources": [
+                  "https://www.airoboticsdrones.com/optimus/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-system-2026",
+                "configuration": "Current platform description, linked to the Ondas catalog record through its Airobotics subsidiary. Platform-level payload choices and airbase processing must not be assigned to every 1-EX airframe. No processor, RAM, sensor part numbers, radio bands or propulsion revision are specified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Launch, recovery and payload exchange",
+                "details": "Airbase integrates automated departure, landing and payload changes. Ondas identifies Optimus as its Airobotics platform.",
+                "sources": [
+                  "https://www.airoboticsdrones.com/optimus/",
+                  "https://www.ondas.com/post/ondas-holdings-airobotics-optimus-1-ex-drone-receives-historic-u-s-faa-type-certification"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-system-2026",
+                "configuration": "Current platform description, linked to the Ondas catalog record through its Airobotics subsidiary. Platform-level payload choices and airbase processing must not be assigned to every 1-EX airframe. No processor, RAM, sensor part numbers, radio bands or propulsion revision are specified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Local analysis and video streaming",
+                "details": "Mission software supports low-latency video and on-site data analysis; transport protocol and access endpoints are not specified.",
+                "sources": [
+                  "https://www.airoboticsdrones.com/optimus/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airobotics-optimus-system-2026",
+                "configuration": "Current platform description, linked to the Ondas catalog record through its Airobotics subsidiary. Platform-level payload choices and airbase processing must not be assigned to every 1-EX airframe. No processor, RAM, sensor part numbers, radio bands or propulsion revision are specified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -108153,13 +108589,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -342162,6 +342593,281 @@
             ]
           }
         ]
+      },
+      {
+        "id": "manna-delivery-aircraft-2026",
+        "manufacturer": "Manna Air Delivery",
+        "models": [
+          "Manna 2"
+        ],
+        "configuration": "Current Manna 2 technology page and dated 2026 fleet descriptions. Shown as a documented configuration for generic Manna delivery records, not a bill of materials for every historical aircraft. CPU, RAM, radio chipset/bands, motor models and battery capacity remain unpublished.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Three flight computers",
+            "details": "Three flight-control computers cross-check one another; processor and board part numbers are not identified.",
+            "sources": [
+              "https://www.manna.aero/technology"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Redundant sensors and delivery camera",
+            "details": "February 2026 fleet description specifies redundant sensors without naming them. June 2026 camera policy describes a low-resolution drop-zone check image deleted after delivery; this is the manufacturer’s stated behavior, not an independent audit.",
+            "sources": [
+              "https://www.manna.aero/blog/advanced-tech-behind-manna",
+              "https://www.manna.aero/blog/what-do-our-drones-see"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric propulsion and removable batteries",
+            "details": "Manna 2 is all-electric with replaceable batteries at landing bases. The February 2026 fleet description reports eight motor pods and coaxial propulsion; it does not identify a motor model or map that count to every historical revision.",
+            "sources": [
+              "https://www.manna.aero/technology",
+              "https://www.manna.aero/blog/advanced-tech-behind-manna"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Tether and emergency parachute",
+            "details": "Packages descend on a tether while the aircraft remains airborne; a parachute provides emergency recovery.",
+            "sources": [
+              "https://www.manna.aero/technology"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Manna OS fleet coordination",
+            "details": "Assigns aircraft, plans routes and supports multi-aircraft operator supervision. “Manna Mesh Network” describes connected delivery bases; it does not establish an RF mesh protocol or radio chipset.",
+            "sources": [
+              "https://www.manna.aero/technology"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Manna Aero",
+            "models": [
+              "Manna Delivery Drone"
+            ]
+          },
+          {
+            "manufacturer": "Manna Air Delivery",
+            "models": [
+              "Manna Delivery Drone"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dexa-de2020-v5",
+        "manufacturer": "DEXA",
+        "models": [
+          "Telegrid DE-2020 v5",
+          "DE-2020 v5"
+        ],
+        "configuration": "DE-2020 v5 configuration identified on DEXA’s technology page. Generic DE-2020 and delivery-drone records expose this named configuration; other revisions and the separate Quadra aircraft do not inherit it. CPU, RAM, navigation-sensor models, battery capacity and modem part numbers are not disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Flat-six electric propulsion",
+            "details": "Six-rotor electric arrangement; motor, ESC and battery part numbers are unspecified.",
+            "sources": [
+              "https://flydexa.com/technology/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "AeroGRID+ and 900 MHz links",
+            "details": "Manufacturer lists 4G LTE AeroGRID+ mesh and 900 MHz communication systems. This establishes connectivity categories, not a unique broadcast signature or one universal cellular band.",
+            "sources": [
+              "https://flydexa.com/technology/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Parachute recovery",
+            "details": "Emergency parachute system; make and model are not stated.",
+            "sources": [
+              "https://flydexa.com/technology/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Manual and autonomous flight",
+            "details": "Supports both control modes and one-to-many pilot supervision; fleet software coordinates routing and dispatch.",
+            "sources": [
+              "https://flydexa.com/technology/"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "DEXA",
+            "models": [
+              "DE-2020",
+              "Dexa Delivery Drone"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "airobotics-optimus-1ex-2023",
+        "manufacturer": "Airobotics",
+        "models": [
+          "Optimus 1-EX",
+          "Optimus-1EX"
+        ],
+        "configuration": "2022 FAA aircraft-design background and September 2023 supplier description of the 1-EX safety installation. Airworthiness requirements are not treated as a component inventory. CPU, RAM, sensor models, battery capacity and RF bands remain unspecified.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery-electric rotorcraft",
+            "details": "FAA design background identifies battery-powered electric motors for vertical and forward flight; motor count and part numbers are not supplied.",
+            "sources": [
+              "https://www.govinfo.gov/content/pkg/FR-2022-03-28/pdf/2022-06380.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Customized ParaZero SafeAir",
+            "details": "Supplier identifies a parachute-based safety system developed with Airobotics specifically for Optimus-1EX.",
+            "sources": [
+              "https://www.globenewswire.com/en/news-release/2023/09/08/2740105/0/en/Airobotics-Optimus-1-EX-Drone-Receives-Historic-U-S-FAA-Type-Certification-Using-ParaZero-SafeAir-Safety-System.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Automated airbase exchange",
+            "details": "The associated base changes batteries and loads mission-specific sensor payloads; these are ground-system functions, not an onboard battery-changing mechanism.",
+            "sources": [
+              "https://www.globenewswire.com/en/news-release/2023/09/08/2740105/0/en/Airobotics-Optimus-1-EX-Drone-Receives-Historic-U-S-FAA-Type-Certification-Using-ParaZero-SafeAir-Safety-System.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft command links",
+            "details": "FAA background identifies communication links as associated system elements; no frequency, modem or protocol is established by this source.",
+            "sources": [
+              "https://www.govinfo.gov/content/pkg/FR-2022-03-28/pdf/2022-06380.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Remote command-and-control supervision",
+            "details": "Supplier describes missions overseen from a remote command-and-control center. This does not establish public access to flight data.",
+            "sources": [
+              "https://www.globenewswire.com/en/news-release/2023/09/08/2740105/0/en/Airobotics-Optimus-1-EX-Drone-Receives-Historic-U-S-FAA-Type-Certification-Using-ParaZero-SafeAir-Safety-System.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "airobotics-optimus-system-2026",
+        "manufacturer": "Airobotics",
+        "models": [
+          "Optimus system (2026 reference)"
+        ],
+        "configuration": "Current platform description, linked to the Ondas catalog record through its Airobotics subsidiary. Platform-level payload choices and airbase processing must not be assigned to every 1-EX airframe. No processor, RAM, sensor part numbers, radio bands or propulsion revision are specified.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Airbase edge processing",
+            "details": "The ground infrastructure processes and analyzes mission data on site; the manufacturer does not identify its CPU or an onboard aircraft processor.",
+            "sources": [
+              "https://www.airoboticsdrones.com/optimus/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Selectable mission payloads",
+            "details": "Listed choices include dual EO/IR video, LiDAR and mapping payloads. These are alternatives selected by mission, not a verified simultaneous installation.",
+            "sources": [
+              "https://www.airoboticsdrones.com/optimus/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Automatic battery exchange",
+            "details": "Airbase swaps aircraft batteries between missions; chemistry, voltage and capacity are not published here.",
+            "sources": [
+              "https://www.airoboticsdrones.com/optimus/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Launch, recovery and payload exchange",
+            "details": "Airbase integrates automated departure, landing and payload changes. Ondas identifies Optimus as its Airobotics platform.",
+            "sources": [
+              "https://www.airoboticsdrones.com/optimus/",
+              "https://www.ondas.com/post/ondas-holdings-airobotics-optimus-1-ex-drone-receives-historic-u-s-faa-type-certification"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Local analysis and video streaming",
+            "details": "Mission software supports low-latency video and on-site data analysis; transport protocol and access endpoints are not specified.",
+            "sources": [
+              "https://www.airoboticsdrones.com/optimus/"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Ondas Holdings, Inc.",
+            "models": [
+              "Optimus Autonomous Drone System"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dzyne-ultra-afrl-system",
+        "manufacturer": "DZYNE Technologies",
+        "models": [
+          "ULTRA (Unmanned Long-endurance Tactical Reconnaissance Aircraft)"
+        ],
+        "configuration": "AFRL’s documented DZYNE ULTRA architecture. Distinct from Overland AI’s ULTRA ground vehicle and DZYNE’s later ULTRA TURBO variant. Processor, memory, engine model, radio bands and installed payload part numbers are not established.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "COTS and custom avionics",
+            "details": "A converted commercial sport glider combines off-the-shelf UAS electronics with limited custom avionics. The source does not name a processor or flight-control board.",
+            "sources": [
+              "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Satellite command and payload links",
+            "details": "Satellite connectivity carries command/control and a high-rate sensor-data feed. Satellite service, bands, modem and waveform are unspecified.",
+            "sources": [
+              "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Reconfigurable ISR payloads",
+            "details": "EO/IR, RF and other sensor payloads are configurable; GPS-hardened navigation is described without receiver or sensor models. Not every payload is installed on every aircraft.",
+            "sources": [
+              "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operator mission control",
+            "details": "Ground control supports point-and-click tasking. Published architecture is not a decodable RF signature.",
+            "sources": [
+              "https://www.afresearchlab.com/unmanned-long-endurance-tactical-reconnaissance-aircraft-ultra/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -342178,8 +342884,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 843,
-    "devices_with_system_profiles": 748,
-    "devices_with_documented_compute": 367
+    "system_profiles": 848,
+    "devices_with_system_profiles": 755,
+    "devices_with_documented_compute": 371
   }
 }
