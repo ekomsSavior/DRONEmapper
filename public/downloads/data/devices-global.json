@@ -75169,8 +75169,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hikrobot-lmr-2022q3-family",
+            "configuration": "Manufacturer catalog R.101.EN.22Q3.1, LMR table pp. 28–29, hosted by distributor Oskon. Historical configurations; newer D/E models are not assumed identical. CPU, RAM, radio and battery capacity are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -75189,18 +75195,69 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and protection",
+                "details": "2D-code or SLAM variants; front laser protection on all four. Q2L-300-A has rear ultrasonic protection; side/rear protection is optional on the other three.",
+                "sources": [
+                  "https://www.oskon.az/assets/img/hikrobot/hikrobot.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hikrobot-lmr-2022q3-family",
+                "configuration": "Manufacturer catalog R.101.EN.22Q3.1, LMR table pp. 28–29, hosted by distributor Oskon. Historical configurations; newer D/E models are not assumed identical. CPU, RAM, radio and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Charging and endurance",
+                "details": "All list eight-hour endurance under rated conditions. Q2L-300-A and Q3-600-C charge in up to 1.5 hours; Q7-1000-D and Q7-1500-D in up to two hours.",
+                "sources": [
+                  "https://www.oskon.az/assets/img/hikrobot/hikrobot.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hikrobot-lmr-2022q3-family",
+                "configuration": "Manufacturer catalog R.101.EN.22Q3.1, LMR table pp. 28–29, hosted by distributor Oskon. Historical configurations; newer D/E models are not assumed identical. CPU, RAM, radio and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Listed LMR configurations",
+                "details": "Q2L-300-A: 300 kg payload, 70 mm lift. Q3-600-C: 600 kg/60 mm. Q7-1000-D and Q7-1500-D: 1000/1500 kg, both 60 mm lift. All use electric lifting motors.",
+                "sources": [
+                  "https://www.oskon.az/assets/img/hikrobot/hikrobot.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hikrobot-lmr-2022q3-family",
+                "configuration": "Manufacturer catalog R.101.EN.22Q3.1, LMR table pp. 28–29, hosted by distributor Oskon. Historical configurations; newer D/E models are not assumed identical. CPU, RAM, radio and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Local controls",
+                "details": "Display, audible alarm, front/rear bumpers and front/rear emergency-stop buttons.",
+                "sources": [
+                  "https://www.oskon.az/assets/img/hikrobot/hikrobot.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hikrobot-lmr-2022q3-family",
+                "configuration": "Manufacturer catalog R.101.EN.22Q3.1, LMR table pp. 28–29, hosted by distributor Oskon. Historical configurations; newer D/E models are not assumed identical. CPU, RAM, radio and battery capacity are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -75233,9 +75290,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -78546,8 +78600,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "insitu-rq21a-2021",
+            "configuration": "Insitu January 2021 RQ-21A product card. CPU, RAM, radio chipset and frequency assignments are unspecified; modern Integrator/ScanEagle components are not inherited.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -78561,23 +78621,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Command and relay",
+                "details": "Encrypted line-of-sight command link; communications-relay payload capability. Exact frequency and modem model are not named.",
+                "sources": [
+                  "https://www.insitu.com/wp-content/uploads/2021/01/RQ-21A_Blackjack_ProductCard_DU011221.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "insitu-rq21a-2021",
+                "configuration": "Insitu January 2021 RQ-21A product card. CPU, RAM, radio chipset and frequency assignments are unspecified; modern Integrator/ScanEagle components are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Published payload suite",
+                "details": "EO camera with 4× digital zoom, mid-wave infrared imager, laser rangefinder and AIS reception. Modular architecture supports mission-specific payload changes.",
+                "sources": [
+                  "https://www.insitu.com/wp-content/uploads/2021/01/RQ-21A_Blackjack_ProductCard_DU011221.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "insitu-rq21a-2021",
+                "configuration": "Insitu January 2021 RQ-21A product card. CPU, RAM, radio chipset and frequency assignments are unspecified; modern Integrator/ScanEagle components are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Engine and payload",
+                "details": "8 hp reciprocating engine with electronic fuel injection, JP-5/JP-8. Maximum takeoff mass 61 kg; payload limit 17.7 kg varies with endurance requirement.",
+                "sources": [
+                  "https://www.insitu.com/wp-content/uploads/2021/01/RQ-21A_Blackjack_ProductCard_DU011221.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "insitu-rq21a-2021",
+                "configuration": "Insitu January 2021 RQ-21A product card. CPU, RAM, radio chipset and frequency assignments are unspecified; modern Integrator/ScanEagle components are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Airframe and payload integration",
+                "details": "Open payload architecture; runway-independent system designed for land or ship operation.",
+                "sources": [
+                  "https://www.insitu.com/wp-content/uploads/2021/01/RQ-21A_Blackjack_ProductCard_DU011221.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "insitu-rq21a-2021",
+                "configuration": "Insitu January 2021 RQ-21A product card. CPU, RAM, radio chipset and frequency assignments are unspecified; modern Integrator/ScanEagle components are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -78609,10 +78721,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -78725,8 +78833,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "insitu-scaneagle-current-configurable",
+            "configuration": "Current manufacturer product reference; payloads and links are configurable. Processor, RAM, radio chipset and engine part number are not disclosed. Older ScanEagle engine specifications are not assumed current.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -78740,28 +78854,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control and imagery",
+                "details": "Analog or encrypted digital video links; encrypted or unencrypted command link options. PLEO SATCOM is a configurable beyond-line-of-sight capability, not a universal fitted radio.",
+                "sources": [
+                  "https://www.insitu.com/products/scaneagle"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "insitu-scaneagle-current-configurable",
+                "configuration": "Current manufacturer product reference; payloads and links are configurable. Processor, RAM, radio chipset and engine part number are not disclosed. Older ScanEagle engine specifications are not assumed current.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Mission and navigation equipment",
+                "details": "Selectable EO, MWIR/EO and synthetic-aperture-radar payloads; AIS vessel-identification reception and visual-based navigation capabilities. Exact installed payload must be checked.",
+                "sources": [
+                  "https://www.insitu.com/products/scaneagle"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "insitu-scaneagle-current-configurable",
+                "configuration": "Current manufacturer product reference; payloads and links are configurable. Processor, RAM, radio chipset and engine part number are not disclosed. Older ScanEagle engine specifications are not assumed current.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Propulsion and payload power",
+                "details": "Heavy-fuel engine using JP-5/JP-8, or C-10 gasoline engine. Up to 150 W payload power; maximum takeoff mass 28 kg and payload 8 kg.",
+                "sources": [
+                  "https://www.insitu.com/products/scaneagle"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "insitu-scaneagle-current-configurable",
+                "configuration": "Current manufacturer product reference; payloads and links are configurable. Processor, RAM, radio chipset and engine part number are not disclosed. Older ScanEagle engine specifications are not assumed current.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Launch and recovery",
+                "details": "Rail launcher and Skyhook recovery; VTOL ground-system option avoids aircraft modification.",
+                "sources": [
+                  "https://www.insitu.com/products/scaneagle"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "insitu-scaneagle-current-configurable",
+                "configuration": "Current manufacturer product reference; payloads and links are configurable. Processor, RAM, radio chipset and engine part number are not disclosed. Older ScanEagle engine specifications are not assumed current.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control integration",
+                "details": "Common ground control station and third-party control integrations; configurable mission payload software.",
+                "sources": [
+                  "https://www.insitu.com/products/scaneagle"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "insitu-scaneagle-current-configurable",
+                "configuration": "Current manufacturer product reference; payloads and links are configurable. Processor, RAM, radio chipset and engine part number are not disclosed. Older ScanEagle engine specifications are not assumed current.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -78787,12 +78966,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -80690,8 +80864,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "keenon-t9-pro-2023-brochure",
+            "configuration": "KEENON Chinese product brochure hosted by World Robot Conference, PDF page 17. This is not the base T9. CPU, RAM, radio chipset and sensor SKUs are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -80710,23 +80890,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Visual navigation and obstacle sensing",
+                "details": "Overhead visual sensor recognizes ceiling features for VSLAM localization; three-dimensional vision detects steps and feet.",
+                "sources": [
+                  "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "keenon-t9-pro-2023-brochure",
+                "configuration": "KEENON Chinese product brochure hosted by World Robot Conference, PDF page 17. This is not the base T9. CPU, RAM, radio chipset and sensor SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Tray occupancy",
+                "details": "Radar-based tray sensing detects when items are added or removed. Radar frequency and chipset are not provided; this is not an established scanning signature.",
+                "sources": [
+                  "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "keenon-t9-pro-2023-brochure",
+                "configuration": "KEENON Chinese product brochure hosted by World Robot Conference, PDF page 17. This is not the base T9. CPU, RAM, radio chipset and sensor SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and chassis",
+                "details": "48 V / 12 Ah battery; advertised 12–15-hour operation. Multi-link damping suspension, 45.2 kg net mass and 0.8 m/s maximum speed.",
+                "sources": [
+                  "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "keenon-t9-pro-2023-brochure",
+                "configuration": "KEENON Chinese product brochure hosted by World Robot Conference, PDF page 17. This is not the base T9. CPU, RAM, radio chipset and sensor SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Load handling",
+                "details": "527×500×1266 mm body; 486×384 mm trays. Published payload 40 kg total, 10 kg per layer.",
+                "sources": [
+                  "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "keenon-t9-pro-2023-brochure",
+                "configuration": "KEENON Chinese product brochure hosted by World Robot Conference, PDF page 17. This is not the base T9. CPU, RAM, radio chipset and sensor SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Delivery interaction",
+                "details": "Visual/text, light and voice prompts indicate the collection layer; detected collection allows the robot to depart automatically.",
+                "sources": [
+                  "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "keenon-t9-pro-2023-brochure",
+                "configuration": "KEENON Chinese product brochure hosted by World Robot Conference, PDF page 17. This is not the base T9. CPU, RAM, radio chipset and sensor SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -80743,10 +80987,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -80886,8 +81126,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "kemaro-k900-gen2-published",
+            "configuration": "Manufacturer-linked Gen II factsheet. Processor, RAM, radio modem and sensor part numbers are undisclosed. Experimental university collection rigs are not treated as production components.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -80906,23 +81152,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation sensors",
+                "details": "270° 2D LiDAR and a 3D sensor covering lower blind spots; onboard mapping and obstacle handling.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/67b31cb8992beaf7b3fe891d/67ea92354c43dd67f1303be9_d2f8868c409f5bad8fabb177fa690fa8_KEMARO%20Factsheet%20Gen%20II_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kemaro-k900-gen2-published",
+                "configuration": "Manufacturer-linked Gen II factsheet. Processor, RAM, radio modem and sensor part numbers are undisclosed. Experimental university collection rigs are not treated as production components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and drive",
+                "details": "36 V lithium-ion battery; specified maximum four-hour operation and 90-minute charge. Battery capacity is not provided.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/67b31cb8992beaf7b3fe891d/67ea92354c43dd67f1303be9_d2f8868c409f5bad8fabb177fa690fa8_KEMARO%20Factsheet%20Gen%20II_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kemaro-k900-gen2-published",
+                "configuration": "Manufacturer-linked Gen II factsheet. Processor, RAM, radio modem and sensor part numbers are undisclosed. Experimental university collection rigs are not treated as production components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cleaning hardware",
+                "details": "90 cm cleaning width, 35 L dirt container and 32 kg total mass. Blower draws dust through a 2 m² filter with automatic cleaning; BlueSpot light indicates movement.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/67b31cb8992beaf7b3fe891d/67ea92354c43dd67f1303be9_d2f8868c409f5bad8fabb177fa690fa8_KEMARO%20Factsheet%20Gen%20II_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kemaro-k900-gen2-published",
+                "configuration": "Manufacturer-linked Gen II factsheet. Processor, RAM, radio modem and sensor part numbers are undisclosed. Experimental university collection rigs are not treated as production components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Navigation and fleet software",
+                "details": "Onboard mapping/localization; KEMARO Sphere web/cloud platform for reports, robot status and remote software updates. No particular RF transport is established by this cloud feature.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/67b31cb8992beaf7b3fe891d/67ea92354c43dd67f1303be9_d2f8868c409f5bad8fabb177fa690fa8_KEMARO%20Factsheet%20Gen%20II_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kemaro-k900-gen2-published",
+                "configuration": "Manufacturer-linked Gen II factsheet. Processor, RAM, radio modem and sensor part numbers are undisclosed. Experimental university collection rigs are not treated as production components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -80939,10 +81237,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -81314,8 +81608,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "kewazo-liftbot-product-reference",
+            "configuration": "Published LIFTBOT product configuration. CPU, memory, battery chemistry/capacity, radio transport and sensor SKUs remain undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -81339,18 +81639,69 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery operation",
+                "details": "Published ten-hour operating time and three-hour charge from a 110/230 V outlet. These are operating claims, not battery capacity specifications.",
+                "sources": [
+                  "https://www.kewazo.com/product"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kewazo-liftbot-product-reference",
+                "configuration": "Published LIFTBOT product configuration. CPU, memory, battery chemistry/capacity, radio transport and sensor SKUs remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Rail and handling system",
+                "details": "Rail-mounted lifting robot with interchangeable load platforms; temporary scaffold mounting or longer-term attachment to the structure.",
+                "sources": [
+                  "https://www.kewazo.com/product"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kewazo-liftbot-product-reference",
+                "configuration": "Published LIFTBOT product configuration. CPU, memory, battery chemistry/capacity, radio transport and sensor SKUs remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Operator interface",
+                "details": "Remote-control operation and automatic lift cycles. The source does not identify the remote-control radio protocol.",
+                "sources": [
+                  "https://www.kewazo.com/product"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kewazo-liftbot-product-reference",
+                "configuration": "Published LIFTBOT product configuration. CPU, memory, battery chemistry/capacity, radio transport and sensor SKUs remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "ONSITE telemetry",
+                "details": "Dashboard reports transported weight, height, operating time, lift cycles, GPS and utilization. These data fields do not establish the exact physical sensors or their chipsets.",
+                "sources": [
+                  "https://www.kewazo.com/product"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kewazo-liftbot-product-reference",
+                "configuration": "Published LIFTBOT product configuration. CPU, memory, battery chemistry/capacity, radio transport and sensor SKUs remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -81368,9 +81719,6 @@
           "memory",
           "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -83751,8 +84099,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "l3harris-t7-september2025",
+            "configuration": "September 2025 manufacturer sheet. Main/control-unit CPUs, RAM and radio silicon are undisclosed. Robot and handheld-controller batteries are different configurations.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -83766,28 +84120,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Communication options",
+                "details": "MIMO radios in the shown configuration; no frequency or PHY specified. Optional radio repeater and motorized fiber-optic tether.",
+                "sources": [
+                  "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "l3harris-t7-september2025",
+                "configuration": "September 2025 manufacturer sheet. Main/control-unit CPUs, RAM and radio silicon are undisclosed. Robot and handheld-controller batteries are different configurations.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Cameras and manipulation",
+                "details": "Front/rear driving cameras, 30× PTZ mast camera, zoom gripper camera and four corner cameras. Force-sensing gripper with haptic feedback; mid-arm camera, GPS and laser rangefinder are optional.",
+                "sources": [
+                  "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "l3harris-t7-september2025",
+                "configuration": "September 2025 manufacturer sheet. Main/control-unit CPUs, RAM and radio silicon are undisclosed. Robot and handheld-controller batteries are different configurations.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Vehicle power and motion",
+                "details": "Twelve BB-2590 batteries; 322 kg including arm and batteries. Skid-steer tracks, up to 7 km/h.",
+                "sources": [
+                  "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "l3harris-t7-september2025",
+                "configuration": "September 2025 manufacturer sheet. Main/control-unit CPUs, RAM and radio silicon are undisclosed. Robot and handheld-controller batteries are different configurations.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Ground controller",
+                "details": "One BB-2590 or external 24–30 V DC; 16 kg controller including battery.",
+                "sources": [
+                  "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "l3harris-t7-september2025",
+                "configuration": "September 2025 manufacturer sheet. Main/control-unit CPUs, RAM and radio silicon are undisclosed. Robot and handheld-controller batteries are different configurations.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Operator controls",
+                "details": "Daylight-readable controller display and haptic manipulation controls; handheld controller and two-way audio are optional accessories.",
+                "sources": [
+                  "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "l3harris-t7-september2025",
+                "configuration": "September 2025 manufacturer sheet. Main/control-unit CPUs, RAM and radio silicon are undisclosed. Robot and handheld-controller batteries are different configurations.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Manipulator control",
+                "details": "Preset poses and movement-rewind function; no onboard operating-system version is stated.",
+                "sources": [
+                  "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "l3harris-t7-september2025",
+                "configuration": "September 2025 manufacturer sheet. Main/control-unit CPUs, RAM and radio silicon are undisclosed. Robot and handheld-controller batteries are different configurations.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -83803,11 +84234,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -84494,8 +84920,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "limx-w1-launch-reference",
+            "configuration": "September 2023 manufacturer launch reference; partial architecture only. CPU, memory, battery, RF hardware and exact terrain-sensor modules are not published here. TRON/Oli components are not assigned to W1.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -84514,13 +84946,39 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Terrain perception",
+                "details": "Real-time terrain perception supports gait planning and stair traversal; sensor types and part numbers are unspecified.",
+                "sources": [
+                  "https://www.limxdynamics.com/en/news/BK000028"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "limx-w1-launch-reference",
+                "configuration": "September 2023 manufacturer launch reference; partial architecture only. CPU, memory, battery, RF hardware and exact terrain-sensor modules are not published here. TRON/Oli components are not assigned to W1.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Locomotion hardware",
+                "details": "Four wheel-legged limbs driven by proprietary actuators; rolling and stepping modes. Actuator SKU and battery capacity are not identified.",
+                "sources": [
+                  "https://www.limxdynamics.com/en/news/BK000028"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "limx-w1-launch-reference",
+                "configuration": "September 2023 manufacturer launch reference; partial architecture only. CPU, memory, battery, RF hardware and exact terrain-sensor modules are not published here. TRON/Oli components are not assigned to W1.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -84529,8 +84987,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Locomotion control",
+                "details": "LimX Motion Intelligence and Perceptive Locomotion combine perception and motion control; manufacturer describes reinforcement learning and model-predictive-control research foundations.",
+                "sources": [
+                  "https://www.limxdynamics.com/en/news/BK000028"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "limx-w1-launch-reference",
+                "configuration": "September 2023 manufacturer launch reference; partial architecture only. CPU, memory, battery, RF hardware and exact terrain-sensor modules are not published here. TRON/Oli components are not assigned to W1.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -84547,10 +85018,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -286845,6 +287313,378 @@
             ]
           }
         ]
+      },
+      {
+        "id": "insitu-scaneagle-current-configurable",
+        "manufacturer": "Insitu",
+        "models": [
+          "ScanEagle"
+        ],
+        "configuration": "Current manufacturer product reference; payloads and links are configurable. Processor, RAM, radio chipset and engine part number are not disclosed. Older ScanEagle engine specifications are not assumed current.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Propulsion and payload power",
+            "details": "Heavy-fuel engine using JP-5/JP-8, or C-10 gasoline engine. Up to 150 W payload power; maximum takeoff mass 28 kg and payload 8 kg.",
+            "sources": [
+              "https://www.insitu.com/products/scaneagle"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Control and imagery",
+            "details": "Analog or encrypted digital video links; encrypted or unencrypted command link options. PLEO SATCOM is a configurable beyond-line-of-sight capability, not a universal fitted radio.",
+            "sources": [
+              "https://www.insitu.com/products/scaneagle"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Mission and navigation equipment",
+            "details": "Selectable EO, MWIR/EO and synthetic-aperture-radar payloads; AIS vessel-identification reception and visual-based navigation capabilities. Exact installed payload must be checked.",
+            "sources": [
+              "https://www.insitu.com/products/scaneagle"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Launch and recovery",
+            "details": "Rail launcher and Skyhook recovery; VTOL ground-system option avoids aircraft modification.",
+            "sources": [
+              "https://www.insitu.com/products/scaneagle"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control integration",
+            "details": "Common ground control station and third-party control integrations; configurable mission payload software.",
+            "sources": [
+              "https://www.insitu.com/products/scaneagle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "insitu-rq21a-2021",
+        "manufacturer": "Insitu",
+        "models": [
+          "RQ-21 Blackjack",
+          "RQ-21A Blackjack"
+        ],
+        "configuration": "Insitu January 2021 RQ-21A product card. CPU, RAM, radio chipset and frequency assignments are unspecified; modern Integrator/ScanEagle components are not inherited.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Engine and payload",
+            "details": "8 hp reciprocating engine with electronic fuel injection, JP-5/JP-8. Maximum takeoff mass 61 kg; payload limit 17.7 kg varies with endurance requirement.",
+            "sources": [
+              "https://www.insitu.com/wp-content/uploads/2021/01/RQ-21A_Blackjack_ProductCard_DU011221.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Command and relay",
+            "details": "Encrypted line-of-sight command link; communications-relay payload capability. Exact frequency and modem model are not named.",
+            "sources": [
+              "https://www.insitu.com/wp-content/uploads/2021/01/RQ-21A_Blackjack_ProductCard_DU011221.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Published payload suite",
+            "details": "EO camera with 4× digital zoom, mid-wave infrared imager, laser rangefinder and AIS reception. Modular architecture supports mission-specific payload changes.",
+            "sources": [
+              "https://www.insitu.com/wp-content/uploads/2021/01/RQ-21A_Blackjack_ProductCard_DU011221.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Airframe and payload integration",
+            "details": "Open payload architecture; runway-independent system designed for land or ship operation.",
+            "sources": [
+              "https://www.insitu.com/wp-content/uploads/2021/01/RQ-21A_Blackjack_ProductCard_DU011221.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kemaro-k900-gen2-published",
+        "manufacturer": "KEMARO",
+        "models": [
+          "KEMARO K900 Gen II",
+          "K900 Gen II"
+        ],
+        "configuration": "Manufacturer-linked Gen II factsheet. Processor, RAM, radio modem and sensor part numbers are undisclosed. Experimental university collection rigs are not treated as production components.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery and drive",
+            "details": "36 V lithium-ion battery; specified maximum four-hour operation and 90-minute charge. Battery capacity is not provided.",
+            "sources": [
+              "https://cdn.prod.website-files.com/67b31cb8992beaf7b3fe891d/67ea92354c43dd67f1303be9_d2f8868c409f5bad8fabb177fa690fa8_KEMARO%20Factsheet%20Gen%20II_EN.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation sensors",
+            "details": "270° 2D LiDAR and a 3D sensor covering lower blind spots; onboard mapping and obstacle handling.",
+            "sources": [
+              "https://cdn.prod.website-files.com/67b31cb8992beaf7b3fe891d/67ea92354c43dd67f1303be9_d2f8868c409f5bad8fabb177fa690fa8_KEMARO%20Factsheet%20Gen%20II_EN.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cleaning hardware",
+            "details": "90 cm cleaning width, 35 L dirt container and 32 kg total mass. Blower draws dust through a 2 m² filter with automatic cleaning; BlueSpot light indicates movement.",
+            "sources": [
+              "https://cdn.prod.website-files.com/67b31cb8992beaf7b3fe891d/67ea92354c43dd67f1303be9_d2f8868c409f5bad8fabb177fa690fa8_KEMARO%20Factsheet%20Gen%20II_EN.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Navigation and fleet software",
+            "details": "Onboard mapping/localization; KEMARO Sphere web/cloud platform for reports, robot status and remote software updates. No particular RF transport is established by this cloud feature.",
+            "sources": [
+              "https://cdn.prod.website-files.com/67b31cb8992beaf7b3fe891d/67ea92354c43dd67f1303be9_d2f8868c409f5bad8fabb177fa690fa8_KEMARO%20Factsheet%20Gen%20II_EN.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "l3harris-t7-september2025",
+        "manufacturer": "L3Harris",
+        "models": [
+          "T7 Robotic System",
+          "T7"
+        ],
+        "configuration": "September 2025 manufacturer sheet. Main/control-unit CPUs, RAM and radio silicon are undisclosed. Robot and handheld-controller batteries are different configurations.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Vehicle power and motion",
+            "details": "Twelve BB-2590 batteries; 322 kg including arm and batteries. Skid-steer tracks, up to 7 km/h.",
+            "sources": [
+              "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Ground controller",
+            "details": "One BB-2590 or external 24–30 V DC; 16 kg controller including battery.",
+            "sources": [
+              "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Communication options",
+            "details": "MIMO radios in the shown configuration; no frequency or PHY specified. Optional radio repeater and motorized fiber-optic tether.",
+            "sources": [
+              "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Cameras and manipulation",
+            "details": "Front/rear driving cameras, 30× PTZ mast camera, zoom gripper camera and four corner cameras. Force-sensing gripper with haptic feedback; mid-arm camera, GPS and laser rangefinder are optional.",
+            "sources": [
+              "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator controls",
+            "details": "Daylight-readable controller display and haptic manipulation controls; handheld controller and two-way audio are optional accessories.",
+            "sources": [
+              "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Manipulator control",
+            "details": "Preset poses and movement-rewind function; no onboard operating-system version is stated.",
+            "sources": [
+              "https://www.l3harris.com/sites/default/files/2025-09/t7-robotic-system-sell-sheet-l3harris-sas-ic.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kewazo-liftbot-product-reference",
+        "manufacturer": "Kewazo",
+        "models": [
+          "LIFTBOT"
+        ],
+        "configuration": "Published LIFTBOT product configuration. CPU, memory, battery chemistry/capacity, radio transport and sensor SKUs remain undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery operation",
+            "details": "Published ten-hour operating time and three-hour charge from a 110/230 V outlet. These are operating claims, not battery capacity specifications.",
+            "sources": [
+              "https://www.kewazo.com/product"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Rail and handling system",
+            "details": "Rail-mounted lifting robot with interchangeable load platforms; temporary scaffold mounting or longer-term attachment to the structure.",
+            "sources": [
+              "https://www.kewazo.com/product"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator interface",
+            "details": "Remote-control operation and automatic lift cycles. The source does not identify the remote-control radio protocol.",
+            "sources": [
+              "https://www.kewazo.com/product"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "ONSITE telemetry",
+            "details": "Dashboard reports transported weight, height, operating time, lift cycles, GPS and utilization. These data fields do not establish the exact physical sensors or their chipsets.",
+            "sources": [
+              "https://www.kewazo.com/product"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "limx-w1-launch-reference",
+        "manufacturer": "LimX Dynamics",
+        "models": [
+          "W1"
+        ],
+        "configuration": "September 2023 manufacturer launch reference; partial architecture only. CPU, memory, battery, RF hardware and exact terrain-sensor modules are not published here. TRON/Oli components are not assigned to W1.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Locomotion hardware",
+            "details": "Four wheel-legged limbs driven by proprietary actuators; rolling and stepping modes. Actuator SKU and battery capacity are not identified.",
+            "sources": [
+              "https://www.limxdynamics.com/en/news/BK000028"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Terrain perception",
+            "details": "Real-time terrain perception supports gait planning and stair traversal; sensor types and part numbers are unspecified.",
+            "sources": [
+              "https://www.limxdynamics.com/en/news/BK000028"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Locomotion control",
+            "details": "LimX Motion Intelligence and Perceptive Locomotion combine perception and motion control; manufacturer describes reinforcement learning and model-predictive-control research foundations.",
+            "sources": [
+              "https://www.limxdynamics.com/en/news/BK000028"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hikrobot-lmr-2022q3-family",
+        "manufacturer": "Hikrobot",
+        "models": [
+          "LMR"
+        ],
+        "configuration": "Manufacturer catalog R.101.EN.22Q3.1, LMR table pp. 28–29, hosted by distributor Oskon. Historical configurations; newer D/E models are not assumed identical. CPU, RAM, radio and battery capacity are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Listed LMR configurations",
+            "details": "Q2L-300-A: 300 kg payload, 70 mm lift. Q3-600-C: 600 kg/60 mm. Q7-1000-D and Q7-1500-D: 1000/1500 kg, both 60 mm lift. All use electric lifting motors.",
+            "sources": [
+              "https://www.oskon.az/assets/img/hikrobot/hikrobot.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and protection",
+            "details": "2D-code or SLAM variants; front laser protection on all four. Q2L-300-A has rear ultrasonic protection; side/rear protection is optional on the other three.",
+            "sources": [
+              "https://www.oskon.az/assets/img/hikrobot/hikrobot.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Charging and endurance",
+            "details": "All list eight-hour endurance under rated conditions. Q2L-300-A and Q3-600-C charge in up to 1.5 hours; Q7-1000-D and Q7-1500-D in up to two hours.",
+            "sources": [
+              "https://www.oskon.az/assets/img/hikrobot/hikrobot.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Local controls",
+            "details": "Display, audible alarm, front/rear bumpers and front/rear emergency-stop buttons.",
+            "sources": [
+              "https://www.oskon.az/assets/img/hikrobot/hikrobot.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "keenon-t9-pro-2023-brochure",
+        "manufacturer": "KEENON Robotics",
+        "models": [
+          "T9 Pro",
+          "DINERBOT T9 Pro"
+        ],
+        "configuration": "KEENON Chinese product brochure hosted by World Robot Conference, PDF page 17. This is not the base T9. CPU, RAM, radio chipset and sensor SKUs are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery and chassis",
+            "details": "48 V / 12 Ah battery; advertised 12–15-hour operation. Multi-link damping suspension, 45.2 kg net mass and 0.8 m/s maximum speed.",
+            "sources": [
+              "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Visual navigation and obstacle sensing",
+            "details": "Overhead visual sensor recognizes ceiling features for VSLAM localization; three-dimensional vision detects steps and feet.",
+            "sources": [
+              "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Tray occupancy",
+            "details": "Radar-based tray sensing detects when items are added or removed. Radar frequency and chipset are not provided; this is not an established scanning signature.",
+            "sources": [
+              "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Load handling",
+            "details": "527×500×1266 mm body; 486×384 mm trays. Published payload 40 kg total, 10 kg per layer.",
+            "sources": [
+              "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Delivery interaction",
+            "details": "Visual/text, light and voice prompts indicate the collection layer; detected collection allows the robot to depart automatically.",
+            "sources": [
+              "https://www.worldrobotconference.com/uploads/exfile/video/avpnra.pdf"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -286861,8 +287701,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 377,
-    "devices_with_system_profiles": 340,
+    "system_profiles": 385,
+    "devices_with_system_profiles": 348,
     "devices_with_documented_compute": 160
   }
 }

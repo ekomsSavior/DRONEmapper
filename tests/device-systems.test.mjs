@@ -811,3 +811,34 @@ test('aircraft revisions, RID modules and underwater payloads retain configurati
  assert.match(text(spectre.sections.radios),/Optional radio payload integrations/);
  assert.match(text(spectre.configurations),/does not imply an installed radio payload is silent/);
 });
+
+test('industrial robots and Insitu references preserve their disclosed configuration limits',()=>{
+ const se=system('Insitu','ScanEagle'),rq=system('Insitu','RQ-21 Blackjack');
+ assert.match(text(se.sections.power),/150 W/);
+ assert.match(text(se.sections.radios),/PLEO.*not a universal/);
+ assert.match(text(rq.sections.power),/8 hp.*JP-5\/JP-8/);
+ assert.doesNotMatch(text(rq.sections.power),/150 W|C-10/);
+ assert.equal(rq.sections.compute.status,'not-established');
+ const k=system('KEMARO','KEMARO K900 Gen II');
+ assert.match(text(k.sections.power),/36 V.*four-hour/);
+ assert.doesNotMatch(text(k.sections),/Raspberry Pi|D435|MF833/);
+ assert.equal(k.sections.radios.status,'not-established');
+ const t=system('L3Harris','T7 Robotic System');
+ assert.match(text(t.sections.power),/Twelve BB-2590/);
+ assert.match(text(t.sections.power),/One BB-2590 or external 24–30/);
+ assert.match(text(t.sections.sensors),/GPS and laser rangefinder are optional/);
+ assert.equal(profileIds(system('L3Harris','T4')).includes('l3harris-t7-september2025'),false);
+ const t9=system('KEENON Robotics','T9 Pro');
+ assert.match(text(t9.sections.power),/48 V \/ 12 Ah/);
+ assert.match(text(t9.sections.sensors),/not an established scanning signature/);
+ assert.equal(profileIds(system('KEENON Robotics','Diners')).includes('keenon-t9-pro-2023-brochure'),false);
+ assert.equal(profileIds(system('KEENON Robotics','T9')).includes('keenon-t9-pro-2023-brochure'),false);
+ assert.match(text(system('Hikrobot','LMR').configurations),/Historical configurations/);
+ assert.match(text(system('Hikrobot','LMR').sections.sensors),/optional on the other three/);
+ const w=system('LimX Dynamics','W1');
+ assert.equal(w.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(w.sections),/NVIDIA|Jetson|864 Wh/);
+ const lift=system('Kewazo','LIFTBOT');
+ assert.match(text(lift.sections.software),/do not establish the exact physical sensors/);
+ assert.equal(lift.sections.sensors.status,'not-established');
+});
