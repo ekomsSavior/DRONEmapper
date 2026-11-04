@@ -1581,6 +1581,27 @@ test('batch 50 keeps supplier, generation and installation evidence scoped',()=>
  assert.equal(profileIds(system('Canvas','RO2330')).length,0);
 });
 
+test('batch 51 preserves accessories, power revisions and announced architecture boundaries',()=>{
+ const beacon=system('Skydio','Skydio Beacon'),plus=system('Skydio','Skydio Beacon+');
+ assert.notDeepEqual(profileIds(beacon),profileIds(plus));
+ assert.match(text(plus.sections.radios),/20\/40\/80/);
+ assert.match(text(beacon.sections.identification),/differs from the manual/);
+ assert.equal(beacon.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Skydio','Skydio Beacon',{kind:'regulatory-equipment'})).length,0);
+ const bot=system('Symbotic','Symbot'),warehouse=system('Symbotic','Symbotic System');
+ assert.match(text(bot.sections.power),/Nyobolt.*limited basis/);
+ assert.equal(warehouse.sections.power.status,'not-established');
+ const pod=system('Einride','Einride Pod');
+ const future=system('Einride','Einride Driver on Hyperion (2026 announced architecture)');
+ assert.match(text(pod.sections.compute),/Orin/);
+ assert.doesNotMatch(text(future.sections.compute.facts.map(f=>f.details)),/Blackwell|Thor/);
+ assert.match(text(future.sections.software),/Blackwell cloud.*external to the vehicle/);
+ assert.match(text(pod.sections.sensors),/SDKs do not prove/);
+ assert.equal(system('Samsung Electronics','Ballie').sections.compute.status,'not-established');
+ assert.equal(system('AgriPass','RHIC').sections.compute.status,'not-established');
+ assert.equal(system('Apis Cor','Apis Cor Mobile Printer').sections.power.status,'not-established');
+});
+
 test('batch 50 retains identified processors and explicit unknowns',()=>{
  const m=system('Monumental','Monumental Bricklaying System');
  assert.match(text(m.sections.compute),/Intel NUC.*NVIDIA GPUs.*RP2040/);

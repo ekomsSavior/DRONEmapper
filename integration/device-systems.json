@@ -32746,6 +32746,392 @@
           ]
         }
       ]
+    },
+    {
+      "id": "skydio-beacon-manual2022",
+      "manufacturer": "Skydio",
+      "models": [
+        "Skydio Beacon",
+        "Beacon (original)"
+      ],
+      "configuration": "Original Beacon accessory, not aircraft compute. April 2022 manual and SBEC1V1 regulatory listing differ on radio coverage; retained as source-specific statements. CPU, RAM and radio chipset unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Internal battery",
+          "details": "1460 mAh, 3.8 V; approximately three hours active operation.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/5592430339867"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Handheld controls",
+          "details": "USB-C charging/data, display and physical flight-control buttons; USB-C cable pairs it with the aircraft.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/5592430339867"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning",
+          "details": "Manual lists GPS, SBAS, Galileo, QZSS and GLONASS.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/5592430339867"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Manual radio specification",
+          "details": "Version 19 lists 5.15–5.25 and 5.725–5.85 GHz, with 20 MHz Wi-Fi/Skydio Link channels.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/5592430339867"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "SBEC1V1 filing boundary",
+          "details": "FCC ID 2ATQRSBEC1V1 lists 2412–2462 and 5180–5240 MHz. This differs from the manual; neither is a unique detection signature.",
+          "sources": [
+            "https://fccid.io/2ATQRSBEC1V1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skydio-beacon-plus-store",
+      "manufacturer": "Skydio",
+      "models": [
+        "Skydio Beacon+",
+        "Skydio 2+ Beacon"
+      ],
+      "configuration": "Beacon+ store specification; not the original Beacon. The April 2022 combined manual differs on bands, channel widths and GNSS constellations. Confirm the unit revision; processor, RAM and radio chipset unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Battery",
+          "details": "1460 mAh, 3.8 V; three-hour active-life claim.",
+          "sources": [
+            "https://shop.skydio.com/collections/essential-accessories/products/skydio-2-plus-beacon"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Handheld operation",
+          "details": "USB-C charge/data, tracking controls and display; compatible with Skydio 2 and 2+.",
+          "sources": [
+            "https://shop.skydio.com/collections/essential-accessories/products/skydio-2-plus-beacon"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "GNSS",
+          "details": "Store lists GPS and GLONASS.",
+          "sources": [
+            "https://shop.skydio.com/collections/essential-accessories/products/skydio-2-plus-beacon"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Store radio specification",
+          "details": "2.4–2.483, 5.18–5.24 and 5.725–5.85 GHz; Wi-Fi widths 20/40/80 MHz, Skydio Link 5/10 MHz.",
+          "sources": [
+            "https://shop.skydio.com/collections/essential-accessories/products/skydio-2-plus-beacon"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Older manual discrepancy",
+          "details": "April 2022 manual instead gives 5.15–5.25/5.725–5.85 GHz and 20 MHz widths for both links; not treated as a universal hardware configuration.",
+          "sources": [
+            "https://support.skydio.com/hc/article_attachments/5592430339867"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "symbotic-symbot-power-revisions",
+      "manufacturer": "Symbotic",
+      "models": [
+        "Symbot",
+        "SymBot"
+      ],
+      "configuration": "Case/tote-handling SymBot family. Power technology changed; not all field units are established as retrofitted. CPU, RAM, radio chipset, battery voltage and capacity undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception",
+          "details": "FY2025 report describes a sensor suite and vision-assisted routing in newer bots; exact sensor inventory not specified.",
+          "sources": [
+            "https://ir.symbotic.com/static-files/a07466bc-96d1-484b-98fc-3efe41d3b8fb"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Earlier power supply",
+          "details": "Ultracapacitors replenish from floor-integrated charging plates during travel.",
+          "sources": [
+            "https://ir.symbotic.com/static-files/a07466bc-96d1-484b-98fc-3efe41d3b8fb"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "2025 battery transition",
+          "details": "Nyobolt battery rollout began on a limited basis in June 2025; retrofit-compatible with earlier SymBots and charging infrastructure. Manufacturer reports sixfold energy capacity versus ultracapacitors.",
+          "sources": [
+            "https://ir.symbotic.com/news-releases/news-release-details/symbotic-and-nyobolt-announce-new-performance-improving-power"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Case manipulation",
+          "details": "Extending fingers lift cases from underneath; original SymBot payload up to 60 lb, distinct from XL/TR configurations.",
+          "sources": [
+            "https://ir.symbotic.com/static-files/a07466bc-96d1-484b-98fc-3efe41d3b8fb",
+            "https://www.symbotic.com/solutions/robots/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Coordination",
+          "details": "Robots hand tasks between units in the common operating system; remote instructions support maintenance triage.",
+          "sources": [
+            "https://ir.symbotic.com/static-files/a07466bc-96d1-484b-98fc-3efe41d3b8fb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "symbotic-distribution-system",
+      "manufacturer": "Symbotic",
+      "models": [
+        "Symbotic System"
+      ],
+      "configuration": "Warehouse-level system architecture, not a single robot BOM. Site configuration and robot generations vary; server processors, memory, sensor SKUs and radio hardware not established.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Material-flow hardware",
+          "details": "Inbound robotic arms and scan cells feed ASRS storage and lifts; SymBots retrieve goods, paired outbound arms build pallets, and wrapping prepares shipment.",
+          "sources": [
+            "https://www.symbotic.com/solutions/distribution-solution/",
+            "https://ir.symbotic.com/static-files/a07466bc-96d1-484b-98fc-3efe41d3b8fb"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Inspection points",
+          "details": "Inbound inspection detects damaged cases; inventory scanning and labeling precede pallet construction.",
+          "sources": [
+            "https://www.symbotic.com/solutions/distribution-solution/"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Inventory records",
+          "details": "Software maintains three-dimensional inventory records and digital case representations; disk type and capacity unpublished.",
+          "sources": [
+            "https://www.symbotic.com/solutions/ai-and-software/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet orchestration",
+          "details": "Central software coordinates routing, sequencing and mixed-SKU pallet planning; cloud processing supports inventory analysis.",
+          "sources": [
+            "https://www.symbotic.com/solutions/ai-and-software/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "einride-pod-nextgen2021",
+      "manufacturer": "Einride",
+      "models": [
+        "Einride Pod",
+        "Next-generation Pod (2021 development configuration)"
+      ],
+      "configuration": "December 2020 announcement and April/May 2021 engineering interview with Christian Hallgren describe the next-generation design. Does not establish every delivered Pod configuration. Sensor SDK support is not a per-vehicle BOM; RAM and exact battery/motor suppliers unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Planned autonomy computer",
+          "details": "NVIDIA DRIVE AGX Orin, with Arm Hercules-AE CPU cores, GPU and deep-learning accelerators, selected for the next-generation design.",
+          "sources": [
+            "https://www.einride.tech/press-old/einride-next-generation-aets-powered-by-nvidia-drive-agx-orin-for-high-speed"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Evolving sensor suite",
+          "details": "LiDAR, cameras, GNSS, IMU and odometry are integrated in-house; exact installed models vary. Published VLP-16, Reach and MTi SDKs do not prove universal fitment.",
+          "sources": [
+            "https://www.ust-media.com/ust-magazine/UST037/files/assets/common/downloads/publication.pdf?uni=c4ce2b3479af77122182f88617866c00"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric chassis",
+          "details": "Three-axle battery-electric truck; 26 t gross weight and 16 t payload in the 2021 specification. Battery supplier selection was still under evaluation.",
+          "sources": [
+            "https://www.ust-media.com/ust-magazine/UST037/files/assets/common/downloads/publication.pdf?uni=c4ce2b3479af77122182f88617866c00"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Supervision connection",
+          "details": "5G where available, with 4G fallback; Ericsson/Telia connectivity supports remote assistance. Radio modem and bands unspecified.",
+          "sources": [
+            "https://www.ust-media.com/ust-magazine/UST037/files/assets/common/downloads/publication.pdf?uni=c4ce2b3479af77122182f88617866c00"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Charging",
+          "details": "CCS supports DC fast charging and onboard AC charging. Automated connection was under evaluation; described connectors were manually attached.",
+          "sources": [
+            "https://www.ust-media.com/ust-magazine/UST037/files/assets/common/downloads/publication.pdf?uni=c4ce2b3479af77122182f88617866c00"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operational controls",
+          "details": "DeepMap HD mapping/localization; over-the-air software updates require a stationary vehicle. Loss of communications triggers a minimum-risk maneuver.",
+          "sources": [
+            "https://www.ust-media.com/ust-magazine/UST037/files/assets/common/downloads/publication.pdf?uni=c4ce2b3479af77122182f88617866c00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "einride-hyperion-announced2026",
+      "manufacturer": "Einride",
+      "models": [
+        "Einride Driver on Hyperion (2026 announced architecture)"
+      ],
+      "configuration": "September 2026 announced next-generation architecture, not confirmed hardware in every current Pod or third-party truck. Exact vehicle processor, RAM, sensor models and radio parts not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Announced vehicle platform",
+          "details": "NVIDIA DRIVE Hyperion compute/sensor reference architecture is to be adapted for heavy-duty freight; Halos safety framework.",
+          "sources": [
+            "https://www.einride.tech/press-old/einride-enters-strategic-collaboration-with-nvidia-to-advance-its-autonomous-trucking-on-nvidia-hyperion"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Development infrastructure",
+          "details": "Cosmos supports data curation and synthetic scenarios. Planned Blackwell cloud training infrastructure is external to the vehicle, not its onboard processor.",
+          "sources": [
+            "https://www.einride.tech/press-old/einride-enters-strategic-collaboration-with-nvidia-to-advance-its-autonomous-trucking-on-nvidia-hyperion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "samsung-ballie-announced2025",
+      "manufacturer": "Samsung Electronics",
+      "models": [
+        "Ballie"
+      ],
+      "configuration": "Samsung 2024 demonstration and April 2025 announced functionality, not evidence of retail release or an installed production BOM. CPU, RAM, battery, RF chipset and exact navigation sensors not published in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Interaction inputs",
+          "details": "Camera, audio/voice input and environmental sensor data; component models unnamed.",
+          "sources": [
+            "https://news.samsung.com/us/samsung-google-cloud-expand-partnership-bring-gemini-ballie-home-ai-companion-robot-by-samsung/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Home interaction",
+          "details": "Mobile platform incorporates projection and audio output; manufacturer demonstrates appliance control and sending video updates.",
+          "sources": [
+            "https://news.samsung.com/us/samsung-ballie-ai-companion-robot-home-video-ces-2024/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Announced AI integration",
+          "details": "Google Cloud Gemini and Samsung language models support multimodal interaction. Cloud service integration does not identify a local processor.",
+          "sources": [
+            "https://news.samsung.com/us/samsung-google-cloud-expand-partnership-bring-gemini-ballie-home-ai-companion-robot-by-samsung/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agripass-rhic-ast",
+      "manufacturer": "AgriPass",
+      "models": [
+        "RHIC"
+      ],
+      "configuration": "Manufacturer describes the AST perception-to-actuation system. Processor, RAM, camera SKU, radio, power source and drivetrain are undisclosed; NVIDIA Inception membership alone does not identify installed computing hardware.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Crop perception",
+          "details": "Computer vision builds a live three-dimensional field model, distinguishing crop context, weed position and soil variability.",
+          "sources": [
+            "https://www.agripass.co/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Selective tillage tools",
+          "details": "Individually triggered mechanical actuators uproot weeds; depth adapts to weed type and position.",
+          "sources": [
+            "https://www.agripass.co/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "AST control",
+          "details": "Adaptive Selective Tilling selects a response for each detected weed without requiring advance field mapping.",
+          "sources": [
+            "https://www.agripass.co/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apis-cor-mobile-printing-fleet",
+      "manufacturer": "Apis Cor",
+      "models": [
+        "Apis Cor Mobile Printer",
+        "Frank mobile construction printer"
+      ],
+      "configuration": "Current Frank/Gary/Mary system reference. Supporting material-handling units are separate from Frank. CPU, RAM, sensing hardware, radio and electrical ratings not disclosed; older prototype dimensions not transferred.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Complementary hardware",
+          "details": "Frank prints walls; Gary handles mixing/pumping and adjusts material flow; Mary supplies print material. The printer relocates between sections of the build.",
+          "sources": [
+            "https://apis-cor.com/technology"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Print workflow",
+          "details": "Architectural plans become print-ready code. Operators position and calibrate the machine before supervised autonomous wall printing.",
+          "sources": [
+            "https://apis-cor.com/technology"
+          ]
+        }
+      ]
     }
   ]
 }
