@@ -1,4 +1,4 @@
-import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b56';
+import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b57';
 import {libraryModels} from './device-library-model.mjs';
 import {macAllocationsFor,formatMacPrefix} from './device-mac-model.mjs';
 import {robotSignatures} from './robot-signatures.mjs';
@@ -11,6 +11,7 @@ const aliases=new Map([
  ['percepto airmax','percepto'],
  ['fimi x8 se 2022 drone','fimi'],['fimi x8 tele drone','fimi'],
  ['kratos defense & security solutions','kratos defense'],
+ ['kodiak robotics','kodiak ai'],
 ]);
 const makerOf=r=>aliases.get(norm(r.maker||r.manufacturer))||norm(r.maker||r.manufacturer);
 const namesOf=r=>new Set([r.name,r.model,...(r.aliases||[]),...(r.models||[])].filter(Boolean).map(norm));
@@ -21,7 +22,8 @@ const fccKey=value=>String(value||'').trim().toUpperCase();
 const profileMatches=(record,profile)=>record.kind==='regulatory-equipment'
  ? makerOf(record)===makerOf(profile)&&Boolean(fccKey(record.fcc_id))&&
    (profile.fcc_ids||[]).some(id=>fccKey(id)===fccKey(record.fcc_id))
- : !profile.fcc_ids?.length&&matches(record,profile);
+ : !profile.fcc_ids?.length&&(matches(record,profile)||
+   (profile.record_bindings||[]).some(binding=>matches(record,binding)));
 const references=libraryModels();
 const urls=r=>[...new Set([...(r.sources||[]),r.source,r.url].filter(u=>typeof u==='string'&&u.startsWith('https://')))];
 export const systemSections=[

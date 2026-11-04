@@ -9,6 +9,55 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('truck profiles preserve generations and require exact cross-maker model bindings',()=>{
+ const driver=system('Kodiak AI','Kodiak Driver');
+ assert.equal(driver.configurations.length,2);
+ assert.deepEqual(profileIds(system('Kodiak Robotics','Kodiak Driverless Truck')),profileIds(driver));
+ const robo=system('Kodiak AI','Kodiak RoboTruck');
+ assert.equal(robo.configurations.length,1);
+ assert.match(text(robo.sections.radios),/Redundant LTE/);
+ assert.doesNotMatch(text(robo.sections.compute.facts.map(f=>f.details)),/CV2|CV3/);
+ const gen5=system('Kodiak AI','Kodiak Driver (Gen 5, 2023)');
+ assert.match(text(gen5.sections.compute),/Ambarella CV2/);
+ assert.equal(gen5.sections.radios.status,'not-established');
+ const paccar=system('PACCAR','Peterbilt 579 (Autonomous)');
+ assert.deepEqual(profileIds(paccar),['aurora-peterbilt579-2022']);
+ assert.match(text(paccar.sections.compute),/dual-lane liquid-cooled/i);
+ assert.equal(profileIds(system('PACCAR','Aurora Driver')).length,0);
+ assert.equal(profileIds(system('PACCAR','Peterbilt 579')).length,0);
+ assert.equal(profileIds(system('PACCAR','Peterbilt 579 (Autonomous)',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('road-vehicle profiles distinguish announced hardware and cabin processors from autonomy',()=>{
+ const old=system('Inceptio Technology','Xuanyuan / ADCU Gen 1 (2021)');
+ assert.match(text(old.sections.compute),/Journey 3/);
+ assert.doesNotMatch(text(old.sections.compute),/Journey 5/);
+ const next=system('Inceptio Technology','Xuanyuan / ADCU Gen 2 (Journey 5)');
+ assert.match(text(next.configurations),/planned Q4 2023/);
+ assert.match(text(next.sections.compute),/not the base configuration/);
+ const tensor=system('Tensor Auto','Tensor Robocar');
+ assert.match(text(tensor.sections.compute),/TDA4VH.*S32G399A.*RH850/);
+ assert.match(text(tensor.sections.memory),/supported maximum/);
+ assert.match(text(tensor.sections.power),/845 V.*112 kWh/);
+ const deep=system('DeepWay','DeepWay Star');
+ assert.match(text(deep.sections.compute),/does not identify this as the HIS autonomy processor/);
+ assert.match(text(deep.sections.software),/L2-Pro.*L4 research/);
+ assert.equal(profileIds(system('Tesla','Semi')).length,2);
+ assert.match(text(system('Tesla','Semi').configurations),/not, by itself, evidence of driverless capability/);
+ assert.equal(system('Tesla','Semi').sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Tesla','Cybercab')).length,0);
+});
+
+test('explicit cross-maker system bindings are well-formed and cannot carry equipment IDs',()=>{
+ for(const p of deviceSystems.profiles){
+  for(const b of p.record_bindings||[]){
+   assert.ok(!p.fcc_ids?.length,p.id);
+   assert.ok(typeof b.manufacturer==='string'&&b.manufacturer.trim(),p.id);
+   assert.ok(b.models?.length&&b.models.every(m=>typeof m==='string'&&m.trim()),p.id);
+  }
+ }
+});
+
 test('equipment profiles require exact FCC identity and cannot become host BOMs',()=>{
  const module=(maker,fcc_id,name='unrelated supplied label')=>system(maker,name,{kind:'regulatory-equipment',fcc_id});
  const a=module('Skydio','2ATQRA40'),b=module('Skydio, Inc.','ri7fn990a40');

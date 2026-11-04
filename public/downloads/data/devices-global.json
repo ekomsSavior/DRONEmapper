@@ -36864,13 +36864,44 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "deepway-star-published-hardware",
+            "configuration": "Manufacturer’s early Star walkthrough, with a separately dated March 2025 HIS update. Cockpit silicon is not the autonomy CPU. The walkthrough is configuration-specific; no claim that every current Star has the same battery or electronics. RAM and storage remain undisclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Cabin processor",
+                "details": "Walkthrough identifies Qualcomm 8155 alongside the cabin screens and driver interface; it does not identify this as the HIS autonomy processor.",
+                "sources": [
+                  "https://www.linkedin.com/posts/deepway-technology_the-introduction-of-deepway-star-activity-7139865375357235200-z7zS"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deepway-star-published-hardware",
+                "configuration": "Manufacturer’s early Star walkthrough, with a separately dated March 2025 HIS update. Cockpit silicon is not the autonomy CPU. The walkthrough is configuration-specific; no claim that every current Star has the same battery or electronics. RAM and storage remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "March 2025 HIS update",
+                "details": "Manufacturer describes 500-TOPS HIS compute with multi-sensor fusion, without naming the accelerator. This rating is separate from the cabin’s Qualcomm 8155.",
+                "sources": [
+                  "https://www.linkedin.com/posts/deepway-technology_deepwaybevtruck-chinaev100forum-deepwaybevtruck-activity-7311412984092794880-nnLk"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deepway-star-published-hardware",
+                "configuration": "Manufacturer’s early Star walkthrough, with a separately dated March 2025 HIS update. Cockpit silicon is not the autonomy CPU. The walkthrough is configuration-specific; no claim that every current Star has the same battery or electronics. RAM and storage remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -36879,18 +36910,57 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Cellular link",
+                "details": "5G connectivity is described; modem SKU, bands and carrier are not supplied.",
+                "sources": [
+                  "https://www.linkedin.com/posts/deepway-technology_the-introduction-of-deepway-star-activity-7139865375357235200-z7zS"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deepway-star-published-hardware",
+                "configuration": "Manufacturer’s early Star walkthrough, with a separately dated March 2025 HIS update. Cockpit silicon is not the autonomy CPU. The walkthrough is configuration-specific; no claim that every current Star has the same battery or electronics. RAM and storage remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Driving and cabin sensing",
+                "details": "Camera and radar perception, an infrared camera, electronic mirrors, gesture and face-recognition interfaces are described. Component part numbers are absent.",
+                "sources": [
+                  "https://www.linkedin.com/posts/deepway-technology_the-introduction-of-deepway-star-activity-7139865375357235200-z7zS"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deepway-star-published-hardware",
+                "configuration": "Manufacturer’s early Star walkthrough, with a separately dated March 2025 HIS update. Cockpit silicon is not the autonomy CPU. The walkthrough is configuration-specific; no claim that every current Star has the same battery or electronics. RAM and storage remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Early vehicle configuration",
+                "details": "Chassis-integrated battery, described as up to 466 kWh, and distributed electric drive. These are early walkthrough specifications, not universal model-year values.",
+                "sources": [
+                  "https://www.linkedin.com/posts/deepway-technology_the-introduction-of-deepway-star-activity-7139865375357235200-z7zS"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deepway-star-published-hardware",
+                "configuration": "Manufacturer’s early Star walkthrough, with a separately dated March 2025 HIS update. Cockpit silicon is not the autonomy CPU. The walkthrough is configuration-specific; no claim that every current Star has the same battery or electronics. RAM and storage remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -36899,8 +36969,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Deployment level",
+                "details": "March 2025 update describes L2-Pro deployment and continuing L4 research; it does not establish unrestricted driverless operation.",
+                "sources": [
+                  "https://www.linkedin.com/posts/deepway-technology_deepwaybevtruck-chinaev100forum-deepwaybevtruck-activity-7311412984092794880-nnLk"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deepway-star-published-hardware",
+                "configuration": "Manufacturer’s early Star walkthrough, with a separately dated March 2025 HIS update. Cockpit silicon is not the autonomy CPU. The walkthrough is configuration-specific; no claim that every current Star has the same battery or electronics. RAM and storage remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -36914,13 +36997,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -84541,13 +84619,73 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "inceptio-xuanyuan-2021-gen1",
+            "configuration": "The 2021 commercially delivered Xuanyuan system and published ADCU Gen 1 reference. Journey 3 is an identified component, not proof that it is the only processor. Sensor models, radios, memory and vehicle powertrain vary or remain undisclosed.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "inceptio-xuanyuan-gen2-journey5",
+            "configuration": "Gen 2 configuration announced December 2022 with planned Q4 2023 production, plus the manufacturer’s ADCU Gen 2 specification. The announcement alone is not proof every truck received it. RAM/storage, radio modules and full sensor BOM are not published here.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Identified accelerator",
+                "details": "Inceptio states that the commercially delivered 2021 Xuanyuan system included Horizon Journey 3 chips.",
+                "sources": [
+                  "https://en.inceptio.ai/press/207.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inceptio-xuanyuan-2021-gen1",
+                "configuration": "The 2021 commercially delivered Xuanyuan system and published ADCU Gen 1 reference. Journey 3 is an identified component, not proof that it is the only processor. Sensor models, radios, memory and vehicle powertrain vary or remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "ADCU Gen 1",
+                "details": "Published control-unit rating is 245 TOPS, with automotive-grade redundancy; enclosure 414×294×100 mm. This total is not a Journey 3 single-chip rating.",
+                "sources": [
+                  "https://en.inceptio.ai/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inceptio-xuanyuan-2021-gen1",
+                "configuration": "The 2021 commercially delivered Xuanyuan system and published ADCU Gen 1 reference. Journey 3 is an identified component, not proof that it is the only processor. Sensor models, radios, memory and vehicle powertrain vary or remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Dual Journey 5 platform",
+                "details": "Two Horizon Journey 5 chips, each rated up to 128 TOPS, for a 256-TOPS board. Uses Horizon’s Bayesian BPU architecture.",
+                "sources": [
+                  "https://en.inceptio.ai/press/207.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inceptio-xuanyuan-gen2-journey5",
+                "configuration": "Gen 2 configuration announced December 2022 with planned Q4 2023 production, plus the manufacturer’s ADCU Gen 2 specification. The announcement alone is not proof every truck received it. RAM/storage, radio modules and full sensor BOM are not published here.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "ADCU Gen 2 rating",
+                "details": "262 KDMIPS plus 256 TOPS; 380×246×75 mm enclosure. Expansion beyond 1,000 TOPS is a scalable architecture capability, not the base configuration.",
+                "sources": [
+                  "https://en.inceptio.ai/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inceptio-xuanyuan-gen2-journey5",
+                "configuration": "Gen 2 configuration announced December 2022 with planned Q4 2023 production, plus the manufacturer’s ADCU Gen 2 specification. The announcement alone is not proof every truck received it. RAM/storage, radio modules and full sensor BOM are not published here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -84566,18 +84704,69 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Compute efficiency",
+                "details": "ADCU Gen 1 is rated at 1.53 TOPS/W; no input voltage, battery capacity or actual operating draw is derived from that figure.",
+                "sources": [
+                  "https://en.inceptio.ai/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inceptio-xuanyuan-2021-gen1",
+                "configuration": "The 2021 commercially delivered Xuanyuan system and published ADCU Gen 1 reference. Journey 3 is an identified component, not proof that it is the only processor. Sensor models, radios, memory and vehicle powertrain vary or remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle integration",
+                "details": "Modular electrical/electronic architecture separates hardware from software and provides a standardized SDK for vehicle adaptation.",
+                "sources": [
+                  "https://en.inceptio.ai/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inceptio-xuanyuan-2021-gen1",
+                "configuration": "The 2021 commercially delivered Xuanyuan system and published ADCU Gen 1 reference. Journey 3 is an identified component, not proof that it is the only processor. Sensor models, radios, memory and vehicle powertrain vary or remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Sensor timing",
+                "details": "Published cross-system synchronization is below 30 ns; physical connector and bus assignments are not supplied.",
+                "sources": [
+                  "https://en.inceptio.ai/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inceptio-xuanyuan-gen2-journey5",
+                "configuration": "Gen 2 configuration announced December 2022 with planned Q4 2023 production, plus the manufacturer’s ADCU Gen 2 specification. The announcement alone is not proof every truck received it. RAM/storage, radio modules and full sensor BOM are not published here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control architecture",
+                "details": "Published stack covers multi-view perception, ARC 2.0 planning/control and FEAD 2.0 fuel optimization. Software version installed on an individual truck is not established.",
+                "sources": [
+                  "https://en.inceptio.ai/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "inceptio-xuanyuan-gen2-journey5",
+                "configuration": "Gen 2 configuration announced December 2022 with planned Q4 2023 production, plus the manufacturer’s ADCU Gen 2 specification. The announcement alone is not proof every truck received it. RAM/storage, radio modules and full sensor BOM are not published here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -84591,13 +84780,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -88968,13 +89153,61 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "kodiak-driver-gen5-2023",
+            "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "kodiak-driver-gen6-2024",
+            "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Camera and main compute",
+                "details": "Ambarella CV2 camera processor; ruggedized Crystal main computing platform. The article does not identify a specific Crystal computer or main processor model.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Safety controllers",
+                "details": "Two Actuation Control Engines (ACE) handle safety control and the interface between autonomy and the truck chassis.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Driving and safety compute",
+                "details": "NVIDIA GPUs process perception data; Kodiak ACE is the independent high-integrity safety computer. Neither GPU nor ACE silicon part numbers are supplied.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -88983,33 +89216,148 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Command-center connectivity",
+                "details": "Redundant LTE communications links; carrier, band plan and modem SKU are not specified.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "SensorPod architecture",
+                "details": "Eighteen sensors overall. Mirror-mounted SensorPods contain the autonomy-critical sensors, including forward LiDAR; the earlier roof-mounted pod is removed.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Perception hardware",
+                "details": "Twelve cameras, four LiDAR sensors, six radars and emergency-sound microphones; replaceable, pre-calibrated SensorPods.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Redundant electrical supply",
+                "details": "Two electrically isolated supply subsystems power computers, sensors, actuators and other electrical loads.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Serviceable connections",
+                "details": "Power and data connectors use aviation-grade designs. Individual connector part numbers are not given.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Vehicle actuators",
+                "details": "Three pneumatic brake actuators and two redundant ZF steering actuators.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fallback control",
+                "details": "ACE controllers support a safe fallback after a critical failure; this does not establish the operating-system version.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Fallback behavior",
+                "details": "Safety control can move the truck out of traffic after a critical failure.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Documented deployment and company names",
+                "details": "January 2025 Atlas customer-owned RoboTrucks use the sixth-generation platform. The issuer filing links legacy Kodiak Robotics with Kodiak AI; that company relationship does not identify a truck generation by radio signal.",
+                "sources": [
+                  "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas",
+                  "https://www.sec.gov/Archives/edgar/data/1853138/000162828026041930/kodiakaiinc-424b3.htm"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -89018,14 +89366,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -89068,13 +89409,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "kodiak-driver-gen6-2024",
+            "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Driving and safety compute",
+                "details": "NVIDIA GPUs process perception data; Kodiak ACE is the independent high-integrity safety computer. Neither GPU nor ACE silicon part numbers are supplied.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -89083,33 +89443,112 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Command-center connectivity",
+                "details": "Redundant LTE communications links; carrier, band plan and modem SKU are not specified.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception hardware",
+                "details": "Twelve cameras, four LiDAR sensors, six radars and emergency-sound microphones; replaceable, pre-calibrated SensorPods.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Redundant electrical supply",
+                "details": "Two electrically isolated supply subsystems power computers, sensors, actuators and other electrical loads.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle actuators",
+                "details": "Three pneumatic brake actuators and two redundant ZF steering actuators.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fallback behavior",
+                "details": "Safety control can move the truck out of traffic after a critical failure.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Documented deployment and company names",
+                "details": "January 2025 Atlas customer-owned RoboTrucks use the sixth-generation platform. The issuer filing links legacy Kodiak Robotics with Kodiak AI; that company relationship does not identify a truck generation by radio signal.",
+                "sources": [
+                  "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas",
+                  "https://www.sec.gov/Archives/edgar/data/1853138/000162828026041930/kodiakaiinc-424b3.htm"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -89118,14 +89557,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -89168,13 +89600,61 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "kodiak-driver-gen5-2023",
+            "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "kodiak-driver-gen6-2024",
+            "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Camera and main compute",
+                "details": "Ambarella CV2 camera processor; ruggedized Crystal main computing platform. The article does not identify a specific Crystal computer or main processor model.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Safety controllers",
+                "details": "Two Actuation Control Engines (ACE) handle safety control and the interface between autonomy and the truck chassis.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Driving and safety compute",
+                "details": "NVIDIA GPUs process perception data; Kodiak ACE is the independent high-integrity safety computer. Neither GPU nor ACE silicon part numbers are supplied.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -89183,33 +89663,148 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Command-center connectivity",
+                "details": "Redundant LTE communications links; carrier, band plan and modem SKU are not specified.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "SensorPod architecture",
+                "details": "Eighteen sensors overall. Mirror-mounted SensorPods contain the autonomy-critical sensors, including forward LiDAR; the earlier roof-mounted pod is removed.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Perception hardware",
+                "details": "Twelve cameras, four LiDAR sensors, six radars and emergency-sound microphones; replaceable, pre-calibrated SensorPods.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Redundant electrical supply",
+                "details": "Two electrically isolated supply subsystems power computers, sensors, actuators and other electrical loads.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Serviceable connections",
+                "details": "Power and data connectors use aviation-grade designs. Individual connector part numbers are not given.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Vehicle actuators",
+                "details": "Three pneumatic brake actuators and two redundant ZF steering actuators.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fallback control",
+                "details": "ACE controllers support a safe fallback after a critical failure; this does not establish the operating-system version.",
+                "sources": [
+                  "https://kodiak.ai/news/smarter-faster-just-as-safe"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen5-2023",
+                "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Fallback behavior",
+                "details": "Safety control can move the truck out of traffic after a critical failure.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Documented deployment and company names",
+                "details": "January 2025 Atlas customer-owned RoboTrucks use the sixth-generation platform. The issuer filing links legacy Kodiak Robotics with Kodiak AI; that company relationship does not identify a truck generation by radio signal.",
+                "sources": [
+                  "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas",
+                  "https://www.sec.gov/Archives/edgar/data/1853138/000162828026041930/kodiakaiinc-424b3.htm"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kodiak-driver-gen6-2024",
+                "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -89218,14 +89813,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -104883,13 +105471,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aurora-peterbilt579-2022",
+            "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Dual-lane driving computer",
+                "details": "Q3 2022 shareholder letter describes dual-lane liquid-cooled computers with redundant processing, self-health monitoring and fallback capability on its new Peterbilt 579 fleet.",
+                "sources": [
+                  "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-peterbilt579-2022",
+                "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -104903,8 +105510,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "2022 perception revision",
+                "details": "FirstLight FMCW LiDAR with health reporting, integrated liquid cooling and cleaning. Upgraded camera system is illustrated as 8 MP with 32-bit HDR, versus prior 2 MP/24-bit imagery.",
+                "sources": [
+                  "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-peterbilt579-2022",
+                "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -104913,13 +105533,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle platform",
+                "details": "Peterbilt identifies its Model 579 as the host truck and distinguishes its 15-inch driver dashboard from the Aurora autonomy hardware.",
+                "sources": [
+                  "https://www.peterbilt.com/news-and-events/press-releases/peterbilt-showcases-first-model-579-with-aurora-driver"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-peterbilt579-2022",
+                "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet software context",
+                "details": "The Q3 2022 letter reports Aurora Driver Beta 4.0 and fault-management/fallback development. This is historical hardware/software evidence, not a current fleet-version assertion.",
+                "sources": [
+                  "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-peterbilt579-2022",
+                "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -104933,13 +105579,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -118963,8 +119605,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "scania-autonomous-mining-2024",
+            "configuration": "September 2024 commercial mining-truck architecture. Does not assign this hardware to highway prototypes, the AXL concept or every Scania model. CPU, RAM/storage, sensor/radio chip models and engine configuration are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -118978,13 +119626,39 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Nearby vehicle coordination",
+                "details": "Short-range V2X communication with other vehicles or objects; the article also uses the term C-V2X but supplies no radio SKU or frequency.",
+                "sources": [
+                  "https://www.scania.com/group/en/home/newsroom/news/2024/the-advantages-of-scanias-autonomous-mining-trucks-explained.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scania-autonomous-mining-2024",
+                "configuration": "September 2024 commercial mining-truck architecture. Does not assign this hardware to highway prototypes, the AXL concept or every Scania model. CPU, RAM/storage, sensor/radio chip models and engine configuration are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Mine perception and localization",
+                "details": "LiDAR, radar and GPS observe traffic, people and obstacles ahead and beside the truck.",
+                "sources": [
+                  "https://www.scania.com/group/en/home/newsroom/news/2024/the-advantages-of-scanias-autonomous-mining-trucks-explained.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scania-autonomous-mining-2024",
+                "configuration": "September 2024 commercial mining-truck architecture. Does not assign this hardware to highway prototypes, the AXL concept or every Scania model. CPU, RAM/storage, sensor/radio chip models and engine configuration are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -118993,13 +119667,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Supervisory override",
+                "details": "Control-room support and a mobile 2 stop override device supplement onboard autonomy. Its transport protocol is not identified.",
+                "sources": [
+                  "https://www.scania.com/group/en/home/newsroom/news/2024/the-advantages-of-scanias-autonomous-mining-trucks-explained.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scania-autonomous-mining-2024",
+                "configuration": "September 2024 commercial mining-truck architecture. Does not assign this hardware to highway prototypes, the AXL concept or every Scania model. CPU, RAM/storage, sensor/radio chip models and engine configuration are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Onboard autonomy",
+                "details": "Decentralized driving software runs on the vehicle rather than requiring individual human driving commands.",
+                "sources": [
+                  "https://www.scania.com/group/en/home/newsroom/news/2024/the-advantages-of-scanias-autonomous-mining-trucks-explained.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scania-autonomous-mining-2024",
+                "configuration": "September 2024 commercial mining-truck architecture. Does not assign this hardware to highway prototypes, the AXL concept or every Scania model. CPU, RAM/storage, sensor/radio chip models and engine configuration are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -119025,11 +119725,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "power"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -129982,43 +130678,189 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tensor-robocar-published-architecture",
+            "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Autonomy supercomputer",
+                "details": "Eight NVIDIA DRIVE AGX Thor SoCs with Blackwell GPUs; each Thor is described with a 14-core Arm Neoverse V3 AE CPU.",
+                "sources": [
+                  "https://www.tensor.auto/supercomputer"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Safety and network processors",
+                "details": "Two TI TDA4VH processors, two NXP S32G399A processors and Renesas RH850 microcontrollers. TI units are described with eight Cortex-A72 cores; the NXP units combine Cortex-A53 and Cortex-M7 cores.",
+                "sources": [
+                  "https://www.tensor.auto/supercomputer"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Vehicle domain unit",
+                "details": "FEV-assisted VDU uses an NXP S32G chipset and AUTOSAR architecture; the page does not specify the VDU’s exact S32G suffix.",
+                "sources": [
+                  "https://www.tensor.auto/robocar"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Automotive storage",
+                "details": "Samsung E1.A solid-state storage supports up to 19 TB. This is a supported maximum, not a guaranteed installed capacity.",
+                "sources": [
+                  "https://www.tensor.auto/supercomputer"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wide-area links",
+                "details": "Three independent 5G links using Qualcomm and Continental technology; region-specific module models are not identified.",
+                "sources": [
+                  "https://www.tensor.auto/autonomy"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Exterior perception and navigation",
+                "details": "One Halo and four Sentinel LiDARs, seventeen 17-MP exterior cameras, six Trinova radars and four external microphone arrays. Navigation combines GNSS/RTK, inertial sensors, wheel encoders and perception.",
+                "sources": [
+                  "https://www.tensor.auto/autonomy"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Computer cooling and supply",
+                "details": "Liquid thermal management and dual-power architecture protect the computing subsystem.",
+                "sources": [
+                  "https://www.tensor.auto/supercomputer"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Vehicle energy architecture",
+                "details": "Published 845 V architecture and 112 kWh battery; dual-channel DC/DC and dual low-voltage backup batteries.",
+                "sources": [
+                  "https://www.tensor.auto/robocar"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Drive-by-wire redundancy",
+                "details": "Steering uses redundant power, communication channels, controllers, motor windings and sensors.",
+                "sources": [
+                  "https://www.tensor.auto/robocar"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Safety-controller software",
+                "details": "Renesas controller software uses Vector AUTOSAR.",
+                "sources": [
+                  "https://www.tensor.auto/supercomputer"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Vehicle updates",
+                "details": "OTA updates cover the VDU and vehicle subsystems. Oracle-backed data processing and training infrastructure is separate from onboard driving compute.",
+                "sources": [
+                  "https://www.tensor.auto/robocar",
+                  "https://www.tensor.auto/autonomy"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tensor-robocar-published-architecture",
+                "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -130032,13 +130874,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -130562,8 +131397,19 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tesla-semi-2026-standard",
+            "configuration": "2026 US product-page configuration, Standard Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "tesla-semi-2026-long",
+            "configuration": "2026 US product-page configuration, Long Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -130587,18 +131433,93 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric drivetrain",
+                "details": "Three electric motors; up to 800 kW drive power. Manufacturer-estimated range is 325 miles under its stated test conditions.",
+                "sources": [
+                  "https://www.tesla.com/semi"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tesla-semi-2026-standard",
+                "configuration": "2026 US product-page configuration, Standard Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Electric drivetrain",
+                "details": "Three electric motors; up to 800 kW drive power. Manufacturer-estimated range is 500 miles under its stated test conditions.",
+                "sources": [
+                  "https://www.tesla.com/semi"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tesla-semi-2026-long",
+                "configuration": "2026 US product-page configuration, Long Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Auxiliary power",
+                "details": "Electric power take-off supports up to 25 kW.",
+                "sources": [
+                  "https://www.tesla.com/semi"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tesla-semi-2026-standard",
+                "configuration": "2026 US product-page configuration, Standard Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Auxiliary power",
+                "details": "Electric power take-off supports up to 25 kW.",
+                "sources": [
+                  "https://www.tesla.com/semi"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tesla-semi-2026-long",
+                "configuration": "2026 US product-page configuration, Long Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet and maintenance services",
+                "details": "Tesla for Business supplies fleet/location/charge monitoring; OTA software updates and remote diagnostics are described.",
+                "sources": [
+                  "https://www.tesla.com/semi"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tesla-semi-2026-standard",
+                "configuration": "2026 US product-page configuration, Standard Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Fleet and maintenance services",
+                "details": "Tesla for Business supplies fleet/location/charge monitoring; OTA software updates and remote diagnostics are described.",
+                "sources": [
+                  "https://www.tesla.com/semi"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tesla-semi-2026-long",
+                "configuration": "2026 US product-page configuration, Long Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -130626,10 +131547,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "sensors"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -132642,13 +133560,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "trunk-highway-aitrucker-architecture",
+            "configuration": "AiTrucker / ICC and highway-solution architecture, not one truck chassis BOM. CPU/GPU SKU, memory, radio modules, numerical power requirements and sensor model list are not disclosed. Roadside/cloud equipment is separate from onboard vehicle hardware.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "ICC computing center",
+                "details": "Automotive ICC controller supports scalable compute and sensor clock synchronization; manufacturer specifies an ASIL-D-oriented design without naming its processors.",
+                "sources": [
+                  "https://en.trunk.tech/aitrucker/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trunk-highway-aitrucker-architecture",
+                "configuration": "AiTrucker / ICC and highway-solution architecture, not one truck chassis BOM. CPU/GPU SKU, memory, radio modules, numerical power requirements and sensor model list are not disclosed. Roadside/cloud equipment is separate from onboard vehicle hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -132657,13 +133594,39 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Convoy architecture",
+                "details": "CAFC coordinates a lead truck and autonomous followers through vehicle-road-cloud collaboration and V2X; no band or packet signature is established.",
+                "sources": [
+                  "https://www.linkedin.com/posts/trunk-autonomous-truck_trunkcafc-autonomousplatooning-highwayfreight-activity-7462146518385348609-iELt"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trunk-highway-aitrucker-architecture",
+                "configuration": "AiTrucker / ICC and highway-solution architecture, not one truck chassis BOM. CPU/GPU SKU, memory, radio modules, numerical power requirements and sensor model list are not disclosed. Roadside/cloud equipment is separate from onboard vehicle hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation component",
+                "details": "Integrated BeiDou navigation/positioning chip; the exact part number is undisclosed.",
+                "sources": [
+                  "https://en.trunk.tech/aitrucker/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trunk-highway-aitrucker-architecture",
+                "configuration": "AiTrucker / ICC and highway-solution architecture, not one truck chassis BOM. CPU/GPU SKU, memory, radio modules, numerical power requirements and sensor model list are not disclosed. Roadside/cloud equipment is separate from onboard vehicle hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -132672,13 +133635,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Integration buses",
+                "details": "Sensor, network and data interfaces plus a hardware-adaptation toolchain are described; no physical bus pinout is provided.",
+                "sources": [
+                  "https://en.trunk.tech/aitrucker/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trunk-highway-aitrucker-architecture",
+                "configuration": "AiTrucker / ICC and highway-solution architecture, not one truck chassis BOM. CPU/GPU SKU, memory, radio modules, numerical power requirements and sensor model list are not disclosed. Roadside/cloud equipment is separate from onboard vehicle hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Highway orchestration",
+                "details": "AiTrucker driving software and Trunk GO freight-network services support the highway offering.",
+                "sources": [
+                  "https://en.trunk.tech/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trunk-highway-aitrucker-architecture",
+                "configuration": "AiTrucker / ICC and highway-solution architecture, not one truck chassis BOM. CPU/GPU SKU, memory, radio modules, numerical power requirements and sensor model list are not disclosed. Roadside/cloud equipment is separate from onboard vehicle hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -132692,13 +133681,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -302201,6 +303185,14 @@
               "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
             ]
           }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "PACCAR",
+            "models": [
+              "Peterbilt 579 (Autonomous)"
+            ]
+          }
         ]
       },
       {
@@ -321115,6 +322107,544 @@
             ]
           }
         ]
+      },
+      {
+        "id": "kodiak-driver-gen5-2023",
+        "manufacturer": "Kodiak AI",
+        "models": [
+          "Kodiak Driver (Gen 5, 2023)",
+          "Kodiak Driver",
+          "Kodiak Driverless Truck"
+        ],
+        "configuration": "April 2023 fifth-generation configuration. Historical component reference, not the sixth-generation RoboTruck. Exact main CPU/GPU SKU, RAM, storage, radio module and supply ratings are not disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Camera and main compute",
+            "details": "Ambarella CV2 camera processor; ruggedized Crystal main computing platform. The article does not identify a specific Crystal computer or main processor model.",
+            "sources": [
+              "https://kodiak.ai/news/smarter-faster-just-as-safe"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Safety controllers",
+            "details": "Two Actuation Control Engines (ACE) handle safety control and the interface between autonomy and the truck chassis.",
+            "sources": [
+              "https://kodiak.ai/news/smarter-faster-just-as-safe"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "SensorPod architecture",
+            "details": "Eighteen sensors overall. Mirror-mounted SensorPods contain the autonomy-critical sensors, including forward LiDAR; the earlier roof-mounted pod is removed.",
+            "sources": [
+              "https://kodiak.ai/news/smarter-faster-just-as-safe"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Serviceable connections",
+            "details": "Power and data connectors use aviation-grade designs. Individual connector part numbers are not given.",
+            "sources": [
+              "https://kodiak.ai/news/smarter-faster-just-as-safe"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fallback control",
+            "details": "ACE controllers support a safe fallback after a critical failure; this does not establish the operating-system version.",
+            "sources": [
+              "https://kodiak.ai/news/smarter-faster-just-as-safe"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kodiak-driver-gen6-2024",
+        "manufacturer": "Kodiak AI",
+        "models": [
+          "Kodiak Driver (Gen 6, 2024)",
+          "Kodiak Driver",
+          "Kodiak RoboTruck",
+          "Kodiak Driverless Truck"
+        ],
+        "configuration": "January 2024 sixth-generation design and January 2025 Atlas RoboTruck association. CPU/GPU SKU, RAM/storage capacities and LTE modem models remain undisclosed. Announced future CV3-AD integration is not treated as installed hardware.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Driving and safety compute",
+            "details": "NVIDIA GPUs process perception data; Kodiak ACE is the independent high-integrity safety computer. Neither GPU nor ACE silicon part numbers are supplied.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception hardware",
+            "details": "Twelve cameras, four LiDAR sensors, six radars and emergency-sound microphones; replaceable, pre-calibrated SensorPods.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Command-center connectivity",
+            "details": "Redundant LTE communications links; carrier, band plan and modem SKU are not specified.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Redundant electrical supply",
+            "details": "Two electrically isolated supply subsystems power computers, sensors, actuators and other electrical loads.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle actuators",
+            "details": "Three pneumatic brake actuators and two redundant ZF steering actuators.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fallback behavior",
+            "details": "Safety control can move the truck out of traffic after a critical failure.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/kodiak-unveils-industry-first-semi-truck-designed-for-scaled-driverless-deployment-302029917.html"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Documented deployment and company names",
+            "details": "January 2025 Atlas customer-owned RoboTrucks use the sixth-generation platform. The issuer filing links legacy Kodiak Robotics with Kodiak AI; that company relationship does not identify a truck generation by radio signal.",
+            "sources": [
+              "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas",
+              "https://www.sec.gov/Archives/edgar/data/1853138/000162828026041930/kodiakaiinc-424b3.htm"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inceptio-xuanyuan-2021-gen1",
+        "manufacturer": "Inceptio Technology",
+        "models": [
+          "Xuanyuan / ADCU Gen 1 (2021)",
+          "Inceptio Xuanyuan-Equipped Heavy Truck"
+        ],
+        "configuration": "The 2021 commercially delivered Xuanyuan system and published ADCU Gen 1 reference. Journey 3 is an identified component, not proof that it is the only processor. Sensor models, radios, memory and vehicle powertrain vary or remain undisclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Identified accelerator",
+            "details": "Inceptio states that the commercially delivered 2021 Xuanyuan system included Horizon Journey 3 chips.",
+            "sources": [
+              "https://en.inceptio.ai/press/207.html"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "ADCU Gen 1",
+            "details": "Published control-unit rating is 245 TOPS, with automotive-grade redundancy; enclosure 414×294×100 mm. This total is not a Journey 3 single-chip rating.",
+            "sources": [
+              "https://en.inceptio.ai/technology/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Compute efficiency",
+            "details": "ADCU Gen 1 is rated at 1.53 TOPS/W; no input voltage, battery capacity or actual operating draw is derived from that figure.",
+            "sources": [
+              "https://en.inceptio.ai/technology/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle integration",
+            "details": "Modular electrical/electronic architecture separates hardware from software and provides a standardized SDK for vehicle adaptation.",
+            "sources": [
+              "https://en.inceptio.ai/technology/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inceptio-xuanyuan-gen2-journey5",
+        "manufacturer": "Inceptio Technology",
+        "models": [
+          "Xuanyuan / ADCU Gen 2 (Journey 5)",
+          "Inceptio Xuanyuan-Equipped Heavy Truck"
+        ],
+        "configuration": "Gen 2 configuration announced December 2022 with planned Q4 2023 production, plus the manufacturer’s ADCU Gen 2 specification. The announcement alone is not proof every truck received it. RAM/storage, radio modules and full sensor BOM are not published here.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Dual Journey 5 platform",
+            "details": "Two Horizon Journey 5 chips, each rated up to 128 TOPS, for a 256-TOPS board. Uses Horizon’s Bayesian BPU architecture.",
+            "sources": [
+              "https://en.inceptio.ai/press/207.html"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "ADCU Gen 2 rating",
+            "details": "262 KDMIPS plus 256 TOPS; 380×246×75 mm enclosure. Expansion beyond 1,000 TOPS is a scalable architecture capability, not the base configuration.",
+            "sources": [
+              "https://en.inceptio.ai/technology/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Sensor timing",
+            "details": "Published cross-system synchronization is below 30 ns; physical connector and bus assignments are not supplied.",
+            "sources": [
+              "https://en.inceptio.ai/technology/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control architecture",
+            "details": "Published stack covers multi-view perception, ARC 2.0 planning/control and FEAD 2.0 fuel optimization. Software version installed on an individual truck is not established.",
+            "sources": [
+              "https://en.inceptio.ai/technology/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tensor-robocar-published-architecture",
+        "manufacturer": "Tensor Auto",
+        "models": [
+          "Tensor Robocar"
+        ],
+        "configuration": "Manufacturer-published Robocar design reviewed November 2026. These are advertised configuration details, not a teardown or proof of delivery of any particular unit. Regional radio modules vary; RAM capacities and individual module part numbers are not fully disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autonomy supercomputer",
+            "details": "Eight NVIDIA DRIVE AGX Thor SoCs with Blackwell GPUs; each Thor is described with a 14-core Arm Neoverse V3 AE CPU.",
+            "sources": [
+              "https://www.tensor.auto/supercomputer"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Safety and network processors",
+            "details": "Two TI TDA4VH processors, two NXP S32G399A processors and Renesas RH850 microcontrollers. TI units are described with eight Cortex-A72 cores; the NXP units combine Cortex-A53 and Cortex-M7 cores.",
+            "sources": [
+              "https://www.tensor.auto/supercomputer"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Automotive storage",
+            "details": "Samsung E1.A solid-state storage supports up to 19 TB. This is a supported maximum, not a guaranteed installed capacity.",
+            "sources": [
+              "https://www.tensor.auto/supercomputer"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Computer cooling and supply",
+            "details": "Liquid thermal management and dual-power architecture protect the computing subsystem.",
+            "sources": [
+              "https://www.tensor.auto/supercomputer"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Safety-controller software",
+            "details": "Renesas controller software uses Vector AUTOSAR.",
+            "sources": [
+              "https://www.tensor.auto/supercomputer"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wide-area links",
+            "details": "Three independent 5G links using Qualcomm and Continental technology; region-specific module models are not identified.",
+            "sources": [
+              "https://www.tensor.auto/autonomy"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Exterior perception and navigation",
+            "details": "One Halo and four Sentinel LiDARs, seventeen 17-MP exterior cameras, six Trinova radars and four external microphone arrays. Navigation combines GNSS/RTK, inertial sensors, wheel encoders and perception.",
+            "sources": [
+              "https://www.tensor.auto/autonomy"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Vehicle domain unit",
+            "details": "FEV-assisted VDU uses an NXP S32G chipset and AUTOSAR architecture; the page does not specify the VDU’s exact S32G suffix.",
+            "sources": [
+              "https://www.tensor.auto/robocar"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Vehicle energy architecture",
+            "details": "Published 845 V architecture and 112 kWh battery; dual-channel DC/DC and dual low-voltage backup batteries.",
+            "sources": [
+              "https://www.tensor.auto/robocar"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Drive-by-wire redundancy",
+            "details": "Steering uses redundant power, communication channels, controllers, motor windings and sensors.",
+            "sources": [
+              "https://www.tensor.auto/robocar"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Vehicle updates",
+            "details": "OTA updates cover the VDU and vehicle subsystems. Oracle-backed data processing and training infrastructure is separate from onboard driving compute.",
+            "sources": [
+              "https://www.tensor.auto/robocar",
+              "https://www.tensor.auto/autonomy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "scania-autonomous-mining-2024",
+        "manufacturer": "Scania",
+        "models": [
+          "Scania Autonomous Mining Truck (2024)",
+          "Scania Autonomous Truck"
+        ],
+        "configuration": "September 2024 commercial mining-truck architecture. Does not assign this hardware to highway prototypes, the AXL concept or every Scania model. CPU, RAM/storage, sensor/radio chip models and engine configuration are not disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Mine perception and localization",
+            "details": "LiDAR, radar and GPS observe traffic, people and obstacles ahead and beside the truck.",
+            "sources": [
+              "https://www.scania.com/group/en/home/newsroom/news/2024/the-advantages-of-scanias-autonomous-mining-trucks-explained.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Nearby vehicle coordination",
+            "details": "Short-range V2X communication with other vehicles or objects; the article also uses the term C-V2X but supplies no radio SKU or frequency.",
+            "sources": [
+              "https://www.scania.com/group/en/home/newsroom/news/2024/the-advantages-of-scanias-autonomous-mining-trucks-explained.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Onboard autonomy",
+            "details": "Decentralized driving software runs on the vehicle rather than requiring individual human driving commands.",
+            "sources": [
+              "https://www.scania.com/group/en/home/newsroom/news/2024/the-advantages-of-scanias-autonomous-mining-trucks-explained.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Supervisory override",
+            "details": "Control-room support and a mobile 2 stop override device supplement onboard autonomy. Its transport protocol is not identified.",
+            "sources": [
+              "https://www.scania.com/group/en/home/newsroom/news/2024/the-advantages-of-scanias-autonomous-mining-trucks-explained.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tesla-semi-2026-standard",
+        "manufacturer": "Tesla",
+        "models": [
+          "Semi Standard Range (2026)",
+          "Semi"
+        ],
+        "configuration": "2026 US product-page configuration, Standard Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Electric drivetrain",
+            "details": "Three electric motors; up to 800 kW drive power. Manufacturer-estimated range is 325 miles under its stated test conditions.",
+            "sources": [
+              "https://www.tesla.com/semi"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Auxiliary power",
+            "details": "Electric power take-off supports up to 25 kW.",
+            "sources": [
+              "https://www.tesla.com/semi"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet and maintenance services",
+            "details": "Tesla for Business supplies fleet/location/charge monitoring; OTA software updates and remote diagnostics are described.",
+            "sources": [
+              "https://www.tesla.com/semi"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tesla-semi-2026-long",
+        "manufacturer": "Tesla",
+        "models": [
+          "Semi Long Range (2026)",
+          "Semi"
+        ],
+        "configuration": "2026 US product-page configuration, Long Range. A fleet-connected electric truck is not, by itself, evidence of driverless capability. CPU, RAM/storage, battery kWh capacity, radio model and autonomy sensor BOM are not disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Electric drivetrain",
+            "details": "Three electric motors; up to 800 kW drive power. Manufacturer-estimated range is 500 miles under its stated test conditions.",
+            "sources": [
+              "https://www.tesla.com/semi"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Auxiliary power",
+            "details": "Electric power take-off supports up to 25 kW.",
+            "sources": [
+              "https://www.tesla.com/semi"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet and maintenance services",
+            "details": "Tesla for Business supplies fleet/location/charge monitoring; OTA software updates and remote diagnostics are described.",
+            "sources": [
+              "https://www.tesla.com/semi"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deepway-star-published-hardware",
+        "manufacturer": "DeepWay",
+        "models": [
+          "DeepWay Star"
+        ],
+        "configuration": "Manufacturer’s early Star walkthrough, with a separately dated March 2025 HIS update. Cockpit silicon is not the autonomy CPU. The walkthrough is configuration-specific; no claim that every current Star has the same battery or electronics. RAM and storage remain undisclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Cabin processor",
+            "details": "Walkthrough identifies Qualcomm 8155 alongside the cabin screens and driver interface; it does not identify this as the HIS autonomy processor.",
+            "sources": [
+              "https://www.linkedin.com/posts/deepway-technology_the-introduction-of-deepway-star-activity-7139865375357235200-z7zS"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Cellular link",
+            "details": "5G connectivity is described; modem SKU, bands and carrier are not supplied.",
+            "sources": [
+              "https://www.linkedin.com/posts/deepway-technology_the-introduction-of-deepway-star-activity-7139865375357235200-z7zS"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Driving and cabin sensing",
+            "details": "Camera and radar perception, an infrared camera, electronic mirrors, gesture and face-recognition interfaces are described. Component part numbers are absent.",
+            "sources": [
+              "https://www.linkedin.com/posts/deepway-technology_the-introduction-of-deepway-star-activity-7139865375357235200-z7zS"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Early vehicle configuration",
+            "details": "Chassis-integrated battery, described as up to 466 kWh, and distributed electric drive. These are early walkthrough specifications, not universal model-year values.",
+            "sources": [
+              "https://www.linkedin.com/posts/deepway-technology_the-introduction-of-deepway-star-activity-7139865375357235200-z7zS"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "March 2025 HIS update",
+            "details": "Manufacturer describes 500-TOPS HIS compute with multi-sensor fusion, without naming the accelerator. This rating is separate from the cabin’s Qualcomm 8155.",
+            "sources": [
+              "https://www.linkedin.com/posts/deepway-technology_deepwaybevtruck-chinaev100forum-deepwaybevtruck-activity-7311412984092794880-nnLk"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Deployment level",
+            "details": "March 2025 update describes L2-Pro deployment and continuing L4 research; it does not establish unrestricted driverless operation.",
+            "sources": [
+              "https://www.linkedin.com/posts/deepway-technology_deepwaybevtruck-chinaev100forum-deepwaybevtruck-activity-7311412984092794880-nnLk"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trunk-highway-aitrucker-architecture",
+        "manufacturer": "Trunk.Tech",
+        "models": [
+          "Trunk Highway"
+        ],
+        "configuration": "AiTrucker / ICC and highway-solution architecture, not one truck chassis BOM. CPU/GPU SKU, memory, radio modules, numerical power requirements and sensor model list are not disclosed. Roadside/cloud equipment is separate from onboard vehicle hardware.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "ICC computing center",
+            "details": "Automotive ICC controller supports scalable compute and sensor clock synchronization; manufacturer specifies an ASIL-D-oriented design without naming its processors.",
+            "sources": [
+              "https://en.trunk.tech/aitrucker/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation component",
+            "details": "Integrated BeiDou navigation/positioning chip; the exact part number is undisclosed.",
+            "sources": [
+              "https://en.trunk.tech/aitrucker/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Integration buses",
+            "details": "Sensor, network and data interfaces plus a hardware-adaptation toolchain are described; no physical bus pinout is provided.",
+            "sources": [
+              "https://en.trunk.tech/aitrucker/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Highway orchestration",
+            "details": "AiTrucker driving software and Trunk GO freight-network services support the highway offering.",
+            "sources": [
+              "https://en.trunk.tech/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Convoy architecture",
+            "details": "CAFC coordinates a lead truck and autonomous followers through vehicle-road-cloud collaboration and V2X; no band or packet signature is established.",
+            "sources": [
+              "https://www.linkedin.com/posts/trunk-autonomous-truck_trunkcafc-autonomousplatooning-highwayfreight-activity-7462146518385348609-iELt"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -321131,8 +322661,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 705,
-    "devices_with_system_profiles": 604,
-    "devices_with_documented_compute": 290
+    "system_profiles": 715,
+    "devices_with_system_profiles": 614,
+    "devices_with_documented_compute": 298
   }
 }
