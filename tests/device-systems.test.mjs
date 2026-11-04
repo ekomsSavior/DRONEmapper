@@ -760,3 +760,27 @@ test('Galbot, agricultural and vehicle references separate onboard, ground and o
  assert.equal(profileIds(system('Hylio','AG-210')).includes('hylio-ag272-2024-configurable-components'),false);
  assert.equal(profileIds(system('EHang','EH216F')).includes('ehang-eh216s-system-reference'),false);
 });
+
+test('sorting revisions and humanoid embodiments retain their own hardware',()=>{
+ const v2=system('Geek+','S20C V2.0'),v3=system('Geek+','S20C V3.0');
+ assert.match(text(v2.sections.power),/50.4 V \/ 12 Ah/);
+ assert.doesNotMatch(text(v2.sections.power),/51.8|12.4/);
+ assert.match(text(v3.sections.power),/51.8 V \/ 12.4 Ah/);
+ assert.match(text(system('Geek+','S100C V2.0').sections.sensors),/optional LiDAR/);
+ assert.equal(profileIds(system('Geek+','Geek+ S Series')).length,6);
+ assert.equal(profileIds(system('Geek+','Geek+ AMR')).length,0);
+ const wheeled=system('Humanoid','HMND 01 Alpha Wheeled'),biped=system('Humanoid','HMND 01 Alpha Bipedal');
+ assert.match(text(wheeled.sections.compute),/Jetson Thor/);
+ assert.equal(wheeled.sections.memory.status,'not-established');
+ assert.match(text(wheeled.sections.power),/300 kg/);
+ assert.doesNotMatch(text(wheeled.sections.sensors),/six-microphone/);
+ assert.match(text(biped.sections.power),/90 kg/);
+ assert.match(text(biped.sections.sensors),/six-microphone/);
+ assert.doesNotMatch(text(system('HAI Robotics','HAI ACR').sections.interfaces),/six metres|nine cases/);
+ assert.match(text(system('HAI Robotics','HaiPick A42').sections.sensors),/optional 3D camera/);
+ assert.match(text(system('GreyOrange','Ranger MoveSmart').sections.sensors),/not a verified onboard sensor inventory/);
+ assert.equal(system('HDT Global','Hunter WOLF').sections.radios.status,'not-established');
+ assert.match(text(system('HDT Global','Hunter WOLF').sections.sensors),/Optional autonomy kit/);
+ assert.match(text(system('Hanwha Aerospace','Arion-SMET').configurations),/2023 FCT/);
+ assert.equal(system('Hanwha Aerospace','Arion-SMET').sections.compute.status,'not-established');
+});

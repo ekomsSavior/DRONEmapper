@@ -66827,8 +66827,39 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "geek-sorting-s20t-v2-0",
+            "configuration": "S20T V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "geek-sorting-s20c-v2-0",
+            "configuration": "S20C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "geek-sorting-s100c-v2-0",
+            "configuration": "S100C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "geek-sorting-s20c-a-v2-0",
+            "configuration": "S20C-A V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "geek-sorting-s20c-h-sne-v3-0",
+            "configuration": "S20C-H-SNE V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "geek-sorting-s20c-v3-0",
+            "configuration": "S20C V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -66847,23 +66878,315 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Safety hardware",
+                "details": "LiDAR; emergency stop.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20t-v2-0",
+                "configuration": "S20T V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Safety hardware",
+                "details": "LiDAR; emergency stop.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-v2-0",
+                "configuration": "S20C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Safety hardware",
+                "details": "Infrared sensing; optional LiDAR; emergency stop.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s100c-v2-0",
+                "configuration": "S100C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Safety hardware",
+                "details": "LiDAR; emergency stop.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-a-v2-0",
+                "configuration": "S20C-A V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Safety hardware",
+                "details": "LiDAR; emergency stop.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-h-sne-v3-0",
+                "configuration": "S20C-H-SNE V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Safety hardware",
+                "details": "LiDAR; emergency stop.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-v3-0",
+                "configuration": "S20C V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "50.4 V / 12 Ah Li-ion.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20t-v2-0",
+                "configuration": "S20T V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "50.4 V / 12 Ah Li-ion.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-v2-0",
+                "configuration": "S20C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "50.4 V / 38.5 Ah lithium battery.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s100c-v2-0",
+                "configuration": "S100C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "50.4 V / 12 Ah Li-ion.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-a-v2-0",
+                "configuration": "S20C-A V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "50.4 V / 12 Ah Li-ion.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-h-sne-v3-0",
+                "configuration": "S20C-H-SNE V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "51.8 V / 12.4 Ah Li-ion.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-v3-0",
+                "configuration": "S20C V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Load carrier",
+                "details": "8 kg payload.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20t-v2-0",
+                "configuration": "S20T V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Load carrier",
+                "details": "20 kg payload.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-v2-0",
+                "configuration": "S20C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Load carrier",
+                "details": "100 kg payload.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s100c-v2-0",
+                "configuration": "S100C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Load carrier",
+                "details": "20 kg payload; adjustable 550–1100 mm carrier height.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-a-v2-0",
+                "configuration": "S20C-A V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Load carrier",
+                "details": "20 kg payload.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-h-sne-v3-0",
+                "configuration": "S20C-H-SNE V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Load carrier",
+                "details": "20 kg payload.",
+                "sources": [
+                  "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-v3-0",
+                "configuration": "S20C V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Sorting-system integration",
+                "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+                "sources": [
+                  "https://www.geekplus.com/solutions/sorting"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20t-v2-0",
+                "configuration": "S20T V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Sorting-system integration",
+                "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+                "sources": [
+                  "https://www.geekplus.com/solutions/sorting"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-v2-0",
+                "configuration": "S20C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Sorting-system integration",
+                "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+                "sources": [
+                  "https://www.geekplus.com/solutions/sorting"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s100c-v2-0",
+                "configuration": "S100C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Sorting-system integration",
+                "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+                "sources": [
+                  "https://www.geekplus.com/solutions/sorting"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-a-v2-0",
+                "configuration": "S20C-A V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Sorting-system integration",
+                "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+                "sources": [
+                  "https://www.geekplus.com/solutions/sorting"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-h-sne-v3-0",
+                "configuration": "S20C-H-SNE V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Sorting-system integration",
+                "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+                "sources": [
+                  "https://www.geekplus.com/solutions/sorting"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "geek-sorting-s20c-v3-0",
+                "configuration": "S20C V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -66880,10 +67203,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -72445,8 +72764,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "greyorange-movesmart-system",
+            "configuration": "Published MoveSmart system specification. CPU, RAM/storage, battery and onboard sensor/radio models are not identified; induction-station sensors are not assumed onboard the mobile robot.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -72465,8 +72790,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Induction equipment",
+                "details": "Automatic dimensioning, weighing and scanning with rejection handling. These are system/induction functions, not a verified onboard sensor inventory.",
+                "sources": [
+                  "https://www.greyorange.com/greymatter/sortation-smart-conveying/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "greyorange-movesmart-system",
+                "configuration": "Published MoveSmart system specification. CPU, RAM/storage, battery and onboard sensor/radio models are not identified; induction-station sensors are not assumed onboard the mobile robot.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -72475,13 +72813,51 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Carrier variants",
+                "details": "RMS-XL accepts 800×600 mm parcels; RMS-M accepts 600×450 mm. Published maximum parcel weight is 35 kg.",
+                "sources": [
+                  "https://www.greyorange.com/greymatter/sortation-smart-conveying/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "greyorange-movesmart-system",
+                "configuration": "Published MoveSmart system specification. CPU, RAM/storage, battery and onboard sensor/radio models are not identified; induction-station sensors are not assumed onboard the mobile robot.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Material-flow connections",
+                "details": "Manual, semi-automatic, automatic and conveyor induction modules are supported.",
+                "sources": [
+                  "https://www.greyorange.com/greymatter/sortation-smart-conveying/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "greyorange-movesmart-system",
+                "configuration": "Published MoveSmart system specification. CPU, RAM/storage, battery and onboard sensor/radio models are not identified; induction-station sensors are not assumed onboard the mobile robot.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet orchestration",
+                "details": "GreyMatter coordinates Ranger movement and parcel flow between induction, sorting and dispatch.",
+                "sources": [
+                  "https://www.greyorange.com/greymatter/sortation-smart-conveying/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "greyorange-movesmart-system",
+                "configuration": "Published MoveSmart system specification. CPU, RAM/storage, battery and onboard sensor/radio models are not identified; induction-station sensors are not assumed onboard the mobile robot.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -72498,10 +72874,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -72915,8 +73288,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hai-acr-family-architecture",
+            "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -72930,8 +73309,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Fleet network",
+                "details": "Wi-Fi connects robots to HaiQ for operating-state and health monitoring; chipset and channel configuration unspecified.",
+                "sources": [
+                  "https://www.hairobotics.com/robots/haipick-a42"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hai-acr-family-architecture",
+                "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -72940,18 +73332,57 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Charging architecture",
+                "details": "Manufacturer FAQ lists LiFePO4 batteries and autonomous return to protected charging stations; pack ratings depend on model.",
+                "sources": [
+                  "https://www.hairobotics.com/robots/haipick-a42"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hai-acr-family-architecture",
+                "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "System hardware",
+                "details": "Mobile case-handling robots, storage racks, charging stations and loading/unloading workstations; conveyors and third-party manipulators/AGVs/AMRs may be integrated.",
+                "sources": [
+                  "https://www.hairobotics.com/sites/default/files/2022-07/acr-white-paper_5_0.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hai-acr-family-architecture",
+                "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Coordination",
+                "details": "HaiQ schedules robot movements, order fulfilment and inventory operations across the installation.",
+                "sources": [
+                  "https://www.hairobotics.com/sites/default/files/2022-07/acr-white-paper_5_0.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hai-acr-family-architecture",
+                "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -72978,11 +73409,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "sensors"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -73044,8 +73471,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hai-acr-family-architecture",
+            "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -73059,8 +73492,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Fleet network",
+                "details": "Wi-Fi connects robots to HaiQ for operating-state and health monitoring; chipset and channel configuration unspecified.",
+                "sources": [
+                  "https://www.hairobotics.com/robots/haipick-a42"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hai-acr-family-architecture",
+                "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -73069,18 +73515,57 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Charging architecture",
+                "details": "Manufacturer FAQ lists LiFePO4 batteries and autonomous return to protected charging stations; pack ratings depend on model.",
+                "sources": [
+                  "https://www.hairobotics.com/robots/haipick-a42"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hai-acr-family-architecture",
+                "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "System hardware",
+                "details": "Mobile case-handling robots, storage racks, charging stations and loading/unloading workstations; conveyors and third-party manipulators/AGVs/AMRs may be integrated.",
+                "sources": [
+                  "https://www.hairobotics.com/sites/default/files/2022-07/acr-white-paper_5_0.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hai-acr-family-architecture",
+                "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Coordination",
+                "details": "HaiQ schedules robot movements, order fulfilment and inventory operations across the installation.",
+                "sources": [
+                  "https://www.hairobotics.com/sites/default/files/2022-07/acr-white-paper_5_0.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hai-acr-family-architecture",
+                "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -73107,11 +73592,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "sensors"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -73418,8 +73899,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hanwha-arion-smet-2023-fct",
+            "configuration": "September 2023 FCT demonstration configuration. Later production variants may differ. No CPU, RAM, battery capacity, radio bands or sensor part numbers are established by this announcement.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -73443,18 +73930,69 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Vehicle architecture",
+                "details": "Six-wheel electric platform; advertised 100 km per charge for this configuration.",
+                "sources": [
+                  "https://www.hanwhaaerospace.com/eng/media/newsroom/view.do?seq=362"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hanwha-arion-smet-2023-fct",
+                "configuration": "September 2023 FCT demonstration configuration. Later production variants may differ. No CPU, RAM, battery capacity, radio bands or sensor part numbers are established by this announcement.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Load platform",
+                "details": "550 kg payload rating in the 2023 demonstration reference.",
+                "sources": [
+                  "https://www.hanwhaaerospace.com/eng/media/newsroom/view.do?seq=362"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hanwha-arion-smet-2023-fct",
+                "configuration": "September 2023 FCT demonstration configuration. Later production variants may differ. No CPU, RAM, battery capacity, radio bands or sensor part numbers are established by this announcement.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Operator interfaces",
+                "details": "Remote operation and physical tether-following are listed; the remote-control radio protocol is not identified.",
+                "sources": [
+                  "https://www.hanwhaaerospace.com/eng/media/newsroom/view.do?seq=362"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hanwha-arion-smet-2023-fct",
+                "configuration": "September 2023 FCT demonstration configuration. Later production variants may differ. No CPU, RAM, battery capacity, radio bands or sensor part numbers are established by this announcement.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Driving modes",
+                "details": "Off-road autonomous driving and exploratory autonomous manoeuvring, alongside operator-controlled modes.",
+                "sources": [
+                  "https://www.hanwhaaerospace.com/eng/media/newsroom/view.do?seq=362"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hanwha-arion-smet-2023-fct",
+                "configuration": "September 2023 FCT demonstration configuration. Later production variants may differ. No CPU, RAM, battery capacity, radio bands or sensor part numbers are established by this announcement.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -73472,9 +74010,6 @@
           "memory",
           "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -74098,8 +74633,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hdt-hunter-wolf-2026",
+            "configuration": "January 2026 revision 14 manufacturer sheet. Processor, RAM/storage, radio chipset and battery capacity are undisclosed. The sheet gives inconsistent 28 V output ratings, so no single wattage is asserted for that rail.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -74118,23 +74659,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Optional autonomy kit",
+                "details": "HDT kit provides obstacle detection/avoidance and waypoint following; underlying sensor parts are not named.",
+                "sources": [
+                  "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hdt-hunter-wolf-2026",
+                "configuration": "January 2026 revision 14 manufacturer sheet. Processor, RAM/storage, radio chipset and battery capacity are undisclosed. The sheet gives inconsistent 28 V output ratings, so no single wattage is asserted for that rail.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Drivetrain",
+                "details": "Six-wheel diesel/JP-8 hybrid-electric platform with onboard battery; Michelin non-pneumatic Tweels. Published payload 1,270 kg.",
+                "sources": [
+                  "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hdt-hunter-wolf-2026",
+                "configuration": "January 2026 revision 14 manufacturer sheet. Processor, RAM/storage, radio chipset and battery capacity are undisclosed. The sheet gives inconsistent 28 V output ratings, so no single wattage is asserted for that rail.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Payload power",
+                "details": "28 V DC NATO connections; 15 kW continuous at 100 V DC. Optional inverter supplies 120/240 V AC.",
+                "sources": [
+                  "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hdt-hunter-wolf-2026",
+                "configuration": "January 2026 revision 14 manufacturer sheet. Processor, RAM/storage, radio chipset and battery capacity are undisclosed. The sheet gives inconsistent 28 V output ratings, so no single wattage is asserted for that rail.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Control and payloads",
+                "details": "Single-hand controller with emergency stop; distributed payload hardpoints and open autonomy-kit interfaces.",
+                "sources": [
+                  "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hdt-hunter-wolf-2026",
+                "configuration": "January 2026 revision 14 manufacturer sheet. Processor, RAM/storage, radio chipset and battery capacity are undisclosed. The sheet gives inconsistent 28 V output ratings, so no single wattage is asserted for that rail.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Interoperability",
+                "details": "MOSA design and RAS-G IOP v6 integration for third-party controllers/autonomy; installation-specific software varies.",
+                "sources": [
+                  "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hdt-hunter-wolf-2026",
+                "configuration": "January 2026 revision 14 manufacturer sheet. Processor, RAM/storage, radio chipset and battery capacity are undisclosed. The sheet gives inconsistent 28 V output ratings, so no single wattage is asserted for that rail.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -74151,10 +74756,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -75840,13 +76441,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "humanoid-alpha-wheeled",
+            "configuration": "Manufacturer Alpha prototype specification and NVIDIA integration disclosure. Exact Thor SKU, RAM/storage, battery capacity and wireless chipset are not published.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard AI computer",
+                "details": "NVIDIA Jetson Thor is disclosed for both Alpha prototypes; no inference about the installed module memory is made.",
+                "sources": [
+                  "https://thehumanoid.ai/humanoid-deploys-nvidia-technologies-to-power-advanced-humanoid-robots/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "humanoid-alpha-wheeled",
+                "configuration": "Manufacturer Alpha prototype specification and NVIDIA integration disclosure. Exact Thor SKU, RAM/storage, battery capacity and wireless chipset are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -75860,23 +76480,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Head perception",
+                "details": "Surround RGB cameras and two depth sensors.",
+                "sources": [
+                  "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "humanoid-alpha-wheeled",
+                "configuration": "Manufacturer Alpha prototype specification and NVIDIA integration disclosure. Exact Thor SKU, RAM/storage, battery capacity and wireless chipset are not published.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Manipulation feedback",
+                "details": "Wrist RGB cameras, six-axis force/torque sensing and haptic feedback.",
+                "sources": [
+                  "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "humanoid-alpha-wheeled",
+                "configuration": "Manufacturer Alpha prototype specification and NVIDIA integration disclosure. Exact Thor SKU, RAM/storage, battery capacity and wireless chipset are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Locomotion",
+                "details": "Omnidirectional wheeled base; 300 kg robot mass. Published maximum speed 2 m/s and average runtime four hours; test conditions and battery Wh are unspecified.",
+                "sources": [
+                  "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "humanoid-alpha-wheeled",
+                "configuration": "Manufacturer Alpha prototype specification and NVIDIA integration disclosure. Exact Thor SKU, RAM/storage, battery capacity and wireless chipset are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Joints and hands",
+                "details": "29 degrees of freedom; 15 kg payload. Alternative end effectors: 12-DOF five-finger hand or single-DOF parallel gripper.",
+                "sources": [
+                  "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "humanoid-alpha-wheeled",
+                "configuration": "Manufacturer Alpha prototype specification and NVIDIA integration disclosure. Exact Thor SKU, RAM/storage, battery capacity and wireless chipset are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy",
+                "details": "KinetIQ four-layer AI architecture and KinetIQ Ascend learning.",
+                "sources": [
+                  "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "humanoid-alpha-wheeled",
+                "configuration": "Manufacturer Alpha prototype specification and NVIDIA integration disclosure. Exact Thor SKU, RAM/storage, battery capacity and wireless chipset are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -75890,13 +76574,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -284352,6 +285031,623 @@
             ]
           }
         ]
+      },
+      {
+        "id": "geek-sorting-s20t-v2-0",
+        "manufacturer": "Geek+",
+        "models": [
+          "S20T V2.0",
+          "Geek+ S Series"
+        ],
+        "configuration": "S20T V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "50.4 V / 12 Ah Li-ion.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety hardware",
+            "details": "LiDAR; emergency stop.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Load carrier",
+            "details": "8 kg payload.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Sorting-system integration",
+            "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+            "sources": [
+              "https://www.geekplus.com/solutions/sorting"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "geek-sorting-s20c-v2-0",
+        "manufacturer": "Geek+",
+        "models": [
+          "S20C V2.0",
+          "Geek+ S Series"
+        ],
+        "configuration": "S20C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "50.4 V / 12 Ah Li-ion.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety hardware",
+            "details": "LiDAR; emergency stop.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Load carrier",
+            "details": "20 kg payload.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Sorting-system integration",
+            "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+            "sources": [
+              "https://www.geekplus.com/solutions/sorting"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "geek-sorting-s100c-v2-0",
+        "manufacturer": "Geek+",
+        "models": [
+          "S100C V2.0",
+          "Geek+ S Series"
+        ],
+        "configuration": "S100C V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "50.4 V / 38.5 Ah lithium battery.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety hardware",
+            "details": "Infrared sensing; optional LiDAR; emergency stop.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Load carrier",
+            "details": "100 kg payload.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Sorting-system integration",
+            "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+            "sources": [
+              "https://www.geekplus.com/solutions/sorting"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "geek-sorting-s20c-a-v2-0",
+        "manufacturer": "Geek+",
+        "models": [
+          "S20C-A V2.0",
+          "Geek+ S Series"
+        ],
+        "configuration": "S20C-A V2.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "50.4 V / 12 Ah Li-ion.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety hardware",
+            "details": "LiDAR; emergency stop.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Load carrier",
+            "details": "20 kg payload; adjustable 550–1100 mm carrier height.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Sorting-system integration",
+            "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+            "sources": [
+              "https://www.geekplus.com/solutions/sorting"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "geek-sorting-s20c-h-sne-v3-0",
+        "manufacturer": "Geek+",
+        "models": [
+          "S20C-H-SNE V3.0",
+          "Geek+ S Series"
+        ],
+        "configuration": "S20C-H-SNE V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "50.4 V / 12 Ah Li-ion.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety hardware",
+            "details": "LiDAR; emergency stop.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Load carrier",
+            "details": "20 kg payload.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Sorting-system integration",
+            "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+            "sources": [
+              "https://www.geekplus.com/solutions/sorting"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "geek-sorting-s20c-v3-0",
+        "manufacturer": "Geek+",
+        "models": [
+          "S20C V3.0",
+          "Geek+ S Series"
+        ],
+        "configuration": "S20C V3.0 as specified in the manufacturer S-series brochure. Component details apply to this revision only; CPU, RAM/storage and radio module are unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "51.8 V / 12.4 Ah Li-ion.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety hardware",
+            "details": "LiDAR; emergency stop.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Load carrier",
+            "details": "20 kg payload.",
+            "sources": [
+              "https://www.geekplus.com/hubfs/S-series.pdf?hsLang=zh-cn"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Sorting-system integration",
+            "details": "WES, RMS and IOP; WMS/ERP/MES integration.",
+            "sources": [
+              "https://www.geekplus.com/solutions/sorting"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "humanoid-alpha-wheeled",
+        "manufacturer": "Humanoid",
+        "models": [
+          "HMND 01 Alpha Wheeled",
+          "HMND-01 Alpha Wheeled"
+        ],
+        "configuration": "Manufacturer Alpha prototype specification and NVIDIA integration disclosure. Exact Thor SKU, RAM/storage, battery capacity and wireless chipset are not published.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard AI computer",
+            "details": "NVIDIA Jetson Thor is disclosed for both Alpha prototypes; no inference about the installed module memory is made.",
+            "sources": [
+              "https://thehumanoid.ai/humanoid-deploys-nvidia-technologies-to-power-advanced-humanoid-robots/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Head perception",
+            "details": "Surround RGB cameras and two depth sensors.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Manipulation feedback",
+            "details": "Wrist RGB cameras, six-axis force/torque sensing and haptic feedback.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Locomotion",
+            "details": "Omnidirectional wheeled base; 300 kg robot mass. Published maximum speed 2 m/s and average runtime four hours; test conditions and battery Wh are unspecified.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Joints and hands",
+            "details": "29 degrees of freedom; 15 kg payload. Alternative end effectors: 12-DOF five-finger hand or single-DOF parallel gripper.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy",
+            "details": "KinetIQ four-layer AI architecture and KinetIQ Ascend learning.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-wheeled/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "humanoid-alpha-bipedal",
+        "manufacturer": "Humanoid",
+        "models": [
+          "HMND 01 Alpha Bipedal",
+          "HMND-01 Alpha Bipedal"
+        ],
+        "configuration": "Manufacturer Alpha prototype specification and NVIDIA integration disclosure. Exact Thor SKU, RAM/storage, battery capacity and wireless chipset are not published.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard AI computer",
+            "details": "NVIDIA Jetson Thor is disclosed for both Alpha prototypes; no inference about the installed module memory is made.",
+            "sources": [
+              "https://thehumanoid.ai/humanoid-deploys-nvidia-technologies-to-power-advanced-humanoid-robots/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Head perception",
+            "details": "RGB cameras, two depth sensors, six-microphone array, display, LEDs and speakers.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-bipedal/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Manipulation feedback",
+            "details": "Wrist RGB cameras, six-axis force/torque sensing and haptic feedback.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-bipedal/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Locomotion",
+            "details": "Bipedal platform; 90 kg robot mass. Published maximum speed 2 m/s and average runtime four hours; test conditions and battery Wh are unspecified.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-bipedal/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Joints and hands",
+            "details": "29 degrees of freedom; 15 kg payload. Alternative end effectors: 12-DOF five-finger hand or single-DOF parallel gripper.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-bipedal/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy",
+            "details": "KinetIQ fleet/autonomy architecture and reinforcement-learning whole-body controller.",
+            "sources": [
+              "https://thehumanoid.ai/hmnd-01-alpha-bipedal/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hai-acr-family-architecture",
+        "manufacturer": "HAI Robotics",
+        "models": [
+          "HAI ACR",
+          "HAIPICK"
+        ],
+        "configuration": "Family-level architecture, not a single robot bill of materials. Dimensions, batteries and processors of individual A42 variants must not be assigned to an unidentified ACR.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "System hardware",
+            "details": "Mobile case-handling robots, storage racks, charging stations and loading/unloading workstations; conveyors and third-party manipulators/AGVs/AMRs may be integrated.",
+            "sources": [
+              "https://www.hairobotics.com/sites/default/files/2022-07/acr-white-paper_5_0.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Coordination",
+            "details": "HaiQ schedules robot movements, order fulfilment and inventory operations across the installation.",
+            "sources": [
+              "https://www.hairobotics.com/sites/default/files/2022-07/acr-white-paper_5_0.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Fleet network",
+            "details": "Wi-Fi connects robots to HaiQ for operating-state and health monitoring; chipset and channel configuration unspecified.",
+            "sources": [
+              "https://www.hairobotics.com/robots/haipick-a42"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Charging architecture",
+            "details": "Manufacturer FAQ lists LiFePO4 batteries and autonomous return to protected charging stations; pack ratings depend on model.",
+            "sources": [
+              "https://www.hairobotics.com/robots/haipick-a42"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hai-haipick-a42-family",
+        "manufacturer": "HAI Robotics",
+        "models": [
+          "HaiPick A42",
+          "HAIPICK A42"
+        ],
+        "configuration": "A42 series with configurable lift/fork variants. Exact CPU, memory, radio chipset and sensor SKUs are not disclosed; maximum capabilities are configuration-dependent.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Case handling",
+            "details": "Multi-tray lift/fork robot: configurations reach six metres and carry up to nine cases. Double-deep and variable-width forks are optional.",
+            "sources": [
+              "https://www.hairobotics.com/robots/haipick-a42"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Recognition and safety",
+            "details": "Obstacle detection, collision alarms and emergency stop; optional 3D camera for mixed carton sizes.",
+            "sources": [
+              "https://www.hairobotics.com/robots/haipick-a42"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Fleet link",
+            "details": "Wi-Fi to HaiQ; no device-specific RF signature established.",
+            "sources": [
+              "https://www.hairobotics.com/robots/haipick-a42"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "LiFePO4 with automatic dock charging; voltage/capacity unspecified.",
+            "sources": [
+              "https://www.hairobotics.com/robots/haipick-a42"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "System control",
+            "details": "HaiQ coordinates robots and associated warehouse equipment.",
+            "sources": [
+              "https://www.hairobotics.com/sites/default/files/2022-07/acr-white-paper_5_0.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "greyorange-movesmart-system",
+        "manufacturer": "GreyOrange",
+        "models": [
+          "Ranger MoveSmart"
+        ],
+        "configuration": "Published MoveSmart system specification. CPU, RAM/storage, battery and onboard sensor/radio models are not identified; induction-station sensors are not assumed onboard the mobile robot.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Carrier variants",
+            "details": "RMS-XL accepts 800×600 mm parcels; RMS-M accepts 600×450 mm. Published maximum parcel weight is 35 kg.",
+            "sources": [
+              "https://www.greyorange.com/greymatter/sortation-smart-conveying/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Material-flow connections",
+            "details": "Manual, semi-automatic, automatic and conveyor induction modules are supported.",
+            "sources": [
+              "https://www.greyorange.com/greymatter/sortation-smart-conveying/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Induction equipment",
+            "details": "Automatic dimensioning, weighing and scanning with rejection handling. These are system/induction functions, not a verified onboard sensor inventory.",
+            "sources": [
+              "https://www.greyorange.com/greymatter/sortation-smart-conveying/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet orchestration",
+            "details": "GreyMatter coordinates Ranger movement and parcel flow between induction, sorting and dispatch.",
+            "sources": [
+              "https://www.greyorange.com/greymatter/sortation-smart-conveying/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hdt-hunter-wolf-2026",
+        "manufacturer": "HDT Global",
+        "models": [
+          "Hunter WOLF"
+        ],
+        "configuration": "January 2026 revision 14 manufacturer sheet. Processor, RAM/storage, radio chipset and battery capacity are undisclosed. The sheet gives inconsistent 28 V output ratings, so no single wattage is asserted for that rail.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Drivetrain",
+            "details": "Six-wheel diesel/JP-8 hybrid-electric platform with onboard battery; Michelin non-pneumatic Tweels. Published payload 1,270 kg.",
+            "sources": [
+              "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Payload power",
+            "details": "28 V DC NATO connections; 15 kW continuous at 100 V DC. Optional inverter supplies 120/240 V AC.",
+            "sources": [
+              "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Control and payloads",
+            "details": "Single-hand controller with emergency stop; distributed payload hardpoints and open autonomy-kit interfaces.",
+            "sources": [
+              "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Optional autonomy kit",
+            "details": "HDT kit provides obstacle detection/avoidance and waypoint following; underlying sensor parts are not named.",
+            "sources": [
+              "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Interoperability",
+            "details": "MOSA design and RAS-G IOP v6 integration for third-party controllers/autonomy; installation-specific software varies.",
+            "sources": [
+              "https://www.hdtrobotics.com/wp-content/uploads/2026/02/HDT_Hunter_WOLF_V4.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hanwha-arion-smet-2023-fct",
+        "manufacturer": "Hanwha Aerospace",
+        "models": [
+          "Arion-SMET"
+        ],
+        "configuration": "September 2023 FCT demonstration configuration. Later production variants may differ. No CPU, RAM, battery capacity, radio bands or sensor part numbers are established by this announcement.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Vehicle architecture",
+            "details": "Six-wheel electric platform; advertised 100 km per charge for this configuration.",
+            "sources": [
+              "https://www.hanwhaaerospace.com/eng/media/newsroom/view.do?seq=362"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Load platform",
+            "details": "550 kg payload rating in the 2023 demonstration reference.",
+            "sources": [
+              "https://www.hanwhaaerospace.com/eng/media/newsroom/view.do?seq=362"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator interfaces",
+            "details": "Remote operation and physical tether-following are listed; the remote-control radio protocol is not identified.",
+            "sources": [
+              "https://www.hanwhaaerospace.com/eng/media/newsroom/view.do?seq=362"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Driving modes",
+            "details": "Off-road autonomous driving and exploratory autonomous manoeuvring, alongside operator-controlled modes.",
+            "sources": [
+              "https://www.hanwhaaerospace.com/eng/media/newsroom/view.do?seq=362"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -284368,8 +285664,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 355,
-    "devices_with_system_profiles": 327,
-    "devices_with_documented_compute": 158
+    "system_profiles": 368,
+    "devices_with_system_profiles": 334,
+    "devices_with_documented_compute": 159
   }
 }
