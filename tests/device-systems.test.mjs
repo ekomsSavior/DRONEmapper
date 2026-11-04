@@ -2567,3 +2567,30 @@ test('batch 78 preserves historical aircraft and subsystem boundaries',()=>{
  assert.equal(profileIds(system('University of Colorado Boulder','TTwistor')).length,0);
  assert.equal(profileIds(system('MLB','BAT 3',{kind:'regulatory-equipment'})).length,0);
 });
+
+test('batch 79 scopes vehicle generations, trial sensors and older robot hardware',()=>{
+ const gem=system('Didi Chuxing','DiDi Autonomous Driving (Gemini)');
+ assert.match(text(gem.sections.compute),/DRIVE AGX Pegasus/);
+ assert.equal(gem.sections.memory.status,'not-established');
+ const aion=system('Didi Autonomous Driving','Didi Robotaxi');
+ assert.match(text(aion.sections.sensors),/four AT128/);
+ assert.equal(aion.sections.compute.status,'not-established');
+ const sail=system('Unknown manufacturer','Saildrone USV');
+ assert.match(text(sail.sections.sensors),/VN300/);
+ assert.match(text(sail.sections.sensors),/underwater acoustics, not RF/);
+ assert.match(text(sail.sections.interfaces),/two of the five/);
+ assert.equal(sail.sections.compute.status,'not-established');
+ const hunter=system('Unknown manufacturer','Hunter');
+ assert.match(text(hunter.sections.power),/Moto Guzzi/);
+ assert.doesNotMatch(text(hunter.sections.power.facts),/Mercedes/);
+ const a160=system('Unknown manufacturer','YMQ-18A Hummingbird Unmanned Aircraft A160T');
+ assert.match(text(a160.sections.sensors),/2009 DARPA trials/);
+ assert.equal(a160.sections.radios.status,'not-established');
+ const run=system('Yunji Technology','RUN');
+ assert.match(text(run.sections.interfaces),/password unlocking rather than Gogo/);
+ assert.equal(run.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Yunji Technology','Gogo')).includes('yunji-run-prospectus-2025'),false);
+ assert.equal(profileIds(system('Unknown manufacturer','Predator, Reaper')).length,2);
+ assert.equal(profileIds(system('Unknown manufacturer','Predator and ??')).length,0);
+ assert.equal(profileIds(system('Didi Chuxing','DiDi Autonomous Driving (Gemini)',{kind:'regulatory-equipment'})).length,0);
+});

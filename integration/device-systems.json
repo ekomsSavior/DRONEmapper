@@ -28314,7 +28314,10 @@
         {
           "manufacturer": "Unknown manufacturer",
           "models": [
-            "MQ-1 Predator"
+            "MQ-1 Predator",
+            "Predator, Reaper",
+            "Preadtor, Reaper",
+            "Predator"
           ]
         },
         {
@@ -28440,7 +28443,9 @@
         {
           "manufacturer": "Unknown manufacturer",
           "models": [
-            "MQ-9 Reaper"
+            "MQ-9 Reaper",
+            "Predator, Reaper",
+            "Preadtor, Reaper"
           ]
         },
         {
@@ -45250,6 +45255,363 @@
           "manufacturer": "Unknown manufacturer",
           "models": [
             "Tempest miniature UAS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "didi-gemini-2021",
+      "manufacturer": "Didi Chuxing",
+      "models": [
+        "DiDi Gemini / Volvo XC90 (2021 test-fleet plan)"
+      ],
+      "configuration": "NVIDIA and Volvo announcements from April–May 2021. Gemini test-fleet architecture, not the later GAC Aion vehicle or proof that every DiDi robotaxi has these parts. RAM, storage, radio chipset and exact sensor models are not supplied.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA DRIVE AGX Pegasus",
+          "details": "Gemini platform uses DRIVE AGX Pegasus, rated up to 700 TOPS, with an ASIL-D fallback system.",
+          "sources": [
+            "https://blogs.nvidia.co.jp/blog/didi-nvidia-drive-self-driving-robotaxis/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "High-resolution sensor architecture",
+          "details": "Up to 50 sensors are described; the supplier does not list individual sensor models.",
+          "sources": [
+            "https://blogs.nvidia.co.jp/blog/didi-nvidia-drive-self-driving-robotaxis/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Redundant vehicle controls",
+          "details": "Volvo XC90 integration includes backup steering and braking systems.",
+          "sources": [
+            "https://www.volvocars.com/uk/media/press-releases/DA9B960C03261ACB/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy and updates",
+          "details": "NVIDIA describes concurrent neural networks and DRIVE-enabled over-the-air updates; the update modem and protocol are not identified.",
+          "sources": [
+            "https://blogs.nvidia.co.jp/blog/didi-nvidia-drive-self-driving-robotaxis/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Didi Chuxing",
+          "models": [
+            "DiDi Autonomous Driving (Gemini)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "didi-gac-aion-2025",
+      "manufacturer": "Didi Autonomous Driving",
+      "models": [
+        "DiDi / GAC Aion L4 Robotaxi (2025 announcement)"
+      ],
+      "configuration": "Hesai supplier announcement dated April 15, 2025. One documented configuration for the broad DiDi Robotaxi record; production and 2026 deployment were planned in this source. CPU, RAM, battery, modem and firmware versions are not disclosed; 2021 Pegasus hardware is not assigned to this vehicle.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Four Hesai AT128 lidar units",
+          "details": "33 sensors overall; four AT128 lidar units provide 1200 × 128 resolution, up to 200 m range and 120° field of view per unit.",
+          "sources": [
+            "https://www.hesaitech.com/hesais-at128-powers-didi-and-gac-aions-first-mass-produced-l4-robotaxi/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Sensor fusion",
+          "details": "Heterogeneous sensor fusion combines the vehicle’s sensors for surrounding perception and autonomous driving.",
+          "sources": [
+            "https://www.hesaitech.com/hesais-at128-powers-didi-and-gac-aions-first-mass-produced-l4-robotaxi/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle and autonomy integration",
+          "details": "Joint DiDi Autonomous Driving / GAC Aion vehicle integrates DiDi’s autonomy system with the automaker’s platform.",
+          "sources": [
+            "https://www.hesaitech.com/hesais-at128-powers-didi-and-gac-aions-first-mass-produced-l4-robotaxi/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Didi Autonomous Driving",
+          "models": [
+            "Didi Robotaxi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "saildrone-noaa-hurricane-2021",
+      "manufacturer": "Saildrone",
+      "models": [
+        "Explorer (NOAA 2021 hurricane configuration)"
+      ],
+      "configuration": "NOAA-led 2023 research paper describing the 2021 hurricane mission. A dated configuration reference for Saildrone USV records, not proof that later observations carry identical sensors. CPU, RAM and modem parts are unpublished.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Wind and solar",
+          "details": "Wind propulsion; solar-powered electronics. Hurricane configuration reduces wing height from 5 m to 3 m.",
+          "sources": [
+            "https://repository.library.noaa.gov/view/noaa/52306/noaa_52306_DS1.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Atmosphere and motion",
+          "details": "Gill Windmaster 3D ultrasonic wind sensor; LI-COR LI-192SA; Rotronic HC2-S2; Heitronics CT15.10; VectorNav VN300 dual-GNSS IMU; Vaisala PTB210 barometer.",
+          "sources": [
+            "https://repository.library.noaa.gov/view/noaa/52306/noaa_52306_DS1.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Ocean instruments",
+          "details": "Sea-Bird SBE63 oxygen and SBE37 CTD, Wetlabs ECO FL-S-G4 fluorometer and Teledyne Workhorse 300 kHz ADCP. ADCP frequency is underwater acoustics, not RF.",
+          "sources": [
+            "https://repository.library.noaa.gov/view/noaa/52306/noaa_52306_DS1.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Additional mission instruments",
+          "details": "Delta-T SPN1 pyranometer and Eppley PIR pyrgeometer were installed on two of the five mission vehicles, not the entire fleet.",
+          "sources": [
+            "https://repository.library.noaa.gov/view/noaa/52306/noaa_52306_DS1.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Scientific data delivery",
+          "details": "2021 workflow delivers one-minute observations to NOAA PMEL every two hours as CF-compliant netCDF; selected measurements also enter the GTS in BUFR format.",
+          "sources": [
+            "https://repository.library.noaa.gov/view/noaa/52306/noaa_52306_DS1.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Saildrone USV"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hunter-rq5a-2005",
+      "manufacturer": "Northrop Grumman",
+      "models": [
+        "RQ-5A Hunter (2005 reference)"
+      ],
+      "configuration": "DoD UAS Roadmap 2005, section 2.1.4. Dated RQ-5A family reference; not the MQ-5B engine configuration. CPU, memory and modem parts are unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Twin piston engines",
+          "details": "Two Moto Guzzi engines rated 57 hp each.",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo141033/pdf/GOVPUB-D-PURL-gpo141033.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Video and control links",
+          "details": "C-band line-of-sight data link; another airborne Hunter can relay video. Chipset and exact channel unpublished.",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo141033/pdf/GOVPUB-D-PURL-gpo141033.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Gimbaled payload",
+          "details": "Tamam MOSP electro-optical/infrared sensor.",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo141033/pdf/GOVPUB-D-PURL-gpo141033.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Airframe configuration",
+          "details": "200 lb payload; runway launch and runway/arresting-wire recovery.",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo141033/pdf/GOVPUB-D-PURL-gpo141033.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Hunter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boeing-a160t-2007-2009",
+      "manufacturer": "Boeing",
+      "models": [
+        "A160T Hummingbird (historical configurations)"
+      ],
+      "configuration": "Boeing’s 2007/2009 announcements and the custodian’s A18 aircraft record. Turbine A160T is distinct from piston A160. FORESTER describes a trial installation, not every aircraft. CPU, RAM and communications parts are not established.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Turboshaft propulsion",
+          "details": "Pima’s preserved A18 aircraft record identifies a Pratt & Whitney PW207D turboshaft.",
+          "sources": [
+            "https://pimaair.org/museum-aircraft/boeing-a160t/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "FORESTER trial payload",
+          "details": "Boeing reports 20 flights carrying the FORESTER foliage-penetration radar during August–October 2009 DARPA trials.",
+          "sources": [
+            "https://boeing.mediaroom.com/2009-10-13-Boeing-A160T-Unmanned-Helicopter-Flies-With-Foliage-Penetrating-Radar-in-DARPA-Tests"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Variable-speed rotor",
+          "details": "Optimum-speed rotor technology varies RPM with altitude, aircraft weight and cruise speed; rotor diameter 36 ft.",
+          "sources": [
+            "https://boeing.mediaroom.com/2007-06-18-Boeing-Completes-First-Flight-of-A160T-Hummingbird-Unmanned-Helicopter"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous flight control",
+          "details": "Manufacturer identifies autonomous flight, but does not name the flight computer or operating system.",
+          "sources": [
+            "https://boeing.mediaroom.com/2007-06-18-Boeing-Completes-First-Flight-of-A160T-Hummingbird-Unmanned-Helicopter"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "YMQ-18A Hummingbird Unmanned Aircraft A160T"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-sky-warrior-block0-2007",
+      "manufacturer": "General Atomics",
+      "models": [
+        "Sky Warrior Block 0 (June 2007)"
+      ],
+      "configuration": "Manufacturer announcement for the first pre-production Block 0 flight. Dated family reference for the Army Warrior inventory; not a current Gray Eagle hardware specification. CPU, RAM, engine model and radio chipset are unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Redundant avionics",
+          "details": "Triple-redundant avionics and redundant flight controls/surfaces; processor model is not published.",
+          "sources": [
+            "https://www.ga-asi.com/first-pre-production-sky-warrior-aircraft-takes-flight"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Heavy-fuel propulsion",
+          "details": "Heavy Fuel Engine operates on jet or diesel fuel. The announcement does not identify its exact part number.",
+          "sources": [
+            "https://www.ga-asi.com/first-pre-production-sky-warrior-aircraft-takes-flight"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Reconnaissance payloads",
+          "details": "Electro-optical/infrared and synthetic-aperture radar payloads are documented without sensor part numbers.",
+          "sources": [
+            "https://www.ga-asi.com/first-pre-production-sky-warrior-aircraft-takes-flight"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mission architecture",
+          "details": "Aircraft supports surveillance and communications-relay missions; interface standards and radio bands are not listed.",
+          "sources": [
+            "https://www.ga-asi.com/first-pre-production-sky-warrior-aircraft-takes-flight"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Warrior"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yunji-run-prospectus-2025",
+      "manufacturer": "Yunji Technology",
+      "models": [
+        "Run series (2025 prospectus)"
+      ],
+      "configuration": "Yunji’s October 2025 listing prospectus, pages 238–239. Run is the older integrated robot, distinct from Gogo and modular UP. CPU, memory, sensor part numbers, radio bands and battery chemistry are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Fused navigation sensors",
+          "details": "Multiple sensors support three-dimensional positioning and obstacle avoidance; individual components are not identified.",
+          "sources": [
+            "https://ir.yunjichina.com.cn/media/kpymzqxl/2025100800003.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery operation",
+          "details": "Manufacturer lists 6–8 hours of operation; battery voltage and capacity are not provided.",
+          "sources": [
+            "https://ir.yunjichina.com.cn/media/kpymzqxl/2025100800003.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Chassis and building integration",
+          "details": "45 kg robot with 10 kg payload. YJ-AIoT components enable elevator interaction; Run uses password unlocking rather than Gogo’s fingerprint feature.",
+          "sources": [
+            "https://ir.yunjichina.com.cn/media/kpymzqxl/2025100800003.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation and operator interface",
+          "details": "SLAM-based mapping, voice interaction and task-status monitoring through PC/mobile apps. Operating-system revision is not specified for individual Run units.",
+          "sources": [
+            "https://ir.yunjichina.com.cn/media/kpymzqxl/2025100800003.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Yunji Technology",
+          "models": [
+            "RUN"
           ]
         }
       ]
