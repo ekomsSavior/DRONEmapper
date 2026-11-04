@@ -9,6 +9,19 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 90 keeps historical Chuck TX1 and TX2 configurations distinct',()=>{
+ const chuck=system('6 River Systems','Chuck');
+ assert.match(text(chuck.sections.compute),/initial Jetson TX1.*drop-in move to Jetson TX2/);
+ assert.match(text(chuck.configurations),/not two simultaneous computers/);
+ assert.match(text(chuck.sections.memory),/4 GB LPDDR4 and 16 GB eMMC/);
+ assert.match(text(chuck.sections.memory),/not assigned to the later TX2/);
+ assert.match(text(chuck.sections.software),/balena.*Docker/);
+ assert.equal(chuck.sections.radios.status,'not-established');
+ assert.equal(profileIds(system('6 River Systems','Chuck 2')).includes('6river-chuck-2018-2020'),false);
+ assert.equal(profileIds(system('Other vendor','Chuck')).includes('6river-chuck-2018-2020'),false);
+ assert.equal(profileIds(system('6 River Systems','Chuck',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 89 keeps controller generations, robot subsystems and server hardware separate',()=>{
  const x30=system('DEEP Robotics','X30');
  assert.match(text(x30.sections.compute),/X30 Pro/);

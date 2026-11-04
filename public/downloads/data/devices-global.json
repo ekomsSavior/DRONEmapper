@@ -536,20 +536,47 @@
         "configurations": [
           {
             "id": "6river-chuck-2018-2020",
-            "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
-            "reviewed_on": "2026-11-03"
+            "configuration": "Historical Chuck references: 2018 SICK supplier case study, 2019 manufacturer GTC presentation, 2020 product brochure and 2022 FES architecture. The 2019 presentation describes a TX1-to-TX2 transition, not two simultaneous computers. TX1 memory specifications do not establish TX2 memory or later revisions. Radio module and battery chemistry/capacity remain undisclosed.",
+            "reviewed_on": "2026-11-04"
           }
         ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "2019 Jetson platform transition",
+                "details": "6 River Systems documents initial Jetson TX1 use, with ARM Cortex-A57 CPUs and a 256-core GPU, followed by a drop-in move to Jetson TX2 for motion, perception and safety processing. This is historical platform evidence, not confirmation of the computer in every current Chuck. See slides 19 and 25.",
+                "sources": [
+                  "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=19",
+                  "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=25"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "6river-chuck-2018-2020",
+                "configuration": "Historical Chuck references: 2018 SICK supplier case study, 2019 manufacturer GTC presentation, 2020 product brochure and 2022 FES architecture. The 2019 presentation describes a TX1-to-TX2 transition, not two simultaneous computers. TX1 memory specifications do not establish TX2 memory or later revisions. Radio module and battery chemistry/capacity remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Historical TX1 memory and storage",
+                "details": "The TX1 platform selected in the 2019 presentation has 4 GB LPDDR4 and 16 GB eMMC. These capacities are not assigned to the later TX2 configuration; its memory SKU is not specified.",
+                "sources": [
+                  "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=19"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "6river-chuck-2018-2020",
+                "configuration": "Historical Chuck references: 2018 SICK supplier case study, 2019 manufacturer GTC presentation, 2020 product brochure and 2022 FES architecture. The 2019 presentation describes a TX1-to-TX2 transition, not two simultaneous computers. TX1 memory specifications do not establish TX2 memory or later revisions. Radio module and battery chemistry/capacity remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
@@ -569,8 +596,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "6river-chuck-2018-2020",
-                "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Historical Chuck references: 2018 SICK supplier case study, 2019 manufacturer GTC presentation, 2020 product brochure and 2022 FES architecture. The 2019 presentation describes a TX1-to-TX2 transition, not two simultaneous computers. TX1 memory specifications do not establish TX2 memory or later revisions. Radio module and battery chemistry/capacity remain undisclosed.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -587,8 +614,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "6river-chuck-2018-2020",
-                "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Historical Chuck references: 2018 SICK supplier case study, 2019 manufacturer GTC presentation, 2020 product brochure and 2022 FES architecture. The 2019 presentation describes a TX1-to-TX2 transition, not two simultaneous computers. TX1 memory specifications do not establish TX2 memory or later revisions. Radio module and battery chemistry/capacity remain undisclosed.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -606,8 +633,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "6river-chuck-2018-2020",
-                "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Historical Chuck references: 2018 SICK supplier case study, 2019 manufacturer GTC presentation, 2020 product brochure and 2022 FES architecture. The 2019 presentation describes a TX1-to-TX2 transition, not two simultaneous computers. TX1 memory specifications do not establish TX2 memory or later revisions. Radio module and battery chemistry/capacity remain undisclosed.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -624,8 +651,23 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "6river-chuck-2018-2020",
-                "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Historical Chuck references: 2018 SICK supplier case study, 2019 manufacturer GTC presentation, 2020 product brochure and 2022 FES architecture. The 2019 presentation describes a TX1-to-TX2 transition, not two simultaneous computers. TX1 memory specifications do not establish TX2 memory or later revisions. Radio module and battery chemistry/capacity remain undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "2019 onboard software and updates",
+                "details": "ROS supplies the robot framework and rosbag diagnostics. The TX2 transition added Linux kernel 4.4 support. Software delivery uses balena and prebuilt Docker images with differential updates; this does not establish an exposed network service or a passive recognition signature.",
+                "sources": [
+                  "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=11",
+                  "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=14",
+                  "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=25",
+                  "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=30"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "6river-chuck-2018-2020",
+                "configuration": "Historical Chuck references: 2018 SICK supplier case study, 2019 manufacturer GTC presentation, 2020 product brochure and 2022 FES architecture. The 2019 presentation describes a TX1-to-TX2 transition, not two simultaneous computers. TX1 memory specifications do not establish TX2 memory or later revisions. Radio module and battery chemistry/capacity remain undisclosed.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -641,8 +683,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
           "radios",
           "identification"
         ],
@@ -330315,9 +330355,26 @@
         "models": [
           "Chuck"
         ],
-        "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
-        "reviewed_on": "2026-11-03",
+        "configuration": "Historical Chuck references: 2018 SICK supplier case study, 2019 manufacturer GTC presentation, 2020 product brochure and 2022 FES architecture. The 2019 presentation describes a TX1-to-TX2 transition, not two simultaneous computers. TX1 memory specifications do not establish TX2 memory or later revisions. Radio module and battery chemistry/capacity remain undisclosed.",
+        "reviewed_on": "2026-11-04",
         "facts": [
+          {
+            "section": "compute",
+            "component": "2019 Jetson platform transition",
+            "details": "6 River Systems documents initial Jetson TX1 use, with ARM Cortex-A57 CPUs and a 256-core GPU, followed by a drop-in move to Jetson TX2 for motion, perception and safety processing. This is historical platform evidence, not confirmation of the computer in every current Chuck. See slides 19 and 25.",
+            "sources": [
+              "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=19",
+              "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=25"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Historical TX1 memory and storage",
+            "details": "The TX1 platform selected in the 2019 presentation has 4 GB LPDDR4 and 16 GB eMMC. These capacities are not assigned to the later TX2 configuration; its memory SKU is not specified.",
+            "sources": [
+              "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=19"
+            ]
+          },
           {
             "section": "sensors",
             "component": "Navigation and item identification",
@@ -330349,6 +330406,17 @@
             "details": "Onboard control and workflows connect with cloud services and The Bridge operator console; warehouse-management integrations coordinate allocation and routes.",
             "sources": [
               "https://6river.com/wp-content/uploads/2022/05/6RS_FES_Brochure_digital_RGB.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "2019 onboard software and updates",
+            "details": "ROS supplies the robot framework and rosbag diagnostics. The TX2 transition added Linux kernel 4.4 support. Software delivery uses balena and prebuilt Docker images with differential updates; this does not establish an exposed network service or a passive recognition signature.",
+            "sources": [
+              "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=11",
+              "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=14",
+              "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=25",
+              "https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9973-how-6-river-systems-leveraged-ros-and-the-nvidia-jetson-platform-tx1-tx2-to-build-a-fleet-of-autonomous-collaborative-robots.pdf#page=30"
             ]
           }
         ]
@@ -363444,6 +363512,6 @@
     "devices_with_scanner_signatures": 12,
     "system_profiles": 926,
     "devices_with_system_profiles": 838,
-    "devices_with_documented_compute": 412
+    "devices_with_documented_compute": 413
   }
 }
