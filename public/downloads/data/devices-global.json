@@ -67393,8 +67393,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "equinor-inspection-research-architecture",
+            "configuration": "Operator-program reference, not a distinct Equinor-manufactured robot. JARVIS documents Equinor/SINTEF mobile-manipulator research; no exact deployed robot revision, processor, RAM, battery or sensor part number is established. Onshore ANYmal deployments are not relabeled as offshore hardware.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -67408,13 +67414,39 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Program-level communications work",
+                "details": "Equinor lists IoT and 5G infrastructure among capabilities being matured. This is not confirmation of a specific installed modem or a unique detectable broadcast.",
+                "sources": [
+                  "https://www.equinor.com/energy/drones-and-robots"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "equinor-inspection-research-architecture",
+                "configuration": "Operator-program reference, not a distinct Equinor-manufactured robot. JARVIS documents Equinor/SINTEF mobile-manipulator research; no exact deployed robot revision, processor, RAM, battery or sensor part number is established. Onshore ANYmal deployments are not relabeled as offshore hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Inspection and navigation",
+                "details": "JARVIS describes camera-based navigation/inspection and image or sound measurements during inspection rounds.",
+                "sources": [
+                  "https://jarvis-project.eu/wp-content/uploads/2025/02/Autonomous-Robot-Operations-in-Offshore-Energy-Production-Facilities-1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "equinor-inspection-research-architecture",
+                "configuration": "Operator-program reference, not a distinct Equinor-manufactured robot. JARVIS documents Equinor/SINTEF mobile-manipulator research; no exact deployed robot revision, processor, RAM, battery or sensor part number is established. Onshore ANYmal deployments are not relabeled as offshore hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -67423,13 +67455,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Mobile manipulation",
+                "details": "Mobile base with arm and gripper for intervention tasks; inspection-only robots and manipulation configurations must be distinguished.",
+                "sources": [
+                  "https://jarvis-project.eu/wp-content/uploads/2025/02/Autonomous-Robot-Operations-in-Offshore-Energy-Production-Facilities-1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "equinor-inspection-research-architecture",
+                "configuration": "Operator-program reference, not a distinct Equinor-manufactured robot. JARVIS documents Equinor/SINTEF mobile-manipulator research; no exact deployed robot revision, processor, RAM, battery or sensor part number is established. Onshore ANYmal deployments are not relabeled as offshore hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Research mission planning",
+                "details": "Automated planning considers task priorities, battery management and replanning. Higher-risk manipulation retains operator confirmation; these are research capabilities.",
+                "sources": [
+                  "https://jarvis-project.eu/wp-content/uploads/2025/02/Autonomous-Robot-Operations-in-Offshore-Energy-Production-Facilities-1.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "equinor-inspection-research-architecture",
+                "configuration": "Operator-program reference, not a distinct Equinor-manufactured robot. JARVIS documents Equinor/SINTEF mobile-manipulator research; no exact deployed robot revision, processor, RAM, battery or sensor part number is established. Onshore ANYmal deployments are not relabeled as offshore hardware.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -67445,11 +67503,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -73597,18 +73651,52 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "garuda-kisan-cube-orange",
+            "configuration": "Garuda names Cube Orange for Kisan. Component specifications below describe that controller, not Orange+, an inferred carrier board or every production revision. Battery figure applies specifically to the 8 L drone. Installed firmware, radio and external navigation hardware remain unverified.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Cube Orange flight controller",
+                "details": "Garuda identifies Pixhawk Cube Orange; the controller documentation specifies STM32H753VI Cortex-M7 and STM32F103 failsafe processor.",
+                "sources": [
+                  "https://www.garudaaerospace.com/company/faq",
+                  "https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange",
+                  "https://github.com/CubePilot/cubepilot-docs/blob/master/autopilot/the-cube/introduction/interface-specifications.md"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "garuda-kisan-cube-orange",
+                "configuration": "Garuda names Cube Orange for Kisan. Component specifications below describe that controller, not Orange+, an inferred carrier board or every production revision. Battery figure applies specifically to the 8 L drone. Installed firmware, radio and external navigation hardware remain unverified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Controller memory",
+                "details": "Published Cube Orange MCU resources: 1 MB RAM and 2 MB flash; microSD logging support does not establish installed card capacity.",
+                "sources": [
+                  "https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "garuda-kisan-cube-orange",
+                "configuration": "Garuda names Cube Orange for Kisan. Component specifications below describe that controller, not Orange+, an inferred carrier board or every production revision. Battery figure applies specifically to the 8 L drone. Installed firmware, radio and external navigation hardware remain unverified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
@@ -73617,18 +73705,57 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Controller sensor suite",
+                "details": "Cube Orange specification lists ICM20948, ICM20649 and ICM20602 inertial sensors, with two MS5611 barometers. These are controller-level references.",
+                "sources": [
+                  "https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "garuda-kisan-cube-orange",
+                "configuration": "Garuda names Cube Orange for Kisan. Component specifications below describe that controller, not Orange+, an inferred carrier board or every production revision. Battery figure applies specifically to the 8 L drone. Installed firmware, radio and external navigation hardware remain unverified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "8 L battery",
+                "details": "Garuda specifies 16,000 mAh for its 8 L drone; pack voltage and chemistry are not supplied in that answer.",
+                "sources": [
+                  "https://www.garudaaerospace.com/company/faq"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "garuda-kisan-cube-orange",
+                "configuration": "Garuda names Cube Orange for Kisan. Component specifications below describe that controller, not Orange+, an inferred carrier board or every production revision. Battery figure applies specifically to the 8 L drone. Installed firmware, radio and external navigation hardware remain unverified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Controller expansion",
+                "details": "Documented UART, CAN, I2C, SPI and PWM interfaces. Carrier-board wiring and ADS-B equipment on Kisan are not established.",
+                "sources": [
+                  "https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "garuda-kisan-cube-orange",
+                "configuration": "Garuda names Cube Orange for Kisan. Component specifications below describe that controller, not Orange+, an inferred carrier board or every production revision. Battery figure applies specifically to the 8 L drone. Installed firmware, radio and external navigation hardware remain unverified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -73647,12 +73774,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -122967,8 +123089,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "rekise-jaldoot-usv",
+            "configuration": "Manufacturer’s Jaldoot configuration, distinct from Swadheen and underwater platforms. CPU, RAM, radio chipset, battery capacity and motor model are unpublished. Underwater payload acoustics are not Wi-Fi emissions.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -122977,33 +123105,111 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Onboard recording",
+                "details": "Persistent onboard data storage; medium and capacity unspecified.",
+                "sources": [
+                  "https://www.rekise.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "rekise-jaldoot-usv",
+                "configuration": "Manufacturer’s Jaldoot configuration, distinct from Swadheen and underwater platforms. CPU, RAM, radio chipset, battery capacity and motor model are unpublished. Underwater payload acoustics are not Wi-Fi emissions.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Surface communications",
+                "details": "IP radio and cellular connectivity; bands and modem parts unspecified.",
+                "sources": [
+                  "https://www.rekise.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "rekise-jaldoot-usv",
+                "configuration": "Manufacturer’s Jaldoot configuration, distinct from Swadheen and underwater platforms. CPU, RAM, radio chipset, battery capacity and motor model are unpublished. Underwater payload acoustics are not Wi-Fi emissions.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and perception",
+                "details": "NavIC-enabled RTK GNSS and IMU; 360-degree day/night camera. Obstacle-avoidance lidar is optional.",
+                "sources": [
+                  "https://www.rekise.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "rekise-jaldoot-usv",
+                "configuration": "Manufacturer’s Jaldoot configuration, distinct from Swadheen and underwater platforms. CPU, RAM, radio chipset, battery capacity and motor model are unpublished. Underwater payload acoustics are not Wi-Fi emissions.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Hull and charging",
+                "details": "Carbon-epoxy/aluminium hull, approximately 55 kg. In-water charging; stated endurance 3 hours with USBL or up to 9 hours without appendages.",
+                "sources": [
+                  "https://www.rekise.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "rekise-jaldoot-usv",
+                "configuration": "Manufacturer’s Jaldoot configuration, distinct from Swadheen and underwater platforms. CPU, RAM, radio chipset, battery capacity and motor model are unpublished. Underwater payload acoustics are not Wi-Fi emissions.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Survey payloads and ground station",
+                "details": "Supports echosounders, side-scan sonar, USBL and CTD/winch payloads. Rugged laptop belongs to the portable ground station.",
+                "sources": [
+                  "https://www.rekise.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "rekise-jaldoot-usv",
+                "configuration": "Manufacturer’s Jaldoot configuration, distinct from Swadheen and underwater platforms. CPU, RAM, radio chipset, battery capacity and motor model are unpublished. Underwater payload acoustics are not Wi-Fi emissions.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomous mission functions",
+                "details": "Waypoint following, station keeping, geofencing and return-home; low-battery/telemetry-loss failsafes and mission import/export.",
+                "sources": [
+                  "https://www.rekise.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "rekise-jaldoot-usv",
+                "configuration": "Manufacturer’s Jaldoot configuration, distinct from Swadheen and underwater platforms. CPU, RAM, radio chipset, battery capacity and motor model are unpublished. Underwater payload acoustics are not Wi-Fi emissions.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -123018,12 +123224,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -125574,8 +125774,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "sagar-usv-family",
+            "configuration": "Family-level architecture for the broad Sagar USV record. Propulsion, hulls and payloads are alternatives; no exact deployed build, processor, memory or radio part number is established.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -125589,28 +125795,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Configurable data links",
+                "details": "Manufacturer lists RF, Wi-Fi and satellite options without bands or modem identities.",
+                "sources": [
+                  "https://www.sagardefence.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sagar-usv-family",
+                "configuration": "Family-level architecture for the broad Sagar USV record. Propulsion, hulls and payloads are alternatives; no exact deployed build, processor, memory or radio part number is established.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Maritime sensing options",
+                "details": "Optical still/video cameras, AIS receiver and mounted or towed hydrophones; underwater sound sensing is not an RF signature.",
+                "sources": [
+                  "https://www.sagardefence.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sagar-usv-family",
+                "configuration": "Family-level architecture for the broad Sagar USV record. Propulsion, hulls and payloads are alternatives; no exact deployed build, processor, memory or radio part number is established.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Propulsion and hull alternatives",
+                "details": "Single/twin inboard, outboard or electric configurations; composite, aluminium or steel hull options. No single configuration is asserted.",
+                "sources": [
+                  "https://www.sagardefence.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sagar-usv-family",
+                "configuration": "Family-level architecture for the broad Sagar USV record. Propulsion, hulls and payloads are alternatives; no exact deployed build, processor, memory or radio part number is established.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Craft integration",
+                "details": "Control systems can retrofit existing craft; sensors may be hull-mounted or towed.",
+                "sources": [
+                  "https://www.sagardefence.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sagar-usv-family",
+                "configuration": "Family-level architecture for the broad Sagar USV record. Propulsion, hulls and payloads are alternatives; no exact deployed build, processor, memory or radio part number is established.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Genesis control architecture",
+                "details": "Autonomous or semi-autonomous navigation, collision avoidance and dual-manned operation; individual or swarm control.",
+                "sources": [
+                  "https://www.sagardefence.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sagar-usv-family",
+                "configuration": "Family-level architecture for the broad Sagar USV record. Propulsion, hulls and payloads are alternatives; no exact deployed build, processor, memory or radio part number is established.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -125626,11 +125897,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -127250,13 +127516,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "scaled-progress-research-2020",
+            "configuration": "Historical research configuration and supplier-described progress workflow. The June 2020 thesis identifies a Scaled Robotics sensor rig on Clearpath Jackal; this is not proof every commercial progress-monitor unit uses that base or those parts. CPU, RAM, battery and radio hardware are unspecified.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard sensor-fusion computer",
+                "details": "2020 thesis describes a central onboard computer receiving and processing IMU/lidar data; no processor SKU.",
+                "sources": [
+                  "https://upcommons.upc.edu/bitstream/handle/2117/332373/robust3d-imu-lidar-calibration-alejandromora.pdf?isAllowed=y&sequence=1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scaled-progress-research-2020",
+                "configuration": "Historical research configuration and supplier-described progress workflow. The June 2020 thesis identifies a Scaled Robotics sensor rig on Clearpath Jackal; this is not proof every commercial progress-monitor unit uses that base or those parts. CPU, RAM, battery and radio hardware are unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -127270,23 +127555,76 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "2020 multi-sensor rig",
+                "details": "Three cameras, two lidars and an IMU. Named experimental pair: horizontal Velodyne VLP-16 and Microstrain 3DM-GX5-45; other sensor models are not stated.",
+                "sources": [
+                  "https://upcommons.upc.edu/bitstream/handle/2117/332373/robust3d-imu-lidar-calibration-alejandromora.pdf?isAllowed=y&sequence=1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scaled-progress-research-2020",
+                "configuration": "Historical research configuration and supplier-described progress workflow. The June 2020 thesis identifies a Scaled Robotics sensor rig on Clearpath Jackal; this is not proof every commercial progress-monitor unit uses that base or those parts. CPU, RAM, battery and radio hardware are unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Research mobile base",
+                "details": "Clearpath Jackal differential-drive platform. No transfer of specifications from other Jackal configurations or Husky robots.",
+                "sources": [
+                  "https://upcommons.upc.edu/bitstream/handle/2117/332373/robust3d-imu-lidar-calibration-alejandromora.pdf?isAllowed=y&sequence=1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scaled-progress-research-2020",
+                "configuration": "Historical research configuration and supplier-described progress workflow. The June 2020 thesis identifies a Scaled Robotics sensor rig on Clearpath Jackal; this is not proof every commercial progress-monitor unit uses that base or those parts. CPU, RAM, battery and radio hardware are unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Construction-model workflow",
+                "details": "Founder describes support for Revit and Navisworks and BIM 360 integration. Handheld Leica BLK2GO is an alternative capture device, not an installed robot sensor.",
+                "sources": [
+                  "https://www.autodesk.com/design-make/articles/construction-robotics"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scaled-progress-research-2020",
+                "configuration": "Historical research configuration and supplier-described progress workflow. The June 2020 thesis identifies a Scaled Robotics sensor rig on Clearpath Jackal; this is not proof every commercial progress-monitor unit uses that base or those parts. CPU, RAM, battery and radio hardware are unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Research and commercial processing",
+                "details": "2020 implementation uses ROS for calibration and state estimation. Autodesk’s 2022 customer interview describes cloud comparison against BIM and a Forge web viewer.",
+                "sources": [
+                  "https://upcommons.upc.edu/bitstream/handle/2117/332373/robust3d-imu-lidar-calibration-alejandromora.pdf?isAllowed=y&sequence=1",
+                  "https://www.autodesk.com/design-make/articles/construction-robotics"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scaled-progress-research-2020",
+                "configuration": "Historical research configuration and supplier-described progress workflow. The June 2020 thesis identifies a Scaled Robotics sensor rig on Clearpath Jackal; this is not proof every commercial progress-monitor unit uses that base or those parts. CPU, RAM, battery and radio hardware are unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -127300,13 +127638,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -349491,6 +349824,304 @@
             ]
           }
         ]
+      },
+      {
+        "id": "rekise-jaldoot-usv",
+        "manufacturer": "Rekise Marine",
+        "models": [
+          "Jaldoot USV"
+        ],
+        "configuration": "Manufacturer’s Jaldoot configuration, distinct from Swadheen and underwater platforms. CPU, RAM, radio chipset, battery capacity and motor model are unpublished. Underwater payload acoustics are not Wi-Fi emissions.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "memory",
+            "component": "Onboard recording",
+            "details": "Persistent onboard data storage; medium and capacity unspecified.",
+            "sources": [
+              "https://www.rekise.com/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Surface communications",
+            "details": "IP radio and cellular connectivity; bands and modem parts unspecified.",
+            "sources": [
+              "https://www.rekise.com/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and perception",
+            "details": "NavIC-enabled RTK GNSS and IMU; 360-degree day/night camera. Obstacle-avoidance lidar is optional.",
+            "sources": [
+              "https://www.rekise.com/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hull and charging",
+            "details": "Carbon-epoxy/aluminium hull, approximately 55 kg. In-water charging; stated endurance 3 hours with USBL or up to 9 hours without appendages.",
+            "sources": [
+              "https://www.rekise.com/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Survey payloads and ground station",
+            "details": "Supports echosounders, side-scan sonar, USBL and CTD/winch payloads. Rugged laptop belongs to the portable ground station.",
+            "sources": [
+              "https://www.rekise.com/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomous mission functions",
+            "details": "Waypoint following, station keeping, geofencing and return-home; low-battery/telemetry-loss failsafes and mission import/export.",
+            "sources": [
+              "https://www.rekise.com/"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Rekise Marine",
+            "models": [
+              "Jaldoot"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sagar-usv-family",
+        "manufacturer": "Sagar Defence Engineering",
+        "models": [
+          "UMSV / Sagar USV family"
+        ],
+        "configuration": "Family-level architecture for the broad Sagar USV record. Propulsion, hulls and payloads are alternatives; no exact deployed build, processor, memory or radio part number is established.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Configurable data links",
+            "details": "Manufacturer lists RF, Wi-Fi and satellite options without bands or modem identities.",
+            "sources": [
+              "https://www.sagardefence.com/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Maritime sensing options",
+            "details": "Optical still/video cameras, AIS receiver and mounted or towed hydrophones; underwater sound sensing is not an RF signature.",
+            "sources": [
+              "https://www.sagardefence.com/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion and hull alternatives",
+            "details": "Single/twin inboard, outboard or electric configurations; composite, aluminium or steel hull options. No single configuration is asserted.",
+            "sources": [
+              "https://www.sagardefence.com/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Craft integration",
+            "details": "Control systems can retrofit existing craft; sensors may be hull-mounted or towed.",
+            "sources": [
+              "https://www.sagardefence.com/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Genesis control architecture",
+            "details": "Autonomous or semi-autonomous navigation, collision avoidance and dual-manned operation; individual or swarm control.",
+            "sources": [
+              "https://www.sagardefence.com/"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Sagar Defence Engineering",
+            "models": [
+              "Sagar USV"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "garuda-kisan-cube-orange",
+        "manufacturer": "Garuda Aerospace",
+        "models": [
+          "Kisan drone — Cube Orange reference"
+        ],
+        "configuration": "Garuda names Cube Orange for Kisan. Component specifications below describe that controller, not Orange+, an inferred carrier board or every production revision. Battery figure applies specifically to the 8 L drone. Installed firmware, radio and external navigation hardware remain unverified.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Cube Orange flight controller",
+            "details": "Garuda identifies Pixhawk Cube Orange; the controller documentation specifies STM32H753VI Cortex-M7 and STM32F103 failsafe processor.",
+            "sources": [
+              "https://www.garudaaerospace.com/company/faq",
+              "https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange",
+              "https://github.com/CubePilot/cubepilot-docs/blob/master/autopilot/the-cube/introduction/interface-specifications.md"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Controller memory",
+            "details": "Published Cube Orange MCU resources: 1 MB RAM and 2 MB flash; microSD logging support does not establish installed card capacity.",
+            "sources": [
+              "https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Controller sensor suite",
+            "details": "Cube Orange specification lists ICM20948, ICM20649 and ICM20602 inertial sensors, with two MS5611 barometers. These are controller-level references.",
+            "sources": [
+              "https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "8 L battery",
+            "details": "Garuda specifies 16,000 mAh for its 8 L drone; pack voltage and chemistry are not supplied in that answer.",
+            "sources": [
+              "https://www.garudaaerospace.com/company/faq"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Controller expansion",
+            "details": "Documented UART, CAN, I2C, SPI and PWM interfaces. Carrier-board wiring and ADS-B equipment on Kisan are not established.",
+            "sources": [
+              "https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Garuda Aerospace",
+            "models": [
+              "Kisan Drone"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "scaled-progress-research-2020",
+        "manufacturer": "Scaled Robotics",
+        "models": [
+          "Construction progress robot — 2020 research / 2022 workflow"
+        ],
+        "configuration": "Historical research configuration and supplier-described progress workflow. The June 2020 thesis identifies a Scaled Robotics sensor rig on Clearpath Jackal; this is not proof every commercial progress-monitor unit uses that base or those parts. CPU, RAM, battery and radio hardware are unspecified.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard sensor-fusion computer",
+            "details": "2020 thesis describes a central onboard computer receiving and processing IMU/lidar data; no processor SKU.",
+            "sources": [
+              "https://upcommons.upc.edu/bitstream/handle/2117/332373/robust3d-imu-lidar-calibration-alejandromora.pdf?isAllowed=y&sequence=1"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "2020 multi-sensor rig",
+            "details": "Three cameras, two lidars and an IMU. Named experimental pair: horizontal Velodyne VLP-16 and Microstrain 3DM-GX5-45; other sensor models are not stated.",
+            "sources": [
+              "https://upcommons.upc.edu/bitstream/handle/2117/332373/robust3d-imu-lidar-calibration-alejandromora.pdf?isAllowed=y&sequence=1"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Research mobile base",
+            "details": "Clearpath Jackal differential-drive platform. No transfer of specifications from other Jackal configurations or Husky robots.",
+            "sources": [
+              "https://upcommons.upc.edu/bitstream/handle/2117/332373/robust3d-imu-lidar-calibration-alejandromora.pdf?isAllowed=y&sequence=1"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Research and commercial processing",
+            "details": "2020 implementation uses ROS for calibration and state estimation. Autodesk’s 2022 customer interview describes cloud comparison against BIM and a Forge web viewer.",
+            "sources": [
+              "https://upcommons.upc.edu/bitstream/handle/2117/332373/robust3d-imu-lidar-calibration-alejandromora.pdf?isAllowed=y&sequence=1",
+              "https://www.autodesk.com/design-make/articles/construction-robotics"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Construction-model workflow",
+            "details": "Founder describes support for Revit and Navisworks and BIM 360 integration. Handheld Leica BLK2GO is an alternative capture device, not an installed robot sensor.",
+            "sources": [
+              "https://www.autodesk.com/design-make/articles/construction-robotics"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Scaled Robotics",
+            "models": [
+              "Scaled Robotics Progress Monitor"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "equinor-inspection-research-architecture",
+        "manufacturer": "Equinor",
+        "models": [
+          "Offshore inspection robotics — research architecture"
+        ],
+        "configuration": "Operator-program reference, not a distinct Equinor-manufactured robot. JARVIS documents Equinor/SINTEF mobile-manipulator research; no exact deployed robot revision, processor, RAM, battery or sensor part number is established. Onshore ANYmal deployments are not relabeled as offshore hardware.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Inspection and navigation",
+            "details": "JARVIS describes camera-based navigation/inspection and image or sound measurements during inspection rounds.",
+            "sources": [
+              "https://jarvis-project.eu/wp-content/uploads/2025/02/Autonomous-Robot-Operations-in-Offshore-Energy-Production-Facilities-1.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Mobile manipulation",
+            "details": "Mobile base with arm and gripper for intervention tasks; inspection-only robots and manipulation configurations must be distinguished.",
+            "sources": [
+              "https://jarvis-project.eu/wp-content/uploads/2025/02/Autonomous-Robot-Operations-in-Offshore-Energy-Production-Facilities-1.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Research mission planning",
+            "details": "Automated planning considers task priorities, battery management and replanning. Higher-risk manipulation retains operator confirmation; these are research capabilities.",
+            "sources": [
+              "https://jarvis-project.eu/wp-content/uploads/2025/02/Autonomous-Robot-Operations-in-Offshore-Energy-Production-Facilities-1.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Program-level communications work",
+            "details": "Equinor lists IoT and 5G infrastructure among capabilities being matured. This is not confirmation of a specific installed modem or a unique detectable broadcast.",
+            "sources": [
+              "https://www.equinor.com/energy/drones-and-robots"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Equinor",
+            "models": [
+              "Offshore Inspection Robot"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -349507,8 +350138,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 900,
-    "devices_with_system_profiles": 813,
-    "devices_with_documented_compute": 398
+    "system_profiles": 905,
+    "devices_with_system_profiles": 818,
+    "devices_with_documented_compute": 400
   }
 }

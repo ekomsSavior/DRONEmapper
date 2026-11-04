@@ -2669,3 +2669,27 @@ test('batch 82 keeps research vehicles, RID modules and FPV references scoped',(
  assert.equal(profileIds(system('Neros','Archer 10-inch')).length,0);
  assert.equal(profileIds(system('Nuro','Nuro Autonomous Prius',{kind:'regulatory-equipment'})).length,0);
 });
+
+test('batch 83 preserves component, vessel and research configuration boundaries',()=>{
+ const kisan=system('Garuda Aerospace','Kisan Drone');
+ assert.match(text(kisan.sections.compute),/STM32H753VI/);
+ assert.match(text(kisan.sections.memory),/1 MB RAM/);
+ assert.match(text(kisan.sections.power),/8 L/);
+ assert.equal(kisan.sections.radios.status,'not-established');
+ assert.equal(profileIds(system('Garuda Aerospace','Droni')).length,0);
+ const jal=system('Rekise Marine','Jaldoot');
+ assert.match(text(jal.sections.interfaces),/ground station/);
+ assert.equal(jal.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Rekise Marine','Swadheen')).length,0);
+ const sagar=system('Sagar Defence Engineering','Sagar USV');
+ assert.match(text(sagar.sections.power),/alternatives|No single configuration/);
+ const scaled=system('Scaled Robotics','Scaled Robotics Progress Monitor');
+ assert.match(text(scaled.sections.sensors),/3DM-GX5-45/);
+ assert.match(text(scaled.sections.interfaces),/not an installed robot sensor/);
+ assert.doesNotMatch(text(scaled.sections.sensors),/HDL-64E|RT-300/);
+ const equinor=system('Equinor','Offshore Inspection Robot');
+ assert.match(text(equinor.configurations),/not relabeled as offshore/);
+ assert.equal(equinor.sections.compute.status,'not-established');
+ assert.match(text(equinor.sections.radios),/not confirmation/);
+ assert.equal(profileIds(system('Garuda Aerospace','Kisan Drone',{kind:'regulatory-equipment'})).length,0);
+});
