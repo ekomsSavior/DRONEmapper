@@ -15311,6 +15311,549 @@
           ]
         }
       ]
+    },
+    {
+      "id": "avular-origin-one-1-0-4",
+      "manufacturer": "Avular",
+      "models": [
+        "Origin One"
+      ],
+      "configuration": "Origin One 1.0/4 documentation. Sensor and autonomy packages differ: optional LiDAR, RTK and software must be confirmed for the supplied platform. RAM, storage capacity, radio-chip and real-time-controller SKU undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard Linux computer",
+          "details": "NVIDIA Jetson Orin NX; memory variant unspecified. Auxiliary CAN/RS485 connect to a separate proprietary real-time controller whose processor is not identified.",
+          "sources": [
+            "https://avular-robotics.github.io/origin_one/latest/avular-origin-platform/compute_module/linux_pc/",
+            "https://avular-robotics.github.io/origin_one/1.0-4/avular-origin-platform/hardware/electrical/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless interfaces",
+          "details": "Wi-Fi 6 at 2.4/5 GHz, LTE Cat 4 with SIM slot, and Bluetooth 5.2. Electrical guide additionally lists a 2.4 GHz remote-stop antenna and 868 MHz RTK antenna; antenna coverage does not prove an installed radio mode.",
+          "sources": [
+            "https://avular-robotics.github.io/origin_one/1.0-4/platform_specs/",
+            "https://avular-robotics.github.io/origin_one/1.0-4/avular-origin-platform/hardware/electrical/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Platform and optional navigation sensors",
+          "details": "Six-axis IMU, magnetometer, four wheel encoders, six ultrasonic sensors and RealSense D435f depth camera. Optional 32-line Ouster LiDAR and RTK-GNSS.",
+          "sources": [
+            "https://avular-robotics.github.io/origin_one/1.0-4/platform_specs/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery, drive and accessory power",
+          "details": "650 Wh / 15 Ah battery; 50.4 V / 5 A charger. Four 166 W motors with holding brakes. Accessory outputs: 12 V and 24 V pairs, each pair limited to 100 W combined; battery-voltage output 200 W.",
+          "sources": [
+            "https://avular-robotics.github.io/origin_one/1.0-4/platform_specs/",
+            "https://avular-robotics.github.io/origin_one/1.0-4/avular-origin-platform/hardware/electrical/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Developer connections",
+          "details": "Gigabit Ethernet and USB 3.0. CAN, RS485 and digital I/O need manufacturer enablement; their presence does not establish public network services.",
+          "sources": [
+            "https://avular-robotics.github.io/origin_one/1.0-4/platform_specs/",
+            "https://avular-robotics.github.io/origin_one/1.0-4/avular-origin-platform/hardware/electrical/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "CreOS and development environment",
+          "details": "CreOS Linux manages Docker containers, ROS 2 services and a Zenoh bridge. An optional access point uses a configurable Origin <Serial> name; this is only a candidate naming pattern, not authenticated device identification.",
+          "sources": [
+            "https://avular-robotics.github.io/origin_one/1.0-4/software_development/preparations/creos/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aeirobot-alice4",
+      "manufacturer": "AeiROBOT",
+      "models": [
+        "Alice 4",
+        "ALICE4"
+      ],
+      "configuration": "ALICE 4 manufacturer configuration; options may vary. Not ALICE M1 or ALICE 5. RAM, storage, battery capacity, radio module and camera model undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Control and perception computers",
+          "details": "GENE-RAP6 control board with Intel Core i7-1370PE (6 performance + 8 efficiency cores, 20 threads, 28 W). Perception runs on NVIDIA Jetson Orin NX; its memory variant is not specified.",
+          "sources": [
+            "https://www.arobot4all.com/ALICE4"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Balance and vision",
+          "details": "Stereo depth camera, six-axis IMU and custom foot-contact/FSR sensors.",
+          "sources": [
+            "https://www.arobot4all.com/ALICE4"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Actuation",
+          "details": "Proprietary back-drivable linear actuators and dedicated motor drivers. Electrical supply and battery chemistry are not published.",
+          "sources": [
+            "https://www.arobot4all.com/ALICE4"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Humanoid kinematics",
+          "details": "41 degrees of freedom: legs 6 each, waist 1, arms 7 each, head 2 and hands 6 each. Published body: 160 cm, approximately 45 kg.",
+          "sources": [
+            "https://www.arobot4all.com/ALICE4"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Motion control and model",
+          "details": "Real-time field-oriented motor control supports position, velocity, torque and impedance modes. Manufacturer provides a URDF download.",
+          "sources": [
+            "https://www.arobot4all.com/ALICE4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aeirobot-alice-m1",
+      "manufacturer": "AeiROBOT",
+      "models": [
+        "ALICE M1"
+      ],
+      "configuration": "Mobile ALICE M1 specification section of the manufacturer page; that page also describes ALICE 4, whose computer is not transferred here. CPU fitted to AFE-R360, RAM, storage, battery and radio module unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Named computing modules",
+          "details": "AFE-R360 board and NVIDIA AGX Orin. The manufacturer does not identify the AFE-R360 CPU configuration or AGX Orin memory variant.",
+          "sources": [
+            "https://eng.arobot4all.com/2069803258"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Mobile perception",
+          "details": "Stereo camera, IMU, 3D LiDAR and laser sensor; exact sensor SKUs not named.",
+          "sources": [
+            "https://eng.arobot4all.com/2069803258"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Wheeled humanoid structure",
+          "details": "97 kg, adjustable height 1.3–1.8 m. Thirty-one degrees of freedom: waist 3, arms 7 each, head 2 and hands 6 each; dual parallel-link waist.",
+          "sources": [
+            "https://eng.arobot4all.com/2069803258"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation",
+          "details": "Sensor-based SLAM supports obstacle-aware autonomous navigation. Public URDF is linked; operating system and middleware version unspecified.",
+          "sources": [
+            "https://eng.arobot4all.com/2069803258"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aeirobot-alice5",
+      "manufacturer": "AeiROBOT",
+      "models": [
+        "ALICE 5"
+      ],
+      "configuration": "ALICE 5 table on the manufacturer’s ALICE family page. Do not substitute ALICE 4 or M1 electronics. Thor SKU, RAM, storage, battery, radio and actuator models unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard computing",
+          "details": "NVIDIA Jetson Thor family; the table does not specify T4000/T5000 or an installed memory configuration.",
+          "sources": [
+            "https://www.arobot4all.com/48"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Published sensor types",
+          "details": "Stereo camera, IMU and an FS module; exact SKUs and expansion of FS are not established by the table.",
+          "sources": [
+            "https://www.arobot4all.com/48"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Bipedal structure",
+          "details": "170 cm, 50 kg, 43 degrees of freedom: legs 6 each, arms 7 each, waist 3, head 2 and hands 6 each.",
+          "sources": [
+            "https://www.arobot4all.com/48"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Robot description",
+          "details": "Manufacturer offers a model-specific URDF download. This does not establish a particular runtime operating system or middleware.",
+          "sources": [
+            "https://www.arobot4all.com/48"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agxeed-agbot-t2-7",
+      "manufacturer": "AgXeed",
+      "models": [
+        "AgBot T2 7 Series"
+      ],
+      "configuration": "T2 7 Series, separate from T2 5 Series/5.115T2. Core processor, memory, radio module, camera and LiDAR SKU unspecified in these manufacturer sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Diesel-electric tracked drive",
+          "details": "Deutz 5.2-litre Stage V engine, 170 kW / 230 hp, 950 Nm; electric tracked drive rated 0–13 km/h. Tanks: 520 L diesel and 50 L AdBlue.",
+          "sources": [
+            "https://www.agxeed.com/wp-content/uploads/2025/11/Specsheeet-T2-7series.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and monitoring",
+          "details": "LiDAR plus front and rear cameras; exact sensor models are not published.",
+          "sources": [
+            "https://www.agxeed.com/solutions/agbots/agbot-t2-7-series/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Implement and power connections",
+          "details": "ISOBUS/TIM and three-point linkages. Hydraulics rated 170 L/min at 210 bar; 9 t rear lift and optional 4 t front lift. Optional 700 V / 150 kW AEF high-voltage connector and 1,000 rpm PTO.",
+          "sources": [
+            "https://www.agxeed.com/wp-content/uploads/2025/11/Specsheeet-T2-7series.pdf",
+            "https://www.agxeed.com/solutions/agbots/agbot-t2-7-series/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Field operation",
+          "details": "TraXwise planning and monitoring with application control and data gathering. Firmware, controller silicon and wireless protocol unspecified.",
+          "sources": [
+            "https://www.agxeed.com/solutions/agbots/agbot-t2-7-series/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alseamar-seaexplorer-x3",
+      "manufacturer": "ALSEAMAR",
+      "models": [
+        "SeaExplorer 1000 X3",
+        "SeaExplorer",
+        "SeaExplorer 1000"
+      ],
+      "configuration": "X3 sheet linked from the SeaExplorer 1000 product page. Not the X2 or 200/Shallow model. CPU part numbers, RAM, storage and battery energy unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Separated control computers",
+          "details": "Two independent CPUs running Linux, assigned to navigation and payload control.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-seaexplorer-1000.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Surface communications",
+          "details": "Iridium satellite link and radio, alongside GPS reception in the triple-antenna arrangement. GPS is a receiver, not a drone broadcast; radio module and band unspecified.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-seaexplorer-1000.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Scientific payload configuration",
+          "details": "Legato + CODA CTD/dissolved-oxygen payload is the reference configuration for published endurance, not a guarantee for every sensor package.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-seaexplorer-1000.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and buoyancy propulsion",
+          "details": "Rechargeable lithium-ion battery and 1,000 cc ballast (±500 ml). Published endurance 125 days / 2,700 km depends on payload, sampling and environment. Optional propeller.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-seaexplorer-1000.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Depth and safety hardware",
+          "details": "1,000 m rating with a 1,250 m option; 59 kg standard body. Drop weight and strobe; optional locator pinger and ARGOS. Backseat driving is optional.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-seaexplorer-1000.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mission modes",
+          "details": "Survey, virtual mooring, drifting and bottoming modes; payload and navigation computers remain independent.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-seaexplorer-1000.pdf",
+            "https://www.alseamar-alcen.com/ocean-science-sector/seaexplorer-gliders/seaexplorer-1000/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alseamar-seaexplorer-200",
+      "manufacturer": "ALSEAMAR",
+      "models": [
+        "SeaExplorer 200",
+        "SeaExplorer",
+        "SeaExplorer Shallow"
+      ],
+      "configuration": "October 2024 Shallow sheet and SeaExplorer 200 product page. Separate from 1000/X3. CPU model, RAM, storage and battery energy undisclosed; single- and double-battery packages have different dimensions and endurance.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Separated control computers",
+          "details": "Two independent Linux CPUs for navigation and payload processing; chip models not named.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-SEA-EXPLORER-SHALLOW.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Surface links",
+          "details": "Iridium satellite and radio links with GPS reception. No exact radio module or channel published.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-SEA-EXPLORER-SHALLOW.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Scientific payload",
+          "details": "Legato + CODA CTD/dissolved-oxygen reference payload; compatible with the SeaExplorer payload ecosystem. Mission sensors and sampling change endurance.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-SEA-EXPLORER-SHALLOW.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery packages and buoyancy",
+          "details": "Rechargeable lithium-ion: single battery 75 days / 1,350 km; double battery 135 days / 2,500 km, at 200 m with the stated reference payload. Ballast 1,600 cc; propeller optional.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-SEA-EXPLORER-SHALLOW.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Depth and body options",
+          "details": "20–200 m operation. Single battery: 65 kg, 2.2 m body; double: 90 kg, 2.8 m. Drop weight and strobe; optional pinger/ARGOS and backseat control.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-SEA-EXPLORER-SHALLOW.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Piloting and mission modes",
+          "details": "GLIMPSE processing/monitoring; survey, virtual mooring, drifting and bottoming modes.",
+          "sources": [
+            "https://www.alseamar-alcen.com/wp-content/uploads/2024/12/ALSEAMAR-datasheet-SEA-EXPLORER-SHALLOW.pdf",
+            "https://www.alseamar-alcen.com/ocean-science-sector/seaexplorer-gliders/seaexplorer-200/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acua-pioneer-current-diesel-electric",
+      "manufacturer": "ACUA Ocean",
+      "models": [
+        "Pioneer Mk2",
+        "Pioneer-class H-USV"
+      ],
+      "configuration": "Current Pioneer brochure linked under Mk2 describes a diesel-electric configuration. Historical hydrogen-powered H-USV announcements are different configurations. CPU, RAM, storage, modem models and battery capacity undisclosed. Brochure’s 6.5 t deck and approximately 7 t payload/LARS ratings depend on configuration.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Communications and navigation radio",
+          "details": "Primary and backup satellite WAN, nearshore 4G and UHF remote control. Class A AIS transceiver, dual-watch VHF and NAVTEX are also listed; no modem SKU or unique RF signature established.",
+          "sources": [
+            "https://www.ocean.tech/_files/ugd/61d056_07311bd6ca6f486abdedd1a68d370ff7.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Situational awareness",
+          "details": "360-degree fixed cameras, two infrared-capable PTZ cameras, radar, two GNSS receivers, attitude feedback, two depth sounders, weather station and ambient-sound receiver.",
+          "sources": [
+            "https://www.ocean.tech/_files/ugd/61d056_07311bd6ca6f486abdedd1a68d370ff7.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Propulsion and payload supply",
+          "details": "Diesel-electric hybrid with twin azimuth drives and bow thrusters. Payload power around 50 kW is configuration-dependent; engine, battery and generator models unspecified.",
+          "sources": [
+            "https://www.ocean.tech/_files/ugd/61d056_07311bd6ca6f486abdedd1a68d370ff7.pdf",
+            "https://www.ocean.tech/technology"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle and payload architecture",
+          "details": "14 m aluminium SWATH hull; modular equipment racks, 10/20-foot ISO moonpool and CAN-based controls. ROV, sonar and drone payloads are optional integrations.",
+          "sources": [
+            "https://www.ocean.tech/_files/ugd/61d056_07311bd6ca6f486abdedd1a68d370ff7.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Remote operations",
+          "details": "FleetMind monitors internal systems from a remote operations centre. Open control architecture supports third-party autonomy, mission planning and station keeping; it does not establish installed onboard CPU hardware.",
+          "sources": [
+            "https://www.ocean.tech/_files/ugd/61d056_07311bd6ca6f486abdedd1a68d370ff7.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2z-longtail-airdock",
+      "manufacturer": "A2Z Drone Delivery",
+      "models": [
+        "Longtail AirDock Edition"
+      ],
+      "configuration": "AirDock Edition hexacopter, with separate Cargo and Patrol packages. Companion CPU, flight-controller chip, memory, radio SKU and battery capacity unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Companion computer",
+          "details": "Onboard web-connected, AI-capable companion computer; processor and accelerator not identified.",
+          "sources": [
+            "https://www.a2zdronedelivery.com/longtail-airdock-version"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Communication hub",
+          "details": "Published multi-link hub supports 3G, 4G LTE and 5G plus a separate radio link. Bands and module models unspecified.",
+          "sources": [
+            "https://www.a2zdronedelivery.com/longtail-airdock-version"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Landing and mission payloads",
+          "details": "Quadruple-redundant landing sensors, unnamed. Cargo package: 4K three-axis gimbal and RDS2 winch. Patrol package: thermal/4K gimbal, spotlight and megaphone.",
+          "sources": [
+            "https://www.a2zdronedelivery.com/longtail-airdock-version"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging and battery management",
+          "details": "Automatic AirDock charging, onboard battery heater and cell balancing; chemistry and capacity not published.",
+          "sources": [
+            "https://www.a2zdronedelivery.com/longtail-airdock-version"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload-specific ratings",
+          "details": "Cargo: advertised 20 km with 5 kg under the winch. Patrol: 35 km with its included payload. These are different test configurations, not interchangeable ratings.",
+          "sources": [
+            "https://www.a2zdronedelivery.com/longtail-airdock-version"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ambi-sort-a-series",
+      "manufacturer": "Ambi Robotics",
+      "models": [
+        "AmbiSort A-Series"
+      ],
+      "configuration": "Configurable A-Series parcel-sorting cell. Processor, accelerator, memory, power supply, radio and arm/camera models are not named. Do not import B-Series scan-tunnel specifications.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Vision and identification",
+          "details": "Vision determines grasps and monitors sack fill height. Parcels pass four barcode scanners and two quality-control zones.",
+          "sources": [
+            "https://www.ambirobotics.com/ambisort-a-series/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Handling sequence",
+          "details": "Soft-touch gripper picks parcels into a buffer; a gantry transfers them into sacks or totes. Input can be bins or conveyors; operators replace full sacks.",
+          "sources": [
+            "https://www.ambirobotics.com/ambisort-a-series/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Sorting and operations",
+          "details": "AmbiOS uses simulation-trained grasp planning and vision-based quality checks. Image, video, timing and performance data support operational analysis.",
+          "sources": [
+            "https://www.ambirobotics.com/ambisort-a-series/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ambi-sort-b-series",
+      "manufacturer": "Ambi Robotics",
+      "models": [
+        "AmbiSort B-Series"
+      ],
+      "configuration": "Modular B-Series induction/sorting system; pick-cell and destination counts vary. CPU/GPU, RAM, power supply, radio, camera and arm SKUs undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Parcel identification and fill monitoring",
+          "details": "Vision selects grasps; a six-sided scan tunnel reads parcel information. Overhead vision measures container fill, with indicator lights for operators.",
+          "sources": [
+            "https://www.ambirobotics.com/ambisort-b-series"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Handling sequence",
+          "details": "Multi-suction gripper and robot arm transfer parcels onto buffer and central conveyors; routing sends items into gaylord containers or a reject bin. Pick cells are configurable.",
+          "sources": [
+            "https://www.ambirobotics.com/ambisort-b-series"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Sorting integration",
+          "details": "AmbiOS simulation-trained planning and quality checks. Optional warehouse-management-system integration supplies sort destinations; no public radio signature is established.",
+          "sources": [
+            "https://www.ambirobotics.com/ambisort-b-series"
+          ]
+        }
+      ]
     }
   ]
 }

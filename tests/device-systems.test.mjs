@@ -544,3 +544,36 @@ test('delivery and companion robot evidence keeps revision and accessory boundar
  assert.doesNotMatch(text(system('Geek+','P800R').sections.power),/40.3 Ah/);
  assert.equal(profileIds(system('Geek+','P800R V6')).length,0);
 });
+
+test('marine, agricultural and humanoid configurations retain their hardware boundaries',()=>{
+ const a4=system('AeiROBOT','Alice 4'),m1=system('AeiROBOT','ALICE M1'),a5=system('AeiROBOT','ALICE 5');
+ assert.match(text(a4.sections.compute),/i7-1370PE/);
+ assert.match(text(a4.sections.compute),/Orin NX/);
+ assert.doesNotMatch(text(a4.sections.compute),/AGX|Thor/);
+ assert.match(text(m1.sections.compute),/AFE-R360.*AGX Orin/);
+ assert.doesNotMatch(text(m1.sections.compute),/i7-1370PE|Thor/);
+ assert.match(text(a5.sections.compute),/Thor/);
+ assert.equal(a5.sections.memory.status,'not-established');
+ const origin=system('Avular','Origin One');
+ assert.match(text(origin.sections.compute),/Jetson Orin NX/);
+ assert.match(text(origin.sections.sensors),/Optional 32-line/);
+ assert.match(text(origin.sections.power),/100 W combined/);
+ const x3=system('ALSEAMAR','SeaExplorer 1000 X3'),shallow=system('ALSEAMAR','SeaExplorer 200');
+ assert.match(text(x3.sections.power),/125 days/);
+ assert.doesNotMatch(text(x3.sections.power),/135 days/);
+ assert.match(text(shallow.sections.power),/single battery 75 days.*double battery 135 days/);
+ assert.equal(profileIds(system('ALSEAMAR','SeaExplorer X2')).length,0);
+ assert.equal(profileIds(system('ALSEAMAR','SeaExplorer')).length,2);
+ assert.match(text(system('AgXeed','AgBot T2 7 Series').sections.power),/5.2-litre/);
+ assert.equal(profileIds(system('AgXeed','AgBot T2 5 Series')).includes('agxeed-agbot-t2-7'),false);
+ const acua=system('ACUA Ocean','Pioneer Mk2');
+ assert.match(text(acua.sections.power),/Diesel-electric/);
+ assert.doesNotMatch(text(acua.sections.power.facts.map(f=>f.details)),/hydrogen|fuel.cell|Nuvera/);
+ assert.equal(acua.sections.compute.status,'not-established');
+ const a=system('Ambi Robotics','AmbiSort A-Series'),b=system('Ambi Robotics','AmbiSort B-Series');
+ assert.match(text(a.sections.sensors),/four barcode scanners/);
+ assert.doesNotMatch(text(a.sections.sensors),/six-sided/);
+ assert.match(text(b.sections.sensors),/six-sided/);
+ assert.doesNotMatch(text(b.sections.sensors),/four barcode/);
+ assert.equal(system('A2Z Drone Delivery','Longtail AirDock Edition').sections.memory.status,'not-established');
+});
