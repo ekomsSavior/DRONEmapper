@@ -44630,6 +44630,318 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tesla-cybercab-2026",
+      "manufacturer": "Tesla",
+      "models": [
+        "Cybercab"
+      ],
+      "configuration": "Cybercab in Tesla’s September 2026 documents: interaction plan v1.2 and emergency guide v002. Processor, RAM, modem and battery capacity are unspecified. This configuration does not establish hardware for Model Y or Optimus.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "External vision and sound sensing",
+          "details": "Exterior camera suite includes front-fender cameras; sound detection and B-pillar microphones are documented.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/cybercab-first-responder-interaction-plan.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Separate traction and auxiliary batteries",
+          "details": "Floor-mounted, liquid-cooled 400 V lithium-ion traction battery and separate 48 V low-voltage battery; drive unit and electric air-conditioning compressor are high-voltage components.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/2026-cybercab-emergency-response-guide.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cabin and support equipment",
+          "details": "Two seats, landscape touchscreen, cabin speakers/microphones and underside speakers. Typical configuration lacks a steering wheel and driving pedals; test configurations can differ.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/cybercab-first-responder-interaction-plan.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Vehicle recordings",
+          "details": "Documents identify camera recordings, diagnostic logs and event-data-recorder information; storage hardware and capacity are not specified.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/cybercab-first-responder-interaction-plan.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Automated-driving and fleet layers",
+          "details": "Tesla describes an SAE Level 4 automated-driving system. Mission Control coordinates rides, charging and maintenance; this is manufacturer documentation, not an independent autonomy certification.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/cybercab-first-responder-interaction-plan.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tesla-model-y-robotaxi-2026",
+      "manufacturer": "Tesla",
+      "models": [
+        "Tesla Robotaxi (Model Y ADS)"
+      ],
+      "configuration": "Robotaxi-specific Model Y documented in interaction plan v1.5, September 2026, with its linked 2025+ vehicle emergency guide. Does not describe every consumer Model Y or every FSD installation. Processor, RAM, modem and pack capacity are unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Robotaxi vision and acoustic sensors",
+          "details": "Camera suite and sound detection; this Model Y variant has an additional front-grille camera. Cabin camera and microphone activity are indicated on the displays.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/robotaxi-first-responder-interaction-plan.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "2025+ Model Y electrical architecture",
+          "details": "Floor-mounted 400 V lithium-ion traction battery and 16 V low-voltage battery. These auxiliary-voltage specifications differ from Cybercab.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/2025-Model-Y-Emergency-Response-Guide.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Passenger and support interfaces",
+          "details": "Front and rear touchscreens provide two-way support communication through onboard audio equipment.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/robotaxi-first-responder-interaction-plan.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Recorded vehicle information",
+          "details": "Camera recordings, diagnostic logs and event data are documented; no memory-chip model or storage capacity is identified.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/robotaxi-first-responder-interaction-plan.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Robotaxi automated-driving system",
+          "details": "Tesla describes SAE Level 4 operation for this service configuration, with Mission Control managing rides and fleet activity.",
+          "sources": [
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/robotaxi-first-responder-interaction-plan.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usu-aggieair-ghostfoto-2009",
+      "manufacturer": "Utah State University",
+      "models": [
+        "AggieAir 72-inch / GhostFoto (2009)"
+      ],
+      "configuration": "Historical 2009 research configuration, not today’s GreatBlue platform. Linked to generic historical AggieAir records as a configuration reference; installation of these exact parts at each reported operator is not established.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight and payload processors",
+          "details": "Paparazzi TWOG v1.00: Philips LPC2148 ARM7, 60 MHz. Gumstix Verdex/Pro: Marvell PXA270 XScale, 600 MHz.",
+          "sources": [
+            "https://engineering.usu.edu/ece/files/pdfs/student-papers/thesis/2009/han-yiding-ms-thesis-2009.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Two separate memory systems",
+          "details": "TWOG: 512 KB flash, 32 KB SRAM plus 8 KB USB-shared memory. Gumstix: 128 MB RAM, 32 MB ROM and microSD.",
+          "sources": [
+            "https://engineering.usu.edu/ece/files/pdfs/student-papers/thesis/2009/han-yiding-ms-thesis-2009.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Telemetry and imagery links",
+          "details": "900 MHz telemetry modem and 2.4 GHz Ubiquiti Bullet2-HP Wi-Fi; RC backup is separate. Shared bands are not unique identification signatures.",
+          "sources": [
+            "https://engineering.usu.edu/ece/files/pdfs/student-papers/thesis/2009/han-yiding-ms-thesis-2009.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and GhostFoto payload",
+          "details": "GPS and IMU; Canon PowerShot SX100 IS / SX110 IS camera configurations support RGB or modified NIR imaging.",
+          "sources": [
+            "https://engineering.usu.edu/ece/files/pdfs/student-papers/thesis/2009/han-yiding-ms-thesis-2009.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric flying-wing configuration",
+          "details": "Electric propulsion and eight lithium batteries in the documented 72-inch airframe; cell arrangement and pack rating are unspecified.",
+          "sources": [
+            "https://engineering.usu.edu/ece/files/pdfs/student-papers/thesis/2009/han-yiding-ms-thesis-2009.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload connections",
+          "details": "Gumstix expansion supplies Ethernet, USB 1.1 and three RS232 ports; serial links connect navigation sensors and autopilot.",
+          "sources": [
+            "https://engineering.usu.edu/ece/files/pdfs/student-papers/thesis/2009/han-yiding-ms-thesis-2009.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Onboard processing",
+          "details": "OpenEmbedded Linux runs AggieCap and GhostEye; Paparazzi performs flight control.",
+          "sources": [
+            "https://engineering.usu.edu/ece/files/pdfs/student-papers/thesis/2009/han-yiding-ms-thesis-2009.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "AggieAir",
+            "AggieAir UAS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "honeywell-gmav-2009",
+      "manufacturer": "Honeywell International",
+      "models": [
+        "gMAV (2009 FAA configuration)"
+      ],
+      "configuration": "Honeywell’s April 2009 FAA program letter, preserved in an EFF public-records archive. Historical configuration reference for the generic gMAV record; not proof of every Army installation. Radio sections conflict; no scanner signature is inferred.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Avionics and ground computers",
+          "details": "Airborne avionics pod contains a flight-management unit; processor is unnamed. Ground operator hardware is Itronix Duo Touch or Panasonic Toughbook 19, not the aircraft computer.",
+          "sources": [
+            "https://www.eff.org/files/filenode/honeywell2-n220aw-airworthiness.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Filing’s frequency-table configuration",
+          "details": "Section 15 lists Microhard MHX920 C2 at 902–928 MHz and L3 VNTXS-2A video at 2.3–2.5 GHz. Earlier section 3 labels radios differently; configuration needs corroboration.",
+          "sources": [
+            "https://www.eff.org/files/filenode/honeywell2-n220aw-airworthiness.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and interchangeable imaging",
+          "details": "GPS, IMU and blended AHRS; alternative gimbaled EO or IR payload pods.",
+          "sources": [
+            "https://www.eff.org/files/filenode/honeywell2-n220aw-airworthiness.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Ducted-fan powerplant",
+          "details": "3W air-cooled, two-cylinder 56 cc gasoline engine, rated 4 hp; fuel capacity 0.4 US gallon.",
+          "sources": [
+            "https://www.eff.org/files/filenode/honeywell2-n220aw-airworthiness.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular aircraft assembly",
+          "details": "Separate core airframe, payload pod and avionics pod; video control and power electronics are inside the avionics pod.",
+          "sources": [
+            "https://www.eff.org/files/filenode/honeywell2-n220aw-airworthiness.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous flight management",
+          "details": "Uploaded flight profiles support autonomous navigation and manual override; ground software displays telemetry and stores video.",
+          "sources": [
+            "https://www.eff.org/files/filenode/honeywell2-n220aw-airworthiness.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "gMAV"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "honeywell-mav-2004-reference",
+      "manufacturer": "Honeywell International",
+      "models": [
+        "Micro Air Vehicle (October 2004)"
+      ],
+      "configuration": "October 2004 Honeywell product sheet, hosted by DefenseReview. Family reference for the historical Honeywell Micro Air Vehicle entry; the Miami-Dade installation and later T-Hawk revisions are not established by this sheet. CPU and RAM are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Interchangeable imaging and navigation",
+          "details": "Forward/downward EO and IR sensor configurations; inertial and GPS navigation with SAASM capability. Individual sensor parts are unspecified.",
+          "sources": [
+            "https://www.defensereview.com/stories/honeywell/Honeywell%20Micro%20Air%20Vehicle_Data%20Sheet.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Separate airborne and ground recordings",
+          "details": "Sheet specifies 10 minutes of aircraft imagery storage and 60 minutes at the ground station; these are durations, not memory capacities.",
+          "sources": [
+            "https://www.defensereview.com/stories/honeywell/Honeywell%20Micro%20Air%20Vehicle_Data%20Sheet.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Fuel-powered aircraft",
+          "details": "Manufacturer lists JP-8 or gasoline compatibility; exact engine model is unspecified in this revision.",
+          "sources": [
+            "https://www.defensereview.com/stories/honeywell/Honeywell%20Micro%20Air%20Vehicle_Data%20Sheet.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Unspecified UAV radio links",
+          "details": "Radio communication is documented, but exact frequencies, protocol and chipset are not given.",
+          "sources": [
+            "https://www.defensereview.com/stories/honeywell/Honeywell%20Micro%20Air%20Vehicle_Data%20Sheet.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular payload integration",
+          "details": "Payloads use mechanical/electrical interfaces; radio-relay and data-link payloads are listed as capabilities rather than universal equipment.",
+          "sources": [
+            "https://www.defensereview.com/stories/honeywell/Honeywell%20Micro%20Air%20Vehicle_Data%20Sheet.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight-planning software",
+          "details": "Autonomous flight with operator intervention and ground-stored flight plans is documented.",
+          "sources": [
+            "https://www.defensereview.com/stories/honeywell/Honeywell%20Micro%20Air%20Vehicle_Data%20Sheet.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Honeywell Micro Air Vehicle"
+          ]
+        }
+      ]
     }
   ]
 }

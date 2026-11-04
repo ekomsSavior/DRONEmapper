@@ -9,6 +9,30 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 77 preserves historical revisions, distinct batteries and conflicting radio evidence',()=>{
+ const cab=system('Tesla','Cybercab');
+ const y=system('Tesla','Tesla Robotaxi (Model Y ADS)');
+ assert.match(text(cab.sections.power),/48 V/);
+ assert.doesNotMatch(text(cab.sections.power),/16 V/);
+ assert.match(text(y.sections.power),/16 V/);
+ assert.equal(cab.sections.compute.status,'not-established');
+ assert.equal(y.sections.radios.status,'not-established');
+ assert.equal(profileIds(system('Tesla','Model Y')).length,0);
+ const ag=system('Unknown manufacturer','AggieAir');
+ assert.match(text(ag.sections.compute),/LPC2148.*PXA270/);
+ assert.match(text(ag.sections.memory),/32 KB SRAM plus 8 KB/);
+ assert.match(text(ag.configurations),/installation of these exact parts.*not established/);
+ assert.deepEqual(profileIds(system('Unknown manufacturer','AggieAir UAS')),profileIds(ag));
+ const gm=system('Unknown manufacturer','gMAV');
+ assert.match(text(gm.sections.radios),/labels radios differently/);
+ assert.match(text(gm.sections.compute),/not the aircraft computer/);
+ const mav=system('Unknown manufacturer','Honeywell Micro Air Vehicle');
+ assert.match(text(mav.sections.memory),/durations, not memory capacities/);
+ assert.doesNotMatch(text(mav.sections.radios),/MHX920/);
+ assert.equal(profileIds(system('Unknown manufacturer','Unknown model')).length,0);
+ assert.equal(profileIds(system('Tesla','Cybercab',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 76 keeps payload variants and system components correctly scoped',()=>{
  const f700=system('Fortem Technologies','DroneHunter');
  assert.match(text(f700.sections.sensors),/TrueView R20/);
@@ -619,7 +643,7 @@ test('road-vehicle profiles distinguish announced hardware and cabin processors 
  assert.equal(profileIds(system('Tesla','Semi')).length,2);
  assert.match(text(system('Tesla','Semi').configurations),/not, by itself, evidence of driverless capability/);
  assert.equal(system('Tesla','Semi').sections.compute.status,'not-established');
- assert.equal(profileIds(system('Tesla','Cybercab')).length,0);
+ assert.ok(profileIds(system('Tesla','Cybercab')).every(id=>!profileIds(system('Tesla','Semi')).includes(id)));
 });
 
 test('explicit cross-maker system bindings are well-formed and cannot carry equipment IDs',()=>{
