@@ -86398,8 +86398,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "machina-robocraftsman-2025",
+            "configuration": "Manufacturer 2025 overview and capabilities page. Multiple robot brands/sizes are supported; a single pictured arm is not a universal BOM. CPU, GPU, RAM, supply requirements and radio hardware undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -86418,23 +86424,78 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Calibration and metrology",
+                "details": "Built-in calibration sensors and robot-mounted laser 3D surface measurement; exact sensor models unspecified.",
+                "sources": [
+                  "https://machinalabs.ai/hubfs/MachinaLabs_August2025/pdfs/AeroDef%20Manufacturing%20Overview_2025.pdf",
+                  "https://machinalabs.ai/capabilities"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "machina-robocraftsman-2025",
+                "configuration": "Manufacturer 2025 overview and capabilities page. Multiple robot brands/sizes are supported; a single pictured arm is not a universal BOM. CPU, GPU, RAM, supply requirements and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Material handling",
+                "details": "Hydraulic sheet clamping with robotic sheet handling. Container-format cell sized around ISO 668; electrical input and hydraulic power ratings are not specified.",
+                "sources": [
+                  "https://machinalabs.ai/hubfs/MachinaLabs_August2025/pdfs/AeroDef%20Manufacturing%20Overview_2025.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "machina-robocraftsman-2025",
+                "configuration": "Manufacturer 2025 overview and capabilities page. Multiple robot brands/sizes are supported; a single pictured arm is not a universal BOM. CPU, GPU, RAM, supply requirements and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Robotic cell",
+                "details": "Two seven-axis robotic arms; current description places them on separate linear rails around a sheet-holding frame. Automatic tool changes support forming, trimming, drilling and scanning.",
+                "sources": [
+                  "https://machinalabs.ai/hubfs/MachinaLabs_August2025/pdfs/AeroDef%20Manufacturing%20Overview_2025.pdf",
+                  "https://machinalabs.ai/capabilities"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "machina-robocraftsman-2025",
+                "configuration": "Manufacturer 2025 overview and capabilities page. Multiple robot brands/sizes are supported; a single pictured arm is not a universal BOM. CPU, GPU, RAM, supply requirements and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Closed-loop forming",
+                "details": "Software compares the laser scan with CAD geometry and feeds corrections into subsequent passes; AI process controls also inspect/correct forming and trimming.",
+                "sources": [
+                  "https://machinalabs.ai/hubfs/MachinaLabs_August2025/pdfs/AeroDef%20Manufacturing%20Overview_2025.pdf",
+                  "https://machinalabs.ai/capabilities"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "machina-robocraftsman-2025",
+                "configuration": "Manufacturer 2025 overview and capabilities page. Multiple robot brands/sizes are supported; a single pictured arm is not a universal BOM. CPU, GPU, RAM, supply requirements and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -86451,10 +86512,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -86498,8 +86555,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "machinex-samurai-2021-hardware",
+            "configuration": "Manufacturer sheet marked 2021-02V despite its 2024 upload path. Current software reference is separately identified. Processor, memory, camera model, electrical supply and radio hardware undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -86518,23 +86581,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Machine vision",
+                "details": "Enclosed lighting and camera unit detects material on the conveyor. A separate learning station can collect video before installation.",
+                "sources": [
+                  "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "machinex-samurai-2021-hardware",
+                "configuration": "Manufacturer sheet marked 2021-02V despite its 2024 upload path. Current software reference is separately identified. Processor, memory, camera model, electrical supply and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Suction and enclosure",
+                "details": "Blower-powered suction with a dedicated cyclone; electrical panel and pneumatic components. The 650 enclosure is 2.1 × 2.9 × 2.4 m; 800 is 2.4 × 3.0 × 2.6 m.",
+                "sources": [
+                  "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "machinex-samurai-2021-hardware",
+                "configuration": "Manufacturer sheet marked 2021-02V despite its 2024 upload path. Current software reference is separately identified. Processor, memory, camera model, electrical supply and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Sorting mechanism",
+                "details": "Four-articulation robot, 1.25 kg maximum payload; conveyor, sorting chutes/bins, pneumatic cabinet and HMI controls. Multiple-robot layouts are configurable.",
+                "sources": [
+                  "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "machinex-samurai-2021-hardware",
+                "configuration": "Manufacturer sheet marked 2021-02V despite its 2024 upload path. Current software reference is separately identified. Processor, memory, camera model, electrical supply and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Historical software services",
+                "details": "2021 sheet lists MACH Intell performance analysis and optional annual MACH Cloud updates/assisted learning.",
+                "sources": [
+                  "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "machinex-samurai-2021-hardware",
+                "configuration": "Manufacturer sheet marked 2021-02V despite its 2024 upload path. Current software reference is separately identified. Processor, memory, camera model, electrical supply and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Current software reference",
+                "details": "Current manufacturer page describes MIND computer vision/machine learning and MACH Intell performance dashboards; availability on older installations requires confirmation.",
+                "sources": [
+                  "https://www.machinexrecycling.com/sorting/equipment/samurai/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "machinex-samurai-2021-hardware",
+                "configuration": "Manufacturer sheet marked 2021-02V despite its 2024 upload path. Current software reference is separately identified. Processor, memory, camera model, electrical supply and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -86551,10 +86678,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -86596,13 +86719,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "makr-shakr-toni-milan-2019-2020",
+            "configuration": "Milan TownHouse Duomo installation documented by KUKA in 2019 and SICK in 2020. Other Toni revisions may differ. Exact CPU, RAM, PLC model, power supply and radio modules undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Robot and cell control",
+                "details": "KUKA KR C4 robot controller plus a PLC; processor part numbers are not given.",
+                "sources": [
+                  "https://www.kuka.com/de-de/branchen/loesungsdatenbank/2019/11/makr-shakr-roboter-barkeeper"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "makr-shakr-toni-milan-2019-2020",
+                "configuration": "Milan TownHouse Duomo installation documented by KUKA in 2019 and SICK in 2020. Other Toni revisions may differ. Exact CPU, RAM, PLC model, power supply and radio modules undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -86616,8 +86758,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Safety laser scanners",
+                "details": "Four SICK safety laser scanners protect access: two S300 scanners at the front, plus one on each side. Source does not explicitly identify the side scanner models.",
+                "sources": [
+                  "https://www.sick.com/be/fr/blog/sick-sensor-blog/shaken-not-stirred-makr-shakr-kuka-and-sick-are-mixing-cocktails/w/blog-cocktail-mixing-robot-sick-kuka"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "makr-shakr-toni-milan-2019-2020",
+                "configuration": "Milan TownHouse Duomo installation documented by KUKA in 2019 and SICK in 2020. Other Toni revisions may differ. Exact CPU, RAM, PLC model, power supply and radio modules undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -86626,13 +86781,52 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Robot arms and dispensing",
+                "details": "Two KR AGILUS arms: KR 10 R1100 and KR 6 R900-2. Cell includes bottle dispensing, ice dispenser, drinks taps and shaker-rinsing sink.",
+                "sources": [
+                  "https://www.kuka.com/de-de/branchen/loesungsdatenbank/2019/11/makr-shakr-roboter-barkeeper"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "makr-shakr-toni-milan-2019-2020",
+                "configuration": "Milan TownHouse Duomo installation documented by KUKA in 2019 and SICK in 2020. Other Toni revisions may differ. Exact CPU, RAM, PLC model, power supply and radio modules undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Orders and safety interlock",
+                "details": "Tablet/app orders drive mixing; protected workspace opens after the arms park. Premature access triggers a safe stop.",
+                "sources": [
+                  "https://www.kuka.com/de-de/branchen/loesungsdatenbank/2019/11/makr-shakr-roboter-barkeeper",
+                  "https://www.sick.com/be/fr/blog/sick-sensor-blog/shaken-not-stirred-makr-shakr-kuka-and-sick-are-mixing-cocktails/w/blog-cocktail-mixing-robot-sick-kuka"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "makr-shakr-toni-milan-2019-2020",
+                "configuration": "Milan TownHouse Duomo installation documented by KUKA in 2019 and SICK in 2020. Other Toni revisions may differ. Exact CPU, RAM, PLC model, power supply and radio modules undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Service connection",
+                "details": "KUKA documents application/cloud integration using Kubernetes. Physical network interfaces, hosting endpoints and radio signatures are not specified.",
+                "sources": [
+                  "https://www.kuka.com/de-de/branchen/loesungsdatenbank/2019/11/makr-shakr-roboter-barkeeper"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "makr-shakr-toni-milan-2019-2020",
+                "configuration": "Milan TownHouse Duomo installation documented by KUKA in 2019 and SICK in 2020. Other Toni revisions may differ. Exact CPU, RAM, PLC model, power supply and radio modules undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -86646,13 +86840,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -87920,13 +88110,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "may-mobility-sienna-adk",
+            "configuration": "Sienna ADK integration from 2021, later manufacturer architecture description and separately dated 2023 supplier sensor configuration. Exact CPU/GPU SKU, memory, radios and propulsion/battery variant undisclosed; Lexus/GEM hardware is not inferred.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "ADK processing",
+                "details": "Commercially available computing; NVIDIA supplies part of the compute. Manufacturer does not name the chip or module.",
+                "sources": [
+                  "https://maymobility.com/posts/why-our-ai-needs-less-hardware/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "may-mobility-sienna-adk",
+                "configuration": "Sienna ADK integration from 2021, later manufacturer architecture description and separately dated 2023 supplier sensor configuration. Exact CPU/GPU SKU, memory, radios and propulsion/battery variant undisclosed; Lexus/GEM hardware is not inferred.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -87940,8 +88149,34 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "Ouster LiDAR, automotive radar and cameras; sensor-agnostic ADK supports hardware changes. Camera and radar models unspecified.",
+                "sources": [
+                  "https://maymobility.com/posts/why-our-ai-needs-less-hardware/",
+                  "https://maymobility.com/posts/may-mobility-launches-public-road-testing-of-natively-automated-vehicle-based-on-the-sienna"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "may-mobility-sienna-adk",
+                "configuration": "Sienna ADK integration from 2021, later manufacturer architecture description and separately dated 2023 supplier sensor configuration. Exact CPU/GPU SKU, memory, radios and propulsion/battery variant undisclosed; Lexus/GEM hardware is not inferred.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "2023 fleet LiDAR reference",
+                "details": "May 2023 supplier release describes four Ouster OS1 short/mid-range units plus one Alpha Prime VLS-128 long-range unit on May vehicles. This dated fleet configuration is not guaranteed unchanged on every later Sienna.",
+                "sources": [
+                  "https://investors.ouster.com/news-releases/news-release-details/ouster-announces-expansion-supply-agreements-may-mobility"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "may-mobility-sienna-adk",
+                "configuration": "Sienna ADK integration from 2021, later manufacturer architecture description and separately dated 2023 supplier sensor configuration. Exact CPU/GPU SKU, memory, radios and propulsion/battery variant undisclosed; Lexus/GEM hardware is not inferred.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -87950,13 +88185,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle control",
+                "details": "Toyota Vehicle Control Interface links the ADK to steering, braking and acceleration.",
+                "sources": [
+                  "https://maymobility.com/posts/may-mobility-launches-public-road-testing-of-natively-automated-vehicle-based-on-the-sienna"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "may-mobility-sienna-adk",
+                "configuration": "Sienna ADK integration from 2021, later manufacturer architecture description and separately dated 2023 supplier sensor configuration. Exact CPU/GPU SKU, memory, radios and propulsion/battery variant undisclosed; Lexus/GEM hardware is not inferred.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy",
+                "details": "Multi-Policy Decision Making evaluates possible futures and uncertainty. Manufacturer describes the same autonomy stack deployed on Sienna and e-Palette, not identical physical packaging.",
+                "sources": [
+                  "https://maymobility.com/posts/why-our-ai-needs-less-hardware/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "may-mobility-sienna-adk",
+                "configuration": "Sienna ADK integration from 2021, later manufacturer architecture description and separately dated 2023 supplier sensor configuration. Exact CPU/GPU SKU, memory, radios and propulsion/battery variant undisclosed; Lexus/GEM hardware is not inferred.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -87970,13 +88231,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -89409,13 +89666,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "miso-flippy-fry-station-2024-2025",
+            "configuration": "Frying configuration documented by Miso, NVIDIA and the October 2025 company filing. Exact GPU/CPU, RAM, camera, arm model and electrical/network specifications undisclosed; early burger-grill hardware is not inherited.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Vision acceleration",
+                "details": "NVIDIA GPU acceleration for real-time basket tracking and pose estimation; no Jetson or other GPU SKU is established.",
+                "sources": [
+                  "https://developer.download.nvidia.com/isaac/images/miso-robotics-isaac-ros-success-story.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "miso-flippy-fry-station-2024-2025",
+                "configuration": "Frying configuration documented by Miso, NVIDIA and the October 2025 company filing. Exact GPU/CPU, RAM, camera, arm model and electrical/network specifications undisclosed; early burger-grill hardware is not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -89429,8 +89705,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Basket perception",
+                "details": "Isaac ROS AprilTag detection tracks fryer-basket positions. Camera manufacturer/model unspecified.",
+                "sources": [
+                  "https://developer.download.nvidia.com/isaac/images/miso-robotics-isaac-ros-success-story.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "miso-flippy-fry-station-2024-2025",
+                "configuration": "Frying configuration documented by Miso, NVIDIA and the October 2025 company filing. Exact GPU/CPU, RAM, camera, arm model and electrical/network specifications undisclosed; early burger-grill hardware is not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -89439,13 +89728,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cell hardware",
+                "details": "Overhead rail, robotic arm, vision system, tablet, Flippy Control unit, safety system and Autobasket equipment. Rail design is motor-vendor agnostic.",
+                "sources": [
+                  "https://www.sec.gov/Archives/edgar/data/1710670/000110465925101909/tm2529356d1_partiiandiii.htm"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "miso-flippy-fry-station-2024-2025",
+                "configuration": "Frying configuration documented by Miso, NVIDIA and the October 2025 company filing. Exact GPU/CPU, RAM, camera, arm model and electrical/network specifications undisclosed; early burger-grill hardware is not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operation and development tools",
+                "details": "Vision AI supports fry-station automation. Miso describes cuMotion motion planning and Isaac Sim for developing/testing configurations; simulation tooling is not an installed operating-system claim.",
+                "sources": [
+                  "https://info.misorobotics.com/newsroom/miso-collaborates-with-nvidia-to-advance-restaurant-automation",
+                  "https://info.misorobotics.com/newsroom/scaling-simplified-optimizing-misos-robot-configurations-with-nvidia-isaac-sim"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "miso-flippy-fry-station-2024-2025",
+                "configuration": "Frying configuration documented by Miso, NVIDIA and the October 2025 company filing. Exact GPU/CPU, RAM, camera, arm model and electrical/network specifications undisclosed; early burger-grill hardware is not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -89459,13 +89775,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -89702,13 +90014,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "mobileye-drive-eyeq6h-ecu-2025",
+            "configuration": "February 2025 EyeQ6H ECU design. Product page also lists an eight-EyeQ5H option; hardware varies by generation and vehicle integration. RAM, storage, supply and radio modules undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Drive ECU",
+                "details": "Four Mobileye EyeQ6H SoCs across primary and secondary computing boards. Shared primary board has two EyeQ6H chips and an integrated MCU whose model is unspecified.",
+                "sources": [
+                  "https://www.mobileye.com/blog/modularity-from-adas-to-av/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mobileye-drive-eyeq6h-ecu-2025",
+                "configuration": "February 2025 EyeQ6H ECU design. Product page also lists an eight-EyeQ5H option; hardware varies by generation and vehicle integration. RAM, storage, supply and radio modules undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -89722,8 +90053,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception interfaces",
+                "details": "Connects up to 13 cameras plus imaging radars and LiDAR. Sensor counts/models depend on the vehicle integration.",
+                "sources": [
+                  "https://www.mobileye.com/blog/modularity-from-adas-to-av/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mobileye-drive-eyeq6h-ecu-2025",
+                "configuration": "February 2025 EyeQ6H ECU design. Product page also lists an eight-EyeQ5H option; hardware varies by generation and vehicle integration. RAM, storage, supply and radio modules undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -89732,13 +90076,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular controller",
+                "details": "Drive extends the shared ECU architecture used for SuperVision and Chauffeur; the four-chip Drive configuration must not be assigned to those products automatically.",
+                "sources": [
+                  "https://www.mobileye.com/blog/modularity-from-adas-to-av/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mobileye-drive-eyeq6h-ecu-2025",
+                "configuration": "February 2025 EyeQ6H ECU design. Product page also lists an eight-EyeQ5H option; hardware varies by generation and vehicle integration. RAM, storage, supply and radio modules undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Vehicle integration",
+                "details": "Driverless Mobility-as-a-Service platform. Current product reference offers either eight EyeQ5H or four EyeQ6H; the options are not chips simultaneously installed in one ECU.",
+                "sources": [
+                  "https://www.mobileye.com/blog/modularity-from-adas-to-av/",
+                  "https://www.mobileye.com/products/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "mobileye-drive-eyeq6h-ecu-2025",
+                "configuration": "February 2025 EyeQ6H ECU design. Product page also lists an eight-EyeQ5H option; hardware varies by generation and vehicle integration. RAM, storage, supply and radio modules undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -89764,13 +90135,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "power"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -89813,8 +90180,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "moia-id-buzz-ad-production-system",
+            "configuration": "Manufacturer/operator references for the series-production platform and autonomous test service. Main SoC, memory, battery capacity, sensor models and communication modem undisclosed; generic Mobileye ECU options are not a confirmed vehicle BOM.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -89833,23 +90206,77 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Surround perception",
+                "details": "13 cameras, nine LiDAR sensors and five radar sensors provide surrounding coverage. Individual part numbers are not stated.",
+                "sources": [
+                  "https://ride.moia.io/en/autonomous/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "moia-id-buzz-ad-production-system",
+                "configuration": "Manufacturer/operator references for the series-production platform and autonomous test service. Main SoC, memory, battery capacity, sensor models and communication modem undisclosed; generic Mobileye ECU options are not a confirmed vehicle BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Vehicle platform",
+                "details": "Electric Volkswagen ID. Buzz AD. These sources do not establish the production traction battery or motor specification.",
+                "sources": [
+                  "https://ride.moia.io/en/autonomous/technology",
+                  "https://www.volkswagen-group.com/en/articles/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services-19392"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "moia-id-buzz-ad-production-system",
+                "configuration": "Manufacturer/operator references for the series-production platform and autonomous test service. Main SoC, memory, battery capacity, sensor models and communication modem undisclosed; generic Mobileye ECU options are not a confirmed vehicle BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Passenger and operator interface",
+                "details": "App booking/access, passenger screen and fleet-center assistance; vehicle checks seatbelts and door clearance before departure.",
+                "sources": [
+                  "https://ride.moia.io/en/autonomous/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "moia-id-buzz-ad-production-system",
+                "configuration": "Manufacturer/operator references for the series-production platform and autonomous test service. Main SoC, memory, battery capacity, sensor models and communication modem undisclosed; generic Mobileye ECU options are not a confirmed vehicle BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Driving and fleet layers",
+                "details": "Mobileye self-driving system paired with MOIA AD MaaS fleet software for live fleet management, passenger assistance and remote supervision. Remote supervision is not evidence of an openly accessible control endpoint.",
+                "sources": [
+                  "https://www.volkswagen-group.com/en/articles/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services-19392",
+                  "https://ride.moia.io/en/autonomous/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "moia-id-buzz-ad-production-system",
+                "configuration": "Manufacturer/operator references for the series-production platform and autonomous test service. Main SoC, memory, battery capacity, sensor models and communication modem undisclosed; generic Mobileye ECU options are not a confirmed vehicle BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -89866,10 +90293,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -91170,8 +91593,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "nauticus-aquanaut-mk2-2023-architecture",
+            "configuration": "April 2023 manufacturer commissioning configuration. CPU, memory, battery capacity and exact sensing/modem models are not specified in this source. Later Aquanaut 2.1 dimensions and payload options are not assigned to Mk2.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -91185,28 +91614,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Underwater communications",
+                "details": "Acoustic communications network. Acoustic signals are underwater sound, not Wi-Fi or RF broadcasts.",
+                "sources": [
+                  "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nauticus-aquanaut-mk2-2023-architecture",
+                "configuration": "April 2023 manufacturer commissioning configuration. CPU, memory, battery capacity and exact sensing/modem models are not specified in this source. Later Aquanaut 2.1 dimensions and payload options are not assigned to Mk2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Excursion payload",
+                "details": "Excursion configuration uses data-collection and perception sensors; individual sensors are not named in the commissioning announcement.",
+                "sources": [
+                  "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nauticus-aquanaut-mk2-2023-architecture",
+                "configuration": "April 2023 manufacturer commissioning configuration. CPU, memory, battery capacity and exact sensing/modem models are not specified in this source. Later Aquanaut 2.1 dimensions and payload options are not assigned to Mk2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Subsea platform",
+                "details": "Fully electric and untethered vehicle; no topside power tether required.",
+                "sources": [
+                  "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nauticus-aquanaut-mk2-2023-architecture",
+                "configuration": "April 2023 manufacturer commissioning configuration. CPU, memory, battery capacity and exact sensing/modem models are not specified in this source. Later Aquanaut 2.1 dimensions and payload options are not assigned to Mk2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Manipulation hardware",
+                "details": "Two Nauticus Olympic Arm electric work-class manipulators in the intervention configuration.",
+                "sources": [
+                  "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nauticus-aquanaut-mk2-2023-architecture",
+                "configuration": "April 2023 manufacturer commissioning configuration. CPU, memory, battery capacity and exact sensing/modem models are not specified in this source. Later Aquanaut 2.1 dimensions and payload options are not assigned to Mk2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Onboard control architecture",
+                "details": "ToolKITT integrates robot control, user interfaces, sensor integration, simulation, data analysis and communications.",
+                "sources": [
+                  "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nauticus-aquanaut-mk2-2023-architecture",
+                "configuration": "April 2023 manufacturer commissioning configuration. CPU, memory, battery capacity and exact sensing/modem models are not specified in this source. Later Aquanaut 2.1 dimensions and payload options are not assigned to Mk2.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -91222,11 +91716,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -279982,6 +280471,14 @@
             "sources": [
               "https://nauticusrobotics.com/aquanaut/"
             ]
+          },
+          {
+            "section": "power",
+            "component": "Dimensions and cruising speed",
+            "details": "4,427 × 1,778 × 1,544 mm; three-knot cruising speed. These are 2.1 specifications, not earlier Mk2 dimensions.",
+            "sources": [
+              "https://nauticusrobotics.com/aquanaut/"
+            ]
           }
         ]
       },
@@ -289258,6 +289755,399 @@
             ]
           }
         ]
+      },
+      {
+        "id": "machina-robocraftsman-2025",
+        "manufacturer": "Machina Labs",
+        "models": [
+          "RoboCraftsman (2025)",
+          "Machina Forming Cell"
+        ],
+        "configuration": "Manufacturer 2025 overview and capabilities page. Multiple robot brands/sizes are supported; a single pictured arm is not a universal BOM. CPU, GPU, RAM, supply requirements and radio hardware undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Robotic cell",
+            "details": "Two seven-axis robotic arms; current description places them on separate linear rails around a sheet-holding frame. Automatic tool changes support forming, trimming, drilling and scanning.",
+            "sources": [
+              "https://machinalabs.ai/hubfs/MachinaLabs_August2025/pdfs/AeroDef%20Manufacturing%20Overview_2025.pdf",
+              "https://machinalabs.ai/capabilities"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Calibration and metrology",
+            "details": "Built-in calibration sensors and robot-mounted laser 3D surface measurement; exact sensor models unspecified.",
+            "sources": [
+              "https://machinalabs.ai/hubfs/MachinaLabs_August2025/pdfs/AeroDef%20Manufacturing%20Overview_2025.pdf",
+              "https://machinalabs.ai/capabilities"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Material handling",
+            "details": "Hydraulic sheet clamping with robotic sheet handling. Container-format cell sized around ISO 668; electrical input and hydraulic power ratings are not specified.",
+            "sources": [
+              "https://machinalabs.ai/hubfs/MachinaLabs_August2025/pdfs/AeroDef%20Manufacturing%20Overview_2025.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Closed-loop forming",
+            "details": "Software compares the laser scan with CAD geometry and feeds corrections into subsequent passes; AI process controls also inspect/correct forming and trimming.",
+            "sources": [
+              "https://machinalabs.ai/hubfs/MachinaLabs_August2025/pdfs/AeroDef%20Manufacturing%20Overview_2025.pdf",
+              "https://machinalabs.ai/capabilities"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "machinex-samurai-2021-hardware",
+        "manufacturer": "Machinex",
+        "models": [
+          "SamurAI",
+          "SamurAI-650",
+          "SamurAI-800"
+        ],
+        "configuration": "Manufacturer sheet marked 2021-02V despite its 2024 upload path. Current software reference is separately identified. Processor, memory, camera model, electrical supply and radio hardware undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Sorting mechanism",
+            "details": "Four-articulation robot, 1.25 kg maximum payload; conveyor, sorting chutes/bins, pneumatic cabinet and HMI controls. Multiple-robot layouts are configurable.",
+            "sources": [
+              "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Machine vision",
+            "details": "Enclosed lighting and camera unit detects material on the conveyor. A separate learning station can collect video before installation.",
+            "sources": [
+              "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Suction and enclosure",
+            "details": "Blower-powered suction with a dedicated cyclone; electrical panel and pneumatic components. The 650 enclosure is 2.1 × 2.9 × 2.4 m; 800 is 2.4 × 3.0 × 2.6 m.",
+            "sources": [
+              "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Historical software services",
+            "details": "2021 sheet lists MACH Intell performance analysis and optional annual MACH Cloud updates/assisted learning.",
+            "sources": [
+              "https://www.machinexrecycling.com/wp-content/uploads/2024/12/Spec-sheet-SamurAI-EN.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Current software reference",
+            "details": "Current manufacturer page describes MIND computer vision/machine learning and MACH Intell performance dashboards; availability on older installations requires confirmation.",
+            "sources": [
+              "https://www.machinexrecycling.com/sorting/equipment/samurai/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "makr-shakr-toni-milan-2019-2020",
+        "manufacturer": "Makr Shakr",
+        "models": [
+          "Makr Shakr Toni",
+          "Toni"
+        ],
+        "configuration": "Milan TownHouse Duomo installation documented by KUKA in 2019 and SICK in 2020. Other Toni revisions may differ. Exact CPU, RAM, PLC model, power supply and radio modules undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Robot and cell control",
+            "details": "KUKA KR C4 robot controller plus a PLC; processor part numbers are not given.",
+            "sources": [
+              "https://www.kuka.com/de-de/branchen/loesungsdatenbank/2019/11/makr-shakr-roboter-barkeeper"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Robot arms and dispensing",
+            "details": "Two KR AGILUS arms: KR 10 R1100 and KR 6 R900-2. Cell includes bottle dispensing, ice dispenser, drinks taps and shaker-rinsing sink.",
+            "sources": [
+              "https://www.kuka.com/de-de/branchen/loesungsdatenbank/2019/11/makr-shakr-roboter-barkeeper"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety laser scanners",
+            "details": "Four SICK safety laser scanners protect access: two S300 scanners at the front, plus one on each side. Source does not explicitly identify the side scanner models.",
+            "sources": [
+              "https://www.sick.com/be/fr/blog/sick-sensor-blog/shaken-not-stirred-makr-shakr-kuka-and-sick-are-mixing-cocktails/w/blog-cocktail-mixing-robot-sick-kuka"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Orders and safety interlock",
+            "details": "Tablet/app orders drive mixing; protected workspace opens after the arms park. Premature access triggers a safe stop.",
+            "sources": [
+              "https://www.kuka.com/de-de/branchen/loesungsdatenbank/2019/11/makr-shakr-roboter-barkeeper",
+              "https://www.sick.com/be/fr/blog/sick-sensor-blog/shaken-not-stirred-makr-shakr-kuka-and-sick-are-mixing-cocktails/w/blog-cocktail-mixing-robot-sick-kuka"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Service connection",
+            "details": "KUKA documents application/cloud integration using Kubernetes. Physical network interfaces, hosting endpoints and radio signatures are not specified.",
+            "sources": [
+              "https://www.kuka.com/de-de/branchen/loesungsdatenbank/2019/11/makr-shakr-roboter-barkeeper"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "may-mobility-sienna-adk",
+        "manufacturer": "May Mobility",
+        "models": [
+          "May Mobility Autonomous Sienna",
+          "Autonomous Sienna"
+        ],
+        "configuration": "Sienna ADK integration from 2021, later manufacturer architecture description and separately dated 2023 supplier sensor configuration. Exact CPU/GPU SKU, memory, radios and propulsion/battery variant undisclosed; Lexus/GEM hardware is not inferred.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "ADK processing",
+            "details": "Commercially available computing; NVIDIA supplies part of the compute. Manufacturer does not name the chip or module.",
+            "sources": [
+              "https://maymobility.com/posts/why-our-ai-needs-less-hardware/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Ouster LiDAR, automotive radar and cameras; sensor-agnostic ADK supports hardware changes. Camera and radar models unspecified.",
+            "sources": [
+              "https://maymobility.com/posts/why-our-ai-needs-less-hardware/",
+              "https://maymobility.com/posts/may-mobility-launches-public-road-testing-of-natively-automated-vehicle-based-on-the-sienna"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "2023 fleet LiDAR reference",
+            "details": "May 2023 supplier release describes four Ouster OS1 short/mid-range units plus one Alpha Prime VLS-128 long-range unit on May vehicles. This dated fleet configuration is not guaranteed unchanged on every later Sienna.",
+            "sources": [
+              "https://investors.ouster.com/news-releases/news-release-details/ouster-announces-expansion-supply-agreements-may-mobility"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle control",
+            "details": "Toyota Vehicle Control Interface links the ADK to steering, braking and acceleration.",
+            "sources": [
+              "https://maymobility.com/posts/may-mobility-launches-public-road-testing-of-natively-automated-vehicle-based-on-the-sienna"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy",
+            "details": "Multi-Policy Decision Making evaluates possible futures and uncertainty. Manufacturer describes the same autonomy stack deployed on Sienna and e-Palette, not identical physical packaging.",
+            "sources": [
+              "https://maymobility.com/posts/why-our-ai-needs-less-hardware/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mobileye-drive-eyeq6h-ecu-2025",
+        "manufacturer": "Mobileye",
+        "models": [
+          "Mobileye Drive",
+          "Drive EyeQ6H ECU (2025)"
+        ],
+        "configuration": "February 2025 EyeQ6H ECU design. Product page also lists an eight-EyeQ5H option; hardware varies by generation and vehicle integration. RAM, storage, supply and radio modules undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Drive ECU",
+            "details": "Four Mobileye EyeQ6H SoCs across primary and secondary computing boards. Shared primary board has two EyeQ6H chips and an integrated MCU whose model is unspecified.",
+            "sources": [
+              "https://www.mobileye.com/blog/modularity-from-adas-to-av/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception interfaces",
+            "details": "Connects up to 13 cameras plus imaging radars and LiDAR. Sensor counts/models depend on the vehicle integration.",
+            "sources": [
+              "https://www.mobileye.com/blog/modularity-from-adas-to-av/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular controller",
+            "details": "Drive extends the shared ECU architecture used for SuperVision and Chauffeur; the four-chip Drive configuration must not be assigned to those products automatically.",
+            "sources": [
+              "https://www.mobileye.com/blog/modularity-from-adas-to-av/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Vehicle integration",
+            "details": "Driverless Mobility-as-a-Service platform. Current product reference offers either eight EyeQ5H or four EyeQ6H; the options are not chips simultaneously installed in one ECU.",
+            "sources": [
+              "https://www.mobileye.com/blog/modularity-from-adas-to-av/",
+              "https://www.mobileye.com/products/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "moia-id-buzz-ad-production-system",
+        "manufacturer": "MOIA",
+        "models": [
+          "ID. Buzz AD"
+        ],
+        "configuration": "Manufacturer/operator references for the series-production platform and autonomous test service. Main SoC, memory, battery capacity, sensor models and communication modem undisclosed; generic Mobileye ECU options are not a confirmed vehicle BOM.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Surround perception",
+            "details": "13 cameras, nine LiDAR sensors and five radar sensors provide surrounding coverage. Individual part numbers are not stated.",
+            "sources": [
+              "https://ride.moia.io/en/autonomous/technology"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Vehicle platform",
+            "details": "Electric Volkswagen ID. Buzz AD. These sources do not establish the production traction battery or motor specification.",
+            "sources": [
+              "https://ride.moia.io/en/autonomous/technology",
+              "https://www.volkswagen-group.com/en/articles/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services-19392"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Passenger and operator interface",
+            "details": "App booking/access, passenger screen and fleet-center assistance; vehicle checks seatbelts and door clearance before departure.",
+            "sources": [
+              "https://ride.moia.io/en/autonomous/technology"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Driving and fleet layers",
+            "details": "Mobileye self-driving system paired with MOIA AD MaaS fleet software for live fleet management, passenger assistance and remote supervision. Remote supervision is not evidence of an openly accessible control endpoint.",
+            "sources": [
+              "https://www.volkswagen-group.com/en/articles/moia-unveils-series-production-version-id-buzz-ad-and-turnkey-solution-for-fully-autonomous-mobility-services-19392",
+              "https://ride.moia.io/en/autonomous/technology"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "miso-flippy-fry-station-2024-2025",
+        "manufacturer": "Miso Robotics",
+        "models": [
+          "Miso Flippy",
+          "Flippy Fry Station"
+        ],
+        "configuration": "Frying configuration documented by Miso, NVIDIA and the October 2025 company filing. Exact GPU/CPU, RAM, camera, arm model and electrical/network specifications undisclosed; early burger-grill hardware is not inherited.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Vision acceleration",
+            "details": "NVIDIA GPU acceleration for real-time basket tracking and pose estimation; no Jetson or other GPU SKU is established.",
+            "sources": [
+              "https://developer.download.nvidia.com/isaac/images/miso-robotics-isaac-ros-success-story.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Basket perception",
+            "details": "Isaac ROS AprilTag detection tracks fryer-basket positions. Camera manufacturer/model unspecified.",
+            "sources": [
+              "https://developer.download.nvidia.com/isaac/images/miso-robotics-isaac-ros-success-story.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cell hardware",
+            "details": "Overhead rail, robotic arm, vision system, tablet, Flippy Control unit, safety system and Autobasket equipment. Rail design is motor-vendor agnostic.",
+            "sources": [
+              "https://www.sec.gov/Archives/edgar/data/1710670/000110465925101909/tm2529356d1_partiiandiii.htm"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operation and development tools",
+            "details": "Vision AI supports fry-station automation. Miso describes cuMotion motion planning and Isaac Sim for developing/testing configurations; simulation tooling is not an installed operating-system claim.",
+            "sources": [
+              "https://info.misorobotics.com/newsroom/miso-collaborates-with-nvidia-to-advance-restaurant-automation",
+              "https://info.misorobotics.com/newsroom/scaling-simplified-optimizing-misos-robot-configurations-with-nvidia-isaac-sim"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nauticus-aquanaut-mk2-2023-architecture",
+        "manufacturer": "Nauticus Robotics",
+        "models": [
+          "Aquanaut Mark 2",
+          "Aquanaut MK2"
+        ],
+        "configuration": "April 2023 manufacturer commissioning configuration. CPU, memory, battery capacity and exact sensing/modem models are not specified in this source. Later Aquanaut 2.1 dimensions and payload options are not assigned to Mk2.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Subsea platform",
+            "details": "Fully electric and untethered vehicle; no topside power tether required.",
+            "sources": [
+              "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Underwater communications",
+            "details": "Acoustic communications network. Acoustic signals are underwater sound, not Wi-Fi or RF broadcasts.",
+            "sources": [
+              "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Manipulation hardware",
+            "details": "Two Nauticus Olympic Arm electric work-class manipulators in the intervention configuration.",
+            "sources": [
+              "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Excursion payload",
+            "details": "Excursion configuration uses data-collection and perception sensors; individual sensors are not named in the commissioning announcement.",
+            "sources": [
+              "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Onboard control architecture",
+            "details": "ToolKITT integrates robot control, user interfaces, sensor integration, simulation, data analysis and communications.",
+            "sources": [
+              "https://ir.nauticusrobotics.com/news-events/press-releases/detail/29/nauticus-robotics-announces-splashdown-of-next-generation"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -289274,8 +290164,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 397,
-    "devices_with_system_profiles": 358,
-    "devices_with_documented_compute": 163
+    "system_profiles": 405,
+    "devices_with_system_profiles": 366,
+    "devices_with_documented_compute": 167
   }
 }

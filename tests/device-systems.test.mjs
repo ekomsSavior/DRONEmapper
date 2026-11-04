@@ -479,7 +479,7 @@ test('research robots keep onboard compute, external equipment and generations d
  assert.match(text(fp.sections.sensors),/external equipment, not onboard GPS/);
  assert.match(text(fp.sections.power),/two supplied, used individually/);
  assert.equal(profileIds(system('Dusty Robotics','FieldPrinter 1')).length,0);
- assert.equal(profileIds(system('Nauticus Robotics','Aquanaut Mark 2')).length,0);
+ assert.equal(profileIds(system('Nauticus Robotics','Aquanaut Mark 2')).includes('nauticus-aquanaut21'),false);
  assert.match(text(system('Nauticus Robotics','Aquanaut 2.1').sections.software),/future update/);
  assert.match(system('Saga Robotics','Thorvald').configurations[0].configuration,/2017/);
  assert.match(text(system('Saga Robotics','Thorvald').sections.power),/1,024/);
@@ -890,4 +890,36 @@ test('assistive robots and delivery/development vehicles preserve evidence bound
  assert.match(text(tx.sections.radios),/does not establish its installation on every Type-X/);
  assert.equal(tx.sections.compute.status,'not-established');
  assert.doesNotMatch(text(tx.sections.power),/lead-acid|1815 kg/);
+});
+
+test('batch 33 separates installed controllers, configurable hardware and software tooling',()=>{
+ const t=system('Makr Shakr','Makr Shakr Toni');
+ assert.match(text(t.sections.compute),/KR C4.*PLC/);
+ assert.match(text(t.sections.interfaces),/KR 10 R1100.*KR 6 R900-2/);
+ assert.match(text(t.sections.sensors),/does not explicitly identify the side scanner models/);
+ assert.equal(t.sections.radios.status,'not-established');
+ const may=system('May Mobility','May Mobility Autonomous Sienna');
+ assert.match(text(may.sections.compute),/NVIDIA/);
+ assert.doesNotMatch(text(may.sections.compute.facts.map(f=>f.details)),/Orin|Xavier/);
+ assert.match(text(may.sections.sensors),/not guaranteed unchanged/);
+ assert.equal(profileIds(system('May Mobility','Lexus RX450h / Polaris GEM')).includes('may-mobility-sienna-adk'),false);
+ const drive=system('Mobileye','Mobileye Drive'),buzz=system('MOIA','ID. Buzz AD');
+ assert.match(text(drive.sections.compute),/Four Mobileye EyeQ6H/);
+ assert.match(text(buzz.sections.sensors),/13 cameras, nine LiDAR sensors and five radar/);
+ assert.equal(buzz.sections.compute.status,'not-established');
+ const flippy=system('Miso Robotics','Miso Flippy');
+ assert.match(text(flippy.sections.compute),/no Jetson or other GPU SKU is established/);
+ assert.match(text(flippy.sections.software),/simulation tooling is not an installed operating-system claim/);
+ const form=system('Machina Labs','Machina Forming Cell');
+ assert.match(text(form.sections.interfaces),/Two seven-axis/);
+ assert.equal(form.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(form.sections.interfaces),/KUKA|FANUC/);
+ assert.match(text(system('Machinex','SamurAI').configurations),/2021-02V/);
+ const mk2=system('Nauticus Robotics','Aquanaut Mark 2'),a21=system('Nauticus Robotics','Aquanaut 2.1');
+ assert.match(text(mk2.sections.interfaces),/Two Nauticus Olympic Arm/);
+ assert.match(text(mk2.sections.radios),/underwater sound, not Wi-Fi or RF/);
+ assert.doesNotMatch(text(mk2.sections.power),/3,850|101.1/);
+ assert.match(text(a21.sections.power),/101.1 kWh/);
+ assert.match(text(a21.sections.software),/manipulation is a future update/);
+ assert.equal(a21.sections.compute.status,'not-established');
 });
