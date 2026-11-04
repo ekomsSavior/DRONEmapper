@@ -47405,6 +47405,293 @@
           ]
         }
       ]
+    },
+    {
+      "id": "parrot-anafi-ukr-gov-8501",
+      "manufacturer": "Parrot",
+      "models": [
+        "ANAFI UKR GOV"
+      ],
+      "configuration": "GOV user guide v8.5.0.1, 29 October 2026, with common UKR electronics from white paper v8.5.0.0. GOV has its own radio specification; MARS radio components from other UKR variants are not assigned here. Radios and accessories remain configuration-dependent.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Main computing platform",
+          "details": "Shared UKR architecture: Qualcomm QRB5165 with Kryo 585 CPU, Adreno 650 GPU and Hexagon 698 DSP.",
+          "sources": [
+            "https://www.parrot.com/assets/s3fs-public/document/ANAFI%20UKR%20white%20paper.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "RAM and storage",
+          "details": "Shared architecture lists Micron 64 Gb LPDDR5 (8 GB) and Kioxia 512 GB UFS3 storage.",
+          "sources": [
+            "https://www.parrot.com/assets/s3fs-public/document/ANAFI%20UKR%20white%20paper.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "GOV links",
+          "details": "802.11ax Wi-Fi at 2.4 GHz and 5 GHz UNII-1/UNII-3; backup LoRa at 863–870 MHz (EU) or 902–928 MHz (US). GOV table also lists 5G NR with LTE fallback; availability depends on configuration.",
+          "sources": [
+            "https://www.parrot.com/assets/s3fs-public/document/ANAFI%20UKR%20GOV%20user%20guide.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and imaging",
+          "details": "Stereo front/downward cameras, vertical ranging, IMUs, barometer, magnetometer and multi-constellation GNSS. Stabilized payload combines wide/telephoto 21 MP imaging and a 640-class thermal camera.",
+          "sources": [
+            "https://www.parrot.com/assets/s3fs-public/document/ANAFI%20UKR%20GOV%20user%20guide.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Two battery configurations",
+          "details": "Standard LiPo: 6,800 mAh, 11.55 V, 45 W charging. XLR Li-ion: 20,200 mAh, 10.20 V, 70 W charging. These are alternative packs.",
+          "sources": [
+            "https://www.parrot.com/assets/s3fs-public/document/ANAFI%20UKR%20GOV%20user%20guide.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ports and operator system",
+          "details": "USB-C, microSD and SIM slots; Skycontroller UKR GOV is a separate ground controller.",
+          "sources": [
+            "https://www.parrot.com/assets/s3fs-public/document/ANAFI%20UKR%20GOV%20user%20guide.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight application",
+          "details": "FreeFlight 8 is required; guide lists aircraft software 8.5.0 at publication.",
+          "sources": [
+            "https://www.parrot.com/assets/s3fs-public/document/ANAFI%20UKR%20GOV%20user%20guide.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "PARROT",
+          "models": [
+            "PARROT ANAFI UKR GOV"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dji-m30t-eu-manual-22",
+      "manufacturer": "DJI",
+      "models": [
+        "M30T EU — manual v2.2 reference"
+      ],
+      "configuration": "October 2024 manufacturer manual explicitly includes M30T EU. This is an EU configuration reference for the combined M30T (EU&KR) catalog entry; Korean regional differences are not established. It does not describe the Dock variant. CPU, RAM and radio chip models are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Aircraft transmission",
+          "details": "O3 Enterprise; documented bands are 2.4000–2.4835 and 5.725–5.850 GHz, subject to region. EU power limits are not assigned to Korea.",
+          "sources": [
+            "https://dl.djicdn.com/downloads/matrice-30-series/20241022UM/Matrice30_Series_User_Manual_v2.2_ENI.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging payload",
+          "details": "48 MP zoom and 12 MP wide CMOS cameras, 640 × 512 uncooled VOx thermal imager, FPV camera and 905 nm laser rangefinder.",
+          "sources": [
+            "https://dl.djicdn.com/downloads/matrice-30-series/20241022UM/Matrice30_Series_User_Manual_v2.2_ENI.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "Vision and infrared obstacle sensing; GPS, Galileo and BeiDou, with GLONASS available when RTK is enabled.",
+          "sources": [
+            "https://dl.djicdn.com/downloads/matrice-30-series/20241022UM/Matrice30_Series_User_Manual_v2.2_ENI.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and propulsion",
+          "details": "Two TB30 Li-ion 6S packs, each 5,880 mAh / 131.6 Wh; motor model 3511. Manual specifies 1676 high-altitude propellers for C2-certified regions.",
+          "sources": [
+            "https://dl.djicdn.com/downloads/matrice-30-series/20241022UM/Matrice30_Series_User_Manual_v2.2_ENI.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload and storage interfaces",
+          "details": "PSDK payload port, USB-C assistant connection and microSD slot. Camera gimbal is integrated.",
+          "sources": [
+            "https://dl.djicdn.com/downloads/matrice-30-series/20241022UM/Matrice30_Series_User_Manual_v2.2_ENI.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operator applications",
+          "details": "DJI Pilot 2 on the ground controller; DJI Assistant 2 for Enterprise handles updates and maintenance.",
+          "sources": [
+            "https://dl.djicdn.com/downloads/matrice-30-series/20241022UM/Matrice30_Series_User_Manual_v2.2_ENI.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "DJI",
+          "models": [
+            "M30T (EU&KR)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ratel-h-500kg-2026",
+      "manufacturer": "Ratel Robotics",
+      "models": [
+        "Ratel H"
+      ],
+      "configuration": "Current manufacturer 500 kg payload configuration. Earlier 400 kg publications describe different specifications and are not merged here. Processor, RAM, battery capacity, radio bands and modem models are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Remote control links",
+          "details": "System list includes a multicopter-mounted repeater and satellite-link control. It does not identify a satellite provider, antenna or RF band.",
+          "sources": [
+            "https://robots.com.ua/en/robotizovanij-kompleks-ratel-h/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Operator vision",
+          "details": "Daytime and night cameras are specified; night imaging is not enough evidence to call the camera thermal.",
+          "sources": [
+            "https://robots.com.ua/en/robotizovanij-kompleks-ratel-h/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging equipment",
+          "details": "A charging station is included in the system list; battery chemistry, voltage and charger rating are unspecified.",
+          "sources": [
+            "https://robots.com.ua/en/robotizovanij-kompleks-ratel-h/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle and control station",
+          "details": "Separate ground control station; vehicle accepts cargo or casualty-evacuation equipment. Current specifications list 500 kg payload and 1,185 kg unloaded mass.",
+          "sources": [
+            "https://robots.com.ua/en/robotizovanij-kompleks-ratel-h/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blacksea-comet-launch-2026",
+      "manufacturer": "BlackSea Technologies",
+      "models": [
+        "Comet — 2026 launch configuration"
+      ],
+      "configuration": "Manufacturer April 2026 launch, June 2026 specification sheet and product page. Named mission equipment describes the launch demonstrator, not every future Comet. Onboard processor, RAM and modem are not disclosed. Chaser components are not carried over.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Propulsion and stabilization",
+          "details": "June specification identifies twin Volvo D6 propulsion and Seakeeper stabilization. D6 subvariant and gyro part number are not named.",
+          "sources": [
+            "https://www.blacksea.tech/s/Comet-6-2026.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Demonstrated radar",
+          "details": "Launch configuration identifies Leonardo DRS RADA RPS-42 MHR array radar. Echodyne radar and Current cameras in the same release belong to Chaser.",
+          "sources": [
+            "https://www.blacksea.tech/press/come-see-us-at-pier-d2-on-the-gaylord-waterfront"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Hull and payload architecture",
+          "details": "13.1 m aluminum vessel with modular, open mission-system architecture. Payload configuration can change.",
+          "sources": [
+            "https://www.blacksea.tech/comet"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy stack",
+          "details": "Manufacturer identifies integrated autonomy, without naming the onboard computer or operating system.",
+          "sources": [
+            "https://www.blacksea.tech/comet"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "BlackSea Technologies",
+          "models": [
+            "BlackSea Comet USV"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "torus-mars-v2-2019",
+      "manufacturer": "Torus Robotics",
+      "models": [
+        "MARS v2 — 2018–2019 prototype"
+      ],
+      "configuration": "Version-2 prototype described by its system integrator, August 2018–July 2019, corroborated by Torus’s 2020 government-hosted company entry. This is a historical reference for the broad MARS record, not a later deployment BOM. Processor, RAM, battery, motor controller and RF hardware are not identified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Mobile manipulation",
+          "details": "Original engineer describes a moving base with a six-axis industrial arm for pick-and-place tasks.",
+          "sources": [
+            "https://in.linkedin.com/in/abbhi"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Lidar and other onboard sensing",
+          "details": "Project description identifies lidars combined with other onboard sensors; individual sensor models are not supplied.",
+          "sources": [
+            "https://in.linkedin.com/in/abbhi"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous navigation integration",
+          "details": "Engineer reports sensor fusion for autonomous operation. No operating system or autonomy-computer SKU is identified.",
+          "sources": [
+            "https://in.linkedin.com/in/abbhi"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Manufacturer cross-reference",
+          "details": "Torus’s 2020 entry identifies delivery of MARS V2. Its separate company-wide powertrain claims do not establish MARS motor specifications.",
+          "sources": [
+            "https://idex.gov.in/uploads/resources/1673065813_d633db5073337a8bb8dc.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Torus Robotics",
+          "models": [
+            "MARS (Mobile Autonomous Robotics System)"
+          ]
+        }
+      ]
     }
   ]
 }

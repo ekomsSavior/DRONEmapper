@@ -9,6 +9,36 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 86 keeps regional radios, demonstration equipment and prototype parts scoped',()=>{
+ const gov=system('PARROT','PARROT ANAFI UKR GOV');
+ assert.match(text(gov.sections.compute),/QRB5165/);
+ assert.match(text(gov.sections.memory),/64 Gb.*8 GB/);
+ assert.match(text(gov.sections.radios),/802.11ax/);
+ assert.doesNotMatch(text(gov.sections.radios.facts.map(f=>f.details)),/Xilinx|MARS/);
+ assert.equal(profileIds(gov).includes('parrot-anafi-ukr'),false);
+ const m=system('DJI','M30T (EU&KR)');
+ assert.match(text(m.configurations),/Korean regional differences are not established/);
+ assert.match(text(m.sections.power),/TB30/);
+ assert.equal(m.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('DJI','M30T Dock')).includes('dji-m30t-eu-manual-22'),false);
+ const ratel=system('Ratel Robotics','Ratel H');
+ assert.match(text(ratel.sections.radios),/satellite-link/);
+ assert.match(text(ratel.configurations),/400 kg.*not merged/);
+ assert.doesNotMatch(text(ratel.sections.radios.facts),/915 MHz|Starlink/);
+ const comet=system('BlackSea Technologies','BlackSea Comet USV');
+ assert.match(text(comet.sections.sensors),/RPS-42/);
+ assert.match(text(comet.sections.sensors),/belong to Chaser/);
+ assert.equal(comet.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('BlackSea Technologies','Chaser')).includes('blacksea-comet-launch-2026'),false);
+ const mars=system('Torus Robotics','MARS (Mobile Autonomous Robotics System)');
+ assert.match(text(mars.configurations),/2018–July 2019/);
+ assert.match(text(mars.sections.sensors),/lidars/);
+ assert.equal(mars.sections.power.status,'not-established');
+ assert.equal(mars.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('DRDO','MARS')).includes('torus-mars-v2-2019'),false);
+ assert.equal(profileIds(system('Parrot','ANAFI UKR GOV',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 85 separates documented robot revisions, RID modules and aircraft variants',()=>{
  const amy=system('Pangolin Robot','Amy');
  assert.match(text(amy.sections.compute),/industrial PC/);
@@ -2396,7 +2426,7 @@ test('batch 48 preserves Dock, Avata and Quantum configuration boundaries',()=>{
  assert.doesNotMatch(text(dock.sections.sensors.facts.map(f=>f.details)),/VOx/);
  assert.match(text(thermal.sections.sensors),/640×512.*VOx/);
  assert.doesNotMatch(text(thermal.sections.power.facts.map(f=>f.details)),/Lead-acid|lead-acid/);
- assert.equal(profileIds(system('DJI','M30T (EU&KR)')).length,0);
+ assert.deepEqual(profileIds(system('DJI','M30T (EU&KR)')),['dji-m30t-eu-manual-22']);
  const a=system('DJI','Avata 360 (DVN3XT)');
  const b=system('DJI','DJI Avata 360 (DVN3NT)');
  assert.deepEqual(profileIds(a),profileIds(b));
