@@ -10,6 +10,7 @@ const radio=read('public/radio-references.json');
 test('offline reference catalogs match and every fact keeps its evidence',()=>{
  for(const path of ['android-node/app/src/main/assets/radio-references.json','linux-node/dronemapper_node/static/radio-references.json'])assert.deepEqual(read(path),radio);
  const systems=read('integration/device-systems.json').profiles;
+ assert.deepEqual(new Set(radio.profiles.map(p=>p.id)),new Set(systems.filter(p=>p.facts.some(f=>f.section==='radios')).map(p=>p.id)));
  for(const p of radio.profiles){
   const original=systems.find(s=>s.id===p.id);assert.ok(original);
   assert.equal(p.configuration,original.configuration);

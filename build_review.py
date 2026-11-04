@@ -76,6 +76,7 @@ def build_linux_archive():
 
 def build_archive():
     subprocess.run([sys.executable, str(ROOT / 'scripts/sync-device-systems.py'), '--check'], check=True)
+    subprocess.run([sys.executable, str(ROOT / 'scripts/sync-radio-references.py'), '--check'], check=True)
     subprocess.run([sys.executable, str(ROOT / 'scripts/export_developer_data.py'), '--check'], check=True)
     subprocess.run([sys.executable, str(ROOT / 'scripts/sync-device-mac.py'), '--check'], check=True)
     # Publish the same guide as the source bundle, with working website links.
