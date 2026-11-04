@@ -3712,8 +3712,8 @@
         "X30",
         "Jueying X30"
       ],
-      "configuration": "X30 and X30 Pro are distinguished in the manufacturer’s published table; processor and memory components remain undisclosed there.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "X30 family with standard/Pro differences retained. The three-computer architecture below is explicitly X30 Pro; Livox identifies the X30 lidar configuration in January 2024. Processor part numbers, RAM and storage remain unverified; a vendor-wide Arm/Rockchip article does not establish an X30 board revision.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "interfaces",
@@ -3732,19 +3732,44 @@
           ]
         },
         {
-          "section": "sensors",
-          "component": "Integrated perception",
-          "details": "Manufacturer describes fused perception for navigation in darkness; sensor chip/model identifiers are not published on this page.",
-          "sources": [
-            "https://en.deeprobotics.cn/en/wap/product3.html"
-          ]
-        },
-        {
           "section": "power",
           "component": "Quick-change battery",
           "details": "Published runtime 2.5–4 hours. Battery-inclusive mass is 56 kg for X30 or 59 kg for Pro; IP67 enclosure.",
           "sources": [
             "https://en.deeprobotics.cn/en/wap/product3.html"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "X30 Pro computer architecture",
+          "details": "The manufacturer separates an internal motion computer and perception computer from a navigation computer inside the back-mounted intelligent controller. This identifies their roles, not the CPU models or installed memory.",
+          "sources": [
+            "https://developer.deeprobotics.cn/docs/x30/guide/software/network/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "January 2024 lidar configuration",
+          "details": "Livox identifies four MID-360 lidar units on X30. These are optical ranging sensors; their presence does not establish a Wi-Fi or RF detection signature. The robot manual locates front/rear, upward/downward lidar units.",
+          "sources": [
+            "https://www.livoxtech.com/cn/showcase/13",
+            "https://developer.deeprobotics.cn/docs/x30/guide/hardware/lidar/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Documented ROS telemetry interface",
+          "details": "The developer guide lists CPU temperature/frequency, battery state, joint state, lidar point clouds and IMU topics on the perception/navigation computers. These are interfaces within the configured robot network, not proof of public broadcasts or Internet exposure.",
+          "sources": [
+            "https://developer.deeprobotics.cn/docs/x30/guide/communication/ros2-dds/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Battery monitoring",
+          "details": "The documented TCP/UDP battery interface reports voltage, current, remaining/nominal capacity, cycle count, charge level and temperature. Message interpretation depends on motion-program version; this is not a published battery capacity specification.",
+          "sources": [
+            "https://developer.deeprobotics.cn/docs/x30/interfaces/device/battery/"
           ]
         }
       ]
@@ -7549,8 +7574,8 @@
         "MiR250",
         "MiR AMR"
       ],
-      "configuration": "MiR250 reference configuration. The generic MiR AMR entry covers a larger family and does not establish that every deployment is a MiR250. CPU and RAM are not disclosed.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "MiR250 reference configuration, with the manufacturer’s August 2024 specification archived by Even Logistics. The generic MiR AMR entry covers a larger family and does not establish that every deployment is a MiR250. CPU and RAM remain undisclosed; MiR Insights server requirements are not robot compute specifications.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "sensors",
@@ -7579,9 +7604,33 @@
         {
           "section": "power",
           "component": "Drive and charging",
-          "details": "250 kg maximum payload, 2 m/s maximum speed, 94 kg robot mass. Lithium-ion battery; charging up to 35 A. Capacity is not stated on this specification page.",
+          "details": "250 kg maximum payload, 2 m/s maximum speed, 94 kg robot mass. Lithium-ion battery; charging up to 35 A. The dated battery specification is provided separately below.",
           "sources": [
             "https://www.mobile-industrial-robots.com.cn/zh/products/robots/mir250/specifications"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "2024 depth-camera models",
+          "details": "The manufacturer’s August 2024 specification names two Intel RealSense D435 3D cameras (page 16). This is D435, not the D435i variant, and does not identify a later replacement camera.",
+          "sources": [
+            "https://files.even-logistics.com/production/users/uploads/mir/solution/mir250/MiR250-Specifications-2.90.pdf?dm=1730724451"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "2024 battery specification",
+          "details": "Page 12 lists 47.7 V nominal, 34.2 Ah and 1.63 kWh, with 42–54 V limits and 11 kg battery mass. The charger’s 48 V name is not the nominal battery voltage.",
+          "sources": [
+            "https://files.even-logistics.com/production/users/uploads/mir/solution/mir250/MiR250-Specifications-2.90.pdf?dm=1730724451"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Dock charging communication",
+          "details": "The same specification describes CAN communication with MiR Charge 48V and charging only after the robot connection is present. This charger interface does not identify the navigation CPU or radio module.",
+          "sources": [
+            "https://files.even-logistics.com/production/users/uploads/mir/solution/mir250/MiR250-Specifications-2.90.pdf?dm=1730724451"
           ]
         }
       ]
@@ -13113,8 +13162,8 @@
       "models": [
         "Neubie"
       ],
-      "configuration": "Current manufacturer specification: delivery, patrol and open-cargo applications share a configurable robot base. CPU, RAM, storage, radio SKU and battery chemistry are not disclosed.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Current delivery, patrol and open-cargo specifications are retained alongside dated compute evidence: NVIDIA identifies the CES 2023 Neubie as a Jetson-based product. That source does not establish the board revision in every current Neubie. Jetson model, RAM/storage, radio SKU and battery chemistry remain undisclosed.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "radios",
@@ -13154,6 +13203,14 @@
           "details": "Neubie-Go monitors robot state; Neubie Manager handles orders/delivery status; Neubility Order provides the delivery platform.",
           "sources": [
             "https://www.neubility.ai/en/product"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "CES 2023 platform reference",
+          "details": "NVIDIA’s December 2022 awards account identifies Neubie among products built on Jetson. It does not name the Jetson module or memory variant; the article’s separate reference to Orin partner demonstrations is not a Neubie component specification.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/jetson-innovation-awards-ces/"
           ]
         }
       ]
@@ -32976,8 +33033,8 @@
         "Skydio Beacon",
         "Beacon (original)"
       ],
-      "configuration": "Original Beacon accessory, not aircraft compute. April 2022 manual and SBEC1V1 regulatory listing differ on radio coverage; retained as source-specific statements. CPU, RAM and radio chipset unpublished.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Original Beacon accessory, not aircraft compute or Beacon+. Qualcomm identifies its application processor in February 2021. The April 2022 manual and SBEC1V1 regulatory listing differ on radio coverage; both remain source-specific. Installed RAM and radio chipset are unverified.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "power",
@@ -33017,6 +33074,14 @@
           "details": "FCC ID 2ATQRSBEC1V1 lists 2412–2462 and 5180–5240 MHz. This differs from the manual; neither is a unique detection signature.",
           "sources": [
             "https://fccid.io/2ATQRSBEC1V1"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Original Beacon application processor",
+          "details": "Qualcomm’s February 2021 Skydio 2 design account identifies APQ8009 in the original Beacon, as well as the separate Skydio 2 Controller. The aircraft camera processor is a different subsystem; this evidence is not assigned to Beacon+.",
+          "sources": [
+            "https://www.qualcomm.com/news/onq/2021/02/pushing-limits-drones-skydio-autonomy"
           ]
         }
       ]

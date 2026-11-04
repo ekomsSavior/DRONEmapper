@@ -9,6 +9,33 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 89 keeps controller generations, robot subsystems and server hardware separate',()=>{
+ const x30=system('DEEP Robotics','X30');
+ assert.match(text(x30.sections.compute),/X30 Pro/);
+ assert.match(text(x30.sections.compute),/motion computer and perception computer/);
+ assert.doesNotMatch(text(x30.sections.compute),/RK3588|Jetson/);
+ assert.match(text(x30.sections.sensors),/four MID-360/);
+ assert.match(text(x30.sections.software),/not proof of public broadcasts/);
+ assert.equal(x30.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('DEEP Robotics','Lite3')).includes('deep-x30'),false);
+ const beacon=system('Skydio','Skydio Beacon');
+ assert.match(text(beacon.sections.compute),/APQ8009/);
+ assert.doesNotMatch(text(beacon.sections.compute),/QCS605|QCA6174/);
+ assert.equal(beacon.sections.memory.status,'not-established');
+ assert.doesNotMatch(text(system('Skydio','Skydio Beacon+').sections.compute),/APQ8009/);
+ const neubie=system('Neubility','Neubie');
+ assert.match(text(neubie.sections.compute),/December 2022/);
+ assert.match(text(neubie.sections.compute),/does not name the Jetson module/);
+ assert.equal(neubie.sections.memory.status,'not-established');
+ const mir=system('Mobile Industrial Robots','MiR250');
+ assert.match(text(mir.sections.sensors),/two Intel RealSense D435/);
+ assert.match(text(mir.sections.power),/47.7 V nominal, 34.2 Ah and 1.63 kWh/);
+ assert.match(text(mir.sections.interfaces),/CAN communication/);
+ assert.equal(mir.sections.compute.status,'not-established');
+ assert.equal(mir.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Skydio','Skydio Beacon',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 88 binds named processors to documented device generations',()=>{
  const a1=system('Unitree Robotics','Unitree A1');
  assert.match(text(a1.sections.compute),/UP Board/);
@@ -2547,7 +2574,8 @@ test('batch 51 preserves accessories, power revisions and announced architecture
  assert.notDeepEqual(profileIds(beacon),profileIds(plus));
  assert.match(text(plus.sections.radios),/20\/40\/80/);
  assert.match(text(beacon.sections.identification),/differs from the manual/);
- assert.equal(beacon.sections.compute.status,'not-established');
+ assert.match(text(beacon.sections.compute),/APQ8009/);
+ assert.equal(plus.sections.compute.status,'not-established');
  assert.equal(profileIds(system('Skydio','Skydio Beacon',{kind:'regulatory-equipment'})).length,0);
  const bot=system('Symbotic','Symbot'),warehouse=system('Symbotic','Symbotic System');
  assert.match(text(bot.sections.power),/Nyobolt.*limited basis/);
