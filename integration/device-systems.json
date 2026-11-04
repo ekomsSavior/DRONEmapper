@@ -22376,7 +22376,7 @@
           ]
         },
         {
-          "section": "interfaces",
+          "section": "radios",
           "component": "Tethered telemetry",
           "details": "Full-duplex Focal 903 fiber-optic telemetry to the surface, rather than an underwater Wi-Fi link. Operator van uses rig broadband; modem details unspecified.",
           "sources": [
@@ -22421,8 +22421,8 @@
         },
         {
           "section": "interfaces",
-          "component": "Tooling and data",
-          "details": "Two five- or seven-function manipulators. Optional RS232/RS485, Ethernet and optical-fiber interfaces; 24 V DC/110 V AC payload supplies.",
+          "component": "Tooling and power",
+          "details": "Two five- or seven-function manipulators. Optional 24 V DC and 110 V AC payload supplies.",
           "sources": [
             "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
           ]
@@ -22431,6 +22431,14 @@
           "section": "software",
           "component": "Vehicle control",
           "details": "Fly-by-wire station keeping with automatic heading, depth, altitude and pitch control. Surface connection uses an electro-optical tether and cage/top-hat TMS.",
+          "sources": [
+            "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Tethered data interfaces",
+          "details": "Electro-optical tether with optional RS232/RS485, Ethernet and optical-fiber data interfaces. These are wired links, not an underwater RF transmitter.",
           "sources": [
             "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
           ]

@@ -94710,8 +94710,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Tethered telemetry",
+                "details": "Full-duplex Focal 903 fiber-optic telemetry to the surface, rather than an underwater Wi-Fi link. Operator van uses rig broadband; modem details unspecified.",
+                "sources": [
+                  "https://reachsubsea.no/wp-content/uploads/2023/03/Datasheet-Millennium-208Rev.-00.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oceaneering-millennium-208-2018",
+                "configuration": "Oceaneering sheet RSC/18/RR/ML208/TSS/001 Rev 00, February 26, 2018, hosted by operator Reach Subsea. Applies to vehicle 208, not every Millennium. CPU and memory undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -94764,18 +94777,6 @@
                 "profile_id": "oceaneering-millennium-208-2018",
                 "configuration": "Oceaneering sheet RSC/18/RR/ML208/TSS/001 Rev 00, February 26, 2018, hosted by operator Reach Subsea. Applies to vehicle 208, not every Millennium. CPU and memory undisclosed.",
                 "reviewed_on": "2026-11-03"
-              },
-              {
-                "section": "interfaces",
-                "component": "Tethered telemetry",
-                "details": "Full-duplex Focal 903 fiber-optic telemetry to the surface, rather than an underwater Wi-Fi link. Operator van uses rig broadband; modem details unspecified.",
-                "sources": [
-                  "https://reachsubsea.no/wp-content/uploads/2023/03/Datasheet-Millennium-208Rev.-00.pdf"
-                ],
-                "evidence": "reviewed-primary-source",
-                "profile_id": "oceaneering-millennium-208-2018",
-                "configuration": "Oceaneering sheet RSC/18/RR/ML208/TSS/001 Rev 00, February 26, 2018, hosted by operator Reach Subsea. Applies to vehicle 208, not every Millennium. CPU and memory undisclosed.",
-                "reviewed_on": "2026-11-03"
               }
             ]
           },
@@ -94797,7 +94798,6 @@
         },
         "missing_sections": [
           "memory",
-          "radios",
           "software",
           "identification"
         ],
@@ -291884,7 +291884,7 @@
             ]
           },
           {
-            "section": "interfaces",
+            "section": "radios",
             "component": "Tethered telemetry",
             "details": "Full-duplex Focal 903 fiber-optic telemetry to the surface, rather than an underwater Wi-Fi link. Operator van uses rig broadband; modem details unspecified.",
             "sources": [
@@ -291929,8 +291929,8 @@
           },
           {
             "section": "interfaces",
-            "component": "Tooling and data",
-            "details": "Two five- or seven-function manipulators. Optional RS232/RS485, Ethernet and optical-fiber interfaces; 24 V DC/110 V AC payload supplies.",
+            "component": "Tooling and power",
+            "details": "Two five- or seven-function manipulators. Optional 24 V DC and 110 V AC payload supplies.",
             "sources": [
               "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
             ]
@@ -291939,6 +291939,14 @@
             "section": "software",
             "component": "Vehicle control",
             "details": "Fly-by-wire station keeping with automatic heading, depth, altitude and pitch control. Surface connection uses an electro-optical tether and cage/top-hat TMS.",
+            "sources": [
+              "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Tethered data interfaces",
+            "details": "Electro-optical tether with optional RS232/RS485, Ethernet and optical-fiber data interfaces. These are wired links, not an underwater RF transmitter.",
             "sources": [
               "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
             ]

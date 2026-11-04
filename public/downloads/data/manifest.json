@@ -70,8 +70,8 @@
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
       "rows": 925,
-      "bytes": 11204959,
-      "sha256": "d4203f759720698c8c5905e759b33b4a96de55ab9366fc8a2aa0ce01571f6f2d",
+      "bytes": 11205322,
+      "sha256": "e4114202f1cce7c538a6262313139427b6f95f48dadcfe26fa74f6749ba434e8",
       "collections": {
         "devices": 925,
         "radio_allocations": 182,
@@ -154,15 +154,15 @@
     },
     {
       "path": "integration/device-systems.json",
-      "sha256": "7172234e51922ac98e1fdcf0a57b5bc4f0adc2ea780730a0a683ad3ff157c789"
+      "sha256": "a999af4fa6e86c07ccbf7abdb5eb7cced4570f635e4a738b7b61c75f003f3430"
     },
     {
       "path": "public/device-system-model.mjs",
-      "sha256": "e4c57becc5eb5271e6c155899f1d9afae045cbb9d1551f9dd88424f8c537e151"
+      "sha256": "d69f2b3436b3da90ab6fe2d3b18e3951bc958c33e16bf773a01fb54ba72958f3"
     },
     {
       "path": "public/device-system-data.mjs",
-      "sha256": "65683c819474bf735a1bac5d8662c4fe0105e5d196d80bc799071bb7c0ea2457"
+      "sha256": "59dedbd0ea9a107cf2e1669c4fd6390a079efa8f2d4ce48d10626b0f29436b4d"
     },
     {
       "path": "scripts/enrich_device_systems.mjs",

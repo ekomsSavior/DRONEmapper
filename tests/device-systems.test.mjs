@@ -939,7 +939,7 @@ test('batch 35 keeps specific installations, options and research leads separate
  assert.match(text(m.sections.compute),/OPAC/);
  assert.match(text(m.sections.interfaces),/Titan 4.*Rig Master/);
  assert.match(text(m.sections.sensors),/Rowe Technologies/);
- assert.match(text(m.sections.interfaces),/rather than an underwater Wi-Fi/);
+ assert.match(text(m.sections.radios),/rather than an underwater Wi-Fi/);
  assert.equal(mp.sections.compute.status,'not-established');
  assert.doesNotMatch(text(mp.sections.sensors.facts.map(f=>f.details)),/Rowe|CDL/);
  assert.equal(profileIds(system('Oceaneering','Millennium ROV')).length,1);
