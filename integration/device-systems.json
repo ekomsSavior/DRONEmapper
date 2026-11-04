@@ -19731,6 +19731,528 @@
           ]
         }
       ]
+    },
+    {
+      "id": "holystone-hs600d-published",
+      "manufacturer": "Holy Stone",
+      "models": [
+        "HS600D"
+      ],
+      "configuration": "Manufacturer HS600D specification; HS600 and HS920 are not assumed identical. Exact flight-controller silicon, RAM, camera sensor die and unique radio identifiers are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Aircraft battery",
+          "details": "11.1 V / 3.5 Ah LiPo, 38.85 Wh. Ground transmitter instead uses 7.4 V / 1.1 Ah lithium-ion.",
+          "sources": [
+            "https://www.holystone.com/en/Drones/Premium/HS600D.html"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Published RF band",
+          "details": "Camera and transmitter each list 5745–5825 MHz; radio chipset and PHY are unspecified.",
+          "sources": [
+            "https://www.holystone.com/en/Drones/Premium/HS600D.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging",
+          "details": "Sony image sensor, exact die unspecified; three-axis gimbal; 8000×6000 stills and 3840×2160 at 30 fps recorded to card.",
+          "sources": [
+            "https://www.holystone.com/en/Drones/Premium/HS600D.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "GPS, optical-flow positioning and compass calibration. Manufacturer states no obstacle-avoidance system.",
+          "sources": [
+            "https://www.holystone.com/en/Drones/Premium/HS600D.html"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Recording media",
+          "details": "Class 10 or faster TF/microSD up to 128 GB; FAT32. This is removable recording storage, not processor RAM.",
+          "sources": [
+            "https://www.holystone.com/en/Drones/Premium/HS600D.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Charging",
+          "details": "Aircraft USB charger rated 5 V / 3 A; gimbal tilt control approximately −80° to 0°.",
+          "sources": [
+            "https://www.holystone.com/en/Drones/Premium/HS600D.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Ground application",
+          "details": "HS FLY application and compatible smartphone/controller; firmware version is not specified.",
+          "sources": [
+            "https://www.holystone.com/en/Drones/Premium/HS600D.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holystone-hs790-manual-v1",
+      "manufacturer": "Holy Stone",
+      "models": [
+        "HS790"
+      ],
+      "configuration": "English V1.0 user manual. CPU, RAM and image-sensor part number are not disclosed. The separate HS600D battery/storage specification is not inherited.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Flight and controller batteries",
+          "details": "Aircraft: 7.7 V / 3.2 Ah LiPo, 24.64 Wh. Transmitter: separate 3.7 V / 3.6 Ah lithium-ion battery.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-09-25/68d4efe6d3615.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Camera and transmitter",
+          "details": "5745–5825 MHz; exact radio chip and modulation not stated.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-09-25/68d4efe6d3615.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera and navigation",
+          "details": "Three-axis gimbal; 5700×3200 stills, 4K/30 fps or 2688×1512/50 fps video. GPS, optical-flow positioning, compass and gyro calibration are documented.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-09-25/68d4efe6d3615.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Removable recording",
+          "details": "Class 10 or faster TF/microSD up to 256 GB, FAT32.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-09-25/68d4efe6d3615.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Charging and airframe",
+          "details": "USB charging 5 V / 2 A; 377 g published aircraft weight.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-09-25/68d4efe6d3615.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Ground software",
+          "details": "HS GPS V5 smartphone app; camera, navigation and mission controls.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-09-25/68d4efe6d3615.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holystone-hsrid02-manual",
+      "manufacturer": "Holy Stone",
+      "models": [
+        "HSRID02"
+      ],
+      "configuration": "Manufacturer manual linked from the HSRID02 guide. CPU, RAM, GNSS receiver and radio-chip SKUs are unspecified. Bluetooth configuration does not establish every Remote ID broadcast PHY.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Internal battery",
+          "details": "3.7 V / 150 mAh LiPo, 0.56 Wh; USB charging at 5 V / 1 A.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-10-21/68f75a3a26849.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning",
+          "details": "GPS reception is required before the documented broadcast-ready indication; receiver chip is unnamed.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-10-21/68f75a3a26849.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Setup connection",
+          "details": "Bluetooth-based setup through Drone Finder; the manual does not enumerate the operating broadcast transport modes.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-10-21/68f75a3a26849.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Module hardware",
+          "details": "16 g; 42.5×30.2×14 mm. USB-C charging. Power/function switches, status indicators, LED strobe and buzzer.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-10-21/68f75a3a26849.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Configuration and broadcast",
+          "details": "Drone Finder writes identity settings; restarting enters broadcast operation after GPS acquisition.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-10-21/68f75a3a26849.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holystone-hsrid03-manual",
+      "manufacturer": "Holy Stone",
+      "models": [
+        "HSRID03"
+      ],
+      "configuration": "Manufacturer manual linked from the HSRID03 guide. CPU, RAM, GNSS receiver and radio-chip SKUs are unspecified. Bluetooth configuration does not establish every Remote ID broadcast PHY.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Internal battery",
+          "details": "3.7 V / 150 mAh LiPo, 0.56 Wh; USB charging at 5 V / 1 A.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-06-10/68478a021a148.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning",
+          "details": "GPS reception is required before the documented broadcast-ready indication; receiver chip is unnamed.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-06-10/68478a021a148.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Setup connection",
+          "details": "Bluetooth-based setup through Drone Finder; the manual does not enumerate the operating broadcast transport modes.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-06-10/68478a021a148.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Module hardware",
+          "details": "13.5 g; 28×34×13.5 mm. USB-C charging. Power/write switches and separate charge, GPS and status indicators.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-06-10/68478a021a148.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Configuration and broadcast",
+          "details": "Drone Finder writes identity settings; restarting enters broadcast operation after GPS acquisition.",
+          "sources": [
+            "https://static.holystone.com/Uploads/Download/2025-06-10/68478a021a148.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoverfly-spectre-tethered-reference",
+      "manufacturer": "Hoverfly Technologies",
+      "models": [
+        "Spectre",
+        "Hoverfly Spectre Tethered UAS"
+      ],
+      "configuration": "Published Spectre system and Spectre 2.0 payload references. CPU/RAM and exact motor/ESC models are not disclosed. A tethered control link does not imply an installed radio payload is silent.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Ground-fed power",
+          "details": "Power and data tether; less than 2 kW continuous and 2.4 kW peak. Aircraft mass 4 kg without payload; ground base 32 kg.",
+          "sources": [
+            "https://hoverflytech.com/tethered-drones-uas/spectre/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Data transport and optional radios",
+          "details": "Command, video and data travel over the tether. Optional radio payload integrations include Silvus, TrellisWare, Persistent Systems MPU5 and L3Harris; no universal installed radio or frequency is implied.",
+          "sources": [
+            "https://hoverflytech.com/tethered-drones-uas/spectre/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera payloads",
+          "details": "PTZS is listed as the standard Spectre 2.0 EO/IR payload. Other stabilized cameras and WAMI packages are selectable alternatives.",
+          "sources": [
+            "https://hoverflytech.com/tethered-drones-uas/spectre/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Control equipment",
+          "details": "Rugged tablet or PC; no-tool landing-ring attachment. Landing does not depend on optical sensors.",
+          "sources": [
+            "https://hoverflytech.com/tethered-drones-uas/spectre/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Integration",
+          "details": "ATAK, RaptorX and SDK control interfaces; exact onboard operating system unspecified.",
+          "sources": [
+            "https://hoverflytech.com/tethered-drones-uas/spectre/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remus100-legacy-whoi",
+      "manufacturer": "Huntington Ingalls Industries",
+      "models": [
+        "REMUS 100 (legacy WHOI architecture)",
+        "REMUS 100",
+        "REMUS (100 / 300 / 620)"
+      ],
+      "configuration": "Legacy shallow-water REMUS architecture documented by original developer WHOI. This is not a current-production HII bill of materials. Modern Phins, Jetson and storage specifications from other REMUS models are not assigned to it.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Legacy control computer",
+          "details": "PC/104 computer on a custom motherboard with eight 12-bit ADC channels and I/O; processor model is not identified.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "Long/ultrashort-baseline acoustic navigation and dead reckoning using ADCP velocities, compass/rate gyro and inertial sensing.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/remus-100/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Scientific instruments",
+          "details": "Published sensor classes include side-scan sonar, conductivity/temperature, water velocity, optical backscatter and fluorescence; fitted suite is mission-specific.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/remus-100/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Power system",
+          "details": "Rechargeable battery architecture with external charging; pack chemistry/capacity not specified in this legacy source.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle connection",
+          "details": "RS-232 diagnostic connection and custom I/O interface circuitry.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Ground interface",
+          "details": "REMUS VIP on a Windows laptop provides mission loading, diagnostics and recorded-telemetry analysis.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remus100-whoi-hover-configuration",
+      "manufacturer": "Huntington Ingalls Industries",
+      "models": [
+        "REMUS 100 hover-capable WHOI configuration",
+        "REMUS 100",
+        "REMUS (100 / 300 / 620)"
+      ],
+      "configuration": "WHOI low-speed/hover research configuration. Its additional thrusters and sensors must not be assumed installed on every REMUS 100; CPU and battery specifications are not identified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and survey package",
+          "details": "T-16 INS, WAAS GPS, RDI 1200 kHz ADCP, Imagenex 837 profiling sonar and Delta T scanning altimeter.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/remus-100/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Communications",
+          "details": "Iridium, Wi-Fi and underwater acoustic modems; acoustic links are sound rather than RF reception.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/remus-100/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Additional propulsion",
+          "details": "Forward and aft tunnel thrusters support low-speed manoeuvring and station keeping.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/remus-100/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Docking hardware",
+          "details": "Modular blunt-nose docking endcap.",
+          "sources": [
+            "https://www2.whoi.edu/site/osl/vehicles/remus-100/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remus300-current-hii-datasheet",
+      "manufacturer": "Huntington Ingalls Industries",
+      "models": [
+        "REMUS 300",
+        "REMUS (100 / 300 / 620)"
+      ],
+      "configuration": "Current manufacturer-linked REMUS 300 sheet, copyright 2024. Optional payloads are distinguished from standard components; CPU and RAM are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "memory",
+          "component": "Data storage",
+          "details": "Removable 1 TB SSD.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/REMUS_300_data_sheet_8f4607cb13.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Energy and drive",
+          "details": "Li-ion options: 1.5, 3.0 (standard) or 4.5 kWh. Brushless DC drive, three-blade propeller and cruciform control fins.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/REMUS_300_data_sheet_8f4607cb13.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Radio and acoustic links",
+          "details": "2.4 GHz Wi-Fi; optional Iridium. WHOI micromodem 2.0 uses 20–30 kHz underwater sound, not RF.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/REMUS_300_data_sheet_8f4607cb13.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "iXblue Phins C3 INS, Garmin GPS or optional GB-Gram; Teledyne 300 kHz phased-array DVL and LBL navigation.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/REMUS_300_data_sheet_8f4607cb13.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Survey instruments",
+          "details": "Marine Sonics MK II Arc Scout 900/1800 kHz sonar; NBOSI conductivity/temperature and TE Connectivity depth sensors.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/REMUS_300_data_sheet_8f4607cb13.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Connections and options",
+          "details": "Gigabit Ethernet and shore charging. Optional HD camera, Kraken MINSAS 60 sonar and Eco Puck Triplet sensors.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/REMUS_300_data_sheet_8f4607cb13.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mission software",
+          "details": "VIP; optional SeeByte SeeTrack/Neptune and RECON. HDK/SDK available for payload/autonomy integration.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/REMUS_300_data_sheet_8f4607cb13.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remus620-current-hii-datasheet",
+      "manufacturer": "Huntington Ingalls Industries",
+      "models": [
+        "REMUS 620",
+        "REMUS (100 / 300 / 620)"
+      ],
+      "configuration": "Current manufacturer-linked REMUS 620 sheet. Named Jetson is the payload processor; main vehicle-control CPU and RAM remain unspecified. Battery count and payload change configuration.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Payload compute",
+          "details": "NVIDIA Jetson AGX Xavier; not a claim about the main navigation controller.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/1/REMUS_620_data_sheet_1_4498bbbaf4.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Data storage",
+          "details": "8–16 TB SSD; externally removable configuration available.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/1/REMUS_620_data_sheet_1_4498bbbaf4.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Energy and drive",
+          "details": "One, two or three Li-ion modules: 9.6, 19.3 or 28.9 kWh. Brushless DC motor, two-blade propeller and three control fins.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/1/REMUS_620_data_sheet_1_4498bbbaf4.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Communications",
+          "details": "Wi-Fi and Iridium. WHOI micromodem 2.0 has 10 or 25 kHz-centre acoustic options; these are underwater sound frequencies.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/1/REMUS_620_data_sheet_1_4498bbbaf4.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and environment",
+          "details": "iXblue Phins C7 INS, Teledyne RDI 300 kHz DVL, L1/L2 GPS and LBL; conductivity/temperature and depth sensors.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/1/REMUS_620_data_sheet_1_4498bbbaf4.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload connections",
+          "details": "Two primary power/Gigabit-Ethernet connections; two secondary pressure-hull interfaces with power, RS-232 and digital I/O.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/1/REMUS_620_data_sheet_1_4498bbbaf4.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control software",
+          "details": "REMUS vehicle software with VIP and/or Odyssey Mission Manager; optional SeeTrack, Neptune and RECON. HDK/SDK on request.",
+          "sources": [
+            "https://pub-456e3044e5bb4e29a2840263f837feca.r2.dev/1/REMUS_620_data_sheet_1_4498bbbaf4.pdf"
+          ]
+        }
+      ]
     }
   ]
 }

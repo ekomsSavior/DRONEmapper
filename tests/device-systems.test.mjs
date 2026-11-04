@@ -784,3 +784,30 @@ test('sorting revisions and humanoid embodiments retain their own hardware',()=>
  assert.match(text(system('Hanwha Aerospace','Arion-SMET').configurations),/2023 FCT/);
  assert.equal(system('Hanwha Aerospace','Arion-SMET').sections.compute.status,'not-established');
 });
+
+test('aircraft revisions, RID modules and underwater payloads retain configuration boundaries',()=>{
+ const a=system('Holy Stone','HS600D'),b=system('Holy Stone','HS790');
+ assert.match(text(a.sections.memory),/128 GB/);
+ assert.doesNotMatch(text(a.sections.memory),/256 GB/);
+ assert.match(text(b.sections.memory),/256 GB/);
+ assert.match(text(a.sections.power),/11.1 V/);
+ assert.match(text(b.sections.power),/7.7 V/);
+ assert.equal(a.sections.compute.status,'not-established');
+ const rid2=system('Holy Stone','HSRID02'),rid3=system('Holy Stone','HSRID03');
+ assert.match(text(rid2.sections.interfaces),/strobe and buzzer/);
+ assert.doesNotMatch(text(rid3.sections.interfaces),/strobe|buzzer/);
+ assert.match(text(rid3.configurations),/does not establish every Remote ID broadcast PHY/);
+ const maker='Huntington Ingalls Industries';
+ const r100=system(maker,'REMUS 100'),r300=system(maker,'REMUS 300'),r620=system(maker,'REMUS 620');
+ assert.match(text(r100.sections.compute),/PC\/104/);
+ assert.match(text(r620.sections.compute),/Jetson AGX Xavier.*not a claim about the main navigation controller/);
+ assert.equal(r300.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(r300),/Xavier|8–16 TB|tunnel thrusters/);
+ assert.match(text(r300.sections.radios),/underwater sound, not RF/);
+ assert.match(text(r620.sections.memory),/8–16 TB/);
+ assert.equal(profileIds(system(maker,'REMUS (100 / 300 / 620)')).length,4);
+ assert.match(text(r100.configurations),/must not be assumed installed on every REMUS 100/);
+ const spectre=system('Hoverfly Technologies','Hoverfly Spectre Tethered UAS');
+ assert.match(text(spectre.sections.radios),/Optional radio payload integrations/);
+ assert.match(text(spectre.configurations),/does not imply an installed radio payload is silent/);
+});
