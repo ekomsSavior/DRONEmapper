@@ -9,6 +9,35 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 62 matches Skydio FCC hosts and preserves module versus host boundaries',()=>{
+ const equipment=id=>system('Skydio','regulatory equipment',{kind:'regulatory-equipment',fcc_id:id});
+ const ca=equipment('2ATQRCA');
+ assert.deepEqual(profileIds(ca),['skydio-ca110-controller-components']);
+ assert.match(text(ca.sections.compute),/QCS6490.*Kryo 670/);
+ assert.match(text(ca.sections.memory),/8 GB LPDDR5.*128 GB UFS 3.1/);
+ assert.match(text(ca.sections.power),/not the controller battery voltage/);
+ assert.match(text(ca.sections.software),/does not prove both operating systems/);
+ const radio=equipment('2ATQRSMODBV3S');
+ assert.deepEqual(profileIds(radio),['skydio-smodbv3s-module']);
+ assert.equal(radio.sections.compute.status,'not-established');
+ assert.match(text(radio.sections.software),/P2GoldenSPC_ver1.1.0/);
+ assert.match(text(radio.sections.software),/separate configuration/);
+ assert.deepEqual(profileIds(equipment('2ATQRSMODBV3')),['skydio-smodbv3-module']);
+ const aircraft=equipment('2ATQRSDRC2V1');
+ assert.match(text(aircraft.sections.compute),/Jetson TX2/);
+ assert.doesNotMatch(text(aircraft.sections.compute),/QCS6490/);
+ const beacon=equipment('2ATQRSBEC1V1');
+ assert.equal(beacon.sections.compute.status,'not-established');
+ assert.match(text(beacon.sections.sensors),/GPS/);
+ assert.doesNotMatch(text(beacon.sections.power),/1460|2600|mAh/);
+ const retail=system('Skydio','Skydio Controller 2');
+ assert.deepEqual(profileIds(retail),['skydio-controller2-published-system']);
+ assert.match(text(retail.sections.power),/9600 mAh/);
+ assert.equal(retail.sections.compute.status,'not-established');
+ assert.equal(profileIds(equipment('2ATQR-unverified')).length,0);
+ assert.equal(profileIds(system('Other manufacturer','CA110',{kind:'regulatory-equipment',fcc_id:'2ATQRCA'})).length,0);
+});
+
 test('batch 61 keeps vehicle processors, FCC modules and radio revisions separate',()=>{
  const equipment=(id)=>system('Waymo','E-band Automotive Radar Sensor',{kind:'regulatory-equipment',fcc_id:id});
  const old=equipment('2AZKT710-60000W'),next=equipment('2AZKTRADE8C');
@@ -184,7 +213,7 @@ test('equipment profiles require exact FCC identity and cannot become host BOMs'
  assert.doesNotMatch(text(a.sections.identification),/Manufacturer MAC allocations/);
  assert.equal(profileIds(module('Nuro','2ATQRA40')).length,0);
  assert.equal(profileIds(module('Skydio','2ATQRA40S')).length,0);
- assert.equal(profileIds(module('Skydio','2ATQRSMODBV3S')).length,0);
+ assert.deepEqual(profileIds(module('Skydio','2ATQRSMODBV3S')),['skydio-smodbv3s-module']);
  assert.equal(profileIds(system('Skydio','Telit FN990A40 radio module')).length,0);
  assert.equal(profileIds(system('Skydio','Telit FN990A40 radio module',{fcc_id:'2ATQRA40'})).length,0);
  const radio=module('Skydio','2ATQRSMO5GV1','C78 Controller');

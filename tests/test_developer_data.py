@@ -125,7 +125,12 @@ class DeveloperDataTests(unittest.TestCase):
         self.assertEqual(relabel['scanner_signatures'],[])
         self.assertEqual(relabel['system_breakdown']['record_scope'],'regulatory-equipment')
         self.assertIn('Snapdragon X65',json.dumps(relabel['system_breakdown']['sections']['compute']))
-        self.assertEqual(equipment['2ATQRSMODBV3S']['system_breakdown']['configurations'],[])
+        smodb=equipment['2ATQRSMODBV3S']['system_breakdown']
+        self.assertEqual([r['id'] for r in smodb['configurations']],['skydio-smodbv3s-module'])
+        self.assertEqual(smodb['sections']['compute']['status'],'not-established')
+        ca=equipment['2ATQRCA']['system_breakdown']
+        self.assertIn('QCS6490',json.dumps(ca['sections']['compute']))
+        self.assertEqual(equipment['2ATQRCA']['scanner_signatures'],[])
         zipline=equipment['2BML6P2EV1-0']['system_breakdown']
         self.assertIn('Bluetooth and 5 GHz are disabled',json.dumps(zipline['sections']['radios']))
 

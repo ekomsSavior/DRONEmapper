@@ -37962,6 +37962,317 @@
       "fcc_ids": [
         "2BML6P2EV3-0"
       ]
+    },
+    {
+      "id": "skydio-ca110-controller-components",
+      "manufacturer": "Skydio",
+      "models": [
+        "CA110 controller (FCC 2ATQRCA)"
+      ],
+      "configuration": "CA110 production controller, July 2026 host SAR report. The host explicitly identifies the component modules below. Supplier specifications describe those modules; controller battery, enabled internal buses and complete sensor BOM are not disclosed by these filings.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Installed component modules",
+          "details": "Telit FN990A40 WWAN, Skydio SMODBV3S WLAN and eInfochips Aikri-64X-90AS-8-LGA / Aikri-64X-90LS-8-LGA are listed in the host report.",
+          "sources": [
+            "https://fccid.io/2ATQRCA/RF-Exposure-Info/FA572512B-Part1-SAR-v3-9539163.pdf"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Application processor and accelerators",
+          "details": "Aikri module: Qualcomm QCS6490, octa-core Kryo 670 (1 × 2.7 GHz, 3 × 2.4 GHz, 4 × 1.9 GHz); Adreno 643 GPU, Hexagon DSP/tensor accelerator and Spectra 570L ISP.",
+          "sources": [
+            "https://www.einfochips.com/wp-content/uploads/2025/07/Aikri-QCS6490-Aikri-64X-90AS-8-LGA.pdf",
+            "https://fccid.io/2ATQRCA/RF-Exposure-Info/FA572512B-Part1-SAR-v3-9539163.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Compute-module memory",
+          "details": "Supplier specifies 8 GB LPDDR5 and 128 GB UFS 3.1 on the named Aikri LGA module. Available application storage is not specified.",
+          "sources": [
+            "https://www.einfochips.com/wp-content/uploads/2025/07/Aikri-QCS6490-Aikri-64X-90AS-8-LGA.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Radio components and protocols",
+          "details": "Aikri uses WCN6856 Wi-Fi 6E / Bluetooth 5.2. Host testing lists Wi-Fi 2.4/5/6 GHz, Bluetooth BR/EDR/LE, LTE and sub-6 GHz 5G NR; regional channels and enabled carriers vary.",
+          "sources": [
+            "https://www.einfochips.com/wp-content/uploads/2025/07/Aikri-QCS6490-Aikri-64X-90AS-8-LGA.pdf",
+            "https://fccid.io/2ATQRCA/RF-Exposure-Info/FA572512B-Part1-SAR-v3-9539163.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Compute-module supply",
+          "details": "Aikri LGA module input: 3.6 V. This is not the controller battery voltage or a whole-controller consumption rating.",
+          "sources": [
+            "https://www.einfochips.com/wp-content/uploads/2025/07/Aikri-QCS6490-Aikri-64X-90AS-8-LGA.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Tested module software variants",
+          "details": "Component test lists Android QCS6490_AND.13.0.0.EI.1.3.4 and Linux QCS6490_QLI.1.2.0.EI.1.1.0. It does not prove both operating systems are user-selectable on the controller.",
+          "sources": [
+            "https://fccid.io/2ATQRCA/Test-Report/EED32R81335401-Aikri6490-BLE-9539516.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2ATQRCA"
+      ]
+    },
+    {
+      "id": "skydio-smodbv3s-module",
+      "manufacturer": "Skydio",
+      "models": [
+        "SkydioLink SMODBV3S radio module"
+      ],
+      "configuration": "Exact FCC 2ATQRSMODBV3S. November 2023 change-ID and subsequent host/firmware configurations are distinguished. Radio chip, processor, RAM, supply voltage and sensor BOM remain undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "identification",
+          "component": "Original module lineage",
+          "details": "Manufacturer’s November 2023 letter says the newly identified module is electrically identical to original SMODBV3. Later permissive changes require their own configuration evidence.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV3S/Letter/2ATQRSMODBV3S-Change-FCC-ID-6935762.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "December 2024 radio configuration",
+          "details": "802.11a/b/g/n/ac/ax with up to 80 MHz channels. Listed bands: 2400–2483.5, 5150–5250, 5250–5350, 5470–5725 and 5725–5850 MHz.",
+          "sources": [
+            "https://fccid.io/m/8cc2584b51a46d45ab00e031c930b5938e9f895ddfc9fa6f14e464d60aad513d.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Antenna options",
+          "details": "u.FL-connected dipoles: low-gain 360-205976-000 and high-gain 360-208447-000. High-gain option reaches 4.62 dBi at 2.4 GHz and 7.76 dBi at 5 GHz; values vary by antenna and band.",
+          "sources": [
+            "https://fccid.io/m/8cc2584b51a46d45ab00e031c930b5938e9f895ddfc9fa6f14e464d60aad513d.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Tested hardware and firmware",
+          "details": "December 2024 report: hardware 360-207231-000-3, firmware P2GoldenSPC_ver1.1.0. These identify a tested radio configuration, not a public discovery protocol.",
+          "sources": [
+            "https://fccid.io/m/8cc2584b51a46d45ab00e031c930b5938e9f895ddfc9fa6f14e464d60aad513d.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "SC18V1 controller integration",
+          "details": "January 2024 manufacturer letter integrates this module in SC18V1 and references Samsung A3LSMS916B for simultaneous RF evaluation. Phone specifications are not attributed to the radio module.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV3S/Letter/2ATQRSMODBV3S-cvrltr-FCC-Permissive-Change-r1-7098547.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "SC18V1 radio constraint",
+          "details": "The January 2024 host integration uses firmware 31.1.69 with a hard-coded maximum 30% duty cycle. This is a separate configuration from the December 2024 radio test.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV3S/Letter/2ATQRSMODBV3S-cvrltr-FCC-Permissive-Change-r1-7098547.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2ATQRSMODBV3S"
+      ]
+    },
+    {
+      "id": "skydio-sbec1v1-original-beacon",
+      "manufacturer": "Skydio",
+      "models": [
+        "SBEC1V1 Beacon (2019 FCC configuration)"
+      ],
+      "configuration": "Original SBEC1V1, FCC 2ATQRSBEC1V1, 2019 manufacturer guide and radio testing. Not Beacon+. CPU, RAM, storage and battery capacity are not identified in these documents.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Wi-Fi radio",
+          "details": "2019 SAR report lists 2412–2462, 5150–5250 and 5745–5825 MHz; 802.11b/g/n20 at 2.4 GHz and a/n20 at 5 GHz. Channels remain subject to the applicable grant.",
+          "sources": [
+            "https://fccid.io/2ATQRSBEC1V1/RF-Exposure-Info/SAR-Test-Report-4565148.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Internal antennas",
+          "details": "PIFA antenna system; report distinguishes high-power antenna operation and a low-power antenna. Conducted tune-up limits: 22 dBm at 2.4 GHz and 20 dBm at 5 GHz for high-power paths.",
+          "sources": [
+            "https://fccid.io/2ATQRSBEC1V1/RF-Exposure-Info/SAR-Test-Report-4565148.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning",
+          "details": "GPS supplies user position for following; the guide requires a strong GPS fix before launch. The GNSS receiver part number is not disclosed.",
+          "sources": [
+            "https://fccid.io/2ATQRSBEC1V1/User-Manual/Users-Manual-4565152.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging",
+          "details": "Internal battery charges through USB-C using the Skydio 2 power adapter; charging state appears on the Beacon screen.",
+          "sources": [
+            "https://fccid.io/2ATQRSBEC1V1/User-Manual/Users-Manual-4565152.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Pairing and phone connection",
+          "details": "USB-C pairs the Beacon to one Skydio 2 at a time. A phone can join the Beacon Wi-Fi for app control and live viewing.",
+          "sources": [
+            "https://fccid.io/2ATQRSBEC1V1/User-Manual/Users-Manual-4565152.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Firmware distribution",
+          "details": "Beacon checks for software updates when connected to Skydio 2 and applies available updates before reconnecting.",
+          "sources": [
+            "https://fccid.io/2ATQRSBEC1V1/User-Manual/Users-Manual-4565152.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2ATQRSBEC1V1"
+      ]
+    },
+    {
+      "id": "skydio-sdrc2v1-2019-aircraft",
+      "manufacturer": "Skydio",
+      "models": [
+        "SDRC2V1 Skydio 2 aircraft (2019)"
+      ],
+      "configuration": "Original Skydio 2 / FCC 2ATQRSDRC2V1. Its FCC manual establishes aircraft identity; NVIDIA’s October 2019 launch description supplies the autonomy processor. Later Skydio 2+ hardware is not substituted; this source set does not establish RAM capacity.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Autonomy computer",
+          "details": "NVIDIA Jetson TX2 with 256 GPU cores processes navigation imagery and runs the autonomous tracking system.",
+          "sources": [
+            "https://developer.nvidia.com/blog/skydio-2-jetson-tx2-drone/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Visual navigation",
+          "details": "Six 4K cameras support the autonomy system. The cited launch description does not identify their individual sensor part numbers.",
+          "sources": [
+            "https://developer.nvidia.com/blog/skydio-2-jetson-tx2-drone/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Aircraft link",
+          "details": "FCC report identifies 2.4 and 5 GHz Wi-Fi communication with a phone, Skydio Beacon or controller. Shared Wi-Fi bands cannot uniquely identify this model.",
+          "sources": [
+            "https://fccid.io/2ATQRSDRC2V1/Test-Report/Test-Report-4529068.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Video storage",
+          "details": "Removable SD card stores captured video. Neither installed card capacity nor onboard RAM is specified in this FCC report.",
+          "sources": [
+            "https://fccid.io/2ATQRSDRC2V1/Test-Report/Test-Report-4529068.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and charger",
+          "details": "Skydio Li-Po battery charges through the aircraft USB-C port using the supplied 65 W AC adapter; the user manual describes magnetic battery retention.",
+          "sources": [
+            "https://fccid.io/2ATQRSDRC2V1/Test-Report/Test-Report-4529068.pdf",
+            "https://fccid.io/2ATQRSDRC2V1/User-Manual/Users-Manual-4529121.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground transfer and propulsion",
+          "details": "Four-motor aircraft. When landed, USB-C connects to a computer for video transfer; this is separate from flight-mode camera and navigation processing.",
+          "sources": [
+            "https://fccid.io/2ATQRSDRC2V1/Test-Report/Test-Report-4529068.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Phone application",
+          "details": "Skydio 2 app connects to the aircraft Wi-Fi for setup, flight controls and software updates.",
+          "sources": [
+            "https://fccid.io/2ATQRSDRC2V1/User-Manual/Users-Manual-4529121.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2ATQRSDRC2V1"
+      ]
+    },
+    {
+      "id": "skydio-controller2-published-system",
+      "manufacturer": "Skydio",
+      "models": [
+        "Controller 2 (published technical specification)",
+        "Skydio Controller 2"
+      ],
+      "configuration": "Current Controller 2 product specification. Connect SL, 5G and MH are configuration-dependent; these bands are not all assumed present simultaneously. No CPU or RAM part is stated on this product page.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "memory",
+          "component": "Internal storage",
+          "details": "128 GB internal storage; manufacturer lists encrypted disk storage.",
+          "sources": [
+            "https://www.skydio.com/products/controller-2/technical-specs"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Display and ports",
+          "details": "7-inch 1920 × 1200 TFT LCD, 60 Hz, sustained 2000-nit brightness; HDMI, USB-C and nano-SIM slot.",
+          "sources": [
+            "https://www.skydio.com/products/controller-2/technical-specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and endurance",
+          "details": "9600 mAh battery; approximately 5 h 45 min operation and 1 h 25 min charging from 20% to 90%. Battery voltage and chemistry are not stated.",
+          "sources": [
+            "https://www.skydio.com/products/controller-2/technical-specs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Configuration-dependent links",
+          "details": "Wi-Fi 2.4/5/6 GHz and Bluetooth 2402–2480 MHz. Connect SL uses 2.4/5 GHz; Connect 5G is cellular; MH supports listed bands from 1.79 to 2.5 GHz. Configuration and region govern availability.",
+          "sources": [
+            "https://www.skydio.com/products/controller-2/technical-specs"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Platform security",
+          "details": "Manufacturer lists AES-256 data-link encryption, password protection, root of trust, trusted boot and secure updates.",
+          "sources": [
+            "https://www.skydio.com/products/controller-2/technical-specs"
+          ]
+        }
+      ]
     }
   ]
 }
