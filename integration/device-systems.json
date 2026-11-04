@@ -28217,6 +28217,850 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ga-mq1b-2015",
+      "manufacturer": "General Atomics",
+      "models": [
+        "MQ-1B Predator (USAF September 2015)",
+        "General Atomics MQ-1 Predator"
+      ],
+      "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Rotax 914F",
+          "details": "Four-cylinder piston engine rated at 115 hp.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Multi-Spectral Targeting System",
+          "details": "Infrared, daylight color/monochrome and image-intensified television sensors, with laser equipment; individual or fused video streams.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Remote aircraft links",
+          "details": "Direct line-of-sight link and satellite link for beyond-line-of-sight control. Satellite frequencies and modem models unspecified in this source.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Air and ground system",
+          "details": "Aircraft, ground-control station and Predator Primary Satellite Link form the system. Published payload 204 kg; remote pilot and sensor operator.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-predatorxp-2015",
+      "manufacturer": "General Atomics",
+      "models": [
+        "General Atomics Predator XP"
+      ],
+      "configuration": "Manufacturer Predator XP datasheet, 2015. CPU, RAM, storage and RF chipset undisclosed. Shared link bands alone cannot identify a nearby aircraft.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight control",
+          "details": "Three redundant flight-control paths and solid-state digital avionics; processor part numbers unpublished.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/PredatorXP021915.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Propulsion and generation",
+          "details": "Modified Rotax 914 Turbo; redundant electrical supply rated at 4.8 kW.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/PredatorXP021915.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and mission payloads",
+          "details": "GPS/inertial navigation, EO/IR imaging and Lynx multimode radar.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/PredatorXP021915.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Control and voice links",
+          "details": "C-band line-of-sight control, Ku-band satellite control and UHF/VHF voice; communications-relay capability.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/PredatorXP021915.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Airframe and controls",
+          "details": "Redundant control surfaces; 147 kg internal payload capacity.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/PredatorXP021915.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight automation",
+          "details": "Remotely piloted or autonomous operation with automatic takeoff and landing.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/PredatorXP021915.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-mq9a-2015",
+      "manufacturer": "General Atomics",
+      "models": [
+        "MQ-9A Reaper (2015 specification)",
+        "General Atomics MQ-9A Reaper",
+        "MQ-9 Reaper"
+      ],
+      "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight-control architecture",
+          "details": "Triple-redundant flight controls; redundant control surfaces.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Honeywell turboprop",
+          "details": "TPE331-10 turboprop. Datasheet distinguishes 11 kW supply from the 45 kVA Block 5 option.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Surveillance payloads",
+          "details": "MTS-B electro-optical/infrared system and Lynx multimode radar; maritime radar and AIS are configuration options.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Air-ground links",
+          "details": "C-band line-of-sight and Ku-band satellite links. These shared bands are not unique radio identifiers.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload integration",
+          "details": "Seven external mounting stations and MIL-STD-1760 payload interface.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-mq9a-block5-2025",
+      "manufacturer": "General Atomics",
+      "models": [
+        "General Atomics MQ-9A Block 5"
+      ],
+      "configuration": "September 2025 Block 5 datasheet. CPU models, RAM and storage remain unpublished; options are not universal installed equipment.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight and payload computers",
+          "details": "Triple-redundant flight-control system plus a separate Mission Control Module for payload computing; chip models unspecified.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/2509_MQ-9A-BLK-5_E.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Engine and electrical supply",
+          "details": "Honeywell TPE331-10; 45 kVA primary generation with 4 kW backup.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/2509_MQ-9A-BLK-5_E.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging and optional radar",
+          "details": "HD EO/IR payload. SAR/MTI, maritime radar, AIS and wide-area imaging are listed options.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/2509_MQ-9A-BLK-5_E.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "ARC-210 and satellite links",
+          "details": "Two ARC-210 UHF/VHF radios with wingtip antennas; line-of-sight and beyond-line-of-sight satellite communications. Optional Link 16.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/2509_MQ-9A-BLK-5_E.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload stations",
+          "details": "Seven external stations; the optional ER Big Wing configuration has nine. Internal payload capacity 386 kg.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/2509_MQ-9A-BLK-5_E.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Optional flight equipment",
+          "details": "Automatic takeoff/landing and de-icing are listed configuration options.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/2509_MQ-9A-BLK-5_E.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-mq9b-skyguardian-2025",
+      "manufacturer": "General Atomics",
+      "models": [
+        "General Atomics MQ-9B SkyGuardian"
+      ],
+      "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Certifiable avionics",
+          "details": "Hardware/software development follows DO-254 and DO-178 processes; specific CPU and controller boards are not identified.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Engine and electrical supply",
+          "details": "Honeywell TPE331-10; 45 kVA primary supply and 2 kW backup.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Mission and airspace sensing",
+          "details": "HD EO/IR, Lynx radar and detect-and-avoid architecture using TCAS, ADS-B and Due Regard Radar.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Voice and satellite links",
+          "details": "Dual VHF/UHF radios and dual satellite links for beyond-line-of-sight control. Optional relay and Link 16.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload integration",
+          "details": "Nine external stations; 363 kg internal and 1,814 kg external capacity in this revision. Maritime/AIS and other mission payloads are optional.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Automated flight",
+          "details": "Automatic takeoff and landing; designed for operation in shared airspace.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-mq9b-seaguardian-2025",
+      "manufacturer": "General Atomics",
+      "models": [
+        "General Atomics MQ-9B SeaGuardian"
+      ],
+      "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Certifiable architecture",
+          "details": "DO-178 software and DO-254 hardware development; processor part numbers undisclosed.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Propulsion and generation",
+          "details": "Honeywell TPE331-10; 45 kVA main supply with 2 kW backup.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Maritime and collision-avoidance suite",
+          "details": "360-degree maritime radar, Lynx, HD EO/IR and AIS; TCAS, ADS-B and Due Regard Radar support detect-and-avoid.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Communication system",
+          "details": "Dual VHF/UHF radios and dual satellite links. Link 16 and communications relay are options.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload mounts",
+          "details": "Nine external stations; 363 kg internal and 2,155 kg external capacity. Sonobuoy/ASW and airborne-early-warning equipment are optional configurations.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Automatic takeoff and landing",
+          "details": "Automatic flight launch and recovery; mission equipment varies by operator.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-protector-rg1",
+      "manufacturer": "General Atomics",
+      "models": [
+        "General Atomics Protector RG Mk1"
+      ],
+      "configuration": "RAF Protector RG Mk1 configuration, based on MQ-9B. Manufacturer reported UK Military Type Certification in May 2025. CPU, RAM, exact modem and electrical-generator configuration are not established here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Honeywell engine",
+          "details": "TPE331-10T turboprop, rated at 900 shaft horsepower in the RAF aircraft specification.",
+          "sources": [
+            "https://www.raf.mod.uk/aircraft/current-aircraft/protector-rg-mk-1-mq-9b11/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "RAF sensor suite",
+          "details": "AN/DAS-4 multispectral targeting system and synthetic-aperture radar with ground-moving-target indication.",
+          "sources": [
+            "https://www.raf.mod.uk/aircraft/current-aircraft/protector-rg-mk-1-mq-9b11/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Remote crew",
+          "details": "Remote pilot, sensor operator and mission intelligence coordinator. RAF-specific configuration, not a universal MQ-9B bill of materials.",
+          "sources": [
+            "https://www.raf.mod.uk/aircraft/current-aircraft/protector-rg-mk-1-mq-9b11/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Certified flight system",
+          "details": "UK Military Type Certificate announced May 2025 for this remotely piloted system.",
+          "sources": [
+            "https://www.ga-asi.com/uk-certifies-protector-as-first-of-its-kind-remotely-piloted-aircraft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-gray-eagle-2014",
+      "manufacturer": "General Atomics",
+      "models": [
+        "MQ-1C Gray Eagle (April 2014 specification)",
+        "General Atomics MQ-1C Gray Eagle"
+      ],
+      "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight controls",
+          "details": "Triple-redundant flight-control system and redundant control surfaces.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Thielert engine and generation",
+          "details": "165 hp heavy-fuel engine; redundant 9 kW electrical system.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Mission equipment",
+          "details": "EO/IR imaging and synthetic-aperture radar with moving-target indication.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "TCDL and satellite links",
+          "details": "TCDL direct/relay links and Ku-band beyond-line-of-sight satellite communications.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground-control compatibility",
+          "details": "Army One System Ground Station or GA-ASI ground station; 261 kg internal and 227 kg external payload capacity.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight automation",
+          "details": "Redundant automatic takeoff/landing and wing/tail de-icing.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-gray-eagle-er-2016",
+      "manufacturer": "General Atomics",
+      "models": [
+        "Gray Eagle ER (2016 production-representative)",
+        "General Atomics Gray Eagle ER"
+      ],
+      "configuration": "Production-representative flight-test configuration, December 2016. Distinct from the 200 hp modernized ER. Processor, RAM, sensor models and radio specifications are not supplied in this announcement.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "HFE-180",
+          "details": "180 hp heavy-fuel engine with revised induction and cooling, supporting increased fuel capacity.",
+          "sources": [
+            "https://www.ga-asi.com/ga-asi-starts-flight-testing-for-production-representative-gray-eagle-extended-range",
+            "https://www.ga-asi.com/ga-asi-performs-first-flight-of-new-heavy-fuel-engine-for-gray-eagle-er"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Revised aircraft systems",
+          "details": "Straight-belly fuselage and centerline mount supporting an optional fuel pod; revised internal fuel arrangement.",
+          "sources": [
+            "https://www.ga-asi.com/ga-asi-starts-flight-testing-for-production-representative-gray-eagle-extended-range"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-gray-eagle-er-modernized-2025",
+      "manufacturer": "General Atomics",
+      "models": [
+        "Modernized Gray Eagle ER (2025)",
+        "General Atomics Gray Eagle ER"
+      ],
+      "configuration": "Modernized ER datasheet, September 2025. These upgrades must not be assumed on older ER aircraft. CPU, RAM and specific RF modem models undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight controls",
+          "details": "Triple-redundant flight-control system; dual-redundant aileron, flap and ruddervator controls.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2509_MODERNIZED_GRAY_EAGLE_ER_E.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "HFE 2.0",
+          "details": "200 hp heavy-fuel engine and 28 V DC / 9 kW electrical system.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2509_MODERNIZED_GRAY_EAGLE_ER_E.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "EagleEye and EO/IR",
+          "details": "EagleEye multimission SAR with ground/maritime moving-target functions, plus EO/IR payload.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2509_MODERNIZED_GRAY_EAGLE_ER_E.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Control and voice links",
+          "details": "TCDL line-of-sight, Ku-band satellite link and three UHF/VHF SINCGARS radios using winglet antennas.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2509_MODERNIZED_GRAY_EAGLE_ER_E.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground stations and payload",
+          "details": "Army Universal GCS or laptop-based Expeditionary GCS; 181 kg internal payload, with wing and centerline stations.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2509_MODERNIZED_GRAY_EAGLE_ER_E.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight automation",
+          "details": "Automatic takeoff/landing and wing/tail de-icing.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2509_MODERNIZED_GRAY_EAGLE_ER_E.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-gray-eagle-25m-2026",
+      "manufacturer": "General Atomics",
+      "models": [
+        "General Atomics Gray Eagle 25M"
+      ],
+      "configuration": "April 2026 specification and January 2024 first-flight announcement. Onboard CPU/RAM and modem SKUs undisclosed. Laptop ground control is not an onboard computer specification.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Redundant flight controls",
+          "details": "Triple-redundant flight-control system and dual control-surface paths.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2604_GRAY_EAGLE_25M_E1.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "HFE 2.0 and generation",
+          "details": "200 hp heavy-fuel engine; 28 V DC / 9 kW electrical supply. Initial aircraft introduced a revised gearbox and generator.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2604_GRAY_EAGLE_25M_E1.pdf",
+            "https://www.ga-asi.com/ga-asi-s-gray-eagle-25m-makes-its-first-flight"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "EagleEye radar",
+          "details": "EagleEye multimission SAR and EO/IR equipment; ground, maritime and moving-target functions.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2604_GRAY_EAGLE_25M_E1.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "TCDL, SATCOM and voice",
+          "details": "TCDL line-of-sight link, Ku-band satellite control and three UHF/VHF SINCGARS radios with winglet antennas.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2604_GRAY_EAGLE_25M_E1.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground-control and payload system",
+          "details": "Universal GCS or laptop Expeditionary GCS. Internal payload capacity 181 kg; external wing and centerline mounts.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2604_GRAY_EAGLE_25M_E1.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Modernized architecture",
+          "details": "Open architecture plus automatic takeoff/landing; de-icing for wings and tail.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2604_GRAY_EAGLE_25M_E1.pdf",
+            "https://www.ga-asi.com/ga-asi-s-gray-eagle-25m-makes-its-first-flight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-mojave-demonstrator",
+      "manufacturer": "General Atomics",
+      "models": [
+        "General Atomics Mojave"
+      ],
+      "configuration": "Evolving Mojave demonstrator: original manufacturer sheet and August 2023 trial. Earlier sheet describes GE-ER-derived avionics; the 2023 test used GE-25M-derived modernized avionics. CPU and RAM are not published.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Avionics lineage",
+          "details": "Manufacturer identifies Gray Eagle-derived avionics, with a modernized GE-25M configuration during the 2023 demonstration; no shared chip model is established.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Mojave_Data_Sheet_120721.pdf",
+            "https://www.ga-asi.com/ga-asi-mojave-stol-uas-completes-first-dirt-operation"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Rolls-Royce M250",
+          "details": "450 shaft-horsepower turboprop in the published demonstrator configuration.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Mojave_Data_Sheet_120721.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "EO/IR and radar",
+          "details": "Nose-mounted HD EO/IR and EagleEye SAR payload capability.",
+          "sources": [
+            "https://www.ga-asi.com/going-where-no-uas-has-gone-before-introducing-mojave"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Air-ground links",
+          "details": "Line-of-sight and satellite beyond-line-of-sight data links; no unique broadcast pattern or modem chip identified.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Mojave_Data_Sheet_120721.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "STOL airframe",
+          "details": "High-lift wings and rugged landing gear; laptop-based ground station.",
+          "sources": [
+            "https://www.ga-asi.com/ga-asi-mojave-stol-uas-completes-first-dirt-operation"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Open control architecture",
+          "details": "Manufacturer describes a modular open-systems control approach for the demonstrator.",
+          "sources": [
+            "https://www.ga-asi.com/ga-asi-mojave-stol-uas-completes-first-dirt-operation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-avenger-2015",
+      "manufacturer": "General Atomics",
+      "models": [
+        "General Atomics Avenger"
+      ],
+      "configuration": "Predator C Avenger manufacturer sheet, 2015. Separate from the later ER. Onboard CPU, RAM, storage and RF frequencies unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Avionics architecture",
+          "details": "Triply redundant avionics and dual flight-control paths; processor components not named.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Predator_C021915.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "PW545B and generation",
+          "details": "Pratt & Whitney PW545B turbofan and redundant 20 kW electrical system.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Predator_C021915.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Mission payloads",
+          "details": "Retractable EO/IR gimbal and Lynx multimode radar; additional electronic-sensing or relay payloads are configuration-dependent.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Predator_C021915.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Airframe systems",
+          "details": "Internal payload bay, six external stations and hybrid electro/mechanical anti-lock brakes; compatible with GA-ASI ground-control stations.",
+          "sources": [
+            "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Predator_C021915.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-avenger-er-2026",
+      "manufacturer": "General Atomics",
+      "models": [
+        "General Atomics Avenger ER"
+      ],
+      "configuration": "June 2026 Avenger ER datasheet. CPU/GPU, RAM and radio hardware undisclosed. Listed payload capabilities do not prove simultaneous installation.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Redundant avionics",
+          "details": "Triple-redundant avionics with dual flight-control paths; individual processors not published.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2606_AVENGER_ER_E.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "PW545B and electrical system",
+          "details": "Pratt & Whitney PW545B turbofan; redundant 21 kW generation.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2606_AVENGER_ER_E.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Published payload options",
+          "details": "HD EO/IR, multispectral targeting, MS-177 sensor and Due Regard Radar.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2606_AVENGER_ER_E.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "ER airframe",
+          "details": "23 m wingspan, internal bays and six external stations; GA-ASI ground-station compatibility and electro/mechanical anti-lock brakes.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2606_AVENGER_ER_E.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mission autonomy",
+          "details": "A-GRA-compliant mission autonomy; demonstrations include collaborative aircraft operation and dynamic route replanning.",
+          "sources": [
+            "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2606_AVENGER_ER_E.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-cgcs",
+      "manufacturer": "General Atomics",
+      "models": [
+        "Certifiable Ground Control Station (CGCS)"
+      ],
+      "configuration": "Ground equipment for MQ-9B; these computers are not onboard SkyGuardian/SeaGuardian processors. The exact installed FORCE2C configuration and memory capacity are not identified by GA-ASI.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Ground flight computer",
+          "details": "Abaco FORCE2C and Collins Pro Line Fusion. Current FORCE2C supplier specification lists QorIQ T2081 at 1.8 GHz; this is component-family capability, not confirmation of the chip fitted to every CGCS.",
+          "sources": [
+            "https://www.ga-asi.com/ground-control-stations/certifiable-ground-control-station",
+            "https://www.abaco.com/force2c"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "FORCE2C capability",
+          "details": "Supplier maximum is 4 GB DDR3; installed CGCS capacity is undisclosed.",
+          "sources": [
+            "https://www.abaco.com/force2c"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator and component interfaces",
+          "details": "Flight-critical and mission functions are separated. FORCE2C offers ARINC 429, MIL-STD-1553, Gigabit Ethernet, USB and RS-232/422 interfaces; exact CGCS wiring unspecified.",
+          "sources": [
+            "https://www.ga-asi.com/ground-control-stations/certifiable-ground-control-station",
+            "https://www.abaco.com/force2c"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "DAA display subsystem selection",
+          "details": "GA-ASI selected ScioTeq PU-5200 and RDU4047 equipment for the ground-station detect-and-avoid display program in 2023.",
+          "sources": [
+            "https://www.ga-asi.com/ga-asi-selects-scioteq-to-support-detect-and-avoid-program"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Certifiable control software",
+          "details": "GA-ASI Design Assurance Level software supports flight-critical control and payload operation.",
+          "sources": [
+            "https://www.ga-asi.com/ground-control-stations/certifiable-ground-control-station"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-egcs-2025",
+      "manufacturer": "General Atomics",
+      "models": [
+        "Expeditionary Ground Control Station (EGCS)"
+      ],
+      "configuration": "Manufacturer sheet marked October 2025 at a September-named URL. Ground system for modernized Gray Eagle ER, Gray Eagle STOL and Eaglet. CPU SKU, RAM, storage and radio module part numbers vary or are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Configurable ground hardware",
+          "details": "Desktop, laptop and/or mission-server implementation; no specific CPU brand or model established.",
+          "sources": [
+            "https://www.ga-asi.com/ground-control-stations/img/2509_EGCS_E.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Power interruption support",
+          "details": "Published safety-of-flight hold-up capability of 30 minutes; battery chemistry and capacity unspecified.",
+          "sources": [
+            "https://www.ga-asi.com/ground-control-stations/img/2509_EGCS_E.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Supported data links",
+          "details": "Portable Ku-band line-of-sight, Ka/Ku beyond-line-of-sight, proliferated-LEO and mesh links.",
+          "sources": [
+            "https://www.ga-asi.com/ground-control-stations/img/2509_EGCS_E.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Interoperability standards",
+          "details": "STANAG 4586, STANAG 4609 and MISB 0601 support; configurable single- or dual-operator arrangement.",
+          "sources": [
+            "https://www.ga-asi.com/ground-control-stations/img/2509_EGCS_E.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Containerized control applications",
+          "details": "Windows or Linux, FACE 3.1 and modular open-systems design; cloud-capable deployment and optional tactical-edge applications.",
+          "sources": [
+            "https://www.ga-asi.com/ground-control-stations/img/2509_EGCS_E.pdf"
+          ]
+        }
+      ]
     }
   ]
 }

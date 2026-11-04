@@ -1358,3 +1358,44 @@ test('batch 44 keeps published components separate from undisclosed chips and un
  assert.match(text(yara.configurations),/prototype estimate of 6.8/);
  assert.doesNotMatch(text(system('Yape','YAPE').sections.interfaces),/J1939|steering actuator/);
 });
+
+test('batch 45 keeps General Atomics engine and electrical revisions separate',()=>{
+ const base=system('General Atomics','General Atomics MQ-1C Gray Eagle');
+ const early=system('General Atomics','Gray Eagle ER (2016 production-representative)');
+ const modern=system('General Atomics','Modernized Gray Eagle ER (2025)');
+ const ge25=system('General Atomics','General Atomics Gray Eagle 25M');
+ assert.match(text(base.sections.power),/Thielert|165 hp/);
+ assert.match(text(early.sections.power),/180 hp/);
+ assert.match(text(modern.sections.power),/200 hp.*28 V DC/);
+ assert.match(text(ge25.sections.radios),/TCDL.*Ku-band.*SINCGARS/);
+ assert.equal(profileIds(system('General Atomics','General Atomics Gray Eagle ER')).length,2);
+ const av=system('General Atomics','General Atomics Avenger'),er=system('General Atomics','General Atomics Avenger ER');
+ assert.match(text(av.sections.power),/20 kW/);
+ assert.match(text(er.sections.power),/21 kW/);
+ assert.equal(av.sections.radios.status,'reference-only');
+ assert.match(text(av.sections.radios),/Public radio protocol not documented/);
+ assert.equal(er.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('General Atomics','Unknown model')).length,0);
+ assert.equal(profileIds(system('General Atomics','General Atomics MQ-9 family')).length,0);
+});
+
+test('batch 45 does not turn ground computers or optional payloads into aircraft BOMs',()=>{
+ const station=system('General Atomics','Certifiable Ground Control Station (CGCS)');
+ const sky=system('General Atomics','General Atomics MQ-9B SkyGuardian');
+ const sea=system('General Atomics','General Atomics MQ-9B SeaGuardian');
+ assert.match(text(station.sections.compute),/FORCE2C.*T2081/);
+ assert.match(text(station.sections.memory),/installed CGCS capacity is undisclosed/);
+ assert.match(text(station.sections.compute),/PU-5200.*RDU4047/);
+ assert.doesNotMatch(text(sky.sections.compute.facts.map(f=>f.details)),/FORCE2C|T2081|PU-5200/);
+ assert.equal(sky.sections.memory.status,'not-established');
+ assert.match(text(sky.sections.interfaces),/1,814 kg/);
+ assert.match(text(sea.sections.interfaces),/2,155 kg.*optional/);
+ const b5=system('General Atomics','General Atomics MQ-9A Block 5');
+ assert.match(text(b5.sections.compute),/Mission Control Module/);
+ assert.match(text(b5.sections.radios),/Two ARC-210/);
+ assert.match(text(b5.sections.interfaces),/optional ER Big Wing/);
+ const raf=system('General Atomics','General Atomics Protector RG Mk1');
+ assert.match(text(raf.sections.sensors),/AN\/DAS-4/);
+ assert.equal(raf.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('General Atomics','General Atomics MQ-9A Block 5',{kind:'regulatory-equipment'})).length,0);
+});
