@@ -27634,13 +27634,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "blueflite-cobalt-platform",
+            "configuration": "Cobalt 461 identity is supported by Blueflite’s June 2026 release. Hardware/software facts are manufacturer-published Cobalt/common-platform architecture, not an exact 461 revision BOM. CPU, memory, modem, sensor parts and battery capacity are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "bluePilot and blueBrain",
+                "details": "Onboard autopilot paired with the manufacturer’s machine-learning flight-control system; semiconductor implementation unpublished.",
+                "sources": [
+                  "https://www.blueflite.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "blueflite-cobalt-platform",
+                "configuration": "Cobalt 461 identity is supported by Blueflite’s June 2026 release. Hardware/software facts are manufacturer-published Cobalt/common-platform architecture, not an exact 461 revision BOM. CPU, memory, modem, sensor parts and battery capacity are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -27659,18 +27678,59 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric vectored-thrust platform",
+                "details": "Battery-monitored electric drive. Manufacturer’s CEO describes Cobalt as wingless with four paired-propeller tilting mounts; Slate’s wings are not assigned to Cobalt.",
+                "sources": [
+                  "https://www.blueflite.com/",
+                  "https://www.blueflite.com/almost-twins/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "blueflite-cobalt-platform",
+                "configuration": "Cobalt 461 identity is supported by Blueflite’s June 2026 release. Hardware/software facts are manufacturer-published Cobalt/common-platform architecture, not an exact 461 revision BOM. CPU, memory, modem, sensor parts and battery capacity are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cargo platform",
+                "details": "Carbon-composite modular airframe with internal cargo compartment. The 2026 Cobalt 461 release gives maximum takeoff weight 54.98 lb.",
+                "sources": [
+                  "https://www.blueflite.com/",
+                  "https://www.blueflite.com/blueflite-added-to-faa-section-44807-approved-uas-list/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "blueflite-cobalt-platform",
+                "configuration": "Cobalt 461 identity is supported by Blueflite’s June 2026 release. Hardware/software facts are manufacturer-published Cobalt/common-platform architecture, not an exact 461 revision BOM. CPU, memory, modem, sensor parts and battery capacity are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operations and cloud layers",
+                "details": "blueControl supports planning, control and monitoring; blueDigital is a cloud productivity layer and blueDelivery is the customer ordering app. No modem or public telemetry API is established.",
+                "sources": [
+                  "https://www.blueflite.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "blueflite-cobalt-platform",
+                "configuration": "Cobalt 461 identity is supported by Blueflite’s June 2026 release. Hardware/software facts are manufacturer-published Cobalt/common-platform architecture, not an exact 461 revision BOM. CPU, memory, modem, sensor parts and battery capacity are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -27684,13 +27744,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -72998,8 +73054,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "freefly-alta-x-rid-upgrade",
+            "configuration": "Documented broadcast-module retrofit for compatible legacy Alta X aircraft. Not an Alta X flight-computer BOM or the factory Standard RID configuration. DIU Blue firmware does not enable this broadcast module. MCU, RAM and radio-chip part numbers are unpublished.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -73013,8 +73075,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Bluetooth 5 Remote ID",
+                "details": "Manufacturer lists 2.402–2.481 GHz and maximum +18 dBm transmit power; this is the module, not the aircraft command radio.",
+                "sources": [
+                  "https://docs.freeflysystems.com/products/products/alta-x/untitled-5/faa-remote-identification-rid/remote-id-broadcast-module"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-rid-upgrade",
+                "configuration": "Documented broadcast-module retrofit for compatible legacy Alta X aircraft. Not an Alta X flight-computer BOM or the factory Standard RID configuration. DIU Blue firmware does not enable this broadcast module. MCU, RAM and radio-chip part numbers are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -73023,18 +73098,57 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Broadcast-module consumption",
+                "details": "Published peak consumption approximately 379 mW; supply voltage and battery are not specified.",
+                "sources": [
+                  "https://docs.freeflysystems.com/products/products/alta-x/untitled-5/faa-remote-identification-rid/remote-id-broadcast-module"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-rid-upgrade",
+                "configuration": "Documented broadcast-module retrofit for compatible legacy Alta X aircraft. Not an Alta X flight-computer BOM or the factory Standard RID configuration. DIU Blue firmware does not enable this broadcast module. MCU, RAM and radio-chip part numbers are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Replacement IO panel",
+                "details": "Integrated broadcast module replaces the Bay 3 IO panel, using its ZPD connection and antenna cable; panel includes a USB connector.",
+                "sources": [
+                  "https://docs.freeflysystems.com/products/products/alta-x/untitled-5/faa-remote-identification-rid/remote-id-broadcast-module"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-rid-upgrade",
+                "configuration": "Documented broadcast-module retrofit for compatible legacy Alta X aircraft. Not an Alta X flight-computer BOM or the factory Standard RID configuration. DIU Blue firmware does not enable this broadcast module. MCU, RAM and radio-chip part numbers are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Aircraft firmware dependency",
+                "details": "Legacy retrofit requires Alta X PX4 v1.4 or newer; manufacturer distinguishes broadcast upgrade from factory Standard RID and excludes DIU Blue packages.",
+                "sources": [
+                  "https://docs.freeflysystems.com/products/products/alta-x/untitled-5/faa-remote-identification-rid"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "freefly-alta-x-rid-upgrade",
+                "configuration": "Documented broadcast-module retrofit for compatible legacy Alta X aircraft. Not an Alta X flight-computer BOM or the factory Standard RID configuration. DIU Blue firmware does not enable this broadcast module. MCU, RAM and radio-chip part numbers are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -73068,11 +73182,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "sensors"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -106057,8 +106167,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "neros-archer5-reference-2026",
+            "configuration": "Manufacturer’s Archer 5-inch platform reference for the broad Neros FPV Drone inventory entry; it does not identify every Neros aircraft as this variant. Covers the airframe and observation interfaces only. CPU, RAM, flight-controller chip, battery capacity and exact RF bands are unpublished.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -106072,13 +106188,39 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Video and control links",
+                "details": "Adjustable analog video link and dual-band control; user-swappable antennas. The page does not establish Wi-Fi or Bluetooth compatibility.",
+                "sources": [
+                  "https://www.neros.tech/products/archer-5"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "neros-archer5-reference-2026",
+                "configuration": "Manufacturer’s Archer 5-inch platform reference for the broad Neros FPV Drone inventory entry; it does not identify every Neros aircraft as this variant. Covers the airframe and observation interfaces only. CPU, RAM, flight-controller chip, battery capacity and exact RF bands are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera configuration options",
+                "details": "Listed front FPV camera 2300 TVL / 150° field of view, thermal camera 640×480 / 78°, and downward camera 1200 TVL / 150°. Options are not proof all sensors are simultaneously fitted.",
+                "sources": [
+                  "https://www.neros.tech/products/archer-5"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "neros-archer5-reference-2026",
+                "configuration": "Manufacturer’s Archer 5-inch platform reference for the broad Neros FPV Drone inventory entry; it does not identify every Neros aircraft as this variant. Covers the airframe and observation interfaces only. CPU, RAM, flight-controller chip, battery capacity and exact RF bands are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -106087,8 +106229,21 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular airframe fittings",
+                "details": "Swappable front sensor, rugged camera mount, integrated landing-leg mounts and optional propeller guards.",
+                "sources": [
+                  "https://www.neros.tech/products/archer-5"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "neros-archer5-reference-2026",
+                "configuration": "Manufacturer’s Archer 5-inch platform reference for the broad Neros FPV Drone inventory entry; it does not identify every Neros aircraft as this variant. Covers the airframe and observation interfaces only. CPU, RAM, flight-controller chip, battery capacity and exact RF bands are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -106109,10 +106264,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -108198,13 +108350,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "nuro-prius-2022-research",
+            "configuration": "Nuro’s 2022 report explicitly links its research Prius to R2 computing, sensing and autonomy software. This does not transfer R2 body, battery or customer-access hardware to the Prius. CPU/GPU, RAM, sensor models and Prius model year are unspecified.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Shared autonomy computing",
+                "details": "Modified Toyota Prius fleet uses the same onboard computing as R2; processor part numbers are not disclosed.",
+                "sources": [
+                  "https://nuro.sfo3.digitaloceanspaces.com/nuro-vssa-2022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nuro-prius-2022-research",
+                "configuration": "Nuro’s 2022 report explicitly links its research Prius to R2 computing, sensing and autonomy software. This does not transfer R2 body, battery or customer-access hardware to the Prius. CPU/GPU, RAM, sensor models and Prius model year are unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -108218,8 +108389,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Shared R2 perception suite",
+                "details": "Report describes 12 cameras, one top-mounted lidar, 14 radars, two IMUs, ultrasonics and audio sensing, and explicitly states the Prius shares the R2 sensor suite.",
+                "sources": [
+                  "https://nuro.sfo3.digitaloceanspaces.com/nuro-vssa-2022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nuro-prius-2022-research",
+                "configuration": "Nuro’s 2022 report explicitly links its research Prius to R2 computing, sensing and autonomy software. This does not transfer R2 body, battery or customer-access hardware to the Prius. CPU/GPU, RAM, sensor models and Prius model year are unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -108228,13 +108412,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Human safety-driver controls",
+                "details": "Public-road Prius testing includes a safety driver; these are modified passenger cars, not occupant-free R2 delivery bodies.",
+                "sources": [
+                  "https://nuro.sfo3.digitaloceanspaces.com/nuro-vssa-2022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nuro-prius-2022-research",
+                "configuration": "Nuro’s 2022 report explicitly links its research Prius to R2 computing, sensing and autonomy software. This does not transfer R2 body, battery or customer-access hardware to the Prius. CPU/GPU, RAM, sensor models and Prius model year are unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomous-driving research stack",
+                "details": "Prius carries the same autonomous software as R2. Sensor configurations are first tested on Prius before installation on R2.",
+                "sources": [
+                  "https://nuro.sfo3.digitaloceanspaces.com/nuro-vssa-2022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nuro-prius-2022-research",
+                "configuration": "Nuro’s 2022 report explicitly links its research Prius to R2 computing, sensing and autonomy software. This does not transfer R2 body, battery or customer-access hardware to the Prius. CPU/GPU, RAM, sensor models and Prius model year are unspecified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -108258,13 +108468,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "power"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -147023,13 +147229,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ryan-companion-research-hardware",
+            "configuration": "Builder-authored research describes Ryan’s physical platform. 2022 paper reports a 2018 study; historical configurations are distinguished below. CPU, memory capacity, power-supply ratings and radio chipset are not disclosed. Intel RealSense SDK is software evidence, not proof of a RealSense camera.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Torso computer",
+                "details": "2017 paper places the main computer and power supplies in the torso; no processor SKU is named.",
+                "sources": [
+                  "https://arxiv.org/pdf/1712.02881"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ryan-companion-research-hardware",
+                "configuration": "Builder-authored research describes Ryan’s physical platform. 2022 paper reports a 2018 study; historical configurations are distinguished below. CPU, memory capacity, power-supply ratings and radio chipset are not disclosed. Intel RealSense SDK is software evidence, not proof of a RealSense camera.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -147043,8 +147268,22 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and audio inputs",
+                "details": "2022 description: head RGB webcam, chest Kinect depth camera and cardioid microphone. 2017 paper specifies Kinect V2.0 for tracking.",
+                "sources": [
+                  "https://arxiv.org/html/2201.11167v1",
+                  "https://arxiv.org/pdf/1712.02881"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ryan-companion-research-hardware",
+                "configuration": "Builder-authored research describes Ryan’s physical platform. 2022 paper reports a 2018 study; historical configurations are distinguished below. CPU, memory capacity, power-supply ratings and radio chipset are not disclosed. Intel RealSense SDK is software evidence, not proof of a RealSense camera.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -147053,13 +147292,51 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Projected face and display",
+                "details": "Rear-projected animated face; two-axis actuated neck; adjustable torso touchscreen, stereo speakers and shoulder turn-taking LEDs. Arms are passive in the 2022 description.",
+                "sources": [
+                  "https://arxiv.org/html/2201.11167v1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ryan-companion-research-hardware",
+                "configuration": "Builder-authored research describes Ryan’s physical platform. 2022 paper reports a 2018 study; historical configurations are distinguished below. CPU, memory capacity, power-supply ratings and radio chipset are not disclosed. Intel RealSense SDK is software evidence, not proof of a RealSense camera.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Dialogue and emotion services",
+                "details": "2022 Program-R combines facial and textual emotion estimates and communicates with Ryan via a RESTful API. This does not identify a public endpoint or radio protocol.",
+                "sources": [
+                  "https://arxiv.org/html/2201.11167v1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ryan-companion-research-hardware",
+                "configuration": "Builder-authored research describes Ryan’s physical platform. 2022 paper reports a 2018 study; historical configurations are distinguished below. CPU, memory capacity, power-supply ratings and radio chipset are not disclosed. Intel RealSense SDK is software evidence, not proof of a RealSense camera.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Earlier software configuration",
+                "details": "2017 implementation uses Intel RealSense SDK, Aylien sentiment service and ChatBot/Pandorabots dialogue management; these are historical dependencies.",
+                "sources": [
+                  "https://arxiv.org/pdf/1712.02881"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ryan-companion-research-hardware",
+                "configuration": "Builder-authored research describes Ryan’s physical platform. 2022 paper reports a 2018 study; historical configurations are distinguished below. CPU, memory capacity, power-supply ratings and radio chipset are not disclosed. Intel RealSense SDK is software evidence, not proof of a RealSense camera.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -147073,13 +147350,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -348960,6 +349233,264 @@
             ]
           }
         ]
+      },
+      {
+        "id": "nuro-prius-2022-research",
+        "manufacturer": "Nuro",
+        "models": [
+          "Autonomous Prius (2022 safety report)"
+        ],
+        "configuration": "Nuro’s 2022 report explicitly links its research Prius to R2 computing, sensing and autonomy software. This does not transfer R2 body, battery or customer-access hardware to the Prius. CPU/GPU, RAM, sensor models and Prius model year are unspecified.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Shared autonomy computing",
+            "details": "Modified Toyota Prius fleet uses the same onboard computing as R2; processor part numbers are not disclosed.",
+            "sources": [
+              "https://nuro.sfo3.digitaloceanspaces.com/nuro-vssa-2022.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Shared R2 perception suite",
+            "details": "Report describes 12 cameras, one top-mounted lidar, 14 radars, two IMUs, ultrasonics and audio sensing, and explicitly states the Prius shares the R2 sensor suite.",
+            "sources": [
+              "https://nuro.sfo3.digitaloceanspaces.com/nuro-vssa-2022.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomous-driving research stack",
+            "details": "Prius carries the same autonomous software as R2. Sensor configurations are first tested on Prius before installation on R2.",
+            "sources": [
+              "https://nuro.sfo3.digitaloceanspaces.com/nuro-vssa-2022.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Human safety-driver controls",
+            "details": "Public-road Prius testing includes a safety driver; these are modified passenger cars, not occupant-free R2 delivery bodies.",
+            "sources": [
+              "https://nuro.sfo3.digitaloceanspaces.com/nuro-vssa-2022.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Nuro",
+            "models": [
+              "Nuro Autonomous Prius"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "freefly-alta-x-rid-upgrade",
+        "manufacturer": "Freefly Systems",
+        "models": [
+          "Alta X Remote ID upgrade (910-00790 / 910-00797)"
+        ],
+        "configuration": "Documented broadcast-module retrofit for compatible legacy Alta X aircraft. Not an Alta X flight-computer BOM or the factory Standard RID configuration. DIU Blue firmware does not enable this broadcast module. MCU, RAM and radio-chip part numbers are unpublished.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Bluetooth 5 Remote ID",
+            "details": "Manufacturer lists 2.402–2.481 GHz and maximum +18 dBm transmit power; this is the module, not the aircraft command radio.",
+            "sources": [
+              "https://docs.freeflysystems.com/products/products/alta-x/untitled-5/faa-remote-identification-rid/remote-id-broadcast-module"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Broadcast-module consumption",
+            "details": "Published peak consumption approximately 379 mW; supply voltage and battery are not specified.",
+            "sources": [
+              "https://docs.freeflysystems.com/products/products/alta-x/untitled-5/faa-remote-identification-rid/remote-id-broadcast-module"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Replacement IO panel",
+            "details": "Integrated broadcast module replaces the Bay 3 IO panel, using its ZPD connection and antenna cable; panel includes a USB connector.",
+            "sources": [
+              "https://docs.freeflysystems.com/products/products/alta-x/untitled-5/faa-remote-identification-rid/remote-id-broadcast-module"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Aircraft firmware dependency",
+            "details": "Legacy retrofit requires Alta X PX4 v1.4 or newer; manufacturer distinguishes broadcast upgrade from factory Standard RID and excludes DIU Blue packages.",
+            "sources": [
+              "https://docs.freeflysystems.com/products/products/alta-x/untitled-5/faa-remote-identification-rid"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Freefly Systems",
+            "models": [
+              "Remote ID Upgrade Kit (Alta X)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ryan-companion-research-hardware",
+        "manufacturer": "University of Denver",
+        "models": [
+          "Ryan Companionbot (2017 / 2022 research descriptions)"
+        ],
+        "configuration": "Builder-authored research describes Ryan’s physical platform. 2022 paper reports a 2018 study; historical configurations are distinguished below. CPU, memory capacity, power-supply ratings and radio chipset are not disclosed. Intel RealSense SDK is software evidence, not proof of a RealSense camera.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Torso computer",
+            "details": "2017 paper places the main computer and power supplies in the torso; no processor SKU is named.",
+            "sources": [
+              "https://arxiv.org/pdf/1712.02881"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and audio inputs",
+            "details": "2022 description: head RGB webcam, chest Kinect depth camera and cardioid microphone. 2017 paper specifies Kinect V2.0 for tracking.",
+            "sources": [
+              "https://arxiv.org/html/2201.11167v1",
+              "https://arxiv.org/pdf/1712.02881"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Projected face and display",
+            "details": "Rear-projected animated face; two-axis actuated neck; adjustable torso touchscreen, stereo speakers and shoulder turn-taking LEDs. Arms are passive in the 2022 description.",
+            "sources": [
+              "https://arxiv.org/html/2201.11167v1"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Dialogue and emotion services",
+            "details": "2022 Program-R combines facial and textual emotion estimates and communicates with Ryan via a RESTful API. This does not identify a public endpoint or radio protocol.",
+            "sources": [
+              "https://arxiv.org/html/2201.11167v1"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Earlier software configuration",
+            "details": "2017 implementation uses Intel RealSense SDK, Aylien sentiment service and ChatBot/Pandorabots dialogue management; these are historical dependencies.",
+            "sources": [
+              "https://arxiv.org/pdf/1712.02881"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "University of Denver",
+            "models": [
+              "Ryan Companion Robot"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "blueflite-cobalt-platform",
+        "manufacturer": "Blueflite",
+        "models": [
+          "Cobalt platform / Cobalt 461 reference"
+        ],
+        "configuration": "Cobalt 461 identity is supported by Blueflite’s June 2026 release. Hardware/software facts are manufacturer-published Cobalt/common-platform architecture, not an exact 461 revision BOM. CPU, memory, modem, sensor parts and battery capacity are not disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "bluePilot and blueBrain",
+            "details": "Onboard autopilot paired with the manufacturer’s machine-learning flight-control system; semiconductor implementation unpublished.",
+            "sources": [
+              "https://www.blueflite.com/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric vectored-thrust platform",
+            "details": "Battery-monitored electric drive. Manufacturer’s CEO describes Cobalt as wingless with four paired-propeller tilting mounts; Slate’s wings are not assigned to Cobalt.",
+            "sources": [
+              "https://www.blueflite.com/",
+              "https://www.blueflite.com/almost-twins/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cargo platform",
+            "details": "Carbon-composite modular airframe with internal cargo compartment. The 2026 Cobalt 461 release gives maximum takeoff weight 54.98 lb.",
+            "sources": [
+              "https://www.blueflite.com/",
+              "https://www.blueflite.com/blueflite-added-to-faa-section-44807-approved-uas-list/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operations and cloud layers",
+            "details": "blueControl supports planning, control and monitoring; blueDigital is a cloud productivity layer and blueDelivery is the customer ordering app. No modem or public telemetry API is established.",
+            "sources": [
+              "https://www.blueflite.com/"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Blueflite",
+            "models": [
+              "Cobalt 461"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "neros-archer5-reference-2026",
+        "manufacturer": "Neros",
+        "models": [
+          "Archer 5-inch (2026 reference)"
+        ],
+        "configuration": "Manufacturer’s Archer 5-inch platform reference for the broad Neros FPV Drone inventory entry; it does not identify every Neros aircraft as this variant. Covers the airframe and observation interfaces only. CPU, RAM, flight-controller chip, battery capacity and exact RF bands are unpublished.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Video and control links",
+            "details": "Adjustable analog video link and dual-band control; user-swappable antennas. The page does not establish Wi-Fi or Bluetooth compatibility.",
+            "sources": [
+              "https://www.neros.tech/products/archer-5"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera configuration options",
+            "details": "Listed front FPV camera 2300 TVL / 150° field of view, thermal camera 640×480 / 78°, and downward camera 1200 TVL / 150°. Options are not proof all sensors are simultaneously fitted.",
+            "sources": [
+              "https://www.neros.tech/products/archer-5"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular airframe fittings",
+            "details": "Swappable front sensor, rugged camera mount, integrated landing-leg mounts and optional propeller guards.",
+            "sources": [
+              "https://www.neros.tech/products/archer-5"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Neros",
+            "models": [
+              "Neros FPV Drone"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -348976,8 +349507,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 895,
-    "devices_with_system_profiles": 808,
-    "devices_with_documented_compute": 395
+    "system_profiles": 900,
+    "devices_with_system_profiles": 813,
+    "devices_with_documented_compute": 398
   }
 }

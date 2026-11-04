@@ -2647,3 +2647,25 @@ test('batch 79 scopes vehicle generations, trial sensors and older robot hardwar
  assert.equal(profileIds(system('Unknown manufacturer','Predator and ??')).length,0);
  assert.equal(profileIds(system('Didi Chuxing','DiDi Autonomous Driving (Gemini)',{kind:'regulatory-equipment'})).length,0);
 });
+
+test('batch 82 keeps research vehicles, RID modules and FPV references scoped',()=>{
+ const prius=system('Nuro','Nuro Autonomous Prius');
+ assert.match(text(prius.sections.sensors),/14 radars/);
+ assert.doesNotMatch(text(prius.sections.compute),/NVIDIA|Thor|Orin/);
+ assert.equal(prius.sections.power.status,'not-established');
+ const rid=system('Freefly Systems','Remote ID Upgrade Kit (Alta X)');
+ assert.match(text(rid.sections.radios),/Bluetooth 5/);
+ assert.match(text(rid.sections.software),/excludes DIU Blue/);
+ assert.equal(rid.sections.compute.status,'not-established');
+ const ryan=system('University of Denver','Ryan Companion Robot');
+ assert.match(text(ryan.configurations),/not proof of a RealSense camera/);
+ assert.match(text(ryan.sections.interfaces),/Arms are passive/);
+ const cobalt=system('Blueflite','Cobalt 461');
+ assert.match(text(cobalt.configurations),/not an exact 461 revision BOM/);
+ assert.equal(cobalt.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Blueflite','Slate')).length,0);
+ const archer=system('Neros','Neros FPV Drone');
+ assert.match(text(archer.sections.radios),/does not establish Wi-Fi/);
+ assert.equal(profileIds(system('Neros','Archer 10-inch')).length,0);
+ assert.equal(profileIds(system('Nuro','Nuro Autonomous Prius',{kind:'regulatory-equipment'})).length,0);
+});
