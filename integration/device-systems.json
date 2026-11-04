@@ -34491,6 +34491,697 @@
           ]
         }
       ]
+    },
+    {
+      "id": "komatsu-930e-ahs-architecture",
+      "manufacturer": "Komatsu",
+      "models": [
+        "930E AHS"
+      ],
+      "configuration": "FrontRunner platform architecture; exact controller CPU, RAM, storage and wireless chipset are not public in this reference. 930E chassis generations and engine options must be checked separately.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Vehicle and fleet controllers",
+          "details": "Onboard controllers follow mine maps; a central controller assigns haul routes. Processor models are undisclosed.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Position and obstacles",
+          "details": "Precision GPS with radar/laser obstacle detection.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Operational network",
+          "details": "Komatsu-developed wireless network links the fleet; this source does not specify bands or modem models.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Loading coordination",
+          "details": "Loading-tool touchscreen computers show nearby fleet movement and authorize truck positioning and departure.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous haul cycle",
+          "details": "Onboard route execution, loading coordination and dumping under fleet supervision.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "930E implementation",
+          "details": "Komatsu identifies the 2026 milestone truck as a 930E-5AT with FrontRunner autonomy.",
+          "sources": [
+            "https://www.komatsu.com/en-us/newsroom/2026/komatsu-becomes-first-oem-to-commission-1000-ultra-class-autonomous-haul-trucks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "komatsu-frontrunner-architecture",
+      "manufacturer": "Komatsu Mining",
+      "models": [
+        "FrontRunner Autonomous Haulage System"
+      ],
+      "configuration": "FrontRunner platform architecture; exact controller CPU, RAM, storage and wireless chipset are not public in this reference. 930E chassis generations and engine options must be checked separately.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Vehicle and fleet controllers",
+          "details": "Onboard controllers follow mine maps; a central controller assigns haul routes. Processor models are undisclosed.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Position and obstacles",
+          "details": "Precision GPS with radar/laser obstacle detection.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Operational network",
+          "details": "Komatsu-developed wireless network links the fleet; this source does not specify bands or modem models.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Loading coordination",
+          "details": "Loading-tool touchscreen computers show nearby fleet movement and authorize truck positioning and departure.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous haul cycle",
+          "details": "Onboard route execution, loading coordination and dumping under fleet supervision.",
+          "sources": [
+            "https://www.komatsu.com/en-nz/technology/smart-solutions/smart-mining/autonomous-haulage-system"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "930E implementation",
+          "details": "Komatsu identifies the 2026 milestone truck as a 930E-5AT with FrontRunner autonomy.",
+          "sources": [
+            "https://www.komatsu.com/en-us/newsroom/2026/komatsu-becomes-first-oem-to-commission-1000-ultra-class-autonomous-haul-trucks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "komatsu-930e5-chassis-reference",
+      "manufacturer": "Komatsu",
+      "models": [
+        "930E AHS",
+        "930E-5 (AESS921-01 chassis reference)"
+      ],
+      "configuration": "930E-5 chassis brochure AESS921-01, a configuration reference within the broader 930E AHS family. Not a bill of materials for every AHS conversion or 930E-5AT. Drivetrain controls and maintenance telemetry are separate from the FrontRunner autonomy computer.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Diesel-electric drive",
+          "details": "Komatsu SSDA16V160 16-cylinder diesel, 2,014 kW gross; GTA-51 alternator and GDY106-B induction wheel motors. Emissions configuration varies by market.",
+          "sources": [
+            "https://www.komatsu.com/content/dam/komatsu/sales-and-marketing-documents/brochures/trucks/930e/930e-5-aess921-01-ev1.pdf"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Traction control",
+          "details": "Invertex IIe AC control with independent rear-wheel motor control and air-cooled IGBT inverters; controller CPU not named.",
+          "sources": [
+            "https://www.komatsu.com/content/dam/komatsu/sales-and-marketing-documents/brochures/trucks/930e/930e-5-aess921-01-ev1.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Engine diagnostics",
+          "details": "CENSE monitors cylinder-level engine performance.",
+          "sources": [
+            "https://www.komatsu.com/content/dam/komatsu/sales-and-marketing-documents/brochures/trucks/930e/930e-5-aess921-01-ev1.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Maintenance telemetry",
+          "details": "KOMTRAX Plus 2 uses satellite communications for machine metrics and faults; this is not the AHS fleet-control radio.",
+          "sources": [
+            "https://www.komatsu.com/content/dam/komatsu/sales-and-marketing-documents/brochures/trucks/930e/930e-5-aess921-01-ev1.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Service and safety",
+          "details": "Ground-access service center, starter/drive isolation switches and emergency engine shutdown.",
+          "sources": [
+            "https://www.komatsu.com/content/dam/komatsu/sales-and-marketing-documents/brochures/trucks/930e/930e-5-aess921-01-ev1.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandvik-automine-lite2-2019",
+      "manufacturer": "Sandvik",
+      "models": [
+        "AutoMine",
+        "AutoMine Lite 2 (2019 reference)"
+      ],
+      "configuration": "AutoMine Lite version 2, TS9-002:04/ENG, 2019. This is a specific single-machine loader/truck automation package, not every AutoMine generation or vehicle. Basic/Silver/Gold features vary; CPU, memory and storage SKUs are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard modules",
+          "details": "InfraFREE navigation, safety, network and video/audio modules; interfaces to VCM or SICA machine controls. Centralized or distributed enclosure layouts.",
+          "sources": [
+            "https://www.mining.sandvik/globalassets/products/automation/pdf/automine-lite-product-sheet-english.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and machine state",
+          "details": "Four cameras, two laser scanners, articulation and bucket/boom sensors. Gyroscope and surface navigation are optional.",
+          "sources": [
+            "https://www.mining.sandvik/globalassets/products/automation/pdf/automine-lite-product-sheet-english.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "MineLAN or third-party network",
+          "details": "2.4 GHz 802.11 b/g/n; alternatively LTE Category 4. Requires 10 Mb/s per machine and maximum 100 ms latency. No unique SSID pattern is given.",
+          "sources": [
+            "https://www.mining.sandvik/globalassets/products/automation/pdf/automine-lite-product-sheet-english.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Automation supply",
+          "details": "Onboard package uses 24 VDC; mine-side supply requires 110–240 VAC, 50/60 Hz. Vehicle propulsion depends on the loader/truck.",
+          "sources": [
+            "https://www.mining.sandvik/globalassets/products/automation/pdf/automine-lite-product-sheet-english.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Site integration",
+          "details": "IP network with Ethernet/fiber backbone; optional SQL reporting view. Access barriers and fast-stop controls isolate the production area.",
+          "sources": [
+            "https://www.mining.sandvik/globalassets/products/automation/pdf/automine-lite-product-sheet-english.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operator and navigation",
+          "details": "Remote Supervisory System plus onboard InfraFREE; autonomous tramming/dumping and assisted teleoperation, depending on package.",
+          "sources": [
+            "https://www.mining.sandvik/globalassets/products/automation/pdf/automine-lite-product-sheet-english.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epiroc-linkoa-haulage2025",
+      "manufacturer": "Epiroc",
+      "models": [
+        "Epiroc Autonomous Haulage (LinkOA)",
+        "LinkOA for Haulage"
+      ],
+      "configuration": "July 2025 LinkOA for Haulage architecture. Retrofit equipment varies by truck. CPU, RAM, disk, radio model and supply ratings are undisclosed; do not inherit a host truck engine or newer kit into historical Mobius installations.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard control unit",
+          "details": "Local processor interfaces with vehicle systems; part number unspecified.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/open-autonomy/brochures/LinkOA%20for%20Haulage%20Brochure%20English%20A4%20Web.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vehicle Automation Kit",
+          "details": "GPS/GNSS, radar, lidar and additional obstacle-detection sensors; exact sensor models vary or are unstated.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/open-autonomy/brochures/LinkOA%20for%20Haulage%20Brochure%20English%20A4%20Web.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Actuation and integration",
+          "details": "Drive-by-wire operates steering, braking and throttle. Separate APIs connect upstream applications and vehicle interfaces; staffed vehicles use an In-Cab Client.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/open-autonomy/brochures/LinkOA%20for%20Haulage%20Brochure%20English%20A4%20Web.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet coordination",
+          "details": "LinkOA traffic management routes mixed fleets, coordinates vehicles and can supply fleet-management functions. Vehicle Automation Kit and drive-by-wire execute onboard control.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/open-autonomy/brochures/LinkOA%20for%20Haulage%20Brochure%20English%20A4%20Web.pdf"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Product lineage",
+          "details": "Epiroc renamed ASI Mining’s Mobius surface-autonomy solution LinkOA in September 2024.",
+          "sources": [
+            "https://www.epiroc.com/en-er/newsroom/2024/epiroc-announces-new-product-line-name-for-surface-mining-autonomy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asi-mobius-mining-legacy",
+      "manufacturer": "ASI Mining",
+      "models": [
+        "Mobius for Mining"
+      ],
+      "configuration": "Legacy ASI Mining software/platform reference, not one physical truck. Current LinkOA hardware is documented separately; no CPU, memory, RF module or sensor list is established for every historical Mobius installation.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Legacy building blocks",
+          "details": "Mobius can operate independently or integrate with ASI Nav and Vantage automation components.",
+          "sources": [
+            "https://asirobots.com/video-mobius-for-mining/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet operations",
+          "details": "Remote supervision, repeated loading/dumping assignments, vehicle diagnostics and multi-truck operation from one operator station.",
+          "sources": [
+            "https://asirobots.com/video-mobius-for-mining/"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Successor name",
+          "details": "Epiroc’s September 2024 announcement renames the acquired ASI Mining surface-autonomy solution LinkOA.",
+          "sources": [
+            "https://www.epiroc.com/en-er/newsroom/2024/epiroc-announces-new-product-line-name-for-surface-mining-autonomy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epiroc-pitviper271-2018",
+      "manufacturer": "Epiroc",
+      "models": [
+        "Pit Viper",
+        "Pit Viper 271 (2018 configuration)"
+      ],
+      "configuration": "Pit Viper 271 brochure 9863 0005 01, July 2018. A documented variant of the catalog’s unspecified Pit Viper family; not the 271 XC, 291 or 271 E. Automation and engine/motor options are alternatives, not universally fitted. CPU/RAM/storage and wireless bands are unstated.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Rig control",
+          "details": "Standard RCS CAN-bus control architecture with touchscreen, joysticks and safety interlocks; processor SKU unspecified.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/rotary-blasthole-drill-rigs/brochures/9863%200005%2001%20Pit%20Viper%20271%20Brochure%20English.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Drilling and navigation",
+          "details": "RCS monitors penetration, torque, pressure, feed force and depth. Optional GPS hole navigation supports drill plans and installation-dependent ±10 cm accuracy.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/rotary-blasthole-drill-rigs/brochures/9863%200005%2001%20Pit%20Viper%20271%20Brochure%20English.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Power-package choices",
+          "details": "CAT C27: 652 kW; CAT C32: 708 kW; Cummins QSK23 Tier 2: 641 kW. Electric options: WEG 6808 at 522 or 671 kW, or WEG 6811 at 671 kW; frequency/configuration restrictions apply.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/rotary-blasthole-drill-rigs/brochures/9863%200005%2001%20Pit%20Viper%20271%20Brochure%20English.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Optional remote functions",
+          "details": "Wireless remote tramming and Rig Remote Access file transfer; no radio standard or channel specified.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/rotary-blasthole-drill-rigs/brochures/9863%200005%2001%20Pit%20Viper%20271%20Brochure%20English.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mechanical and data connections",
+          "details": "Hydraulic tracked drive, rotary head and four leveling jacks; Common Communications Interface exchanges RCS data.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/rotary-blasthole-drill-rigs/brochures/9863%200005%2001%20Pit%20Viper%20271%20Brochure%20English.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Automation options",
+          "details": "Autodrill, Autolevel, BenchREMOTE, teleremote operation and Desktop Viewer are configuration-dependent add-ons.",
+          "sources": [
+            "https://www.epiroc.com/content/dam/epiroc/rotary-blasthole-drill-rigs/brochures/9863%200005%2001%20Pit%20Viper%20271%20Brochure%20English.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pronto-ahs-editions2026",
+      "manufacturer": "ATOMS",
+      "models": [
+        "Pronto AHS"
+      ],
+      "configuration": "Pronto product family under Atoms Mining, with February 2026 Vision, VLR and VLR 360 editions. Sensor suites differ; no common CPU, memory, radio chipset, battery or truck engine is disclosed. A retrofit does not identify the underlying truck model.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Edition-specific perception",
+          "details": "Vision uses HDR cameras; VLR adds long-range lidar and radar; VLR 360 expands to full-perimeter sensing. The earlier solution reference also documents GNSS.",
+          "sources": [
+            "https://pronto.ai/pronto-unveils-ahs-editions-the-first-tiered-autonomous-haulage-portfolio-for-the-global-mining-industry/",
+            "https://pronto.ai/solution/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Site connectivity",
+          "details": "Wireless connectivity is required; Pronto describes Pollen Mobile private LTE as an available mine-network solution, not mandatory hardware on every truck.",
+          "sources": [
+            "https://pronto.ai/solution/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle actuation",
+          "details": "Retrofit drive-by-wire kit; manually operated interacting equipment receives all-stop controls.",
+          "sources": [
+            "https://pronto.ai/solution/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Routing and supervision",
+          "details": "Demonstrated routes are saved for dispatch from the mobile app, which shows vehicle location and operating metrics; OTA software updates supported.",
+          "sources": [
+            "https://pronto.ai/solution/"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Organization",
+          "details": "Pronto identifies itself as the technology core of Atoms Mining after acquisition.",
+          "sources": [
+            "https://pronto.ai/atoms/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belaz-7513r-zyfra-reference",
+      "manufacturer": "BelAZ",
+      "models": [
+        "BELAZ-7513R Robotic Dump Truck"
+      ],
+      "configuration": "Zyfra/VIST authors’ 2020 engineering paper describes the tested BELAZ 7513 architecture underlying the serial 7513R. These are reference-design components, not a guarantee for every production revision. CPU silicon, RAM, disk, radio bands and exact engine are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Reference onboard computer",
+          "details": "KB-01 (КБ-01) executes autonomous and remote-control software and exchanges information with actuation, diagnostics and safety subsystems.",
+          "sources": [
+            "https://www.zyfra.com/upload/media/default/0001/02/!A_Klebanov_Ok.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Reference sensing layout",
+          "details": "Diagram shows 3D surrounding lidar, side-view 2D lidar, radar, ultrasonic sensors and remote-view cameras; navigation and communication antennas are separate.",
+          "sources": [
+            "https://www.zyfra.com/upload/media/default/0001/02/!A_Klebanov_Ok.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Operator data channel",
+          "details": "High-speed wireless exchange between onboard and operator equipment; protocol and frequency are not identified.",
+          "sources": [
+            "https://www.zyfra.com/upload/media/default/0001/02/!A_Klebanov_Ok.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Control and shutdown",
+          "details": "Actuator and diagnostic subsystems plus separate emergency-stop subsystem; handheld remote and onboard stops are shown.",
+          "sources": [
+            "https://www.zyfra.com/upload/media/default/0001/02/!A_Klebanov_Ok.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Reference truck drivetrain",
+          "details": "The tested 110–130 tonne vehicle design uses AC/DC electromechanical transmission; no specific engine model is established.",
+          "sources": [
+            "https://www.zyfra.com/upload/media/default/0001/02/!A_Klebanov_Ok.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Haulage complex",
+          "details": "Zyfra documents 7513R autonomous routes and unloading, fleet/loading coordination, mapped monitoring and remote fallback.",
+          "sources": [
+            "https://www.zyfra.com/product/robotruck/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eacon-southpit-architecture2023",
+      "manufacturer": "Eacon Mining Technology",
+      "models": [
+        "Eacon Autonomous Mining Truck"
+      ],
+      "configuration": "South Pit deployment architecture described by EACON executives in a December 2023 manufacturer-hosted interview. This does not specify every EACON truck or later ORCA revision. CPU, RAM, sensor SKUs, radio bands and battery capacity are unpublished in the source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Distributed vehicle computing",
+          "details": "Onboard edge computers handle perception, path planning, decisions and vehicle coordination; central servers handle dispatch and map management.",
+          "sources": [
+            "https://www.eacon.com/en2023/12/eacon-brings-speed-precision-and-capability-to-auto-mining-market/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception and monitoring",
+          "details": "Multi-sensor fusion and onboard video; detailed sensor types and part numbers are not provided.",
+          "sources": [
+            "https://www.eacon.com/en2023/12/eacon-brings-speed-precision-and-capability-to-auto-mining-market/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Deployment network",
+          "details": "LTE/5G mine network and vehicle-to-vehicle communications; staffed vehicles carry positioning and communication devices.",
+          "sources": [
+            "https://www.eacon.com/en2023/12/eacon-brings-speed-precision-and-capability-to-auto-mining-market/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Chassis boundary",
+          "details": "Drive-by-wire and a platform interface separate autonomy from chassis systems across OEM truck models.",
+          "sources": [
+            "https://www.eacon.com/en2023/12/eacon-brings-speed-precision-and-capability-to-auto-mining-market/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Fleet configurations",
+          "details": "Deployment was transitioning from diesel trucks to hybrid-electric trucks; the account is not a single powertrain specification.",
+          "sources": [
+            "https://www.eacon.com/en2023/12/eacon-brings-speed-precision-and-capability-to-auto-mining-market/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet data flow",
+          "details": "Vehicles send processed status and fault information; maps use differential updates. Dispatch provides 3D views, statistics and fleet reporting.",
+          "sources": [
+            "https://www.eacon.com/en2023/12/eacon-brings-speed-precision-and-capability-to-auto-mining-market/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hitachi-ahs-architecture",
+      "manufacturer": "Hitachi Construction Machinery",
+      "models": [
+        "Autonomous Haulage System (AHS)"
+      ],
+      "configuration": "2018 engineering concept, slide 22, supplemented by the current manufacturer AHS overview. Historical component blocks are not a current production BOM. CPU, memory, radio bands and sensor SKUs are undisclosed; no exact truck engine or battery is inferred.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "2018 controller architecture",
+          "details": "Separate AHS controller and electric steering controller; processor silicon not identified.",
+          "sources": [
+            "https://www.hitachicm.com/content/dam/hitachicm/global/en/ir/library/results/docs/20180831-HCM_Mining-Business-EN.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "2018 sensor blocks",
+          "details": "GNSS, IMU, lidar and radar appear in the retrofit architecture.",
+          "sources": [
+            "https://www.hitachicm.com/content/dam/hitachicm/global/en/ir/library/results/docs/20180831-HCM_Mining-Business-EN.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "System communication",
+          "details": "2018 design shows wireless communication; current AHS overview describes a dedicated communications network for remote-stop safety controls, without specifying its radio standard.",
+          "sources": [
+            "https://www.hitachicm.com/content/dam/hitachicm/global/en/ir/library/results/docs/20180831-HCM_Mining-Business-EN.pdf",
+            "https://www.hitachicm.com/global/en/solutions/solution-linkage/ahs/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle control",
+          "details": "AHS add-on interfaces with the truck’s electric steering and AC motor-control systems.",
+          "sources": [
+            "https://www.hitachicm.com/content/dam/hitachicm/global/en/ir/library/results/docs/20180831-HCM_Mining-Business-EN.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet and traffic",
+          "details": "Wenco Fleet Management System coordinates operations; current AHS supports instrumented staffed trucks and open FMS/AHS interoperability.",
+          "sources": [
+            "https://www.hitachicm.com/global/en/solutions/solution-linkage/ahs/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liebherr-t264-diesel-ahs",
+      "manufacturer": "Liebherr Mining Equipment",
+      "models": [
+        "Liebherr Autonomous Haulage Solution (T 264)",
+        "T 264 (diesel chassis reference)"
+      ],
+      "configuration": "T 264 diesel chassis reference plus the Liebherr/Fortescue AHS program. The fleet record does not resolve the installed engine option. Keep separate from T 264 Battery Electric; CPU, memory, radios and autonomy sensor part numbers are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Diesel-electric choices",
+          "details": "Cummins QSK 60 standard; Liebherr D9812 or MTU 16V4000 optional, each rated 2,013 kW. Litronic Plus AC drive uses IGBT technology; payload class 240 tonnes.",
+          "sources": [
+            "https://www.liebherr.com/en-int/p/t264-5392646"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy ecosystem",
+          "details": "Joint Liebherr/Fortescue AHS development includes fleet management and machine guidance; four T 264 trucks entered onsite validation. The management tools also support human-operated sites.",
+          "sources": [
+            "https://www.liebherr.com/en-us/n/liebherr-and-fortescue-announce-partnership-for-development-of-autonomous-haulage-solution-82315-3782185"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liebherr-t264-electric-bauma2025",
+      "manufacturer": "Liebherr Mining Equipment",
+      "models": [
+        "Liebherr Autonomous Haulage Solution (T 264)",
+        "T 264 Battery Electric (Bauma 2025)"
+      ],
+      "configuration": "Separate Bauma 2025 battery-electric demonstration configuration. The article states a battery power figure, not a verified energy capacity; no kWh rating is inferred. CPU, memory and sensor/radio part numbers remain undisclosed. This is not the diesel T 264 specification.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Battery and charging",
+          "details": "Fortescue Zero battery replaces the combustion engine. Demonstrated charging technologies include a 6 MW static robotic charger and lateral Liebherr Power Rail dynamic charging.",
+          "sources": [
+            "https://www.liebherr.com/en-gb/n/4-key-technologies-on-the-t-264-battery-electric-you-can-see-at-bauma-2025-157120-4715716"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy and energy coordination",
+          "details": "Liebherr/Fortescue AHS with energy management to monitor fleet charge, coordinate charging and optimize vehicle routes and speeds; described as ongoing development in April 2025.",
+          "sources": [
+            "https://www.liebherr.com/en-gb/n/4-key-technologies-on-the-t-264-battery-electric-you-can-see-at-bauma-2025-157120-4715716"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hexagon-autonomous-mining-platform",
+      "manufacturer": "Hexagon Mining",
+      "models": [
+        "Hexagon Autonomous Mining"
+      ],
+      "configuration": "HxGN Autonomous Mining is a portfolio, not one vehicle. 2022–2023 platform references identify system modules but not CPU, RAM, storage, radio bands, sensor models or vehicle propulsion. Driver-assistance installations are not automatically fully autonomous.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Core computing platform",
+          "details": "HxGN Autonomous Mining combines Power of One hardware with the Core computing platform; CPU model unspecified.",
+          "sources": [
+            "https://hexagon.com/about/news-media/press-releases/2023/hexagon-introduces-autonomous-mining-portfolio"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Onboard ecosystem",
+          "details": "Power of One describes an onboard computer, antenna and display integrating sensors, field applications and cloud software.",
+          "sources": [
+            "https://hexagon.com/company/newsroom/press-releases/2022/hexagon-unveils-life-of-mine-smart-platform-for-mining"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy and missions",
+          "details": "Portfolio includes perception, path planning, machine intervention and drill automation. Mission Manager coordinates fleet/traffic movements and integrates with fleet-management and analytics tools.",
+          "sources": [
+            "https://hexagon.com/about/news-media/press-releases/2023/hexagon-introduces-autonomous-mining-portfolio",
+            "https://blog.hexagonmining.com/en/the-follow-up-album-is-always-harder/"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -9,6 +9,55 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('mining profiles preserve retrofit, power-package and generation boundaries',()=>{
+ const k=system('Komatsu','930E AHS');
+ assert.equal(k.configurations.length,2);
+ assert.match(text(k.sections.power),/SSDA16V160.*GTA-51.*GDY106-B/);
+ assert.match(text(k.sections.radios),/not the AHS fleet-control radio/);
+ const front=system('Komatsu Mining','FrontRunner Autonomous Haulage System');
+ assert.equal(front.sections.power.status,'not-established');
+ assert.match(text(front.sections.sensors),/GPS.*radar\/laser/);
+ const sandvik=system('Sandvik','AutoMine');
+ assert.match(text(sandvik.configurations),/2019/);
+ assert.match(text(sandvik.sections.radios),/2.4 GHz.*Category 4/);
+ assert.match(text(sandvik.sections.power),/24 VDC.*110–240 VAC/);
+ assert.equal(sandvik.sections.memory.status,'not-established');
+ const pv=system('Epiroc','Pit Viper');
+ assert.match(text(pv.configurations),/July 2018.*not the 271 XC/);
+ assert.match(text(pv.sections.power),/QSK23.*WEG 6808.*6811/);
+ assert.match(text(pv.sections.software),/configuration-dependent/);
+ assert.equal(profileIds(system('Epiroc','Pit Viper 291')).length,0);
+ const l=system('Liebherr Mining Equipment','Liebherr Autonomous Haulage Solution (T 264)');
+ assert.equal(l.configurations.length,2);
+ const electric=system('Liebherr Mining Equipment','T 264 Battery Electric (Bauma 2025)');
+ assert.doesNotMatch(text(electric.sections.power.facts.map(f=>f.details)),/Cummins|D9812|MTU|3.2 MWh/);
+ assert.match(text(electric.configurations),/no kWh rating is inferred/);
+ assert.equal(profileIds(system('Komatsu','930E AHS',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('mining architectures retain provenance without fabricating processors or radios',()=>{
+ const link=system('Epiroc','Epiroc Autonomous Haulage (LinkOA)');
+ assert.match(text(link.sections.sensors),/GPS\/GNSS.*radar.*lidar/);
+ assert.match(text(link.sections.interfaces),/Drive-by-wire/);
+ const legacy=system('ASI Mining','Mobius for Mining');
+ assert.equal(legacy.sections.sensors.status,'not-established');
+ assert.equal(legacy.sections.compute.status,'not-established');
+ assert.match(text(legacy.sections.interfaces),/Nav and Vantage/);
+ const pronto=system('ATOMS','Pronto AHS');
+ assert.match(text(pronto.sections.sensors),/Vision uses HDR cameras; VLR adds.*VLR 360/);
+ assert.equal(pronto.sections.compute.status,'not-established');
+ const belaz=system('BelAZ','BELAZ-7513R Robotic Dump Truck');
+ assert.match(text(belaz.sections.compute),/KB-01/);
+ assert.match(text(belaz.configurations),/reference-design components/);
+ assert.match(text(belaz.sections.sensors),/3D.*2D.*ultrasonic/);
+ assert.doesNotMatch(text(belaz.sections.radios.facts.map(f=>f.details)),/5G|Wi-Fi/);
+ const hitachi=system('Hitachi Construction Machinery','Autonomous Haulage System (AHS)');
+ assert.match(text(hitachi.sections.sensors),/2018.*GNSS.*IMU.*lidar.*radar/);
+ assert.match(text(hitachi.sections.software),/Wenco/);
+ assert.match(text(system('Hexagon Mining','Hexagon Autonomous Mining').configurations),/portfolio, not one vehicle/);
+ assert.match(text(system('Eacon Mining Technology','Eacon Autonomous Mining Truck').configurations),/South Pit.*2023/);
+});
+
 test('batch 54 preserves documented robot processors and revision boundaries',()=>{
  const zerith=system('Zerith Robotics','Zerith H1');
  assert.match(text(zerith.sections.compute),/20-core\/28-thread/);
