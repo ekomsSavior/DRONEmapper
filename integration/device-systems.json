@@ -13106,10 +13106,11 @@
       "manufacturer": "Geek+",
       "models": [
         "P500R",
-        "Geek+ P-Series"
+        "Geek+ P-Series",
+        "Geek+ AMR"
       ],
-      "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed. When displayed under Geek+ AMR, this is one named P-Series configuration, not a universal specification for Geek+ robots.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "power",
@@ -13150,10 +13151,11 @@
       "manufacturer": "Geek+",
       "models": [
         "P800R",
-        "Geek+ P-Series"
+        "Geek+ P-Series",
+        "Geek+ AMR"
       ],
-      "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed. When displayed under Geek+ AMR, this is one named P-Series configuration, not a universal specification for Geek+ robots.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "power",
@@ -13194,10 +13196,11 @@
       "manufacturer": "Geek+",
       "models": [
         "P1200R",
-        "Geek+ P-Series"
+        "Geek+ P-Series",
+        "Geek+ AMR"
       ],
-      "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Manufacturer P-Series PDF configuration; exact robot revision matters. CPU, RAM, radio and sensor SKUs undisclosed. When displayed under Geek+ AMR, this is one named P-Series configuration, not a universal specification for Geek+ robots.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "power",
@@ -14343,10 +14346,11 @@
       "id": "amazon-proteus-ti-2024",
       "manufacturer": "Amazon",
       "models": [
-        "Proteus"
+        "Proteus",
+        "Amazon Robotics fleet"
       ],
-      "configuration": "TI September 2024 Proteus component disclosure, with Amazon/AWS autonomy description. Not every Amazon mobile robot or the newer natural-language Proteus revision. Installed RAM, storage, radio, battery and camera/LiDAR SKUs undisclosed.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "TI September 2024 Proteus component disclosure, with Amazon/AWS autonomy description. Not every Amazon mobile robot or the newer natural-language Proteus revision. Installed RAM, storage, radio, battery and camera/LiDAR SKUs undisclosed. When displayed under Amazon Robotics fleet, this is one named representative configuration; its parts do not apply to the entire fleet.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "compute",
@@ -14405,10 +14409,11 @@
       "id": "amazon-hercules",
       "manufacturer": "Amazon",
       "models": [
-        "Hercules"
+        "Hercules",
+        "Amazon Robotics fleet"
       ],
-      "configuration": "Amazon’s published Hercules mobile-drive architecture. CPU, memory, storage, radio module, battery specification and actuator models are not disclosed. Do not inherit Proteus chips.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Amazon’s published Hercules mobile-drive architecture. CPU, memory, storage, radio module, battery specification and actuator models are not disclosed. Do not inherit Proteus chips. When displayed under Amazon Robotics fleet, this is one named representative configuration; its parts do not apply to the entire fleet.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "sensors",
@@ -14448,10 +14453,11 @@
       "id": "amazon-titan-launch",
       "manufacturer": "Amazon",
       "models": [
-        "Titan"
+        "Titan",
+        "Amazon Robotics fleet"
       ],
-      "configuration": "Amazon’s November 2023 Titan launch architecture. Component reuse is documented at subsystem level only: no CPU, RAM, storage, radio or battery capacity can be inferred from other robots.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Amazon’s November 2023 Titan launch architecture. Component reuse is documented at subsystem level only: no CPU, RAM, storage, radio or battery capacity can be inferred from other robots. When displayed under Amazon Robotics fleet, this is one named representative configuration; its parts do not apply to the entire fleet.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "compute",
@@ -37388,6 +37394,221 @@
           "details": "Configurations connect with AS/RS, AMRs, sorters, put walls and auto-baggers. AutoStore CarouselAI and VersaAI are named integrations, not evidence of identical internal hardware.",
           "sources": [
             "https://www.berkshiregrey.com/solutions/core-robotic-picking-system/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asti-ebot350-datasheet",
+      "manufacturer": "ASTI Mobile Robotics Group",
+      "models": [
+        "EBot350",
+        "Ebot 350"
+      ],
+      "configuration": "ASTI Ebot 350 manufacturer datasheet distributed by Europneumaq; table visually checked. CPU/safety-PLC model, RAM/storage, radio chipsets, battery voltage and capacity are not disclosed. Navigation and optional radio choices are configuration-dependent.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Safety controller",
+          "details": "Safety PLC supervises the protection system; no controller or processor part number is supplied.",
+          "sources": [
+            "https://f.hubspotusercontent20.net/hubfs/2896172/Cat%C3%A1logos%20Marcas/Ebot_350_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and protection",
+          "details": "QR-code, SLAM or magnetic navigation; two safety laser scanners, two emergency-stop buttons and QR/RFID reader functionality are described.",
+          "sources": [
+            "https://f.hubspotusercontent20.net/hubfs/2896172/Cat%C3%A1logos%20Marcas/Ebot_350_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless interfaces",
+          "details": "Wi-Fi; 4G and an additional radio-frequency system are optional. Bands, modules and unique broadcast identifiers are unspecified.",
+          "sources": [
+            "https://f.hubspotusercontent20.net/hubfs/2896172/Cat%C3%A1logos%20Marcas/Ebot_350_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and charging",
+          "details": "Lithium-ion battery with online charging. The advertised 24/7 operation depends on charging, not a 24-hour single-charge runtime.",
+          "sources": [
+            "https://f.hubspotusercontent20.net/hubfs/2896172/Cat%C3%A1logos%20Marcas/Ebot_350_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "External connections",
+          "details": "Two USB ports, Ethernet and HMI. OPC PLC interface and ERP/MES/WMS integration; wired or wireless manual control.",
+          "sources": [
+            "https://f.hubspotusercontent20.net/hubfs/2896172/Cat%C3%A1logos%20Marcas/Ebot_350_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Drive and load",
+          "details": "Multidirectional platform, 350 kg payload; loaded speed 0.05–1.7 m/s and unloaded maximum 2 m/s.",
+          "sources": [
+            "https://f.hubspotusercontent20.net/hubfs/2896172/Cat%C3%A1logos%20Marcas/Ebot_350_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operator software",
+          "details": "SIGAT software interface.",
+          "sources": [
+            "https://f.hubspotusercontent20.net/hubfs/2896172/Cat%C3%A1logos%20Marcas/Ebot_350_datasheet.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jbt-sgv-2018-system-architecture",
+      "manufacturer": "JBT Corporation",
+      "models": [
+        "JBT Automated Guided Vehicles"
+      ],
+      "configuration": "JBT 2018 SGV system-overview configuration; historical manufacturer document remains indexed, but its original download may redirect to the successor FORMOVA site. Not a universal BOM for later vehicles. CPU, memory, radio-module and battery part numbers are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Vehicle and fleet controllers",
+          "details": "Onboard mobile PC controls each vehicle. A separate SGV Manager server assigns tasks and coordinates plant equipment; processor models are unspecified.",
+          "sources": [
+            "https://www.jbtc.com/automated-systems/wp-content/uploads/sites/6/2022/03/AGV-System-Overview_EN_2018.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Fleet communication",
+          "details": "Published WLAN options: IEEE 802.11a/b/g/n/ac. These shared standards do not identify a JBT vehicle by themselves.",
+          "sources": [
+            "https://www.jbtc.com/automated-systems/wp-content/uploads/sites/6/2022/03/AGV-System-Overview_EN_2018.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Guidance alternatives",
+          "details": "Laser triangulation, natural-feature scanning, inertial, magnetic, wire and optical guidance are configuration alternatives; not a claim that each vehicle contains all sensors.",
+          "sources": [
+            "https://www.jbtc.com/automated-systems/wp-content/uploads/sites/6/2022/03/AGV-System-Overview_EN_2018.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery management",
+          "details": "Electric vehicles report battery level; automatic charging or manual/automatic battery exchange depends on installation.",
+          "sources": [
+            "https://www.jbtc.com/automated-systems/wp-content/uploads/sites/6/2022/03/AGV-System-Overview_EN_2018.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Plant and operator connections",
+          "details": "Factory LAN links WMS/WCS/ERP and PLC I/O. Vehicles include a color touchscreen and manual pendant; plant interfaces cover doors, conveyors and pickup/drop sensors.",
+          "sources": [
+            "https://www.jbtc.com/automated-systems/wp-content/uploads/sites/6/2022/03/AGV-System-Overview_EN_2018.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control stack",
+          "details": "SGV Manager client/server with SQL Server, historical records and hot backup. Layout Wizard defines routes; vendor support uses VPN.",
+          "sources": [
+            "https://www.jbtc.com/automated-systems/wp-content/uploads/sites/6/2022/03/AGV-System-Overview_EN_2018.pdf"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Successor documentation",
+          "details": "Current FORMOVA vehicle catalog is linked separately; newer product specifications must not be backfilled into the 2018 configuration.",
+          "sources": [
+            "https://formova.com/total-automation-intelligence/automated-guided-vehicles/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocado-osp-documented-grid-architecture",
+      "manufacturer": "Ocado Group",
+      "models": [
+        "Ocado Smart Platform"
+      ],
+      "configuration": "OSP grid-robot architecture with separately dated disclosures: 2016 radio design, 2017 battery description, 2021 engineering article and 2023 Erith RFID case study. Not an identical BOM across generations or the Chuck/Porter AMR fleet. CPU, memory, battery chemistry/capacity and final custom RFID chip are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Custom warehouse control link",
+          "details": "2016 supplier disclosure: proprietary radio based on 4G principles in unlicensed 5 GHz spectrum, with ten updates per second per robot. This is not evidence of standard Wi-Fi interoperability or a unique passive signature.",
+          "sources": [
+            "https://www.cambridgenetwork.co.uk/news/cambridge-consultants-presents-world-first-radio-design",
+            "https://www.ocadogroup.com/newsroom/news/ocado-teaches-robots-talk-over-4g"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Control topology",
+          "details": "Custom radio boards connect robots with warehouse base stations and the central control system; supplier describes simultaneous coordination of thousands of bots.",
+          "sources": [
+            "https://www.cambridgeconsultants.com/project/wireless-breakthrough-for-the-ocado-smart-platform/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Erith RFID localization",
+          "details": "HID/CoreRFID describe custom grid-mounted tags for position tracking. Sentry 5706 / FIT 210 was an early trial; the final customized tag chipset and operating band are not identified.",
+          "sources": [
+            "https://www.rfid.com/wp-content/uploads/2025/03/Ocado-Warehouse-Robot-Tracking-Case-Study.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Historical battery configuration",
+          "details": "2017 annual report, printed page 25: battery-powered grid robots with regenerative braking and roughly 200 W average consumption; charging under half an hour supports several hours of work. These ratings are not assigned to later 600 Series bots.",
+          "sources": [
+            "https://uploads4.craft.co/uploads/operating_source/document/117131/bb02f5f78334032b.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Telemetry and radio modelling",
+          "details": "2021 engineering article describes continuous onboard data collection, cloud analysis and path-loss modelling for warehouse radio design. It does not disclose a public robot telemetry endpoint.",
+          "sources": [
+            "https://careers.ocadogroup.com/blogs/hello-robot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocado-600-series-mechanical-architecture",
+      "manufacturer": "Ocado Group",
+      "models": [
+        "600 Series Bot",
+        "Ocado Smart Platform"
+      ],
+      "configuration": "600 Series configuration described in 2024 and 2026. Electronics, radio module, sensors and electrical ratings are not disclosed here; earlier OSP battery figures and patent example processors are not assigned to this model.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Chassis and tote handling",
+          "details": "Additive-manufactured lightweight chassis traverses the storage grid and retrieves totes from stacks up to 21 bins deep, delivering them to human or robotic pick stations.",
+          "sources": [
+            "https://www.ocadogroup.com/newsroom/news/ocado-groups-additive-first-bot"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet orchestration",
+          "details": "Central orchestration and digital-twin planning coordinate bot movement and warehouse throughput. On-Grid Robotic Pick is a separate vision-guided arm on the grid, not an onboard arm in every bot.",
+          "sources": [
+            "https://www.ocadogroup.com/newsroom/stories/meet-the-bots-that-power-ocado-groups-online-grocery-fulfilment-across-the-globe"
           ]
         }
       ]

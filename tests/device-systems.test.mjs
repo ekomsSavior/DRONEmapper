@@ -394,7 +394,7 @@ test('supplier disclosures and platform revisions remain model-specific',()=>{
  assert.match(text(proteus.sections.compute),/TDA4VM/);
  assert.match(text(proteus.sections.compute),/RM46L852/);
  assert.doesNotMatch(titan.sections.compute.facts.map(f=>f.details).join(' '),/TDA4VM|DRA821|RM46L852/);
- assert.equal(profileIds(system('Amazon','Amazon Robotics fleet')).length,0);
+ assert.deepEqual(profileIds(system('Amazon','Amazon Robotics fleet')).sort(),['amazon-hercules','amazon-proteus-ti-2024','amazon-titan-launch']);
  assert.equal(profileIds(system('Amazon','Proteus next generation')).length,0);
  const f02=system('Figure AI','Figure 02');
  assert.match(text(f02.sections.compute),/Two NVIDIA RTX/);
@@ -1126,7 +1126,7 @@ test('sorting revisions and humanoid embodiments retain their own hardware',()=>
  assert.match(text(v3.sections.power),/51.8 V \/ 12.4 Ah/);
  assert.match(text(system('Geek+','S100C V2.0').sections.sensors),/optional LiDAR/);
  assert.equal(profileIds(system('Geek+','Geek+ S Series')).length,6);
- assert.equal(profileIds(system('Geek+','Geek+ AMR')).length,0);
+ assert.deepEqual(profileIds(system('Geek+','Geek+ AMR')).sort(),['geekplus-p1200r-brochure','geekplus-p500r-brochure','geekplus-p800r-brochure']);
  const wheeled=system('Humanoid','HMND 01 Alpha Wheeled'),biped=system('Humanoid','HMND 01 Alpha Bipedal');
  assert.match(text(wheeled.sections.compute),/Jetson Thor/);
  assert.equal(wheeled.sections.memory.status,'not-established');
@@ -1976,4 +1976,32 @@ test('batch 53 does not invent a DP3 alias or undocumented arm and controller pa
  assert.equal(vulcan.sections.power.status,'not-established');
  assert.equal(profileIds(system('ICON','Titan')).length,0);
  assert.equal(profileIds(system('Verkada','CM42',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('batch 60 scopes warehouse radios, historical ratings and fleet configurations',()=>{
+ const ebot=system('ASTI Mobile Robotics Group','EBot350');
+ assert.match(text(ebot.sections.compute),/Safety PLC/);
+ assert.match(text(ebot.sections.radios),/4G.*optional/);
+ assert.equal(ebot.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('ASTI Mobile Robotics Group','Ebot 600')).length,0);
+ const jbt=system('JBT Corporation','JBT Automated Guided Vehicles');
+ assert.match(text(jbt.configurations),/2018/);
+ assert.match(text(jbt.sections.compute),/Onboard mobile PC/);
+ assert.doesNotMatch(text(jbt.sections.compute.facts.map(f=>f.details)),/Intel|ARM|Cortex|Siemens/);
+ const osp=system('Ocado Group','Ocado Smart Platform');
+ assert.equal(profileIds(osp).length,2);
+ assert.match(text(osp.sections.radios),/not evidence of standard Wi-Fi/);
+ assert.match(text(osp.sections.sensors),/early trial/);
+ const newer=system('Ocado Group','600 Series Bot');
+ assert.equal(profileIds(newer).length,1);
+ assert.equal(newer.sections.power.status,'not-established');
+ assert.doesNotMatch(text(newer.sections.compute.facts),/OCT2224|Intel|FPGA/);
+ assert.equal(profileIds(system('Ocado Group','Chuck')).length,0);
+ const fleet=system('Amazon','Amazon Robotics fleet');
+ assert.equal(profileIds(fleet).length,3);
+ assert.match(text(fleet.configurations),/representative configuration/);
+ assert.doesNotMatch(text(system('Amazon','Hercules').sections.compute.facts),/TDA4VM/);
+ assert.equal(profileIds(system('Geek+','Geek+ AMR')).length,3);
+ assert.equal(profileIds(system('Geek+','P800R')).length,1);
+ assert.equal(profileIds(system('Amazon','Amazon Robotics fleet',{kind:'regulatory-equipment'})).length,0);
 });
