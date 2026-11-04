@@ -28241,8 +28241,8 @@
         "MQ-1B Predator (USAF September 2015)",
         "General Atomics MQ-1 Predator"
       ],
-      "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "power",
@@ -28274,6 +28274,14 @@
           "details": "Aircraft, ground-control station and Predator Primary Satellite Link form the system. Published payload 204 kg; remote pilot and sensor operator.",
           "sources": [
             "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "MQ-1 Predator"
           ]
         }
       ]
@@ -28345,8 +28353,8 @@
         "General Atomics MQ-9A Reaper",
         "MQ-9 Reaper"
       ],
-      "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "compute",
@@ -28386,6 +28394,14 @@
           "details": "Seven external mounting stations and MIL-STD-1760 payload interface.",
           "sources": [
             "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "MQ-9 Reaper"
           ]
         }
       ]
@@ -31038,8 +31054,8 @@
         "RQ-4 Global Hawk",
         "Global Hawk / Triton family"
       ],
-      "configuration": "USAF October 2014 baseline and supplier June 2015 IMMC reference. Sensor fit is Block 30; component data must not be generalized to every later RQ-4. CPU SKU, RAM and storage not published.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "USAF October 2014 baseline and supplier June 2015 IMMC reference. Sensor fit is Block 30; component data must not be generalized to every later RQ-4. CPU SKU, RAM and storage not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "compute",
@@ -31073,6 +31089,15 @@
             "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104516/rq-4-global-hawk/mod/rq-4-global-hawk/"
           ]
         }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Global Hawk",
+            "Global Hawk, BAMS"
+          ]
+        }
       ]
     },
     {
@@ -31083,8 +31108,8 @@
         "RQ-4 Global Hawk",
         "Global Hawk / Triton family"
       ],
-      "configuration": "Separate Block 40 sensor reference in the October 2014 USAF fact sheet. Other RQ-4 configurations may carry different sensors; no processor or memory specification assigned from this source.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Separate Block 40 sensor reference in the October 2014 USAF fact sheet. Other RQ-4 configurations may carry different sensors; no processor or memory specification assigned from this source. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "sensors",
@@ -31092,6 +31117,15 @@
           "details": "Radar Technology Insertion Program active electronically scanned array supplies moving-target indication and synthetic-aperture imagery.",
           "sources": [
             "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104516/rq-4-global-hawk/mod/rq-4-global-hawk/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Global Hawk",
+            "Global Hawk, BAMS"
           ]
         }
       ]
@@ -40560,6 +40594,619 @@
           "manufacturer": "Saronic Technologies",
           "models": [
             "Saronic USV (Corsair / Mirage / Marauder)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "av-raven-b-usaf-2007",
+      "manufacturer": "AeroVironment",
+      "models": [
+        "RQ-11B Raven (USAF 2007)"
+      ],
+      "configuration": "October 2007 USAF Raven B configuration, distinct from later gimbaled-payload revisions. Processor silicon, memory and radio waveform are not disclosed. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electric propulsion",
+          "details": "Electric motor powered by rechargeable lithium-ion batteries.",
+          "sources": [
+            "https://www.littlerock.af.mil/Portals/25/documents/Event%20documents%20delete%20after%20event/Military%20EXPO/Fact%20Sheets/RQ-11B%20Raven.pdf?ver=2016-09-14-095458-420"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Original camera configuration",
+          "details": "Color electro-optical camera and infrared camera for night operation.",
+          "sources": [
+            "https://www.littlerock.af.mil/Portals/25/documents/Event%20documents%20delete%20after%20event/Military%20EXPO/Fact%20Sheets/RQ-11B%20Raven.pdf?ver=2016-09-14-095458-420"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Air and ground equipment",
+          "details": "Two air vehicles, ground-control unit, remote video terminal and support equipment. Aircraft wingspan 1.37 m; mass 1.9 kg.",
+          "sources": [
+            "https://www.littlerock.af.mil/Portals/25/documents/Event%20documents%20delete%20after%20event/Military%20EXPO/Fact%20Sheets/RQ-11B%20Raven.pdf?ver=2016-09-14-095458-420"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight control",
+          "details": "Manual flight or autonomous navigation of a planned route.",
+          "sources": [
+            "https://www.littlerock.af.mil/Portals/25/documents/Event%20documents%20delete%20after%20event/Military%20EXPO/Fact%20Sheets/RQ-11B%20Raven.pdf?ver=2016-09-14-095458-420"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Raven",
+            "Raven (RQ – 11A, RQ – 11B)",
+            "Raven RQ11A/B Wasp",
+            "Raven, Warrior, Puma-AE",
+            "Shadow, Raven",
+            "Shadow, Warrior, Raven",
+            "Shadow, Wasp, Raven",
+            "Wasp, Raven",
+            "Wasp, Raven, Puma-AE",
+            "Wasp, Raven. Puma-AE, Shadow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "av-raven-b-army-2014",
+      "manufacturer": "AeroVironment",
+      "models": [
+        "RQ-11B Raven (Army 2014)"
+      ],
+      "configuration": "November 2014 Army configuration during replacement of fixed camera payloads with gimbaled sensors. Exact CPU, RAM, storage, motor part and radio band are unspecified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Gimbaled imaging upgrade",
+          "details": "Combined color EO/IR imaging and laser illumination; secure GPS navigation. This was a replacement for earlier fixed EO/IR payloads.",
+          "sources": [
+            "https://www.army.mil/article-amp/137604/rq_11b_raven_small_unmanned_aircraft_systems_suas"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "System composition",
+          "details": "Three aircraft, GCS, remote video terminal, batteries and chargers; gimbaled payloads are shared system equipment.",
+          "sources": [
+            "https://www.army.mil/article-amp/137604/rq_11b_raven_small_unmanned_aircraft_systems_suas"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mission planning",
+          "details": "Hand controller or rugged laptop running Portable Flight Planning Software/Falcon View.",
+          "sources": [
+            "https://www.army.mil/article-amp/137604/rq_11b_raven_small_unmanned_aircraft_systems_suas"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight modes",
+          "details": "Autonomous navigation, altitude hold, manual control, return home and loiter.",
+          "sources": [
+            "https://www.army.mil/article-amp/137604/rq_11b_raven_small_unmanned_aircraft_systems_suas"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Raven",
+            "Raven (RQ – 11A, RQ – 11B)",
+            "Raven RQ11A/B Wasp",
+            "Raven, Warrior, Puma-AE",
+            "Shadow, Raven",
+            "Shadow, Warrior, Raven",
+            "Shadow, Wasp, Raven",
+            "Wasp, Raven",
+            "Wasp, Raven, Puma-AE",
+            "Wasp, Raven. Puma-AE, Shadow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "av-wasp-iii-usaf",
+      "manufacturer": "AeroVironment",
+      "models": [
+        "Wasp III",
+        "Wasp III / BATMAV"
+      ],
+      "configuration": "USAF Increment III aircraft delivered from 2007; not Wasp II, RQ-12 Wasp AE or the unrelated WASP satellite antenna product. Autopilot chip, RAM and radio waveform are unpublished in this fact sheet. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Propulsion and battery",
+          "details": "Small electric motor drives a two-bladed propeller; rechargeable lithium-ion batteries.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/article/104480/wasp-iii/"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Flight-control subsystem",
+          "details": "Onboard autopilot; processor manufacturer and model are not named.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/article/104480/wasp-iii/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and imaging",
+          "details": "GPS and inertial navigation system with two onboard cameras; day/night imaging payload.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/article/104480/wasp-iii/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Portable control system",
+          "details": "Ground-control unit and communications ground station; handheld controller. Aircraft mass 453 g; complete system 6.53 kg.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/article/104480/wasp-iii/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy",
+          "details": "Autonomous operation from takeoff through recovery or manual handheld control.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/article/104480/wasp-iii/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Wasp",
+            "Wasp III",
+            "Wasp (BATMAV) Small UAS",
+            "Raven RQ11A/B Wasp",
+            "Shadow, Wasp, Raven",
+            "Wasp, Raven",
+            "Wasp, Raven, Puma-AE",
+            "Wasp, Raven. Puma-AE, Shadow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "av-puma-ae-2013-upgrade",
+      "manufacturer": "AeroVironment",
+      "models": [
+        "RQ-20A Puma AE (2013 block upgrade)"
+      ],
+      "configuration": "October 2013 announcement of an upgrade scheduled for Q1 2014. Distinct from Puma 3 AE; solar and fuel-cell compatibility was a future integration capability, not standard fitted power. CPU and RAM are not named. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Propulsion upgrade",
+          "details": "Improved propulsion and long-endurance smart battery, advertised above 3.5 hours; battery capacities are not stated.",
+          "sources": [
+            "https://investor.avinc.com/news-releases/news-release-details/aerovironment-introduces-block-upgrade-puma-ae-unmanned-aircraft"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and imaging",
+          "details": "Secondary GPS improves positional redundancy; color and thermal video retained.",
+          "sources": [
+            "https://investor.avinc.com/news-releases/news-release-details/aerovironment-introduces-block-upgrade-puma-ae-unmanned-aircraft"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Airframe and expansion",
+          "details": "Auxiliary payload bay and strengthened waterproof fuselage; 13.5 lb aircraft, hand-launched with water or land recovery.",
+          "sources": [
+            "https://investor.avinc.com/news-releases/news-release-details/aerovironment-introduces-block-upgrade-puma-ae-unmanned-aircraft"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Common operator equipment",
+          "details": "Autonomous operation through AeroVironment’s common small-UAS ground-control system.",
+          "sources": [
+            "https://investor.avinc.com/news-releases/news-release-details/aerovironment-introduces-block-upgrade-puma-ae-unmanned-aircraft"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Puma",
+            "Puma-AE",
+            "Raven, Warrior, Puma-AE",
+            "Wasp, Raven, Puma-AE",
+            "Wasp, Raven. Puma-AE, Shadow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "textron-shadow-v2-2019",
+      "manufacturer": "Textron Systems",
+      "models": [
+        "RQ-7B Shadow v2 (2019 brochure)"
+      ],
+      "configuration": "2017/2019 manufacturer brochure for RQ-7B v2. Its 212 kg mass and nine-hour specification differ from later Block III. Exact computer, memory, engine part and radio frequencies are not named. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Digital data link",
+          "details": "High-bandwidth encrypted control/video link with communications-relay capability; no unique passive identity is established.",
+          "sources": [
+            "https://www.textronsystems.com/sites/default/files/_documents/ShadowV2_Datasheet.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Payload options",
+          "details": "EO/IR mission imaging; high-definition imaging is described with the Block III upgrade, not universal earlier equipment.",
+          "sources": [
+            "https://www.textronsystems.com/sites/default/files/_documents/ShadowV2_Datasheet.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Payload electrical budget",
+          "details": "Up to 500 W for a 43 kg payload.",
+          "sources": [
+            "https://www.textronsystems.com/sites/default/files/_documents/ShadowV2_Datasheet.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground control and airframe",
+          "details": "Universal Ground Control Station; 6.2 m span and 212 kg aircraft specification.",
+          "sources": [
+            "https://www.textronsystems.com/sites/default/files/_documents/ShadowV2_Datasheet.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Shadow",
+            "RQ-7 Shadow",
+            "RQ-7B Shadow",
+            "Hunter, Shadow",
+            "Shadow, Raven",
+            "Shadow, Warrior, Raven",
+            "Shadow, Wasp, Raven",
+            "Wasp, Raven. Puma-AE, Shadow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "textron-shadow-v2-blockiii",
+      "manufacturer": "Textron Systems",
+      "models": [
+        "RQ-7B Shadow v2 Block III"
+      ],
+      "configuration": "Manufacturer Block III specification, distinct from earlier RQ-7 and RQ-7B v2. Computer, RAM, engine SKU and modem details remain unpublished. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Propulsion and payload supply",
+          "details": "Water-cooled engine, advertised as 24% more powerful than the prior configuration; payload electrical allowance up to 500 W.",
+          "sources": [
+            "https://www.textronsystems.com/products/shadow-tactical-unmanned-aircraft-systems"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Configurable imaging",
+          "details": "High-definition EO/IR with continuous zoom; sensor part number and individual fit not specified.",
+          "sources": [
+            "https://www.textronsystems.com/products/shadow-tactical-unmanned-aircraft-systems"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Relay and control",
+          "details": "Advanced communications relay; UGCS or portable PGCS ground-control options.",
+          "sources": [
+            "https://www.textronsystems.com/products/shadow-tactical-unmanned-aircraft-systems"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Airframe and recovery",
+          "details": "6.2 m span, 243 kg gross takeoff weight, 43 kg payload; automatic short-field landing with arresting gear.",
+          "sources": [
+            "https://www.textronsystems.com/products/shadow-tactical-unmanned-aircraft-systems"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Shadow",
+            "RQ-7 Shadow",
+            "RQ-7B Shadow",
+            "Hunter, Shadow",
+            "Shadow, Raven",
+            "Shadow, Warrior, Raven",
+            "Shadow, Wasp, Raven",
+            "Wasp, Raven. Puma-AE, Shadow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yamaha-rmax-typeii",
+      "manufacturer": "Yamaha Motor",
+      "models": [
+        "RMAX Type II"
+      ],
+      "configuration": "Japanese L17 Type II specification. YACS-G/GPS belongs to Type IIG; FAZER’s 390 cc engine and later electronics are not assigned here. CPU, memory and radio part numbers are not disclosed. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "YACS controller",
+          "details": "Yamaha attitude-control system; processor silicon is unspecified.",
+          "sources": [
+            "https://www.yamaha-motor.co.jp/ums/heli/rmax.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "YACS feedback",
+          "details": "Yamaha describes the RMAX-era YACS architecture as three gyro sensors plus an accelerometer.",
+          "sources": [
+            "https://global.yamaha-motor.com/design_technology/technology/electronic/008/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Engine",
+          "details": "246 cc horizontally opposed two-cylinder two-stroke engine, 15.4 kW; gasoline/two-stroke-oil mixture.",
+          "sources": [
+            "https://www.yamaha-motor.co.jp/ums/heli/rmax.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Rotor and spray system",
+          "details": "3,130 mm main rotor; 16 kg agricultural payload with removable spray equipment.",
+          "sources": [
+            "https://www.yamaha-motor.co.jp/ums/heli/rmax.html"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "RMAX",
+            "Yamaha RMAX Type II helicopter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yamaha-rmax-typeiig",
+      "manufacturer": "Yamaha Motor",
+      "models": [
+        "RMAX Type IIG"
+      ],
+      "configuration": "GPS-assisted Type IIG introduced in 2003. This separate configuration is not a claim that every historical RMAX had GPS or autonomous-flight G0/G1 hardware. CPU, RAM and modem models are not disclosed. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "YACS-G controller",
+          "details": "Computer-controlled attitude system augmented by GPS-based speed and altitude information.",
+          "sources": [
+            "https://www.yamaha-motor.co.jp/ums/heli/rmax.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation upgrade",
+          "details": "GPS was added in Type IIG; do not apply FAZER’s later integrated directional sensor to this model.",
+          "sources": [
+            "https://global.yamaha-motor.com/design_technology/technology/electronic/008/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Engine and charging",
+          "details": "246 cc liquid-cooled two-stroke engine, 15.4 kW; electric starter and generator charging the onboard battery.",
+          "sources": [
+            "https://www.yamaha-motor.co.jp/ums/heli/rmax.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Spray payload",
+          "details": "Two 8-liter liquid tanks; GPS-linked variable delivery in the specified application mode.",
+          "sources": [
+            "https://www.yamaha-motor.co.jp/ums/heli/rmax.html"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "RMAX"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "draganfly-x6-legacy-manual",
+      "manufacturer": "Draganfly",
+      "models": [
+        "Draganflyer X6"
+      ],
+      "configuration": "Legacy manufacturer technical manual preserved by a manual archive. Aircraft and handheld controller specifications are separated; optional cameras are not all fitted together. CPU SKU and RAM are not published. Shared bands do not identify the aircraft. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "SteadyFlight controller",
+          "details": "Onboard processor fuses navigation sensors; silicon unspecified.",
+          "sources": [
+            "https://sefd5f829031e8300.jimcontent.com/download/version/1611600483/module/13940893092/name/Draganflyer%20X6%20Helicopter%20Tech%20Manual.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "Three gyros, three accelerometers, three magnetometers, barometer and GPS; GPS updates at 4 Hz.",
+          "sources": [
+            "https://sefd5f829031e8300.jimcontent.com/download/version/1611600483/module/13940893092/name/Draganflyer%20X6%20Helicopter%20Tech%20Manual.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Control link",
+          "details": "Bidirectional DSSS, 250 kbit/s, 2.4000–2.4835 GHz; automatic channel selection. Manual gives conflicting 12/13 channel counts.",
+          "sources": [
+            "https://sefd5f829031e8300.jimcontent.com/download/version/1611600483/module/13940893092/name/Draganflyer%20X6%20Helicopter%20Tech%20Manual.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Video link",
+          "details": "One-way NTSC/PAL: 5740, 5760, 5780, 5800, 5820, 5840 or 5860 MHz.",
+          "sources": [
+            "https://sefd5f829031e8300.jimcontent.com/download/version/1611600483/module/13940893092/name/Draganflyer%20X6%20Helicopter%20Tech%20Manual.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Aircraft propulsion",
+          "details": "Six direct-drive brushless motors in three coaxial pairs; 14.8 V 2700 mAh LiPo, 4s2p.",
+          "sources": [
+            "https://sefd5f829031e8300.jimcontent.com/download/version/1611600483/module/13940893092/name/Draganflyer%20X6%20Helicopter%20Tech%20Manual.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Aircraft recorder",
+          "details": "Removable microSD flight-data recorder; source labels capacity “1Gb”, so byte capacity is unresolved.",
+          "sources": [
+            "https://sefd5f829031e8300.jimcontent.com/download/version/1611600483/module/13940893092/name/Draganflyer%20X6%20Helicopter%20Tech%20Manual.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera alternatives",
+          "details": "Panasonic DMC-FX500K still camera or FLIR Photon thermal camera are documented options.",
+          "sources": [
+            "https://sefd5f829031e8300.jimcontent.com/download/version/1611600483/module/13940893092/name/Draganflyer%20X6%20Helicopter%20Tech%20Manual.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Handheld controller",
+          "details": "2.8-inch 240×320 OLED touchscreen, video outputs and SD slot; separate 11.1 V 2000 mAh battery.",
+          "sources": [
+            "https://sefd5f829031e8300.jimcontent.com/download/version/1611600483/module/13940893092/name/Draganflyer%20X6%20Helicopter%20Tech%20Manual.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Ground telemetry",
+          "details": "Windows configuration software uses a USB telemetry transceiver.",
+          "sources": [
+            "https://sefd5f829031e8300.jimcontent.com/download/version/1611600483/module/13940893092/name/Draganflyer%20X6%20Helicopter%20Tech%20Manual.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Draganflyer X6",
+            "AirRobot AR-1 00 Draganflyer X6 Draganflyer X8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "insitu-scaneagle-legacy-2007",
+      "manufacturer": "Insitu",
+      "models": [
+        "ScanEagle (2007-era reference)"
+      ],
+      "configuration": "2007 Boeing operating description; engine reference is the Museum of Flight’s historical ScanEagle collection account. This does not establish the engine part number or hardware revision in every old map record. Modern PLEO SATCOM and new payloads are not inherited. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight controller",
+          "details": "Onboard flight-control system follows GPS-guided routes; processor type not disclosed.",
+          "sources": [
+            "https://boeing.mediaroom.com/2007-01-05-Boeing-Provides-ScanEagle-UAV-to-Australian-Army"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Original payload choices",
+          "details": "Inertially stabilized EO or IR camera, selected for the mission.",
+          "sources": [
+            "https://boeing.mediaroom.com/2007-01-05-Boeing-Provides-ScanEagle-UAV-to-Australian-Army"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Launch and recovery",
+          "details": "Pneumatic catapult and Skyhook retrieval; 1.2 m length and approximately 3 m wingspan.",
+          "sources": [
+            "https://boeing.mediaroom.com/2007-01-05-Boeing-Provides-ScanEagle-UAV-to-Australian-Army"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Historical engine reference",
+          "details": "Museum collection description specifies one 1.9 hp two-stroke engine, without a model number.",
+          "sources": [
+            "https://www.museumofflight.org/about/press/1862/museum-displays-scaneagle-drone-used-in-quotcaptain-phillipsquot-rescue"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation modes",
+          "details": "Pre-programmed or operator-initiated missions guided by GPS and onboard controls.",
+          "sources": [
+            "https://boeing.mediaroom.com/2007-01-05-Boeing-Provides-ScanEagle-UAV-to-Australian-Army"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Scan Eagle",
+            "Viking 300, Scan Eagle"
           ]
         }
       ]

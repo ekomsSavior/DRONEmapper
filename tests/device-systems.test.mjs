@@ -9,6 +9,47 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 66 binds dated aircraft references without conflating revisions',()=>{
+ const old=name=>system('Unknown manufacturer',name);
+ assert.equal(profileIds(old('Raven')).length,2);
+ assert.match(text(old('Raven').configurations),/not an assertion that an older observation carried later upgrades/);
+ assert.equal(old('Raven').sections.compute.status,'not-established');
+ assert.equal(profileIds(old('Wasp III')).length,1);
+ assert.equal(profileIds(old('WASP II')).length,0);
+ assert.equal(profileIds(system('AeroVironment','Wasp AE')).includes('av-wasp-iii-usaf'),false);
+ assert.equal(profileIds(system('AeroVironment','WASP satellite antenna')).length,0);
+ assert.equal(profileIds(old('Shadow, Wasp, Raven')).length,5);
+ assert.equal(profileIds(old('Predator and ??')).length,0);
+ assert.equal(profileIds(old('MQ-9 Reaper')).includes('ga-mq9a-2015'),true);
+ assert.equal(profileIds(old('Global Hawk')).length,2);
+ const shadow=system('Textron Systems','RQ-7B Shadow v2 (2019 brochure)');
+ assert.match(text(shadow.sections.interfaces),/212 kg/);
+ assert.doesNotMatch(text(shadow.sections.interfaces.facts.map(f=>f.details)),/243 kg/);
+ assert.match(text(system('Textron Systems','RQ-7B Shadow v2 Block III').sections.interfaces),/243 kg/);
+ const puma=old('Puma-AE');
+ assert.match(text(puma.configurations),/Q1 2014.*not standard fitted power/);
+ assert.doesNotMatch(text(puma.sections.power.facts.map(f=>f.details)),/solar|fuel.cell/);
+});
+
+test('batch 66 separates RMAX control systems and X6 components from detection signatures',()=>{
+ const ii=system('Yamaha Motor','RMAX Type II'),iig=system('Yamaha Motor','RMAX Type IIG');
+ assert.match(text(ii.sections.compute.facts.map(f=>f.details)),/Yamaha attitude-control/);
+ assert.doesNotMatch(text(ii.sections.sensors.facts.map(f=>f.details)),/GPS|PLL/);
+ assert.match(text(iig.sections.compute),/GPS/);
+ assert.equal(profileIds(system('Unknown manufacturer','Yamaha RMAX Type II helicopter')).length,1);
+ const x6=system('Unknown manufacturer','Draganflyer X6');
+ assert.match(text(x6.sections.radios),/DSSS.*250 kbit/);
+ assert.match(text(x6.sections.radios),/conflicting 12\/13/);
+ assert.match(text(x6.sections.memory),/byte capacity is unresolved/);
+ assert.match(text(x6.sections.power),/14.8 V 2700 mAh/);
+ assert.match(text(x6.sections.interfaces),/separate 11.1 V 2000 mAh/);
+ assert.doesNotMatch(text(x6.sections.compute.facts.map(f=>f.details)),/STM32|Gumstix/);
+ assert.equal(profileIds(system('Other manufacturer','Draganflyer X6')).length,0);
+ assert.equal(profileIds(system('Draganfly','Draganflyer X6',{kind:'regulatory-equipment'})).length,0);
+ assert.equal(x6.complete_bill_of_materials,false);
+ assert.equal(x6.sections.identification.facts.some(f=>f.pattern),false);
+});
+
 test('batch 65 keeps component computers and vehicle revisions separate',()=>{
  const vpu=system('John Deere','Vision Processing Unit (2026 OEM specification)');
  assert.match(text(vpu.sections.compute),/Orin.*twelve ARM.*275 TOPS/);
