@@ -74713,8 +74713,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-eaglet-launch-control-reference",
+            "configuration": "December 2022 first-flight report and 2025 ground-control compatibility reference. These establish launch/control interfaces, not onboard electronics. No processor, memory, radio, engine or payload sensor model is established. Ground-station operating systems and supported link families are not aircraft hardware specifications.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -74752,13 +74758,51 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Demonstrated carrier interface",
+                "details": "Initial flight launched from MQ-1C Gray Eagle ER. Manufacturer places Eaglet in the ALE Large category with configurable payloads.",
+                "sources": [
+                  "https://www.ga-asi.com/ga-asi-s-eaglet-takes-its-first-flight"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-eaglet-launch-control-reference",
+                "configuration": "December 2022 first-flight report and 2025 ground-control compatibility reference. These establish launch/control interfaces, not onboard electronics. No processor, memory, radio, engine or payload sensor model is established. Ground-station operating systems and supported link families are not aircraft hardware specifications.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Ground-station compatibility",
+                "details": "EGCS datasheet names Eaglet as a supported aircraft. Ground equipment can use desktop, laptop or mission-server hardware.",
+                "sources": [
+                  "https://www.ga-asi.com/ground-control-stations/img/2509_EGCS_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-eaglet-launch-control-reference",
+                "configuration": "December 2022 first-flight report and 2025 ground-control compatibility reference. These establish launch/control interfaces, not onboard electronics. No processor, memory, radio, engine or payload sensor model is established. Ground-station operating systems and supported link families are not aircraft hardware specifications.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "External control software",
+                "details": "EGCS containerized applications support Windows or Linux and FACE 3.1 architecture. This describes the compatible ground system only.",
+                "sources": [
+                  "https://www.ga-asi.com/ground-control-stations/img/2509_EGCS_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-eaglet-launch-control-reference",
+                "configuration": "December 2022 first-flight report and 2025 ground-control compatibility reference. These establish launch/control interfaces, not onboard electronics. No processor, memory, radio, engine or payload sensor model is established. Ground-station operating systems and supported link families are not aircraft hardware specifications.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -74776,8 +74820,6 @@
           "memory",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -74849,8 +74891,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-fq42a-2026-production-architecture",
+            "configuration": "June 2026 production-contract announcement. It establishes the production designation and modular architecture, not a public parts list. YFQ-42A prototype test software is not assumed to be production equipment. Processor, memory, engine and radio models remain unpublished.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -74888,13 +74936,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular mission systems",
+                "details": "Manufacturer describes modular aircraft design supporting integration of mission systems and autonomy software.",
+                "sources": [
+                  "https://www.ga-asi.com/us-air-force-awards-ga-asi-production-contract-for-fq-42a-cca"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-fq42a-2026-production-architecture",
+                "configuration": "June 2026 production-contract announcement. It establishes the production designation and modular architecture, not a public parts list. YFQ-42A prototype test software is not assumed to be production equipment. Processor, memory, engine and radio models remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Architecture boundary",
+                "details": "Mission-autonomy and human-machine teaming architecture was flight tested on multiple airframes; the production software configuration is not named.",
+                "sources": [
+                  "https://www.ga-asi.com/us-air-force-awards-ga-asi-production-contract-for-fq-42a-cca"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-fq42a-2026-production-architecture",
+                "configuration": "June 2026 production-contract announcement. It establishes the production designation and modular architecture, not a public parts list. YFQ-42A prototype test software is not assumed to be production equipment. Processor, memory, engine and radio models remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -74912,8 +74986,6 @@
           "memory",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -74984,13 +75056,32 @@
         "schema_version": 1,
         "record_scope": "program-or-family",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-gambit-core-family",
+            "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Common baseline avionics",
+                "details": "Gambit Core includes baseline avionics and essential aircraft functions; processor boards and flight-control redundancy are not specified.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -75023,8 +75114,33 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Shared platform architecture",
+                "details": "Core combines chassis and landing gear. Variant-specific engines, fuselages and wings attach to this baseline; manufacturer attributes roughly 70% of variant price to the core.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Distinct variant structures",
+                "details": "Gambit 1 uses high-aspect-ratio wings; Gambit 2 changes the outer mold line; Gambit 3 is the trainer configuration; Gambit 4 has swept wings without a tail. Gambit 5 is a carrier-capable concept; Gambit 6 is a separate mission variant.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -75043,11 +75159,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -75119,13 +75233,32 @@
         "schema_version": 1,
         "record_scope": "program-or-family",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-gambit-core-family",
+            "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Common baseline avionics",
+                "details": "Gambit Core includes baseline avionics and essential aircraft functions; processor boards and flight-control redundancy are not specified.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -75158,8 +75291,33 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Shared platform architecture",
+                "details": "Core combines chassis and landing gear. Variant-specific engines, fuselages and wings attach to this baseline; manufacturer attributes roughly 70% of variant price to the core.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Distinct variant structures",
+                "details": "Gambit 1 uses high-aspect-ratio wings; Gambit 2 changes the outer mold line; Gambit 3 is the trainer configuration; Gambit 4 has swept wings without a tail. Gambit 5 is a carrier-capable concept; Gambit 6 is a separate mission variant.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -75178,11 +75336,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -75254,13 +75410,32 @@
         "schema_version": 1,
         "record_scope": "program-or-family",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-gambit-core-family",
+            "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Common baseline avionics",
+                "details": "Gambit Core includes baseline avionics and essential aircraft functions; processor boards and flight-control redundancy are not specified.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -75293,8 +75468,33 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Shared platform architecture",
+                "details": "Core combines chassis and landing gear. Variant-specific engines, fuselages and wings attach to this baseline; manufacturer attributes roughly 70% of variant price to the core.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Distinct variant structures",
+                "details": "Gambit 1 uses high-aspect-ratio wings; Gambit 2 changes the outer mold line; Gambit 3 is the trainer configuration; Gambit 4 has swept wings without a tail. Gambit 5 is a carrier-capable concept; Gambit 6 is a separate mission variant.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -75313,11 +75513,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -75389,13 +75587,32 @@
         "schema_version": 1,
         "record_scope": "program-or-family",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-gambit-core-family",
+            "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Common baseline avionics",
+                "details": "Gambit Core includes baseline avionics and essential aircraft functions; processor boards and flight-control redundancy are not specified.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -75428,8 +75645,33 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Shared platform architecture",
+                "details": "Core combines chassis and landing gear. Variant-specific engines, fuselages and wings attach to this baseline; manufacturer attributes roughly 70% of variant price to the core.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Distinct variant structures",
+                "details": "Gambit 1 uses high-aspect-ratio wings; Gambit 2 changes the outer mold line; Gambit 3 is the trainer configuration; Gambit 4 has swept wings without a tail. Gambit 5 is a carrier-capable concept; Gambit 6 is a separate mission variant.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -75448,11 +75690,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -75524,13 +75764,32 @@
         "schema_version": 1,
         "record_scope": "program-or-family",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-gambit-core-family",
+            "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Common baseline avionics",
+                "details": "Gambit Core includes baseline avionics and essential aircraft functions; processor boards and flight-control redundancy are not specified.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -75563,8 +75822,33 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Shared platform architecture",
+                "details": "Core combines chassis and landing gear. Variant-specific engines, fuselages and wings attach to this baseline; manufacturer attributes roughly 70% of variant price to the core.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Distinct variant structures",
+                "details": "Gambit 1 uses high-aspect-ratio wings; Gambit 2 changes the outer mold line; Gambit 3 is the trainer configuration; Gambit 4 has swept wings without a tail. Gambit 5 is a carrier-capable concept; Gambit 6 is a separate mission variant.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -75583,11 +75867,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -75659,13 +75941,32 @@
         "schema_version": 1,
         "record_scope": "program-or-family",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-gambit-core-family",
+            "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Common baseline avionics",
+                "details": "Gambit Core includes baseline avionics and essential aircraft functions; processor boards and flight-control redundancy are not specified.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -75698,8 +75999,33 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Shared platform architecture",
+                "details": "Core combines chassis and landing gear. Variant-specific engines, fuselages and wings attach to this baseline; manufacturer attributes roughly 70% of variant price to the core.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Distinct variant structures",
+                "details": "Gambit 1 uses high-aspect-ratio wings; Gambit 2 changes the outer mold line; Gambit 3 is the trainer configuration; Gambit 4 has swept wings without a tail. Gambit 5 is a carrier-capable concept; Gambit 6 is a separate mission variant.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gambit-core-family",
+                "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -75718,11 +76044,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -76633,7 +76957,7 @@
         "configurations": [
           {
             "id": "ga-mq1b-2015",
-            "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+            "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
             "reviewed_on": "2026-11-04"
           }
         ],
@@ -76661,7 +76985,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq1b-2015",
-                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               },
               {
@@ -76687,7 +77011,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq1b-2015",
-                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -76705,7 +77029,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq1b-2015",
-                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -76723,7 +77047,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq1b-2015",
-                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -76830,8 +77154,8 @@
         "configurations": [
           {
             "id": "ga-gray-eagle-2014",
-            "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed.",
-            "reviewed_on": "2026-11-03"
+            "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+            "reviewed_on": "2026-11-04"
           }
         ],
         "sections": {
@@ -76848,8 +77172,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-gray-eagle-2014",
-                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -76871,8 +77195,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-gray-eagle-2014",
-                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               },
               {
                 "component": "Published model communications",
@@ -76897,8 +77221,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-gray-eagle-2014",
-                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -76915,8 +77239,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-gray-eagle-2014",
-                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               },
               {
                 "component": "Wingspan",
@@ -76965,8 +77289,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-gray-eagle-2014",
-                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -76983,8 +77307,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-gray-eagle-2014",
-                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -77083,13 +77407,66 @@
         "schema_version": 1,
         "record_scope": "program-or-family",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-mq9a-2015",
+            "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "ga-mq9b-skyguardian-2025",
+            "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "ga-mq9b-seaguardian-2025",
+            "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flight-control architecture",
+                "details": "Triple-redundant flight controls; redundant control surfaces.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9a-2015",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Certifiable avionics",
+                "details": "Hardware/software development follows DO-254 and DO-178 processes; specific CPU and controller boards are not identified.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-skyguardian-2025",
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Certifiable architecture",
+                "details": "DO-178 software and DO-254 hardware development; processor part numbers undisclosed.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-seaguardian-2025",
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -77098,8 +77475,44 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Air-ground links",
+                "details": "C-band line-of-sight and Ku-band satellite links. These shared bands are not unique radio identifiers.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9a-2015",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "radios",
+                "component": "Voice and satellite links",
+                "details": "Dual VHF/UHF radios and dual satellite links for beyond-line-of-sight control. Optional relay and Link 16.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-skyguardian-2025",
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "radios",
+                "component": "Communication system",
+                "details": "Dual VHF/UHF radios and dual satellite links. Link 16 and communications relay are options.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-seaguardian-2025",
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "Published model communications",
                 "details": "Public radio protocol not documented in reviewed sources",
@@ -77112,23 +77525,159 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Surveillance payloads",
+                "details": "MTS-B electro-optical/infrared system and Lynx multimode radar; maritime radar and AIS are configuration options.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9a-2015",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Mission and airspace sensing",
+                "details": "HD EO/IR, Lynx radar and detect-and-avoid architecture using TCAS, ADS-B and Due Regard Radar.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-skyguardian-2025",
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Maritime and collision-avoidance suite",
+                "details": "360-degree maritime radar, Lynx, HD EO/IR and AIS; TCAS, ADS-B and Due Regard Radar support detect-and-avoid.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-seaguardian-2025",
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Honeywell turboprop",
+                "details": "TPE331-10 turboprop. Datasheet distinguishes 11 kW supply from the 45 kVA Block 5 option.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9a-2015",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Engine and electrical supply",
+                "details": "Honeywell TPE331-10; 45 kVA primary supply and 2 kW backup.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-skyguardian-2025",
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion and generation",
+                "details": "Honeywell TPE331-10; 45 kVA main supply with 2 kW backup.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-seaguardian-2025",
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload integration",
+                "details": "Seven external mounting stations and MIL-STD-1760 payload interface.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/MQ9%20Reaper_Predator_B_032515.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9a-2015",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Payload integration",
+                "details": "Nine external stations; 363 kg internal and 1,814 kg external capacity in this revision. Maritime/AIS and other mission payloads are optional.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-skyguardian-2025",
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Payload mounts",
+                "details": "Nine external stations; 363 kg internal and 2,155 kg external capacity. Sonobuoy/ASW and airborne-early-warning equipment are optional configurations.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-seaguardian-2025",
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Automated flight",
+                "details": "Automatic takeoff and landing; designed for operation in shared airspace.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-skyguardian-2025",
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Automatic takeoff and landing",
+                "details": "Automatic flight launch and recovery; mission equipment varies by operator.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-seaguardian-2025",
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -77142,12 +77691,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -77497,7 +78041,7 @@
         "configurations": [
           {
             "id": "ga-mq9a-2015",
-            "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+            "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
             "reviewed_on": "2026-11-04"
           }
         ],
@@ -77515,7 +78059,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -77538,7 +78082,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               },
               {
@@ -77564,7 +78108,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -77582,7 +78126,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               },
               {
@@ -77616,7 +78160,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -77726,8 +78270,8 @@
         "configurations": [
           {
             "id": "ga-mq9b-seaguardian-2025",
-            "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed.",
-            "reviewed_on": "2026-11-03"
+            "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+            "reviewed_on": "2026-11-04"
           }
         ],
         "sections": {
@@ -77744,8 +78288,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-seaguardian-2025",
-                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -77767,8 +78311,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-seaguardian-2025",
-                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               },
               {
                 "component": "Published model communications",
@@ -77793,8 +78337,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-seaguardian-2025",
-                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -77811,8 +78355,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-seaguardian-2025",
-                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               },
               {
                 "component": "Published endurance",
@@ -77837,8 +78381,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-seaguardian-2025",
-                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -77855,8 +78399,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-seaguardian-2025",
-                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -77955,8 +78499,8 @@
         "configurations": [
           {
             "id": "ga-mq9b-skyguardian-2025",
-            "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft.",
-            "reviewed_on": "2026-11-03"
+            "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+            "reviewed_on": "2026-11-04"
           }
         ],
         "sections": {
@@ -77973,8 +78517,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-skyguardian-2025",
-                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -77996,8 +78540,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-skyguardian-2025",
-                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               },
               {
                 "component": "Published model communications",
@@ -78023,8 +78567,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-skyguardian-2025",
-                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -78041,8 +78585,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-skyguardian-2025",
-                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               },
               {
                 "component": "Wingspan",
@@ -78086,8 +78630,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-skyguardian-2025",
-                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -78104,8 +78648,8 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9b-skyguardian-2025",
-                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -78202,8 +78746,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-mq9b-stol-mission-kit",
+            "configuration": "Published MQ-9B short-takeoff/landing mission-kit architecture. This is a wing/tail modification for SkyGuardian or SeaGuardian, not the smaller Mojave aircraft. Listed payloads describe offered mission configurations, not a verified simultaneous installation. CPU, memory, exact radio and engine configuration are not specified on this page.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -78217,8 +78767,20 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Command and control",
+                "details": "Dual satellite links provide beyond-line-of-sight control. Modem models, bands and encryption configuration are not stated.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-stol-mission-kit",
+                "configuration": "Published MQ-9B short-takeoff/landing mission-kit architecture. This is a wing/tail modification for SkyGuardian or SeaGuardian, not the smaller Mojave aircraft. Listed payloads describe offered mission configurations, not a verified simultaneous installation. CPU, memory, exact radio and engine configuration are not specified on this page.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "Published model communications",
                 "details": "Public radio protocol not documented in reviewed sources",
@@ -78231,8 +78793,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Published payload and airspace systems",
+                "details": "Offerings include Lynx radar, maritime radar, AIS and HD EO/IR. Detect-and-avoid combines TCAS/ADS-B with Due Regard Radar; specific payload installation varies.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-stol-mission-kit",
+                "configuration": "Published MQ-9B short-takeoff/landing mission-kit architecture. This is a wing/tail modification for SkyGuardian or SeaGuardian, not the smaller Mojave aircraft. Listed payloads describe offered mission configurations, not a verified simultaneous installation. CPU, memory, exact radio and engine configuration are not specified on this page.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -78241,13 +78816,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Wing and tail kit",
+                "details": "STOL kit changes MQ-9B wings and tail; payload mission management has an open modular architecture.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-stol-mission-kit",
+                "configuration": "Published MQ-9B short-takeoff/landing mission-kit architecture. This is a wing/tail modification for SkyGuardian or SeaGuardian, not the smaller Mojave aircraft. Listed payloads describe offered mission configurations, not a verified simultaneous installation. CPU, memory, exact radio and engine configuration are not specified on this page.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight and weather systems",
+                "details": "Automatic takeoff/landing, land or ship kit, and de-icing/anti-icing with lightning protection are described.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq9b-stol-mission-kit",
+                "configuration": "Published MQ-9B short-takeoff/landing mission-kit architecture. This is a wing/tail modification for SkyGuardian or SeaGuardian, not the smaller Mojave aircraft. Listed payloads describe offered mission configurations, not a verified simultaneous installation. CPU, memory, exact radio and engine configuration are not specified on this page.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -78263,10 +78864,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -78338,8 +78936,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-pele-2025",
+            "configuration": "June 2025 manufacturer specification. Processor, RAM, storage, engine model and RF hardware are not disclosed. The published 1 kW power rating is kept separate from propulsion and is not identified as a battery capacity. Payload-dependent equipment is not universal.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -78353,8 +78957,20 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Beyond-line-of-sight capability",
+                "details": "BLOS operation is listed without a modem, frequency or air-interface specification.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-pele-2025",
+                "configuration": "June 2025 manufacturer specification. Processor, RAM, storage, engine model and RF hardware are not disclosed. The published 1 kW power rating is kept separate from propulsion and is not identified as a battery capacity. Payload-dependent equipment is not universal.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "Published model communications",
                 "details": "Public radio protocol not documented in reviewed sources",
@@ -78367,23 +78983,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging payload",
+                "details": "HD electro-optical/infrared equipment provides full-motion video; sensor and gimbal models unspecified.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-pele-2025",
+                "configuration": "June 2025 manufacturer specification. Processor, RAM, storage, engine model and RF hardware are not disclosed. The published 1 kW power rating is kept separate from propulsion and is not identified as a battery capacity. Payload-dependent equipment is not universal.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Propulsion and power ratings",
+                "details": "16 hp engine; separate published power rating 1 kW. Fuel capacity is 35 lb; electrical generation details are not supplied.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-pele-2025",
+                "configuration": "June 2025 manufacturer specification. Processor, RAM, storage, engine model and RF hardware are not disclosed. The published 1 kW power rating is kept separate from propulsion and is not identified as a battery capacity. Payload-dependent equipment is not universal.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular air vehicle",
+                "details": "Retractable wings, modular payloads and open integration architecture; designed for air or ground launch and recovery/reuse.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-pele-2025",
+                "configuration": "June 2025 manufacturer specification. Processor, RAM, storage, engine model and RF hardware are not disclosed. The published 1 kW power rating is kept separate from propulsion and is not identified as a battery capacity. Payload-dependent equipment is not universal.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight autonomy",
+                "details": "Manufacturer describes semi-autonomous operation; operating system and autonomy processor are unpublished.",
+                "sources": [
+                  "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-pele-2025",
+                "configuration": "June 2025 manufacturer specification. Processor, RAM, storage, engine model and RF hardware are not disclosed. The published 1 kW power rating is kept separate from propulsion and is not identified as a battery capacity. Payload-dependent equipment is not universal.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -78399,10 +79067,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -78474,13 +79138,37 @@
         "schema_version": 1,
         "record_scope": "program-or-family",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-mq1b-2015",
+            "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "ga-gray-eagle-2014",
+            "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flight controls",
+                "details": "Triple-redundant flight-control system and redundant control surfaces.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gray-eagle-2014",
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -78489,8 +79177,32 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Remote aircraft links",
+                "details": "Direct line-of-sight link and satellite link for beyond-line-of-sight control. Satellite frequencies and modem models unspecified in this source.",
+                "sources": [
+                  "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq1b-2015",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "radios",
+                "component": "TCDL and satellite links",
+                "details": "TCDL direct/relay links and Ku-band beyond-line-of-sight satellite communications.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gray-eagle-2014",
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "Published model communications",
                 "details": "Public radio protocol not documented in reviewed sources",
@@ -78503,23 +79215,111 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Multi-Spectral Targeting System",
+                "details": "Infrared, daylight color/monochrome and image-intensified television sensors, with laser equipment; individual or fused video streams.",
+                "sources": [
+                  "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq1b-2015",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Mission equipment",
+                "details": "EO/IR imaging and synthetic-aperture radar with moving-target indication.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gray-eagle-2014",
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Rotax 914F",
+                "details": "Four-cylinder piston engine rated at 115 hp.",
+                "sources": [
+                  "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq1b-2015",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Thielert engine and generation",
+                "details": "165 hp heavy-fuel engine; redundant 9 kW electrical system.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gray-eagle-2014",
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Air and ground system",
+                "details": "Aircraft, ground-control station and Predator Primary Satellite Link form the system. Published payload 204 kg; remote pilot and sensor operator.",
+                "sources": [
+                  "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-mq1b-2015",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Ground-control compatibility",
+                "details": "Army One System Ground Station or GA-ASI ground station; 261 kg internal and 227 kg external payload capacity.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gray-eagle-2014",
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight automation",
+                "details": "Redundant automatic takeoff/landing and wing/tail de-icing.",
+                "sources": [
+                  "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-gray-eagle-2014",
+                "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -78533,12 +79333,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -79032,8 +79827,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-sparrowhawk-2020-demonstrator",
+            "configuration": "September 2020 captive-carry demonstration configuration on MQ-9A. This is test evidence, not a production specification or proof of autonomous free-flight recovery during those tests. Laptop ground-control hardware must not be attributed to the aircraft. CPU, memory, engine and sensor models remain unpublished.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -79047,8 +79848,20 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "meshONE datalink",
+                "details": "Flight demonstration used the meshONE link for inter-platform communications. No RF chipset, frequency allocation or decodable public interface is supplied.",
+                "sources": [
+                  "https://www.ga-asi.com/ga-asi-conducts-sparrowhawk-suas-flight-tests"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-sparrowhawk-2020-demonstrator",
+                "configuration": "September 2020 captive-carry demonstration configuration on MQ-9A. This is test evidence, not a production specification or proof of autonomous free-flight recovery during those tests. Laptop ground-control hardware must not be attributed to the aircraft. CPU, memory, engine and sensor models remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "Published model communications",
                 "details": "Public radio protocol not documented in reviewed sources",
@@ -79071,13 +79884,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Ground control and carrier",
+                "details": "Metis software-defined control station ran on a laptop; Sparrowhawk was carried on MQ-9A. This describes the demonstration’s external control system, not its onboard computer.",
+                "sources": [
+                  "https://www.ga-asi.com/ga-asi-conducts-sparrowhawk-suas-flight-tests"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-sparrowhawk-2020-demonstrator",
+                "configuration": "September 2020 captive-carry demonstration configuration on MQ-9A. This is test evidence, not a production specification or proof of autonomous free-flight recovery during those tests. Laptop ground-control hardware must not be attributed to the aircraft. CPU, memory, engine and sensor models remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Demonstrated autonomy",
+                "details": "DARPA Cooperation in Denied Environments (CODE) autonomy engine was implemented during the tests.",
+                "sources": [
+                  "https://www.ga-asi.com/ga-asi-conducts-sparrowhawk-suas-flight-tests"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-sparrowhawk-2020-demonstrator",
+                "configuration": "September 2020 captive-carry demonstration configuration on MQ-9A. This is test evidence, not a production specification or proof of autonomous free-flight recovery during those tests. Laptop ground-control hardware must not be attributed to the aircraft. CPU, memory, engine and sensor models remain unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -79095,8 +79934,6 @@
           "memory",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -79305,13 +80142,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-xq67a-2025-testbed",
+            "configuration": "AFRL Off-Board Sensing Station testbed: first flight February 2024 and mission-system test July 2025. These sources document subsystem integration, not semiconductor, memory, engine, sensor or modem models. No particular tactical-link standard is inferred from the generic term.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Mission computing",
+                "details": "July 2025 flight tested mission computing and networking integrated with government reference autonomy; processor boards are not identified.",
+                "sources": [
+                  "https://www.ga-asi.com/xq-67a-demonstrates-autonomy-and-datalink-interoperability-during-high-desert-flight-test"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-xq67a-2025-testbed",
+                "configuration": "AFRL Off-Board Sensing Station testbed: first flight February 2024 and mission-system test July 2025. These sources document subsystem integration, not semiconductor, memory, engine, sensor or modem models. No particular tactical-link standard is inferred from the generic term.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -79320,8 +80176,20 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Tactical datalink",
+                "details": "Test aircraft exchanged real-time mission updates over a tactical link; frequency and modem details undisclosed.",
+                "sources": [
+                  "https://www.ga-asi.com/xq-67a-demonstrates-autonomy-and-datalink-interoperability-during-high-desert-flight-test"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-xq67a-2025-testbed",
+                "configuration": "AFRL Off-Board Sensing Station testbed: first flight February 2024 and mission-system test July 2025. These sources document subsystem integration, not semiconductor, memory, engine, sensor or modem models. No particular tactical-link standard is inferred from the generic term.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "Published model communications",
                 "details": "Public radio protocol not documented in reviewed sources",
@@ -79339,18 +80207,57 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Power and thermal integration",
+                "details": "Power and thermal management were included in the integrated test. Generator, voltage and cooling-system component ratings are not published.",
+                "sources": [
+                  "https://www.ga-asi.com/xq-67a-demonstrates-autonomy-and-datalink-interoperability-during-high-desert-flight-test"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-xq67a-2025-testbed",
+                "configuration": "AFRL Off-Board Sensing Station testbed: first flight February 2024 and mission-system test July 2025. These sources document subsystem integration, not semiconductor, memory, engine, sensor or modem models. No particular tactical-link standard is inferred from the generic term.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Common core chassis",
+                "details": "XQ-67A implements the LCAAPS common-chassis approach for multiple aircraft variants. Shared architecture does not imply identical payload equipment.",
+                "sources": [
+                  "https://www.ga-asi.com/ga-asi-makes-first-flight-of-xq-67a-obss"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-xq67a-2025-testbed",
+                "configuration": "AFRL Off-Board Sensing Station testbed: first flight February 2024 and mission-system test July 2025. These sources document subsystem integration, not semiconductor, memory, engine, sensor or modem models. No particular tactical-link standard is inferred from the generic term.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Government autonomy",
+                "details": "Government-owned autonomy was integrated for the flight; this does not establish a named commercial operating system.",
+                "sources": [
+                  "https://www.ga-asi.com/xq-67a-demonstrates-autonomy-and-datalink-interoperability-during-high-desert-flight-test"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-xq67a-2025-testbed",
+                "configuration": "AFRL Off-Board Sensing Station testbed: first flight February 2024 and mission-system test July 2025. These sources document subsystem integration, not semiconductor, memory, engine, sensor or modem models. No particular tactical-link standard is inferred from the generic term.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -79364,12 +80271,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -79441,8 +80344,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ga-yfq42a-2026-sidekick-test",
+            "configuration": "February 2026 prototype mission-autonomy test. Named software and interfaces are documented; onboard processor, memory, propulsion and RF hardware are not. This test configuration is not automatically assigned to forthcoming production FQ-42A aircraft.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -79480,13 +80389,51 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "A-GRA integration",
+                "details": "Autonomy Government Reference Architecture connects mission autonomy and aircraft mission systems. A ground-station console and human autonomy operator provided supervisory commands.",
+                "sources": [
+                  "https://www.ga-asi.com/ga-asi-achieves-new-milestone-with-semi-autonomous-cca-flight"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-yfq42a-2026-sidekick-test",
+                "configuration": "February 2026 prototype mission-autonomy test. Named software and interfaces are documented; onboard processor, memory, propulsion and RF hardware are not. This test configuration is not automatically assigned to forthcoming production FQ-42A aircraft.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Collins Sidekick",
+                "details": "Collins Aerospace Sidekick mission-autonomy software was integrated with the YFQ-42A flight-control system for the test.",
+                "sources": [
+                  "https://www.ga-asi.com/ga-asi-achieves-new-milestone-with-semi-autonomous-cca-flight"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-yfq42a-2026-sidekick-test",
+                "configuration": "February 2026 prototype mission-autonomy test. Named software and interfaces are documented; onboard processor, memory, propulsion and RF hardware are not. This test configuration is not automatically assigned to forthcoming production FQ-42A aircraft.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Flight automation",
+                "details": "Manufacturer reports autonomous takeoffs and landings in the prototype test program.",
+                "sources": [
+                  "https://www.ga-asi.com/ga-asi-achieves-new-milestone-with-semi-autonomous-cca-flight"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ga-yfq42a-2026-sidekick-test",
+                "configuration": "February 2026 prototype mission-autonomy test. Named software and interfaces are documented; onboard processor, memory, propulsion and RF hardware are not. This test configuration is not automatically assigned to forthcoming production FQ-42A aircraft.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -79504,8 +80451,6 @@
           "memory",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -79554,7 +80499,7 @@
         "configurations": [
           {
             "id": "ga-mq9a-2015",
-            "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+            "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
             "reviewed_on": "2026-11-04"
           }
         ],
@@ -79572,7 +80517,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -79595,7 +80540,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -79613,7 +80558,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -79631,7 +80576,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -79649,7 +80594,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -147697,7 +148642,7 @@
         "configurations": [
           {
             "id": "ga-mq1b-2015",
-            "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+            "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
             "reviewed_on": "2026-11-04"
           }
         ],
@@ -147725,7 +148670,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq1b-2015",
-                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -147743,7 +148688,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq1b-2015",
-                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -147761,7 +148706,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq1b-2015",
-                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -147779,7 +148724,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq1b-2015",
-                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -147850,7 +148795,7 @@
         "configurations": [
           {
             "id": "ga-mq9a-2015",
-            "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+            "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
             "reviewed_on": "2026-11-04"
           }
         ],
@@ -147868,7 +148813,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -147891,7 +148836,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -147909,7 +148854,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -147927,7 +148872,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -147945,7 +148890,7 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "ga-mq9a-2015",
-                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+                "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
                 "reviewed_on": "2026-11-04"
               }
             ]
@@ -325800,7 +326745,7 @@
           "MQ-1B Predator (USAF September 2015)",
           "General Atomics MQ-1 Predator"
         ],
-        "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+        "configuration": "USAF MQ-1B fact sheet, September 2015. Distinct from the earlier RQ-1K and later Predator XP. Onboard processor, RAM, storage and radio chipset are not specified. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
         "reviewed_on": "2026-11-04",
         "facts": [
           {
@@ -325841,6 +326786,12 @@
             "manufacturer": "Unknown manufacturer",
             "models": [
               "MQ-1 Predator"
+            ]
+          },
+          {
+            "manufacturer": "General Atomics",
+            "models": [
+              "General Atomics Predator / Gray Eagle family"
             ]
           }
         ]
@@ -325912,7 +326863,7 @@
           "General Atomics MQ-9A Reaper",
           "MQ-9 Reaper"
         ],
-        "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family.",
+        "configuration": "Manufacturer MQ-9A specification, March 2015. Later Block 5 components are described separately. Onboard CPU, memory and storage part numbers are not published. Historical inventory names do not establish an individual aircraft revision; this is a dated configuration reference, not an assertion that an older observation carried later upgrades. In combined inventory labels, facts apply only to the named aircraft family. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
         "reviewed_on": "2026-11-04",
         "facts": [
           {
@@ -325961,6 +326912,12 @@
             "manufacturer": "Unknown manufacturer",
             "models": [
               "MQ-9 Reaper"
+            ]
+          },
+          {
+            "manufacturer": "General Atomics",
+            "models": [
+              "General Atomics MQ-9 family"
             ]
           }
         ]
@@ -326030,8 +326987,8 @@
         "models": [
           "General Atomics MQ-9B SkyGuardian"
         ],
-        "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft.",
-        "reviewed_on": "2026-11-03",
+        "configuration": "Manufacturer sheet marked September 2025, distributed at the March 2026 PDF URL. Onboard processor, memory and modem SKUs undisclosed; ground-station computers are not attributed to the aircraft. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+        "reviewed_on": "2026-11-04",
         "facts": [
           {
             "section": "compute",
@@ -326081,6 +327038,14 @@
               "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/mq9b-skyguardian-datasheet-032026.pdf"
             ]
           }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "General Atomics",
+            "models": [
+              "General Atomics MQ-9 family"
+            ]
+          }
         ]
       },
       {
@@ -326089,8 +327054,8 @@
         "models": [
           "General Atomics MQ-9B SeaGuardian"
         ],
-        "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed.",
-        "reviewed_on": "2026-11-03",
+        "configuration": "January 2025 maritime configuration. Onboard CPU/RAM and RF chip models unspecified. Mission options and detect-and-avoid equipment do not establish a public position feed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+        "reviewed_on": "2026-11-04",
         "facts": [
           {
             "section": "compute",
@@ -326138,6 +327103,14 @@
             "details": "Automatic flight launch and recovery; mission equipment varies by operator.",
             "sources": [
               "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2501_SEAGUARDIAN_E.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "General Atomics",
+            "models": [
+              "General Atomics MQ-9 family"
             ]
           }
         ]
@@ -326192,8 +327165,8 @@
           "MQ-1C Gray Eagle (April 2014 specification)",
           "General Atomics MQ-1C Gray Eagle"
         ],
-        "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed.",
-        "reviewed_on": "2026-11-03",
+        "configuration": "Manufacturer sheet dated April 2014, hosted at a 2015 PDF URL. Later ER and 25M engine upgrades are separate configurations. Processor, RAM and RF chipset undisclosed. On the broad family inventory record, this remains one dated model configuration; components are not combined into a single family-wide bill of materials.",
+        "reviewed_on": "2026-11-04",
         "facts": [
           {
             "section": "compute",
@@ -326241,6 +327214,14 @@
             "details": "Redundant automatic takeoff/landing and wing/tail de-icing.",
             "sources": [
               "https://www.ga-asi.com/images/products/aircraft_systems/pdf/Gray_Eagle021915.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "General Atomics",
+            "models": [
+              "General Atomics Predator / Gray Eagle family"
             ]
           }
         ]
@@ -340369,6 +341350,323 @@
         "fcc_ids": [
           "PZR-79902"
         ]
+      },
+      {
+        "id": "ga-gambit-core-family",
+        "manufacturer": "General Atomics",
+        "models": [
+          "General Atomics Gambit 1",
+          "General Atomics Gambit 2",
+          "General Atomics Gambit 3",
+          "General Atomics Gambit 4",
+          "General Atomics Gambit 5",
+          "General Atomics Gambit 6"
+        ],
+        "configuration": "Manufacturer family architecture and variant concepts. Common-core evidence does not make the variants interchangeable or establish a production bill of materials. Processor, memory, engine and radio part numbers are undisclosed. The quoted commonality is a share of price, not a measured share of identical components.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Common baseline avionics",
+            "details": "Gambit Core includes baseline avionics and essential aircraft functions; processor boards and flight-control redundancy are not specified.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Shared platform architecture",
+            "details": "Core combines chassis and landing gear. Variant-specific engines, fuselages and wings attach to this baseline; manufacturer attributes roughly 70% of variant price to the core.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Distinct variant structures",
+            "details": "Gambit 1 uses high-aspect-ratio wings; Gambit 2 changes the outer mold line; Gambit 3 is the trainer configuration; Gambit 4 has swept wings without a tail. Gambit 5 is a carrier-capable concept; Gambit 6 is a separate mission variant.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ga-mq9b-stol-mission-kit",
+        "manufacturer": "General Atomics",
+        "models": [
+          "General Atomics MQ-9B STOL"
+        ],
+        "configuration": "Published MQ-9B short-takeoff/landing mission-kit architecture. This is a wing/tail modification for SkyGuardian or SeaGuardian, not the smaller Mojave aircraft. Listed payloads describe offered mission configurations, not a verified simultaneous installation. CPU, memory, exact radio and engine configuration are not specified on this page.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Wing and tail kit",
+            "details": "STOL kit changes MQ-9B wings and tail; payload mission management has an open modular architecture.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Published payload and airspace systems",
+            "details": "Offerings include Lynx radar, maritime radar, AIS and HD EO/IR. Detect-and-avoid combines TCAS/ADS-B with Due Regard Radar; specific payload installation varies.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Command and control",
+            "details": "Dual satellite links provide beyond-line-of-sight control. Modem models, bands and encryption configuration are not stated.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight and weather systems",
+            "details": "Automatic takeoff/landing, land or ship kit, and de-icing/anti-icing with lightning protection are described.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/mq-9b-stol"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ga-pele-2025",
+        "manufacturer": "General Atomics",
+        "models": [
+          "General Atomics PELE"
+        ],
+        "configuration": "June 2025 manufacturer specification. Processor, RAM, storage, engine model and RF hardware are not disclosed. The published 1 kW power rating is kept separate from propulsion and is not identified as a battery capacity. Payload-dependent equipment is not universal.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Propulsion and power ratings",
+            "details": "16 hp engine; separate published power rating 1 kW. Fuel capacity is 35 lb; electrical generation details are not supplied.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging payload",
+            "details": "HD electro-optical/infrared equipment provides full-motion video; sensor and gimbal models unspecified.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Beyond-line-of-sight capability",
+            "details": "BLOS operation is listed without a modem, frequency or air-interface specification.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular air vehicle",
+            "details": "Retractable wings, modular payloads and open integration architecture; designed for air or ground launch and recovery/reuse.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight autonomy",
+            "details": "Manufacturer describes semi-autonomous operation; operating system and autonomy processor are unpublished.",
+            "sources": [
+              "https://www.ga-asi.com/remotely-piloted-aircraft/pdf/2506_PELE_E.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ga-sparrowhawk-2020-demonstrator",
+        "manufacturer": "General Atomics",
+        "models": [
+          "General Atomics Sparrowhawk"
+        ],
+        "configuration": "September 2020 captive-carry demonstration configuration on MQ-9A. This is test evidence, not a production specification or proof of autonomous free-flight recovery during those tests. Laptop ground-control hardware must not be attributed to the aircraft. CPU, memory, engine and sensor models remain unpublished.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "meshONE datalink",
+            "details": "Flight demonstration used the meshONE link for inter-platform communications. No RF chipset, frequency allocation or decodable public interface is supplied.",
+            "sources": [
+              "https://www.ga-asi.com/ga-asi-conducts-sparrowhawk-suas-flight-tests"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Demonstrated autonomy",
+            "details": "DARPA Cooperation in Denied Environments (CODE) autonomy engine was implemented during the tests.",
+            "sources": [
+              "https://www.ga-asi.com/ga-asi-conducts-sparrowhawk-suas-flight-tests"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Ground control and carrier",
+            "details": "Metis software-defined control station ran on a laptop; Sparrowhawk was carried on MQ-9A. This describes the demonstration’s external control system, not its onboard computer.",
+            "sources": [
+              "https://www.ga-asi.com/ga-asi-conducts-sparrowhawk-suas-flight-tests"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ga-xq67a-2025-testbed",
+        "manufacturer": "General Atomics",
+        "models": [
+          "General Atomics XQ-67A"
+        ],
+        "configuration": "AFRL Off-Board Sensing Station testbed: first flight February 2024 and mission-system test July 2025. These sources document subsystem integration, not semiconductor, memory, engine, sensor or modem models. No particular tactical-link standard is inferred from the generic term.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Mission computing",
+            "details": "July 2025 flight tested mission computing and networking integrated with government reference autonomy; processor boards are not identified.",
+            "sources": [
+              "https://www.ga-asi.com/xq-67a-demonstrates-autonomy-and-datalink-interoperability-during-high-desert-flight-test"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Tactical datalink",
+            "details": "Test aircraft exchanged real-time mission updates over a tactical link; frequency and modem details undisclosed.",
+            "sources": [
+              "https://www.ga-asi.com/xq-67a-demonstrates-autonomy-and-datalink-interoperability-during-high-desert-flight-test"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Power and thermal integration",
+            "details": "Power and thermal management were included in the integrated test. Generator, voltage and cooling-system component ratings are not published.",
+            "sources": [
+              "https://www.ga-asi.com/xq-67a-demonstrates-autonomy-and-datalink-interoperability-during-high-desert-flight-test"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Government autonomy",
+            "details": "Government-owned autonomy was integrated for the flight; this does not establish a named commercial operating system.",
+            "sources": [
+              "https://www.ga-asi.com/xq-67a-demonstrates-autonomy-and-datalink-interoperability-during-high-desert-flight-test"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Common core chassis",
+            "details": "XQ-67A implements the LCAAPS common-chassis approach for multiple aircraft variants. Shared architecture does not imply identical payload equipment.",
+            "sources": [
+              "https://www.ga-asi.com/ga-asi-makes-first-flight-of-xq-67a-obss"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ga-yfq42a-2026-sidekick-test",
+        "manufacturer": "General Atomics",
+        "models": [
+          "General Atomics YFQ-42A Dark Merlin"
+        ],
+        "configuration": "February 2026 prototype mission-autonomy test. Named software and interfaces are documented; onboard processor, memory, propulsion and RF hardware are not. This test configuration is not automatically assigned to forthcoming production FQ-42A aircraft.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "software",
+            "component": "Collins Sidekick",
+            "details": "Collins Aerospace Sidekick mission-autonomy software was integrated with the YFQ-42A flight-control system for the test.",
+            "sources": [
+              "https://www.ga-asi.com/ga-asi-achieves-new-milestone-with-semi-autonomous-cca-flight"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "A-GRA integration",
+            "details": "Autonomy Government Reference Architecture connects mission autonomy and aircraft mission systems. A ground-station console and human autonomy operator provided supervisory commands.",
+            "sources": [
+              "https://www.ga-asi.com/ga-asi-achieves-new-milestone-with-semi-autonomous-cca-flight"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight automation",
+            "details": "Manufacturer reports autonomous takeoffs and landings in the prototype test program.",
+            "sources": [
+              "https://www.ga-asi.com/ga-asi-achieves-new-milestone-with-semi-autonomous-cca-flight"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ga-fq42a-2026-production-architecture",
+        "manufacturer": "General Atomics",
+        "models": [
+          "General Atomics FQ-42A"
+        ],
+        "configuration": "June 2026 production-contract announcement. It establishes the production designation and modular architecture, not a public parts list. YFQ-42A prototype test software is not assumed to be production equipment. Processor, memory, engine and radio models remain unpublished.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Modular mission systems",
+            "details": "Manufacturer describes modular aircraft design supporting integration of mission systems and autonomy software.",
+            "sources": [
+              "https://www.ga-asi.com/us-air-force-awards-ga-asi-production-contract-for-fq-42a-cca"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Architecture boundary",
+            "details": "Mission-autonomy and human-machine teaming architecture was flight tested on multiple airframes; the production software configuration is not named.",
+            "sources": [
+              "https://www.ga-asi.com/us-air-force-awards-ga-asi-production-contract-for-fq-42a-cca"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ga-eaglet-launch-control-reference",
+        "manufacturer": "General Atomics",
+        "models": [
+          "General Atomics Eaglet"
+        ],
+        "configuration": "December 2022 first-flight report and 2025 ground-control compatibility reference. These establish launch/control interfaces, not onboard electronics. No processor, memory, radio, engine or payload sensor model is established. Ground-station operating systems and supported link families are not aircraft hardware specifications.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Demonstrated carrier interface",
+            "details": "Initial flight launched from MQ-1C Gray Eagle ER. Manufacturer places Eaglet in the ALE Large category with configurable payloads.",
+            "sources": [
+              "https://www.ga-asi.com/ga-asi-s-eaglet-takes-its-first-flight"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Ground-station compatibility",
+            "details": "EGCS datasheet names Eaglet as a supported aircraft. Ground equipment can use desktop, laptop or mission-server hardware.",
+            "sources": [
+              "https://www.ga-asi.com/ground-control-stations/img/2509_EGCS_E.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "External control software",
+            "details": "EGCS containerized applications support Windows or Linux and FACE 3.1 architecture. This describes the compatible ground system only.",
+            "sources": [
+              "https://www.ga-asi.com/ground-control-stations/img/2509_EGCS_E.pdf"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -340385,8 +341683,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 830,
-    "devices_with_system_profiles": 728,
-    "devices_with_documented_compute": 355
+    "system_profiles": 838,
+    "devices_with_system_profiles": 743,
+    "devices_with_documented_compute": 364
   }
 }

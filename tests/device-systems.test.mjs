@@ -9,6 +9,33 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 71 keeps aircraft family, prototype and ground-computer boundaries',()=>{
+ const ga=name=>system('General Atomics','General Atomics '+name);
+ assert.equal(profileIds(ga('MQ-9 family')).length,3);
+ assert.equal(profileIds(ga('Predator / Gray Eagle family')).length,2);
+ assert.match(text(ga('MQ-9 family').configurations),/not combined into a single family-wide/);
+ for(let i=1;i<=6;i++){
+  const gambit=ga('Gambit '+i);
+  assert.match(text(gambit.sections.compute),/baseline avionics/);
+  assert.equal(gambit.sections.power.status,'not-established');
+  assert.equal(gambit.sections.radios.facts.filter(f=>f.evidence==='reviewed-primary-source').length,0);
+ }
+ assert.match(text(ga('MQ-9B STOL').configurations),/not the smaller Mojave/);
+ assert.equal(ga('MQ-9B STOL').sections.power.status,'not-established');
+ assert.match(text(ga('PELE').sections.power),/16 hp engine/);
+ assert.equal(ga('PELE').sections.compute.status,'not-established');
+ assert.match(text(ga('Sparrowhawk').configurations),/captive-carry/);
+ assert.match(text(ga('Sparrowhawk').sections.radios),/meshONE/);
+ assert.equal(ga('Sparrowhawk').sections.compute.status,'not-established');
+ assert.match(text(ga('YFQ-42A Dark Merlin').sections.software),/Sidekick/);
+ assert.doesNotMatch(text(ga('FQ-42A').sections.software.facts),/Sidekick/);
+ assert.equal(ga('Eaglet').sections.compute.status,'not-established');
+ assert.match(text(ga('Eaglet').sections.software),/ground system only/);
+ assert.equal(profileIds(ga('X-68A LongShot')).length,0);
+ assert.equal(profileIds(system('Other vendor','General Atomics PELE')).length,0);
+ assert.equal(profileIds(system('General Atomics','General Atomics PELE',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 70 keeps radio equipment, power ratings and vehicle revisions scoped',()=>{
  const penguin=system('Edge Autonomy','Penguin C Mk2');
  assert.match(text(penguin.sections.power),/28 cc/);
@@ -1989,7 +2016,7 @@ test('batch 45 keeps General Atomics engine and electrical revisions separate',(
  assert.match(text(av.sections.radios),/Public radio protocol not documented/);
  assert.equal(er.sections.memory.status,'not-established');
  assert.equal(profileIds(system('General Atomics','Unknown model')).length,0);
- assert.equal(profileIds(system('General Atomics','General Atomics MQ-9 family')).length,0);
+ assert.equal(profileIds(system('General Atomics','General Atomics MQ-9 unspecified variant')).length,0);
 });
 
 test('batch 45 does not turn ground computers or optional payloads into aircraft BOMs',()=>{
