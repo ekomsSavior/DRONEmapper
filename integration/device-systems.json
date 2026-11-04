@@ -43171,6 +43171,226 @@
           ]
         }
       ]
+    },
+    {
+      "id": "overland-ultra-spark-2025",
+      "manufacturer": "Overland AI",
+      "models": [
+        "ULTRA"
+      ],
+      "configuration": "April 2025 ULTRA launch and March 2025 SPARK hardware description. ULTRA integrates SPARK and OverDrive. Individual radio installations vary; these sources do not disclose CPU, RAM, storage, sensor part numbers, engine or battery. Retrofit vehicles using SPARK are not the ULTRA chassis.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "SPARK compute module",
+          "details": "Compact onboard module runs OverDrive; semiconductor model and computing performance are not published.",
+          "sources": [
+            "https://www.overland.ai/news/overland-ai-launches-spark-to-deliver-instant-vehicle-autonomy-to-military-fleets"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "SPARK navigation and perception",
+          "details": "LiDAR and stereo cameras provide perception; GPS, IMU and speed encoders provide navigation and motion measurements.",
+          "sources": [
+            "https://www.overland.ai/news/overland-ai-launches-spark-to-deliver-instant-vehicle-autonomy-to-military-fleets"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle integration",
+          "details": "SPARK combines sensing, computing, communications and drive-by-wire; ULTRA is a purpose-built implementation.",
+          "sources": [
+            "https://www.overland.ai/news/overland-ai-unveils-ultra-a-fully-autonomous-tactical-vehicle-for-ground-operations",
+            "https://www.overland.ai/news/overland-ai-launches-spark-to-deliver-instant-vehicle-autonomy-to-military-fleets"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Published connectivity options",
+          "details": "ULTRA supports local mesh, 5G and satellite connectivity. SPARK also describes Starlink, tactical mesh, LTE and Wi-Fi when available; no installed modem or band assignment is established for every ULTRA.",
+          "sources": [
+            "https://www.overland.ai/news/overland-ai-unveils-ultra-a-fully-autonomous-tactical-vehicle-for-ground-operations",
+            "https://www.overland.ai/news/overland-ai-launches-spark-to-deliver-instant-vehicle-autonomy-to-military-fleets"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "OverDrive autonomy",
+          "details": "OverDrive supports off-road autonomous movement and degraded-GPS operation. These are software capabilities, not a documented radio fingerprint.",
+          "sources": [
+            "https://www.overland.ai/news/overland-ai-launches-spark-to-deliver-instant-vehicle-autonomy-to-military-fleets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daedong-ai-tractor-korea-2026",
+      "manufacturer": "Daedong",
+      "models": [
+        "Daedong AI Tractor"
+      ],
+      "configuration": "April 2026 Korean launch configuration. North American launch was targeted for 2027, not established as already delivered. Processor, RAM, storage, radio chipset/bands and engine configuration are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "On-device vision AI",
+          "details": "Decisions and field-work control run on the tractor without requiring cloud connectivity; chip and board models are unspecified.",
+          "sources": [
+            "https://daedong-kioti.com/news/daedongnews/1380"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Six-camera perception",
+          "details": "Six cameras cover 360 degrees to identify field boundaries, obstacles and attached implements; camera modules are unnamed.",
+          "sources": [
+            "https://daedong-kioti.com/news/daedongnews/1380"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Electronic vehicle and implement control",
+          "details": "Integrated steering, braking, transmission and three-point-hitch control; smartphone app supports supervision and multiple tractors.",
+          "sources": [
+            "https://daedong-kioti.com/news/daedongnews/1380"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operation Center and MLOps",
+          "details": "Routes, obstacles and environmental observations feed the learning framework. Operation Center records work history for web/mobile access; this does not establish a publicly accessible telemetry feed.",
+          "sources": [
+            "https://daedong-kioti.com/news/daedongnews/1380"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "armach-everclean-hsr-production-2022",
+      "manufacturer": "Armach Robotics",
+      "models": [
+        "EverClean Hull Service Robot"
+      ],
+      "configuration": "May 2022 first-production HSR configuration, distinct from the earlier ROV-plus-crawler prototype. Processor, memory, navigation-sensor models, battery and network physical transport are undisclosed. Greensea IQNS hardware offered for other robots is not assigned to this HSR without model-specific evidence.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Miniaturized navigation sensors",
+          "details": "Navigation measurements are fused through OPENSEA; this announcement does not identify individual sensors or a sonar model.",
+          "sources": [
+            "https://greenseaiq.com/news/first-production-hull-service-robot-for-everclean-launched/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Custom drive and cleaning actuators",
+          "details": "Armach developed in-house electromechanical drive and cleaning components with precision feedback. Motor ratings and energy source are not supplied.",
+          "sources": [
+            "https://greenseaiq.com/news/first-production-hull-service-robot-for-everclean-launched/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "SAFEC2 network control",
+          "details": "Networked architecture supports remote monitoring/control through SAFEC2; do not infer underwater Wi-Fi or cellular hardware.",
+          "sources": [
+            "https://greenseaiq.com/news/first-production-hull-service-robot-for-everclean-launched/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "OPENSEA vehicle control",
+          "details": "OPENSEA provides navigation fusion and vehicle control for hull traversal and free-swimming stability; cleaning results support georeferenced hull-condition surveys.",
+          "sources": [
+            "https://greenseaiq.com/news/first-production-hull-service-robot-for-everclean-launched/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bot-auto-truck-2026",
+      "manufacturer": "Bot Auto",
+      "models": [
+        "Bot Auto Autonomous Truck"
+      ],
+      "configuration": "Manufacturer technology page reviewed November 2026 and public safety report linked from bot.auto/safety. Current named compute configuration must not be retroactively assigned to all earlier test trucks. Installed RAM, storage, sensor models and RF modem/bands remain unpublished.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Two Lenovo AD1 domain controllers",
+          "details": "Each current truck is described with two Lenovo AD1 controllers powered by NVIDIA DRIVE AGX Thor. Backup computing supports a controlled stop after primary-system failure.",
+          "sources": [
+            "https://bot.auto/technology"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Multi-modal road perception",
+          "details": "Camera, LiDAR and radar observations are fused. Safety-report diagram distinguishes ultra-long-range/front sensing, peripheral long-range and blind-spot LiDAR; sensor vendor and exact count are not established.",
+          "sources": [
+            "https://bot.auto/technology",
+            "https://framerusercontent.com/assets/Zusfkb001kYZRv0B2M13cVFt2U.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Independent backup power",
+          "details": "Independent power sources support critical systems through power interruption; battery capacity, voltage and propulsion engine are not specified.",
+          "sources": [
+            "https://bot.auto/technology"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Redundant vehicle control",
+          "details": "Backup steering and braking provide fault response. The safety report describes a gateway control unit checking motion commands; gateway processor and bus protocol are unspecified.",
+          "sources": [
+            "https://bot.auto/technology",
+            "https://framerusercontent.com/assets/Zusfkb001kYZRv0B2M13cVFt2U.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Prediction and planning",
+          "details": "Foundation-model perception, world-model motion prediction and reinforcement-learning-based planning are described. Core autonomy does not require remote assistance; remote inputs remain supervisory and validated onboard.",
+          "sources": [
+            "https://bot.auto/technology",
+            "https://framerusercontent.com/assets/Zusfkb001kYZRv0B2M13cVFt2U.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tric-eden-historical-platform",
+      "manufacturer": "TRIC Robotics",
+      "models": [
+        "Eden Robot"
+      ],
+      "configuration": "EDEN family history and the EDEN used in November 2024 field research. EDEN5 (2021) and wider EDEN7 (2022) are distinguished; the paper does not name which EDEN revision was tested. LUNA, its Bug Vacuum and the earlier battery prototype are not an EDEN bill of materials. CPU, RAM, radios and navigation-sensor models remain unverified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "EDEN5 hydraulic platform",
+          "details": "Manufacturer identifies the 2021 EDEN5 as a five-row hydraulic platform. Energy source and hydraulic component models are not provided; this statement is scoped to EDEN5.",
+          "sources": [
+            "https://tricrobotics.com/about-us/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "UV-C treatment assembly",
+          "details": "The field-study EDEN uses 254 nm germicidal UV-C lamps with reflective skirt panels around the crop bed. Lamp model and electrical rating are not disclosed. The study’s ILT2400 radiometer was external measurement equipment, not established as an onboard sensor.",
+          "sources": [
+            "https://www.frontiersin.org/journals/agronomy/articles/10.3389/fagro.2026.1805940/full"
+          ]
+        }
+      ]
     }
   ]
 }

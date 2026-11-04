@@ -9,6 +9,31 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 72 scopes field robot hardware and separates test instruments',()=>{
+ const ultra=system('Overland AI','ULTRA');
+ assert.match(text(ultra.sections.compute),/SPARK/);
+ assert.match(text(ultra.sections.sensors),/speed encoders/);
+ assert.equal(ultra.sections.power.status,'not-established');
+ assert.equal(ultra.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('DZYNE Technologies','ULTRA')).length,0);
+ const tractor=system('Daedong','Daedong AI Tractor');
+ assert.match(text(tractor.sections.sensors),/Six cameras/);
+ assert.match(text(tractor.configurations),/targeted for 2027/);
+ assert.equal(tractor.sections.power.status,'not-established');
+ const hsr=system('Armach Robotics','EverClean Hull Service Robot');
+ assert.equal(hsr.sections.compute.status,'not-established');
+ assert.match(text(hsr.sections.interfaces),/do not infer underwater Wi-Fi/);
+ const truck=system('Bot Auto','Bot Auto Autonomous Truck');
+ assert.match(text(truck.sections.compute),/two Lenovo AD1.*NVIDIA DRIVE AGX Thor/i);
+ assert.equal(truck.sections.memory.status,'not-established');
+ assert.equal(truck.sections.radios.facts.filter(f=>f.evidence==='reviewed-primary-source').length,0);
+ const eden=system('TRIC Robotics','Eden Robot');
+ assert.match(text(eden.sections.interfaces),/external measurement equipment/);
+ assert.equal(eden.sections.sensors.status,'not-established');
+ assert.equal(profileIds(system('TRIC Robotics','LUNA')).length,0);
+ assert.equal(profileIds(system('Bot Auto','Bot Auto Autonomous Truck',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 71 keeps aircraft family, prototype and ground-computer boundaries',()=>{
  const ga=name=>system('General Atomics','General Atomics '+name);
  assert.equal(profileIds(ga('MQ-9 family')).length,3);
