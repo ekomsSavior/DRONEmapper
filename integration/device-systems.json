@@ -26278,6 +26278,677 @@
           ]
         }
       ]
+    },
+    {
+      "id": "wingcopter198-april2021",
+      "manufacturer": "Wingcopter",
+      "models": [
+        "Wingcopter 198 (delivery specification April 2021)",
+        "Wingcopter 198"
+      ],
+      "configuration": "Manufacturer specification version 04-2021, preserved by distributor SIS. Different from current payload specifications; CPU/RAM not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight controllers",
+          "details": "Two flight controllers; processor models unspecified.",
+          "sources": [
+            "https://www.sisirl.com/wp-content/uploads/2018/01/Specsheet_Wingcopter-198.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Redundant navigation",
+          "details": "Six IMUs, two barometers, two dual-antenna GNSS systems, two airspeed sensors and downward LiDAR altimeter.",
+          "sources": [
+            "https://www.sisirl.com/wp-content/uploads/2018/01/Specsheet_Wingcopter-198.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Telemetry",
+          "details": "3G/4G/5G cellular and Iridium satellite telemetry.",
+          "sources": [
+            "https://www.sisirl.com/wp-content/uploads/2018/01/Specsheet_Wingcopter-198.pdf"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Awareness radios",
+          "details": "ADS-B In, FLARM In/Out and Remote ID are listed. ADS-B reception does not establish ADS-B transmission.",
+          "sources": [
+            "https://www.sisirl.com/wp-content/uploads/2018/01/Specsheet_Wingcopter-198.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric tilt-rotor",
+          "details": "Eight rotors, four tiltable; two lithium-ion batteries of 814 Wh each. Maximum takeoff mass 25 kg and payload 5 kg in this revision.",
+          "sources": [
+            "https://www.sisirl.com/wp-content/uploads/2018/01/Specsheet_Wingcopter-198.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground station",
+          "details": "32-inch 4K display, keyboard/mouse, LAN Internet and 110/230 V ground power.",
+          "sources": [
+            "https://www.sisirl.com/wp-content/uploads/2018/01/Specsheet_Wingcopter-198.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control Station 2.0",
+          "details": "Dedicated control software with Wingcopter Cloud access for fleet/maintenance management.",
+          "sources": [
+            "https://www.sisirl.com/wp-content/uploads/2018/01/Specsheet_Wingcopter-198.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wingcopter198-current-platform",
+      "manufacturer": "Wingcopter",
+      "models": [
+        "Wingcopter 198 (current platform)",
+        "Wingcopter 198"
+      ],
+      "configuration": "Current manufacturer platform page, reviewed November 2026. Earlier delivery specifications are shown separately. CPU/RAM, battery capacity and modem SKU undisclosed here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation redundancy",
+          "details": "Dual airspeed sensors and dual heading/positioning systems.",
+          "sources": [
+            "https://wingcopter.com/wingcopter-198"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Powertrain",
+          "details": "Eight motors, eight ESCs and two hot-swappable batteries.",
+          "sources": [
+            "https://wingcopter.com/wingcopter-198"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Airframe and payload",
+          "details": "198 × 152 × 65 cm; 25 kg maximum takeoff mass and 4.7 kg payload.",
+          "sources": [
+            "https://wingcopter.com/wingcopter-198"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Ground control",
+          "details": "Mission planning, aircraft control and operational monitoring. Triple-drop remains marked in development; future level-4 autonomy is not a present capability established here.",
+          "sources": [
+            "https://wingcopter.com/wingcopter-198"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zipline-sparrow-2022",
+      "manufacturer": "Zipline",
+      "models": [
+        "Sparrow (2022 FAA-described configuration)",
+        "Sparrow",
+        "Zipline Platform 1 (Zip)",
+        "Zipline Zip"
+      ],
+      "configuration": "Legacy fixed-wing Sparrow/Zip configuration in the July 2022 FAA assessment, with current Platform 1 delivery reference. No inference of P2 hardware. CPU/RAM, navigation chipsets and radio SKU undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Twin electric propulsion",
+          "details": "Two electric motors with three-bladed propellers; lithium-ion battery packs. The noise appendix specifies 49.3 lb maximum takeoff mass; this is not the newer P2.",
+          "sources": [
+            "https://www.faa.gov/sites/faa.gov/files/2022-07/FONSI-ROD_and_Final_EA_Zipline_Pea-Ridge-and-Surrounding-Area_7-14-22_signed_508.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Launch, delivery and recovery",
+          "details": "Catapult launch, parachute package release and nest-based aircraft recovery.",
+          "sources": [
+            "https://www.faa.gov/sites/faa.gov/files/2022-07/FONSI-ROD_and_Final_EA_Zipline_Pea-Ridge-and-Surrounding-Area_7-14-22_signed_508.pdf",
+            "https://www.zipline.com/about/zipline-fact-sheet"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight contingencies",
+          "details": "Operator can request holding, return to nest or emergency parachute termination; critical failures can trigger the parachute automatically.",
+          "sources": [
+            "https://www.faa.gov/sites/faa.gov/files/2022-07/FONSI-ROD_and_Final_EA_Zipline_Pea-Ridge-and-Surrounding-Area_7-14-22_signed_508.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zipline-p2-system",
+      "manufacturer": "Zipline",
+      "models": [
+        "P2 Zip (documented 2024–2026 architecture)",
+        "P2 Zip",
+        "Zipline Platform 2 (P2)"
+      ],
+      "configuration": "P2 architecture from Zipline’s October 2024 engineering account and September 2026 Texas draft assessment. The latter describes a proposed operating configuration, not approval of every proposed service. CPU/RAM and modem SKUs undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Redundant onboard computers",
+          "details": "Multiple computing systems provide backup processing; chip models are not published.",
+          "sources": [
+            "https://www.zipline.com/newsroom/engineering-for-safe-drone-delivery"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Redundant sensing",
+          "details": "Backup sensors support aircraft state, weather, other-aircraft awareness and delivery-area perception. Exact sensor SKUs unspecified.",
+          "sources": [
+            "https://www.zipline.com/newsroom/engineering-for-safe-drone-delivery"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Cellular and aircraft coordination",
+          "details": "Two cellular communication systems. The 2026 assessment describes aircraft exchanging position, velocity and intent over radio/cellular networks; bands and packet format undisclosed.",
+          "sources": [
+            "https://www.zipline.com/newsroom/engineering-for-safe-drone-delivery",
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20260911_Zipline_Texas_Metros_Draft_EA_CLEAN_ADA_Signed.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "2026 electric configuration",
+          "details": "Five propellers; tilting tail propellers; rechargeable lithium-ion batteries. Draft configuration totals approximately 63 lb with an 8 lb payload.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20260911_Zipline_Texas_Metros_Draft_EA_CLEAN_ADA_Signed.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Delivery pod and docks",
+          "details": "Aircraft lowers a separate pod on a winch; Charger docks replenish batteries and Dropboxes load packages. Aircraft and delivery unit have emergency parachute systems.",
+          "sources": [
+            "https://www.zipline.com/newsroom/engineering-for-safe-drone-delivery",
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20260911_Zipline_Texas_Metros_Draft_EA_CLEAN_ADA_Signed.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "FlightIQ",
+          "details": "Onboard autonomy/perception suite and coordinated routing.",
+          "sources": [
+            "https://www.zipline.com/about/zipline-fact-sheet"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "ADS-B awareness",
+          "details": "The draft assessment describes ADS-B detect-and-avoid. It does not establish an ADS-B transmitter or a unique passive radio signature.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20260911_Zipline_Texas_Metros_Draft_EA_CLEAN_ADA_Signed.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volvo-vnl-aurora-may2024",
+      "manufacturer": "Volvo Autonomous Solutions",
+      "models": [
+        "Volvo VNL Autonomous (Aurora May 2024)",
+        "Volvo VNL Autonomous",
+        "Volvo Autonomous Truck"
+      ],
+      "configuration": "May 2024 Aurora-equipped Volvo VNL. Distinct from Waabi’s later Thor integration. CPU/GPU models and RAM undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Aurora Driver computers",
+          "details": "Dual computers run the autonomy system.",
+          "sources": [
+            "https://www.volvoautonomoussolutions.com/en-en/news-and-insights/press-releases/2024/may/the-volvo-vnl-autonomous-proving-the-way-forward.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception",
+          "details": "Proprietary LiDAR with stated detection beyond 400 m, high-resolution cameras and imaging radar.",
+          "sources": [
+            "https://www.volvoautonomoussolutions.com/en-en/news-and-insights/press-releases/2024/may/the-volvo-vnl-autonomous-proving-the-way-forward.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Redundant electrical systems",
+          "details": "Duplicated power management and energy storage; capacity and autonomy-system power draw unspecified.",
+          "sources": [
+            "https://www.volvoautonomoussolutions.com/en-en/news-and-insights/press-releases/2024/may/the-volvo-vnl-autonomous-proving-the-way-forward.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Safety-critical vehicle systems",
+          "details": "Redundant steering, braking, communication and motion management.",
+          "sources": [
+            "https://www.volvoautonomoussolutions.com/en-en/news-and-insights/press-releases/2024/may/the-volvo-vnl-autonomous-proving-the-way-forward.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Aurora Driver",
+          "details": "SAE L4 autonomous-driving software integrated with the purpose-built truck.",
+          "sources": [
+            "https://www.volvoautonomoussolutions.com/en-en/news-and-insights/press-releases/2024/may/the-volvo-vnl-autonomous-proving-the-way-forward.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "waabi-volvo-thor2025",
+      "manufacturer": "Waabi",
+      "models": [
+        "Waabi Driver on Volvo VNL (October 2025)",
+        "Waabi Driver Autonomous Truck"
+      ],
+      "configuration": "October 2025 integrated Waabi/Volvo configuration. Separate from Aurora-equipped VNL and earlier Waabi prototypes. RAM and individual sensor/modem SKUs undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA DRIVE AGX Thor",
+          "details": "Integrated DRIVE AGX Thor with Hyperion 10 architecture.",
+          "sources": [
+            "https://waabi.ai/insights/waabi-and-volvo-demonstrate-the-future-of-autonomous-trucking"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Autonomous-ready truck",
+          "details": "Redundant braking, steering and communications.",
+          "sources": [
+            "https://waabi.ai/insights/waabi-and-volvo-demonstrate-the-future-of-autonomous-trucking"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Waabi Driver",
+          "details": "End-to-end autonomous-driving model integrated with Volvo VNL.",
+          "sources": [
+            "https://waabi.ai/insights/waabi-and-volvo-demonstrate-the-future-of-autonomous-trucking"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volvo-vnl-waabi-thor2025",
+      "manufacturer": "Volvo Autonomous Solutions",
+      "models": [
+        "Volvo VNL Autonomous (Waabi October 2025)",
+        "Volvo VNL Autonomous",
+        "Volvo Autonomous Truck"
+      ],
+      "configuration": "October 2025 integrated Waabi/Volvo configuration. Separate from Aurora-equipped VNL and earlier Waabi prototypes. RAM and individual sensor/modem SKUs undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA DRIVE AGX Thor",
+          "details": "Integrated DRIVE AGX Thor with Hyperion 10 architecture.",
+          "sources": [
+            "https://waabi.ai/insights/waabi-and-volvo-demonstrate-the-future-of-autonomous-trucking"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Autonomous-ready truck",
+          "details": "Redundant braking, steering and communications.",
+          "sources": [
+            "https://waabi.ai/insights/waabi-and-volvo-demonstrate-the-future-of-autonomous-trucking"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Waabi Driver",
+          "details": "End-to-end autonomous-driving model integrated with Volvo VNL.",
+          "sources": [
+            "https://waabi.ai/insights/waabi-and-volvo-demonstrate-the-future-of-autonomous-trucking"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vw-idbuzz-mobileye-iaa2023",
+      "manufacturer": "Volkswagen Group",
+      "models": [
+        "VW ID. Buzz AD (IAA 2023 Mobileye configuration)",
+        "VW ID. Buzz AD"
+      ],
+      "configuration": "Mobileye’s September 2023 IAA configuration. Later production revisions can differ; RAM, modem and battery capacity not established by this source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Four Mobileye EyeQ6 High SoCs",
+          "details": "Four EyeQ6 High systems-on-chip provide processing.",
+          "sources": [
+            "https://www.mobileye.com/blog/volkswagen-id-buzz-mobileye-drive-iaa-mobility-2023/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera and LiDAR array",
+          "details": "Nine high-resolution and four parking cameras; three long-range and six short-range LiDARs. New imaging radars were a future upgrade, not confirmed installed in this configuration.",
+          "sources": [
+            "https://www.mobileye.com/blog/volkswagen-id-buzz-mobileye-drive-iaa-mobility-2023/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mobileye Drive",
+          "details": "True Redundancy sensing, REM map support and RSS-based driving policy.",
+          "sources": [
+            "https://www.mobileye.com/blog/volkswagen-id-buzz-mobileye-drive-iaa-mobility-2023/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wandercraft-calvin40-platform",
+      "manufacturer": "Wandercraft",
+      "models": [
+        "Calvin-40"
+      ],
+      "configuration": "June 2025 platform announcement and current Calvin manufacturer page. Jetson family is documented, but exact SoC, RAM, battery and radio remain unspecified. Current page schedules first series for H1 2027.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA Jetson platform",
+          "details": "Wandercraft describes its robotics platform as integrated with NVIDIA Jetson edge AI; no Orin/Xavier model is identified.",
+          "sources": [
+            "https://rss.globenewswire.com/news-release/2025/06/11/3097632/0/en/Wandercraft-announces-Series-D-Round-bringing-75M-in-total-funding-secured-for-global-acceleration-of-AI-powered-robotics.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision",
+          "details": "3D sensors and a visual recognition stack; individual sensor models unpublished.",
+          "sources": [
+            "https://www.wandercraft.eu/calvin"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Actuation",
+          "details": "High-torque motors and whole-body control that adapts to carried loads.",
+          "sources": [
+            "https://www.wandercraft.eu/calvin"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Robot learning and control",
+          "details": "NVIDIA Isaac technologies, including GR00T N1, supported development. Manufacturer describes autonomous navigation and a certifiable safety system, not a completed safety certification.",
+          "sources": [
+            "https://rss.globenewswire.com/news-release/2025/06/11/3097632/0/en/Wandercraft-announces-Series-D-Round-bringing-75M-in-total-funding-secured-for-global-acceleration-of-AI-powered-robotics.html",
+            "https://www.wandercraft.eu/calvin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "waymo-ojai-sixth2026",
+      "manufacturer": "Waymo",
+      "models": [
+        "Ojai (May 2026 introduction)",
+        "Ojai"
+      ],
+      "configuration": "May 2026 Ojai introduction with sixth-generation Waymo Driver. CPU, RAM, battery capacity and modem SKU are not disclosed here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Sixth-generation array",
+          "details": "13 cameras, four LiDARs, six radars and external audio receivers; overlapping coverage up to 500 m.",
+          "sources": [
+            "https://waymo.com/blog/2024/08/meet-the-6th-generation-waymo-driver/",
+            "https://waymo.com/blog/2026/05/welcoming-riders-in-the-ojai/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Passenger systems",
+          "details": "Three LED displays, flat floor, sliding doors and accessibility interfaces.",
+          "sources": [
+            "https://waymo.com/blog/2026/05/welcoming-riders-in-the-ojai/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Waymo Driver",
+          "details": "Sixth-generation driving system with weather-adapted sensor cleaning.",
+          "sources": [
+            "https://waymo.com/blog/2024/08/meet-the-6th-generation-waymo-driver/",
+            "https://waymo.com/blog/2026/05/welcoming-riders-in-the-ojai/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zeekr-rt-waymo2025",
+      "manufacturer": "Zeekr",
+      "models": [
+        "Zeekr RT (Waymo September 2025 configuration)",
+        "Zeekr RT (Ojai)"
+      ],
+      "configuration": "Waymo explicitly identifies Zeekr RT with its sixth-generation Driver in September 2025. Catalog name includes Ojai; this profile describes that sensor platform. No other Zeekr model’s NVIDIA or Qualcomm processor is inferred.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Waymo sixth-generation array",
+          "details": "13 cameras, four LiDARs, six radars and external audio receivers.",
+          "sources": [
+            "https://waymo.com/blog/2024/08/meet-the-6th-generation-waymo-driver/",
+            "https://waymo.com/blog/shorts/were-elevating-the-waymo-experience-in-the-mile-high-city/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Driving integration",
+          "details": "Sixth-generation Waymo Driver; sensor cleaning designed for winter conditions.",
+          "sources": [
+            "https://waymo.com/blog/shorts/were-elevating-the-waymo-experience-in-the-mile-high-city/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weride-gxr-hpc2-2024",
+      "manufacturer": "WeRide",
+      "models": [
+        "Robotaxi GXR (HPC 2.0 / SS5.6, 2024)",
+        "Robotaxi GXR"
+      ],
+      "configuration": "October/November 2024 launch configuration. Do not substitute the later HPC 3.0 / Thor configuration. Exact processor SKU, RAM, battery and communications modem unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "HPC 2.0",
+          "details": "Computing platform rated above 1,300 TOPS; processor part numbers undisclosed.",
+          "sources": [
+            "https://ir.weride.ai/news-releases/news-release-details/next-generation-robotaxi-platform-unveiled-robotaxi-coming-uber/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Sensor Suite 5.6",
+          "details": "More than 20 sensors, with surround perception and stated 200 m front detection.",
+          "sources": [
+            "https://ir.weride.ai/news-releases/news-release-details/next-generation-robotaxi-platform-unveiled-robotaxi-coming-uber/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Farizon SuperVan",
+          "details": "Steer-by-wire vehicle architecture.",
+          "sources": [
+            "https://ir.weride.ai/news-releases/news-release-details/next-generation-robotaxi-platform-unveiled-robotaxi-coming-uber/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "WeRide L4 stack",
+          "details": "Proprietary autonomous-driving system.",
+          "sources": [
+            "https://ir.weride.ai/news-releases/news-release-details/next-generation-robotaxi-platform-unveiled-robotaxi-coming-uber/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weride-gxr-hpc3-gen8-2026",
+      "manufacturer": "WeRide",
+      "models": [
+        "Robotaxi GXR (HPC 3.0 / GEN8, 2026)",
+        "Robotaxi GXR"
+      ],
+      "configuration": "March 2026 GTC compute integration and supplier-announced GEN8 sensor configuration. RoboSense scheduled production for Q3 2026; these announcements do not establish retrofits to all earlier GXRs.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "HPC 3.0 / NVIDIA DRIVE AGX Thor",
+          "details": "Thor is integrated into WeRide HPC 3.0; DRIVE Hyperion supplies the compute/sensor/safety platform. RAM unspecified.",
+          "sources": [
+            "https://ir.weride.ai/news-releases/news-release-details/weride-showcases-robotaxi-gxr-powered-nvidia-drive-hyperion"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Sensor Suite 8.0",
+          "details": "RoboSense EM4 main LiDAR and E1 blind-spot LiDAR selected for GEN8 GXR. Quantities and exact EM4 beam configuration are not established.",
+          "sources": [
+            "https://www.robosense.ai/en/news-show-1974"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle platform",
+          "details": "WeRide and Farizon co-developed GXR.",
+          "sources": [
+            "https://www.robosense.ai/en/news-show-1974"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "WeRide autonomous driving",
+          "details": "L4 driving integration shown at GTC 2026.",
+          "sources": [
+            "https://ir.weride.ai/news-releases/news-release-details/weride-showcases-robotaxi-gxr-powered-nvidia-drive-hyperion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weride-robobus-first-prototype",
+      "manufacturer": "WeRide",
+      "models": [
+        "Robobus (first-generation prototype)",
+        "Robobus"
+      ],
+      "configuration": "Manufacturer engineering interview with product technology lead Zhenya Liu, describing the initial 2020/2021 prototype. Separate from version 2+.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Xavier-class computer",
+          "details": "Interview describes NVIDIA Xavier-level compute; module and RAM not specified.",
+          "sources": [
+            "https://www.uncrewed-systems.com/we-ride-robotics-robobus/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Initial LiDAR array",
+          "details": "Two 16-channel LiDARs.",
+          "sources": [
+            "https://www.uncrewed-systems.com/we-ride-robotics-robobus/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weride-robobus-v2plus",
+      "manufacturer": "WeRide",
+      "models": [
+        "Robobus (version 2+ engineering configuration)",
+        "Robobus"
+      ],
+      "configuration": "Product technology lead Zhenya Liu’s engineering interview, following the 2024 French Open deployment. CPU/GPU part numbers, RAM and wireless modem SKU remain undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "HPC 2.0 and backup",
+          "details": "x86 CPU/GPU main computer plus separate backup; lower-level controllers handle vehicle subsystems.",
+          "sources": [
+            "https://www.uncrewed-systems.com/we-ride-robotics-robobus/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and perception",
+          "details": "Two MEMS IMUs, GNSS, 128-channel main LiDARs, blind-spot LiDARs, 12 HD cameras, ultrasonic sensors and 77 GHz radar.",
+          "sources": [
+            "https://www.uncrewed-systems.com/we-ride-robotics-robobus/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "CATL battery and traction",
+          "details": "400 V, 173 Ah LiFePO4 pack, approximately 69.2 kWh; CATL BMS. Permanent-magnet drive motor peaks at 120 kW.",
+          "sources": [
+            "https://www.uncrewed-systems.com/we-ride-robotics-robobus/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle data buses",
+          "details": "Dual SAE J1939 CAN for motor control; Gigabit Ethernet for cameras/LiDARs.",
+          "sources": [
+            "https://www.uncrewed-systems.com/we-ride-robotics-robobus/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Remote operation",
+          "details": "Wireless monitoring and teleoperation; band and modem unspecified. Radar frequency is not a unique communications identifier.",
+          "sources": [
+            "https://www.uncrewed-systems.com/we-ride-robotics-robobus/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operating stack",
+          "details": "Linux/QNX and Mariana middleware; local 3D map storage.",
+          "sources": [
+            "https://www.uncrewed-systems.com/we-ride-robotics-robobus/"
+          ]
+        }
+      ]
     }
   ]
 }

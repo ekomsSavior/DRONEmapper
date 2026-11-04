@@ -1232,3 +1232,53 @@ test('batch 39 separates robot revisions, tether links, cloud services and annou
  assert.equal(p8.sections.compute.status,'not-established');
  assert.equal(profileIds(system('Sanctuary AI','Phoenix')).length,3);
 });
+
+test('batch 42 preserves aircraft revisions and does not invent RF identifiers',()=>{
+ const old=system('Wingcopter','Wingcopter 198 (delivery specification April 2021)'),now=system('Wingcopter','Wingcopter 198 (current platform)');
+ assert.match(text(old.sections.power),/814 Wh each.*5 kg/);
+ assert.match(text(old.sections.sensors),/Six IMUs/);
+ assert.match(text(old.sections.identification),/ADS-B reception does not establish ADS-B transmission/);
+ assert.match(text(now.sections.interfaces),/4.7 kg/);
+ assert.doesNotMatch(text(now.sections.power.facts.map(f=>f.details)),/814/);
+ assert.equal(profileIds(system('Wingcopter','Wingcopter 198')).length,2);
+ const p1=system('Zipline','Sparrow'),p2=system('Zipline','P2 Zip');
+ assert.match(text(p1.sections.power),/Two electric motors/);
+ assert.equal(p1.sections.compute.status,'not-established');
+ assert.match(text(p2.sections.compute),/Multiple computing systems/);
+ assert.match(text(p2.sections.radios),/Two cellular/);
+ assert.match(text(p2.sections.power),/Five propellers/);
+ assert.equal(p2.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Zipline','Unknown model')).length,0);
+ assert.equal(profileIds(system('Zipline','Platform 2 Computer',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('batch 42 isolates autonomous-vehicle compute platforms and robot revisions',()=>{
+ const aur=system('Volvo Autonomous Solutions','Volvo VNL Autonomous (Aurora May 2024)'),wa=system('Volvo Autonomous Solutions','Volvo VNL Autonomous (Waabi October 2025)');
+ assert.match(text(aur.sections.compute),/Dual computers/);
+ assert.doesNotMatch(text(aur.sections.compute.facts.map(f=>f.details)),/Thor|Orin/);
+ assert.match(text(wa.sections.compute),/DRIVE AGX Thor.*Hyperion 10/);
+ assert.equal(wa.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Volvo Autonomous Solutions','Volvo VNL Autonomous')).length,2);
+ assert.equal(profileIds(system('Waabi','Volvo VNL Autonomous')).length,0);
+ const vw=system('Volkswagen Group','VW ID. Buzz AD');
+ assert.match(text(vw.sections.compute),/Four EyeQ6 High/);
+ assert.match(text(vw.sections.sensors),/imaging radars were a future upgrade/);
+ const cal=system('Wandercraft','Calvin-40');
+ assert.match(text(cal.sections.compute),/no Orin\/Xavier model/);
+ assert.equal(cal.sections.memory.status,'not-established');
+ assert.equal(system('Zeekr','Zeekr RT (Ojai)').sections.compute.status,'not-established');
+ assert.match(text(system('Waymo','Ojai').sections.sensors),/13 cameras, four LiDARs, six radars/);
+ const g2=system('WeRide','Robotaxi GXR (HPC 2.0 / SS5.6, 2024)'),g3=system('WeRide','Robotaxi GXR (HPC 3.0 / GEN8, 2026)');
+ assert.match(text(g2.sections.compute),/1,300 TOPS/);
+ assert.doesNotMatch(text(g2.sections.compute.facts.map(f=>f.details)),/Thor/);
+ assert.match(text(g3.sections.sensors),/EM4.*E1/);
+ assert.equal(profileIds(system('WeRide','Robotaxi GXR')).length,2);
+ const r1=system('WeRide','Robobus (first-generation prototype)'),r2=system('WeRide','Robobus (version 2+ engineering configuration)');
+ assert.match(text(r1.sections.compute),/Xavier-level/);
+ assert.equal(r1.sections.power.status,'not-established');
+ assert.match(text(r2.sections.compute),/x86/);
+ assert.match(text(r2.sections.power),/69.2 kWh/);
+ assert.match(text(r2.sections.interfaces),/J1939.*Gigabit Ethernet/);
+ assert.equal(profileIds(system('WeRide','Robobus')).length,2);
+ assert.equal(system('WeRide','Robosweeper S6').sections.compute.status,'not-established');
+});
