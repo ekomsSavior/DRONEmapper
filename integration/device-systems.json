@@ -30447,6 +30447,744 @@
           ]
         }
       ]
+    },
+    {
+      "id": "baykar-tb2-public-2026",
+      "manufacturer": "Baykar",
+      "models": [
+        "Bayraktar TB2"
+      ],
+      "configuration": "Current family product specification; A/B/C/D variants and payload installations differ. The manufacturer does not identify an engine brand here. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight-control redundancy",
+          "details": "Triple-redundant autopilot and sensor-fusion architecture; processor SKU unspecified.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-tb2/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Configurable sensing",
+          "details": "EO/IR/laser-designator package or surveillance radar; exact fitted model depends on configuration.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-tb2/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Control and imagery links",
+          "details": "LOS and BLOS communications; ground-station description specifies three LOS bands without naming their frequencies.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-tb2/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Propulsion and backup power",
+          "details": "100 hp combustion engine, redundant lithium-based battery units and redundant servo actuators.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-tb2/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Airframe payload capacity",
+          "details": "Published payload capacity 150 kg and 700 kg maximum takeoff mass.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-tb2/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight automation",
+          "details": "Autonomous taxi, takeoff, cruise and landing; internal sensor-fusion navigation.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-tb2/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baykar-akinci-public-2026",
+      "manufacturer": "Baykar",
+      "models": [
+        "Bayraktar Akinci"
+      ],
+      "configuration": "AKINCI A/B/C family reference. Engine outputs are alternative configurations, not simultaneous equipment. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Redundant flight controls",
+          "details": "Triple-redundant autopilot and sensor fusion; individual processor model not identified.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-akinci/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "LOS and satellite links",
+          "details": "Triple-redundant LOS link architecture and SATCOM BLOS communications; RF chipsets and specific bands unpublished.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-akinci/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Optional sensing payloads",
+          "details": "EO/IR/laser-designator, multimode AESA radar and signals-intelligence equipment; sensor SKUs unspecified.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-akinci/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Twin turboprops",
+          "details": "Manufacturer lists two 450 hp, two 750 hp or two 850 hp turboprop engines, depending on variant.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-akinci/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Actuation and payload",
+          "details": "Redundant servo actuators, retractable landing gear and configurable payload interfaces.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-akinci/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight automation",
+          "details": "Autonomous flight and takeoff/landing control with built-in sensor fusion.",
+          "sources": [
+            "https://baykartech.com/en/uav/bayraktar-akinci/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elbit-rook-2021",
+      "manufacturer": "Elbit Systems",
+      "models": [
+        "ROOK"
+      ],
+      "configuration": "Elbit/Roboteam launch configuration, November 2021. Internal generator is optional. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Hybrid energy system",
+          "details": "Battery propulsion with optional onboard generator; six-wheel drive. Battery chemistry and capacity are unspecified.",
+          "sources": [
+            "https://www.elbitsystems.com/news/elbit-systems-and-roboteam-introduce-rook-new-multi-payload-6x6-unmanned-ground-vehicle"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload interoperability",
+          "details": "UGV Interoperability Profile (IOP) for plug-in payloads; field-replaceable modular assemblies.",
+          "sources": [
+            "https://www.elbitsystems.com/news/elbit-systems-and-roboteam-introduce-rook-new-multi-payload-6x6-unmanned-ground-vehicle"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator equipment",
+          "details": "Rugged 7-inch display terminal or TORCH-X RAS application.",
+          "sources": [
+            "https://www.elbitsystems.com/news/elbit-systems-and-roboteam-introduce-rook-new-multi-payload-6x6-unmanned-ground-vehicle"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "TORCH-X RAS",
+          "details": "Built-in robotic autonomy application for navigation and multi-vehicle supervision.",
+          "sources": [
+            "https://www.elbitsystems.com/news/elbit-systems-and-roboteam-introduce-rook-new-multi-payload-6x6-unmanned-ground-vehicle"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Platform and payload masses",
+          "details": "1,200 kg vehicle mass and up to 1,200 kg payload.",
+          "sources": [
+            "https://www.elbitsystems.com/news/elbit-systems-and-roboteam-introduce-rook-new-multi-payload-6x6-unmanned-ground-vehicle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elbit-hermes900-published",
+      "manufacturer": "Elbit Systems",
+      "models": [
+        "Hermes 900"
+      ],
+      "configuration": "Manufacturer baseline brochure (copyright 2016) and current product page. Sensors are alternative payloads; Hermes StarLiner is a separate variant. Engine, processor, memory and RF chip models are not disclosed here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Aircraft data links",
+          "details": "LOS datalink and satellite communication; modem models and bands unspecified.",
+          "sources": [
+            "https://www.elbitsystems.com/autonomous/aerial/male-unmanned-aircraft-systems/hermes-900"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Selectable sensor payloads",
+          "details": "EO/IR, SAR/GMTI, maritime radar with AIS, hyperspectral imaging and wide-area mapping options.",
+          "sources": [
+            "https://www.elbitsystems.com/sites/default/files/2025-02/hermes_900_2018-1.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload integration",
+          "details": "Multiple hardpoints and 250 kg modular internal installation bay; 350 kg total maximum payload.",
+          "sources": [
+            "https://www.elbitsystems.com/sites/default/files/2025-02/hermes_900_2018-1.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous mission functions",
+          "details": "Manufacturer describes autonomous operation; operating system and flight-controller hardware not named.",
+          "sources": [
+            "https://www.elbitsystems.com/autonomous/aerial/male-unmanned-aircraft-systems/hermes-900"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elbit-skylark-i-lex",
+      "manufacturer": "Elbit Systems",
+      "models": [
+        "Skylark I-LEX",
+        "Elbit Skylark"
+      ],
+      "configuration": "I-LEX configuration within the broad Skylark catalog family. Do not apply its electric-only propulsion or radio range to Skylark 3 Hybrid. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electric propulsion",
+          "details": "Electric motor propulsion; motor SKU and battery capacity unpublished.",
+          "sources": [
+            "https://www.elbitsystems.com/unmanned/aerial/tactical-uas/skylark-i-lex"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Stabilized camera payload",
+          "details": "Gimbaled, stabilized day/night imaging payload.",
+          "sources": [
+            "https://www.elbitsystems.com/unmanned/aerial/tactical-uas/skylark-i-lex"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "LOS video link",
+          "details": "Manufacturer rates the line-of-sight imagery link at 40 km; this is a stated system capability, not a guaranteed receiver detection range.",
+          "sources": [
+            "https://www.elbitsystems.com/unmanned/aerial/tactical-uas/skylark-i-lex"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Recovery hardware",
+          "details": "Airbag-based recovery system.",
+          "sources": [
+            "https://www.elbitsystems.com/unmanned/aerial/tactical-uas/skylark-i-lex"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight and imagery processing",
+          "details": "Autonomous flight plus tracking, moving-target indication, image registration and mosaicking.",
+          "sources": [
+            "https://www.elbitsystems.com/unmanned/aerial/tactical-uas/skylark-i-lex"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elbit-skylark3-hybrid",
+      "manufacturer": "Elbit Systems",
+      "models": [
+        "Skylark 3 Hybrid",
+        "Elbit Skylark"
+      ],
+      "configuration": "Hybrid Skylark 3 configuration, distinct from I-LEX and electric Skylark 3. Engine/motor models, battery capacity, processor, memory and datalink hardware unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Dual propulsion types",
+          "details": "Combustion engine and electric motor provide alternative propulsion with redundancy.",
+          "sources": [
+            "https://www.elbitsystems.com/unmanned/aerial/tactical-uas/skylark-3-hybrid"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "EO/IR imaging",
+          "details": "Stabilized gimbaled dual electro-optical/infrared payload.",
+          "sources": [
+            "https://www.elbitsystems.com/unmanned/aerial/tactical-uas/skylark-3-hybrid"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bae-atlas-ccv-prototype",
+      "manufacturer": "BAE Systems",
+      "models": [
+        "ATLAS CCV (2026 prototype)",
+        "ATLAS (Autonomous Tactical Light Armour System)"
+      ],
+      "configuration": "Prototype demonstrator reported in February 2026, not a documented universal production BOM. Engine, processor, memory and radio SKUs unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Supacat drive module",
+          "details": "Eight-wheel platform; Supacat designed its drive module using the HMT platform as a basis. This does not establish a particular HMT engine as fitted.",
+          "sources": [
+            "https://www.baesystems.com/en-aus/product/atlas",
+            "https://supacat.com/projects/project-atlas/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Sensing and perception",
+          "details": "Multispectral sensing supports detection and classification. Demonstrated VANTAGE configuration includes BAE ATTCS passive multispectral sensing.",
+          "sources": [
+            "https://www.baesystems.com/en-aus/product/atlas",
+            "https://www.baesystems.com/en-us/article/test-success-atlas-uncrewed-ground-vehicle-put-through-its-paces"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Vehicle control links",
+          "details": "Secure communications between operators and other platforms; frequencies and modems not named.",
+          "sources": [
+            "https://www.baesystems.com/en-aus/product/atlas"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular platform",
+          "details": "Reconfigurable payload chassis, designed for transport in a 20-foot ISO container.",
+          "sources": [
+            "https://www.baesystems.com/en-aus/product/atlas"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy modes",
+          "details": "Prototype trials included teleoperation, waypoint navigation and autonomous obstacle avoidance.",
+          "sources": [
+            "https://www.baesystems.com/en-us/article/test-success-atlas-uncrewed-ground-vehicle-put-through-its-paces"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gdls-mutt-smet",
+      "manufacturer": "General Dynamics Land Systems",
+      "models": [
+        "MUTT (S-MET)"
+      ],
+      "configuration": "S-MET configuration derived from MUTT. MUTT XM is a later, separate configuration; no future sensor package is treated as standard. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Hybrid-electric drivetrain",
+          "details": "Hybrid-electric propulsion with AC/DC power export; engine and battery SKUs undisclosed.",
+          "sources": [
+            "https://www.gdls.com/mutt/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator controls",
+          "details": "Handheld controller, teleoperation and dismount-following tether control.",
+          "sources": [
+            "https://www.gdls.com/mutt/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular payload support",
+          "details": "Interchangeable mission equipment; optional sensor and communications payloads are not an identified standard sensor suite.",
+          "sources": [
+            "https://www.gdls.com/mutt/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gdls-mutt-xm",
+      "manufacturer": "General Dynamics Land Systems",
+      "models": [
+        "MUTT XM"
+      ],
+      "configuration": "XM successor configuration; separate from the original S-MET vehicle. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Eight-wheel hybrid platform",
+          "details": "8×8 hybrid-electric drive with exportable electrical power.",
+          "sources": [
+            "https://www.gdls.com/mutt/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Controls and modules",
+          "details": "Handheld remote or following tether; modular payload architecture supports externally selected equipment.",
+          "sources": [
+            "https://www.gdls.com/mutt/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gdls-trx-platform",
+      "manufacturer": "General Dynamics Land Systems",
+      "models": [
+        "TRX"
+      ],
+      "configuration": "Base tracked platform. Leonidas, Defender, Breacher, Razorback and SHORAD are different integrations; their mission equipment is not a base-vehicle BOM. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard processing",
+          "details": "Manufacturer describes onboard computing and an upgradeable electronic architecture; CPU model unspecified.",
+          "sources": [
+            "https://www.gdls.com/trx-fov/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Hybrid-electric propulsion",
+          "details": "Hybrid-electric drive supplies traction and exportable power.",
+          "sources": [
+            "https://www.gdls.com/trx-fov/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular chassis",
+          "details": "Tracked platform with configurable payload deck; published nominal gross mass 10 tons, split approximately equally between vehicle and payload.",
+          "sources": [
+            "https://www.gdls.com/trx-fov/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Vehicle operation",
+          "details": "Supports autonomous or remote operation and hardware/software upgrades.",
+          "sources": [
+            "https://www.gdls.com/trx-fov/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iai-heron-current-family",
+      "manufacturer": "Israel Aerospace Industries",
+      "models": [
+        "Heron"
+      ],
+      "configuration": "Current Heron family reference. Do not infer a Heron MK II engine or an older Heron 1 avionics revision from this generic title. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Redundant mission system",
+          "details": "Redundant mission architecture; individual processors are not identified.",
+          "sources": [
+            "https://www.iai.co.il/product/heron/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "LOS and BLOS links",
+          "details": "Direct line-of-sight and SATCOM links transfer onboard sensor data to the ground segment.",
+          "sources": [
+            "https://www.iai.co.il/product/heron/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Multi-payload integration",
+          "details": "Supports customer-selected sensors, with up to six mission payloads operating concurrently.",
+          "sources": [
+            "https://www.iai.co.il/product/heron/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Automatic flight functions",
+          "details": "Dual automatic taxi, takeoff and landing systems.",
+          "sources": [
+            "https://www.iai.co.il/product/heron/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kratos-mako-utap22",
+      "manufacturer": "Kratos Defense",
+      "models": [
+        "Mako UTAP-22 Unmanned Tactical Aircraft",
+        "UTAP-22 Mako"
+      ],
+      "configuration": "Manufacturer datasheet carrying release OPSR 16-S-2298; historical published configuration, not a complete current aircraft BOM. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Turbojet and payload supply",
+          "details": "Unnamed turbojet rated at 1,000 lbf thrust; isolated 2 kW payload electrical supply.",
+          "sources": [
+            "https://www.kratosdefense.com/wp-content/uploads/2025/07/Mako.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Command architecture",
+          "details": "Direct UHF link, tactical datalink and network control are listed. No precise channel plan or decoder supplied.",
+          "sources": [
+            "https://www.kratosdefense.com/wp-content/uploads/2025/07/Mako.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload data interfaces",
+          "details": "Serial-port and standard digital interfaces; configurable internal equipment bays.",
+          "sources": [
+            "https://www.kratosdefense.com/wp-content/uploads/2025/07/Mako.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kratos-xq58a-public",
+      "manufacturer": "Kratos Defense",
+      "models": [
+        "XQ-58A Valkyrie",
+        "XQ-58 Valkyrie"
+      ],
+      "configuration": "Manufacturer fact sheet DOPSR 24-T-0374. Mission configurations vary; no specific AI processor or radio is established. Processor models, RAM, storage and radio chipsets are not disclosed in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Turbofan",
+          "details": "Manufacturer specifies approximately 2,000 lbf thrust; engine model unnamed.",
+          "sources": [
+            "https://www.kratosdefense.com/wp-content/uploads/2025/07/XQ-58A-Valkyrie.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload integration",
+          "details": "Separate internal and wing-mounted payload stations.",
+          "sources": [
+            "https://www.kratosdefense.com/wp-content/uploads/2025/07/XQ-58A-Valkyrie.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control modes",
+          "details": "Manual and preprogrammed operation listed in the specification.",
+          "sources": [
+            "https://www.kratosdefense.com/wp-content/uploads/2025/07/XQ-58A-Valkyrie.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "northrop-globalhawk-block30-2014",
+      "manufacturer": "Northrop Grumman",
+      "models": [
+        "RQ-4 Global Hawk Block 30 (2014 reference)",
+        "RQ-4 Global Hawk",
+        "Global Hawk / Triton family"
+      ],
+      "configuration": "USAF October 2014 baseline and supplier June 2015 IMMC reference. Sensor fit is Block 30; component data must not be generalized to every later RQ-4. CPU SKU, RAM and storage not published.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Dual Curtiss-Wright IMMC",
+          "details": "Dual redundant flight computers based on PowerPC; exact processor SKU undisclosed.",
+          "sources": [
+            "https://www.curtisswrightds.com/system/files/2023-10/Integrated-Mission-Management-Computer-case-study.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Avionics interfaces",
+          "details": "IMMC connects flight-critical temperature/pressure, engine, fuel, altimetry and airspeed subsystems.",
+          "sources": [
+            "https://www.curtisswrightds.com/system/files/2023-10/Integrated-Mission-Management-Computer-case-study.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Block 30 sensor suite",
+          "details": "EO/IR imaging, synthetic-aperture radar and high-/low-band signals-intelligence sensors.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104516/rq-4-global-hawk/mod/rq-4-global-hawk/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "F137-RR-100",
+          "details": "Rolls-Royce F137-RR-100 turbofan; published thrust 7,600 lbf.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104516/rq-4-global-hawk/mod/rq-4-global-hawk/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "northrop-globalhawk-block40-2014",
+      "manufacturer": "Northrop Grumman",
+      "models": [
+        "RQ-4 Global Hawk Block 40 (2014 reference)",
+        "RQ-4 Global Hawk",
+        "Global Hawk / Triton family"
+      ],
+      "configuration": "Separate Block 40 sensor reference in the October 2014 USAF fact sheet. Other RQ-4 configurations may carry different sensors; no processor or memory specification assigned from this source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "RTIP AESA radar",
+          "details": "Radar Technology Insertion Program active electronically scanned array supplies moving-target indication and synthetic-aperture imagery.",
+          "sources": [
+            "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104516/rq-4-global-hawk/mod/rq-4-global-hawk/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "northrop-triton-immc-2015",
+      "manufacturer": "Northrop Grumman",
+      "models": [
+        "MQ-4C Triton (IMMC reference)",
+        "Global Hawk / Triton family"
+      ],
+      "configuration": "Supplier IMMC architecture documented June 2015, alongside manufacturer radar identification. Later aircraft upgrades may differ. CPU SKU, RAM, storage and modem models unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Triton IMMC",
+          "details": "Curtiss-Wright PowerPC-based IMMC variant for Triton; supplier describes VPX open architecture and conduction cooling.",
+          "sources": [
+            "https://www.curtisswrightds.com/system/files/2023-10/Integrated-Mission-Management-Computer-case-study.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Flight-control I/O",
+          "details": "Embedded avionics interfaces with a platform-specific board-support package; mounting differs from the earlier Global Hawk computer.",
+          "sources": [
+            "https://www.curtisswrightds.com/system/files/2023-10/Integrated-Mission-Management-Computer-case-study.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "AN/ZPY-3 MFAS",
+          "details": "Active electronically scanned array radar providing 360-degree coverage.",
+          "sources": [
+            "https://www.northropgrumman.com/what-we-do/mission-solutions/airborne-isr"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atlas-arcims-current",
+      "manufacturer": "ATLAS ELEKTRONIK UK",
+      "models": [
+        "ARCIMS"
+      ],
+      "configuration": "TKMS ATLAS UK manufacturer brochure. ARCIMS is distinct from BAE ATLAS CCV. Processor, memory and exact radio parts unpublished; optional modules are not a fixed onboard configuration.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Twin-engine waterjet propulsion",
+          "details": "Two engines drive waterjets; engine make and fuel specification are not named in this brochure.",
+          "sources": [
+            "https://www.tkmsgroup.com/fileadmin/website/group/ATLAS-UK/TKMS_25_021_Brochure_ARCIMS_05.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Configurable maritime sensors",
+          "details": "Optional radar/EO packages, hull multibeam echo sounders, towed synthetic-aperture or side-scan sonar. Modules depend on the selected role.",
+          "sources": [
+            "https://www.tkmsgroup.com/fileadmin/website/group/ATLAS-UK/TKMS_25_021_Brochure_ARCIMS_05.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular USV",
+          "details": "11.2 m vessel with up to 4,000 kg payload; standardized hardware/software interfaces for third-party systems.",
+          "sources": [
+            "https://www.tkmsgroup.com/fileadmin/website/group/ATLAS-UK/TKMS_25_021_Brochure_ARCIMS_05.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation and C3",
+          "details": "Manual, remote and autonomous modes; COLREG collision avoidance; shipboard or shore-based C3 and a handheld controller.",
+          "sources": [
+            "https://www.tkmsgroup.com/fileadmin/website/group/ATLAS-UK/TKMS_25_021_Brochure_ARCIMS_05.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Control-data infrastructure",
+          "details": "High-data-rate communications are documented; exact protocol, RF bands and chipset not disclosed.",
+          "sources": [
+            "https://www.tkmsgroup.com/fileadmin/website/group/ATLAS-UK/TKMS_25_021_Brochure_ARCIMS_05.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arcims-legacy-attribution-correction",
+      "manufacturer": "BAE Systems",
+      "models": [
+        "BAE Systems ARCIMS USV"
+      ],
+      "configuration": "Legacy inventory attribution is inaccurate: the primary manufacturer identifies ARCIMS as TKMS ATLAS UK / ATLAS ELEKTRONIK UK. See the separate ARCIMS device entry for its system breakdown; BAE ATLAS CCV components must not be applied here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "identification",
+          "component": "Manufacturer correction",
+          "details": "ARCIMS is an ATLAS ELEKTRONIK UK / TKMS ATLAS UK system, not the BAE ATLAS ground vehicle. The old map title is retained here solely to flag and explain the source mismatch.",
+          "sources": [
+            "https://www.tkmsgroup.com/fileadmin/website/group/ATLAS-UK/TKMS_25_021_Brochure_ARCIMS_05.pdf"
+          ]
+        }
+      ]
     }
   ]
 }

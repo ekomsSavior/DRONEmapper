@@ -1,4 +1,4 @@
-import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b46';
+import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b47';
 import {libraryModels} from './device-library-model.mjs';
 import {macAllocationsFor,formatMacPrefix} from './device-mac-model.mjs';
 import {robotSignatures} from './robot-signatures.mjs';
@@ -9,6 +9,7 @@ const aliases=new Map([
  ['skydio, inc.','skydio'],['anduril','anduril industries'],['aurora','aurora innovation'],
  ['nao robot','aldebaran robotics'],['cobalt ai','cobalt robotics'],
  ['percepto airmax','percepto'],
+ ['kratos defense & security solutions','kratos defense'],
 ]);
 const makerOf=r=>aliases.get(norm(r.maker||r.manufacturer))||norm(r.maker||r.manufacturer);
 const namesOf=r=>new Set([r.name,r.model,...(r.aliases||[]),...(r.models||[])].filter(Boolean).map(norm));

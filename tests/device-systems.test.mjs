@@ -1446,3 +1446,48 @@ test('batch 46 preserves sensor, communication and software configuration bounda
  assert.doesNotMatch(text(bolt.sections.compute.facts.map(f=>f.details)),/QRB5165|Xeon|XR2/);
  assert.equal(profileIds(system('Anduril Industries','Anduril EagleEye',{kind:'regulatory-equipment'})).length,0);
 });
+
+test('batch 47 separates aircraft blocks, family variants and processor generations',()=>{
+ const b30=system('Northrop Grumman','RQ-4 Global Hawk Block 30 (2014 reference)');
+ const b40=system('Northrop Grumman','RQ-4 Global Hawk Block 40 (2014 reference)');
+ const triton=system('Northrop Grumman','MQ-4C Triton (IMMC reference)');
+ assert.match(text(b30.sections.compute),/PowerPC/);
+ assert.match(text(b30.sections.power),/F137-RR-100/);
+ assert.equal(b30.sections.memory.status,'not-established');
+ assert.match(text(b40.sections.sensors),/RTIP AESA/);
+ assert.doesNotMatch(text(b40.sections.sensors.facts.map(f=>f.details)),/high-.*low-band/);
+ assert.match(text(triton.sections.sensors),/AN\/ZPY-3/);
+ assert.doesNotMatch(text(triton.sections.power.facts.map(f=>f.details)),/F137/);
+ const lex=system('Elbit Systems','Skylark I-LEX');
+ const hybrid=system('Elbit Systems','Skylark 3 Hybrid');
+ assert.match(text(lex.sections.power),/Electric motor/);
+ assert.match(text(hybrid.sections.power),/Combustion engine and electric motor/);
+ assert.doesNotMatch(text(hybrid.sections.radios.facts.map(f=>f.details)),/40 km/);
+ assert.equal(profileIds(system('Elbit Systems','Elbit Skylark')).length,2);
+ const xq=system('Kratos Defense & Security Solutions','XQ-58A Valkyrie');
+ assert.deepEqual(profileIds(xq),profileIds(system('Kratos Defense','XQ-58 Valkyrie')));
+ assert.equal(xq.sections.compute.status,'not-established');
+ assert.match(text(system('Kratos Defense','UTAP-22 Mako').sections.radios),/UHF/);
+ assert.doesNotMatch(text(xq.sections.radios.facts.map(f=>f.details)),/UHF/);
+});
+
+test('batch 47 keeps optional ground modules and incorrect manufacturer attribution explicit',()=>{
+ const rook=system('Elbit Systems','ROOK');
+ assert.match(text(rook.sections.power),/optional onboard generator/);
+ assert.match(text(rook.sections.interfaces),/Interoperability Profile/);
+ assert.equal(rook.sections.memory.status,'not-established');
+ const trx=system('General Dynamics Land Systems','TRX');
+ assert.match(text(trx.configurations),/different integrations/);
+ assert.doesNotMatch(text(trx.sections.sensors.facts.map(f=>f.details)),/Epirus|Leonidas/);
+ const atlas=system('BAE Systems','ATLAS CCV (2026 prototype)');
+ assert.match(text(atlas.sections.power),/Supacat/);
+ assert.match(text(atlas.configurations),/Prototype demonstrator/);
+ const arcims=system('ATLAS ELEKTRONIK UK','ARCIMS');
+ assert.match(text(arcims.sections.power),/waterjets/);
+ const legacy=system('BAE Systems','BAE Systems ARCIMS USV');
+ assert.match(text(legacy.sections.identification),/Manufacturer correction/);
+ assert.doesNotMatch(text(legacy.sections.power.facts.map(f=>f.details)),/Supacat/);
+ assert.match(text(legacy.configurations),/attribution is inaccurate/);
+ assert.equal(profileIds(system('Baykar','Unknown model')).length,0);
+ assert.equal(profileIds(system('Baykar','Bayraktar TB2',{kind:'regulatory-equipment'})).length,0);
+});
