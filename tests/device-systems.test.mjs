@@ -842,3 +842,52 @@ test('industrial robots and Insitu references preserve their disclosed configura
  assert.match(text(lift.sections.software),/do not establish the exact physical sensors/);
  assert.equal(lift.sections.sensors.status,'not-established');
 });
+
+test('survey payloads, tractor revisions and underwater variants retain their own components',()=>{
+ const h3=system('Kongsberg Maritime','HUGIN 3000'),h6=system('Kongsberg Maritime','HUGIN 6000');
+ assert.match(text(h3.sections.power),/26.1 kWh/);
+ assert.doesNotMatch(text(h3.sections.power),/67 kWh/);
+ assert.match(text(h6.sections.power),/67 kWh/);
+ assert.match(text(h3.sections.sensors),/HISAS variant adds/);
+ assert.match(text(h6.sections.sensors),/Standard HISAS 1032/);
+ assert.match(text(h6.sections.radios),/sound, not RF/);
+ assert.equal(h6.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Kongsberg Maritime','HUGIN')).length,2);
+ const founder=system('Monarch Tractor','MK-V Founder Series (2022)');
+ const xlr=system('Monarch Tractor','MK-V XLR (2025.7 hardware specification)');
+ assert.match(text(founder.sections.compute),/Six NVIDIA Jetson Xavier NX/);
+ assert.match(text(founder.sections.sensors),/Two 3D cameras and six standard/);
+ assert.equal(founder.sections.memory.status,'not-established');
+ assert.equal(xlr.sections.compute.status,'not-established');
+ assert.match(text(xlr.sections.radios),/readiness does not establish a fitted/);
+ assert.equal(profileIds(system('Monarch Tractor','MK-V')).length,2);
+ const ndaa=system('Microdrones','EasyOne NDAA'),uhr=system('Microdrones','EasyOneLiDAR UHR / UHR Lite'),plus=system('Microdrones','EasyOneLiDAR UHR+');
+ assert.match(text(ndaa.sections.sensors),/Ouster OS1.*three 20 MP/);
+ assert.doesNotMatch(text(ndaa.sections.sensors.facts.map(f=>f.details)),/Hesai|26 MP/);
+ assert.match(text(ndaa.sections.radios),/different remote control and communication link/);
+ assert.match(text(uhr.sections.sensors),/XT-32.*XT-16/);
+ assert.doesNotMatch(text(uhr.sections.sensors),/XT32M2X|Ouster/);
+ assert.match(text(plus.sections.sensors),/XT32M2X/);
+ assert.equal(profileIds(system('Microdrones','EasyOne')).length,2);
+ assert.match(text(system('Microdrones','md4-1000').sections.sensors),/SICK LD-MRS4.*APX-15/);
+ assert.match(text(system('Microdrones','md4-3000').sections.sensors),/miniVUX-1DL.*APX-20/);
+ assert.doesNotMatch(text(system('Microdrones','md4-3000').sections.sensors),/SICK|APX-15/);
+});
+
+test('assistive robots and delivery/development vehicles preserve evidence boundaries',()=>{
+ const lab=system('Labrador Systems','Retriever');
+ assert.match(text(lab.configurations),/target specifications/);
+ assert.match(text(lab.sections.interfaces),/25–38 inches/);
+ assert.equal(profileIds(system('Labrador Systems','Caddie')).includes('labrador-retriever-early-reservation-target'),false);
+ assert.doesNotMatch(text(lab.sections.compute),/Jetson|Raspberry|Intel/);
+ const m2=system('Matternet','M2');
+ assert.match(text(m2.sections.radios),/B2, B4 and B17/);
+ assert.match(text(m2.sections.sensors),/does not establish an ADS-B transmitter/);
+ assert.equal(profileIds(system('Matternet','M2 Block 2')).includes('matternet-m2-current-system'),false);
+ const tx=system('Milrem Robotics','Type-X RCV');
+ assert.match(text(tx.sections.power),/12 tonnes/);
+ assert.match(text(tx.sections.software),/ROS2/);
+ assert.match(text(tx.sections.radios),/does not establish its installation on every Type-X/);
+ assert.equal(tx.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(tx.sections.power),/lead-acid|1815 kg/);
+});

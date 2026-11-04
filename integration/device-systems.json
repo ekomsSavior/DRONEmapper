@@ -20625,6 +20625,668 @@
           ]
         }
       ]
+    },
+    {
+      "id": "kongsberg-hugin3000-datasheet-a",
+      "manufacturer": "Kongsberg Maritime",
+      "models": [
+        "HUGIN 3000",
+        "HUGIN"
+      ],
+      "configuration": "Manufacturer datasheet 110-0047668/A as printed inside the linked PDF. Configurable payloads; CPU, RAM and radio silicon undisclosed. Legacy HUGIN components are not assumed installed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Battery and vehicle",
+          "details": "Swappable lithium-polymer batteries, 26.1 kWh; 27–32 hours at three knots, 4.5–7 hours charging. Typical 1200 kg, 750 mm diameter, 5.4 m length; 3000 m depth rating.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047668-b-hugin_3000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Mission storage",
+          "details": "Removable data storage; medium and capacity unspecified.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047668-b-hugin_3000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Communications",
+          "details": "cNODE underwater acoustic link (sound, not RF); UHF radio; Iridium emergency beacon with backup battery and separate two-way OTH link. Optional 802.11g Wi-Fi.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047668-b-hugin_3000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "Sunstone AINS, navigation-grade IMU, DVL, depth sensor, surface GPS, HiPAP USBL aiding and forward-looking sonar.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047668-b-hugin_3000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Payload configuration",
+          "details": "Standard EM 2040 multibeam, EdgeTech sub-bottom profiler, CTD, sound-speed, magnetic and turbidity sensors. SSS variant adds EdgeTech side-scan; HISAS variant adds HISAS 1032, color camera/LEDs and laser profiler.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047668-b-hugin_3000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control architecture",
+          "details": "Software options list HuginOS, AUV Control Processor and Payload/Autonomy Processor; no processor chip or onboard GPU model is established.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047668-b-hugin_3000_datasheet.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kongsberg-hugin6000-datasheet-a",
+      "manufacturer": "Kongsberg Maritime",
+      "models": [
+        "HUGIN 6000",
+        "HUGIN"
+      ],
+      "configuration": "Manufacturer datasheet 110-0047669/A as printed inside the linked PDF. Configurable payloads; CPU, RAM and radio silicon undisclosed. Legacy HUGIN components are not assumed installed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Battery and vehicle",
+          "details": "Swappable lithium-polymer batteries, 67 kWh; 65–76 hours at three knots, 6–9.5 hours charging. Typical 2000 kg, 875 mm diameter, 6.2 m length; 6000 m depth rating.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047669-b-hugin_6000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Mission storage",
+          "details": "Removable data storage; medium and capacity unspecified.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047669-b-hugin_6000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Communications",
+          "details": "cNODE underwater acoustic link (sound, not RF); UHF radio; Iridium emergency beacon with backup battery and separate two-way OTH link. Optional 802.11g Wi-Fi.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047669-b-hugin_6000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "Sunstone AINS, navigation-grade IMU, DVL, depth sensor, surface GPS, HiPAP USBL aiding and forward-looking sonar.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047669-b-hugin_6000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Payload configuration",
+          "details": "Standard HISAS 1032, EM 2040, EdgeTech sub-bottom profiler, CTD, sound-speed, magnetic/turbidity sensors, camera/LEDs and laser profiler. Scientific variant adds environmental sensors; EdgeTech side-scan is optional.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047669-b-hugin_6000_datasheet.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control architecture",
+          "details": "Software options list HuginOS, AUV Control Processor and Payload/Autonomy Processor; no processor chip or onboard GPU model is established.",
+          "sources": [
+            "https://www.kongsberg.com/globalassets/kongsberg/1.-what-we-do/2.-ocean-space/1.-autonomous-and-uncrewed-solutions/hugin/documents/110-0047669-b-hugin_6000_datasheet.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "labrador-retriever-early-reservation-target",
+      "manufacturer": "Labrador Systems",
+      "models": [
+        "Retriever",
+        "Labrador Retriever"
+      ],
+      "configuration": "Early-reservation target specifications, subject to production changes. CPU, RAM, battery capacity and radio/sensor chipsets undisclosed. Caddie has different lift/retrieval hardware.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Local autonomous processing",
+          "details": "Internal computers run autonomous navigation locally; processor model is not specified.",
+          "sources": [
+            "https://labradorsystems.com/products-aep22/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Local and cloud connections",
+          "details": "Wi-Fi and Bluetooth. Wi-Fi supports training, updates and cloud services; after training, local Bluetooth commands can operate without Internet.",
+          "sources": [
+            "https://labradorsystems.com/products-aep22/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Obstacle and contact detection",
+          "details": "Forward/floor depth sensors, side bumpers, load sensing and cliff detectors.",
+          "sources": [
+            "https://labradorsystems.com/products-aep22/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Localization",
+          "details": "Manufacturer demonstrates stereo-vision localization; camera model is unspecified.",
+          "sources": [
+            "https://labradorsystems.com/careers/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging",
+          "details": "Automatic charging dock; approximately four-hour recharge and a normal day of use are targets. Battery chemistry/capacity undisclosed.",
+          "sources": [
+            "https://labradorsystems.com/products-aep22/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload and lift",
+          "details": "25 lb across two decks; adjustable upper deck 25–38 inches and lower deck 11–24 inches. Automatic retrieval handles a 10 lb tray.",
+          "sources": [
+            "https://labradorsystems.com/products-aep22/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Accessory power",
+          "details": "Two charging ports, including upper-deck USB power; optional tablet stand.",
+          "sources": [
+            "https://labradorsystems.com/products-aep22/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monarch-mkv-founder-2022",
+      "manufacturer": "Monarch Tractor",
+      "models": [
+        "MK-V Founder Series (2022)",
+        "MK-V"
+      ],
+      "configuration": "NVIDIA December 2022 Founder Series account. These components are not automatically assigned to later MK-V hardware revisions. RAM/storage capacities and radio modules unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard vision compute",
+          "details": "Six NVIDIA Jetson Xavier NX system-on-modules; exact memory variants undisclosed.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/mondavi-monarch-smart-electric-jetson-tractor/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera suite",
+          "details": "Two 3D cameras and six standard cameras. Camera-based row navigation supports operation where GPS is unavailable.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/mondavi-monarch-smart-electric-jetson-tractor/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric platform",
+          "details": "Fully electric tractor; this source does not state battery capacity or motor SKU.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/mondavi-monarch-smart-electric-jetson-tractor/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Vision and implements",
+          "details": "Onboard vision processes crop and implement data, supports precision farming applications and stops spraying when a person is detected.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/mondavi-monarch-smart-electric-jetson-tractor/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monarch-mkv-xlr-2025-7",
+      "manufacturer": "Monarch Tractor",
+      "models": [
+        "MK-V XLR (2025.7 hardware specification)",
+        "MK-V"
+      ],
+      "configuration": "Manufacturer sheet revision 2025.7 printed in the PDF, despite its older URL filename. Processor/RAM are not specified; the 2022 Founder Series compute is not presumed unchanged.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Drive and battery",
+          "details": "Electric motor: 52 kW peak, 30 kW rated. Four-wheel drive, nine forward/three reverse speeds, wet clutch and electrohydraulic actuation. XLR battery runtime estimated at 14 hours; chemistry and Wh undisclosed.",
+          "sources": [
+            "https://www.monarchtractor.com/hubfs/01_MK-V%20Documents/%E2%AD%90%20Monarch_MKV_SpecSheet_v.2024.11.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging and export power",
+          "details": "J1772 Type 1 AC Level 2, up to 80 A. Listed charge times: five hours at 80 A, ten at 40 A. Export outlets: 110 V/15 A and 220 V/18 A.",
+          "sources": [
+            "https://www.monarchtractor.com/hubfs/01_MK-V%20Documents/%E2%AD%90%20Monarch_MKV_SpecSheet_v.2024.11.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Connectivity modules",
+          "details": "Dual-band 802.11ac Wi-Fi. 4G LTE-ready and 900 MHz LoRa-ready; readiness does not establish a fitted or enabled radio on every tractor.",
+          "sources": [
+            "https://www.monarchtractor.com/hubfs/01_MK-V%20Documents/%E2%AD%90%20Monarch_MKV_SpecSheet_v.2024.11.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Implement systems",
+          "details": "CAT I/II three-point hitch, 997 kg lift; rear 540 rpm/30 kW PTO. Closed-center hydraulics, 75 L/min rated and 45 L/min constant flow.",
+          "sources": [
+            "https://www.monarchtractor.com/hubfs/01_MK-V%20Documents/%E2%AD%90%20Monarch_MKV_SpecSheet_v.2024.11.pdf?hsLang=en"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microdrones-easyone-uhr-lite-configurations",
+      "manufacturer": "Microdrones",
+      "models": [
+        "EasyOneLiDAR UHR / UHR Lite",
+        "EasyOne"
+      ],
+      "configuration": "Manufacturer UHR/UHR Lite package reference. CPU, RAM, battery capacity and RF chip/PHY unspecified. Payload APX-15 is not identified as the main flight processor.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight controller",
+          "details": "Single-board integrated autopilot; processor part number undisclosed.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-uhr-lite/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Survey payload",
+          "details": "UHR uses Hesai Pandar XT-32; UHR Lite uses XT-16, advertised as firmware-upgradeable to XT-32. Both pair one 26 MP APS-C CMOS camera with Trimble/Applanix APX-15 UAV GNSS/IMU.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-uhr-lite/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight battery",
+          "details": "Battery-management system, single charging connector and LED status. Package takeoff weight 5.6 kg; this is not battery weight or capacity.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-uhr-lite/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload and ground control",
+          "details": "Payload quick-connect and mdCockpit display integrated into remote controller.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-uhr-lite/"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Remote ID",
+          "details": "Remote ID-enabled broadcast device; this source does not establish every broadcast transport or a unique scanner pattern.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-uhr-lite/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Survey processing",
+          "details": "mdCockpit mission planning/control and LP360 Drone processing.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-uhr-lite/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microdrones-easyone-uhr-plus",
+      "manufacturer": "Microdrones",
+      "models": [
+        "EasyOneLiDAR UHR+",
+        "EasyOne"
+      ],
+      "configuration": "UHR+ package specification. CPU, RAM, battery capacity and radio PHY unspecified; its LiDAR differs from UHR/UHR Lite and NDAA packages.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight controller",
+          "details": "Integrated single-board autopilot; silicon part number undisclosed.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-plus/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Survey payload",
+          "details": "Hesai Pandar XT32M2X LiDAR, one 26 MP APS-C CMOS camera and Trimble/Applanix APX-15 UAV GNSS/IMU. Three laser returns supported.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-plus/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery system",
+          "details": "Battery-management system, single connector and LED status; capacity undisclosed. Configured takeoff weight 5.2 kg.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-plus/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload and controller",
+          "details": "Payload quick-connect; integrated remote-controller mission display.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-plus/"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Remote ID",
+          "details": "Manufacturer lists Remote ID-enabled broadcast equipment; exact PHY is not given here.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-plus/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Survey workflow",
+          "details": "mdCockpit for planning/control; LP360 Drone for georeferencing and point-cloud processing.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/easyoneuhr-plus/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microdrones-easyone-ndaa-ouster",
+      "manufacturer": "Microdrones",
+      "models": [
+        "EasyOneLiDAR NDAA",
+        "EasyOne NDAA"
+      ],
+      "configuration": "Manufacturer NDAA package article and February 2025 master deck, PDF page 105. No CPU, RAM, battery capacity or radio chipset specified; Hesai payloads from other EasyOne variants are not inherited.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "LiDAR and cameras",
+          "details": "Ouster OS1 with 128 channels; three 20 MP, one-inch mechanical-shutter cameras, 60 MP combined. Trimble APX-15 UAV georeferencing module.",
+          "sources": [
+            "https://www.microdrones.com/en/content/where-can-you-find-the-only-ndaa-fully-integrated-drone-surveying-system/",
+            "https://cdn.microdrones.com/fileadmin/web/_downloads/brochures/english/GeoCue-Microdrones-Master-Deck_2-12-25.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Ground link configuration",
+          "details": "Manufacturer explicitly identifies a different remote control and communication link from the original EasyOne; frequency/PHY undisclosed.",
+          "sources": [
+            "https://www.microdrones.com/en/content/where-can-you-find-the-only-ndaa-fully-integrated-drone-surveying-system/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight package",
+          "details": "Includes flight battery; configured takeoff weight 5.2 kg. Energy capacity is not stated.",
+          "sources": [
+            "https://www.microdrones.com/en/content/where-can-you-find-the-only-ndaa-fully-integrated-drone-surveying-system/",
+            "https://cdn.microdrones.com/fileadmin/web/_downloads/brochures/english/GeoCue-Microdrones-Master-Deck_2-12-25.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Survey integration",
+          "details": "Airframe, payload and ground controller supplied as an integrated system.",
+          "sources": [
+            "https://www.microdrones.com/en/content/where-can-you-find-the-only-ndaa-fully-integrated-drone-surveying-system/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Processing",
+          "details": "mdCockpit and LP360 Drone; LP360 Cloud supports project sharing/storage.",
+          "sources": [
+            "https://www.microdrones.com/en/content/where-can-you-find-the-only-ndaa-fully-integrated-drone-surveying-system/",
+            "https://cdn.microdrones.com/fileadmin/web/_downloads/brochures/english/GeoCue-Microdrones-Master-Deck_2-12-25.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microdrones-md4-1000-mdlidar-aas",
+      "manufacturer": "Microdrones",
+      "models": [
+        "mdLiDAR1000 aaS (md4-1000)",
+        "md4-1000"
+      ],
+      "configuration": "Manufacturer legacy mdLiDAR1000 aaS package reference. This payload is not universal to every md4-1000. CPU, memory, battery capacity and radio chipset unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Survey payload",
+          "details": "SICK LD-MRS4 LiDAR, FLIR 5 MP global-shutter camera and Applanix APX-15 UAV GNSS/IMU mapping module.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/mdlidar1000-aas/?type=9800"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Data and RC links",
+          "details": "Encrypted digital data link for tablet control; mdRC uses a second radio link. Frequencies and protocols are unspecified.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/mdlidar1000-aas/?type=9800"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Airframe and flight battery",
+          "details": "md4-1000 flight battery and charger; integrated motor cooling covers. Configured takeoff weight 6.65 kg; tabulated flight time 25 minutes under stated standard conditions.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/mdlidar1000-aas/?type=9800"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground operation",
+          "details": "Android tablet running mdCockpit; multiple-tablet control optional.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/mdlidar1000-aas/?type=9800"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mapping workflow",
+          "details": "mdCockpit planning/control, APX-15 georeferencing and mdInfinity processing. Page also advertises LP360 as the newer processing ecosystem.",
+          "sources": [
+            "https://www.microdrones.com/en/integrated-systems/easyone/mdlidar1000-aas/?type=9800"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microdrones-md4-3000-mdlidar3000dl",
+      "manufacturer": "Microdrones",
+      "models": [
+        "mdLiDAR3000DL (md4-3000)",
+        "md4-3000"
+      ],
+      "configuration": "Manufacturer Portuguese-language legacy mdLiDAR3000DL configuration. Exact main processor, RAM, battery capacity and radio silicon undisclosed; other md4-3000 payload configurations may differ.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Mapping instruments",
+          "details": "Riegl miniVUX-1DL LiDAR, Sony RX1R II 42.4 MP camera, and Applanix APX-20 UAV DG with GNSS and dual IMUs.",
+          "sources": [
+            "https://www.microdrones.com/br/sistemas-integrados/microdrones-linha-de-drone-especializado/mdlidar3000dl/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Propulsion and battery",
+          "details": "Quadrotor with three-bladed propellers, motor cooling covers and md4-3000 flight battery/charger. Battery capacity is not established here.",
+          "sources": [
+            "https://www.microdrones.com/br/sistemas-integrados/microdrones-linha-de-drone-especializado/mdlidar3000dl/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Control links",
+          "details": "Encrypted digital data link and separate mdRC radio-control link; exact frequency/PHY unspecified.",
+          "sources": [
+            "https://www.microdrones.com/br/sistemas-integrados/microdrones-linha-de-drone-especializado/mdlidar3000dl/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload and ground control",
+          "details": "Quick-connect payload mount; mdCockpit Android-tablet control, with optional multiple-tablet operation.",
+          "sources": [
+            "https://www.microdrones.com/br/sistemas-integrados/microdrones-linha-de-drone-especializado/mdlidar3000dl/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Survey processing",
+          "details": "mdInfinity online/desktop processing and ASPRS LAS export; APX-20 supplies georeferencing data.",
+          "sources": [
+            "https://www.microdrones.com/br/sistemas-integrados/microdrones-linha-de-drone-especializado/mdlidar3000dl/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matternet-m2-current-system",
+      "manufacturer": "Matternet",
+      "models": [
+        "M2",
+        "Matternet M2"
+      ],
+      "configuration": "Current manufacturer M2 system page and company securities filing. CPU, RAM, battery capacity and sensor chipsets undisclosed. Block 2 or earlier revision-specific components are not inferred.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Airframe and propulsion",
+          "details": "Quadrotor with 22-inch propellers and swappable lithium-ion battery. Maximum takeoff mass 13.2 kg; 2 kg payload.",
+          "sources": [
+            "https://www.matternet.com/our-system-aircraft-m2",
+            "https://investor.matternet.com/sec-filings/all-sec-filings/content/0001213900-26-084193/ea0299883-s1a1_matternet.htm"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Command and control",
+          "details": "4G LTE cellular bands B2, B4 and B17 connect aircraft with Matternet Cloud. Shared cellular bands are not a unique device identifier.",
+          "sources": [
+            "https://www.matternet.com/our-system-aircraft-m2"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Traffic and navigation",
+          "details": "ADS-B traffic awareness, multi-sensor navigation fusion and anti-collision lights. Traffic awareness does not establish an ADS-B transmitter.",
+          "sources": [
+            "https://investor.matternet.com/sec-filings/all-sec-filings/content/0001213900-26-084193/ea0299883-s1a1_matternet.htm"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload and battery exchange",
+          "details": "Removable payload boxes and battery can be swapped manually or at a separate robotic station; manufacturer targets turnaround below 60 seconds.",
+          "sources": [
+            "https://www.matternet.com/our-system-aircraft-m2",
+            "https://investor.matternet.com/sec-filings/all-sec-filings/content/0001213900-26-084193/ea0299883-s1a1_matternet.htm"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight supervision",
+          "details": "3D geofencing, in-flight monitoring and flight termination functions. Main operating system is not specified.",
+          "sources": [
+            "https://investor.matternet.com/sec-filings/all-sec-filings/content/0001213900-26-084193/ea0299883-s1a1_matternet.htm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "milrem-typex-development-2020-2023",
+      "manufacturer": "Milrem Robotics",
+      "models": [
+        "Type-X RCV",
+        "Type-X"
+      ],
+      "configuration": "Manufacturer development references from 2020–2023, including the DSEI 2023 demonstration configuration. Exact CPU, memory, battery, engine and radio modules undisclosed; THeMIS parts are not assigned to Type-X.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Prototype mobility",
+          "details": "2021 vehicle: hybrid powertrain, rear engine, rubber tracks; approximately 12 tonnes and 2.2 m height.",
+          "sources": [
+            "https://milremrobotics.com/milrem-robotics-rolls-out-its-new-type-x-rcv/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Maintenance architecture",
+          "details": "Health and Usage Monitoring System with replaceable modules and predictive maintenance.",
+          "sources": [
+            "https://milremrobotics.com/milrem-robotics-rolls-out-its-new-type-x-rcv/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy integration",
+          "details": "Intelligent Functions Kit supplies a modular ROS2 hardware/software environment developed for Type-X. Published functions include waypoint navigation, follow-me and human-supervised remote control.",
+          "sources": [
+            "https://milremrobotics.com/milrem-robotics-revealed-type-x-rcv-with-john-cockerill-cpws-ii-turret/",
+            "https://milremrobotics.com/milrem-robotics-rolls-out-its-new-type-x-rcv/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "2023 perception configuration",
+          "details": "Vegvisir Remote system combines EO/IR sensors in a 360-degree situational-awareness view; exact camera models unspecified.",
+          "sources": [
+            "https://milremrobotics.com/a-game-changer-that-redefines-future-battlefield-capabilities-the-type-x-rcv-the-first-robotic-combat-vehicle-equipped-with-a-mixed-reality-situational-awareness-system/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Demonstrated relay integration",
+          "details": "2023 configuration includes Elistair QUADBOX tethered aerial system and communications relay. This does not establish its installation on every Type-X or a unique radio signature.",
+          "sources": [
+            "https://milremrobotics.com/a-game-changer-that-redefines-future-battlefield-capabilities-the-type-x-rcv-the-first-robotic-combat-vehicle-equipped-with-a-mixed-reality-situational-awareness-system/"
+          ]
+        }
+      ]
     }
   ]
 }
