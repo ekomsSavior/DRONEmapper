@@ -24201,6 +24201,548 @@
           ]
         }
       ]
+    },
+    {
+      "id": "saab-falcon-rev19-3-system",
+      "manufacturer": "Saab Seaeye",
+      "models": [
+        "Falcon (2024 REV19.3 configuration)",
+        "Seaeye Falcon",
+        "Falcon"
+      ],
+      "configuration": "300 m Falcon in Saab brochure REV19.3, copyright 2024. DR and customer payload installations are separate. CPU SKU, RAM and camera model are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "iCON distributed controllers",
+          "details": "iCON assigns a microprocessor to each vehicle device. Introduced for new Falcons in 2017 and offered as an upgrade; older vehicles are not assumed upgraded.",
+          "sources": [
+            "https://www.saabseaeye.com/news/falcon-even-smarter"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Tethered communications",
+          "details": "One video channel via shielded twisted pair or fibre optic tether. This is a wired underwater link, not Wi-Fi.",
+          "sources": [
+            "https://www.saabseaeye.com/uploads/saab-falcon-rev19-3_%281%29.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Standard navigation and camera",
+          "details": "Colour camera, heading/depth navigation pod and two LED lights. DVL and acoustic tracking equipment are optional.",
+          "sources": [
+            "https://www.saabseaeye.com/solutions/underwater-vehicles/falcon"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Thrusters and supply",
+          "details": "Four horizontal and one vertical S1-MCT01 thrusters; surface 110/230 V AC single-phase, 50/60 Hz supply. 60 kg vehicle, 300 m depth rating; no onboard propulsion battery listed.",
+          "sources": [
+            "https://www.saabseaeye.com/uploads/saab-falcon-rev19-3_%281%29.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Surface equipment and tools",
+          "details": "22-inch detachable touchscreen, USB hand controller and serial data connections. One- or five-function manipulators are options.",
+          "sources": [
+            "https://www.saabseaeye.com/uploads/saab-falcon-rev19-3_%281%29.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Vehicle assistance",
+          "details": "Auto-heading and auto-depth standard. Auto-altitude and station keeping optional; station keeping needs DVL and its interface.",
+          "sources": [
+            "https://www.saabseaeye.com/uploads/saab-falcon-rev19-3_%281%29.pdf",
+            "https://www.saabseaeye.com/news/falcon-even-smarter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "saab-falcon-dr-rev19-3-system",
+      "manufacturer": "Saab Seaeye",
+      "models": [
+        "Falcon DR (2024 REV19.3 configuration)",
+        "Falcon DR"
+      ],
+      "configuration": "1,000 m Falcon DR column of REV19.3. Do not apply its mass, tether or depth rating to the 300 m Falcon. Processor SKU and RAM are unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Distributed control",
+          "details": "iCON vehicle control architecture.",
+          "sources": [
+            "https://www.saabseaeye.com/uploads/saab-falcon-rev19-3_%281%29.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Fibre optic tether",
+          "details": "Two video channels over fibre optic only.",
+          "sources": [
+            "https://www.saabseaeye.com/uploads/saab-falcon-rev19-3_%281%29.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Deep-rated propulsion",
+          "details": "Five S1-MCT01 thrusters; 110/230 V AC surface supply. 100 kg vehicle, 1,000 m depth rating and 15 kg payload.",
+          "sources": [
+            "https://www.saabseaeye.com/uploads/saab-falcon-rev19-3_%281%29.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tooling",
+          "details": "One- or five-function manipulator options.",
+          "sources": [
+            "https://www.saabseaeye.com/uploads/saab-falcon-rev19-3_%281%29.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "saab-falcon-csiro-2018-payload",
+      "manufacturer": "Saab Seaeye",
+      "models": [
+        "Falcon (CSIRO 2018 payload configuration)",
+        "Seaeye Falcon"
+      ],
+      "configuration": "Manufacturer account of CSIRO’s particular Falcon installation, 2018. Named equipment is a customer configuration, not standard fit on every Falcon.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Survey sonar and video",
+          "details": "Tritech Super SeaPrince sonar and Kongsberg OE14-502 HD zoom camera are identified for the CSIRO vehicle.",
+          "sources": [
+            "https://www.saabseaeye.com/news/australia-s-science-community-gets-hands-on-robotics-training"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serve-gen3-oct2024-system",
+      "manufacturer": "Serve Robotics",
+      "models": [
+        "Serve Robot (third generation, October 2024)",
+        "Serve Robot"
+      ],
+      "configuration": "Third-generation platform announced October 16, 2024, with manufacturing started and deployment planned for 2025. Exact Orin SKU, RAM, radio hardware and battery capacity are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard AI module",
+          "details": "NVIDIA Jetson Orin; the announcement does not identify NX versus AGX or a memory configuration.",
+          "sources": [
+            "https://ir.serverobotics.com/news-releases/news-release-details/serve-robotics-rolls-out-third-generation-autonomous-delivery"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Ouster lidar",
+          "details": "Ouster REV7 digital lidar. REV7 names a hardware generation, not proof of a specific OS-series sensor model.",
+          "sources": [
+            "https://ir.serverobotics.com/news-releases/news-release-details/serve-robotics-rolls-out-third-generation-autonomous-delivery"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and drive",
+          "details": "Battery-powered drivetrain with suspension. The announcement gives relative endurance improvements, not battery voltage or capacity.",
+          "sources": [
+            "https://ir.serverobotics.com/news-releases/news-release-details/serve-robotics-rolls-out-third-generation-autonomous-delivery"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Braking and cargo",
+          "details": "Fail-safe mechanical braking with enhanced emergency stopping; enlarged enclosed cargo bin.",
+          "sources": [
+            "https://ir.serverobotics.com/news-releases/news-release-details/serve-robotics-rolls-out-third-generation-autonomous-delivery"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous control",
+          "details": "Onboard navigation and collision avoidance using Serve’s updated AI architecture.",
+          "sources": [
+            "https://ir.serverobotics.com/news-releases/news-release-details/serve-robotics-rolls-out-third-generation-autonomous-delivery"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seqsense-sq2-mk3-system",
+      "manufacturer": "Seqsense",
+      "models": [
+        "SQ-2 mk3",
+        "SQ-2"
+      ],
+      "configuration": "Current manufacturer specification explicitly marked mk3. Processor, RAM, modem model and battery capacity are undisclosed. Runtime/charging values follow the specification table.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Cellular connectivity",
+          "details": "4G LTE; bands and modem SKU are not stated.",
+          "sources": [
+            "https://www.seqsense.com/product"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "SQ LiDAR and observation",
+          "details": "Proprietary SQ 3D LiDAR; four directional cameras for surrounding views, LED illumination, microphone and speaker.",
+          "sources": [
+            "https://www.seqsense.com/product"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and chassis",
+          "details": "Lithium-ion battery, 5–6 hours per charge, maximum 1.5-hour charging. 65 kg; 520 × 600 × 1,215 mm. Automatic return to charging station.",
+          "sources": [
+            "https://www.seqsense.com/product"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mobility and building integration",
+          "details": "Pseudo rocker-bogie wheel mechanism and elevator integration. Front/rear text displays are optional.",
+          "sources": [
+            "https://www.seqsense.com/product"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Patrol functions",
+          "details": "Autonomous patrol, remote video and voice communication, recording and remote operation.",
+          "sources": [
+            "https://www.seqsense.com/product"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seqsense-sq2-aws-2023-system",
+      "manufacturer": "Seqsense",
+      "models": [
+        "SQ-2 (March 2023 cloud architecture)",
+        "SQ-2"
+      ],
+      "configuration": "AWS supplier account dated March 1, 2023. Describes SQ-2’s deployed communications/software architecture; no CPU, RAM or exact hardware revision is established.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Robot-to-cloud link",
+          "details": "4G internet connection for telemetry and video; robot can continue autonomous operation when disconnected.",
+          "sources": [
+            "https://aws.amazon.com/blogs/robotics/aws-empowers-seqsense-to-build-autonomous-security-robots/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and viewing",
+          "details": "Proprietary 3D LiDAR, high-resolution camera and three fisheye views, microphones and speakers.",
+          "sources": [
+            "https://aws.amazon.com/blogs/robotics/aws-empowers-seqsense-to-build-autonomous-security-robots/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Edge connectivity and commands",
+          "details": "Golang connectivity software uses AWS IoT Core for telemetry and remote commands. The account does not specify a unique over-the-air fingerprint.",
+          "sources": [
+            "https://aws.amazon.com/blogs/robotics/aws-empowers-seqsense-to-build-autonomous-security-robots/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Cloud data destinations",
+          "details": "Patrol results go to Amazon RDS, current state to ElastiCache for Redis, position history to Timestream, and video to Kinesis Video Streams. These are cloud services, not onboard processors or storage.",
+          "sources": [
+            "https://aws.amazon.com/blogs/robotics/aws-empowers-seqsense-to-build-autonomous-security-robots/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sabanto-autonomy-retrofit-system",
+      "manufacturer": "Sabanto",
+      "models": [
+        "Sabanto Autonomous Kit"
+      ],
+      "configuration": "Manufacturer retrofit architecture and support documentation. The host tractor determines propulsion; CPU, RAM, wireless module and sensor SKUs are not published here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Main Control Unit",
+          "details": "Control unit connects to tractor steering and power systems and executes mission/path instructions.",
+          "sources": [
+            "https://sabantoag.com/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision and navigation",
+          "details": "GNSS unit, antennas and obstacle sensors connect to the controller. Support documentation identifies four cameras with computer-vision models.",
+          "sources": [
+            "https://sabantoag.com/",
+            "https://support.sabantoag.com/vision-error"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tractor integration",
+          "details": "Ethernet, camera and wireless communication connections are covered by maintenance guidance. Handheld kill switch and onboard/remote emergency stops are part of the system.",
+          "sources": [
+            "https://sabantoag.com/",
+            "https://support.sabantoag.com/cable-and-camera-lens-maintenance"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Vehicle and fleet software",
+          "details": "Vehicle OS (vOS), Vehicle Path Finding Module (vPFM) and mobile/desktop Vehicle Mission Control (vMC) for field planning, monitoring and alerts.",
+          "sources": [
+            "https://sabantoag.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rad-roameo-current-system",
+      "manufacturer": "Robotic Assistance Devices",
+      "models": [
+        "ROAMEO"
+      ],
+      "configuration": "Current manufacturer page and May 2026 edge-computing account. Older ROAMEO brochure specifications are not merged into this configuration. Jetson SKU, RAM, modem and battery capacity are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Jetson edge computer",
+          "details": "Manufacturer explicitly includes ROAMEO among products shipping with NVIDIA Jetson onboard; it does not identify the specific module.",
+          "sources": [
+            "https://radsecurity.com/articles/edge-ai-security"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and surveillance",
+          "details": "Five solid-state 3D LiDAR sensors, cameras, GPS and IMU. Individual sensor models are not listed.",
+          "sources": [
+            "https://radsecurity.com/roameo"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Cellular and remote operations",
+          "details": "Built-in cellular carries encrypted video, audio and alerts to RADSOC/cloud services; modem and bands are not identified.",
+          "sources": [
+            "https://radsecurity.com/roameo"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging and drive",
+          "details": "Battery-powered wheeled platform with automatic docking on schedule or battery threshold; current page quotes up to 16 hours per charge.",
+          "sources": [
+            "https://radsecurity.com/roameo"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator control",
+          "details": "RADSOC/mobile interfaces expose video, location, route and battery state, with role-based access and logged actions.",
+          "sources": [
+            "https://radsecurity.com/roameo"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Local and cloud processing",
+          "details": "SARA Edge runs onboard. A separate SARA Agent licence adds escalation/talk-down functionality.",
+          "sources": [
+            "https://radsecurity.com/roameo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "savioke-relay-idf2015-system",
+      "manufacturer": "Savioke",
+      "models": [
+        "Relay (IDF 2015 configuration)",
+        "Relay"
+      ],
+      "configuration": "Savioke’s August 2015 manufacturer announcement, hosted by RoboticsTomorrow. Describes the demonstrated fleet; CPU, RAM and exact camera SKU are not stated.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Intel RealSense depth cameras",
+          "details": "Demonstration Relay fleet used Intel RealSense cameras. The release does not name R200 or another specific model.",
+          "sources": [
+            "https://www.roboticstomorrow.com/news/2015/08/19/savioke-announces-ros-support-for-intel-realsense-camera/6612/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "ROS integration",
+          "details": "Relay ran ROS and Savioke’s RealSense ROS wrapper, supporting onboard environmental sensing.",
+          "sources": [
+            "https://www.roboticstomorrow.com/news/2015/08/19/savioke-announces-ros-support-for-intel-realsense-camera/6612/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "savioke-relay-ces2016-announcement",
+      "manufacturer": "Savioke",
+      "models": [
+        "Relay (CES 2016 announced configuration)",
+        "Relay"
+      ],
+      "configuration": "Intel CES 2016 backgrounder describes future Relay versions. This is an announced component plan, not verification of every shipped Relay or the 2015 demonstration fleet.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Announced Intel processor",
+          "details": "Planned sixth-generation Intel Core i7; exact SKU, board and RAM are unspecified. The Intel NUC mentioned for AscTec NEO in the same document is not assigned to Relay.",
+          "sources": [
+            "https://www.intel.vn/content/dam/www/public/us/en/documents/fact-sheets/realsense-fact-sheet.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Announced depth camera",
+          "details": "Planned Intel RealSense R200 integration; installation status is not established by this announcement.",
+          "sources": [
+            "https://www.intel.vn/content/dam/www/public/us/en/documents/fact-sheets/realsense-fact-sheet.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sanctuary-phoenix-gen6-2023",
+      "manufacturer": "Sanctuary AI",
+      "models": [
+        "Phoenix generation 6 (May 2023)",
+        "Phoenix"
+      ],
+      "configuration": "Sixth-generation Phoenix announcement. CPU, RAM, radio hardware and battery specifications are not disclosed; later generations are separate profiles.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Tactile sensing",
+          "details": "Proprietary haptic technology in the dexterous hands provides touch feedback.",
+          "sources": [
+            "https://sanctuary.ai/news/sanctuary-ai-unveils-phoenix-a-humanoid-general-purpose-robot-designed-for-work/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Body and manipulation",
+          "details": "Manufacturer gives 5 ft 7 in height, 155 lb mass and 55 lb maximum payload. Articulated robotic hands support fine manipulation.",
+          "sources": [
+            "https://sanctuary.ai/news/sanctuary-ai-unveils-phoenix-a-humanoid-general-purpose-robot-designed-for-work/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Carbon control system",
+          "details": "Carbon software translates language instructions into robot actions and uses simulation for training.",
+          "sources": [
+            "https://sanctuary.ai/news/sanctuary-ai-unveils-phoenix-a-humanoid-general-purpose-robot-designed-for-work/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sanctuary-phoenix-gen7-2024",
+      "manufacturer": "Sanctuary AI",
+      "models": [
+        "Phoenix generation 7 (April 2024)",
+        "Phoenix"
+      ],
+      "configuration": "Seventh-generation announcement. Earlier mass/payload numbers and later hand joint counts are not inherited. Processor and memory part numbers are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception and touch",
+          "details": "Revised visual and tactile sensing for training-data capture; individual sensor models are not named.",
+          "sources": [
+            "https://sanctuary.ai/news/sanctuary-ai-unveils-the-next-generation-of-ai-robotics/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Hydraulic manipulation",
+          "details": "Miniaturized hydraulics and revised hands, wrists and elbows improve range of motion and hand durability.",
+          "sources": [
+            "https://sanctuary.ai/news/sanctuary-ai-unveils-the-next-generation-of-ai-robotics/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Carbon",
+          "details": "Carbon AI control software uses captured behavioural data; no onboard operating-system or accelerator SKU is identified.",
+          "sources": [
+            "https://sanctuary.ai/news/sanctuary-ai-unveils-the-next-generation-of-ai-robotics/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sanctuary-phoenix-gen8-system",
+      "manufacturer": "Sanctuary AI",
+      "models": [
+        "Phoenix generation 8",
+        "Phoenix"
+      ],
+      "configuration": "Eighth-generation manufacturer announcement. This configuration has a wheeled base. No processor, RAM, radio module, battery specification or sensor part number is provided.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Depth, vision and audio",
+          "details": "Updated depth and vision cameras, wider field of view and higher resolution, plus revised audio/video sensing. Numeric resolutions are not disclosed.",
+          "sources": [
+            "https://sanctuary.ai/news/sanctuary-ai-releases-new-generation-of-ai-robots-for-high-quality-data-capture/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Wheeled platform",
+          "details": "Humanoid upper body on a wheeled base for supported manipulation; not a verified bipedal configuration.",
+          "sources": [
+            "https://sanctuary.ai/news/sanctuary-ai-releases-new-generation-of-ai-robots-for-high-quality-data-capture/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Data-capture pipeline",
+          "details": "Revised telemetry for collecting training data and robot interaction; transport protocol is not stated.",
+          "sources": [
+            "https://sanctuary.ai/news/sanctuary-ai-releases-new-generation-of-ai-robots-for-high-quality-data-capture/"
+          ]
+        }
+      ]
     }
   ]
 }
