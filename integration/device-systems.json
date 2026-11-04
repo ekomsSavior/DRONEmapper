@@ -33951,6 +33951,546 @@
           ]
         }
       ]
+    },
+    {
+      "id": "zerith-h1-current2026",
+      "manufacturer": "Zerith Robotics",
+      "models": [
+        "Zerith H1",
+        "H1 (2026 manufacturer comparison)"
+      ],
+      "configuration": "November 2026 H1-series comparison, 111 kg configuration. Do not mix with older 55 kg H-series marketing. The table does not identify a CPU SKU, radio chipset or battery chemistry; its graphics designation is only 5060. Configuration is subject to revision.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Host computer",
+          "details": "20-core/28-thread CPU with a graphics card listed as 5060; exact CPU and GPU suffix not stated.",
+          "sources": [
+            "https://www.zerith.com/product/comparison/"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "RAM and disk",
+          "details": "32 GB DDR5 and 1 TB solid-state storage.",
+          "sources": [
+            "https://www.zerith.com/product/comparison/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless interfaces",
+          "details": "Wi-Fi and Bluetooth supported; versions, bands and chipsets unspecified.",
+          "sources": [
+            "https://www.zerith.com/product/comparison/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception",
+          "details": "Six-axis IMU, head and wrist depth cameras, lidar and speech-recognition module.",
+          "sources": [
+            "https://www.zerith.com/product/comparison/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and supply",
+          "details": "20 Ah pack; battery swapping or plugged-in use. Adapter: 54.6 V, 10 A. Claimed runtime 4–7 hours depends on use.",
+          "sources": [
+            "https://www.zerith.com/product/comparison/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Panel and manipulation",
+          "details": "Two Ethernet, one HDMI and three USB ports; two 24 V/5 A and two 48 V/5 A outputs. Differential-drive base, dual seven-axis arms, standard two-finger grippers; dexterous hands optional.",
+          "sources": [
+            "https://www.zerith.com/product/comparison/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Development support",
+          "details": "Python/C++ SDK, upper/lower-level interfaces, URDF and VR teleoperation support.",
+          "sources": [
+            "https://www.zerith.com/product/comparison/",
+            "https://www.zerith.com/product/ZerithH1/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alphabot2-hardware2026",
+      "manufacturer": "Zhipingfang",
+      "models": [
+        "AlphaBot 2"
+      ],
+      "configuration": "AI² Robotics / 智平方 hardware manual: standard 135 kg configuration, 22 DOF excluding end effectors. Separate from launch-page counts including hands. Adapter and charging-box ratings differ in the manual; no replacement charger compatibility is inferred. Storage and RF chipset are unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Autonomy module",
+          "details": "NVIDIA Jetson AGX Orin 64GB.",
+          "sources": [
+            "https://docs.ai2robotics.com/en/alphabot2/hardware/architecture/"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Module memory",
+          "details": "64 GB module configuration; storage capacity not listed.",
+          "sources": [
+            "https://docs.ai2robotics.com/en/alphabot2/hardware/architecture/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision and ranging",
+          "details": "RealSense D435 at head, chest and back; D405 at each wrist. Chassis has 2D lidar and RGB-D sensing. Four-microphone linear array.",
+          "sources": [
+            "https://docs.ai2robotics.com/en/alphabot2/hardware/architecture/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Chassis battery",
+          "details": "48 V, 30 Ah; automatic recharging and claimed 4–6 hour runtime. Two-wheel differential drive.",
+          "sources": [
+            "https://docs.ai2robotics.com/en/alphabot2/hardware/architecture/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Chassis networking",
+          "details": "LAN Wi-Fi and an operator-enabled configuration hotspot are documented; no SSID pattern, radio version or model-specific passive identifier established.",
+          "sources": [
+            "https://docs.ai2robotics.com/en/alphabot2/hardware/architecture/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "External connections and arms",
+          "details": "Rear USB 3.0, HDMI and RJ45. Seven-axis arms support Ethernet, RS485 and CAN; configurable end-effectors use power and digital I/O. Rear emergency stop arrests arm and chassis motion.",
+          "sources": [
+            "https://docs.ai2robotics.com/en/alphabot2/hardware/architecture/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operating environment",
+          "details": "Ubuntu 22.04 LTS; Alpha Brain control platform and Python/C/C++ arm interfaces.",
+          "sources": [
+            "https://docs.ai2robotics.com/en/alphabot2/hardware/architecture/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rnoid-rev003-2026",
+      "manufacturer": "Robot.com",
+      "models": [
+        "R-noid"
+      ],
+      "configuration": "Manufacturer product sheet revision 003, May 14, 2026. RAM, storage, radio standards, battery capacity and sensor manufacturers are not specified. Base CPU and AI accelerator are distinct modules.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Base computer and AI module",
+          "details": "AMD Ryzen 5 7640HS base computer; NVIDIA Jetson AGX Orin for AI.",
+          "sources": [
+            "https://lp.robot.com/rnoid/specs.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception and interaction",
+          "details": "Head/chest RGB-D sensing rated up to 1600×1200 at 120 fps; two wrist RGB-D cameras, front/rear mapping lidar, eight ultrasonic sensors, microphone and speaker.",
+          "sources": [
+            "https://lp.robot.com/rnoid/specs.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Supply and operation",
+          "details": "110 V supply requirement, plugged-in operation supported; claimed three-hour battery runtime, with no capacity stated.",
+          "sources": [
+            "https://lp.robot.com/rnoid/specs.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Manipulation",
+          "details": "Two seven-axis arms, modular end effectors, four-axis torso and two-axis neck. Each arm rated 4 kg; 0–1.9 m vertical workspace.",
+          "sources": [
+            "https://lp.robot.com/rnoid/specs.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control modes",
+          "details": "Autonomous and VR-teleoperated operation.",
+          "sources": [
+            "https://lp.robot.com/rnoid/specs.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mornine-chery-auto2026",
+      "manufacturer": "Chery Automobile",
+      "models": [
+        "AiMOGA (Mornine)"
+      ],
+      "configuration": "Mornine manufacturer reference linked to the existing Chery catalog name. No CPU/GPU SKU, RAM, storage, battery or radio specification established. Does not inherit Argos, Mobo or other AiMOGA hardware.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception",
+          "details": "Six-microphone array, RGB-D and wide-angle cameras, and 3D lidar.",
+          "sources": [
+            "https://www.aimoga-robot.com/global/en/mornine/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Robot and application integration",
+          "details": "40 body DOF; custom LLM API and RAG knowledge-base integration.",
+          "sources": [
+            "https://www.aimoga-robot.com/global/en/mornine/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Language and navigation",
+          "details": "MoNet 6B mixture-of-experts model deployed on-device; manufacturer also describes cloud/on-device dialogue and lidar-camera navigation.",
+          "sources": [
+            "https://www.aimoga-robot.com/global/en/mornine/"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Identity",
+          "details": "Chery identifies Mornine as its AiMOGA humanoid service robot.",
+          "sources": [
+            "https://www.cheryinternational.com/pc/news/news1/20260528/detail-2605.shtml"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mornine-chery-robotics2026",
+      "manufacturer": "Chery Robotics",
+      "models": [
+        "Mornine"
+      ],
+      "configuration": "Mornine manufacturer reference linked to the existing Chery catalog name. No CPU/GPU SKU, RAM, storage, battery or radio specification established. Does not inherit Argos, Mobo or other AiMOGA hardware.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception",
+          "details": "Six-microphone array, RGB-D and wide-angle cameras, and 3D lidar.",
+          "sources": [
+            "https://www.aimoga-robot.com/global/en/mornine/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Robot and application integration",
+          "details": "40 body DOF; custom LLM API and RAG knowledge-base integration.",
+          "sources": [
+            "https://www.aimoga-robot.com/global/en/mornine/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Language and navigation",
+          "details": "MoNet 6B mixture-of-experts model deployed on-device; manufacturer also describes cloud/on-device dialogue and lidar-camera navigation.",
+          "sources": [
+            "https://www.aimoga-robot.com/global/en/mornine/"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Identity",
+          "details": "Chery identifies Mornine as its AiMOGA humanoid service robot.",
+          "sources": [
+            "https://www.cheryinternational.com/pc/news/news1/20260528/detail-2605.shtml"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amity-arcmove-arc17",
+      "manufacturer": "Amity Robotics",
+      "models": [
+        "Amity ARC Move",
+        "ArcMove"
+      ],
+      "configuration": "ArcMove mobile form factor plus shared ARC architecture document v1.7, October 2026. Shared kiosk sensors and network architecture do not identify the mobile base CPU, navigation sensors, motors, battery or memory capacity. Manufacturer-described controls, not an independent security audit.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Kiosk interaction sensors",
+          "details": "Microphone, presence camera and touchscreen; speaker provides output. Camera processing is local and produces presence attributes.",
+          "sources": [
+            "https://amityrobotics.com/documents/arc-security-architecture-overview.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Visitor data handling",
+          "details": "Manufacturer states that camera frames and audio buffers are transient on-device; browser sessions reset between visitors. Cloud transcripts persist and voice recording retention is configurable.",
+          "sources": [
+            "https://amityrobotics.com/documents/arc-security-architecture-overview.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Deployment connectivity",
+          "details": "Dedicated 4G/5G by default, or customer Wi-Fi. ARC describes outbound HTTPS/WSS with TLS 1.2+; no radio chipset or SSID signature specified.",
+          "sources": [
+            "https://amityrobotics.com/documents/arc-security-architecture-overview.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Integration boundaries",
+          "details": "Kiosk opens allow-listed customer pages directly. ARC cloud separately synchronizes mapped knowledge fields and performs live API retrieval; customer pages do not traverse ARC cloud.",
+          "sources": [
+            "https://amityrobotics.com/documents/arc-security-architecture-overview.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Conversation and management",
+          "details": "Cloud speech, knowledge and answer services; tenant-scoped device credentials. Remote management uses the kiosk-initiated channel; remote support uses an outbound TLS relay.",
+          "sources": [
+            "https://amityrobotics.com/documents/arc-security-architecture-overview.pdf"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Mobile form factor",
+          "details": "Wheeled base carries a screen avatar for indoor greeting, escorting and scheduled roaming.",
+          "sources": [
+            "https://amityrobotics.com/products/arcmove-ai-that-moves-with-purpose"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yogo-kago5-modules",
+      "manufacturer": "YOGO Robot",
+      "models": [
+        "KAGO 5"
+      ],
+      "configuration": "Manufacturer KAGO 5 modular platform. Module features apply only when fitted. CPU, memory, radio hardware, battery capacity and navigation sensor SKUs are not supplied. Three-dimensional space describes movement through buildings, not flight.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Modular carrier",
+          "details": "Interchangeable delivery, security and air-treatment modules; standardized docking rails provide module power and communications.",
+          "sources": [
+            "https://www.yogorobot.com/products/kago-series"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Module-dependent sensing",
+          "details": "Security module captures images; Air Fresh module lists human recognition, air-quality monitoring and spatial positioning. Sensor SKUs and base navigation sensors are unspecified.",
+          "sources": [
+            "https://www.yogorobot.com/products/kago-series"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Building coordination",
+          "details": "Coordinated operation with other robots, elevators and turnstiles; remote security observation and reporting with the security module.",
+          "sources": [
+            "https://www.yogorobot.com/products/kago-series"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mobility",
+          "details": "Wheeled platform with dynamically adjusted indoor speed, published maximum 2 m/s; battery rating not given.",
+          "sources": [
+            "https://www.yogorobot.com/products/kago-series"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smp-argus-s53-reference",
+      "manufacturer": "SMP Robotics",
+      "models": [
+        "Argus S5.3"
+      ],
+      "configuration": "S5.3-specific specification section on the manufacturer page. Excludes older generic S5.2 passages and newer S5.4 Orin configuration. RAM, storage capacity, battery chemistry/capacity and exact radio modules are not established.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Video analytics",
+          "details": "Embedded processors with NVIDIA Jetson TX2 module; other processors not named.",
+          "sources": [
+            "https://smprobotics.com/security_robot/security-patrol-robot/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Surveillance and navigation",
+          "details": "Six panoramic cameras, optical PTZ with 30× zoom and thermal PTZ. Navigation combines satellite positioning and visual motion control.",
+          "sources": [
+            "https://smprobotics.com/security_robot/security-patrol-robot/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Supervision links",
+          "details": "Wi-Fi and cellular remote supervision; the S5.3 page describes 4G/5G. Versions, bands and installed modem depend on configuration and are not specified.",
+          "sources": [
+            "https://smprobotics.com/security_robot/security-patrol-robot/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Drive and charging",
+          "details": "Automatic docking and battery charging; manufacturer lists up to 24 km per charge at 4–6 km/h, without a battery capacity.",
+          "sources": [
+            "https://smprobotics.com/security_robot/security-patrol-robot/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Video integration",
+          "details": "ONVIF/RTSP integration sends surveillance video and events to external VMS systems.",
+          "sources": [
+            "https://smprobotics.com/security_robot/security-patrol-robot/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Patrol control",
+          "details": "Scheduled routes, obstacle avoidance, person detection, tracking and fleet operation.",
+          "sources": [
+            "https://smprobotics.com/security_robot/security-patrol-robot/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reflex-current2026",
+      "manufacturer": "Reflex Robotics",
+      "models": [
+        "Reflex"
+      ],
+      "configuration": "Current manufacturer platform page reviewed November 2026. Specifications do not identify an older deployment revision. CPU, memory, camera/radio parts and battery capacity are undisclosed; 16 hours is a manufacturer runtime claim.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Wheeled robot endurance",
+          "details": "Battery-powered wheeled platform with claimed 16-hour operation; test duty cycle unspecified.",
+          "sources": [
+            "https://www.reflexrobotics.com/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Workstation interaction",
+          "details": "Published 23 kg payload and 2 m reach; operates existing carts, monitors, scanners and touchscreens.",
+          "sources": [
+            "https://www.reflexrobotics.com/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Supervised autonomy",
+          "details": "Custom supervision layer handles recovery while learned policies improve across repeated workflows. The page describes increasing autonomy, not universally unattended operation.",
+          "sources": [
+            "https://www.reflexrobotics.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "octochef-reference",
+      "manufacturer": "Connected Robotics",
+      "models": [
+        "OctoChef"
+      ],
+      "configuration": "Manufacturer legacy OctoChef cooking system page. No processor, arm OEM, memory, radio standard or power rating is named. Cloud linkage and tablet operation do not establish Wi-Fi or Bluetooth hardware.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Cooking vision",
+          "details": "Onboard camera supplies images for assessing takoyaki cooking state; sensor model undisclosed.",
+          "sources": [
+            "https://connected-robotics.com/en/product/octochef.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cooking mechanism and operator UI",
+          "details": "Collaborative arm dispenses batter and performs cooking motions; contact detection stops motion. Tablet application adjusts batter and cooking time.",
+          "sources": [
+            "https://connected-robotics.com/en/product/octochef.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Learning and workflow",
+          "details": "Image-based cooking assessment; accumulated learning can be distributed through the cloud to other locations. App also controls preparation and cleaning.",
+          "sources": [
+            "https://connected-robotics.com/en/product/octochef.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loram-aurora-tieinspection",
+      "manufacturer": "Loram",
+      "models": [
+        "Aurora"
+      ],
+      "configuration": "Aurora is a rail inspection system carried by a hyrail truck. This source does not establish autonomous driving. CPU, memory, RF equipment, truck engine and electrical supply are unspecified; do not import Aurora Innovation vehicle components.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Track imaging and positioning",
+          "details": "Cameras and lasers form a 3D track image; GPS associates each crosstie with location and condition data.",
+          "sources": [
+            "https://loram.com/inspection-and-optimization/inspection-services/tie-inspection-services/aurora/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Carrier and output",
+          "details": "Hyrail-truck installation, specified for inspection at up to 42 mph; outputs tie grades, asset inventory and GIS coordinates.",
+          "sources": [
+            "https://loram.com/inspection-and-optimization/inspection-services/tie-inspection-services/aurora/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Inspection workflow",
+          "details": "Web viewer provides imagery and tie-location/grade records. Grading and optimized tie-set-out planning use the railroad’s maintenance rules.",
+          "sources": [
+            "https://loram.com/inspection-and-optimization/inspection-services/tie-inspection-services/aurora/"
+          ]
+        }
+      ]
     }
   ]
 }

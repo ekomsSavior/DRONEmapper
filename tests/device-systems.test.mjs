@@ -9,6 +9,56 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 54 preserves documented robot processors and revision boundaries',()=>{
+ const zerith=system('Zerith Robotics','Zerith H1');
+ assert.match(text(zerith.sections.compute),/20-core\/28-thread/);
+ assert.doesNotMatch(text(zerith.sections.compute.facts),/14700|RTX 5000/);
+ assert.match(text(zerith.sections.memory),/32 GB DDR5.*1 TB/);
+ assert.match(text(zerith.sections.power),/20 Ah/);
+ assert.match(text(zerith.configurations),/111 kg.*55 kg/);
+ assert.equal(profileIds(system('Zerith Robotics','Z1')).length,0);
+ const alpha=system('Zhipingfang','AlphaBot 2');
+ assert.match(text(alpha.sections.compute),/AGX Orin 64GB/);
+ assert.match(text(alpha.sections.sensors),/D435.*D405/);
+ assert.match(text(alpha.sections.power),/48 V, 30 Ah/);
+ assert.match(text(alpha.sections.software),/Ubuntu 22.04/);
+ assert.match(text(alpha.sections.radios),/no SSID pattern/);
+ const rnoid=system('Robot.com','R-noid');
+ assert.match(text(rnoid.sections.compute),/7640HS.*AGX Orin/);
+ assert.equal(rnoid.sections.memory.status,'not-established');
+ assert.equal(rnoid.sections.radios.status,'not-established');
+ const smp=system('SMP Robotics','Argus S5.3');
+ assert.match(text(smp.sections.compute),/TX2/);
+ assert.doesNotMatch(text(smp.sections.compute.facts.map(f=>f.details)),/Orin/);
+ assert.equal(profileIds(system('SMP Robotics','Argus S5.4')).length,0);
+ assert.equal(profileIds(system('Zhipingfang','AlphaBot 2',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('batch 54 separates cloud processing, modules, brands and partial disclosures',()=>{
+ const arc=system('Amity Robotics','Amity ARC Move');
+ assert.equal(arc.sections.compute.status,'not-established');
+ assert.match(text(arc.sections.memory),/transient on-device.*Cloud transcripts/);
+ assert.match(text(arc.sections.radios),/4G\/5G.*Wi-Fi.*outbound/);
+ assert.match(text(arc.sections.interfaces),/do not traverse ARC cloud/);
+ const ma=system('Chery Automobile','AiMOGA (Mornine)'),mr=system('Chery Robotics','Mornine');
+ for(const m of [ma,mr]){
+  assert.match(text(m.sections.software),/MoNet 6B/);
+  assert.equal(m.sections.compute.status,'not-established');
+ }
+ assert.equal(profileIds(system('Chery Robotics','Mobo')).length,0);
+ const kago=system('YOGO Robot','KAGO 5');
+ assert.match(text(kago.sections.sensors),/Security module.*Air Fresh module/);
+ assert.match(text(kago.configurations),/only when fitted/);
+ const octo=system('Connected Robotics','OctoChef');
+ assert.equal(octo.sections.radios.status,'not-established');
+ assert.match(text(octo.sections.software),/cloud/);
+ assert.equal(system('Reflex Robotics','Reflex').sections.compute.status,'not-established');
+ const aurora=system('Loram','Aurora');
+ assert.match(text(aurora.configurations),/does not establish autonomous driving/);
+ assert.equal(aurora.sections.compute.status,'not-established');
+ assert.match(text(aurora.sections.sensors),/Cameras and lasers.*GPS/);
+});
+
 test('batch 41 keeps trials, generations, tether links and shared robot families separate',()=>{
  const ar=system('TEKEVER','AR5 Evolution Mk 2 (G-TEKV, 2023)');
  assert.match(text(ar.sections.power),/3W.*170 cc/);
