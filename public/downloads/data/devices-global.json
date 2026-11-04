@@ -88093,18 +88093,72 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "deere-vpu-orin-2026",
+            "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "deere-autonomous-8r-ces2022",
+            "configuration": "The autonomous 8R tillage configuration announced in January 2022. Later sixteen-camera autonomy kits and the 2026 OEM VPU specification are separate configurations. Exact processor, memory and modem parts are not identified in this announcement.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "deere-see-spray-ultimate-2022",
+            "configuration": "2022 Ultimate crop-spraying configuration, distinct from See & Spray Select and the autonomous 8R tractor. VPU presence is documented, but the 2026 OEM Orin/RAM specification is not retroactively assigned.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Vision processor",
+                "details": "NVIDIA Orin: twelve ARM cores at 2.2 GHz, 2048 Ampere GPU cores and 64 Tensor cores; rated 275 TOPS.",
+                "sources": [
+                  "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-vpu-orin-2026",
+                "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Vision processing units",
+                "details": "Onboard VPUs analyze plants and command individual spray nozzles; chip model and RAM are not named in this report.",
+                "sources": [
+                  "https://www.deere.com/assets/pdfs/common/our-company/sustainability/sustainability-report-2022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-see-spray-ultimate-2022",
+                "configuration": "2022 Ultimate crop-spraying configuration, distinct from See & Spray Select and the autonomous 8R tractor. VPU presence is documented, but the 2026 OEM Orin/RAM specification is not retroactively assigned.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "RAM and storage",
+                "details": "64 GB LPDDR5, 64 GB eMMC and 1 TB NVMe solid-state storage.",
+                "sources": [
+                  "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-vpu-orin-2026",
+                "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
@@ -88113,23 +88167,183 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "Six stereo-camera pairs provide surrounding obstacle detection and depth estimation; GPS guidance supports geofenced operation.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/john-deere-reveals-fully-autonomous-tractor-at-ces-2022-301453688.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-autonomous-8r-ces2022",
+                "configuration": "The autonomous 8R tillage configuration announced in January 2022. Later sixteen-camera autonomy kits and the 2026 OEM VPU specification are separate configurations. Exact processor, memory and modem parts are not identified in this announcement.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Camera array",
+                "details": "36 cameras distributed across a 120-foot carbon-fiber boom.",
+                "sources": [
+                  "https://www.deere.com/assets/pdfs/common/our-company/sustainability/sustainability-report-2022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-see-spray-ultimate-2022",
+                "configuration": "2022 Ultimate crop-spraying configuration, distinct from See & Spray Select and the autonomous 8R tractor. VPU presence is documented, but the 2026 OEM Orin/RAM specification is not retroactively assigned.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Supply and enclosure",
+                "details": "Designed for 12, 24 or 56 V systems; IP67 enclosure, 4.7 kg, 464 × 233 × 78 mm.",
+                "sources": [
+                  "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-vpu-orin-2026",
+                "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Camera inputs",
+                "details": "Twelve GMSL2 camera connections at 6 Gbit/s with power over coax; not twelve included cameras.",
+                "sources": [
+                  "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-vpu-orin-2026",
+                "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Vehicle buses",
+                "details": "Four CAN ports up to 1 Mbit/s, J1939/ISO11783; one 1000BASE-T1 and one 10GBASE-T Ethernet port, USB 2.0 and serial debug.",
+                "sources": [
+                  "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-vpu-orin-2026",
+                "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Discrete connections",
+                "details": "Two digital inputs, four addressing inputs, three high-side outputs, trigger I/O, camera sync and two analog inputs.",
+                "sources": [
+                  "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-vpu-orin-2026",
+                "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Cooling and integration",
+                "details": "Air-cooled design without internal fans or liquid cooling; offered for OEM integration and derived from Deere vision applications.",
+                "sources": [
+                  "https://johndeere.widen.net/content/2r5qh8txkd/original/jd-isg-25006-vpu-built-to-endure.pdf?u=47cufg"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-vpu-orin-2026",
+                "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Implement integration",
+                "details": "8R tractor coupled to a TruSet-enabled chisel plow.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/john-deere-reveals-fully-autonomous-tractor-at-ces-2022-301453688.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-autonomous-8r-ces2022",
+                "configuration": "The autonomous 8R tillage configuration announced in January 2022. Later sixteen-camera autonomy kits and the 2026 OEM VPU specification are separate configurations. Exact processor, memory and modem parts are not identified in this announcement.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Spray control",
+                "details": "ExactApply nozzle control and BoomTrac Ultimate boom management.",
+                "sources": [
+                  "https://www.deere.com/assets/pdfs/common/our-company/sustainability/sustainability-report-2022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-see-spray-ultimate-2022",
+                "configuration": "2022 Ultimate crop-spraying configuration, distinct from See & Spray Select and the autonomous 8R tractor. VPU presence is documented, but the 2026 OEM Orin/RAM specification is not retroactively assigned.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operating system",
+                "details": "Linux.",
+                "sources": [
+                  "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-vpu-orin-2026",
+                "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Onboard obstacle decisions",
+                "details": "Neural-network image classification takes approximately 100 ms; obstacle detection can stop the tractor.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/john-deere-reveals-fully-autonomous-tractor-at-ces-2022-301453688.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-autonomous-8r-ces2022",
+                "configuration": "The autonomous 8R tillage configuration announced in January 2022. Later sixteen-camera autonomy kits and the 2026 OEM VPU specification are separate configurations. Exact processor, memory and modem parts are not identified in this announcement.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Operator interface",
+                "details": "Operations Center Mobile provides remote start, machine-health notifications, video and adjustment of working speed and depth.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/john-deere-reveals-fully-autonomous-tractor-at-ces-2022-301453688.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-autonomous-8r-ces2022",
+                "configuration": "The autonomous 8R tillage configuration announced in January 2022. Later sixteen-camera autonomy kits and the 2026 OEM VPU specification are separate configurations. Exact processor, memory and modem parts are not identified in this announcement.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Agronomic workflow",
+                "details": "Computer vision separates crops from weeds. Operations Center displays weed-density and application data.",
+                "sources": [
+                  "https://www.deere.com/assets/pdfs/common/our-company/sustainability/sustainability-report-2022.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "deere-see-spray-ultimate-2022",
+                "configuration": "2022 Ultimate crop-spraying configuration, distinct from See & Spray Select and the autonomous 8R tractor. VPU presence is documented, but the 2026 OEM Orin/RAM specification is not retroactively assigned.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -88153,13 +88367,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "radios"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -93432,8 +93640,19 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "leidos-sea-hunter-public-system",
+            "configuration": "Sea Hunter public platform evidence from the 2018 developer presentation, 2023 ONR publication and 2026 software update. PATHFINDER and LCM-8 equipment shown elsewhere in the presentation is not Sea Hunter hardware. CPU and memory are undisclosed.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "leidos-seahawk-public-system",
+            "configuration": "Seahawk delivery configuration in April 2021 and separately dated September 2026 autonomy report. Hardware part numbers, processor, memory and radio waveforms are not disclosed; Sea Hunter I payload details are not assumed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -93447,28 +93666,142 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control-link redundancy",
+                "details": "2026 report describes remote control with alternate communication paths; modem, band and protocol are not specified.",
+                "sources": [
+                  "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leidos-seahawk-public-system",
+                "configuration": "Seahawk delivery configuration in April 2021 and separately dated September 2026 autonomy report. Hardware part numbers, processor, memory and radio waveforms are not disclosed; Sea Hunter I payload details are not assumed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Collision perception",
+                "details": "Electro-optical and infrared sensing supports autonomous surface collision avoidance.",
+                "sources": [
+                  "https://www.maritime.dot.gov/sites/marad.dot.gov/files/docs/about-us/foia/11706/leidos-inc-sea-hunter-and-maritime-autonomous-behaviors.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leidos-sea-hunter-public-system",
+                "configuration": "Sea Hunter public platform evidence from the 2018 developer presentation, 2023 ONR publication and 2026 software update. PATHFINDER and LCM-8 equipment shown elsewhere in the presentation is not Sea Hunter hardware. CPU and memory are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation behavior",
+                "details": "2026 demonstration followed commanded waypoints without GPS and later reintegrated GPS; sensor package is not enumerated.",
+                "sources": [
+                  "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leidos-seahawk-public-system",
+                "configuration": "Seahawk delivery configuration in April 2021 and separately dated September 2026 autonomy report. Hardware part numbers, processor, memory and radio waveforms are not disclosed; Sea Hunter I payload details are not assumed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Propulsion",
+                "details": "Twin diesel engines drive two screws, as described by ONR in 2023; engine model is not named.",
+                "sources": [
+                  "https://www.onr.navy.mil/media/document/future-force-vol-9-no-1-2023"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leidos-sea-hunter-public-system",
+                "configuration": "Sea Hunter public platform evidence from the 2018 developer presentation, 2023 ONR publication and 2026 software update. PATHFINDER and LCM-8 equipment shown elsewhere in the presentation is not Sea Hunter hardware. CPU and memory are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion and fuel",
+                "details": "Twin diesel engines; 14,000-gallon fuel capacity.",
+                "sources": [
+                  "https://www.leidos.com/insights/leidos-completes-delivery-seahawk-vessel-us-navy"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leidos-seahawk-public-system",
+                "configuration": "Seahawk delivery configuration in April 2021 and separately dated September 2026 autonomy report. Hardware part numbers, processor, memory and radio waveforms are not disclosed; Sea Hunter I payload details are not assumed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Platform",
+                "details": "132-foot trimaran prototype with modular payload integration.",
+                "sources": [
+                  "https://www.maritime.dot.gov/sites/marad.dot.gov/files/docs/about-us/foia/11706/leidos-inc-sea-hunter-and-maritime-autonomous-behaviors.pdf",
+                  "https://www.onr.navy.mil/media/document/future-force-vol-9-no-1-2023"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leidos-sea-hunter-public-system",
+                "configuration": "Sea Hunter public platform evidence from the 2018 developer presentation, 2023 ONR publication and 2026 software update. PATHFINDER and LCM-8 equipment shown elsewhere in the presentation is not Sea Hunter hardware. CPU and memory are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Hull and payload integration",
+                "details": "Composite trimaran, 145 long tons fully loaded; revised electrical system, payload mounts and test-operator station.",
+                "sources": [
+                  "https://www.leidos.com/insights/leidos-completes-delivery-seahawk-vessel-us-navy"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leidos-seahawk-public-system",
+                "configuration": "Seahawk delivery configuration in April 2021 and separately dated September 2026 autonomy report. Hardware part numbers, processor, memory and radio waveforms are not disclosed; Sea Hunter I payload details are not assumed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy architecture",
+                "details": "By September 2026, Leidos identifies LAVA as Sea Hunter’s modular navigation, mission execution and obstacle-avoidance software.",
+                "sources": [
+                  "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leidos-sea-hunter-public-system",
+                "configuration": "Sea Hunter public platform evidence from the 2018 developer presentation, 2023 ONR publication and 2026 software update. PATHFINDER and LCM-8 equipment shown elsewhere in the presentation is not Sea Hunter hardware. CPU and memory are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Autonomy software",
+                "details": "LAVA supplies navigation, mission execution and obstacle avoidance. The 2026 report describes COLREG compliance and designated-zone avoidance.",
+                "sources": [
+                  "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "leidos-seahawk-public-system",
+                "configuration": "Seahawk delivery configuration in April 2021 and separately dated September 2026 autonomy report. Hardware part numbers, processor, memory and radio waveforms are not disclosed; Sea Hunter I payload details are not assumed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -93493,12 +93826,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -120072,13 +120400,47 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "saildrone-explorer-science-r8",
+            "configuration": "Explorer science configuration in manufacturer brochure r8. The table explicitly lists payload options, not one mandatory sensor complement. Exact computer, RAM, storage and radio modem are not specified.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "saildrone-voyager-wind-primary-brochure",
+            "configuration": "Manufacturer mapping brochure with wind-primary propulsion and 4 kW auxiliary electric drive. This is distinct from later electric-primary Voyager specifications. Sensor table entries are payload options; computer and memory are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "saildrone-surveyor-unh-22m",
+            "configuration": "22 m Surveyor described by UNH CCOM, which helped test its sonars in 2021. This is not the later 20 m hull. Exact computer, memory and communications hardware are not established by this configuration source.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "saildrone-fleet-edge-compute-2023",
+            "configuration": "Supplier report of Saildrone fleet architecture in July 2023. It does not identify a Jetson SKU or establish which unit is fitted to each Explorer, Voyager or Surveyor revision. DeepStream was being optimized in prototypes at publication.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Fleet-level edge processor evidence",
+                "details": "NVIDIA Jetson modules perform onboard image-based vessel detection. The exact module SKU, CPU generation and installed RAM are not published.",
+                "sources": [
+                  "https://blogs.nvidia.com/blog/saildrone-autonomous-oceanic-monitoring-jetson-deepstream/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-fleet-edge-compute-2023",
+                "configuration": "Supplier report of Saildrone fleet architecture in July 2023. It does not identify a Jetson SKU or establish which unit is fitted to each Explorer, Voyager or Surveyor revision. DeepStream was being optimized in prototypes at publication.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -120087,28 +120449,273 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Published identification-radio option",
+                "details": "AIS transceiver is listed among mission payload options; no individual MMSI or device MAC is established.",
+                "sources": [
+                  "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-explorer-science-r8",
+                "configuration": "Explorer science configuration in manufacturer brochure r8. The table explicitly lists payload options, not one mandatory sensor complement. Exact computer, RAM, storage and radio modem are not specified.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "radios",
+                "component": "Identification-radio option",
+                "details": "AIS transceiver is listed; model, modem frequencies and vessel identifier are unspecified.",
+                "sources": [
+                  "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-voyager-wind-primary-brochure",
+                "configuration": "Manufacturer mapping brochure with wind-primary propulsion and 4 kW auxiliary electric drive. This is distinct from later electric-primary Voyager specifications. Sensor table entries are payload options; computer and memory are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "radios",
+                "component": "Remote mission architecture",
+                "details": "Satellite-connected vehicles can report data and receive course updates; constrained bandwidth favors local inference.",
+                "sources": [
+                  "https://blogs.nvidia.com/blog/saildrone-autonomous-oceanic-monitoring-jetson-deepstream/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-fleet-edge-compute-2023",
+                "configuration": "Supplier report of Saildrone fleet architecture in July 2023. It does not identify a Jetson SKU or establish which unit is fitted to each Explorer, Voyager or Surveyor revision. DeepStream was being optimized in prototypes at publication.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Atmospheric payload options",
+                "details": "Gill Windmaster ultrasonic anemometer, Rotronic HC2-S3, Vaisala PTB210 and LI-COR LI-192SA.",
+                "sources": [
+                  "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-explorer-science-r8",
+                "configuration": "Explorer science configuration in manufacturer brochure r8. The table explicitly lists payload options, not one mandatory sensor complement. Exact computer, RAM, storage and radio modem are not specified.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Ocean chemistry and navigation options",
+                "details": "SBE 37 / SBE 37 ODO, Wet Labs ECO-FL-S G4, Heitronics CT15.10, dual GPS-aided IMU and NOAA PMEL ASVCO2.",
+                "sources": [
+                  "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-explorer-science-r8",
+                "configuration": "Explorer science configuration in manufacturer brochure r8. The table explicitly lists payload options, not one mandatory sensor complement. Exact computer, RAM, storage and radio modem are not specified.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Acoustic payload options",
+                "details": "Teledyne RDI Workhorse 300 kHz ADCP; Simrad WBT Mini EK80; bathymetry alternatives Airmar DT800, Echotrac E20 or WBT Mini. These are underwater acoustics, not RF scanner channels.",
+                "sources": [
+                  "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-explorer-science-r8",
+                "configuration": "Explorer science configuration in manufacturer brochure r8. The table explicitly lists payload options, not one mandatory sensor complement. Exact computer, RAM, storage and radio modem are not specified.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Optical awareness option",
+                "details": "360-degree camera array with machine-learning target detection.",
+                "sources": [
+                  "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-explorer-science-r8",
+                "configuration": "Explorer science configuration in manufacturer brochure r8. The table explicitly lists payload options, not one mandatory sensor complement. Exact computer, RAM, storage and radio modem are not specified.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Hydrographic options",
+                "details": "Norbit Winghead i80s, POS MV OceanMaster, integrated sound-velocity probe and AML-6 profiler with winch to 200 m.",
+                "sources": [
+                  "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-voyager-wind-primary-brochure",
+                "configuration": "Manufacturer mapping brochure with wind-primary propulsion and 4 kW auxiliary electric drive. This is distinct from later electric-primary Voyager specifications. Sensor table entries are payload options; computer and memory are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Environmental options",
+                "details": "Gill 1405-PK-038, Rotronic HC2-S3, Vaisala PTB210, SBE 37 / SBE 37 ODO and dual GPS-aided IMU.",
+                "sources": [
+                  "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-voyager-wind-primary-brochure",
+                "configuration": "Manufacturer mapping brochure with wind-primary propulsion and 4 kW auxiliary electric drive. This is distinct from later electric-primary Voyager specifications. Sensor table entries are payload options; computer and memory are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Optical awareness option",
+                "details": "360-degree camera array for AI-assisted target detection.",
+                "sources": [
+                  "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-voyager-wind-primary-brochure",
+                "configuration": "Manufacturer mapping brochure with wind-primary propulsion and 4 kW auxiliary electric drive. This is distinct from later electric-primary Voyager specifications. Sensor table entries are payload options; computer and memory are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Bathymetric sonar",
+                "details": "Kongsberg EM304 deep-water and EM2040 shallow-water multibeam echosounders.",
+                "sources": [
+                  "https://www.ccom.unh.edu/resources/research-vessels/saildrone-surveyor"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-surveyor-unh-22m",
+                "configuration": "22 m Surveyor described by UNH CCOM, which helped test its sonars in 2021. This is not the later 20 m hull. Exact computer, memory and communications hardware are not established by this configuration source.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Water-column instruments",
+                "details": "Simrad EK80, EC150 ADCP and Teledyne Pinnacle 45 ADCP; sound-speed and oceanographic profiling, plus eDNA sampling.",
+                "sources": [
+                  "https://www.ccom.unh.edu/resources/research-vessels/saildrone-surveyor"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-surveyor-unh-22m",
+                "configuration": "22 m Surveyor described by UNH CCOM, which helped test its sonars in 2021. This is not the later 20 m hull. Exact computer, memory and communications hardware are not established by this configuration source.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Wind and solar",
+                "details": "Wind-driven wing provides propulsion; solar panels supply electronics. Brochure endurance is 12+ months.",
+                "sources": [
+                  "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-explorer-science-r8",
+                "configuration": "Explorer science configuration in manufacturer brochure r8. The table explicitly lists payload options, not one mandatory sensor complement. Exact computer, RAM, storage and radio modem are not specified.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion and electrical budget",
+                "details": "Wind propulsion plus 4 kW auxiliary electric motor; solar-powered electronics. Payload allowance is 300 W average and 2 kW peak.",
+                "sources": [
+                  "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-voyager-wind-primary-brochure",
+                "configuration": "Manufacturer mapping brochure with wind-primary propulsion and 4 kW auxiliary electric drive. This is distinct from later electric-primary Voyager specifications. Sensor table entries are payload options; computer and memory are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Propulsion and payload supply",
+                "details": "Wind propulsion with 78 hp auxiliary diesel; payload supply is 2 kW continuous and 4 kW peak.",
+                "sources": [
+                  "https://www.ccom.unh.edu/resources/research-vessels/saildrone-surveyor"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-surveyor-unh-22m",
+                "configuration": "22 m Surveyor described by UNH CCOM, which helped test its sonars in 2021. This is not the later 20 m hull. Exact computer, memory and communications hardware are not established by this configuration source.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle dimensions",
+                "details": "7 m hull, 5 m wing and 2 m draft.",
+                "sources": [
+                  "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-explorer-science-r8",
+                "configuration": "Explorer science configuration in manufacturer brochure r8. The table explicitly lists payload options, not one mandatory sensor complement. Exact computer, RAM, storage and radio modem are not specified.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Survey hull",
+                "details": "10 m hull, 6 m wing and 2 m draft; advertised mapping speed 5 knots and endurance over three months.",
+                "sources": [
+                  "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-voyager-wind-primary-brochure",
+                "configuration": "Manufacturer mapping brochure with wind-primary propulsion and 4 kW auxiliary electric drive. This is distinct from later electric-primary Voyager specifications. Sensor table entries are payload options; computer and memory are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Documented hull",
+                "details": "22 m hull, 13 m wing and 3 m draft.",
+                "sources": [
+                  "https://www.ccom.unh.edu/resources/research-vessels/saildrone-surveyor"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-surveyor-unh-22m",
+                "configuration": "22 m Surveyor described by UNH CCOM, which helped test its sonars in 2021. This is not the later 20 m hull. Exact computer, memory and communications hardware are not established by this configuration source.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Edge AI stack",
+                "details": "JetPack development tools; DeepStream work is described as prototype optimization, not a verified fleet-wide production installation.",
+                "sources": [
+                  "https://blogs.nvidia.com/blog/saildrone-autonomous-oceanic-monitoring-jetson-deepstream/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-fleet-edge-compute-2023",
+                "configuration": "Supplier report of Saildrone fleet architecture in July 2023. It does not identify a Jetson SKU or establish which unit is fitted to each Explorer, Voyager or Surveyor revision. DeepStream was being optimized in prototypes at publication.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Fleet interface",
+                "details": "Mission Portal supports monitoring and near-real-time mission-data views.",
+                "sources": [
+                  "https://blogs.nvidia.com/blog/saildrone-autonomous-oceanic-monitoring-jetson-deepstream/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saildrone-fleet-edge-compute-2023",
+                "configuration": "Supplier report of Saildrone fleet architecture in July 2023. It does not identify a Jetson SKU or establish which unit is fitted to each Explorer, Voyager or Surveyor revision. DeepStream was being optimized in prototypes at publication.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -120122,13 +120729,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -120808,8 +121409,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "saronic-corsair-public-system",
+            "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -120823,8 +121430,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Shared communications architecture",
+                "details": "Multichannel communications; optional configurations depend on deployment.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-corsair-public-system",
+                "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -120838,13 +121458,51 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Hull and modular payload",
+                "details": "24-foot hull; payload up to 1,000 lb.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-corsair-public-system",
+                "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Onboard autonomy",
+                "details": "Mission autonomy, adaptive route planning and cross-platform data sharing.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-corsair-public-system",
+                "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Echelon operator software",
+                "details": "Mission planning, simulation, live telemetry and video with autonomy-aware alerts.",
+                "sources": [
+                  "https://www.saronic.com/echelon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-corsair-public-system",
+                "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -120860,11 +121518,8 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -120906,8 +121561,24 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "saronic-corsair-public-system",
+            "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "saronic-mirage-public-system",
+            "configuration": "Mirage public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "saronic-marauder-public-system",
+            "configuration": "Marauder public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -120921,8 +121592,45 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Shared communications architecture",
+                "details": "Multichannel communications; optional configurations depend on deployment.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-corsair-public-system",
+                "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "radios",
+                "component": "Shared communications architecture",
+                "details": "Multichannel communications; optional configurations depend on deployment.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-mirage-public-system",
+                "configuration": "Mirage public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "radios",
+                "component": "Shared communications architecture",
+                "details": "Multichannel communications; optional configurations depend on deployment.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-marauder-public-system",
+                "configuration": "Marauder public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -120936,13 +121644,123 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Hull and modular payload",
+                "details": "24-foot hull; payload up to 1,000 lb.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-corsair-public-system",
+                "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Hull and modular payload",
+                "details": "52-foot hull; payload up to 3,500 lb.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-mirage-public-system",
+                "configuration": "Mirage public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Hull and modular payload",
+                "details": "180-foot hull; payload up to 150 metric tons in modular configurations, including four 40-foot or eight 20-foot containers.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-marauder-public-system",
+                "configuration": "Marauder public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Onboard autonomy",
+                "details": "Mission autonomy, adaptive route planning and cross-platform data sharing.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-corsair-public-system",
+                "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Echelon operator software",
+                "details": "Mission planning, simulation, live telemetry and video with autonomy-aware alerts.",
+                "sources": [
+                  "https://www.saronic.com/echelon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-corsair-public-system",
+                "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Onboard autonomy",
+                "details": "Mission autonomy, adaptive route planning and cross-platform data sharing.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-mirage-public-system",
+                "configuration": "Mirage public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Echelon operator software",
+                "details": "Mission planning, simulation, live telemetry and video with autonomy-aware alerts.",
+                "sources": [
+                  "https://www.saronic.com/echelon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-mirage-public-system",
+                "configuration": "Mirage public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Onboard autonomy",
+                "details": "Mission autonomy, adaptive route planning and cross-platform data sharing.",
+                "sources": [
+                  "https://www.saronic.com/vessels"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-marauder-public-system",
+                "configuration": "Marauder public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Echelon operator software",
+                "details": "Mission planning, simulation, live telemetry and video with autonomy-aware alerts.",
+                "sources": [
+                  "https://www.saronic.com/echelon"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "saronic-marauder-public-system",
+                "configuration": "Marauder public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -120958,11 +121776,8 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -154794,13 +155609,37 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "weride-robosweeper-s1-2024",
+            "configuration": "Compact S1 introduced in April 2024. The Hesai supplier account establishes Pandar-series lidar, not a specific Pandar part number or sensor count. The GXR robotaxi HPC3/Thor specification is not applied to this sweeper.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "weride-robosweeper-s6-2022-2024",
+            "configuration": "Original large S6 introduced in 2022, with manufacturer specifications published in 2024. NVIDIA identifies its compute supplier but describes Orin as next-generation development; it does not establish an installed Orin or Thor SKU for every S6.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Supplier-level compute evidence",
+                "details": "NVIDIA compute processes simultaneous perception networks in the 2022 Robosweeper fleet; exact processor model is undisclosed.",
+                "sources": [
+                  "https://blogs.nvidia.com/blog/weride-autonomous-street-sweepers/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s6-2022-2024",
+                "configuration": "Original large S6 introduced in 2022, with manufacturer specifications published in 2024. NVIDIA identifies its compute supplier but describes Orin as next-generation development; it does not establish an installed Orin or Thor SKU for every S6.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -154814,23 +155653,135 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Lidar supplier",
+                "details": "Hesai Pandar-series lidar supplies dense obstacle point clouds for Robosweeper S1; exact model is unstated.",
+                "sources": [
+                  "https://www.hesaitech.com/industry/service-robots/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s1-2024",
+                "configuration": "Compact S1 introduced in April 2024. The Hesai supplier account establishes Pandar-series lidar, not a specific Pandar part number or sensor count. The GXR robotaxi HPC3/Thor specification is not applied to this sweeper.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Vehicle perception",
+                "details": "Surrounding perception supports obstacle avoidance and autonomous surface cleaning.",
+                "sources": [
+                  "https://ir.weride.ai/node/6516/html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s1-2024",
+                "configuration": "Compact S1 introduced in April 2024. The Hesai supplier account establishes Pandar-series lidar, not a specific Pandar part number or sensor count. The GXR robotaxi HPC3/Thor specification is not applied to this sweeper.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Obstacle perception",
+                "details": "Multiple sensors and AI detect road conditions and avoid obstacles; this release does not enumerate sensor models.",
+                "sources": [
+                  "https://www.prnewswire.com/apac/news-releases/weride-robosweeper-rolls-into-singapore-facilitating-smart-sanitation-of-the-garden-city-302177829.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s6-2022-2024",
+                "configuration": "Original large S6 introduced in 2022, with manufacturer specifications published in 2024. NVIDIA identifies its compute supplier but describes Orin as next-generation development; it does not establish an installed Orin or Thor SKU for every S6.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery-operated cleaning",
+                "details": "Manufacturer reports up to 120,000 square meters per charge; battery capacity and chemistry are not supplied here.",
+                "sources": [
+                  "https://ir.weride.ai/node/6516/html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s1-2024",
+                "configuration": "Compact S1 introduced in April 2024. The Hesai supplier account establishes Pandar-series lidar, not a specific Pandar part number or sensor count. The GXR robotaxi HPC3/Thor specification is not applied to this sweeper.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Drive system",
+                "details": "All-electric drivetrain in the Singapore S6 configuration; battery capacity is not stated.",
+                "sources": [
+                  "https://www.prnewswire.com/apac/news-releases/weride-robosweeper-rolls-into-singapore-facilitating-smart-sanitation-of-the-garden-city-302177829.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s6-2022-2024",
+                "configuration": "Original large S6 introduced in 2022, with manufacturer specifications published in 2024. NVIDIA identifies its compute supplier but describes Orin as next-generation development; it does not establish an installed Orin or Thor SKU for every S6.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cleaning hardware",
+                "details": "400-liter tank; automatic refuse dumping.",
+                "sources": [
+                  "https://ir.weride.ai/node/6516/html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s1-2024",
+                "configuration": "Compact S1 introduced in April 2024. The Hesai supplier account establishes Pandar-series lidar, not a specific Pandar part number or sensor count. The GXR robotaxi HPC3/Thor specification is not applied to this sweeper.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Cleaning chassis",
+                "details": "Cabin-free Yutong-manufactured vehicle with 3.5 m³ water capacity; manufacturer lists 40 km/h maximum and 300 km NEDC range.",
+                "sources": [
+                  "https://ir.weride.ai/node/6516/html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s6-2022-2024",
+                "configuration": "Original large S6 introduced in 2022, with manufacturer specifications published in 2024. NVIDIA identifies its compute supplier but describes Orin as next-generation development; it does not establish an installed Orin or Thor SKU for every S6.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomous parking",
+                "details": "Self-parking and automatic cleaning control are documented.",
+                "sources": [
+                  "https://ir.weride.ai/node/6516/html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s1-2024",
+                "configuration": "Compact S1 introduced in April 2024. The Hesai supplier account establishes Pandar-series lidar, not a specific Pandar part number or sensor count. The GXR robotaxi HPC3/Thor specification is not applied to this sweeper.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Fleet management",
+                "details": "Cloud software schedules and dispatches vehicles using route and traffic information.",
+                "sources": [
+                  "https://blogs.nvidia.com/blog/weride-autonomous-street-sweepers/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "weride-robosweeper-s6-2022-2024",
+                "configuration": "Original large S6 introduced in 2022, with manufacturer specifications published in 2024. NVIDIA identifies its compute supplier but describes Orin as next-generation development; it does not establish an installed Orin or Thor SKU for every S6.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -154844,13 +155795,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -330869,6 +331815,821 @@
             ]
           }
         ]
+      },
+      {
+        "id": "saildrone-explorer-science-r8",
+        "manufacturer": "Saildrone",
+        "models": [
+          "Explorer (science brochure r8)"
+        ],
+        "configuration": "Explorer science configuration in manufacturer brochure r8. The table explicitly lists payload options, not one mandatory sensor complement. Exact computer, RAM, storage and radio modem are not specified.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Wind and solar",
+            "details": "Wind-driven wing provides propulsion; solar panels supply electronics. Brochure endurance is 12+ months.",
+            "sources": [
+              "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle dimensions",
+            "details": "7 m hull, 5 m wing and 2 m draft.",
+            "sources": [
+              "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Atmospheric payload options",
+            "details": "Gill Windmaster ultrasonic anemometer, Rotronic HC2-S3, Vaisala PTB210 and LI-COR LI-192SA.",
+            "sources": [
+              "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Ocean chemistry and navigation options",
+            "details": "SBE 37 / SBE 37 ODO, Wet Labs ECO-FL-S G4, Heitronics CT15.10, dual GPS-aided IMU and NOAA PMEL ASVCO2.",
+            "sources": [
+              "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Acoustic payload options",
+            "details": "Teledyne RDI Workhorse 300 kHz ADCP; Simrad WBT Mini EK80; bathymetry alternatives Airmar DT800, Echotrac E20 or WBT Mini. These are underwater acoustics, not RF scanner channels.",
+            "sources": [
+              "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Published identification-radio option",
+            "details": "AIS transceiver is listed among mission payload options; no individual MMSI or device MAC is established.",
+            "sources": [
+              "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Optical awareness option",
+            "details": "360-degree camera array with machine-learning target detection.",
+            "sources": [
+              "https://assets.website-files.com/5beaf972d32c0c1ce1fa1863/6151e17121a1ea75fb198b77_SD_Explorer_Product_Cards_r8_web-final.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Saildrone",
+            "models": [
+              "Saildrone USV (Explorer / Voyager / Surveyor)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "saildrone-voyager-wind-primary-brochure",
+        "manufacturer": "Saildrone",
+        "models": [
+          "Voyager (wind-primary survey configuration)"
+        ],
+        "configuration": "Manufacturer mapping brochure with wind-primary propulsion and 4 kW auxiliary electric drive. This is distinct from later electric-primary Voyager specifications. Sensor table entries are payload options; computer and memory are not disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Propulsion and electrical budget",
+            "details": "Wind propulsion plus 4 kW auxiliary electric motor; solar-powered electronics. Payload allowance is 300 W average and 2 kW peak.",
+            "sources": [
+              "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Survey hull",
+            "details": "10 m hull, 6 m wing and 2 m draft; advertised mapping speed 5 knots and endurance over three months.",
+            "sources": [
+              "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Hydrographic options",
+            "details": "Norbit Winghead i80s, POS MV OceanMaster, integrated sound-velocity probe and AML-6 profiler with winch to 200 m.",
+            "sources": [
+              "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Environmental options",
+            "details": "Gill 1405-PK-038, Rotronic HC2-S3, Vaisala PTB210, SBE 37 / SBE 37 ODO and dual GPS-aided IMU.",
+            "sources": [
+              "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Optical awareness option",
+            "details": "360-degree camera array for AI-assisted target detection.",
+            "sources": [
+              "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Identification-radio option",
+            "details": "AIS transceiver is listed; model, modem frequencies and vessel identifier are unspecified.",
+            "sources": [
+              "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-e08073d3-1b90-476e-9c2a-b0ac88cd67b0/9d538a1b-cdc2-4cd5-8d79-329e4d151a84.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Saildrone",
+            "models": [
+              "Saildrone USV (Explorer / Voyager / Surveyor)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "saildrone-surveyor-unh-22m",
+        "manufacturer": "Saildrone",
+        "models": [
+          "Surveyor (22 m UNH configuration)"
+        ],
+        "configuration": "22 m Surveyor described by UNH CCOM, which helped test its sonars in 2021. This is not the later 20 m hull. Exact computer, memory and communications hardware are not established by this configuration source.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Documented hull",
+            "details": "22 m hull, 13 m wing and 3 m draft.",
+            "sources": [
+              "https://www.ccom.unh.edu/resources/research-vessels/saildrone-surveyor"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion and payload supply",
+            "details": "Wind propulsion with 78 hp auxiliary diesel; payload supply is 2 kW continuous and 4 kW peak.",
+            "sources": [
+              "https://www.ccom.unh.edu/resources/research-vessels/saildrone-surveyor"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Bathymetric sonar",
+            "details": "Kongsberg EM304 deep-water and EM2040 shallow-water multibeam echosounders.",
+            "sources": [
+              "https://www.ccom.unh.edu/resources/research-vessels/saildrone-surveyor"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Water-column instruments",
+            "details": "Simrad EK80, EC150 ADCP and Teledyne Pinnacle 45 ADCP; sound-speed and oceanographic profiling, plus eDNA sampling.",
+            "sources": [
+              "https://www.ccom.unh.edu/resources/research-vessels/saildrone-surveyor"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Saildrone",
+            "models": [
+              "Saildrone USV (Explorer / Voyager / Surveyor)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "saildrone-fleet-edge-compute-2023",
+        "manufacturer": "Saildrone",
+        "models": [
+          "Saildrone fleet edge-compute architecture (2023)"
+        ],
+        "configuration": "Supplier report of Saildrone fleet architecture in July 2023. It does not identify a Jetson SKU or establish which unit is fitted to each Explorer, Voyager or Surveyor revision. DeepStream was being optimized in prototypes at publication.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Fleet-level edge processor evidence",
+            "details": "NVIDIA Jetson modules perform onboard image-based vessel detection. The exact module SKU, CPU generation and installed RAM are not published.",
+            "sources": [
+              "https://blogs.nvidia.com/blog/saildrone-autonomous-oceanic-monitoring-jetson-deepstream/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Edge AI stack",
+            "details": "JetPack development tools; DeepStream work is described as prototype optimization, not a verified fleet-wide production installation.",
+            "sources": [
+              "https://blogs.nvidia.com/blog/saildrone-autonomous-oceanic-monitoring-jetson-deepstream/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Remote mission architecture",
+            "details": "Satellite-connected vehicles can report data and receive course updates; constrained bandwidth favors local inference.",
+            "sources": [
+              "https://blogs.nvidia.com/blog/saildrone-autonomous-oceanic-monitoring-jetson-deepstream/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet interface",
+            "details": "Mission Portal supports monitoring and near-real-time mission-data views.",
+            "sources": [
+              "https://blogs.nvidia.com/blog/saildrone-autonomous-oceanic-monitoring-jetson-deepstream/"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Saildrone",
+            "models": [
+              "Saildrone USV (Explorer / Voyager / Surveyor)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deere-vpu-orin-2026",
+        "manufacturer": "John Deere",
+        "models": [
+          "Vision Processing Unit (2026 OEM specification)"
+        ],
+        "configuration": "2026 John Deere Electronics OEM VPU datasheet. Deere describes VPU technology as powering See & Spray, but this specification does not establish installation in every sprayer or older autonomous tractor. A component profile, not a whole-machine BOM.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Vision processor",
+            "details": "NVIDIA Orin: twelve ARM cores at 2.2 GHz, 2048 Ampere GPU cores and 64 Tensor cores; rated 275 TOPS.",
+            "sources": [
+              "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "RAM and storage",
+            "details": "64 GB LPDDR5, 64 GB eMMC and 1 TB NVMe solid-state storage.",
+            "sources": [
+              "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Camera inputs",
+            "details": "Twelve GMSL2 camera connections at 6 Gbit/s with power over coax; not twelve included cameras.",
+            "sources": [
+              "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle buses",
+            "details": "Four CAN ports up to 1 Mbit/s, J1939/ISO11783; one 1000BASE-T1 and one 10GBASE-T Ethernet port, USB 2.0 and serial debug.",
+            "sources": [
+              "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Discrete connections",
+            "details": "Two digital inputs, four addressing inputs, three high-side outputs, trigger I/O, camera sync and two analog inputs.",
+            "sources": [
+              "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Supply and enclosure",
+            "details": "Designed for 12, 24 or 56 V systems; IP67 enclosure, 4.7 kg, 464 × 233 × 78 mm.",
+            "sources": [
+              "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operating system",
+            "details": "Linux.",
+            "sources": [
+              "https://johndeere.widen.net/content/x41ygg53f3/original/vision-processing-unit-spec-sheet.pdf?u=47cufg"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cooling and integration",
+            "details": "Air-cooled design without internal fans or liquid cooling; offered for OEM integration and derived from Deere vision applications.",
+            "sources": [
+              "https://johndeere.widen.net/content/2r5qh8txkd/original/jd-isg-25006-vpu-built-to-endure.pdf?u=47cufg"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "John Deere",
+            "models": [
+              "John Deere autonomous tractor + See & Spray"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deere-autonomous-8r-ces2022",
+        "manufacturer": "John Deere",
+        "models": [
+          "8R autonomous tractor (CES 2022)"
+        ],
+        "configuration": "The autonomous 8R tillage configuration announced in January 2022. Later sixteen-camera autonomy kits and the 2026 OEM VPU specification are separate configurations. Exact processor, memory and modem parts are not identified in this announcement.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Six stereo-camera pairs provide surrounding obstacle detection and depth estimation; GPS guidance supports geofenced operation.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/john-deere-reveals-fully-autonomous-tractor-at-ces-2022-301453688.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Onboard obstacle decisions",
+            "details": "Neural-network image classification takes approximately 100 ms; obstacle detection can stop the tractor.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/john-deere-reveals-fully-autonomous-tractor-at-ces-2022-301453688.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Implement integration",
+            "details": "8R tractor coupled to a TruSet-enabled chisel plow.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/john-deere-reveals-fully-autonomous-tractor-at-ces-2022-301453688.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operator interface",
+            "details": "Operations Center Mobile provides remote start, machine-health notifications, video and adjustment of working speed and depth.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/john-deere-reveals-fully-autonomous-tractor-at-ces-2022-301453688.html"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "John Deere",
+            "models": [
+              "John Deere autonomous tractor + See & Spray"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deere-see-spray-ultimate-2022",
+        "manufacturer": "John Deere",
+        "models": [
+          "See & Spray Ultimate (2022)"
+        ],
+        "configuration": "2022 Ultimate crop-spraying configuration, distinct from See & Spray Select and the autonomous 8R tractor. VPU presence is documented, but the 2026 OEM Orin/RAM specification is not retroactively assigned.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Vision processing units",
+            "details": "Onboard VPUs analyze plants and command individual spray nozzles; chip model and RAM are not named in this report.",
+            "sources": [
+              "https://www.deere.com/assets/pdfs/common/our-company/sustainability/sustainability-report-2022.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera array",
+            "details": "36 cameras distributed across a 120-foot carbon-fiber boom.",
+            "sources": [
+              "https://www.deere.com/assets/pdfs/common/our-company/sustainability/sustainability-report-2022.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spray control",
+            "details": "ExactApply nozzle control and BoomTrac Ultimate boom management.",
+            "sources": [
+              "https://www.deere.com/assets/pdfs/common/our-company/sustainability/sustainability-report-2022.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Agronomic workflow",
+            "details": "Computer vision separates crops from weeds. Operations Center displays weed-density and application data.",
+            "sources": [
+              "https://www.deere.com/assets/pdfs/common/our-company/sustainability/sustainability-report-2022.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "John Deere",
+            "models": [
+              "John Deere autonomous tractor + See & Spray"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "weride-robosweeper-s1-2024",
+        "manufacturer": "WeRide",
+        "models": [
+          "Robosweeper S1",
+          "WeRide S1"
+        ],
+        "configuration": "Compact S1 introduced in April 2024. The Hesai supplier account establishes Pandar-series lidar, not a specific Pandar part number or sensor count. The GXR robotaxi HPC3/Thor specification is not applied to this sweeper.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Lidar supplier",
+            "details": "Hesai Pandar-series lidar supplies dense obstacle point clouds for Robosweeper S1; exact model is unstated.",
+            "sources": [
+              "https://www.hesaitech.com/industry/service-robots/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vehicle perception",
+            "details": "Surrounding perception supports obstacle avoidance and autonomous surface cleaning.",
+            "sources": [
+              "https://ir.weride.ai/node/6516/html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery-operated cleaning",
+            "details": "Manufacturer reports up to 120,000 square meters per charge; battery capacity and chemistry are not supplied here.",
+            "sources": [
+              "https://ir.weride.ai/node/6516/html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cleaning hardware",
+            "details": "400-liter tank; automatic refuse dumping.",
+            "sources": [
+              "https://ir.weride.ai/node/6516/html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomous parking",
+            "details": "Self-parking and automatic cleaning control are documented.",
+            "sources": [
+              "https://ir.weride.ai/node/6516/html"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "WeRide",
+            "models": [
+              "Robosweeper S6 / S1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "weride-robosweeper-s6-2022-2024",
+        "manufacturer": "WeRide",
+        "models": [
+          "Robosweeper S6",
+          "WeRide S6"
+        ],
+        "configuration": "Original large S6 introduced in 2022, with manufacturer specifications published in 2024. NVIDIA identifies its compute supplier but describes Orin as next-generation development; it does not establish an installed Orin or Thor SKU for every S6.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Supplier-level compute evidence",
+            "details": "NVIDIA compute processes simultaneous perception networks in the 2022 Robosweeper fleet; exact processor model is undisclosed.",
+            "sources": [
+              "https://blogs.nvidia.com/blog/weride-autonomous-street-sweepers/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet management",
+            "details": "Cloud software schedules and dispatches vehicles using route and traffic information.",
+            "sources": [
+              "https://blogs.nvidia.com/blog/weride-autonomous-street-sweepers/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Drive system",
+            "details": "All-electric drivetrain in the Singapore S6 configuration; battery capacity is not stated.",
+            "sources": [
+              "https://www.prnewswire.com/apac/news-releases/weride-robosweeper-rolls-into-singapore-facilitating-smart-sanitation-of-the-garden-city-302177829.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Obstacle perception",
+            "details": "Multiple sensors and AI detect road conditions and avoid obstacles; this release does not enumerate sensor models.",
+            "sources": [
+              "https://www.prnewswire.com/apac/news-releases/weride-robosweeper-rolls-into-singapore-facilitating-smart-sanitation-of-the-garden-city-302177829.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cleaning chassis",
+            "details": "Cabin-free Yutong-manufactured vehicle with 3.5 m³ water capacity; manufacturer lists 40 km/h maximum and 300 km NEDC range.",
+            "sources": [
+              "https://ir.weride.ai/node/6516/html"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "WeRide",
+            "models": [
+              "Robosweeper S6 / S1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "leidos-sea-hunter-public-system",
+        "manufacturer": "Leidos",
+        "models": [
+          "Sea Hunter",
+          "Sea Hunter I"
+        ],
+        "configuration": "Sea Hunter public platform evidence from the 2018 developer presentation, 2023 ONR publication and 2026 software update. PATHFINDER and LCM-8 equipment shown elsewhere in the presentation is not Sea Hunter hardware. CPU and memory are undisclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Collision perception",
+            "details": "Electro-optical and infrared sensing supports autonomous surface collision avoidance.",
+            "sources": [
+              "https://www.maritime.dot.gov/sites/marad.dot.gov/files/docs/about-us/foia/11706/leidos-inc-sea-hunter-and-maritime-autonomous-behaviors.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion",
+            "details": "Twin diesel engines drive two screws, as described by ONR in 2023; engine model is not named.",
+            "sources": [
+              "https://www.onr.navy.mil/media/document/future-force-vol-9-no-1-2023"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Platform",
+            "details": "132-foot trimaran prototype with modular payload integration.",
+            "sources": [
+              "https://www.maritime.dot.gov/sites/marad.dot.gov/files/docs/about-us/foia/11706/leidos-inc-sea-hunter-and-maritime-autonomous-behaviors.pdf",
+              "https://www.onr.navy.mil/media/document/future-force-vol-9-no-1-2023"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy architecture",
+            "details": "By September 2026, Leidos identifies LAVA as Sea Hunter’s modular navigation, mission execution and obstacle-avoidance software.",
+            "sources": [
+              "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Leidos",
+            "models": [
+              "Sea Hunter (and Seahawk)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "leidos-seahawk-public-system",
+        "manufacturer": "Leidos",
+        "models": [
+          "Seahawk",
+          "Sea Hunter II"
+        ],
+        "configuration": "Seahawk delivery configuration in April 2021 and separately dated September 2026 autonomy report. Hardware part numbers, processor, memory and radio waveforms are not disclosed; Sea Hunter I payload details are not assumed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Propulsion and fuel",
+            "details": "Twin diesel engines; 14,000-gallon fuel capacity.",
+            "sources": [
+              "https://www.leidos.com/insights/leidos-completes-delivery-seahawk-vessel-us-navy"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Hull and payload integration",
+            "details": "Composite trimaran, 145 long tons fully loaded; revised electrical system, payload mounts and test-operator station.",
+            "sources": [
+              "https://www.leidos.com/insights/leidos-completes-delivery-seahawk-vessel-us-navy"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy software",
+            "details": "LAVA supplies navigation, mission execution and obstacle avoidance. The 2026 report describes COLREG compliance and designated-zone avoidance.",
+            "sources": [
+              "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Control-link redundancy",
+            "details": "2026 report describes remote control with alternate communication paths; modem, band and protocol are not specified.",
+            "sources": [
+              "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation behavior",
+            "details": "2026 demonstration followed commanded waypoints without GPS and later reintegrated GPS; sensor package is not enumerated.",
+            "sources": [
+              "https://www.leidos.com/insights/leidos-autonomy-earns-its-place-rimpac-and-carrier-strike-group"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Leidos",
+            "models": [
+              "Sea Hunter (and Seahawk)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "saronic-corsair-public-system",
+        "manufacturer": "Saronic Technologies",
+        "models": [
+          "Corsair"
+        ],
+        "configuration": "Corsair public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Hull and modular payload",
+            "details": "24-foot hull; payload up to 1,000 lb.",
+            "sources": [
+              "https://www.saronic.com/vessels"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Shared communications architecture",
+            "details": "Multichannel communications; optional configurations depend on deployment.",
+            "sources": [
+              "https://www.saronic.com/vessels"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Onboard autonomy",
+            "details": "Mission autonomy, adaptive route planning and cross-platform data sharing.",
+            "sources": [
+              "https://www.saronic.com/vessels"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Echelon operator software",
+            "details": "Mission planning, simulation, live telemetry and video with autonomy-aware alerts.",
+            "sources": [
+              "https://www.saronic.com/echelon"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Saronic Technologies",
+            "models": [
+              "Saronic USV (Corsair / Mirage / Marauder)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "saronic-mirage-public-system",
+        "manufacturer": "Saronic Technologies",
+        "models": [
+          "Mirage"
+        ],
+        "configuration": "Mirage public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Hull and modular payload",
+            "details": "52-foot hull; payload up to 3,500 lb.",
+            "sources": [
+              "https://www.saronic.com/vessels"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Shared communications architecture",
+            "details": "Multichannel communications; optional configurations depend on deployment.",
+            "sources": [
+              "https://www.saronic.com/vessels"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Onboard autonomy",
+            "details": "Mission autonomy, adaptive route planning and cross-platform data sharing.",
+            "sources": [
+              "https://www.saronic.com/vessels"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Echelon operator software",
+            "details": "Mission planning, simulation, live telemetry and video with autonomy-aware alerts.",
+            "sources": [
+              "https://www.saronic.com/echelon"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Saronic Technologies",
+            "models": [
+              "Saronic USV (Corsair / Mirage / Marauder)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "saronic-marauder-public-system",
+        "manufacturer": "Saronic Technologies",
+        "models": [
+          "Marauder"
+        ],
+        "configuration": "Marauder public vessel specification and shared Saronic architecture. Partial system evidence only: processor silicon, RAM, propulsion model, sensor models and radio bands remain unpublished in these sources. Echelon is fleet-control software, not a hardware BOM.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Hull and modular payload",
+            "details": "180-foot hull; payload up to 150 metric tons in modular configurations, including four 40-foot or eight 20-foot containers.",
+            "sources": [
+              "https://www.saronic.com/vessels"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Shared communications architecture",
+            "details": "Multichannel communications; optional configurations depend on deployment.",
+            "sources": [
+              "https://www.saronic.com/vessels"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Onboard autonomy",
+            "details": "Mission autonomy, adaptive route planning and cross-platform data sharing.",
+            "sources": [
+              "https://www.saronic.com/vessels"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Echelon operator software",
+            "details": "Mission planning, simulation, live telemetry and video with autonomy-aware alerts.",
+            "sources": [
+              "https://www.saronic.com/echelon"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Saronic Technologies",
+            "models": [
+              "Saronic USV (Corsair / Mirage / Marauder)"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -330885,8 +332646,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 775,
-    "devices_with_system_profiles": 667,
-    "devices_with_documented_compute": 321
+    "system_profiles": 789,
+    "devices_with_system_profiles": 673,
+    "devices_with_documented_compute": 324
   }
 }

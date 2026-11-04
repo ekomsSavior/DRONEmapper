@@ -9,6 +9,52 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 65 keeps component computers and vehicle revisions separate',()=>{
+ const vpu=system('John Deere','Vision Processing Unit (2026 OEM specification)');
+ assert.match(text(vpu.sections.compute),/Orin.*twelve ARM.*275 TOPS/);
+ assert.match(text(vpu.sections.memory),/64 GB LPDDR5.*64 GB eMMC.*1 TB NVMe/);
+ assert.match(text(vpu.sections.interfaces),/not twelve included cameras/);
+ const tractor=system('John Deere','8R autonomous tractor (CES 2022)');
+ assert.equal(tractor.sections.memory.status,'not-established');
+ assert.doesNotMatch(text(tractor.sections.compute.facts),/Orin|275 TOPS/);
+ assert.match(text(tractor.sections.sensors),/Six stereo-camera pairs/);
+ assert.equal(profileIds(system('John Deere','John Deere autonomous tractor + See & Spray')).length,3);
+ const s1=system('WeRide','Robosweeper S1'),s6=system('WeRide','Robosweeper S6');
+ assert.match(text(s1.sections.sensors),/Pandar-series.*exact model is unstated/);
+ assert.equal(s1.sections.compute.status,'not-established');
+ assert.match(text(s6.sections.compute),/NVIDIA.*exact processor model is undisclosed/);
+ assert.doesNotMatch(text(s6.sections.compute.facts.map(f=>f.details)),/Orin|Thor/);
+ assert.equal(profileIds(system('WeRide','Robosweeper S6 / S1')).length,2);
+ assert.equal(profileIds(system('Other manufacturer','Robosweeper S1')).length,0);
+});
+
+test('batch 65 separates optional vessel payloads and family-level computer evidence',()=>{
+ const family=system('Saildrone','Saildrone USV (Explorer / Voyager / Surveyor)');
+ assert.equal(profileIds(family).length,4);
+ assert.match(text(family.sections.compute),/Jetson.*exact module SKU/);
+ const explorer=system('Saildrone','Explorer (science brochure r8)');
+ assert.equal(explorer.sections.compute.status,'not-established');
+ assert.match(text(explorer.sections.sensors),/payload options/);
+ assert.match(text(explorer.sections.sensors),/underwater acoustics, not RF/);
+ const voyager=system('Saildrone','Voyager (wind-primary survey configuration)');
+ assert.match(text(voyager.sections.power),/Wind propulsion plus 4 kW auxiliary/);
+ const surveyor=system('Saildrone','Surveyor (22 m UNH configuration)');
+ assert.match(text(surveyor.sections.interfaces),/22 m hull/);
+ assert.equal(surveyor.sections.radios.status,'not-established');
+ const hunter=system('Leidos','Sea Hunter');
+ assert.equal(hunter.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(hunter.sections.sensors.facts.map(f=>f.details)),/POS MV|ISS-2000|ATCA/);
+ assert.match(text(system('Leidos','Seahawk').sections.radios),/alternate communication paths/);
+ const corsair=system('Saronic Technologies','Corsair');
+ assert.equal(corsair.sections.compute.status,'not-established');
+ assert.equal(corsair.sections.power.status,'not-established');
+ assert.equal(profileIds(system('Saronic Technologies','Saronic USV (Corsair / Mirage / Marauder)')).length,3);
+ for(const [maker,name] of [['John Deere','John Deere autonomous tractor + See & Spray'],['Saildrone','Saildrone USV (Explorer / Voyager / Surveyor)'],['WeRide','Robosweeper S6 / S1'],['Leidos','Sea Hunter (and Seahawk)']]){
+  assert.equal(system(maker,name).complete_bill_of_materials,false);
+  assert.equal(profileIds(system(maker,name,{kind:'regulatory-equipment'})).length,0);
+ }
+});
+
 test('batch 64 separates float generations and representative electronics',()=>{
  const argo=code=>system('Unknown manufacturer',code);
  const deep=argo('APEX_D');
@@ -1719,7 +1765,7 @@ test('batch 42 isolates autonomous-vehicle compute platforms and robot revisions
  assert.match(text(r2.sections.power),/69.2 kWh/);
  assert.match(text(r2.sections.interfaces),/J1939.*Gigabit Ethernet/);
  assert.equal(profileIds(system('WeRide','Robobus')).length,2);
- assert.equal(system('WeRide','Robosweeper S6').sections.compute.status,'not-established');
+ assert.doesNotMatch(text(system('WeRide','Robosweeper S6').sections.compute.facts.map(f=>f.details)),/Thor|1,300 TOPS|HPC 3/);
 });
 
 test('batch 43 keeps XAG controller, battery and payload revisions separate',()=>{
