@@ -125682,13 +125682,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ulc-cisbot-family",
+            "configuration": "Manufacturer family and 12-inch variant descriptions. CPU, RAM, communications medium and onboard power source are not disclosed; solar command-unit power is not treated as a robot battery specification.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Sealing control",
+                "details": "Computer-controlled sealant application; underlying controller silicon unspecified.",
+                "sources": [
+                  "https://ulctechnologies.com/services/cisbot-robotic-cast-iron-joint-sealing/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ulc-cisbot-family",
+                "configuration": "Manufacturer family and 12-inch variant descriptions. CPU, RAM, communications medium and onboard power source are not disclosed; solar command-unit power is not treated as a robot battery specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -125702,8 +125721,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Operator observation",
+                "details": "Onboard cameras and sensors let field teams monitor the 12-inch robot; individual sensor models unspecified.",
+                "sources": [
+                  "https://ulctechnologies.com/services/12-in-cisbot-robotic-internal-cast-iron-joint-sealing/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ulc-cisbot-family",
+                "configuration": "Manufacturer family and 12-inch variant descriptions. CPU, RAM, communications medium and onboard power source are not disclosed; solar command-unit power is not treated as a robot battery specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -125712,8 +125744,22 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Pipe-work tooling",
+                "details": "Drilling and anaerobic sealant injection in live cast-iron mains. Family covers 12–48-inch pipe; the 12-inch configuration can travel up to 426 m from an entry point.",
+                "sources": [
+                  "https://ulctechnologies.com/services/cisbot-robotic-cast-iron-joint-sealing/",
+                  "https://ulctechnologies.com/services/12-in-cisbot-robotic-internal-cast-iron-joint-sealing/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ulc-cisbot-family",
+                "configuration": "Manufacturer family and 12-inch variant descriptions. CPU, RAM, communications medium and onboard power source are not disclosed; solar command-unit power is not treated as a robot battery specification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -125732,12 +125778,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -137585,8 +137628,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "uvd-modelc-2022",
+            "configuration": "Model C manual dated July 5, 2022 and manufacturer feature page. This named configuration is not a specification for every UVD revision. CPU, RAM and wireless module SKU undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -137600,28 +137649,95 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Tablet connection",
+                "details": "Dual-band wireless; the tablet connects to the robot’s Wi-Fi network. No unique SSID, MAC allocation or chipset is established.",
+                "sources": [
+                  "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=16",
+                  "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=27"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "uvd-modelc-2022",
+                "configuration": "Model C manual dated July 5, 2022 and manufacturer feature page. This named configuration is not a specification for every UVD revision. CPU, RAM and wireless module SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Laser scanners and 3D cameras for navigation and obstacle detection.",
+                "sources": [
+                  "https://uvd.blue-ocean-robotics.com/features"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "uvd-modelc-2022",
+                "configuration": "Model C manual dated July 5, 2022 and manufacturer feature page. This named configuration is not a specification for every UVD revision. CPU, RAM and wireless module SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and charging",
+                "details": "Four Li-NMC packs, each 24 V / 40 Ah; 960 W rated power. Full charging is listed as five hours at the dock or eight hours with the emergency charger.",
+                "sources": [
+                  "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=16"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "uvd-modelc-2022",
+                "configuration": "Model C manual dated July 5, 2022 and manufacturer feature page. This named configuration is not a specification for every UVD revision. CPU, RAM and wireless module SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "UV-C module",
+                "details": "254 nm UV-C lamps; stated lamp life 12,000 hours. The robot is an indoor mobile disinfection platform.",
+                "sources": [
+                  "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=16"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "uvd-modelc-2022",
+                "configuration": "Model C manual dated July 5, 2022 and manufacturer feature page. This named configuration is not a specification for every UVD revision. CPU, RAM and wireless module SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operator application",
+                "details": "Tablet control, disinfection/exposure reports and fleet-management functions.",
+                "sources": [
+                  "https://uvd.blue-ocean-robotics.com/features",
+                  "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=27"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "uvd-modelc-2022",
+                "configuration": "Model C manual dated July 5, 2022 and manufacturer feature page. This named configuration is not a specification for every UVD revision. CPU, RAM and wireless module SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -137637,11 +137753,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -137683,8 +137794,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "vecna-apj-legacy",
+            "configuration": "Fifth-generation announcement (2019) and manufacturer Workhorse guide (2021). OEM-agnostic base; CPU, RAM, battery and radio hardware cannot be inferred from the later CPJ.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -137703,8 +137820,22 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Pallet identification",
+                "details": "Autonomous pallet identification and scan-to-validate mission workflow; sensing hardware SKU unspecified.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/vecna-robotics-expands-product-line-with-fifth-generation-pallet-jack-300808638.html",
+                  "https://scg-mmh.s3.amazonaws.com/pdfs/vecna_robotics_wp_quick_start_guide_012521.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "vecna-apj-legacy",
+                "configuration": "Fifth-generation announcement (2019) and manufacturer Workhorse guide (2021). OEM-agnostic base; CPU, RAM, battery and radio hardware cannot be inferred from the later CPJ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -137713,13 +137844,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Autonomous handling",
+                "details": "Automatic lifting, pickup and delivery, including bottom-board and partial pallets. Tablet-based task assignment in the Workhorse workflow.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/vecna-robotics-expands-product-line-with-fifth-generation-pallet-jack-300808638.html",
+                  "https://scg-mmh.s3.amazonaws.com/pdfs/vecna_robotics_wp_quick_start_guide_012521.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "vecna-apj-legacy",
+                "configuration": "Fifth-generation announcement (2019) and manufacturer Workhorse guide (2021). OEM-agnostic base; CPU, RAM, battery and radio hardware cannot be inferred from the later CPJ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy Stack and Pivot.al",
+                "details": "Onboard obstacle avoidance, navigation and local decisions; Pivot.al coordinates assignments across people and robots.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/vecna-robotics-expands-product-line-with-fifth-generation-pallet-jack-300808638.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "vecna-apj-legacy",
+                "configuration": "Fifth-generation announcement (2019) and manufacturer Workhorse guide (2021). OEM-agnostic base; CPU, RAM, battery and radio hardware cannot be inferred from the later CPJ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -137736,10 +137894,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -137794,8 +137949,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "verity-series4-sre401",
+            "configuration": "Series 4 manual V1.0_001 and SRE401 FCC grant, June 22, 2026. CPU/RAM, battery capacity and radio chip SKU are not disclosed in the reviewed material. Earlier Verity generations may differ.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -137809,28 +137970,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Dual-band Wi-Fi",
+                "details": "FCC 2BRHC-SRE401 authorizes 2,412–2,462, 5,180–5,240, 5,260–5,320, 5,500–5,720 and 5,745–5,825 MHz. These shared bands are not a unique drone signature.",
+                "sources": [
+                  "https://fccid.io/2BRHCSRE401"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "verity-series4-sre401",
+                "configuration": "Series 4 manual V1.0_001 and SRE401 FCC grant, June 22, 2026. CPU/RAM, battery capacity and radio chip SKU are not disclosed in the reviewed material. Earlier Verity generations may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Cameras and obstacle sensing",
+                "details": "Three forward-facing cameras, one upward localization camera and top/bottom sensors. Ceiling localization markers support indoor navigation. Manual identifies a Class 1 laser product.",
+                "sources": [
+                  "https://device.report/m/8bca1c213dcd3627a933c5f73201b78f7ea7fe210b2c69b70936b79c20e69f40"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "verity-series4-sre401",
+                "configuration": "Series 4 manual V1.0_001 and SRE401 FCC grant, June 22, 2026. CPU/RAM, battery capacity and radio chip SKU are not disclosed in the reviewed material. Earlier Verity generations may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and assigned charger",
+                "details": "Replaceable Verity battery; each drone has an assigned charger using pogo-pin contacts. Capacity and voltage unpublished in this manual.",
+                "sources": [
+                  "https://device.report/m/8bca1c213dcd3627a933c5f73201b78f7ea7fe210b2c69b70936b79c20e69f40"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "verity-series4-sre401",
+                "configuration": "Series 4 manual V1.0_001 and SRE401 FCC grant, June 22, 2026. CPU/RAM, battery capacity and radio chip SKU are not disclosed in the reviewed material. Earlier Verity generations may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Guarded airframe",
+                "details": "Propeller guards, camera-flash LEDs and removable rear battery cover.",
+                "sources": [
+                  "https://device.report/m/8bca1c213dcd3627a933c5f73201b78f7ea7fe210b2c69b70936b79c20e69f40"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "verity-series4-sre401",
+                "configuration": "Series 4 manual V1.0_001 and SRE401 FCC grant, June 22, 2026. CPU/RAM, battery capacity and radio chip SKU are not disclosed in the reviewed material. Earlier Verity generations may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground Control",
+                "details": "Fleet dashboard reports connectivity, charge and flight state; configured flight areas and scheduled operating hours.",
+                "sources": [
+                  "https://device.report/m/8bca1c213dcd3627a933c5f73201b78f7ea7fe210b2c69b70936b79c20e69f40"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "verity-series4-sre401",
+                "configuration": "Series 4 manual V1.0_001 and SRE401 FCC grant, June 22, 2026. CPU/RAM, battery capacity and radio chip SKU are not disclosed in the reviewed material. Earlier Verity generations may differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -137855,12 +138081,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -138291,8 +138512,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "verobotics-facade-platform",
+            "configuration": "Manufacturer façade-robot technology description. Public page establishes sensing and software architecture, but not a full Ibex BOM: processor, RAM, battery and radio specifications remain undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -138311,8 +138538,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Façade inspection",
+                "details": "Onboard cameras inspect façades and window frames; motion, position and surface sensing support traversal.",
+                "sources": [
+                  "https://verobotics.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "verobotics-facade-platform",
+                "configuration": "Manufacturer façade-robot technology description. Public page establishes sensing and software architecture, but not a full Ibex BOM: processor, RAM, battery and radio specifications remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -138321,13 +138561,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Building robot",
+                "details": "Walking façade platform for cleaning and inspection; manufacturer describes portable deployment.",
+                "sources": [
+                  "https://verobotics.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "verobotics-facade-platform",
+                "configuration": "Manufacturer façade-robot technology description. Public page establishes sensing and software architecture, but not a full Ibex BOM: processor, RAM, battery and radio specifications remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Data hub",
+                "details": "AI-based autonomous operation and building digital-twin data collection.",
+                "sources": [
+                  "https://verobotics.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "verobotics-facade-platform",
+                "configuration": "Manufacturer façade-robot technology description. Public page establishes sensing and software architecture, but not a full Ibex BOM: processor, RAM, battery and radio specifications remain undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -138344,10 +138610,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -145154,8 +145417,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "yape-base5g-droid",
+            "configuration": "Two-wheel delivery droid and BASE 5G demonstration. The later 2026 L1 retrofit platform has different hardware and is not merged into this robot. CPU, RAM and battery capacity undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -145169,13 +145438,39 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "BASE 5G trial",
+                "details": "In the demonstrated configuration, 5G connects droids, IoT equipment and remote operators. Integration with KONE smart lifts was demonstrated with Vodafone and Politecnico di Milano.",
+                "sources": [
+                  "https://yapemobility.it/?p=2343"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yape-base5g-droid",
+                "configuration": "Two-wheel delivery droid and BASE 5G demonstration. The later 2026 L1 retrofit platform has different hardware and is not merged into this robot. CPU, RAM and battery capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "Environment perception and obstacle avoidance; sensor models and counts not specified in the project description.",
+                "sources": [
+                  "https://i-rim.it/en/project/yape-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yape-base5g-droid",
+                "configuration": "Two-wheel delivery droid and BASE 5G demonstration. The later 2026 L1 retrofit platform has different hardware and is not merged into this robot. CPU, RAM and battery capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -145184,13 +145479,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Self-balancing delivery chassis",
+                "details": "Two-wheeled self-stabilizing droid; project description lists a 20 kg payload.",
+                "sources": [
+                  "https://yapemobility.it/?p=2343",
+                  "https://i-rim.it/en/project/yape-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yape-base5g-droid",
+                "configuration": "Two-wheel delivery droid and BASE 5G demonstration. The later 2026 L1 retrofit platform has different hardware and is not merged into this robot. CPU, RAM and battery capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomous logistics",
+                "details": "Indoor/outdoor navigation and lift-connected logistics in the BASE 5G project.",
+                "sources": [
+                  "https://yapemobility.it/?p=2343"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yape-base5g-droid",
+                "configuration": "Two-wheel delivery droid and BASE 5G demonstration. The later 2026 L1 retrofit platform has different hardware and is not merged into this robot. CPU, RAM and battery capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -145206,11 +145528,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -145254,8 +145572,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "yara-birkeland-delivery",
+            "configuration": "Delivered battery system (2021) and Kongsberg engineering presentation (January 2022). Owner press-kit prototype estimate of 6.8 MWh is distinguished from the supplier’s delivered 6.7 MWh system. CPU, RAM and radio chipset undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -145274,23 +145598,89 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Kongsberg navigation perception",
+                "details": "Visual, infrared and PTZ cameras; relative-position reference systems and redundant reception/processing architecture in the Yara-specific engineering slides.",
+                "sources": [
+                  "https://www.midc.be/uploads/files/Kongsberg-YARA-Birkeland.pdf?v=1660811723"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yara-birkeland-delivery",
+                "configuration": "Delivered battery system (2021) and Kongsberg engineering presentation (January 2022). Owner press-kit prototype estimate of 6.8 MWh is distinguished from the supplier’s delivered 6.7 MWh system. CPU, RAM and radio chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Leclanché Marine Rack System",
+                "details": "6.7 MWh lithium-ion system: 20 strings, 51 modules per string, 32 cells per module; 32,640 cells across eight battery rooms. Cooling, gas/smoke detection and redundant thermal monitoring; Fifi4Marine foam suppression.",
+                "sources": [
+                  "https://www.leclanche.com/yara-birkeland-worlds-first-100-electric-and-autonomous-e-container-ship-fully-powered-by-a-leclanche-battery-system-prepares-for-commercial-operation/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yara-birkeland-delivery",
+                "configuration": "Delivered battery system (2021) and Kongsberg engineering presentation (January 2022). Owner press-kit prototype estimate of 6.8 MWh is distinguished from the supplier’s delivered 6.7 MWh system. CPU, RAM and radio chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Electric propulsion",
+                "details": "Two 900 kW Azipull pods and two 700 kW tunnel thrusters.",
+                "sources": [
+                  "https://www.yara.com/news-and-media/media-library/press-kits/yara-birkeland-press-kit/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yara-birkeland-delivery",
+                "configuration": "Delivered battery system (2021) and Kongsberg engineering presentation (January 2022). Owner press-kit prototype estimate of 6.8 MWh is distinguished from the supplier’s delivered 6.7 MWh system. CPU, RAM and radio chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cargo ship platform",
+                "details": "120 TEU container capacity; approximately 80 m length and 15 m beam. Automated mooring is part of the illustrated system.",
+                "sources": [
+                  "https://www.yara.com/news-and-media/media-library/press-kits/yara-birkeland-press-kit/",
+                  "https://www.midc.be/uploads/files/Kongsberg-YARA-Birkeland.pdf?v=1660811723"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yara-birkeland-delivery",
+                "configuration": "Delivered battery system (2021) and Kongsberg engineering presentation (January 2022). Owner press-kit prototype estimate of 6.8 MWh is distinguished from the supplier’s delivered 6.7 MWh system. CPU, RAM and radio chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Supervised autonomy development",
+                "details": "Kongsberg navigation, control and remote-operation architecture. Commercial operation and transition toward autonomous operation are separate milestones.",
+                "sources": [
+                  "https://www.midc.be/uploads/files/Kongsberg-YARA-Birkeland.pdf?v=1660811723",
+                  "https://www.yara.com/news-and-media/media-library/press-kits/yara-birkeland-press-kit/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yara-birkeland-delivery",
+                "configuration": "Delivered battery system (2021) and Kongsberg engineering presentation (January 2022). Owner press-kit prototype estimate of 6.8 MWh is distinguished from the supplier’s delivered 6.7 MWh system. CPU, RAM and radio chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -145307,10 +145697,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -146096,8 +146482,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "zenrobotics-heavy-standalone",
+            "configuration": "Manufacturer Heavy Picker standalone configuration; a named example within the broader Recycler entry, not a universal specification for every ZenRobotics system. CPU/GPU, RAM and radio hardware undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -146116,23 +146508,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Sorting sensor unit",
+                "details": "One upstream sensor unit for the illustrated station; sensor chip models unspecified.",
+                "sources": [
+                  "https://www.terex.com/docs/zenroboticslibraries/brochures/standalone-solution.pdf?sfvrsn=c0e6f0cd_1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zenrobotics-heavy-standalone",
+                "configuration": "Manufacturer Heavy Picker standalone configuration; a named example within the broader Recycler entry, not a universal specification for every ZenRobotics system. CPU/GPU, RAM and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electrical and pneumatic supply",
+                "details": "10 kW installed power per robot; mechanical gripper uses 120 L/min compressed air at 6 bar.",
+                "sources": [
+                  "https://www.terex.com/docs/zenroboticslibraries/brochures/standalone-solution.pdf?sfvrsn=c0e6f0cd_1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zenrobotics-heavy-standalone",
+                "configuration": "Manufacturer Heavy Picker standalone configuration; a named example within the broader Recycler entry, not a universal specification for every ZenRobotics system. CPU/GPU, RAM and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Sorting line",
+                "details": "One, two or three arms; 30 kg maximum item mass; up to 2,300 picks/hour per arm depending on feed. Conveyor speed 0.1–0.6 m/s; 2,700 × 2,000 mm working area per robot.",
+                "sources": [
+                  "https://www.terex.com/docs/zenroboticslibraries/brochures/standalone-solution.pdf?sfvrsn=c0e6f0cd_1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zenrobotics-heavy-standalone",
+                "configuration": "Manufacturer Heavy Picker standalone configuration; a named example within the broader Recycler entry, not a universal specification for every ZenRobotics system. CPU/GPU, RAM and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Waste classification",
+                "details": "Trainable sorting categories and online waste-composition analysis.",
+                "sources": [
+                  "https://www.terex.com/docs/zenroboticslibraries/brochures/standalone-solution.pdf?sfvrsn=c0e6f0cd_1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zenrobotics-heavy-standalone",
+                "configuration": "Manufacturer Heavy Picker standalone configuration; a named example within the broader Recycler entry, not a universal specification for every ZenRobotics system. CPU/GPU, RAM and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -146149,10 +146593,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -146780,13 +147220,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "zf-nextgen-shuttle-ces2023",
+            "configuration": "Next-generation mixed-traffic shuttle unveiled at CES 2023. Announced configuration, not proof of deployment at a particular site. Processor silicon, RAM and modem SKU are not published.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "ZF ProAI",
+                "details": "ProAI central computer works with ProConnect to execute Virtual Driver. No specific NVIDIA chip or TOPS rating is established for this shuttle.",
+                "sources": [
+                  "https://press.zf.com/press/en/releases/release_49664.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zf-nextgen-shuttle-ces2023",
+                "configuration": "Next-generation mixed-traffic shuttle unveiled at CES 2023. Announced configuration, not proof of deployment at a particular site. Processor silicon, RAM and modem SKU are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -146795,28 +147254,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "ProConnect",
+                "details": "Connectivity platform links the shuttle with infrastructure and cloud services; this release does not identify the installed modem or frequency configuration.",
+                "sources": [
+                  "https://press.zf.com/press/en/releases/release_49664.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zf-nextgen-shuttle-ces2023",
+                "configuration": "Next-generation mixed-traffic shuttle unveiled at CES 2023. Announced configuration, not proof of deployment at a particular site. Processor silicon, RAM and modem SKU are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Environmental perception",
+                "details": "LiDAR, radar, camera and audio sensing; individual sensor models and quantities unspecified.",
+                "sources": [
+                  "https://press.zf.com/press/en/releases/release_49664.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zf-nextgen-shuttle-ces2023",
+                "configuration": "Next-generation mixed-traffic shuttle unveiled at CES 2023. Announced configuration, not proof of deployment at a particular site. Processor silicon, RAM and modem SKU are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery-electric drivetrain",
+                "details": "Selectable 50–100 kWh battery capacity; announced range up to 80 miles.",
+                "sources": [
+                  "https://press.zf.com/press/en/releases/release_49664.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zf-nextgen-shuttle-ces2023",
+                "configuration": "Next-generation mixed-traffic shuttle unveiled at CES 2023. Announced configuration, not proof of deployment at a particular site. Processor silicon, RAM and modem SKU are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle actuation",
+                "details": "Front- and rear-wheel steering, kneeling suspension and automatic boarding ramp. Up to 22 passengers, including 15 seated.",
+                "sources": [
+                  "https://press.zf.com/press/en/releases/release_49664.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zf-nextgen-shuttle-ces2023",
+                "configuration": "Next-generation mixed-traffic shuttle unveiled at CES 2023. Announced configuration, not proof of deployment at a particular site. Processor silicon, RAM and modem SKU are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Virtual Driver",
+                "details": "Separate performance and safety paths; safety path constrains the driving decisions. Developed with Oxbotica.",
+                "sources": [
+                  "https://press.zf.com/press/en/releases/release_49608.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "zf-nextgen-shuttle-ces2023",
+                "configuration": "Next-generation mixed-traffic shuttle unveiled at CES 2023. Announced configuration, not proof of deployment at a particular site. Processor silicon, RAM and modem SKU are not published.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -146840,13 +147364,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -303591,6 +304109,514 @@
             ]
           }
         ]
+      },
+      {
+        "id": "vecna-cpj-2024q4",
+        "manufacturer": "Vecna Robotics",
+        "models": [
+          "CPJ Co-bot Pallet Jack"
+        ],
+        "configuration": "Q4 2024 CPJ specification. This collaborative model has manual pickup; it is distinct from the older fully autonomous Pallet Jack. CPU, RAM and radio chipset undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Safety controllers",
+            "details": "ISO 13849-1 PL d-rated safety controllers; processor part numbers unspecified.",
+            "sources": [
+              "https://www.vecnarobotics.com/wp-content/uploads/2024/11/CPJ-CobotPalletJack-2024Q4-v2.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and safety",
+            "details": "Natural-feature navigation and PL d-rated safety sensors; individual sensor models unpublished.",
+            "sources": [
+              "https://www.vecnarobotics.com/wp-content/uploads/2024/11/CPJ-CobotPalletJack-2024Q4-v2.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Replaceable lithium-ion battery",
+            "details": "24 V, 60 Ah hot-swappable pack; stated 2.5-hour runtime and two-hour charge.",
+            "sources": [
+              "https://www.vecnarobotics.com/wp-content/uploads/2024/11/CPJ-CobotPalletJack-2024Q4-v2.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Handling and operator controls",
+            "details": "1,500 kg payload, 1.25 m/s maximum. Autonomous transport and drop-off, manual pickup. Onboard touchscreen and remote call buttons/tablet interfaces.",
+            "sources": [
+              "https://www.vecnarobotics.com/wp-content/uploads/2024/11/CPJ-CobotPalletJack-2024Q4-v2.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Pivotal orchestration",
+            "details": "Pivotal fleet coordination and remote Command Center support.",
+            "sources": [
+              "https://www.vecnarobotics.com/wp-content/uploads/2024/11/CPJ-CobotPalletJack-2024Q4-v2.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vecna-apj-legacy",
+        "manufacturer": "Vecna Robotics",
+        "models": [
+          "Autonomous Pallet Jack"
+        ],
+        "configuration": "Fifth-generation announcement (2019) and manufacturer Workhorse guide (2021). OEM-agnostic base; CPU, RAM, battery and radio hardware cannot be inferred from the later CPJ.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Pallet identification",
+            "details": "Autonomous pallet identification and scan-to-validate mission workflow; sensing hardware SKU unspecified.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/vecna-robotics-expands-product-line-with-fifth-generation-pallet-jack-300808638.html",
+              "https://scg-mmh.s3.amazonaws.com/pdfs/vecna_robotics_wp_quick_start_guide_012521.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Autonomous handling",
+            "details": "Automatic lifting, pickup and delivery, including bottom-board and partial pallets. Tablet-based task assignment in the Workhorse workflow.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/vecna-robotics-expands-product-line-with-fifth-generation-pallet-jack-300808638.html",
+              "https://scg-mmh.s3.amazonaws.com/pdfs/vecna_robotics_wp_quick_start_guide_012521.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy Stack and Pivot.al",
+            "details": "Onboard obstacle avoidance, navigation and local decisions; Pivot.al coordinates assignments across people and robots.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/vecna-robotics-expands-product-line-with-fifth-generation-pallet-jack-300808638.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zf-nextgen-shuttle-ces2023",
+        "manufacturer": "ZF Friedrichshafen",
+        "models": [
+          "ZF Level 4 Autonomous Shuttle"
+        ],
+        "configuration": "Next-generation mixed-traffic shuttle unveiled at CES 2023. Announced configuration, not proof of deployment at a particular site. Processor silicon, RAM and modem SKU are not published.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "ZF ProAI",
+            "details": "ProAI central computer works with ProConnect to execute Virtual Driver. No specific NVIDIA chip or TOPS rating is established for this shuttle.",
+            "sources": [
+              "https://press.zf.com/press/en/releases/release_49664.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Environmental perception",
+            "details": "LiDAR, radar, camera and audio sensing; individual sensor models and quantities unspecified.",
+            "sources": [
+              "https://press.zf.com/press/en/releases/release_49664.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "ProConnect",
+            "details": "Connectivity platform links the shuttle with infrastructure and cloud services; this release does not identify the installed modem or frequency configuration.",
+            "sources": [
+              "https://press.zf.com/press/en/releases/release_49664.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery-electric drivetrain",
+            "details": "Selectable 50–100 kWh battery capacity; announced range up to 80 miles.",
+            "sources": [
+              "https://press.zf.com/press/en/releases/release_49664.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle actuation",
+            "details": "Front- and rear-wheel steering, kneeling suspension and automatic boarding ramp. Up to 22 passengers, including 15 seated.",
+            "sources": [
+              "https://press.zf.com/press/en/releases/release_49664.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Virtual Driver",
+            "details": "Separate performance and safety paths; safety path constrains the driving decisions. Developed with Oxbotica.",
+            "sources": [
+              "https://press.zf.com/press/en/releases/release_49608.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yara-birkeland-delivery",
+        "manufacturer": "Yara International",
+        "models": [
+          "Yara Birkeland"
+        ],
+        "configuration": "Delivered battery system (2021) and Kongsberg engineering presentation (January 2022). Owner press-kit prototype estimate of 6.8 MWh is distinguished from the supplier’s delivered 6.7 MWh system. CPU, RAM and radio chipset undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Leclanché Marine Rack System",
+            "details": "6.7 MWh lithium-ion system: 20 strings, 51 modules per string, 32 cells per module; 32,640 cells across eight battery rooms. Cooling, gas/smoke detection and redundant thermal monitoring; Fifi4Marine foam suppression.",
+            "sources": [
+              "https://www.leclanche.com/yara-birkeland-worlds-first-100-electric-and-autonomous-e-container-ship-fully-powered-by-a-leclanche-battery-system-prepares-for-commercial-operation/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric propulsion",
+            "details": "Two 900 kW Azipull pods and two 700 kW tunnel thrusters.",
+            "sources": [
+              "https://www.yara.com/news-and-media/media-library/press-kits/yara-birkeland-press-kit/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Kongsberg navigation perception",
+            "details": "Visual, infrared and PTZ cameras; relative-position reference systems and redundant reception/processing architecture in the Yara-specific engineering slides.",
+            "sources": [
+              "https://www.midc.be/uploads/files/Kongsberg-YARA-Birkeland.pdf?v=1660811723"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cargo ship platform",
+            "details": "120 TEU container capacity; approximately 80 m length and 15 m beam. Automated mooring is part of the illustrated system.",
+            "sources": [
+              "https://www.yara.com/news-and-media/media-library/press-kits/yara-birkeland-press-kit/",
+              "https://www.midc.be/uploads/files/Kongsberg-YARA-Birkeland.pdf?v=1660811723"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Supervised autonomy development",
+            "details": "Kongsberg navigation, control and remote-operation architecture. Commercial operation and transition toward autonomous operation are separate milestones.",
+            "sources": [
+              "https://www.midc.be/uploads/files/Kongsberg-YARA-Birkeland.pdf?v=1660811723",
+              "https://www.yara.com/news-and-media/media-library/press-kits/yara-birkeland-press-kit/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zenrobotics-heavy-standalone",
+        "manufacturer": "ZenRobotics",
+        "models": [
+          "Heavy Picker standalone sorting station",
+          "ZenRobotics Recycler"
+        ],
+        "configuration": "Manufacturer Heavy Picker standalone configuration; a named example within the broader Recycler entry, not a universal specification for every ZenRobotics system. CPU/GPU, RAM and radio hardware undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Sorting sensor unit",
+            "details": "One upstream sensor unit for the illustrated station; sensor chip models unspecified.",
+            "sources": [
+              "https://www.terex.com/docs/zenroboticslibraries/brochures/standalone-solution.pdf?sfvrsn=c0e6f0cd_1"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electrical and pneumatic supply",
+            "details": "10 kW installed power per robot; mechanical gripper uses 120 L/min compressed air at 6 bar.",
+            "sources": [
+              "https://www.terex.com/docs/zenroboticslibraries/brochures/standalone-solution.pdf?sfvrsn=c0e6f0cd_1"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Sorting line",
+            "details": "One, two or three arms; 30 kg maximum item mass; up to 2,300 picks/hour per arm depending on feed. Conveyor speed 0.1–0.6 m/s; 2,700 × 2,000 mm working area per robot.",
+            "sources": [
+              "https://www.terex.com/docs/zenroboticslibraries/brochures/standalone-solution.pdf?sfvrsn=c0e6f0cd_1"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Waste classification",
+            "details": "Trainable sorting categories and online waste-composition analysis.",
+            "sources": [
+              "https://www.terex.com/docs/zenroboticslibraries/brochures/standalone-solution.pdf?sfvrsn=c0e6f0cd_1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zenrobotics-fastpicker40",
+        "manufacturer": "ZenRobotics",
+        "models": [
+          "Fast Picker 4.0"
+        ],
+        "configuration": "February 2024 manufacturer brochure. CPU/GPU, memory and network protocol unspecified. Conflicting overall dimensions in the brochure are not carried over.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Recognition unit",
+            "details": "One sensor unit per arm, with LED illumination upstream of each robot.",
+            "sources": [
+              "https://www.terex.com/docs/zenroboticslibraries/brochures/Fast-Picker.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Plant utilities",
+            "details": "9 kW at 400 VAC three-phase; 250 L/min compressed air at 8 bar.",
+            "sources": [
+              "https://www.terex.com/docs/zenroboticslibraries/brochures/Fast-Picker.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Gantry and conveyor",
+            "details": "Configurable X/Y gantry; working area up to 1,850 × 1,200 mm. Maximum item mass 1 kg; up to 80 picks/minute under ideal feed. Conveyor up to 1,850 mm wide at 0.1–1 m/s.",
+            "sources": [
+              "https://www.terex.com/docs/zenroboticslibraries/brochures/Fast-Picker.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "ZenRobotics 4.0",
+            "details": "Pretrained classification covers over 500 material categories; online sorting dashboards and remote access.",
+            "sources": [
+              "https://www.terex.com/docs/zenroboticslibraries/brochures/Fast-Picker.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ulc-cisbot-family",
+        "manufacturer": "ULC Technologies",
+        "models": [
+          "CISBOT"
+        ],
+        "configuration": "Manufacturer family and 12-inch variant descriptions. CPU, RAM, communications medium and onboard power source are not disclosed; solar command-unit power is not treated as a robot battery specification.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Sealing control",
+            "details": "Computer-controlled sealant application; underlying controller silicon unspecified.",
+            "sources": [
+              "https://ulctechnologies.com/services/cisbot-robotic-cast-iron-joint-sealing/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Operator observation",
+            "details": "Onboard cameras and sensors let field teams monitor the 12-inch robot; individual sensor models unspecified.",
+            "sources": [
+              "https://ulctechnologies.com/services/12-in-cisbot-robotic-internal-cast-iron-joint-sealing/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Pipe-work tooling",
+            "details": "Drilling and anaerobic sealant injection in live cast-iron mains. Family covers 12–48-inch pipe; the 12-inch configuration can travel up to 426 m from an entry point.",
+            "sources": [
+              "https://ulctechnologies.com/services/cisbot-robotic-cast-iron-joint-sealing/",
+              "https://ulctechnologies.com/services/12-in-cisbot-robotic-internal-cast-iron-joint-sealing/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "uvd-modelc-2022",
+        "manufacturer": "UVD Robots",
+        "models": [
+          "Model C (July 2022 manual)",
+          "Autonomous UV-C Disinfection Robot"
+        ],
+        "configuration": "Model C manual dated July 5, 2022 and manufacturer feature page. This named configuration is not a specification for every UVD revision. CPU, RAM and wireless module SKU undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery and charging",
+            "details": "Four Li-NMC packs, each 24 V / 40 Ah; 960 W rated power. Full charging is listed as five hours at the dock or eight hours with the emergency charger.",
+            "sources": [
+              "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=16"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Tablet connection",
+            "details": "Dual-band wireless; the tablet connects to the robot’s Wi-Fi network. No unique SSID, MAC allocation or chipset is established.",
+            "sources": [
+              "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=16",
+              "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=27"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Laser scanners and 3D cameras for navigation and obstacle detection.",
+            "sources": [
+              "https://uvd.blue-ocean-robotics.com/features"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "UV-C module",
+            "details": "254 nm UV-C lamps; stated lamp life 12,000 hours. The robot is an indoor mobile disinfection platform.",
+            "sources": [
+              "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=16"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operator application",
+            "details": "Tablet control, disinfection/exposure reports and fleet-management functions.",
+            "sources": [
+              "https://uvd.blue-ocean-robotics.com/features",
+              "https://www.manualslib.com/manual/2642377/Uvd-Robots-C.html?page=27"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "verity-series4-sre401",
+        "manufacturer": "Verity",
+        "models": [
+          "Series 4 SRE401",
+          "Verity Inventory Drone"
+        ],
+        "configuration": "Series 4 manual V1.0_001 and SRE401 FCC grant, June 22, 2026. CPU/RAM, battery capacity and radio chip SKU are not disclosed in the reviewed material. Earlier Verity generations may differ.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Cameras and obstacle sensing",
+            "details": "Three forward-facing cameras, one upward localization camera and top/bottom sensors. Ceiling localization markers support indoor navigation. Manual identifies a Class 1 laser product.",
+            "sources": [
+              "https://device.report/m/8bca1c213dcd3627a933c5f73201b78f7ea7fe210b2c69b70936b79c20e69f40"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and assigned charger",
+            "details": "Replaceable Verity battery; each drone has an assigned charger using pogo-pin contacts. Capacity and voltage unpublished in this manual.",
+            "sources": [
+              "https://device.report/m/8bca1c213dcd3627a933c5f73201b78f7ea7fe210b2c69b70936b79c20e69f40"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Dual-band Wi-Fi",
+            "details": "FCC 2BRHC-SRE401 authorizes 2,412–2,462, 5,180–5,240, 5,260–5,320, 5,500–5,720 and 5,745–5,825 MHz. These shared bands are not a unique drone signature.",
+            "sources": [
+              "https://fccid.io/2BRHCSRE401"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Guarded airframe",
+            "details": "Propeller guards, camera-flash LEDs and removable rear battery cover.",
+            "sources": [
+              "https://device.report/m/8bca1c213dcd3627a933c5f73201b78f7ea7fe210b2c69b70936b79c20e69f40"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground Control",
+            "details": "Fleet dashboard reports connectivity, charge and flight state; configured flight areas and scheduled operating hours.",
+            "sources": [
+              "https://device.report/m/8bca1c213dcd3627a933c5f73201b78f7ea7fe210b2c69b70936b79c20e69f40"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yape-base5g-droid",
+        "manufacturer": "Yape",
+        "models": [
+          "YAPE"
+        ],
+        "configuration": "Two-wheel delivery droid and BASE 5G demonstration. The later 2026 L1 retrofit platform has different hardware and is not merged into this robot. CPU, RAM and battery capacity undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Self-balancing delivery chassis",
+            "details": "Two-wheeled self-stabilizing droid; project description lists a 20 kg payload.",
+            "sources": [
+              "https://yapemobility.it/?p=2343",
+              "https://i-rim.it/en/project/yape-2/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "BASE 5G trial",
+            "details": "In the demonstrated configuration, 5G connects droids, IoT equipment and remote operators. Integration with KONE smart lifts was demonstrated with Vodafone and Politecnico di Milano.",
+            "sources": [
+              "https://yapemobility.it/?p=2343"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Environment perception and obstacle avoidance; sensor models and counts not specified in the project description.",
+            "sources": [
+              "https://i-rim.it/en/project/yape-2/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomous logistics",
+            "details": "Indoor/outdoor navigation and lift-connected logistics in the BASE 5G project.",
+            "sources": [
+              "https://yapemobility.it/?p=2343"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "verobotics-facade-platform",
+        "manufacturer": "Verobotics",
+        "models": [
+          "Ibex"
+        ],
+        "configuration": "Manufacturer façade-robot technology description. Public page establishes sensing and software architecture, but not a full Ibex BOM: processor, RAM, battery and radio specifications remain undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Façade inspection",
+            "details": "Onboard cameras inspect façades and window frames; motion, position and surface sensing support traversal.",
+            "sources": [
+              "https://verobotics.com/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Building robot",
+            "details": "Walking façade platform for cleaning and inspection; manufacturer describes portable deployment.",
+            "sources": [
+              "https://verobotics.com/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Data hub",
+            "details": "AI-based autonomous operation and building digital-twin data collection.",
+            "sources": [
+              "https://verobotics.com/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -303607,8 +304633,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 535,
-    "devices_with_system_profiles": 462,
-    "devices_with_documented_compute": 219
+    "system_profiles": 546,
+    "devices_with_system_profiles": 471,
+    "devices_with_documented_compute": 221
   }
 }

@@ -1326,3 +1326,35 @@ test('batch 43 separates robot generations and optional compute from base hardwa
  assert.match(text(named.sections.radios),/Class B AIS.*No unique/);
  assert.equal(profileIds(system('Westwell','Q-Truck')).length,2);
 });
+
+test('batch 44 separates warehouse handling generations and sorting configurations',()=>{
+ const cpj=system('Vecna Robotics','CPJ Co-bot Pallet Jack'),apj=system('Vecna Robotics','Autonomous Pallet Jack');
+ assert.match(text(cpj.sections.interfaces),/manual pickup/);
+ assert.match(text(cpj.sections.power),/24 V, 60 Ah/);
+ assert.match(text(apj.sections.interfaces),/Automatic lifting, pickup/);
+ assert.equal(apj.sections.power.status,'not-established');
+ assert.notDeepEqual(profileIds(cpj),profileIds(apj));
+ const heavy=system('ZenRobotics','Heavy Picker standalone sorting station'),fast=system('ZenRobotics','Fast Picker 4.0');
+ assert.match(text(heavy.sections.interfaces),/30 kg/);
+ assert.match(text(fast.sections.interfaces),/1 kg/);
+ assert.match(text(fast.sections.power),/400 VAC three-phase/);
+ assert.equal(fast.sections.compute.status,'not-established');
+});
+
+test('batch 44 keeps published components separate from undisclosed chips and unique radio identities',()=>{
+ const zf=system('ZF Friedrichshafen','ZF Level 4 Autonomous Shuttle');
+ assert.match(text(zf.sections.compute),/ProAI/);
+ assert.match(text(zf.sections.compute),/No specific NVIDIA chip/);
+ assert.equal(zf.sections.memory.status,'not-established');
+ const uvd=system('UVD Robots','Model C (July 2022 manual)');
+ assert.match(text(uvd.sections.power),/Four Li-NMC packs/);
+ assert.equal(uvd.sections.compute.status,'not-established');
+ const ver=system('Verity','Series 4 SRE401');
+ assert.match(text(ver.sections.radios),/2BRHC-SRE401/);
+ assert.match(text(ver.sections.radios),/not a unique drone signature/);
+ assert.match(text(ver.sections.sensors),/Three forward-facing cameras/);
+ const yara=system('Yara International','Yara Birkeland');
+ assert.match(text(yara.sections.power),/6.7 MWh/);
+ assert.match(text(yara.configurations),/prototype estimate of 6.8/);
+ assert.doesNotMatch(text(system('Yape','YAPE').sections.interfaces),/J1939|steering actuator/);
+});
