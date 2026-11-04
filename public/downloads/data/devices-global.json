@@ -42,8 +42,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "1x-eve-2024",
+            "configuration": "1X’s 2024 EVE industrial platform and February 2024 autonomy demonstration. CPU/GPU, RAM, storage, radio module and battery capacity are not identified in these primary sources; do not infer NEO components.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -62,23 +68,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Visual perception",
+                "details": "Onboard cameras and other sensors support navigation and manipulation; exact sensor models and counts undisclosed.",
+                "sources": [
+                  "https://1x-tech.webflow.io/androids/eve"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-eve-2024",
+                "configuration": "1X’s 2024 EVE industrial platform and February 2024 autonomy demonstration. CPU/GPU, RAM, storage, radio module and battery capacity are not identified in these primary sources; do not infer NEO components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Wheeled body and endurance",
+                "details": "Wheeled humanoid rated 192 lb, 33 lb carrying capacity and 9 mph maximum speed. Manufacturer advertises up to six hours of operation after one hour charging; battery chemistry and motor SKU unspecified.",
+                "sources": [
+                  "https://1x-tech.webflow.io/androids/eve"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-eve-2024",
+                "configuration": "1X’s 2024 EVE industrial platform and February 2024 autonomy demonstration. CPU/GPU, RAM, storage, radio module and battery capacity are not identified in these primary sources; do not infer NEO components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Shared autonomy",
+                "details": "Operators can view robot cameras and control movement remotely across a fleet; transport protocol and radio chipset unspecified.",
+                "sources": [
+                  "https://1x-tech.webflow.io/androids/eve"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-eve-2024",
+                "configuration": "1X’s 2024 EVE industrial platform and February 2024 autonomy demonstration. CPU/GPU, RAM, storage, radio module and battery capacity are not identified in these primary sources; do not infer NEO components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Vision-to-action control",
+                "details": "February 2024 demonstration maps camera images to actions at 10 Hz for wheels, arms, gripper, torso and head. Training GPUs are separate from the undisclosed onboard compute.",
+                "sources": [
+                  "https://1x-tech.webflow.io/discover/all-neural-networks-all-autonomous-all-1x-speed"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "1x-eve-2024",
+                "configuration": "1X’s 2024 EVE industrial platform and February 2024 autonomy demonstration. CPU/GPU, RAM, storage, radio module and battery capacity are not identified in these primary sources; do not infer NEO components.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -95,10 +153,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -318,8 +372,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "4ag-harvester-architecture",
+            "configuration": "Published 4AG harvesting architecture. Older harvesting page describes bulk boxes and future punnets; newer homepage promotes Forager HX800 punnet handling. Do not assign HX800 packing hardware to all historical harvesters. CPU, memory, radio, power and camera/gripper SKUs undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -338,8 +398,22 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision-guided crop selection",
+                "details": "Machine vision supports mushroom selection and harvesting; camera model and illumination arrangement unspecified.",
+                "sources": [
+                  "https://4ag.ai/harvesting-robot/",
+                  "https://4ag.ai/4ag-robotics-raises-40m-series-b-to-power-the-future-of-autonomous-mushroom-farming/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "4ag-harvester-architecture",
+                "configuration": "Published 4AG harvesting architecture. Older harvesting page describes bulk boxes and future punnets; newer homepage promotes Forager HX800 punnet handling. Do not assign HX800 packing hardware to all historical harvesters. CPU, memory, radio, power and camera/gripper SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -348,13 +422,41 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Growing-room installation",
+                "details": "Harvesting equipment mounts to existing growing shelves and can be moved between rooms. It performs picking, trimming and packing; destination container depends on model.",
+                "sources": [
+                  "https://4ag.ai/harvesting-robot/",
+                  "https://4ag.ai/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "4ag-harvester-architecture",
+                "configuration": "Published 4AG harvesting architecture. Older harvesting page describes bulk boxes and future punnets; newer homepage promotes Forager HX800 punnet handling. Do not assign HX800 packing hardware to all historical harvesters. CPU, memory, radio, power and camera/gripper SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Harvest workflow",
+                "details": "Autonomous vision-based harvesting with software updates; collected crop data supports refinements to selection and timing.",
+                "sources": [
+                  "https://4ag.ai/harvesting-robot/",
+                  "https://4ag.ai/4ag-robotics-raises-40m-series-b-to-power-the-future-of-autonomous-mushroom-farming/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "4ag-harvester-architecture",
+                "configuration": "Published 4AG harvesting architecture. Older harvesting page describes bulk boxes and future punnets; newer homepage promotes Forager HX800 punnet handling. Do not assign HX800 packing hardware to all historical harvesters. CPU, memory, radio, power and camera/gripper SKUs undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -371,10 +473,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -418,8 +517,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "6river-chuck-2018-2020",
+            "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -438,23 +543,76 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and item identification",
+                "details": "SICK TiM-family LiDAR uses surrounding contours for navigation; exact TiM SKU unspecified. A mounted product scanner reads item, lot and serial information.",
+                "sources": [
+                  "https://sickconnect.com/double-productivity-improve-order-accuracy/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "6river-chuck-2018-2020",
+                "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and mobile payload",
+                "details": "Battery management requests automatic charging. 2020 brochure rates payload at 90.7 kg and advertises three shifts from one hour of charging without defining shift length or battery energy.",
+                "sources": [
+                  "https://6river.com/wp-content/uploads/2020/04/Chuck_Brochure_2020-04-27.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "6river-chuck-2018-2020",
+                "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Operator and sensor interfaces",
+                "details": "Tablet-sized task display; TiM sensors include Ethernet. Brochure documents scanning and put-to-light workflows, with up to six shelf levels.",
+                "sources": [
+                  "https://sickconnect.com/double-productivity-improve-order-accuracy/",
+                  "https://6river.com/wp-content/uploads/2020/04/Chuck_Brochure_2020-04-27.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "6river-chuck-2018-2020",
+                "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fulfillment execution",
+                "details": "Onboard control and workflows connect with cloud services and The Bridge operator console; warehouse-management integrations coordinate allocation and routes.",
+                "sources": [
+                  "https://6river.com/wp-content/uploads/2022/05/6RS_FES_Brochure_digital_RGB.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "6river-chuck-2018-2020",
+                "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -471,10 +629,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -1398,18 +1552,50 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "acwa-clean-water-pathfinder",
+            "configuration": "ACWA’s published water-pipe inspection architecture. ST Micro is an electronics supplier reference, not a disclosed CPU SKU. RAM, storage capacity, radio/acoustic modem, battery and actuator models remain unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Embedded electronics",
+                "details": "Proprietary electronics and in-house mission software use ST Micro technologies; exact microcontroller or SoC not disclosed.",
+                "sources": [
+                  "https://www.acwa-robotics.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acwa-clean-water-pathfinder",
+                "configuration": "ACWA’s published water-pipe inspection architecture. ST Micro is an electronics supplier reference, not a disclosed CPU SKU. RAM, storage capacity, radio/acoustic modem, battery and actuator models remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Inspection data storage",
+                "details": "Onboard platform stores data from configurable sensors; medium and capacity are not published.",
+                "sources": [
+                  "https://www.acwa-robotics.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acwa-clean-water-pathfinder",
+                "configuration": "ACWA’s published water-pipe inspection architecture. ST Micro is an electronics supplier reference, not a disclosed CPU SKU. RAM, storage capacity, radio/acoustic modem, battery and actuator models remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
@@ -1418,8 +1604,22 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Inspection and localization",
+                "details": "Canaloc combines sensor information for GPS-free pipe mapping. Mission options include residual wall thickness, corrosion, cracks, deformation and water parameters; not every sensor is installed on every robot.",
+                "sources": [
+                  "https://www.acwa-robotics.com/technology/",
+                  "https://www.acwa-robotics.com/solution/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acwa-clean-water-pathfinder",
+                "configuration": "ACWA’s published water-pipe inspection architecture. ST Micro is an electronics supplier reference, not a disclosed CPU SKU. RAM, storage capacity, radio/acoustic modem, battery and actuator models remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -1428,13 +1628,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Pipe access and articulation",
+                "details": "Articulated platform follows bends and branches while water remains flowing; designed for constrained pipes with pressures up to 300 PSI.",
+                "sources": [
+                  "https://www.acwa-robotics.com/technology/",
+                  "https://www.acwa-robotics.com/solution/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acwa-clean-water-pathfinder",
+                "configuration": "ACWA’s published water-pipe inspection architecture. ST Micro is an electronics supplier reference, not a disclosed CPU SKU. RAM, storage capacity, radio/acoustic modem, battery and actuator models remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mission and analysis",
+                "details": "In-house embedded mission control and web-based processing associate collected measurements with the reconstructed pipe route.",
+                "sources": [
+                  "https://www.acwa-robotics.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acwa-clean-water-pathfinder",
+                "configuration": "ACWA’s published water-pipe inspection architecture. ST Micro is an electronics supplier reference, not a disclosed CPU SKU. RAM, storage capacity, radio/acoustic modem, battery and actuator models remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -1448,13 +1675,8 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -1498,8 +1720,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "acr-ironbot-3-2025",
+            "configuration": "Manufacturer 2025 version 3.0 sheet and product description. CPU, RAM, storage, OS, camera SKU and radio frequency/module undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -1513,28 +1741,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Supervisor transmitter",
+                "details": "Belly Box mobile transmitter provides the supervisor link; no exact radio protocol, channel or chipset specified.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/694601eb982190a0a03ecc31/69a0d402c686fc94c2267b7a_IronBOT%20Specifications%20Sheet%202025.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acr-ironbot-3-2025",
+                "configuration": "Manufacturer 2025 version 3.0 sheet and product description. CPU, RAM, storage, OS, camera SKU and radio frequency/module undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Placement feedback",
+                "details": "Cameras detect rebar capture; local odometry supports repeated placement after the supervisor sets the starting position.",
+                "sources": [
+                  "https://www.constructionrobots.com/ironbot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acr-ironbot-3-2025",
+                "configuration": "Manufacturer 2025 version 3.0 sheet and product description. CPU, RAM, storage, OS, camera SKU and radio frequency/module undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Generator and fuel system",
+                "details": "Cummins Onan 7 kW generator, split-phase 240 V / 30 A; 53-gallon tank, 87-octane gasoline. Sheet advertises 50+ hours between refueling and 0.95 gallons/hour at full load.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/694601eb982190a0a03ecc31/69a0d402c686fc94c2267b7a_IronBOT%20Specifications%20Sheet%202025.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acr-ironbot-3-2025",
+                "configuration": "Manufacturer 2025 version 3.0 sheet and product description. CPU, RAM, storage, OS, camera SKU and radio frequency/module undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Mechanical structure",
+                "details": "Tram and slew bearing move/rotate a placement boom. 5,000 lb bundle capacity, 9–60 ft bars and rail spacing 27–117 ft; bogies travel at 0.2 m/s.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/694601eb982190a0a03ecc31/69a0d402c686fc94c2267b7a_IronBOT%20Specifications%20Sheet%202025.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acr-ironbot-3-2025",
+                "configuration": "Manufacturer 2025 version 3.0 sheet and product description. CPU, RAM, storage, OS, camera SKU and radio frequency/module undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Supervised placement",
+                "details": "Belly Box supplies spacing, modes, emergency stop and overrides. Manufacturer describes supervised placement without BIM input; it is not claimed to operate unattended.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/694601eb982190a0a03ecc31/69a0d402c686fc94c2267b7a_IronBOT%20Specifications%20Sheet%202025.pdf",
+                  "https://www.constructionrobots.com/ironbot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acr-ironbot-3-2025",
+                "configuration": "Manufacturer 2025 version 3.0 sheet and product description. CPU, RAM, storage, OS, camera SKU and radio frequency/module undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -1550,11 +1844,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -1598,8 +1887,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "acr-tybot-3",
+            "configuration": "Manufacturer’s TyBOT 3.0 public manual. Not TyBOT 1.5. Processor, RAM, storage, operating system and radio hardware are not identified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -1618,23 +1913,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Rebar intersection perception",
+                "details": "Dual cameras on the tram identify intersections; camera sensors and lenses unspecified.",
+                "sources": [
+                  "https://constructionrobots.atlassian.net/wiki/spaces/APKB/pages/2368864267/TyBOT+3.0+Product+Information"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acr-tybot-3",
+                "configuration": "Manufacturer’s TyBOT 3.0 public manual. Not TyBOT 1.5. Processor, RAM, storage, operating system and radio hardware are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Generator supply",
+                "details": "Field-replaceable commercial generator meeting 7,000 W, 60 Hz, 240 VAC requirements. No mandatory generator brand or battery specification is established.",
+                "sources": [
+                  "https://constructionrobots.atlassian.net/wiki/spaces/APKB/pages/2368864267/TyBOT+3.0+Product+Information"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acr-tybot-3",
+                "configuration": "Manufacturer’s TyBOT 3.0 public manual. Not TyBOT 1.5. Processor, RAM, storage, operating system and radio hardware are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Gantry and tying mechanism",
+                "details": "Adjustable legs and bogies run on rails; moving tram positions the tie module. Module uses 15 lb spools of 16.5 AWG coated or 16 AWG black wire.",
+                "sources": [
+                  "https://constructionrobots.atlassian.net/wiki/spaces/APKB/pages/2368864267/TyBOT+3.0+Product+Information"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acr-tybot-3",
+                "configuration": "Manufacturer’s TyBOT 3.0 public manual. Not TyBOT 1.5. Processor, RAM, storage, operating system and radio hardware are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Local task control",
+                "details": "Supervisor defines work zones through the Belly Box; robot ties detected intersections in selectable patterns. Main panel includes generator disconnect and emergency-stop status.",
+                "sources": [
+                  "https://constructionrobots.atlassian.net/wiki/spaces/APKB/pages/2368864267/TyBOT+3.0+Product+Information"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "acr-tybot-3",
+                "configuration": "Manufacturer’s TyBOT 3.0 public manual. Not TyBOT 1.5. Processor, RAM, storage, operating system and radio hardware are not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -1651,10 +1998,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -2728,8 +3071,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aescape-whipsaw-2024",
+            "configuration": "2024 design-partner Whipsaw disclosures. CPU/GPU, memory, radio, power rating, motor and camera SKU are not published. Describes the massage platform, not an autonomous mobile robot.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -2748,8 +3097,22 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Body mapping and contact feedback",
+                "details": "Four overhead infrared sensors construct a 3D body map; design account also identifies pressure sensing.",
+                "sources": [
+                  "https://www.whipsaw.com/work/aescape-fully-automated-massage-experience",
+                  "https://www.whipsaw.com/latest/redefining-quality-relaxation-with-new-technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aescape-whipsaw-2024",
+                "configuration": "2024 design-partner Whipsaw disclosures. CPU/GPU, memory, radio, power rating, motor and camera SKU are not published. Describes the massage platform, not an autonomous mobile robot.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -2758,13 +3121,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Robotic contact and user controls",
+                "details": "Two robotic arms use Aerpoint contact heads with seven shaped surfaces. Touch interface beneath the headrest, integrated audio and safety shutoff support direct user control.",
+                "sources": [
+                  "https://www.whipsaw.com/work/aescape-fully-automated-massage-experience",
+                  "https://www.whipsaw.com/latest/redefining-quality-relaxation-with-new-technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aescape-whipsaw-2024",
+                "configuration": "2024 design-partner Whipsaw disclosures. CPU/GPU, memory, radio, power rating, motor and camera SKU are not published. Describes the massage platform, not an autonomous mobile robot.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Personalized control",
+                "details": "Body mapping and chosen programs guide arm movements; saved user preferences can be reused across Aescape platforms. Cloud/radio implementation details are not disclosed.",
+                "sources": [
+                  "https://www.whipsaw.com/work/aescape-fully-automated-massage-experience"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aescape-whipsaw-2024",
+                "configuration": "2024 design-partner Whipsaw disclosures. CPU/GPU, memory, radio, power rating, motor and camera SKU are not published. Describes the massage platform, not an autonomous mobile robot.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -2781,10 +3171,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -14118,8 +14505,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ascento-guard",
+            "configuration": "Manufacturer’s security-service configuration. CPU/GPU, RAM, storage, battery capacity and radio module are not published here. Research-platform Jetson, battery and camera specifications are not assigned to Guard.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -14138,23 +14531,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Security payload",
+                "details": "Thermal, RGB and infrared cameras support patrol observations; exact sensors, lens specifications and resolution unspecified.",
+                "sources": [
+                  "https://www.ascento.ai/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ascento-guard",
+                "configuration": "Manufacturer’s security-service configuration. CPU/GPU, RAM, storage, battery capacity and radio module are not published here. Research-platform Jetson, battery and camera specifications are not assigned to Guard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Patrol endurance",
+                "details": "Autonomous charging with advertised battery life exceeding eight hours. Manufacturer describes all-weather operation at walking speed; electrical ratings undisclosed.",
+                "sources": [
+                  "https://www.ascento.ai/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ascento-guard",
+                "configuration": "Manufacturer’s security-service configuration. CPU/GPU, RAM, storage, battery capacity and radio module are not published here. Research-platform Jetson, battery and camera specifications are not assigned to Guard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Remote supervision",
+                "details": "Web application supports remote robot control and live communication; manufacturer states end-to-end encryption without publishing radio or protocol details.",
+                "sources": [
+                  "https://www.ascento.ai/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ascento-guard",
+                "configuration": "Manufacturer’s security-service configuration. CPU/GPU, RAM, storage, battery capacity and radio module are not published here. Research-platform Jetson, battery and camera specifications are not assigned to Guard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Patrol management",
+                "details": "Scheduled patrols, AI-assisted reports and integration with existing video-management systems.",
+                "sources": [
+                  "https://www.ascento.ai/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ascento-guard",
+                "configuration": "Manufacturer’s security-service configuration. CPU/GPU, RAM, storage, battery capacity and radio module are not published here. Research-platform Jetson, battery and camera specifications are not assigned to Guard.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -14171,10 +14616,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -18161,8 +18602,24 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "autostore-r5-433-v5",
+            "configuration": "Manufacturer R5 sheet identifies Robot 433 5.0, type AS-99188-433. This older 433 MHz configuration is not the newer 2.4 GHz R5 or R5 Pro. CPU, memory, storage and sensor models undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "autostore-r5-24ghz-syncore",
+            "configuration": "R5 configuration published by AutoStore integrator Syncore. Not Robot 433 5.0 or R5 Pro. CPU, memory, storage, sensor SKU and modulation are not specified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "autostore-r5-pro-syncore",
+            "configuration": "R5 Pro configuration published by integrator Syncore. Not base R5 or R5+ Pro. CPU, memory, storage and sensor SKU undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -18176,8 +18633,45 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "433 MHz configuration",
+                "details": "433.2–434.79 MHz, specified output 8.5 dBm. Modulation and radio-chip identity unspecified; frequency alone is not a device signature.",
+                "sources": [
+                  "https://f.hubspotusercontent40.net/hubfs/4565296/04%20Website%20Docs/01%20Spec%20Sheets/R5%20Robot%20Specs_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-433-v5",
+                "configuration": "Manufacturer R5 sheet identifies Robot 433 5.0, type AS-99188-433. This older 433 MHz configuration is not the newer 2.4 GHz R5 or R5 Pro. CPU, memory, storage and sensor models undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Listed radio band",
+                "details": "2405–2480 MHz at 7.7 dBm. This shared band does not establish a unique scanner fingerprint.",
+                "sources": [
+                  "https://syncore.com/products/autostore/autostore-robots/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-24ghz-syncore",
+                "configuration": "R5 configuration published by AutoStore integrator Syncore. Not Robot 433 5.0 or R5 Pro. CPU, memory, storage, sensor SKU and modulation are not specified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Listed radio band",
+                "details": "2405–2480 MHz at 7.7 dBm; chipset and modulation unspecified.",
+                "sources": [
+                  "https://syncore.com/products/autostore/autostore-robots/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-pro-syncore",
+                "configuration": "R5 Pro configuration published by integrator Syncore. Not base R5 or R5+ Pro. CPU, memory, storage and sensor SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -18186,18 +18680,105 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electrical system",
+                "details": "24 V DC operation, 100 W stated consumption; two sealed lead-acid 12 V / 105 Ah batteries. Charging contacts rated 24 V / 25 A.",
+                "sources": [
+                  "https://f.hubspotusercontent40.net/hubfs/4565296/04%20Website%20Docs/01%20Spec%20Sheets/R5%20Robot%20Specs_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-433-v5",
+                "configuration": "Manufacturer R5 sheet identifies Robot 433 5.0, type AS-99188-433. This older 433 MHz configuration is not the newer 2.4 GHz R5 or R5 Pro. CPU, memory, storage and sensor models undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery and charging",
+                "details": "24 V, 100 W operation; two sealed lead-acid 12 V / 105 Ah batteries, maximum 25 A charge current.",
+                "sources": [
+                  "https://syncore.com/products/autostore/autostore-robots/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-24ghz-syncore",
+                "configuration": "R5 configuration published by AutoStore integrator Syncore. Not Robot 433 5.0 or R5 Pro. CPU, memory, storage, sensor SKU and modulation are not specified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Named battery module",
+                "details": "Toshiba SIP 24-23, FP01101MCB01A: 24 V / 556 Wh; maximum 100 A charging. Listed operating consumption 100 W.",
+                "sources": [
+                  "https://syncore.com/products/autostore/autostore-robots/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-pro-syncore",
+                "configuration": "R5 Pro configuration published by integrator Syncore. Not base R5 or R5+ Pro. CPU, memory, storage and sensor SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Grid mechanics and controls",
+                "details": "35 kg payload including bin; up to 3.1 m/s travel and 1.6 m/s lift. Four switches, three LEDs and a local emergency stop; IP20.",
+                "sources": [
+                  "https://f.hubspotusercontent40.net/hubfs/4565296/04%20Website%20Docs/01%20Spec%20Sheets/R5%20Robot%20Specs_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-433-v5",
+                "configuration": "Manufacturer R5 sheet identifies Robot 433 5.0, type AS-99188-433. This older 433 MHz configuration is not the newer 2.4 GHz R5 or R5 Pro. CPU, memory, storage and sensor models undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Handling and controls",
+                "details": "35 kg bin-inclusive payload; 220/330 mm bins. Four switches, three LEDs and local emergency stop.",
+                "sources": [
+                  "https://syncore.com/products/autostore/autostore-robots/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-24ghz-syncore",
+                "configuration": "R5 configuration published by AutoStore integrator Syncore. Not Robot 433 5.0 or R5 Pro. CPU, memory, storage, sensor SKU and modulation are not specified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Handling and controls",
+                "details": "35 kg bin-inclusive payload; 220/330 mm bins. Five switches, multicolor status LED, local emergency stop and antenna/status dome.",
+                "sources": [
+                  "https://syncore.com/products/autostore/autostore-robots/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-pro-syncore",
+                "configuration": "R5 Pro configuration published by integrator Syncore. Not base R5 or R5+ Pro. CPU, memory, storage and sensor SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "System-level coordination",
+                "details": "AutoStore documents a separate Controller PC, access point and network switch running centralized routing. Current CubeControl software is system-level context, not proof of firmware fitted to every historical R5.",
+                "sources": [
+                  "https://www.autostoresystem.com/system/controller"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autostore-r5-433-v5",
+                "configuration": "Manufacturer R5 sheet identifies Robot 433 5.0, type AS-99188-433. This older 433 MHz configuration is not the newer 2.4 GHz R5 or R5 Pro. CPU, memory, storage and sensor models undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -18213,11 +18794,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -275395,6 +275972,539 @@
             ]
           }
         ]
+      },
+      {
+        "id": "1x-eve-2024",
+        "manufacturer": "1X Technologies",
+        "models": [
+          "EVE"
+        ],
+        "configuration": "1X’s 2024 EVE industrial platform and February 2024 autonomy demonstration. CPU/GPU, RAM, storage, radio module and battery capacity are not identified in these primary sources; do not infer NEO components.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Visual perception",
+            "details": "Onboard cameras and other sensors support navigation and manipulation; exact sensor models and counts undisclosed.",
+            "sources": [
+              "https://1x-tech.webflow.io/androids/eve"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Wheeled body and endurance",
+            "details": "Wheeled humanoid rated 192 lb, 33 lb carrying capacity and 9 mph maximum speed. Manufacturer advertises up to six hours of operation after one hour charging; battery chemistry and motor SKU unspecified.",
+            "sources": [
+              "https://1x-tech.webflow.io/androids/eve"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Shared autonomy",
+            "details": "Operators can view robot cameras and control movement remotely across a fleet; transport protocol and radio chipset unspecified.",
+            "sources": [
+              "https://1x-tech.webflow.io/androids/eve"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Vision-to-action control",
+            "details": "February 2024 demonstration maps camera images to actions at 10 Hz for wheels, arms, gripper, torso and head. Training GPUs are separate from the undisclosed onboard compute.",
+            "sources": [
+              "https://1x-tech.webflow.io/discover/all-neural-networks-all-autonomous-all-1x-speed"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "6river-chuck-2018-2020",
+        "manufacturer": "6 River Systems",
+        "models": [
+          "Chuck"
+        ],
+        "configuration": "2018 SICK/6 River supplier case study, 2020 manufacturer brochure and 2022 FES architecture. Historical configuration; newer revisions may differ. CPU, RAM, storage, radio module and battery chemistry/capacity undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Navigation and item identification",
+            "details": "SICK TiM-family LiDAR uses surrounding contours for navigation; exact TiM SKU unspecified. A mounted product scanner reads item, lot and serial information.",
+            "sources": [
+              "https://sickconnect.com/double-productivity-improve-order-accuracy/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator and sensor interfaces",
+            "details": "Tablet-sized task display; TiM sensors include Ethernet. Brochure documents scanning and put-to-light workflows, with up to six shelf levels.",
+            "sources": [
+              "https://sickconnect.com/double-productivity-improve-order-accuracy/",
+              "https://6river.com/wp-content/uploads/2020/04/Chuck_Brochure_2020-04-27.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and mobile payload",
+            "details": "Battery management requests automatic charging. 2020 brochure rates payload at 90.7 kg and advertises three shifts from one hour of charging without defining shift length or battery energy.",
+            "sources": [
+              "https://6river.com/wp-content/uploads/2020/04/Chuck_Brochure_2020-04-27.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fulfillment execution",
+            "details": "Onboard control and workflows connect with cloud services and The Bridge operator console; warehouse-management integrations coordinate allocation and routes.",
+            "sources": [
+              "https://6river.com/wp-content/uploads/2022/05/6RS_FES_Brochure_digital_RGB.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ascento-guard",
+        "manufacturer": "Ascento",
+        "models": [
+          "Ascento Guard"
+        ],
+        "configuration": "Manufacturer’s security-service configuration. CPU/GPU, RAM, storage, battery capacity and radio module are not published here. Research-platform Jetson, battery and camera specifications are not assigned to Guard.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Security payload",
+            "details": "Thermal, RGB and infrared cameras support patrol observations; exact sensors, lens specifications and resolution unspecified.",
+            "sources": [
+              "https://www.ascento.ai/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Patrol endurance",
+            "details": "Autonomous charging with advertised battery life exceeding eight hours. Manufacturer describes all-weather operation at walking speed; electrical ratings undisclosed.",
+            "sources": [
+              "https://www.ascento.ai/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Remote supervision",
+            "details": "Web application supports remote robot control and live communication; manufacturer states end-to-end encryption without publishing radio or protocol details.",
+            "sources": [
+              "https://www.ascento.ai/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Patrol management",
+            "details": "Scheduled patrols, AI-assisted reports and integration with existing video-management systems.",
+            "sources": [
+              "https://www.ascento.ai/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ascento-research-mybotshop",
+        "manufacturer": "Ascento",
+        "models": [
+          "Ascento Research"
+        ],
+        "configuration": "MYBOTSHOP’s configurable Research platform, separate from Ascento Guard. FAQ lists D435f and docking included; current manual lists D435i and optional autonomous docking. These are unresolved package/revision differences. RAM size and storage capacity unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Developer computer",
+            "details": "Dedicated NVIDIA Jetson Orin NX system-on-module for user development; memory variant and underlying motion-controller chip are not named.",
+            "sources": [
+              "https://www.ascento-research.com/2024/11/03/faq/",
+              "https://www.docs.mybotshop.de/ascento.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Research sensor options",
+            "details": "Livox Mid-360 LiDAR and Fixposition Vision-RTK2 GNSS/INS. Manual also allows Hesai JT16 LiDAR. RealSense D435i appears in the manual, D435f in the FAQ; confirm the supplied configuration.",
+            "sources": [
+              "https://www.ascento-research.com/2024/11/03/faq/",
+              "https://www.docs.mybotshop.de/ascento.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Local operator link",
+            "details": "Steam Deck connects over the robot’s onboard Wi-Fi. Radio chipset and a universal broadcast signature are not established.",
+            "sources": [
+              "https://www.docs.mybotshop.de/ascento.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and payload outputs",
+            "details": "50.4 V, 17.5 Ah, 882 Wh battery with 12S5P arrangement; unregulated battery-voltage and 24 V outputs for accessories.",
+            "sources": [
+              "https://www.ascento-research.com/2024/11/03/faq/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Body and operator controls",
+            "details": "Six driven joints across two legs and wheels; Steam Deck teleoperation. Cable charging is standard in the current manual; autonomous docking depends on package.",
+            "sources": [
+              "https://www.docs.mybotshop.de/ascento.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Research middleware",
+            "details": "ROS 2 Humble, Zenoh bridge and onboard browser dashboard. SLAM is available; odometric/map navigation remains marked under development.",
+            "sources": [
+              "https://www.docs.mybotshop.de/ascento.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "autostore-r5-433-v5",
+        "manufacturer": "AutoStore",
+        "models": [
+          "R5 Robot 433 5.0",
+          "AutoStore System"
+        ],
+        "configuration": "Manufacturer R5 sheet identifies Robot 433 5.0, type AS-99188-433. This older 433 MHz configuration is not the newer 2.4 GHz R5 or R5 Pro. CPU, memory, storage and sensor models undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "433 MHz configuration",
+            "details": "433.2–434.79 MHz, specified output 8.5 dBm. Modulation and radio-chip identity unspecified; frequency alone is not a device signature.",
+            "sources": [
+              "https://f.hubspotusercontent40.net/hubfs/4565296/04%20Website%20Docs/01%20Spec%20Sheets/R5%20Robot%20Specs_EN.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electrical system",
+            "details": "24 V DC operation, 100 W stated consumption; two sealed lead-acid 12 V / 105 Ah batteries. Charging contacts rated 24 V / 25 A.",
+            "sources": [
+              "https://f.hubspotusercontent40.net/hubfs/4565296/04%20Website%20Docs/01%20Spec%20Sheets/R5%20Robot%20Specs_EN.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Grid mechanics and controls",
+            "details": "35 kg payload including bin; up to 3.1 m/s travel and 1.6 m/s lift. Four switches, three LEDs and a local emergency stop; IP20.",
+            "sources": [
+              "https://f.hubspotusercontent40.net/hubfs/4565296/04%20Website%20Docs/01%20Spec%20Sheets/R5%20Robot%20Specs_EN.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "System-level coordination",
+            "details": "AutoStore documents a separate Controller PC, access point and network switch running centralized routing. Current CubeControl software is system-level context, not proof of firmware fitted to every historical R5.",
+            "sources": [
+              "https://www.autostoresystem.com/system/controller"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "autostore-r5-24ghz-syncore",
+        "manufacturer": "AutoStore",
+        "models": [
+          "R5 2.4 GHz",
+          "AutoStore System"
+        ],
+        "configuration": "R5 configuration published by AutoStore integrator Syncore. Not Robot 433 5.0 or R5 Pro. CPU, memory, storage, sensor SKU and modulation are not specified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Listed radio band",
+            "details": "2405–2480 MHz at 7.7 dBm. This shared band does not establish a unique scanner fingerprint.",
+            "sources": [
+              "https://syncore.com/products/autostore/autostore-robots/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and charging",
+            "details": "24 V, 100 W operation; two sealed lead-acid 12 V / 105 Ah batteries, maximum 25 A charge current.",
+            "sources": [
+              "https://syncore.com/products/autostore/autostore-robots/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Handling and controls",
+            "details": "35 kg bin-inclusive payload; 220/330 mm bins. Four switches, three LEDs and local emergency stop.",
+            "sources": [
+              "https://syncore.com/products/autostore/autostore-robots/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "autostore-r5-pro-syncore",
+        "manufacturer": "AutoStore",
+        "models": [
+          "R5 Pro",
+          "AutoStore System"
+        ],
+        "configuration": "R5 Pro configuration published by integrator Syncore. Not base R5 or R5+ Pro. CPU, memory, storage and sensor SKU undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Listed radio band",
+            "details": "2405–2480 MHz at 7.7 dBm; chipset and modulation unspecified.",
+            "sources": [
+              "https://syncore.com/products/autostore/autostore-robots/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Named battery module",
+            "details": "Toshiba SIP 24-23, FP01101MCB01A: 24 V / 556 Wh; maximum 100 A charging. Listed operating consumption 100 W.",
+            "sources": [
+              "https://syncore.com/products/autostore/autostore-robots/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Handling and controls",
+            "details": "35 kg bin-inclusive payload; 220/330 mm bins. Five switches, multicolor status LED, local emergency stop and antenna/status dome.",
+            "sources": [
+              "https://syncore.com/products/autostore/autostore-robots/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "acwa-clean-water-pathfinder",
+        "manufacturer": "ACWA Robotics",
+        "models": [
+          "Clean Water Pathfinder",
+          "Pathfinder"
+        ],
+        "configuration": "ACWA’s published water-pipe inspection architecture. ST Micro is an electronics supplier reference, not a disclosed CPU SKU. RAM, storage capacity, radio/acoustic modem, battery and actuator models remain unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Embedded electronics",
+            "details": "Proprietary electronics and in-house mission software use ST Micro technologies; exact microcontroller or SoC not disclosed.",
+            "sources": [
+              "https://www.acwa-robotics.com/technology/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Inspection data storage",
+            "details": "Onboard platform stores data from configurable sensors; medium and capacity are not published.",
+            "sources": [
+              "https://www.acwa-robotics.com/technology/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Inspection and localization",
+            "details": "Canaloc combines sensor information for GPS-free pipe mapping. Mission options include residual wall thickness, corrosion, cracks, deformation and water parameters; not every sensor is installed on every robot.",
+            "sources": [
+              "https://www.acwa-robotics.com/technology/",
+              "https://www.acwa-robotics.com/solution/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Pipe access and articulation",
+            "details": "Articulated platform follows bends and branches while water remains flowing; designed for constrained pipes with pressures up to 300 PSI.",
+            "sources": [
+              "https://www.acwa-robotics.com/technology/",
+              "https://www.acwa-robotics.com/solution/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mission and analysis",
+            "details": "In-house embedded mission control and web-based processing associate collected measurements with the reconstructed pipe route.",
+            "sources": [
+              "https://www.acwa-robotics.com/technology/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "acr-tybot-3",
+        "manufacturer": "Advanced Construction Robotics",
+        "models": [
+          "TyBOT",
+          "TyBOT 3.0"
+        ],
+        "configuration": "Manufacturer’s TyBOT 3.0 public manual. Not TyBOT 1.5. Processor, RAM, storage, operating system and radio hardware are not identified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Rebar intersection perception",
+            "details": "Dual cameras on the tram identify intersections; camera sensors and lenses unspecified.",
+            "sources": [
+              "https://constructionrobots.atlassian.net/wiki/spaces/APKB/pages/2368864267/TyBOT+3.0+Product+Information"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Generator supply",
+            "details": "Field-replaceable commercial generator meeting 7,000 W, 60 Hz, 240 VAC requirements. No mandatory generator brand or battery specification is established.",
+            "sources": [
+              "https://constructionrobots.atlassian.net/wiki/spaces/APKB/pages/2368864267/TyBOT+3.0+Product+Information"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Gantry and tying mechanism",
+            "details": "Adjustable legs and bogies run on rails; moving tram positions the tie module. Module uses 15 lb spools of 16.5 AWG coated or 16 AWG black wire.",
+            "sources": [
+              "https://constructionrobots.atlassian.net/wiki/spaces/APKB/pages/2368864267/TyBOT+3.0+Product+Information"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Local task control",
+            "details": "Supervisor defines work zones through the Belly Box; robot ties detected intersections in selectable patterns. Main panel includes generator disconnect and emergency-stop status.",
+            "sources": [
+              "https://constructionrobots.atlassian.net/wiki/spaces/APKB/pages/2368864267/TyBOT+3.0+Product+Information"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "acr-ironbot-3-2025",
+        "manufacturer": "Advanced Construction Robotics",
+        "models": [
+          "IronBOT",
+          "IronBOT 3.0"
+        ],
+        "configuration": "Manufacturer 2025 version 3.0 sheet and product description. CPU, RAM, storage, OS, camera SKU and radio frequency/module undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Placement feedback",
+            "details": "Cameras detect rebar capture; local odometry supports repeated placement after the supervisor sets the starting position.",
+            "sources": [
+              "https://www.constructionrobots.com/ironbot"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Generator and fuel system",
+            "details": "Cummins Onan 7 kW generator, split-phase 240 V / 30 A; 53-gallon tank, 87-octane gasoline. Sheet advertises 50+ hours between refueling and 0.95 gallons/hour at full load.",
+            "sources": [
+              "https://cdn.prod.website-files.com/694601eb982190a0a03ecc31/69a0d402c686fc94c2267b7a_IronBOT%20Specifications%20Sheet%202025.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Mechanical structure",
+            "details": "Tram and slew bearing move/rotate a placement boom. 5,000 lb bundle capacity, 9–60 ft bars and rail spacing 27–117 ft; bogies travel at 0.2 m/s.",
+            "sources": [
+              "https://cdn.prod.website-files.com/694601eb982190a0a03ecc31/69a0d402c686fc94c2267b7a_IronBOT%20Specifications%20Sheet%202025.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Supervisor transmitter",
+            "details": "Belly Box mobile transmitter provides the supervisor link; no exact radio protocol, channel or chipset specified.",
+            "sources": [
+              "https://cdn.prod.website-files.com/694601eb982190a0a03ecc31/69a0d402c686fc94c2267b7a_IronBOT%20Specifications%20Sheet%202025.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Supervised placement",
+            "details": "Belly Box supplies spacing, modes, emergency stop and overrides. Manufacturer describes supervised placement without BIM input; it is not claimed to operate unattended.",
+            "sources": [
+              "https://cdn.prod.website-files.com/694601eb982190a0a03ecc31/69a0d402c686fc94c2267b7a_IronBOT%20Specifications%20Sheet%202025.pdf",
+              "https://www.constructionrobots.com/ironbot"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aescape-whipsaw-2024",
+        "manufacturer": "Aescape",
+        "models": [
+          "Aescape Massage Robot"
+        ],
+        "configuration": "2024 design-partner Whipsaw disclosures. CPU/GPU, memory, radio, power rating, motor and camera SKU are not published. Describes the massage platform, not an autonomous mobile robot.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Body mapping and contact feedback",
+            "details": "Four overhead infrared sensors construct a 3D body map; design account also identifies pressure sensing.",
+            "sources": [
+              "https://www.whipsaw.com/work/aescape-fully-automated-massage-experience",
+              "https://www.whipsaw.com/latest/redefining-quality-relaxation-with-new-technology"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Robotic contact and user controls",
+            "details": "Two robotic arms use Aerpoint contact heads with seven shaped surfaces. Touch interface beneath the headrest, integrated audio and safety shutoff support direct user control.",
+            "sources": [
+              "https://www.whipsaw.com/work/aescape-fully-automated-massage-experience",
+              "https://www.whipsaw.com/latest/redefining-quality-relaxation-with-new-technology"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Personalized control",
+            "details": "Body mapping and chosen programs guide arm movements; saved user preferences can be reused across Aescape platforms. Cloud/radio implementation details are not disclosed.",
+            "sources": [
+              "https://www.whipsaw.com/work/aescape-fully-automated-massage-experience"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4ag-harvester-architecture",
+        "manufacturer": "4AG Robotics",
+        "models": [
+          "4AG Mushroom Harvester"
+        ],
+        "configuration": "Published 4AG harvesting architecture. Older harvesting page describes bulk boxes and future punnets; newer homepage promotes Forager HX800 punnet handling. Do not assign HX800 packing hardware to all historical harvesters. CPU, memory, radio, power and camera/gripper SKUs undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Vision-guided crop selection",
+            "details": "Machine vision supports mushroom selection and harvesting; camera model and illumination arrangement unspecified.",
+            "sources": [
+              "https://4ag.ai/harvesting-robot/",
+              "https://4ag.ai/4ag-robotics-raises-40m-series-b-to-power-the-future-of-autonomous-mushroom-farming/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Growing-room installation",
+            "details": "Harvesting equipment mounts to existing growing shelves and can be moved between rooms. It performs picking, trimming and packing; destination container depends on model.",
+            "sources": [
+              "https://4ag.ai/harvesting-robot/",
+              "https://4ag.ai/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Harvest workflow",
+            "details": "Autonomous vision-based harvesting with software updates; collected crop data supports refinements to selection and timing.",
+            "sources": [
+              "https://4ag.ai/harvesting-robot/",
+              "https://4ag.ai/4ag-robotics-raises-40m-series-b-to-power-the-future-of-autonomous-mushroom-farming/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -275411,8 +276521,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 271,
-    "devices_with_system_profiles": 262,
-    "devices_with_documented_compute": 124
+    "system_profiles": 283,
+    "devices_with_system_profiles": 271,
+    "devices_with_documented_compute": 125
   }
 }

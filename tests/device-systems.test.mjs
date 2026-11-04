@@ -9,6 +9,30 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('industrial robot configurations retain radio and controller boundaries',()=>{
+ const guard=system('Ascento','Ascento Guard'),research=system('Ascento','Ascento Research');
+ assert.equal(guard.sections.compute.status,'not-established');
+ assert.match(text(research.sections.compute),/Orin NX/);
+ assert.match(text(research.configurations),/D435f.*D435i/);
+ assert.match(text(research.sections.power),/882 Wh/);
+ assert.doesNotMatch(text(guard.sections.power),/882|50.4|17.5/);
+ const old=system('AutoStore','R5 Robot 433 5.0'),newer=system('AutoStore','R5 2.4 GHz'),pro=system('AutoStore','R5 Pro');
+ assert.match(text(old.sections.radios),/433.2/);
+ assert.doesNotMatch(text(old.sections.radios),/2405/);
+ assert.match(text(newer.sections.radios),/2405/);
+ assert.doesNotMatch(text(newer.sections.power),/Toshiba|556 Wh/);
+ assert.match(text(pro.sections.power),/FP01101MCB01A/);
+ assert.equal(profileIds(system('AutoStore','R5+ Pro')).length,0);
+ assert.equal(profileIds(system('AutoStore','AutoStore System')).length,3);
+ assert.equal(system('1X Technologies','EVE').sections.compute.status,'not-established');
+ assert.match(text(system('6 River Systems','Chuck').sections.sensors),/TiM-family/);
+ assert.match(text(system('Advanced Construction Robotics','TyBOT').sections.power),/7,000 W/);
+ assert.equal(profileIds(system('Advanced Construction Robotics','TyBOT 1.5')).length,0);
+ assert.match(text(system('Advanced Construction Robotics','IronBOT').sections.power),/Cummins Onan/);
+ assert.match(text(system('ACWA Robotics','Clean Water Pathfinder').sections.compute),/exact microcontroller or SoC not disclosed/);
+ assert.equal(profileIds(system('4AG Robotics','Forager HX800')).length,0);
+});
+
 test('supplier disclosures and platform revisions remain model-specific',()=>{
  const proteus=system('Amazon','Proteus'),titan=system('Amazon','Titan');
  assert.match(text(proteus.sections.compute),/TDA4VM/);
