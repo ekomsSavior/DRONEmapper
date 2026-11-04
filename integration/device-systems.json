@@ -31777,6 +31777,474 @@
           ]
         }
       ]
+    },
+    {
+      "id": "bd-rowa-vmax-specs",
+      "manufacturer": "BD Rowa",
+      "models": [
+        "Rowa Vmax"
+      ],
+      "configuration": "Vmax family: 130/160 sheets dated August 2025; 210 sheet dated September 2023. Supply and consumption differ by size/head count. CPU, RAM and radio hardware not identified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Package reader",
+          "details": "Reads PZN/PZN8, EAN and 2D barcodes.",
+          "sources": [
+            "https://rowa.de/content/media/BD_Rowa_robots_EN.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Vmax 130/160 supply",
+          "details": "230 V AC, 50/60 Hz, 8 A; 650 W operating with one picking head, 780 W with two.",
+          "sources": [
+            "https://rowa.de/content/media/BD_Rowa_robots_EN.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Vmax 210 supply",
+          "details": "230 V/8 A or 120 V/16 A AC, 50/60 Hz; 391 W with one head, 830 W with two.",
+          "sources": [
+            "https://rowa.de/content/media/BD_Rowa_robots_EN.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Data protection",
+          "details": "130/160 list a Backup Drive; storage type and capacity unspecified.",
+          "sources": [
+            "https://rowa.de/content/media/BD_Rowa_robots_EN.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Material handling",
+          "details": "Optional conveyors, servo lift, spiral chute and pneumatic-tube connection; optional second head/input belt and EasyLoad.",
+          "sources": [
+            "https://rowa.de/content/media/BD_Rowa_robots_EN.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Service and continuity",
+          "details": "UPS and remote monitoring; myRowa mobile service/manual dispensing access is listed for 130/160.",
+          "sources": [
+            "https://rowa.de/content/media/BD_Rowa_robots_EN.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boumatic-gemini-up-2023",
+      "manufacturer": "BouMatic",
+      "models": [
+        "Gemini UP",
+        "Gemini"
+      ],
+      "configuration": "2023 Gemini UP reference within the broader Gemini record. Single- and double-box alternatives are not interchangeable installations. Processor SKUs, RAM and RF bands unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Control computers",
+          "details": "PC and robot touchscreen each contain a processor; chip identities undisclosed.",
+          "sources": [
+            "https://documents.boumatic.com/img/icons/categories/Gemini-Up_Brochure_23_eu_A4_mr_planche.pdf?v=1693218324"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Attachment vision",
+          "details": "Stainless-steel housed 3D time-of-flight camera locates teats; learned image processing supports attachment.",
+          "sources": [
+            "https://documents.boumatic.com/img/icons/categories/Gemini-Up_Brochure_23_eu_A4_mr_planche.pdf?v=1693218324"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Manipulation and access",
+          "details": "Dual-cup pickup head. Double-box configuration shares one arm between two stalls; single-box integrates its machine room.",
+          "sources": [
+            "https://documents.boumatic.com/img/icons/categories/Gemini-Up_Brochure_23_eu_A4_mr_planche.pdf?v=1693218324"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "User access",
+          "details": "Robot touchscreen plus phone, tablet and desktop access; software/equipment upgrades supported.",
+          "sources": [
+            "https://documents.boumatic.com/img/icons/categories/Gemini-Up_Brochure_23_eu_A4_mr_planche.pdf?v=1693218324"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delaval-vms-v310-canada",
+      "manufacturer": "DeLaval",
+      "models": [
+        "VMS V310"
+      ],
+      "configuration": "Canadian V310 product documentation. RePro distinguishes V310 from V300; no processor, RAM, radio chip or electrical rating established in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Vision and milk analysis",
+          "details": "InSight camera guides attachment. RePro automatically samples milk progesterone for reproductive monitoring.",
+          "sources": [
+            "https://www.delaval.com/en-ca/farm-solutions/milking/delaval-vms-series/delaval-vms-milking-system-v310/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Milking hardware",
+          "details": "Robotic arm; two spray nozzles; PureFlow preparation cup and separate pre-milk waste line.",
+          "sources": [
+            "https://www.delaval.com/en-ca/farm-solutions/milking/delaval-vms-series/delaval-vms-milking-system-v310/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Monitoring and analysis",
+          "details": "InControl supports settings, routines and camera views; DelPro BioModels interprets RePro samples.",
+          "sources": [
+            "https://www.delaval.com/en-ca/farm-solutions/milking/delaval-vms-series/delaval-vms-milking-system-v310/",
+            "https://www.delaval.com/globalassets/inriverresources/pdfs/v/vms-v310-canada-brochure/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cobod-bod2-2021",
+      "manufacturer": "COBOD",
+      "models": [
+        "BOD2"
+      ],
+      "configuration": "BOD2 technical specifications 2021; supply data are from the documented printer, not BOD3. CPU, RAM and Wi-Fi chipset unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Supply and motion",
+          "details": "380–480 V three-phase plus neutral/earth, 32 A, 50/60 Hz. Listed draw: 1 kW normal, 8 kW peak, 50 W idle; servo-driven axes.",
+          "sources": [
+            "https://cobod.com/wp-content/uploads/2022/06/eu-cobod-bod2-techspecs.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Printer mechanism",
+          "details": "Gantry: printhead traverses X, X beam moves along Y, XY assembly rises on four Z columns; wired emergency-stop controls.",
+          "sources": [
+            "https://cobod.com/wp-content/uploads/2022/06/eu-cobod-bod2-techspecs.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Network access",
+          "details": "Wi-Fi or wired LAN; no bands or radio model specified.",
+          "sources": [
+            "https://cobod.com/wp-content/uploads/2022/06/eu-cobod-bod2-techspecs.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operator controls",
+          "details": "Soft-NA and COBOD Web Control Interface; browser-based client.",
+          "sources": [
+            "https://cobod.com/wp-content/uploads/2022/06/eu-cobod-bod2-techspecs.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chef-plus-dec2025",
+      "manufacturer": "Chef Robotics",
+      "models": [
+        "Chef+",
+        "Chef Robotics Chef+"
+      ],
+      "configuration": "Chef+ launch configuration, December 2025. Manufacturer names CPU/GPU processing but no silicon vendor, RAM, storage size or RF chipset; no NVIDIA hardware inferred.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard processing",
+          "details": "CPU and GPU processing for ingredient adaptation; chip models undisclosed.",
+          "sources": [
+            "https://www.chefrobotics.ai/post/introducing-chef-our-most-advanced-meal-assembly-robot-yet"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Production vision",
+          "details": "Three IP cameras track conveyors, trays and ingredient placement.",
+          "sources": [
+            "https://www.chefrobotics.ai/post/introducing-chef-our-most-advanced-meal-assembly-robot-yet"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Connectivity",
+          "details": "Wi-Fi with multiple dome antennas; band and standard unspecified.",
+          "sources": [
+            "https://www.chefrobotics.ai/post/introducing-chef-our-most-advanced-meal-assembly-robot-yet"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Facility power and actuation",
+          "details": "Daisy-chain electrical supply from a ceiling feed; pneumatic plumbing includes a water separator; one-button leveling feet.",
+          "sources": [
+            "https://www.chefrobotics.ai/post/introducing-chef-our-most-advanced-meal-assembly-robot-yet"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Human interface and food tooling",
+          "details": "Projected-capacitive touchscreen; locking slide-in ingredient pans; sealed electrical enclosures within rear posts.",
+          "sources": [
+            "https://www.chefrobotics.ai/post/introducing-chef-our-most-advanced-meal-assembly-robot-yet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stanley-stan-2022-spec",
+      "manufacturer": "Stanley Robotics",
+      "models": [
+        "Stan"
+      ],
+      "configuration": "Manufacturer robot specification hosted in July 2022. Values apply to this configuration, not all later fleets. CPU, RAM and radio chipset unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception and localization",
+          "details": "Two 3D LiDARs, six cameras and four ultrasonic sensors; RTK GPS with SLAM.",
+          "sources": [
+            "https://www.stanley-robotics.com/wp-content/uploads/2022/07/stanley-robotics-robot-spec.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Separate wireless functions",
+          "details": "Data: Wi-Fi at 2.4 or 5 GHz. Safety: 433 or 920 MHz. Regional configuration is unspecified.",
+          "sources": [
+            "https://www.stanley-robotics.com/wp-content/uploads/2022/07/stanley-robotics-robot-spec.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and charging",
+          "details": "48 V, 19.2 kWh lithium-ion pack; autonomous charging with 3 or 9 kW charger. About three hours for 10–90% using 9 kW.",
+          "sources": [
+            "https://www.stanley-robotics.com/wp-content/uploads/2022/07/stanley-robotics-robot-spec.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Handling and stop controls",
+          "details": "Vehicle lift rated up to 2.6 tonnes; wired emergency stops and fleet remote emergency-stop system.",
+          "sources": [
+            "https://www.stanley-robotics.com/wp-content/uploads/2022/07/stanley-robotics-robot-spec.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fbr-hadrian-2025-system",
+      "manufacturer": "FBR",
+      "models": [
+        "Hadrian X"
+      ],
+      "configuration": "Hadrian family described in FBR 2025 annual report and current FAQ; modular truck-mounted configuration. CPU, RAM, electrical supply and radio hardware unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Distributed control",
+          "details": "Modular distributed control architecture; controller manufacturers and processor SKUs unnamed.",
+          "sources": [
+            "https://announcements.asx.com.au/asxpdf/20250930/pdf/06pxy3jxl7dpnp.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Position and safety",
+          "details": "Laser tracker with supporting sensors measures end-effector position. FAQ describes LiDAR sensing near boom/lay-head.",
+          "sources": [
+            "https://announcements.asx.com.au/asxpdf/20250930/pdf/06pxy3jxl7dpnp.pdf",
+            "https://www.fbr.com.au/view/faqs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mobility",
+          "details": "Robot integrated onto a cab-over-engine truck for transport; truck powertrain is not specified.",
+          "sources": [
+            "https://announcements.asx.com.au/asxpdf/20250930/pdf/06pxy3jxl7dpnp.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Construction mechanism",
+          "details": "32 m telescopic boom, shuttle block-delivery system and optional saw module for height/mitre/gable cuts.",
+          "sources": [
+            "https://announcements.asx.com.au/asxpdf/20250930/pdf/06pxy3jxl7dpnp.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Build execution",
+          "details": "Wall-design software produces block positions; Dynamic Stabilisation Technology compensates movement and vibration.",
+          "sources": [
+            "https://announcements.asx.com.au/asxpdf/20250930/pdf/06pxy3jxl7dpnp.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graymatter-scanandsand-components",
+      "manufacturer": "GrayMatter Robotics",
+      "models": [
+        "ScanAndSand",
+        "Scan&Sand"
+      ],
+      "configuration": "Configuration evidence: FANUC documents a CRX installation at Performance Composites; rail supplier documents a separate LoPro-equipped system. These do not establish one universal bill of materials. CPU/RAM/radio unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception and contact",
+          "details": "FANUC case study describes 3D vision and active compliant devices for sanding.",
+          "sources": [
+            "https://www.fanucamerica.com/case-studies/crx-cobot-ai-solve-sanding-challenges-for-performance-composites"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Documented manipulator",
+          "details": "FANUC CRX-10iA/L is listed for the Performance Composites solution; do not apply that arm to every Scan&Sand cell.",
+          "sources": [
+            "https://www.fanucamerica.com/case-studies/crx-cobot-ai-solve-sanding-challenges-for-performance-composites"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Documented seventh axis",
+          "details": "Bishop-Wisecarver supplied a LoPro Size 4 with 4 m travel, belt drive, gear reducer and motor mount.",
+          "sources": [
+            "https://crm.bwc.com/hubfs/Application-Stories/BW-ApplicationStory-Robotics-7thAxisRobotSander-LoPro.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Configuration alternatives",
+          "details": "Single-arm pedestal/rail, dual-arm rails and mobile-arm rail configurations are offered; rail selection varies.",
+          "sources": [
+            "https://graymatter-robotics.com/solutions/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Process software",
+          "details": "GMR-AI and GMR-UI; automatically generated sanding paths and consumable monitoring.",
+          "sources": [
+            "https://graymatter-robotics.com/solutions/",
+            "https://factory.graymatter-robotics.com/solutions/sanding/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gea-r9500-dlg7424",
+      "manufacturer": "GEA Group",
+      "models": [
+        "DairyRobot R9500"
+      ],
+      "configuration": "DLG test 7424: two-box R9500, machine software 1.7. External utility hardware belongs to the tested installation, not inside each arm. CPU/RAM/network hardware unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electrical and motion hardware",
+          "details": "Listed connection 2.5 kW/16 A; arm driven by three electric motors; pneumatic entry/exit gates.",
+          "sources": [
+            "https://www.dlg.org/tests/landtechnik-betriebsmittel/pruefberichte/test-gea-farm-technologies-dairyrobot-r9500-multiboxsystem-mit-2-boxen"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "External utilities in test",
+          "details": "RPS 400 vacuum pump (1.1 kW); Atlas Copco SF2 FF compressor (2.2 kW); Vaillant eloSTOR VEH exclusive 120 L boiler (6 kW).",
+          "sources": [
+            "https://www.dlg.org/tests/landtechnik-betriebsmittel/pruefberichte/test-gea-farm-technologies-dairyrobot-r9500-multiboxsystem-mit-2-boxen"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Identification and measurement",
+          "details": "3D ToF camera; CowScout ISO responder recognition with two optical sensors; quarter-level milk flow, amount, temperature, color and conductivity. Cell-count sensing optional.",
+          "sources": [
+            "https://www.dlg.org/tests/landtechnik-betriebsmittel/pruefberichte/test-gea-farm-technologies-dairyrobot-r9500-multiboxsystem-mit-2-boxen"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Facility connections",
+          "details": "Central unit supplies electricity, compressed air, water and cleaning to up to four boxes; separate dipping/disinfection unit.",
+          "sources": [
+            "https://www.dlg.org/tests/landtechnik-betriebsmittel/pruefberichte/test-gea-farm-technologies-dairyrobot-r9500-multiboxsystem-mit-2-boxen"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Tested machine software",
+          "details": "Version 1.7; ratings describe the DLG test configuration.",
+          "sources": [
+            "https://www.dlg.org/tests/landtechnik-betriebsmittel/pruefberichte/test-gea-farm-technologies-dairyrobot-r9500-multiboxsystem-mit-2-boxen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gea-r9500-current-options",
+      "manufacturer": "GEA Group",
+      "models": [
+        "DairyRobot R9500"
+      ],
+      "configuration": "Current GEA product options, separate from the DLG software-1.7 test installation. Listed accessory compatibility does not mean every installed robot includes it.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Sensing options",
+          "details": "3D camera; compatible DairyMilk M6850 monitors quarter-level somatic-cell-count trends.",
+          "sources": [
+            "https://www.gea.com/en/products/milking-farming-barn/milking-solutions/automatic-milking/dairyrobot-r9500/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Optional hoof-care system",
+          "details": "Compatible PedicoSprayer cleans/treats hooves while the cow remains in the box.",
+          "sources": [
+            "https://www.gea.com/en/products/milking-farming-barn/milking-solutions/automatic-milking/dairyrobot-r9500/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Herd management",
+          "details": "DairyNet is offered for cow-health and operational monitoring.",
+          "sources": [
+            "https://www.gea.com/en/products/milking-farming-barn/milking-solutions/automatic-milking/dairyrobot-r9500/"
+          ]
+        }
+      ]
     }
   ]
 }

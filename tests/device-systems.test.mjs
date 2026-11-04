@@ -1536,3 +1536,26 @@ test('batch 48 preserves Dock, Avata and Quantum configuration boundaries',()=>{
  assert.equal(profileIds(system('Quantum-Systems','Trinity R14')).length,0);
  assert.equal(profileIds(system('FIMI','FMWRJ03A8',{kind:'regulatory-equipment'})).length,0);
 });
+
+test('batch 49 preserves industrial installation and revision boundaries',()=>{
+ const chef=system('Chef Robotics','Chef Robotics Chef+');
+ assert.match(text(chef.sections.compute),/CPU and GPU/);
+ assert.doesNotMatch(text(chef.sections.compute.facts.map(f=>f.details)),/NVIDIA|Jetson|Intel/);
+ assert.equal(chef.sections.memory.status,'not-established');
+ const stan=system('Stanley Robotics','Stan');
+ assert.match(text(stan.sections.radios),/Safety: 433 or 920 MHz/);
+ assert.equal(stan.sections.compute.status,'not-established');
+ const gemini=system('BouMatic','Gemini');
+ assert.match(text(gemini.configurations),/2023 Gemini UP/);
+ assert.equal(profileIds(system('BouMatic','Gemini Max')).length,0);
+ const gea=system('GEA Group','DairyRobot R9500');
+ assert.equal(profileIds(gea).length,2);
+ assert.match(text(gea.configurations),/External utility hardware/);
+ assert.match(text(gea.sections.sensors),/Cell-count sensing optional/);
+ assert.equal(gea.sections.radios.status,'not-established');
+ const g=system('GrayMatter Robotics','ScanAndSand');
+ assert.match(text(g.configurations),/do not establish one universal bill of materials/);
+ assert.match(text(g.sections.power),/do not apply that arm to every/);
+ assert.equal(profileIds(system('COBOD','BOD3')).length,0);
+ assert.equal(profileIds(system('Stanley Robotics','Stan',{kind:'regulatory-equipment'})).length,0);
+});
