@@ -130,7 +130,8 @@ test('supplier disclosures and platform revisions remain model-specific',()=>{
  assert.equal(x.sections.compute.status,'not-established');
  assert.match(text(x.configurations),/20 lb.*25 lb/);
  assert.match(text(system('Anduril Industries','Anduril Dive-LD').sections.interfaces),/RS-422/);
- assert.equal(profileIds(system('Anduril Industries','Anduril Dive-XL')).length,0);
+ assert.deepEqual(profileIds(system('Anduril Industries','Anduril Dive-XL')),['anduril-dive-xl-2026']);
+ assert.doesNotMatch(text(system('Anduril Industries','Anduril Dive-XL').sections.interfaces.facts.map(f=>f.details)),/RS-422/);
  assert.equal(profileIds(system('Amazon Prime Air','MK27-2')).length,0);
  assert.match(text(system('Amazon Prime Air','MK30').sections.compute),/separate computer/);
  assert.equal(system('Amazon Prime Air','MK30').sections.radios.status,'not-established');
@@ -1398,4 +1399,50 @@ test('batch 45 does not turn ground computers or optional payloads into aircraft
  assert.match(text(raf.sections.sensors),/AN\/DAS-4/);
  assert.equal(raf.sections.compute.status,'not-established');
  assert.equal(profileIds(system('General Atomics','General Atomics MQ-9A Block 5',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('batch 46 isolates Anduril ground computers and named module revisions',()=>{
+ const g1=system('Anduril Industries','Voyager Gateway 1');
+ const vm=system('Anduril Industries','Voyager VM (2026 specification)');
+ const nas=system('Anduril Industries','Voyager NAS 3.0');
+ const hpc=system('Anduril Industries','Voyager HPC (2026 specification)');
+ assert.match(text(g1.sections.compute),/QRB5165/);
+ assert.match(text(g1.sections.memory),/16 GB RAM and 1 TB/);
+ assert.match(text(vm.sections.compute),/Xeon D.*10 cores/);
+ assert.match(text(vm.sections.memory),/128 GB/);
+ assert.match(text(nas.sections.compute),/D-1559/);
+ assert.match(text(nas.sections.memory),/96 GB/);
+ assert.match(text(hpc.sections.memory),/512 GB/);
+ assert.doesNotMatch(text(hpc.sections.compute.facts.map(f=>f.details)),/QRB5165|D-1559|EPYC/);
+ const mt=system('Anduril Industries','Anduril Menace-T');
+ assert.match(text(mt.sections.compute),/VM4.*ESR2/);
+ assert.equal(mt.sections.memory.status,'not-established');
+ assert.doesNotMatch(text(mt.sections.compute.facts.map(f=>f.details)),/QRB5165|D-1559/);
+ assert.equal(profileIds(system('Anduril Industries','Anduril Voyager')).length,7);
+ assert.equal(profileIds(system('Anduril Industries','Unknown model')).length,0);
+});
+
+test('batch 46 preserves sensor, communication and software configuration boundaries',()=>{
+ const subsea=system('Anduril Industries','Anduril Seabed Sentry');
+ assert.match(text(subsea.sections.radios),/acoustic array/);
+ assert.match(text(subsea.configurations),/not a claim of LF\/VLF radio/);
+ const ext=system('Anduril Industries','Extended Range Sentry (2026 configuration)');
+ const comm=system('Anduril Industries','5G Comms Sentry (2026 configuration)');
+ assert.match(text(ext.sections.sensors),/X-band.*mid-wave infrared/);
+ assert.match(text(ext.sections.power),/propane/);
+ assert.match(text(comm.sections.radios),/Nokia.*Silvus/);
+ assert.doesNotMatch(text(ext.sections.radios.facts.map(f=>f.details)),/Nokia|Silvus/);
+ assert.equal(comm.sections.sensors.status,'not-established');
+ const helmet=system('Anduril Industries','Anduril EagleEye');
+ assert.match(text(helmet.sections.compute),/XR2 Gen 3/);
+ assert.match(text(helmet.configurations),/not confirmation that every delivered headset/);
+ assert.equal(helmet.sections.memory.status,'not-established');
+ const sdk=system('Anduril Industries','Anduril Lattice SDK',{category:'software'});
+ assert.equal(sdk.record_scope,'software-platform');
+ assert.equal(sdk.sections.compute.status,'not-established');
+ assert.match(text(sdk.sections.interfaces),/gRPC and REST/);
+ assert.match(text(sdk.configurations),/chosen deployment host/);
+ const bolt=system('Anduril Industries','Anduril Bolt');
+ assert.doesNotMatch(text(bolt.sections.compute.facts.map(f=>f.details)),/QRB5165|Xeon|XR2/);
+ assert.equal(profileIds(system('Anduril Industries','Anduril EagleEye',{kind:'regulatory-equipment'})).length,0);
 });
