@@ -9,6 +9,32 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 76 keeps payload variants and system components correctly scoped',()=>{
+ const f700=system('Fortem Technologies','DroneHunter');
+ assert.match(text(f700.sections.sensors),/TrueView R20/);
+ assert.match(text(f700.sections.radios),/AES-128/);
+ assert.equal(f700.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(f700.sections.power.facts.map(f=>f.details)),/18 kg|teraflop/);
+ const sonora=system('Harmattan AI','Sonora');
+ assert.match(text(sonora.sections.sensors),/EO-only version does not imply/);
+ assert.equal(sonora.sections.radios.status,'not-established');
+ const kelluu=system('Kelluu','Kelluu Airship');
+ assert.match(text(kelluu.sections.sensors),/RedEdge-P/);
+ assert.match(text(kelluu.sections.radios),/2025/);
+ assert.equal(kelluu.sections.compute.status,'not-established');
+ const force=system('Infiforce','FORCE');
+ assert.match(text(force.sections.power),/380 VAC/);
+ assert.match(text(force.configurations),/Not a humanoid/);
+ assert.equal(profileIds(system('Infiforce','AstroDroid')).includes('infiforce-force02'),false);
+ const weld=system('TetraGen Robotics','TetraGen Autonomous Welding System');
+ assert.match(text(weld.sections.sensors),/3D camera/);
+ assert.equal(weld.sections.compute.status,'not-established');
+ const elf=system('AheadForm','Elf Xuan');
+ assert.match(text(elf.sections.interfaces),/shoulders and wrists are described as locked/);
+ assert.equal(elf.sections.power.status,'not-established');
+ assert.equal(profileIds(system('AheadForm','Elf Xuan',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 75 keeps aircraft, ground cleaner and fleet configurations distinct',()=>{
  const sherpa=system('Lucid Bots','Sherpa Version 2.0');
  assert.match(text(sherpa.sections.compute),/STM32F765/);

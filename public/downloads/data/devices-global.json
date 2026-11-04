@@ -5766,8 +5766,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aheadform-elf-xuan-reference",
+            "configuration": "Manufacturer description of Elf Xuan facial hardware with a separately identified 2.0 upper-body extension. CPU, RAM, sensing hardware, battery or supply rating, and radio parts are undisclosed. Facial degrees of freedom do not imply whole-body locomotion.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -5796,13 +5802,51 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Bionic face and micro drives",
+                "details": "Manufacturer specifies more than 30 facial degrees of freedom, silicone skin and brushless micro motors for facial movement.",
+                "sources": [
+                  "https://www.aheadform.com/elf-xuan/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aheadform-elf-xuan-reference",
+                "configuration": "Manufacturer description of Elf Xuan facial hardware with a separately identified 2.0 upper-body extension. CPU, RAM, sensing hardware, battery or supply rating, and radio parts are undisclosed. Facial degrees of freedom do not imply whole-body locomotion.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "2.0 upper-body extension",
+                "details": "Version 2.0 adds independently controlled waist and upper/lower arm regions using proprietary joint modules; shoulders and wrists are described as locked.",
+                "sources": [
+                  "https://www.aheadform.com/elf-xuan-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aheadform-elf-xuan-reference",
+                "configuration": "Manufacturer description of Elf Xuan facial hardware with a separately identified 2.0 upper-body extension. CPU, RAM, sensing hardware, battery or supply rating, and radio parts are undisclosed. Facial degrees of freedom do not imply whole-body locomotion.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Expression and body synchronization",
+                "details": "Version 2.0 synchronizes torso gestures with facial drivers and retains lip synchronization and expression capabilities from 1.0.",
+                "sources": [
+                  "https://www.aheadform.com/elf-xuan-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aheadform-elf-xuan-reference",
+                "configuration": "Manufacturer description of Elf Xuan facial hardware with a separately identified 2.0 upper-body extension. CPU, RAM, sensing hardware, battery or supply rating, and radio parts are undisclosed. Facial degrees of freedom do not imply whole-body locomotion.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -5821,8 +5865,6 @@
           "radios",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -71583,8 +71625,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "fortem-dronehunter-f700",
+            "configuration": "F700 configuration within the DroneHunter family, with communications documented in the 2023 manufacturer brief. Processor, RAM and radio chipset are not disclosed. Ground TrueView R30 processing specifications do not describe the aircraft computer.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -71598,28 +71646,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless C2 link",
+                "details": "Manufacturer lists AES-128 or AES-256 encryption. Frequency, waveform and radio chipset are not specified.",
+                "sources": [
+                  "https://fortemtech.com/assets/pdf/solution-brief-man-portable.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fortem-dronehunter-f700",
+                "configuration": "F700 configuration within the DroneHunter family, with communications documented in the 2023 manufacturer brief. Processor, RAM and radio chipset are not disclosed. Ground TrueView R30 processing specifications do not describe the aircraft computer.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "TrueView R20 and optical cameras",
+                "details": "Onboard R20 radar and optical cameras; camera imagery can stream to SkyDome Manager.",
+                "sources": [
+                  "https://fortemtech.com/products/dronehunter-f700/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fortem-dronehunter-f700",
+                "configuration": "F700 configuration within the DroneHunter family, with communications documented in the 2023 manufacturer brief. Processor, RAM and radio chipset are not disclosed. Ground TrueView R30 processing specifications do not describe the aircraft computer.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Swappable aircraft battery",
+                "details": "Aircraft battery replacement is documented; voltage and capacity are unspecified. Ground-system four-hour battery figures are separate.",
+                "sources": [
+                  "https://fortemtech.com/assets/pdf/solution-brief-man-portable.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fortem-dronehunter-f700",
+                "configuration": "F700 configuration within the DroneHunter family, with communications documented in the 2023 manufacturer brief. Processor, RAM and radio chipset are not disclosed. Ground TrueView R30 processing specifications do not describe the aircraft computer.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "C2 integration API",
+                "details": "Open API supports integration with external command systems, including FAAD C2.",
+                "sources": [
+                  "https://fortemtech.com/products/dronehunter-f700/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fortem-dronehunter-f700",
+                "configuration": "F700 configuration within the DroneHunter family, with communications documented in the 2023 manufacturer brief. Processor, RAM and radio chipset are not disclosed. Ground TrueView R30 processing specifications do not describe the aircraft computer.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy and supervision",
+                "details": "Manufacturer describes autonomous operation with human supervision and SkyDome Manager integration.",
+                "sources": [
+                  "https://fortemtech.com/products/dronehunter-f700/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fortem-dronehunter-f700",
+                "configuration": "F700 configuration within the DroneHunter family, with communications documented in the 2023 manufacturer brief. Processor, RAM and radio chipset are not disclosed. Ground TrueView R30 processing specifications do not describe the aircraft computer.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -71644,12 +71757,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -84434,8 +84542,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "harmattan-sonora-june2026",
+            "configuration": "June 2026 product sheet. EO and EO+IR are alternative configurations. Processor, memory, radio protocol, radio chipset and battery rating are not published.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -84454,18 +84568,69 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "EO imaging assembly",
+                "details": "Low-light camera with 1280 × 720 output at 30 fps; two-axis mechanical stabilization.",
+                "sources": [
+                  "https://harmattan-website-2026.cdn.prismic.io/harmattan-website-2026/ah74MQeQX7-eWkRL_HARMATTANAI_SONORA_PRODUCTFLYERPDF_2026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harmattan-sonora-june2026",
+                "configuration": "June 2026 product sheet. EO and EO+IR are alternative configurations. Processor, memory, radio protocol, radio chipset and battery rating are not published.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Optional infrared configuration",
+                "details": "EO+IR version adds 320 × 240 infrared output at 30 fps; the EO-only version does not imply this sensor.",
+                "sources": [
+                  "https://harmattan-website-2026.cdn.prismic.io/harmattan-website-2026/ah74MQeQX7-eWkRL_HARMATTANAI_SONORA_PRODUCTFLYERPDF_2026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harmattan-sonora-june2026",
+                "configuration": "June 2026 product sheet. EO and EO+IR are alternative configurations. Processor, memory, radio protocol, radio chipset and battery rating are not published.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery-equipped airframe",
+                "details": "Sheet explicitly includes a battery in the aircraft configuration, but does not identify chemistry, voltage or capacity.",
+                "sources": [
+                  "https://harmattan-website-2026.cdn.prismic.io/harmattan-website-2026/ah74MQeQX7-eWkRL_HARMATTANAI_SONORA_PRODUCTFLYERPDF_2026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harmattan-sonora-june2026",
+                "configuration": "June 2026 product sheet. EO and EO+IR are alternative configurations. Processor, memory, radio protocol, radio chipset and battery rating are not published.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular system and ground station",
+                "details": "Repairable modular construction and an integrated ground-control station. The station processor and physical interfaces are unspecified.",
+                "sources": [
+                  "https://harmattan-website-2026.cdn.prismic.io/harmattan-website-2026/ah74MQeQX7-eWkRL_HARMATTANAI_SONORA_PRODUCTFLYERPDF_2026.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harmattan-sonora-june2026",
+                "configuration": "June 2026 product sheet. EO and EO+IR are alternative configurations. Processor, memory, radio protocol, radio chipset and battery rating are not published.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -84487,9 +84652,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -89230,8 +89392,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "infiforce-force02",
+            "configuration": "FORCE-02 overhead charging-robot configuration from the manufacturer specification. Not a humanoid or ground AMR. CPU, RAM, radio chipset and motion-controller model are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -89245,28 +89413,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "4G and Wi-Fi connectivity",
+                "details": "Manufacturer lists 4G / Wi-Fi networking; frequency bands and device-specific identifiers are unspecified.",
+                "sources": [
+                  "https://www.infiforce.cn/force"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "infiforce-force02",
+                "configuration": "FORCE-02 overhead charging-robot configuration from the manufacturer specification. Not a humanoid or ground AMR. CPU, RAM, radio chipset and motion-controller model are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Integrated DC energy meter",
+                "details": "Manufacturer lists an internal DC meter with 1% accuracy; no vision or LiDAR sensor is established.",
+                "sources": [
+                  "https://www.infiforce.cn/force"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "infiforce-force02",
+                "configuration": "FORCE-02 overhead charging-robot configuration from the manufacturer specification. Not a humanoid or ground AMR. CPU, RAM, radio chipset and motion-controller model are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Facility-fed DC charging system",
+                "details": "30 or 40 kW charging configurations; nominal 380 VAC three-phase input and 150–1000 VDC output range.",
+                "sources": [
+                  "https://www.infiforce.cn/force"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "infiforce-force02",
+                "configuration": "FORCE-02 overhead charging-robot configuration from the manufacturer specification. Not a humanoid or ground AMR. CPU, RAM, radio chipset and motion-controller model are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Suspended rail mechanism",
+                "details": "Rail-mounted robot with separate charging-gun and charger output arrangement; users initiate charging by scanning a QR code.",
+                "sources": [
+                  "https://www.infiforce.cn/force"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "infiforce-force02",
+                "configuration": "FORCE-02 overhead charging-robot configuration from the manufacturer specification. Not a humanoid or ground AMR. CPU, RAM, radio chipset and motion-controller model are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Charging allocation",
+                "details": "System moves the charging equipment between parking positions after charging completes; controller and network protocol details are not published.",
+                "sources": [
+                  "https://www.infiforce.cn/force"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "infiforce-force02",
+                "configuration": "FORCE-02 overhead charging-robot configuration from the manufacturer specification. Not a humanoid or ground AMR. CPU, RAM, radio chipset and motion-controller model are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -89282,11 +89515,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -92479,8 +92707,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "kelluu-modular-airship-reference",
+            "configuration": "Modular airship family with separately dated payload examples. CPU, memory and modem models are not disclosed. The 2023 forestry payload and 2025 demonstration equipment are not a universal combined installation.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -92494,28 +92728,106 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "2025 airborne communications demonstration",
+                "details": "5G and satellite communications relay were demonstrated. Bands, modem models and airship-specific broadcast signatures are not identified.",
+                "sources": [
+                  "https://kelluu.com/news/kelluus-persistent-autonomy-awarded-by-nato-landcom"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kelluu-modular-airship-reference",
+                "configuration": "Modular airship family with separately dated payload examples. CPU, memory and modem models are not disclosed. The 2023 forestry payload and 2025 demonstration equipment are not a universal combined installation.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "2023 forestry payload: RedEdge-P",
+                "details": "National Land Survey work used AgEagle RedEdge-P multispectral and panchromatic imaging.",
+                "sources": [
+                  "https://kelluu.com/news/kelluu-unmanned-airships-equipped-with-ageagles-sensors-take-monitoring-to-entirely-new-level-in-finland"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kelluu-modular-airship-reference",
+                "configuration": "Modular airship family with separately dated payload examples. CPU, memory and modem models are not disclosed. The 2023 forestry payload and 2025 demonstration equipment are not a universal combined installation.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "2025 demonstration payloads",
+                "details": "Kelluu reports EO/IR and Saab Sirius Compact rESM equipment in the demonstration; payloads vary by mission.",
+                "sources": [
+                  "https://kelluu.com/news/kelluus-persistent-autonomy-awarded-by-nato-landcom"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kelluu-modular-airship-reference",
+                "configuration": "Modular airship family with separately dated payload examples. CPU, memory and modem models are not disclosed. The 2023 forestry payload and 2025 demonstration equipment are not a universal combined installation.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Hydrogen energy system",
+                "details": "Manufacturer identifies hydrogen as the energy source; generator or fuel-cell make and electrical ratings are not specified.",
+                "sources": [
+                  "https://kelluu.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kelluu-modular-airship-reference",
+                "configuration": "Modular airship family with separately dated payload examples. CPU, memory and modem models are not disclosed. The 2023 forestry payload and 2025 demonstration equipment are not a universal combined installation.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload and data integration",
+                "details": "Manufacturer specifies a 6 kg payload allowance. Demonstration data integrated with SitaWare, TAK and Maven-compatible environments.",
+                "sources": [
+                  "https://kelluu.com/",
+                  "https://kelluu.com/news/kelluus-persistent-autonomy-awarded-by-nato-landcom"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kelluu-modular-airship-reference",
+                "configuration": "Modular airship family with separately dated payload examples. CPU, memory and modem models are not disclosed. The 2023 forestry payload and 2025 demonstration equipment are not a universal combined installation.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Environmental data service",
+                "details": "Captured data supports digital twins, live monitoring and change detection; these services do not establish onboard processor specifications.",
+                "sources": [
+                  "https://kelluu.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kelluu-modular-airship-reference",
+                "configuration": "Modular airship family with separately dated payload examples. CPU, memory and modem models are not disclosed. The 2023 forestry payload and 2025 demonstration equipment are not a universal combined installation.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -92531,11 +92843,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -139537,8 +139844,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tetragen-welding-platform",
+            "configuration": "Configurable welding architecture, not a single specified robot arm or controller. Processor, RAM, camera SKU, radio hardware, welding-source model and power ratings are not disclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -139557,8 +139870,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Onboard 3D vision",
+                "details": "A 3D camera captures 2D and 3D images of the workpiece to identify part features and fixturing.",
+                "sources": [
+                  "https://www.tetragen.ai/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tetragen-welding-platform",
+                "configuration": "Configurable welding architecture, not a single specified robot arm or controller. Processor, RAM, camera SKU, radio hardware, welding-source model and power ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -139567,13 +139893,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Industrial robot integration",
+                "details": "Architecture combines an industrial robot arm, TetraGen vision and its software; the arm make and model depend on the installed cell.",
+                "sources": [
+                  "https://www.tetragen.ai/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tetragen-welding-platform",
+                "configuration": "Configurable welding architecture, not a single specified robot arm or controller. Processor, RAM, camera SKU, radio hardware, welding-source model and power ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Automatic robot-path generation",
+                "details": "Operator defines the process through the software interface; scene analysis generates robot paths and compensates for part and fixture variation.",
+                "sources": [
+                  "https://www.tetragen.ai/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tetragen-welding-platform",
+                "configuration": "Configurable welding architecture, not a single specified robot arm or controller. Processor, RAM, camera SKU, radio hardware, welding-source model and power ratings are not disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -139590,10 +139942,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -344440,6 +344789,297 @@
             ]
           }
         ]
+      },
+      {
+        "id": "fortem-dronehunter-f700",
+        "manufacturer": "Fortem Technologies",
+        "models": [
+          "DroneHunter F700"
+        ],
+        "configuration": "F700 configuration within the DroneHunter family, with communications documented in the 2023 manufacturer brief. Processor, RAM and radio chipset are not disclosed. Ground TrueView R30 processing specifications do not describe the aircraft computer.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "TrueView R20 and optical cameras",
+            "details": "Onboard R20 radar and optical cameras; camera imagery can stream to SkyDome Manager.",
+            "sources": [
+              "https://fortemtech.com/products/dronehunter-f700/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless C2 link",
+            "details": "Manufacturer lists AES-128 or AES-256 encryption. Frequency, waveform and radio chipset are not specified.",
+            "sources": [
+              "https://fortemtech.com/assets/pdf/solution-brief-man-portable.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Swappable aircraft battery",
+            "details": "Aircraft battery replacement is documented; voltage and capacity are unspecified. Ground-system four-hour battery figures are separate.",
+            "sources": [
+              "https://fortemtech.com/assets/pdf/solution-brief-man-portable.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "C2 integration API",
+            "details": "Open API supports integration with external command systems, including FAAD C2.",
+            "sources": [
+              "https://fortemtech.com/products/dronehunter-f700/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy and supervision",
+            "details": "Manufacturer describes autonomous operation with human supervision and SkyDome Manager integration.",
+            "sources": [
+              "https://fortemtech.com/products/dronehunter-f700/"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Fortem Technologies",
+            "models": [
+              "DroneHunter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "harmattan-sonora-june2026",
+        "manufacturer": "Harmattan AI",
+        "models": [
+          "Sonora"
+        ],
+        "configuration": "June 2026 product sheet. EO and EO+IR are alternative configurations. Processor, memory, radio protocol, radio chipset and battery rating are not published.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "EO imaging assembly",
+            "details": "Low-light camera with 1280 × 720 output at 30 fps; two-axis mechanical stabilization.",
+            "sources": [
+              "https://harmattan-website-2026.cdn.prismic.io/harmattan-website-2026/ah74MQeQX7-eWkRL_HARMATTANAI_SONORA_PRODUCTFLYERPDF_2026.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Optional infrared configuration",
+            "details": "EO+IR version adds 320 × 240 infrared output at 30 fps; the EO-only version does not imply this sensor.",
+            "sources": [
+              "https://harmattan-website-2026.cdn.prismic.io/harmattan-website-2026/ah74MQeQX7-eWkRL_HARMATTANAI_SONORA_PRODUCTFLYERPDF_2026.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery-equipped airframe",
+            "details": "Sheet explicitly includes a battery in the aircraft configuration, but does not identify chemistry, voltage or capacity.",
+            "sources": [
+              "https://harmattan-website-2026.cdn.prismic.io/harmattan-website-2026/ah74MQeQX7-eWkRL_HARMATTANAI_SONORA_PRODUCTFLYERPDF_2026.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular system and ground station",
+            "details": "Repairable modular construction and an integrated ground-control station. The station processor and physical interfaces are unspecified.",
+            "sources": [
+              "https://harmattan-website-2026.cdn.prismic.io/harmattan-website-2026/ah74MQeQX7-eWkRL_HARMATTANAI_SONORA_PRODUCTFLYERPDF_2026.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kelluu-modular-airship-reference",
+        "manufacturer": "Kelluu",
+        "models": [
+          "Kelluu Airship"
+        ],
+        "configuration": "Modular airship family with separately dated payload examples. CPU, memory and modem models are not disclosed. The 2023 forestry payload and 2025 demonstration equipment are not a universal combined installation.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Hydrogen energy system",
+            "details": "Manufacturer identifies hydrogen as the energy source; generator or fuel-cell make and electrical ratings are not specified.",
+            "sources": [
+              "https://kelluu.com/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "2023 forestry payload: RedEdge-P",
+            "details": "National Land Survey work used AgEagle RedEdge-P multispectral and panchromatic imaging.",
+            "sources": [
+              "https://kelluu.com/news/kelluu-unmanned-airships-equipped-with-ageagles-sensors-take-monitoring-to-entirely-new-level-in-finland"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "2025 demonstration payloads",
+            "details": "Kelluu reports EO/IR and Saab Sirius Compact rESM equipment in the demonstration; payloads vary by mission.",
+            "sources": [
+              "https://kelluu.com/news/kelluus-persistent-autonomy-awarded-by-nato-landcom"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "2025 airborne communications demonstration",
+            "details": "5G and satellite communications relay were demonstrated. Bands, modem models and airship-specific broadcast signatures are not identified.",
+            "sources": [
+              "https://kelluu.com/news/kelluus-persistent-autonomy-awarded-by-nato-landcom"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload and data integration",
+            "details": "Manufacturer specifies a 6 kg payload allowance. Demonstration data integrated with SitaWare, TAK and Maven-compatible environments.",
+            "sources": [
+              "https://kelluu.com/",
+              "https://kelluu.com/news/kelluus-persistent-autonomy-awarded-by-nato-landcom"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Environmental data service",
+            "details": "Captured data supports digital twins, live monitoring and change detection; these services do not establish onboard processor specifications.",
+            "sources": [
+              "https://kelluu.com/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "infiforce-force02",
+        "manufacturer": "Infiforce",
+        "models": [
+          "FORCE-02"
+        ],
+        "configuration": "FORCE-02 overhead charging-robot configuration from the manufacturer specification. Not a humanoid or ground AMR. CPU, RAM, radio chipset and motion-controller model are not disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "4G and Wi-Fi connectivity",
+            "details": "Manufacturer lists 4G / Wi-Fi networking; frequency bands and device-specific identifiers are unspecified.",
+            "sources": [
+              "https://www.infiforce.cn/force"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Facility-fed DC charging system",
+            "details": "30 or 40 kW charging configurations; nominal 380 VAC three-phase input and 150–1000 VDC output range.",
+            "sources": [
+              "https://www.infiforce.cn/force"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Integrated DC energy meter",
+            "details": "Manufacturer lists an internal DC meter with 1% accuracy; no vision or LiDAR sensor is established.",
+            "sources": [
+              "https://www.infiforce.cn/force"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Suspended rail mechanism",
+            "details": "Rail-mounted robot with separate charging-gun and charger output arrangement; users initiate charging by scanning a QR code.",
+            "sources": [
+              "https://www.infiforce.cn/force"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Charging allocation",
+            "details": "System moves the charging equipment between parking positions after charging completes; controller and network protocol details are not published.",
+            "sources": [
+              "https://www.infiforce.cn/force"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Infiforce",
+            "models": [
+              "FORCE"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tetragen-welding-platform",
+        "manufacturer": "TetraGen Robotics",
+        "models": [
+          "TetraGen Autonomous Welding System"
+        ],
+        "configuration": "Configurable welding architecture, not a single specified robot arm or controller. Processor, RAM, camera SKU, radio hardware, welding-source model and power ratings are not disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Onboard 3D vision",
+            "details": "A 3D camera captures 2D and 3D images of the workpiece to identify part features and fixturing.",
+            "sources": [
+              "https://www.tetragen.ai/technology"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Industrial robot integration",
+            "details": "Architecture combines an industrial robot arm, TetraGen vision and its software; the arm make and model depend on the installed cell.",
+            "sources": [
+              "https://www.tetragen.ai/technology"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Automatic robot-path generation",
+            "details": "Operator defines the process through the software interface; scene analysis generates robot paths and compensates for part and fixture variation.",
+            "sources": [
+              "https://www.tetragen.ai/technology"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aheadform-elf-xuan-reference",
+        "manufacturer": "AheadForm",
+        "models": [
+          "Elf Xuan"
+        ],
+        "configuration": "Manufacturer description of Elf Xuan facial hardware with a separately identified 2.0 upper-body extension. CPU, RAM, sensing hardware, battery or supply rating, and radio parts are undisclosed. Facial degrees of freedom do not imply whole-body locomotion.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Bionic face and micro drives",
+            "details": "Manufacturer specifies more than 30 facial degrees of freedom, silicone skin and brushless micro motors for facial movement.",
+            "sources": [
+              "https://www.aheadform.com/elf-xuan/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "2.0 upper-body extension",
+            "details": "Version 2.0 adds independently controlled waist and upper/lower arm regions using proprietary joint modules; shoulders and wrists are described as locked.",
+            "sources": [
+              "https://www.aheadform.com/elf-xuan-2/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Expression and body synchronization",
+            "details": "Version 2.0 synchronizes torso gestures with facial drivers and retains lip synchronization and expression capabilities from 1.0.",
+            "sources": [
+              "https://www.aheadform.com/elf-xuan-2/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -344456,8 +345096,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 861,
-    "devices_with_system_profiles": 768,
+    "system_profiles": 867,
+    "devices_with_system_profiles": 774,
     "devices_with_documented_compute": 377
   }
 }
