@@ -2204,8 +2204,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "advanced-farm-tx-2021",
+            "configuration": "TX identified in the September 2021 Yamaha/Kubota investor announcement. No exact computer, radio or powertrain established for TX. Separate OnLogic family reference must not be treated as a confirmed TX bill of materials.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -2224,8 +2230,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Fruit perception",
+                "details": "Image sensors and machine learning identify ripe strawberries.",
+                "sources": [
+                  "https://global.yamaha-motor.com/news/2021/0921/corporate.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "advanced-farm-tx-2021",
+                "configuration": "TX identified in the September 2021 Yamaha/Kubota investor announcement. No exact computer, radio or powertrain established for TX. Separate OnLogic family reference must not be treated as a confirmed TX bill of materials.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -2234,8 +2253,21 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Harvesting hardware",
+                "details": "Unmanned ground platform carries robotic arms with fruit-picking grippers.",
+                "sources": [
+                  "https://global.yamaha-motor.com/news/2021/0921/corporate.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "advanced-farm-tx-2021",
+                "configuration": "TX identified in the September 2021 Yamaha/Kubota investor announcement. No exact computer, radio or powertrain established for TX. Separate OnLogic family reference must not be treated as a confirmed TX bill of materials.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -2257,9 +2289,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -5756,8 +5786,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "airforestry-harvesting-system",
+            "configuration": "Manufacturer describes a 6.2 m heavy-lift drone fleet. The 2.5 m prototype used standard flight components; those components are not assigned to this full-size system. CPU, RAM, radio hardware and battery ratings undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -5776,23 +5812,76 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Tree selection",
+                "details": "Computer vision identifies and selects trees; sensor models not stated.",
+                "sources": [
+                  "https://airforestry.com/the-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airforestry-harvesting-system",
+                "configuration": "Manufacturer describes a 6.2 m heavy-lift drone fleet. The 2.5 m prototype used standard flight components; those components are not assigned to this full-size system. CPU, RAM, radio hardware and battery ratings undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric flight and tooling",
+                "details": "Drone and harvesting tool are electrically powered; carbon-fiber structure and angled rotors.",
+                "sources": [
+                  "https://airforestry.com/the-system/",
+                  "https://airforestry.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airforestry-harvesting-system",
+                "configuration": "Manufacturer describes a 6.2 m heavy-lift drone fleet. The 2.5 m prototype used standard flight components; those components are not assigned to this full-size system. CPU, RAM, radio hardware and battery ratings undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Harvesting mechanism",
+                "details": "Approximately 60 kg tool grips the tree top, descends to remove branches, cuts near ground level, then supports extraction by drone.",
+                "sources": [
+                  "https://airforestry.com/the-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airforestry-harvesting-system",
+                "configuration": "Manufacturer describes a 6.2 m heavy-lift drone fleet. The 2.5 m prototype used standard flight components; those components are not assigned to this full-size system. CPU, RAM, radio hardware and battery ratings undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet supervision",
+                "details": "Multiple autonomous harvesting drones are monitored from one Ground Control Station.",
+                "sources": [
+                  "https://airforestry.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "airforestry-harvesting-system",
+                "configuration": "Manufacturer describes a 6.2 m heavy-lift drone fleet. The 2.5 m prototype used standard flight components; those components are not assigned to this full-size system. CPU, RAM, radio hardware and battery ratings undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -5809,10 +5898,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -25778,13 +25863,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "blendid-kiosk-platform",
+            "configuration": "Shared platform architecture, not an exact kiosk-generation BOM. CPU, RAM, radio hardware, manipulator model and electrical supply vary or are not specified in this source.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Control electronics",
+                "details": "Custom controller boards coordinate custom and third-party devices; processor models not named.",
+                "sources": [
+                  "https://www.blendid.com/platform"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "blendid-kiosk-platform",
+                "configuration": "Shared platform architecture, not an exact kiosk-generation BOM. CPU, RAM, radio hardware, manipulator model and electrical supply vary or are not specified in this source.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -25798,8 +25902,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Condition monitoring",
+                "details": "Machine vision detects operating conditions; exact cameras and other sensor models undisclosed.",
+                "sources": [
+                  "https://www.blendid.com/platform"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "blendid-kiosk-platform",
+                "configuration": "Shared platform architecture, not an exact kiosk-generation BOM. CPU, RAM, radio hardware, manipulator model and electrical supply vary or are not specified in this source.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -25808,13 +25925,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "System integration",
+                "details": "Controller boards and APIs connect kiosk devices with cloud orchestration.",
+                "sources": [
+                  "https://www.blendid.com/platform"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "blendid-kiosk-platform",
+                "configuration": "Shared platform architecture, not an exact kiosk-generation BOM. CPU, RAM, radio hardware, manipulator model and electrical supply vary or are not specified in this source.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Cloud and operations software",
+                "details": "FoodOS, ChefOS recipe management and RMS restaurant management; remote monitoring and alerts.",
+                "sources": [
+                  "https://www.blendid.com/platform"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "blendid-kiosk-platform",
+                "configuration": "Shared platform architecture, not an exact kiosk-generation BOM. CPU, RAM, radio hardware, manipulator model and electrical supply vary or are not specified in this source.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -25828,13 +25971,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -30958,8 +31097,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "canvas-field-study-2022",
+            "configuration": "Robot evaluated in the 2022 construction field study with DPR/Swinerton. This historical configuration is distinct from 1200CX and RO2330. Processor, RAM, radio chip and battery capacity are unreported.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -30973,23 +31118,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Network",
+                "details": "Study lists Wi-Fi; band and implementation unspecified.",
+                "sources": [
+                  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "canvas-field-study-2022",
+                "configuration": "Robot evaluated in the 2022 construction field study with DPR/Swinerton. This historical configuration is distinct from 1200CX and RO2330. Processor, RAM, radio chip and battery capacity are unreported.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Mapping and contact",
+                "details": "Two LiDARs, vision sensing and rotary encoder; force sensing and compliance support finishing.",
+                "sources": [
+                  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "canvas-field-study-2022",
+                "configuration": "Robot evaluated in the 2022 construction field study with DPR/Swinerton. This historical configuration is distinct from 1200CX and RO2330. Processor, RAM, radio chip and battery capacity are unreported.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Studied mobile base",
+                "details": "Four-wheeled platform with battery and wired charging; study reports about half a day per charge.",
+                "sources": [
+                  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "canvas-field-study-2022",
+                "configuration": "Robot evaluated in the 2022 construction field study with DPR/Swinerton. This historical configuration is distinct from 1200CX and RO2330. Processor, RAM, radio chip and battery capacity are unreported.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Tooling and operation",
+                "details": "Four-DOF arm uses a spray nozzle or sanding head with vacuum; worker operates via rugged tablet.",
+                "sources": [
+                  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "canvas-field-study-2022",
+                "configuration": "Robot evaluated in the 2022 construction field study with DPR/Swinerton. This historical configuration is distinct from 1200CX and RO2330. Processor, RAM, radio chip and battery capacity are unreported.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -31010,10 +31207,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -62130,13 +62323,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "embodied-moxie-original-hardware",
+            "configuration": "Original Embodied manual and January 2023 founder interview. Hardware reference, not a claim that the legacy cloud/parent app still operates. Processor SKU, RAM and radio chipset are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard processing",
+                "details": "Founder describes a low-cost off-the-shelf processor with locally processed vision; no chip SKU or discrete GPU established.",
+                "sources": [
+                  "https://developer.amazon.com/en-US/blogs/alexa/device-makers/2023/01/alexa-fund-moxie-amazon-ces-2023"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "embodied-moxie-original-hardware",
+                "configuration": "Original Embodied manual and January 2023 founder interview. Hardware reference, not a claim that the legacy cloud/parent app still operates. Processor SKU, RAM and radio chipset are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -62145,23 +62357,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Network access",
+                "details": "Wi-Fi pairing uses a QR code displayed by the parent app. Manual includes an indoor-use restriction for 5150–5250 MHz.",
+                "sources": [
+                  "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "embodied-moxie-original-hardware",
+                "configuration": "Original Embodied manual and January 2023 founder interview. Hardware reference, not a claim that the legacy cloud/parent app still operates. Processor SKU, RAM and radio chipset are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Interaction inputs",
+                "details": "Camera and microphones; motor motion stops when the robot is lifted or tipped.",
+                "sources": [
+                  "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "embodied-moxie-original-hardware",
+                "configuration": "Original Embodied manual and January 2023 founder interview. Hardware reference, not a claim that the legacy cloud/parent app still operates. Processor SKU, RAM and radio chipset are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and adapter",
+                "details": "Internal non-replaceable lithium-ion battery. Adapter: 100–240 V AC, 50/60 Hz, 1.5 A maximum input; 14 V, 4 A DC output.",
+                "sources": [
+                  "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "embodied-moxie-original-hardware",
+                "configuration": "Original Embodied manual and January 2023 founder interview. Hardware reference, not a claim that the legacy cloud/parent app still operates. Processor SKU, RAM and radio chipset are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Interaction hardware",
+                "details": "Face display, speaker, detachable arms and rotating base with charging port.",
+                "sources": [
+                  "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "embodied-moxie-original-hardware",
+                "configuration": "Original Embodied manual and January 2023 founder interview. Hardware reference, not a claim that the legacy cloud/parent app still operates. Processor SKU, RAM and radio chipset are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -62170,8 +62434,21 @@
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Regulatory identifier",
+                "details": "Original manual lists FCC ID 2AV9NEMBODIEDMOXIEA; this is not a MAC address or broadcast signature.",
+                "sources": [
+                  "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "embodied-moxie-original-hardware",
+                "configuration": "Original Embodied manual and January 2023 founder interview. Hardware reference, not a claim that the legacy cloud/parent app still operates. Processor SKU, RAM and radio chipset are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -62180,14 +62457,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -84193,8 +84464,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "iron-ox-grover-2021",
+            "configuration": "November 2021 manufacturer launch configuration. CPU, RAM, radio hardware and battery ratings unpublished. The crop-inspection booth is external to Grover.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -84213,18 +84490,57 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation sensors",
+                "details": "Multiple LiDAR units and cameras facing upward and forward; sensor SKUs unspecified.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/iron-ox-launches-grover-an-all-new-autonomous-mobile-robot-301413565.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "iron-ox-grover-2021",
+                "configuration": "November 2021 manufacturer launch configuration. CPU, RAM, radio hardware and battery ratings unpublished. The crop-inspection booth is external to Grover.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Chassis and motion",
+                "details": "Differential drive with rocker suspension and powered lifting mechanism.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/iron-ox-launches-grover-an-all-new-autonomous-mobile-robot-301413565.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "iron-ox-grover-2021",
+                "configuration": "November 2021 manufacturer launch configuration. CPU, RAM, radio hardware and battery ratings unpublished. The crop-inspection booth is external to Grover.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Plant-module handling",
+                "details": "Lifts and transports 1,000 lb, 6 × 6 ft hydroponic modules; takes them to a separate scanning booth and follow-up treatment stations.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/iron-ox-launches-grover-an-all-new-autonomous-mobile-robot-301413565.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "iron-ox-grover-2021",
+                "configuration": "November 2021 manufacturer launch configuration. CPU, RAM, radio hardware and battery ratings unpublished. The crop-inspection booth is external to Grover.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -84246,9 +84562,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -95260,18 +95573,50 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "monumental-bricklaying-architecture",
+            "configuration": "Manufacturer fleet-level architecture. Electronics are identified across the stack, not a per-unit bill of materials for every Pisa, Petra or Panama revision. NUC/GPU SKUs, RAM, storage capacity and RF chipset undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Distributed electronics",
+                "details": "Intel NUC computers, NVIDIA GPUs and RP2040 microcontrollers; no exact NUC or GPU model specified.",
+                "sources": [
+                  "https://www.monumental.co/jobs/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "monumental-bricklaying-architecture",
+                "configuration": "Manufacturer fleet-level architecture. Electronics are identified across the stack, not a per-unit bill of materials for every Pisa, Petra or Panama revision. NUC/GPU SKUs, RAM, storage capacity and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recorded operating data",
+                "details": "Atrium logs sensor readings, images and video; storage medium and capacity unspecified.",
+                "sources": [
+                  "https://www.monumental.co/atrium/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "monumental-bricklaying-architecture",
+                "configuration": "Manufacturer fleet-level architecture. Electronics are identified across the stack, not a per-unit bill of materials for every Pisa, Petra or Panama revision. NUC/GPU SKUs, RAM, storage capacity and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
@@ -95280,23 +95625,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Localization and calibration",
+                "details": "Onboard cameras localize against a photogrammetric site model. Factory calibration separately uses motion-tracking cameras.",
+                "sources": [
+                  "https://www.monumental.co/atrium/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "monumental-bricklaying-architecture",
+                "configuration": "Manufacturer fleet-level architecture. Electronics are identified across the stack, not a per-unit bill of materials for every Pisa, Petra or Panama revision. NUC/GPU SKUs, RAM, storage capacity and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electronics supply",
+                "details": "Power over Ethernet supplies electronics; this is not a published traction-battery specification.",
+                "sources": [
+                  "https://www.monumental.co/jobs/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "monumental-bricklaying-architecture",
+                "configuration": "Manufacturer fleet-level architecture. Electronics are identified across the stack, not a per-unit bill of materials for every Pisa, Petra or Panama revision. NUC/GPU SKUs, RAM, storage capacity and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Internal networking",
+                "details": "Ethernet connects the distributed electronics; manufacturer says its stack does not use PLCs or CAN bus.",
+                "sources": [
+                  "https://www.monumental.co/jobs/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "monumental-bricklaying-architecture",
+                "configuration": "Manufacturer fleet-level architecture. Electronics are identified across the stack, not a per-unit bill of materials for every Pisa, Petra or Panama revision. NUC/GPU SKUs, RAM, storage capacity and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Complementary fleet machines",
+                "details": "Pisa combines brick gripper and mortar hopper cranes; Petra feeds bricks from eight bays using a lift/puller; Panama supplies freshly mixed mortar.",
+                "sources": [
+                  "https://www.monumental.co/fleet/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "monumental-bricklaying-architecture",
+                "configuration": "Manufacturer fleet-level architecture. Electronics are identified across the stack, not a per-unit bill of materials for every Pisa, Petra or Panama revision. NUC/GPU SKUs, RAM, storage capacity and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control stack",
+                "details": "Atrium plans and coordinates builds. Central robot software uses Rust, vision uses Python, embedded code uses C++; desktop tooling combines TypeScript/Rust/WebAssembly.",
+                "sources": [
+                  "https://www.monumental.co/atrium/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "monumental-bricklaying-architecture",
+                "configuration": "Manufacturer fleet-level architecture. Electronics are identified across the stack, not a per-unit bill of materials for every Pisa, Petra or Panama revision. NUC/GPU SKUs, RAM, storage capacity and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -95310,13 +95719,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -112461,8 +112864,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "refraction-rev1-2020-interview",
+            "configuration": "September 2020 engineering interview with Refraction cofounder Ram Vasudevan. Describes that pilot configuration; later robots may differ. CPU, RAM and radio model unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -112476,23 +112885,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Remote supervision",
+                "details": "Wireless human assistance complements autonomy; protocol and frequency not disclosed.",
+                "sources": [
+                  "https://www.mobilityengineeringtech.com/component/content/article/44605-sae-ma-03925"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "refraction-rev1-2020-interview",
+                "configuration": "September 2020 engineering interview with Refraction cofounder Ram Vasudevan. Describes that pilot configuration; later robots may differ. CPU, RAM and radio model unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Pilot sensor suite",
+                "details": "Twelve cameras, radar, ultrasound and a low-cost LiDAR. Thermal sensing was experimental, not established as deployed equipment.",
+                "sources": [
+                  "https://www.mobilityengineeringtech.com/component/content/article/44605-sae-ma-03925"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "refraction-rev1-2020-interview",
+                "configuration": "September 2020 engineering interview with Refraction cofounder Ram Vasudevan. Describes that pilot configuration; later robots may differ. CPU, RAM and radio model unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Drivetrain and battery",
+                "details": "Three-wheel vehicle; air-cooled lithium-ion battery and shaft final drive. Founder describes quick battery swaps.",
+                "sources": [
+                  "https://www.mobilityengineeringtech.com/component/content/article/44605-sae-ma-03925"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "refraction-rev1-2020-interview",
+                "configuration": "September 2020 engineering interview with Refraction cofounder Ram Vasudevan. Describes that pilot configuration; later robots may differ. CPU, RAM and radio model unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cargo and service access",
+                "details": "Keypad-controlled cargo door; body pivots upward for subsystem servicing.",
+                "sources": [
+                  "https://www.mobilityengineeringtech.com/component/content/article/44605-sae-ma-03925"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "refraction-rev1-2020-interview",
+                "configuration": "September 2020 engineering interview with Refraction cofounder Ram Vasudevan. Describes that pilot configuration; later robots may differ. CPU, RAM and radio model unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -112513,10 +112974,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -313898,6 +314355,507 @@
             ]
           }
         ]
+      },
+      {
+        "id": "airforestry-harvesting-system",
+        "manufacturer": "AirForestry",
+        "models": [
+          "AirForestry Harvesting System"
+        ],
+        "configuration": "Manufacturer describes a 6.2 m heavy-lift drone fleet. The 2.5 m prototype used standard flight components; those components are not assigned to this full-size system. CPU, RAM, radio hardware and battery ratings undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Electric flight and tooling",
+            "details": "Drone and harvesting tool are electrically powered; carbon-fiber structure and angled rotors.",
+            "sources": [
+              "https://airforestry.com/the-system/",
+              "https://airforestry.com/technology/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Tree selection",
+            "details": "Computer vision identifies and selects trees; sensor models not stated.",
+            "sources": [
+              "https://airforestry.com/the-system/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Harvesting mechanism",
+            "details": "Approximately 60 kg tool grips the tree top, descends to remove branches, cuts near ground level, then supports extraction by drone.",
+            "sources": [
+              "https://airforestry.com/the-system/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet supervision",
+            "details": "Multiple autonomous harvesting drones are monitored from one Ground Control Station.",
+            "sources": [
+              "https://airforestry.com/technology/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iron-ox-grover-2021",
+        "manufacturer": "Iron Ox",
+        "models": [
+          "Grover"
+        ],
+        "configuration": "November 2021 manufacturer launch configuration. CPU, RAM, radio hardware and battery ratings unpublished. The crop-inspection booth is external to Grover.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Navigation sensors",
+            "details": "Multiple LiDAR units and cameras facing upward and forward; sensor SKUs unspecified.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/iron-ox-launches-grover-an-all-new-autonomous-mobile-robot-301413565.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Chassis and motion",
+            "details": "Differential drive with rocker suspension and powered lifting mechanism.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/iron-ox-launches-grover-an-all-new-autonomous-mobile-robot-301413565.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Plant-module handling",
+            "details": "Lifts and transports 1,000 lb, 6 × 6 ft hydroponic modules; takes them to a separate scanning booth and follow-up treatment stations.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/iron-ox-launches-grover-an-all-new-autonomous-mobile-robot-301413565.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "refraction-rev1-2020-interview",
+        "manufacturer": "Refraction AI",
+        "models": [
+          "REV-1"
+        ],
+        "configuration": "September 2020 engineering interview with Refraction cofounder Ram Vasudevan. Describes that pilot configuration; later robots may differ. CPU, RAM and radio model unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Pilot sensor suite",
+            "details": "Twelve cameras, radar, ultrasound and a low-cost LiDAR. Thermal sensing was experimental, not established as deployed equipment.",
+            "sources": [
+              "https://www.mobilityengineeringtech.com/component/content/article/44605-sae-ma-03925"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Drivetrain and battery",
+            "details": "Three-wheel vehicle; air-cooled lithium-ion battery and shaft final drive. Founder describes quick battery swaps.",
+            "sources": [
+              "https://www.mobilityengineeringtech.com/component/content/article/44605-sae-ma-03925"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Remote supervision",
+            "details": "Wireless human assistance complements autonomy; protocol and frequency not disclosed.",
+            "sources": [
+              "https://www.mobilityengineeringtech.com/component/content/article/44605-sae-ma-03925"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cargo and service access",
+            "details": "Keypad-controlled cargo door; body pivots upward for subsystem servicing.",
+            "sources": [
+              "https://www.mobilityengineeringtech.com/component/content/article/44605-sae-ma-03925"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "monumental-bricklaying-architecture",
+        "manufacturer": "Monumental",
+        "models": [
+          "Monumental Bricklaying System"
+        ],
+        "configuration": "Manufacturer fleet-level architecture. Electronics are identified across the stack, not a per-unit bill of materials for every Pisa, Petra or Panama revision. NUC/GPU SKUs, RAM, storage capacity and RF chipset undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Distributed electronics",
+            "details": "Intel NUC computers, NVIDIA GPUs and RP2040 microcontrollers; no exact NUC or GPU model specified.",
+            "sources": [
+              "https://www.monumental.co/jobs/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electronics supply",
+            "details": "Power over Ethernet supplies electronics; this is not a published traction-battery specification.",
+            "sources": [
+              "https://www.monumental.co/jobs/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Internal networking",
+            "details": "Ethernet connects the distributed electronics; manufacturer says its stack does not use PLCs or CAN bus.",
+            "sources": [
+              "https://www.monumental.co/jobs/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Complementary fleet machines",
+            "details": "Pisa combines brick gripper and mortar hopper cranes; Petra feeds bricks from eight bays using a lift/puller; Panama supplies freshly mixed mortar.",
+            "sources": [
+              "https://www.monumental.co/fleet/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Localization and calibration",
+            "details": "Onboard cameras localize against a photogrammetric site model. Factory calibration separately uses motion-tracking cameras.",
+            "sources": [
+              "https://www.monumental.co/atrium/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recorded operating data",
+            "details": "Atrium logs sensor readings, images and video; storage medium and capacity unspecified.",
+            "sources": [
+              "https://www.monumental.co/atrium/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control stack",
+            "details": "Atrium plans and coordinates builds. Central robot software uses Rust, vision uses Python, embedded code uses C++; desktop tooling combines TypeScript/Rust/WebAssembly.",
+            "sources": [
+              "https://www.monumental.co/atrium/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "embodied-moxie-original-hardware",
+        "manufacturer": "Embodied",
+        "models": [
+          "Moxie"
+        ],
+        "configuration": "Original Embodied manual and January 2023 founder interview. Hardware reference, not a claim that the legacy cloud/parent app still operates. Processor SKU, RAM and radio chipset are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard processing",
+            "details": "Founder describes a low-cost off-the-shelf processor with locally processed vision; no chip SKU or discrete GPU established.",
+            "sources": [
+              "https://developer.amazon.com/en-US/blogs/alexa/device-makers/2023/01/alexa-fund-moxie-amazon-ces-2023"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Interaction inputs",
+            "details": "Camera and microphones; motor motion stops when the robot is lifted or tipped.",
+            "sources": [
+              "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Network access",
+            "details": "Wi-Fi pairing uses a QR code displayed by the parent app. Manual includes an indoor-use restriction for 5150–5250 MHz.",
+            "sources": [
+              "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and adapter",
+            "details": "Internal non-replaceable lithium-ion battery. Adapter: 100–240 V AC, 50/60 Hz, 1.5 A maximum input; 14 V, 4 A DC output.",
+            "sources": [
+              "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Interaction hardware",
+            "details": "Face display, speaker, detachable arms and rotating base with charging port.",
+            "sources": [
+              "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Regulatory identifier",
+            "details": "Original manual lists FCC ID 2AV9NEMBODIEDMOXIEA; this is not a MAC address or broadcast signature.",
+            "sources": [
+              "https://device.report/manuals/embodied-moxie-user-manual-quick-start-guide"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "canvas-field-study-2022",
+        "manufacturer": "Canvas",
+        "models": [
+          "Canvas drywall-finishing robot"
+        ],
+        "configuration": "Robot evaluated in the 2022 construction field study with DPR/Swinerton. This historical configuration is distinct from 1200CX and RO2330. Processor, RAM, radio chip and battery capacity are unreported.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Mapping and contact",
+            "details": "Two LiDARs, vision sensing and rotary encoder; force sensing and compliance support finishing.",
+            "sources": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Studied mobile base",
+            "details": "Four-wheeled platform with battery and wired charging; study reports about half a day per charge.",
+            "sources": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Network",
+            "details": "Study lists Wi-Fi; band and implementation unspecified.",
+            "sources": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Tooling and operation",
+            "details": "Four-DOF arm uses a spray nozzle or sanding head with vacuum; worker operates via rugged tablet.",
+            "sources": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "canvas-1200cx-launch",
+        "manufacturer": "Canvas",
+        "models": [
+          "1200CX"
+        ],
+        "configuration": "July 2024 manufacturer launch release. Separate from the older field-study robot; no processor, RAM, radio, sensing inventory or battery capacity established here.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Mobility and supply",
+            "details": "Battery-powered all-wheel-drive machine with all-wheel steering; manufacturer claims a full day per charge.",
+            "sources": [
+              "https://www.businesswire.com/news/home/20240710771518/en/Canvas-Worlds-First-Robotic-Drywall-Finishing-Company-Launches-the-1200CX"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Finishing hardware",
+            "details": "Worker-operated spray and sanding machine; 12 ft finishing height, 30 × 34.5 in footprint, 1,200 lb launch specification.",
+            "sources": [
+              "https://www.businesswire.com/news/home/20240710771518/en/Canvas-Worlds-First-Robotic-Drywall-Finishing-Company-Launches-the-1200CX"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "advanced-farm-tx-2021",
+        "manufacturer": "Advanced Farm Technologies",
+        "models": [
+          "TX Strawberry Harvester"
+        ],
+        "configuration": "TX identified in the September 2021 Yamaha/Kubota investor announcement. No exact computer, radio or powertrain established for TX. Separate OnLogic family reference must not be treated as a confirmed TX bill of materials.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Fruit perception",
+            "details": "Image sensors and machine learning identify ripe strawberries.",
+            "sources": [
+              "https://global.yamaha-motor.com/news/2021/0921/corporate.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Harvesting hardware",
+            "details": "Unmanned ground platform carries robotic arms with fruit-picking grippers.",
+            "sources": [
+              "https://global.yamaha-motor.com/news/2021/0921/corporate.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "advanced-farm-onlogic-reference",
+        "manufacturer": "Advanced Farm Technologies",
+        "models": [
+          "Strawberry harvester (OnLogic case study)"
+        ],
+        "configuration": "Supplier documents an advanced.farm strawberry-harvester configuration without a model code; not asserted to be every TX or later apple harvester. Computer SKU, CPU, RAM, modem and battery unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Master controller",
+            "details": "Rugged OnLogic computer in the master control cabinet manages high-level vehicle and harvesting functions.",
+            "sources": [
+              "https://www.onlogic.com/solutions/case-studies/advanced-farm/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and picking",
+            "details": "LiDAR supports navigation; machine-vision camera guides the picking arm; berry data collection covers above/below the leaf canopy.",
+            "sources": [
+              "https://www.onlogic.com/solutions/case-studies/advanced-farm/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Cloud connection",
+            "details": "Cellular uplink; network generation and frequency not specified.",
+            "sources": [
+              "https://www.onlogic.com/solutions/case-studies/advanced-farm/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Actuation links",
+            "details": "Computer controls navigation through motor controllers and handles robot startup/sequencing.",
+            "sources": [
+              "https://www.onlogic.com/solutions/case-studies/advanced-farm/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "blendid-kiosk-platform",
+        "manufacturer": "Blendid",
+        "models": [
+          "Blendid Smoothie Kiosk"
+        ],
+        "configuration": "Shared platform architecture, not an exact kiosk-generation BOM. CPU, RAM, radio hardware, manipulator model and electrical supply vary or are not specified in this source.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Control electronics",
+            "details": "Custom controller boards coordinate custom and third-party devices; processor models not named.",
+            "sources": [
+              "https://www.blendid.com/platform"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Condition monitoring",
+            "details": "Machine vision detects operating conditions; exact cameras and other sensor models undisclosed.",
+            "sources": [
+              "https://www.blendid.com/platform"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "System integration",
+            "details": "Controller boards and APIs connect kiosk devices with cloud orchestration.",
+            "sources": [
+              "https://www.blendid.com/platform"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Cloud and operations software",
+            "details": "FoodOS, ChefOS recipe management and RMS restaurant management; remote monitoring and alerts.",
+            "sources": [
+              "https://www.blendid.com/platform"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "blendid-m2-utilities",
+        "manufacturer": "Blendid",
+        "models": [
+          "M2 smoothie kiosk"
+        ],
+        "configuration": "M2-specific utility specification; do not substitute the Pro/Pro Max electrical or plumbing requirements. Processor and radio hardware unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Electrical supply",
+            "details": "Standard 20 A wall outlet; voltage is not specified on this page.",
+            "sources": [
+              "https://www.blendid.com/blendid-m2"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Installation",
+            "details": "80 × 34 × 78 in kiosk; no water supply line or floor drain required.",
+            "sources": [
+              "https://www.blendid.com/blendid-m2"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Service functions",
+            "details": "Remote monitoring and software upgrades.",
+            "sources": [
+              "https://www.blendid.com/blendid-m2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "blendid-pro-utilities",
+        "manufacturer": "Blendid",
+        "models": [
+          "Pro / Pro Max beverage system"
+        ],
+        "configuration": "Shared utilities listed for Pro and Pro Max; modular installations can vary. Not the M2 kiosk power specification. CPU, RAM and radio hardware unnamed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Electrical supply",
+            "details": "NEMA L14-30P, 30 A, 125/250 V connection.",
+            "sources": [
+              "https://www.blendid.com/blendid-pro"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Site services",
+            "details": "Requires a water line and internet connection; modular layouts support e-commerce integration and operator dashboards.",
+            "sources": [
+              "https://www.blendid.com/blendid-pro"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Service functions",
+            "details": "Remote monitoring and software upgrades.",
+            "sources": [
+              "https://www.blendid.com/blendid-pro"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -313914,8 +314872,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 632,
-    "devices_with_system_profiles": 545,
-    "devices_with_documented_compute": 259
+    "system_profiles": 644,
+    "devices_with_system_profiles": 553,
+    "devices_with_documented_compute": 262
   }
 }

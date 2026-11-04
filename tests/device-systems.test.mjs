@@ -1559,3 +1559,38 @@ test('batch 49 preserves industrial installation and revision boundaries',()=>{
  assert.equal(profileIds(system('COBOD','BOD3')).length,0);
  assert.equal(profileIds(system('Stanley Robotics','Stan',{kind:'regulatory-equipment'})).length,0);
 });
+
+test('batch 50 keeps supplier, generation and installation evidence scoped',()=>{
+ const tx=system('Advanced Farm Technologies','TX Strawberry Harvester');
+ assert.equal(tx.sections.compute.status,'not-established');
+ assert.equal(tx.sections.radios.status,'not-established');
+ const supplier=system('Advanced Farm Technologies','Strawberry harvester (OnLogic case study)');
+ assert.match(text(supplier.sections.compute),/OnLogic/);
+ assert.match(text(supplier.sections.radios),/Cellular uplink/);
+ const old=system('Canvas','Canvas drywall-finishing robot');
+ const newer=system('Canvas','1200CX');
+ assert.match(text(old.sections.sensors),/Two LiDARs/);
+ assert.match(text(old.sections.power),/half a day/);
+ assert.match(text(newer.sections.power),/full day/);
+ assert.equal(newer.sections.sensors.status,'not-established');
+ const m2=system('Blendid','M2 smoothie kiosk');
+ const pro=system('Blendid','Pro / Pro Max beverage system');
+ assert.match(text(m2.sections.power),/20 A/);
+ assert.doesNotMatch(text(m2.sections.power.facts.map(f=>f.details)),/125\/250|30 A/);
+ assert.match(text(pro.sections.power),/125\/250 V/);
+ assert.equal(profileIds(system('Canvas','RO2330')).length,0);
+});
+
+test('batch 50 retains identified processors and explicit unknowns',()=>{
+ const m=system('Monumental','Monumental Bricklaying System');
+ assert.match(text(m.sections.compute),/Intel NUC.*NVIDIA GPUs.*RP2040/);
+ assert.match(text(m.configurations),/fleet-level/);
+ assert.equal(m.sections.radios.status,'not-established');
+ const mo=system('Embodied','Moxie');
+ assert.match(text(mo.sections.identification),/2AV9NEMBODIEDMOXIEA/);
+ assert.doesNotMatch(text(mo.sections.compute.facts.map(f=>f.details)),/Jetson|Qualcomm|Snapdragon/);
+ assert.equal(mo.sections.memory.status,'not-established');
+ assert.match(text(system('Refraction AI','REV-1').sections.sensors),/Thermal sensing was experimental/);
+ assert.equal(system('AirForestry','AirForestry Harvesting System').sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Embodied','Moxie',{kind:'regulatory-equipment'})).length,0);
+});
