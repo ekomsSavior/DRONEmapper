@@ -45615,6 +45615,329 @@
           ]
         }
       ]
+    },
+    {
+      "id": "xpeng-gx-robotaxi-may2026",
+      "manufacturer": "XPeng Robotics",
+      "models": [
+        "GX-based Robotaxi (May 2026 announcement)"
+      ],
+      "configuration": "XPENG’s May 18, 2026 production announcement. Its second-half-2026 pilot and 2027 unstaffed operation are plans in this source. Exact RAM, storage, modem, battery and camera parts are not disclosed; consumer GX specifications are not automatically assigned.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Four Turing AI chips",
+          "details": "Four self-developed Turing AI chips; manufacturer quotes 3,000 TOPS total computing capability.",
+          "sources": [
+            "https://www.xpeng.com/news/019e3ad2f9789dd703de8a0282290180"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision-based perception",
+          "details": "Camera-based driving architecture explicitly omits lidar and high-definition maps. Camera count and part numbers are unspecified.",
+          "sources": [
+            "https://www.xpeng.com/news/019e3ad2f9789dd703de8a0282290180"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "VLA 2.0 driving model",
+          "details": "End-to-end driving model; manufacturer reports response latency below 80 milliseconds, not an independent benchmark.",
+          "sources": [
+            "https://www.xpeng.com/news/019e3ad2f9789dd703de8a0282290180"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Passenger and service interfaces",
+          "details": "Rear entertainment displays and voice assistant. A Robotaxi SDK and Amap partnership were announced for fleet integration.",
+          "sources": [
+            "https://www.xpeng.com/news/019e3ad2f9789dd703de8a0282290180"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "XPeng Robotics",
+          "models": [
+            "XPENG Robotaxi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verne-mobileye-design-2024",
+      "manufacturer": "Verne",
+      "models": [
+        "Purpose-built Robotaxi (2024 design)"
+      ],
+      "configuration": "Mobileye’s June 2024 announcement describes a planned integration; Verne’s factory partner confirms the electric platform in February 2025. This is not a deployed-vehicle BOM. EyeQ generation, memory, sensor counts, modem and battery capacity are unpublished.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Mobileye Drive platform",
+          "details": "Mobileye Drive is the named autonomy platform. The vehicle-specific processor model and number of chips are not supplied.",
+          "sources": [
+            "https://www.mobileye.com/news/verne-unveils-urban-mobility-service-driven-by-mobileye/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Heterogeneous perception",
+          "details": "Cameras, radar and lidar form the planned sensor set; individual devices are not named.",
+          "sources": [
+            "https://www.mobileye.com/news/verne-unveils-urban-mobility-service-driven-by-mobileye/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric vehicle platform",
+          "details": "Factory announcement identifies autonomous electric vehicles; battery chemistry and traction-motor model are unspecified.",
+          "sources": [
+            "https://www.vgpparks.eu/press-releases/revolutionising-mobility-construction-of-verne-autonomous-ev-production-facility-kicks-off-at-vgp-park-zagreb/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operational design domains",
+          "details": "Planned automated driving is bounded by operational design domains, including road, weather and local driving conditions.",
+          "sources": [
+            "https://www.mobileye.com/news/verne-unveils-urban-mobility-service-driven-by-mobileye/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Verne",
+          "models": [
+            "Verne Robotaxi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tesla-optimus-ai-day-2022",
+      "manufacturer": "Tesla",
+      "models": [
+        "Optimus (AI Day 2022 engineering prototype)"
+      ],
+      "configuration": "Tesla engineers’ September 2022 presentation, preserved in the linked event transcript. Specifications describe the then-new Tesla-built Optimus design, not every later generation. The earlier walking Bumble C prototype is separate. Exact processor, RAM and wireless chipset are not given in the cited remarks.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Torso computer and hand controllers",
+          "details": "Central computer adapts Tesla’s Autopilot architecture; each hand has its own controller receiving sensor feedback.",
+          "sources": [
+            "https://stockanalysis.com/stocks/tsla/transcripts/32847-ai-day-2022/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Integrated battery electronics",
+          "details": "2.3 kWh torso battery; a single PCB integrates sensing, fusing, charge management and power distribution.",
+          "sources": [
+            "https://stockanalysis.com/stocks/tsla/transcripts/32847-ai-day-2022/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless communication",
+          "details": "Engineers describe wireless connectivity and audio support without identifying a frequency or radio chipset in these remarks.",
+          "sources": [
+            "https://stockanalysis.com/stocks/tsla/transcripts/32847-ai-day-2022/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision and actuator feedback",
+          "details": "Camera streams support visual navigation; rotary actuators integrate three sensors. Exact sensing parts are unnamed.",
+          "sources": [
+            "https://stockanalysis.com/stocks/tsla/transcripts/32847-ai-day-2022/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Actuator and hand architecture",
+          "details": "28 structural actuators use six designs: three rotary and three linear. Each hand has six actuators and 11 degrees of freedom, with metallic tendon drives.",
+          "sources": [
+            "https://stockanalysis.com/stocks/tsla/transcripts/32847-ai-day-2022/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Robot perception",
+          "details": "Autopilot-derived computer-vision networks are retrained for robot surroundings; this does not establish a public discovery protocol.",
+          "sources": [
+            "https://stockanalysis.com/stocks/tsla/transcripts/32847-ai-day-2022/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Tesla",
+          "models": [
+            "Tesla Optimus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "threod-stream-c-2019-brochure",
+      "manufacturer": "Threod Systems",
+      "models": [
+        "Stream C VTOL (2019 brochure)"
+      ],
+      "configuration": "Manufacturer brochure preserved by distributor Tehnomil. Historical VTOL configuration, not current Eos-family specifications. Flight CPU, memory, engine, battery and modem models are not identified; the brochure does not disclose its radio frequencies.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Multi-sensor payload",
+          "details": "Electro-optical sensor with 30× optical and 2× digital zoom; cooled MWIR 720p sensor with 18–275 lens specification; laser rangefinder and aerial-mapping payload listed.",
+          "sources": [
+            "https://www.tehnomil.net/wp-content/uploads/2019/05/Threod_Systems_STREAM_C_VTOL_UAS.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Data link architecture",
+          "details": "Dual-frequency link with AES-256 and mesh networking; carries voice, video and data. Radio bands are not published here.",
+          "sources": [
+            "https://www.tehnomil.net/wp-content/uploads/2019/05/Threod_Systems_STREAM_C_VTOL_UAS.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "VTOL airframe",
+          "details": "45 kg maximum takeoff mass, 2.3 m length and 3.9 m wingspan; vertical takeoff/landing capability.",
+          "sources": [
+            "https://www.tehnomil.net/wp-content/uploads/2019/05/Threod_Systems_STREAM_C_VTOL_UAS.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Video and metadata",
+          "details": "720p live stream, KLV metadata, reporting tool and selectable recording.",
+          "sources": [
+            "https://www.tehnomil.net/wp-content/uploads/2019/05/Threod_Systems_STREAM_C_VTOL_UAS.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Threod Systems",
+          "models": [
+            "Stream C"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "giga-maker-h01-published-design",
+      "manufacturer": "GigaAI",
+      "models": [
+        "Maker H01 (published platform)"
+      ],
+      "configuration": "Manufacturer’s Chinese-language product overview, checked November 2026. GigaBrain names the decision/control model, not a CPU. Processor, RAM, battery, motor and individual sensor parts are not published; SeeLight S1 is not treated as an alias.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Mobile dual-arm body",
+          "details": "Approximately 1.6 m configuration with dual arms, a mobile base and more than 20 degrees of freedom.",
+          "sources": [
+            "https://gigaai.cc/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Multi-sensor motion support",
+          "details": "Manufacturer describes multiple sensors for fine manipulation and compliant motion without identifying parts.",
+          "sources": [
+            "https://gigaai.cc/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "GigaBrain and development tools",
+          "details": "GigaBrain supplies end-to-end decision/control for navigation and longer action sequences. GigaWorld supports the development/training toolchain, not a named onboard processor.",
+          "sources": [
+            "https://gigaai.cc/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "GigaAI",
+          "models": [
+            "Maker H01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swarmbotics-fireant-engineering-2026",
+      "manufacturer": "Swarmbotics AI",
+      "models": [
+        "FireAnt (published engineering architecture)"
+      ],
+      "configuration": "Company-authored engineering job description and product overview, checked November 2026. The job describes board design and integration responsibilities, not a verified teardown or guarantee for every fielded revision. Processor SKU, RAM, battery ratings and radio bands remain unpublished.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Main-board microcontroller",
+          "details": "Single main PCBA includes an embedded microcontroller subsystem. The firmware role specifies STM32 ARM Cortex-M experience; exact installed MCU and separate autonomy computer are unconfirmed.",
+          "sources": [
+            "https://builtin.com/job/embedded-hardware-engineer/11010485"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Vehicle power distribution",
+          "details": "Main-board scope includes power conversion/distribution and a high-current motor bus; battery capacity is not stated.",
+          "sources": [
+            "https://builtin.com/job/embedded-hardware-engineer/11010485"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Wired system buses",
+          "details": "Board architecture includes Ethernet switching, PoE, CAN networking and sensor/payload I/O; integration covers ESCs, GNSS, IMU, radios and payload ports.",
+          "sources": [
+            "https://builtin.com/job/embedded-hardware-engineer/11010485"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Embedded and swarm software",
+          "details": "Engineering role specifies C, FreeRTOS and lwIP. ANTSNet provides web and ATAK operator interfaces.",
+          "sources": [
+            "https://builtin.com/job/embedded-hardware-engineer/11010485",
+            "https://www.swarmbotics.ai/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Redundant communications",
+          "details": "Product overview describes triple-redundant communications without identifying modem models or RF bands.",
+          "sources": [
+            "https://www.swarmbotics.ai/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Swarmbotics AI",
+          "models": [
+            "FireAnt"
+          ]
+        }
+      ]
     }
   ]
 }

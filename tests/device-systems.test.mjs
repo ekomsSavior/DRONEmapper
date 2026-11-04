@@ -9,6 +9,33 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 80 distinguishes planned architectures, prototype generations and named AI models',()=>{
+ const xp=system('XPeng Robotics','XPENG Robotaxi');
+ assert.match(text(xp.sections.compute),/Four.*Turing/);
+ assert.match(text(xp.sections.sensors),/omits lidar/);
+ assert.equal(xp.sections.memory.status,'not-established');
+ const verne=system('Verne','Verne Robotaxi');
+ assert.match(text(verne.sections.compute),/Mobileye Drive/);
+ assert.doesNotMatch(text(verne.sections.compute.facts),/EyeQ6/);
+ assert.match(text(verne.configurations),/planned integration/);
+ const op=system('Tesla','Tesla Optimus');
+ assert.match(text(op.sections.power),/2.3 kWh/);
+ assert.match(text(op.configurations),/Bumble C.*separate/);
+ assert.equal(profileIds(system('Tesla','Optimus Gen 2')).length,0);
+ const stream=system('Threod Systems','Stream C');
+ assert.match(text(stream.sections.radios),/bands are not published/);
+ assert.equal(stream.sections.compute.status,'not-established');
+ const maker=system('GigaAI','Maker H01');
+ assert.equal(maker.sections.compute.status,'not-established');
+ assert.match(text(maker.sections.software),/not a named onboard processor/);
+ assert.equal(profileIds(system('GigaAI','SeeLight S1')).length,0);
+ const ant=system('Swarmbotics AI','FireAnt');
+ assert.match(text(ant.configurations),/not a verified teardown/);
+ assert.match(text(ant.sections.compute),/installed MCU.*unconfirmed/);
+ assert.equal(ant.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Tesla','Tesla Optimus',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 77 preserves historical revisions, distinct batteries and conflicting radio evidence',()=>{
  const cab=system('Tesla','Cybercab');
  const y=system('Tesla','Tesla Robotaxi (Model Y ADS)');
