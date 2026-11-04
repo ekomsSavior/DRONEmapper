@@ -961,6 +961,37 @@ test('batch 35 keeps specific installations, options and research leads separate
  assert.match(text(orchard.sections.interfaces),/does not make the host vehicle autonomous/);
 });
 
+test('batch 36 separates trial systems, planned computers and fleet-specific equipment',()=>{
+ const lift=system('nLink','RoboLift');
+ assert.match(text(lift.sections.compute),/B&R 3100 Mobile/);
+ assert.match(text(lift.sections.sensors),/MTi-30/);
+ assert.match(text(lift.sections.radios),/Modbus/);
+ assert.doesNotMatch(text(lift.sections.compute.facts.map(f=>f.details)),/Atom|Core i7/);
+ const nomagic=system('Nomagic','justInduct');
+ assert.match(text(nomagic.sections.interfaces),/without assigning one specific arm/);
+ assert.equal(nomagic.sections.radios.status,'not-established');
+ assert.equal(system('Nimble Robotics','Nimble Fulfillment Robot').sections.compute.status,'not-established');
+ const trial=system('Oshen','C-Star Emperor (2024–2025 trials)'),cur=system('Oshen','C-Star (current indicative platform)');
+ assert.match(text(trial.sections.power),/100 Ah battery without solar/);
+ assert.equal(trial.sections.radios.status,'not-established');
+ assert.match(text(cur.sections.radios),/Iridium SBD/);
+ assert.doesNotMatch(text(cur.sections.power.facts.map(f=>f.details)),/100 Ah|200 Ah|35 W/);
+ assert.equal(profileIds(system('Oshen','C-Star')).length,2);
+ const av2=system('Plus','SuperDrive (2025 AV2.0 architecture)'),thor=system('Plus','SuperDrive International (announced Thor integration)');
+ assert.match(text(av2.sections.compute),/physically separate/);
+ assert.doesNotMatch(text(av2.sections.compute.facts.map(f=>f.details)),/Thor|Orin/);
+ assert.match(text(thor.sections.compute),/Thor/);
+ assert.equal(thor.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Plus','Plus SuperDrive Autonomous Truck')).length,2);
+ const a21=system('Ocean Infinity','Armada 21 (2021 design and survey package)'),a78=system('Ocean Infinity','Armada 78 (VARD control architecture)'),a7806=system('Ocean Infinity','Armada 78 06 (2024 handling system)');
+ assert.match(text(a21.sections.sensors),/six-vessel subset/);
+ assert.match(text(a78.sections.compute),/SeaQ/);
+ assert.equal(a78.sections.sensors.status,'not-established');
+ assert.equal(a7806.sections.compute.status,'not-established');
+ assert.match(text(a7806.sections.interfaces),/two bottom hatch/);
+ assert.equal(profileIds(system('Ocean Infinity','Armada')).length,4);
+});
+
 test('batch 34 preserves robot generations, controller evidence and network scope',()=>{
  const sc=system('Nilfisk','Nilfisk Liberty SC60');
  assert.match(text(sc.sections.compute),/Brain Control Module/);

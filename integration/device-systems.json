@@ -22694,6 +22694,450 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nlink-robolift-2022-system",
+      "manufacturer": "nLink",
+      "models": [
+        "RoboLift"
+      ],
+      "configuration": "April 2022 project report, including the page 7 wiring diagram. This documents the Genie S-80J demonstrator integration, not every subsequent RoboLift. CPU SKU, RAM, radio model and arm model undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Industrial control computer",
+          "details": "Diagram identifies a B&R 3100 Mobile industrial PC and a separate UR robot controller. It does not establish the installed CPU variant.",
+          "sources": [
+            "https://www.nhobyggenaringen.no/siteassets/dokumenter/robolift-teknisk-sluttrapport-22.-feb-2022.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Lift state and position",
+          "details": "Xsens MTi-30 IMU is labeled in the diagram. Basket motion, lift sensors and a total station support position measurement.",
+          "sources": [
+            "https://www.nhobyggenaringen.no/siteassets/dokumenter/robolift-teknisk-sluttrapport-22.-feb-2022.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Radio and vehicle buses",
+          "details": "Wi-Fi receiver links to the total station. CAN bus reads Genie SmartLink sensors; Modbus signals drive joystick inputs. No Wi-Fi band or identifying broadcast is documented.",
+          "sources": [
+            "https://www.nhobyggenaringen.no/siteassets/dokumenter/robolift-teknisk-sluttrapport-22.-feb-2022.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Control cabinet supply",
+          "details": "Diagram shows 230 VAC input converted to 24 VDC for control electronics. This is not the complete lift propulsion power specification.",
+          "sources": [
+            "https://www.nhobyggenaringen.no/siteassets/dokumenter/robolift-teknisk-sluttrapport-22.-feb-2022.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Lift and robot integration",
+          "details": "Genie S-80J base, robot arm, relay/analog I/O, linked emergency stops, external stop cable and manual/automatic selector. Moxa I/O modules appear in the cabinet photograph.",
+          "sources": [
+            "https://www.nhobyggenaringen.no/siteassets/dokumenter/robolift-teknisk-sluttrapport-22.-feb-2022.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Motion planning",
+          "details": "nLink integrates lift kinematics, linear basket movement, measured-plane cleaning trajectories and a safety/user-interruption state machine.",
+          "sources": [
+            "https://www.nhobyggenaringen.no/siteassets/dokumenter/robolift-teknisk-sluttrapport-22.-feb-2022.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nomagic-justinduct-system",
+      "manufacturer": "Nomagic",
+      "models": [
+        "justInduct"
+      ],
+      "configuration": "Current Nomagic Sort architecture plus the integrator’s earlier arm-supplier reference. A stationary sorting cell, not an autonomous mobile base. CPU/GPU, RAM, camera/scanner, radio, arm SKU and electrical supply remain undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "On-site AI layer",
+          "details": "Manufacturer describes an on-site inference layer; processor and accelerator hardware are not named. Cloud training and service infrastructure are separate.",
+          "sources": [
+            "https://nomagic.ai/technology/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Picking and barcode sensing",
+          "details": "Vision-guided object handling; barcode scanners positioned above, beside and on the tray scan during transfer. Sensor part numbers are not stated.",
+          "sources": [
+            "https://nomagic.ai/solution/sorting/",
+            "https://nomagic.ai/technology/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Manipulation cell",
+          "details": "Robot arm, proprietary universal gripper and an item pusher for pocket-sorter induction. Integrator names ABB and Universal Robots as portfolio arm suppliers, without assigning one specific arm to every justInduct.",
+          "sources": [
+            "https://nomagic.ai/solution/sorting/",
+            "https://syncore.com/news/nomagic-becomes-partner-of-reesink-logistic-solutions/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Local control and remote service",
+          "details": "Grip, Observe and Place AI support manipulation. Platform describes API/PLC/SCADA integration, remote monitoring and OTA updates; this does not identify a wireless protocol.",
+          "sources": [
+            "https://nomagic.ai/technology/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nimble-fulfillment-system-public",
+      "manufacturer": "Nimble Robotics",
+      "models": [
+        "Nimble Fulfillment Robot"
+      ],
+      "configuration": "Manufacturer’s 2024 system announcement and current product page. This is a public architecture description, not a complete BOM: processor, RAM, sensor/radio models, battery, arm and gripper part numbers are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Mobile manipulation hardware",
+          "details": "Custom mobile manipulator hardware performs storage, retrieval, picking, packing and sorting. The release does not specify arm count or actuator models.",
+          "sources": [
+            "https://www.businesswire.com/news/home/20241023998446/en/Nimble-Closes-106-Million-Series-C-Funding-Round-Scales-Fully-Autonomous-Fulfillment-with-FedEx"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Robot fleet and logistics layers",
+          "details": "Learned robot policies perform fulfillment tasks. Cloud Logistics Platform orchestrates the fleet and warehouse/order/transport/inventory/returns workflows; it is not an onboard compute model.",
+          "sources": [
+            "https://www.businesswire.com/news/home/20241023998446/en/Nimble-Closes-106-Million-Series-C-Funding-Round-Scales-Fully-Autonomous-Fulfillment-with-FedEx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oshen-cstar-emperor-trials",
+      "manufacturer": "Oshen",
+      "models": [
+        "C-Star Emperor (2024–2025 trials)",
+        "C-Star"
+      ],
+      "configuration": "Oshen/MBARI report published May 2026, covering 2024–2025 trials. Emperor’s configuration differs from longer-endurance vessels. CPU, RAM, sensor part numbers and radio terminal undisclosed; erroneous units in the source sensor table are not reproduced.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Trial vessel and energy",
+          "details": "1.2 m, 40 kg wind-driven vessel with actuated rigid sail and rudder. Emperor carried a 100 Ah battery without solar; other reported vessels used 200 Ah and a 35 W panel. Voltage unspecified.",
+          "sources": [
+            "https://oceansynchro.io/wp-content/uploads/2026/05/OshenC-Star_ReportFinal-1.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Trial revision",
+          "details": "A stern thruster was added for the January 2025 low-wind evaluation; it was not part of all earlier trials.",
+          "sources": [
+            "https://oceansynchro.io/wp-content/uploads/2026/05/OshenC-Star_ReportFinal-1.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Scientific and navigation payload",
+          "details": "Pressure, air/water temperature, wind and passive-acoustic measurements; GPS and an onboard IMU support navigation and wave estimation. A redundant tracker was added during development.",
+          "sources": [
+            "https://oceansynchro.io/wp-content/uploads/2026/05/OshenC-Star_ReportFinal-1.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Mission data",
+          "details": "Full readings, acoustic recordings and wave-height data were recovered after missions. Storage medium and capacity are not stated.",
+          "sources": [
+            "https://oceansynchro.io/wp-content/uploads/2026/05/OshenC-Star_ReportFinal-1.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mission control",
+          "details": "Waypoint planning, mission dashboard and handheld manual control. Most live sensor readings were reduced to one per minute; the report does not name the radio transport.",
+          "sources": [
+            "https://oceansynchro.io/wp-content/uploads/2026/05/OshenC-Star_ReportFinal-1.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oshen-cstar-current-communications",
+      "manufacturer": "Oshen",
+      "models": [
+        "C-Star (current indicative platform)",
+        "C-Star"
+      ],
+      "configuration": "Current manufacturer indicative specification, reviewed November 2026. Do not transfer Emperor’s battery or thruster fit to every current hull. Main CPU, memory, satellite terminal and payload sensor models undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Satellite telemetry",
+          "details": "Iridium SBD satellite communications with edge-processed data. This is a service/protocol reference, not a public broadcast decoder or unique device signature.",
+          "sources": [
+            "https://www.oshendata.com/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Renewable platform",
+          "details": "Approximately 1 m hull; wind and solar energy, with advertised endurance exceeding six months. Battery size is not supplied on this page.",
+          "sources": [
+            "https://www.oshendata.com/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Payload categories",
+          "details": "Acoustic and meteorological/oceanographic payloads; precise installed instruments depend on configuration.",
+          "sources": [
+            "https://www.oshendata.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plus-superdrive-av2-2025",
+      "manufacturer": "Plus",
+      "models": [
+        "SuperDrive (2025 AV2.0 architecture)",
+        "Plus SuperDrive Autonomous Truck"
+      ],
+      "configuration": "Chief architect’s August 2025 description. OEM truck configurations vary; CPU/GPU, memory, radio and sensor SKUs undisclosed. Future Thor integration is documented separately.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Primary and fallback computers",
+          "details": "Onboard primary driving system plus a physically separate fallback computer with dedicated sensors and isolated power. Chip models are not named.",
+          "sources": [
+            "https://www.plus.ai/news-and-insights/2025-08-01-inside-plus-av2-approach-superdrive"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception suite",
+          "details": "Camera, lidar and radar coverage around the tractor; the publication does not establish sensor counts or manufacturers.",
+          "sources": [
+            "https://www.plus.ai/news-and-insights/2025-08-01-inside-plus-av2-approach-superdrive"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Redundant actuation",
+          "details": "Fallback has independent braking, steering, throttle and cooling. The article does not provide the truck’s propulsion or electrical ratings.",
+          "sources": [
+            "https://www.plus.ai/news-and-insights/2025-08-01-inside-plus-av2-approach-superdrive"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy and supervision",
+          "details": "Reflex perception/planning, Reasoning, Guardrails and Fallback run onboard. Cloud remote operations provide fleet oversight and assistance, not moment-to-moment driving; link hardware unspecified.",
+          "sources": [
+            "https://www.plus.ai/news-and-insights/2025-08-01-inside-plus-av2-approach-superdrive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plus-international-thor-2026-plan",
+      "manufacturer": "Plus",
+      "models": [
+        "SuperDrive International (announced Thor integration)",
+        "Plus SuperDrive Autonomous Truck"
+      ],
+      "configuration": "March 16, 2026 announcement for International factory-built trucks, with driverless commercial operation expected in 2027. Planned integration, not proof that existing test trucks or all SuperDrive vehicles use Thor. Memory, radio and sensor SKUs undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Planned vehicle computer",
+          "details": "NVIDIA DRIVE AGX Thor SoC within the DRIVE AGX Hyperion platform, paired with NVIDIA DriveOS.",
+          "sources": [
+            "https://www.plus.ai/news-and-insights/2026-03-16-nvidia-alpamayo"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Planned sensing",
+          "details": "Lidar, radar and cameras provide surrounding perception; counts and component models are not published.",
+          "sources": [
+            "https://www.plus.ai/news-and-insights/2026-03-16-nvidia-alpamayo"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Model deployment",
+          "details": "Alpamayo adaptation uses a 10-billion-parameter training model and compact 0.5-billion-parameter edge model. Software parameter counts are not RAM specifications.",
+          "sources": [
+            "https://www.plus.ai/news-and-insights/2026-03-16-nvidia-alpamayo"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Factory vehicle integration",
+          "details": "International supplies the vehicle architecture; PlusAI supplies SuperDrive. Halos-related independent assessment is described as scheduled, not completed certification.",
+          "sources": [
+            "https://www.plus.ai/news-and-insights/2026-03-16-nvidia-alpamayo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oceaninfinity-armada21-2021",
+      "manufacturer": "Ocean Infinity",
+      "models": [
+        "Armada 21 (2021 design and survey package)",
+        "Armada"
+      ],
+      "configuration": "January 2021 operator design presentation plus September 2021 sensor-supplier announcement for selected 21 m/36 m vessels. Fleet reference, not a confirmed equipment list for each hull. CPU, RAM and radio models undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "A21 design",
+          "details": "21 m diesel-electric/battery-hybrid design with DP1 positioning; 10 m³ fuel capacity and 2.5 × 1.5 m moonpool in the 2021 presentation.",
+          "sources": [
+            "https://www.maritimeuk.org/documents/855/Dan_Hook_-_Ocean_Infinity_MASRWG_12th_Jan_2021.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Selected survey package",
+          "details": "Valeport miniSVS at the multibeam gondola; Midas SVX2 profiler with VA500 altimeter. uvSVX, miniIPS2 and VA500 support side-scan/ROV work. Supplier specifies a six-vessel subset including 21 m and 36 m classes.",
+          "sources": [
+            "https://www.valeport.co.uk/product-news/valeport-joins-ocean-infinitys-armada/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Subsea integration",
+          "details": "Supplier names EdgeTech side-scan sonar and Saab Seaeye Leopard ROV interfaces for the selected package; exact sonar SKU and individual hull assignments are not provided.",
+          "sources": [
+            "https://www.valeport.co.uk/product-news/valeport-joins-ocean-infinitys-armada/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Remote operating concept",
+          "details": "Operator’s design includes shoreside navigation, planning and payload operation through remote control centres. Transport hardware is not specified in this presentation.",
+          "sources": [
+            "https://www.maritimeuk.org/documents/855/Dan_Hook_-_Ocean_Infinity_MASRWG_12th_Jan_2021.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oceaninfinity-armada36-2021",
+      "manufacturer": "Ocean Infinity",
+      "models": [
+        "Armada 36 (2021 design)",
+        "Armada"
+      ],
+      "configuration": "January 2021 operator presentation: design-stage class specifications, not a current as-built equipment inventory. CPU, memory, radio and specific sensor fit undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "A36 design",
+          "details": "36 m diesel-electric/battery-hybrid design with DP2 positioning, 30 m³ fuel capacity and 8 × 3 m moonpool.",
+          "sources": [
+            "https://www.maritimeuk.org/documents/855/Dan_Hook_-_Ocean_Infinity_MASRWG_12th_Jan_2021.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload capacity",
+          "details": "Presentation specifies 105 tonnes deck capacity at 1 m vertical centre of gravity. Mission equipment and launch/recovery systems are configuration-dependent.",
+          "sources": [
+            "https://www.maritimeuk.org/documents/855/Dan_Hook_-_Ocean_Infinity_MASRWG_12th_Jan_2021.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oceaninfinity-armada78-control",
+      "manufacturer": "Ocean Infinity",
+      "models": [
+        "Armada 78 (VARD control architecture)",
+        "Armada"
+      ],
+      "configuration": "VARD/Fincantieri’s November 2020 A78 contract announcement and operator’s January 2021 design presentation. System architecture reference; exact CPUs, RAM, modem, battery and navigation-sensor parts are not established here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Marine control systems",
+          "details": "Vard Electro SeaQ Integrated Automation System and SeaQ Power Management System were specified for remote operation. These are control platforms, not CPU model identifications.",
+          "sources": [
+            "https://www.fincantieri.com/en/newsroom/press-releases/2020/fincantieri-vard-secures-contract-for-eight-marine-robotic-vessels"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "A78 design",
+          "details": "Approximately 78 m diesel-electric/battery-hybrid DP2 design. Ammonia/fuel-cell readiness describes provision for future upgrades, not proof of an installed fuel cell.",
+          "sources": [
+            "https://www.maritimeuk.org/documents/855/Dan_Hook_-_Ocean_Infinity_MASRWG_12th_Jan_2021.pdf",
+            "https://www.fincantieri.com/en/newsroom/press-releases/2020/fincantieri-vard-secures-contract-for-eight-marine-robotic-vessels"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Remote operations architecture",
+          "details": "Integrated ship systems support remote operation with secure communications. The design allows lean-crewed or uncrewed operation; it does not establish universal crewless deployment.",
+          "sources": [
+            "https://www.fincantieri.com/en/newsroom/press-releases/2020/fincantieri-vard-secures-contract-for-eight-marine-robotic-vessels"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oceaninfinity-armada7806-lars",
+      "manufacturer": "Ocean Infinity",
+      "models": [
+        "Armada 78 06 (2024 handling system)",
+        "Armada"
+      ],
+      "configuration": "Seaonics delivery reference for the specific 2024 VARD-built vessel. Covers the handling subsystem; its controller CPU, power ratings, radios and the vessel’s full sensor/compute inventory are not given.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Launch and recovery",
+          "details": "Remote-operated ROV/geotechnical LARS, umbilical and subsea winches, skid system, deck hatch and two bottom hatch systems.",
+          "sources": [
+            "https://www.seaonics.com/references/armada-78-06"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Payload control interface",
+          "details": "Seaonics describes an interface between its control system and the dynamic payload system. This does not name an onboard network protocol.",
+          "sources": [
+            "https://www.seaonics.com/references/armada-78-06"
+          ]
+        }
+      ]
     }
   ]
 }
