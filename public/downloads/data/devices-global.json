@@ -2611,13 +2611,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aerovironment-p550-2025",
+            "configuration": "Public P550 sheet version 250422. Payloads, datalinks and control systems are modular options. CPU, GPU, memory, radio part numbers and battery energy are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Mission and navigation computers",
+                "details": "Diagram identifies separate mission-compute and visual-navigation compute modules; no silicon part numbers are published.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-p550-2025",
+                "configuration": "Public P550 sheet version 250422. Payloads, datalinks and control systems are modular options. CPU, GPU, memory, radio part numbers and battery energy are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -2626,28 +2645,95 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Configurable datalinks",
+                "details": "Silvus and DDL links are listed, with mDDL-FH named in features. Advertised 40–60 km range depends on the ground-station radio; no universal operating frequency is established.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-p550-2025",
+                "configuration": "Public P550 sheet version 250422. Payloads, datalinks and control systems are modular options. CPU, GPU, memory, radio part numbers and battery energy are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Visual navigation package",
+                "details": "EO and IR sensors plus a laser rangefinder are shown in the VNS assembly; sensor SKUs unspecified. Mission payloads are separate and configurable.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-p550-2025",
+                "configuration": "Public P550 sheet version 250422. Payloads, datalinks and control systems are modular options. CPU, GPU, memory, radio part numbers and battery energy are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric VTOL architecture",
+                "details": "Battery-electric propulsion with hot-swappable batteries. Manufacturer advertises approximately five hours depending on configuration; battery voltage and capacity unspecified.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf",
+                  "https://www.avinc.com/solution/p550/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-p550-2025",
+                "configuration": "Public P550 sheet version 250422. Payloads, datalinks and control systems are modular options. CPU, GPU, memory, radio part numbers and battery energy are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular payload and airframe",
+                "details": "Tool-free connections and up to 6.8 kg mission payload, within 24.9 kg maximum gross takeoff mass. MOSA architecture supports third-party payloads and radios.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf",
+                  "https://www.avinc.com/solution/p550/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-p550-2025",
+                "configuration": "Public P550 sheet version 250422. Payloads, datalinks and control systems are modular options. CPU, GPU, memory, radio part numbers and battery energy are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mission and ground software",
+                "details": "AVACORE/SPOTR-EDGE; baseline Vigilant Spirit with Quattro STANAG 4586. The 2025 sheet labels Kinesis GCS as future capability, not an installed baseline.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-p550-2025",
+                "configuration": "Public P550 sheet version 250422. Payloads, datalinks and control systems are modular options. CPU, GPU, memory, radio part numbers and battery energy are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -2672,13 +2758,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -2742,8 +2822,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aerovironment-puma-3ae-2025",
+            "configuration": "Puma 3 AE sheet version 250707; a specific member of the Puma family, not every historical Puma. Avionics CPU, RAM, storage, GPS/INS chipset, radio part number and battery energy undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -2757,28 +2843,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Digital Data Link",
+                "details": "Enhanced DDL with AES-256; 20 km standard, 40 km with ERA and 60 km with LRTA. Frequency is configuration-dependent and unspecified in this sheet.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-puma-3ae-2025",
+                "configuration": "Puma 3 AE sheet version 250707; a specific member of the Puma family, not every historical Puma. Avionics CPU, RAM, storage, GPS/INS chipset, radio part number and battery energy undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and interchangeable payloads",
+                "details": "GPS/INS module. Mantis i45 EO/IR payload or i45 N with dual LWIR and 5 MP low-light imaging. Visual Navigation System is an optional add-on.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-puma-3ae-2025",
+                "configuration": "Puma 3 AE sheet version 250707; a specific member of the Puma family, not every historical Puma. Avionics CPU, RAM, storage, GPS/INS chipset, radio part number and battery energy undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Replaceable propulsion and batteries",
+                "details": "Battery-powered motor/propeller and servo modules are field-replaceable. Standard ISR configuration is advertised at three hours; payload and battery selection change endurance.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf",
+                  "https://www.avinc.com/solution/puma-3-ae/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-puma-3ae-2025",
+                "configuration": "Puma 3 AE sheet version 250707; a specific member of the Puma family, not every historical Puma. Avionics CPU, RAM, storage, GPS/INS chipset, radio part number and battery energy undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Module and launch options",
+                "details": "Separate replaceable avionics, GPS/INS, DDL, payload, motor, servo and battery assemblies. Hand launch and deep-stall recovery; bungee launcher, VTOL kit and universal transit bay are optional.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-puma-3ae-2025",
+                "configuration": "Puma 3 AE sheet version 250707; a specific member of the Puma family, not every historical Puma. Avionics CPU, RAM, storage, GPS/INS chipset, radio part number and battery energy undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground control",
+                "details": "Tomahawk, Crysalis or legacy ground-control systems. Ground computers are distinct from the aircraft’s undisclosed avionics processor.",
+                "sources": [
+                  "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aerovironment-puma-3ae-2025",
+                "configuration": "Puma 3 AE sheet version 250707; a specific member of the Puma family, not every historical Puma. Avionics CPU, RAM, storage, GPS/INS chipset, radio part number and battery energy undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -2804,12 +2956,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -3744,8 +3891,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ageagle-ebee-x-manual",
+            "configuration": "senseFly eBee X series user manual, manufacturer document hosted by its surveying distributor. Battery, camera and license affect configuration. Autopilot CPU, memory, GNSS chipset and radio-module SKU not named.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -3759,28 +3912,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Telemetry connection",
+                "details": "2.4 GHz aircraft link to a USB ground modem connected to eMotion. The manual describes AES transmission; it does not establish ordinary Wi-Fi packet compatibility or a unique broadcast signature.",
+                "sources": [
+                  "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ageagle-ebee-x-manual",
+                "configuration": "senseFly eBee X series user manual, manufacturer document hosted by its surveying distributor. Battery, camera and license affect configuration. Autopilot CPU, memory, GNSS chipset and radio-module SKU not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation sensors and camera bay",
+                "details": "GNSS/RTK antenna, pitot airspeed probe, ambient-temperature sensor and downward LiDAR ground-distance sensor. Camera is interchangeable and powered by the aircraft battery.",
+                "sources": [
+                  "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ageagle-ebee-x-manual",
+                "configuration": "senseFly eBee X series user manual, manufacturer document hosted by its surveying distributor. Battery, camera and license affect configuration. Autopilot CPU, memory, GNSS chipset and radio-module SKU not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and propulsion",
+                "details": "Brushless electric motor and aileron servos. Standard SI050003: four-cell 3,700 mAh LiHV; endurance SI050017: four-cell 4,900 mAh LiHV. Nominal supply 15.2 V. Published endurance up to 59/90 minutes respectively, configuration-dependent.",
+                "sources": [
+                  "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ageagle-ebee-x-manual",
+                "configuration": "senseFly eBee X series user manual, manufacturer document hosted by its surveying distributor. Battery, camera and license affect configuration. Autopilot CPU, memory, GNSS chipset and radio-module SKU not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Airframe and servicing",
+                "details": "1.16 m wingspan, 1.6 kg maximum takeoff mass and 300 g maximum camera payload. USB supports firmware updates and log retrieval.",
+                "sources": [
+                  "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ageagle-ebee-x-manual",
+                "configuration": "senseFly eBee X series user manual, manufacturer document hosted by its surveying distributor. Battery, camera and license affect configuration. Autopilot CPU, memory, GNSS chipset and radio-module SKU not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mission control",
+                "details": "eMotion flight planning and monitoring; RTK/PPK features depend on the applicable license.",
+                "sources": [
+                  "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ageagle-ebee-x-manual",
+                "configuration": "senseFly eBee X series user manual, manufacturer document hosted by its surveying distributor. Battery, camera and license affect configuration. Autopilot CPU, memory, GNSS chipset and radio-module SKU not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -3814,12 +4032,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -7545,13 +7758,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "amp-cortex-founder-2021",
+            "configuration": "Architecture described directly by AMP founder Matanya Horowitz in January 2021. Not a parts list for later Cortex-C or Delta variants. CPU/GPU SKU, memory, electrical supply and radio hardware not identified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Vision inference hardware",
+                "details": "Color-camera imagery is processed by a GPU using a neural network; GPU manufacturer and model are not given.",
+                "sources": [
+                  "https://www.ctvc.co/matanya-horowitz-amp-robotics/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "amp-cortex-founder-2021",
+                "configuration": "Architecture described directly by AMP founder Matanya Horowitz in January 2021. Not a parts list for later Cortex-C or Delta variants. CPU/GPU SKU, memory, electrical supply and radio hardware not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -7565,8 +7797,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Material recognition",
+                "details": "Upstream color camera identifies items for sorting; camera and lens models unspecified.",
+                "sources": [
+                  "https://www.ctvc.co/matanya-horowitz-amp-robotics/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "amp-cortex-founder-2021",
+                "configuration": "Architecture described directly by AMP founder Matanya Horowitz in January 2021. Not a parts list for later Cortex-C or Delta variants. CPU/GPU SKU, memory, electrical supply and radio hardware not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -7575,13 +7820,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Sorting cell",
+                "details": "Robot receives decisions from the vision system and places material into existing chutes or bins. The conveyor-mounted mechanism operates inside a safety enclosure.",
+                "sources": [
+                  "https://www.ctvc.co/matanya-horowitz-amp-robotics/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "amp-cortex-founder-2021",
+                "configuration": "Architecture described directly by AMP founder Matanya Horowitz in January 2021. Not a parts list for later Cortex-C or Delta variants. CPU/GPU SKU, memory, electrical supply and radio hardware not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Model updates and analytics",
+                "details": "Subscription services provide neural-network updates and business-intelligence reporting. No specific networking protocol or public scanner signature is established.",
+                "sources": [
+                  "https://www.ctvc.co/matanya-horowitz-amp-robotics/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "amp-cortex-founder-2021",
+                "configuration": "Architecture described directly by AMP founder Matanya Horowitz in January 2021. Not a parts list for later Cortex-C or Delta variants. CPU/GPU SKU, memory, electrical supply and radio hardware not identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -7595,13 +7866,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -14011,8 +14278,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "apellix-b2-power-wash",
+            "configuration": "Commercial B2 cleaning configuration; separate from Blue/NDAA, spray-painting and NDT variants. CPU, memory, radio, battery capacity and sensor part numbers are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -14031,23 +14304,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Position assistance",
+                "details": "Front obstacle detection and front distance hold. The B2 table does not establish the Blue variant’s additional side sensors.",
+                "sources": [
+                  "https://www.apellix.com/products/power-wash-b2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apellix-b2-power-wash",
+                "configuration": "Commercial B2 cleaning configuration; separate from Blue/NDAA, spray-painting and NDT variants. CPU, memory, radio, battery capacity and sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight batteries and ground equipment",
+                "details": "Battery-powered drone; supplied system includes eight batteries and two chargers, not eight batteries installed simultaneously. Cleaning fluid comes through external hoses and pumps.",
+                "sources": [
+                  "https://www.apellix.com/products/power-wash-b2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apellix-b2-power-wash",
+                "configuration": "Commercial B2 cleaning configuration; separate from Blue/NDAA, spray-painting and NDT variants. CPU, memory, radio, battery capacity and sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cleaning payload and dimensions",
+                "details": "Compatible with standard nozzles, hoses and pumps. Published pump-side pressure up to 4,000 psi, flow up to 11 US gpm, and working height up to 60 m; these are configuration-dependent cleaning ratings.",
+                "sources": [
+                  "https://www.apellix.com/products/power-wash-b2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apellix-b2-power-wash",
+                "configuration": "Commercial B2 cleaning configuration; separate from Blue/NDAA, spray-painting and NDT variants. CPU, memory, radio, battery capacity and sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Weight and accessories",
+                "details": "21.5 lb without batteries, 25 lb payload rating and 55 lb all-up weight class. Extensions and soft-wash hose included; light bar, parachute and ball valve optional.",
+                "sources": [
+                  "https://www.apellix.com/products/power-wash-b2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apellix-b2-power-wash",
+                "configuration": "Commercial B2 cleaning configuration; separate from Blue/NDAA, spray-painting and NDT variants. CPU, memory, radio, battery capacity and sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Cleaning automation",
+                "details": "Apellix Intelligence Premium autonomous-cleaning software is listed as an optional add-on on the product page.",
+                "sources": [
+                  "https://www.apellix.com/products/power-wash-b2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apellix-b2-power-wash",
+                "configuration": "Commercial B2 cleaning configuration; separate from Blue/NDAA, spray-painting and NDT variants. CPU, memory, radio, battery capacity and sensor part numbers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -14064,10 +14401,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -15306,8 +15639,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "asteria-a200-xt",
+            "configuration": "A200-XT brochure configuration with a 2 km link; other Asteria publications describe different mission packages. CPU, memory, radio module/band, battery capacity and obstacle-sensor SKU undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -15321,28 +15660,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control and payload link",
+                "details": "Digital link with AES-128 encryption; brochure advertises up to 2 km. Frequency and modulation are not specified.",
+                "sources": [
+                  "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "asteria-a200-xt",
+                "configuration": "A200-XT brochure configuration with a 2 km link; other Asteria publications describe different mission packages. CPU, memory, radio module/band, battery capacity and obstacle-sensor SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and mission payloads",
+                "details": "Dual-redundant GPS and omnidirectional obstacle sensing. Quick-connect options include HawkEye-4K, HawkEye-10T, HawkEye Night, HawkEye Dual, Cartis-MS and Cartis Surveyor Plus; they are alternative mission packages.",
+                "sources": [
+                  "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "asteria-a200-xt",
+                "configuration": "A200-XT brochure configuration with a 2 km link; other Asteria publications describe different mission packages. CPU, memory, radio module/band, battery capacity and obstacle-sensor SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight endurance",
+                "details": "Battery-powered platform with low-battery failsafe; up to 40 minutes advertised. Battery voltage, energy and motor model are not published.",
+                "sources": [
+                  "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "asteria-a200-xt",
+                "configuration": "A200-XT brochure configuration with a 2 km link; other Asteria publications describe different mission packages. CPU, memory, radio module/band, battery capacity and obstacle-sensor SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular airframe",
+                "details": "Tool-free assembly and swappable payload connections; 2.6 kg all-up weight in the brochure configuration.",
+                "sources": [
+                  "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "asteria-a200-xt",
+                "configuration": "A200-XT brochure configuration with a 2 km link; other Asteria publications describe different mission packages. CPU, memory, radio module/band, battery capacity and obstacle-sensor SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground mission software",
+                "details": "Asteria MCS handles mission planning, payload control, video and recording. Automated takeoff/landing, geofencing and return-to-launch functions.",
+                "sources": [
+                  "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "asteria-a200-xt",
+                "configuration": "A200-XT brochure configuration with a 2 km link; other Asteria publications describe different mission packages. CPU, memory, radio module/band, battery capacity and obstacle-sensor SKU undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -15358,11 +15762,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -16992,8 +17391,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "autel-evo-ii-original-8k",
+            "configuration": "Original 48 MP/8K EVO II configuration in Autel’s historical specification page; not Pro, Dual or V3. CPU, RAM, flight-controller and radio-chip part numbers undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -17002,33 +17407,111 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Aircraft image storage",
+                "details": "8 GB internal storage, with a supplied 32 GB card and support for up to 256 GB UHS-3 SD storage.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-specification"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-original-8k",
+                "configuration": "Original 48 MP/8K EVO II configuration in Autel’s historical specification page; not Pro, Dual or V3. CPU, RAM, flight-controller and radio-chip part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft and controller link",
+                "details": "2.4–2.4835 GHz in this configuration; regional transmit-power limits apply. Later EVO II revisions have different radio specifications.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-specification"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-original-8k",
+                "configuration": "Original 48 MP/8K EVO II configuration in Autel’s historical specification page; not Pro, Dual or V3. CPU, RAM, flight-controller and radio-chip part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging and navigation",
+                "details": "48 MP half-inch CMOS camera, 25.6 mm-equivalent f/1.8 lens and three-axis gimbal; 8K video at 24/25 fps. Six-direction binocular sensing and GPS positioning.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-specification"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-original-8k",
+                "configuration": "Original 48 MP/8K EVO II configuration in Autel’s historical specification page; not Pro, Dual or V3. CPU, RAM, flight-controller and radio-chip part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft battery",
+                "details": "7,100 mAh, 11.55 V, 82 Wh LiPo 3S battery, 365 g. Advertised endurance 40 minutes or 35 minutes hovering depends on conditions.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-specification"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-original-8k",
+                "configuration": "Original 48 MP/8K EVO II configuration in Autel’s historical specification page; not Pro, Dual or V3. CPU, RAM, flight-controller and radio-chip part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Separate remote controller",
+                "details": "3.26-inch 854×480 OLED display and 5,000 mAh controller battery; these belong to the ground controller, not the aircraft.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-specification"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-original-8k",
+                "configuration": "Original 48 MP/8K EVO II configuration in Autel’s historical specification page; not Pro, Dual or V3. CPU, RAM, flight-controller and radio-chip part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight application",
+                "details": "Autel Explorer for Android and iOS.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-specification"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-original-8k",
+                "configuration": "Original 48 MP/8K EVO II configuration in Autel’s historical specification page; not Pro, Dual or V3. CPU, RAM, flight-controller and radio-chip part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -17060,13 +17543,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -17102,8 +17579,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "autel-evo-ii-pro-v3",
+            "configuration": "Pro V3 camera configuration and Smart Controller SE, using manual V2.0.3 and the current specification tables. Generic V3 records must not be assumed to have this camera: Dual/Enterprise/RTK packages differ. CPU, RAM and radio silicon unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -17112,33 +17595,116 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Aircraft storage",
+                "details": "8 GB onboard image storage. The Smart Controller SE’s 128 GB is separate ground-station storage.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+                  "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-pro-v3",
+                "configuration": "Pro V3 camera configuration and Smart Controller SE, using manual V2.0.3 and the current specification tables. Generic V3 records must not be assumed to have this camera: Dual/Enterprise/RTK packages differ. CPU, RAM and radio silicon unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "SkyLink 2.0 and regional bands",
+                "details": "Aircraft table: 902–928 MHz (FCC/ISED), 2.400–2.4835 GHz, 5.15–5.25 GHz (FCC), and 5.725–5.850 GHz. SRRC narrows 2.4/5.8 GHz bands to 2.476/5.829 GHz. Availability depends on region and firmware.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+                  "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-pro-v3",
+                "configuration": "Pro V3 camera configuration and Smart Controller SE, using manual V2.0.3 and the current specification tables. Generic V3 records must not be assumed to have this camera: Dual/Enterprise/RTK packages differ. CPU, RAM and radio silicon unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera and positioning",
+                "details": "20 MP one-inch CMOS, 29 mm-equivalent f/2.8–f/11 lens. GPS/Galileo/BeiDou/GLONASS; manual identifies IMU, compass, barometer and visual positioning.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+                  "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-camera",
+                  "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-pro-v3",
+                "configuration": "Pro V3 camera configuration and Smart Controller SE, using manual V2.0.3 and the current specification tables. Generic V3 records must not be assumed to have this camera: Dual/Enterprise/RTK packages differ. CPU, RAM and radio silicon unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft smart battery",
+                "details": "XE3_7100_1155: 7,100 mAh, 11.55 V, 82 Wh LiPo 3S. Current aircraft table advertises 39 minutes flying and 35 hovering in no wind.",
+                "sources": [
+                  "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+                  "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-pro-v3",
+                "configuration": "Pro V3 camera configuration and Smart Controller SE, using manual V2.0.3 and the current specification tables. Generic V3 records must not be assumed to have this camera: Dual/Enterprise/RTK packages differ. CPU, RAM and radio silicon unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Smart Controller SE hardware",
+                "details": "6.4-inch OLED; HDMI up to 1080p60, USB-A 2.0 and USB-C charging. Controller Wi-Fi 802.11a/b/g/n/ac and Bluetooth 5.0 do not establish those interfaces on the aircraft.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-pro-v3",
+                "configuration": "Pro V3 camera configuration and Smart Controller SE, using manual V2.0.3 and the current specification tables. Generic V3 records must not be assumed to have this camera: Dual/Enterprise/RTK packages differ. CPU, RAM and radio silicon unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground software",
+                "details": "Smart Controller SE uses Android 11-based software and Autel Explorer. Aircraft firmware is a separate system.",
+                "sources": [
+                  "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autel-evo-ii-pro-v3",
+                "configuration": "Pro V3 camera configuration and Smart Controller SE, using manual V2.0.3 and the current specification tables. Generic V3 records must not be assumed to have this camera: Dual/Enterprise/RTK packages differ. CPU, RAM and radio silicon unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -17170,13 +17736,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -277679,6 +278239,497 @@
             ]
           }
         ]
+      },
+      {
+        "id": "autel-evo-ii-original-8k",
+        "manufacturer": "Autel Robotics",
+        "models": [
+          "EVO II"
+        ],
+        "configuration": "Original 48 MP/8K EVO II configuration in Autel’s historical specification page; not Pro, Dual or V3. CPU, RAM, flight-controller and radio-chip part numbers undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "memory",
+            "component": "Aircraft image storage",
+            "details": "8 GB internal storage, with a supplied 32 GB card and support for up to 256 GB UHS-3 SD storage.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-specification"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft and controller link",
+            "details": "2.4–2.4835 GHz in this configuration; regional transmit-power limits apply. Later EVO II revisions have different radio specifications.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-specification"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging and navigation",
+            "details": "48 MP half-inch CMOS camera, 25.6 mm-equivalent f/1.8 lens and three-axis gimbal; 8K video at 24/25 fps. Six-direction binocular sensing and GPS positioning.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-specification"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft battery",
+            "details": "7,100 mAh, 11.55 V, 82 Wh LiPo 3S battery, 365 g. Advertised endurance 40 minutes or 35 minutes hovering depends on conditions.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-specification"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Separate remote controller",
+            "details": "3.26-inch 854×480 OLED display and 5,000 mAh controller battery; these belong to the ground controller, not the aircraft.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-specification"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight application",
+            "details": "Autel Explorer for Android and iOS.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-specification"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "autel-evo-ii-pro-v3",
+        "manufacturer": "Autel Robotics",
+        "models": [
+          "EVO II Pro V3",
+          "EVO II V3"
+        ],
+        "configuration": "Pro V3 camera configuration and Smart Controller SE, using manual V2.0.3 and the current specification tables. Generic V3 records must not be assumed to have this camera: Dual/Enterprise/RTK packages differ. CPU, RAM and radio silicon unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "memory",
+            "component": "Aircraft storage",
+            "details": "8 GB onboard image storage. The Smart Controller SE’s 128 GB is separate ground-station storage.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+              "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "SkyLink 2.0 and regional bands",
+            "details": "Aircraft table: 902–928 MHz (FCC/ISED), 2.400–2.4835 GHz, 5.15–5.25 GHz (FCC), and 5.725–5.850 GHz. SRRC narrows 2.4/5.8 GHz bands to 2.476/5.829 GHz. Availability depends on region and firmware.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+              "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera and positioning",
+            "details": "20 MP one-inch CMOS, 29 mm-equivalent f/2.8–f/11 lens. GPS/Galileo/BeiDou/GLONASS; manual identifies IMU, compass, barometer and visual positioning.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+              "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-camera",
+              "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft smart battery",
+            "details": "XE3_7100_1155: 7,100 mAh, 11.55 V, 82 Wh LiPo 3S. Current aircraft table advertises 39 minutes flying and 35 hovering in no wind.",
+            "sources": [
+              "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+              "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Smart Controller SE hardware",
+            "details": "6.4-inch OLED; HDMI up to 1080p60, USB-A 2.0 and USB-C charging. Controller Wi-Fi 802.11a/b/g/n/ac and Bluetooth 5.0 do not establish those interfaces on the aircraft.",
+            "sources": [
+              "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground software",
+            "details": "Smart Controller SE uses Android 11-based software and Autel Explorer. Aircraft firmware is a separate system.",
+            "sources": [
+              "https://www.autelrobotics.com/wp-content/uploads/2024/08/EN_EVO-II-Pro-V3-Aircraft-User-Manual_V2.0.3.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ageagle-ebee-x-manual",
+        "manufacturer": "AgEagle (senseFly)",
+        "models": [
+          "eBee X",
+          "eBee X series"
+        ],
+        "configuration": "senseFly eBee X series user manual, manufacturer document hosted by its surveying distributor. Battery, camera and license affect configuration. Autopilot CPU, memory, GNSS chipset and radio-module SKU not named.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Telemetry connection",
+            "details": "2.4 GHz aircraft link to a USB ground modem connected to eMotion. The manual describes AES transmission; it does not establish ordinary Wi-Fi packet compatibility or a unique broadcast signature.",
+            "sources": [
+              "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation sensors and camera bay",
+            "details": "GNSS/RTK antenna, pitot airspeed probe, ambient-temperature sensor and downward LiDAR ground-distance sensor. Camera is interchangeable and powered by the aircraft battery.",
+            "sources": [
+              "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and propulsion",
+            "details": "Brushless electric motor and aileron servos. Standard SI050003: four-cell 3,700 mAh LiHV; endurance SI050017: four-cell 4,900 mAh LiHV. Nominal supply 15.2 V. Published endurance up to 59/90 minutes respectively, configuration-dependent.",
+            "sources": [
+              "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Airframe and servicing",
+            "details": "1.16 m wingspan, 1.6 kg maximum takeoff mass and 300 g maximum camera payload. USB supports firmware updates and log retrieval.",
+            "sources": [
+              "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mission control",
+            "details": "eMotion flight planning and monitoring; RTK/PPK features depend on the applicable license.",
+            "sources": [
+              "https://geomatika-smolcak.hr/wp-content/uploads/2023/05/eBee_X_User_Manual.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aerovironment-p550-2025",
+        "manufacturer": "AeroVironment",
+        "models": [
+          "P550",
+          "AeroVironment P550"
+        ],
+        "configuration": "Public P550 sheet version 250422. Payloads, datalinks and control systems are modular options. CPU, GPU, memory, radio part numbers and battery energy are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Mission and navigation computers",
+            "details": "Diagram identifies separate mission-compute and visual-navigation compute modules; no silicon part numbers are published.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Configurable datalinks",
+            "details": "Silvus and DDL links are listed, with mDDL-FH named in features. Advertised 40–60 km range depends on the ground-station radio; no universal operating frequency is established.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Visual navigation package",
+            "details": "EO and IR sensors plus a laser rangefinder are shown in the VNS assembly; sensor SKUs unspecified. Mission payloads are separate and configurable.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric VTOL architecture",
+            "details": "Battery-electric propulsion with hot-swappable batteries. Manufacturer advertises approximately five hours depending on configuration; battery voltage and capacity unspecified.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf",
+              "https://www.avinc.com/solution/p550/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular payload and airframe",
+            "details": "Tool-free connections and up to 6.8 kg mission payload, within 24.9 kg maximum gross takeoff mass. MOSA architecture supports third-party payloads and radios.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf",
+              "https://www.avinc.com/solution/p550/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mission and ground software",
+            "details": "AVACORE/SPOTR-EDGE; baseline Vigilant Spirit with Quattro STANAG 4586. The 2025 sheet labels Kinesis GCS as future capability, not an installed baseline.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_P550_Datasheet_250422_v03.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aerovironment-puma-3ae-2025",
+        "manufacturer": "AeroVironment",
+        "models": [
+          "Puma 3 AE",
+          "Puma 3AE",
+          "AeroVironment Puma"
+        ],
+        "configuration": "Puma 3 AE sheet version 250707; a specific member of the Puma family, not every historical Puma. Avionics CPU, RAM, storage, GPS/INS chipset, radio part number and battery energy undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Digital Data Link",
+            "details": "Enhanced DDL with AES-256; 20 km standard, 40 km with ERA and 60 km with LRTA. Frequency is configuration-dependent and unspecified in this sheet.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and interchangeable payloads",
+            "details": "GPS/INS module. Mantis i45 EO/IR payload or i45 N with dual LWIR and 5 MP low-light imaging. Visual Navigation System is an optional add-on.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Replaceable propulsion and batteries",
+            "details": "Battery-powered motor/propeller and servo modules are field-replaceable. Standard ISR configuration is advertised at three hours; payload and battery selection change endurance.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf",
+              "https://www.avinc.com/solution/puma-3-ae/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Module and launch options",
+            "details": "Separate replaceable avionics, GPS/INS, DDL, payload, motor, servo and battery assemblies. Hand launch and deep-stall recovery; bungee launcher, VTOL kit and universal transit bay are optional.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground control",
+            "details": "Tomahawk, Crysalis or legacy ground-control systems. Ground computers are distinct from the aircraft’s undisclosed avionics processor.",
+            "sources": [
+              "https://www.avinc.com/wp-content/uploads/2026/03/2025_Puma3AE_Datasheet_250707_v08.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "asteria-a200-xt",
+        "manufacturer": "Asteria Aerospace",
+        "models": [
+          "A200-XT"
+        ],
+        "configuration": "A200-XT brochure configuration with a 2 km link; other Asteria publications describe different mission packages. CPU, memory, radio module/band, battery capacity and obstacle-sensor SKU undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Control and payload link",
+            "details": "Digital link with AES-128 encryption; brochure advertises up to 2 km. Frequency and modulation are not specified.",
+            "sources": [
+              "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and mission payloads",
+            "details": "Dual-redundant GPS and omnidirectional obstacle sensing. Quick-connect options include HawkEye-4K, HawkEye-10T, HawkEye Night, HawkEye Dual, Cartis-MS and Cartis Surveyor Plus; they are alternative mission packages.",
+            "sources": [
+              "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight endurance",
+            "details": "Battery-powered platform with low-battery failsafe; up to 40 minutes advertised. Battery voltage, energy and motor model are not published.",
+            "sources": [
+              "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular airframe",
+            "details": "Tool-free assembly and swappable payload connections; 2.6 kg all-up weight in the brochure configuration.",
+            "sources": [
+              "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground mission software",
+            "details": "Asteria MCS handles mission planning, payload control, video and recording. Automated takeoff/landing, geofencing and return-to-launch functions.",
+            "sources": [
+              "https://asteria.co.in/public/assets/img/pdf/A200-XT_Brochure_Print.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apellix-b2-power-wash",
+        "manufacturer": "Apellix",
+        "models": [
+          "B2 Power Wash",
+          "Apellix B2 Power Wash"
+        ],
+        "configuration": "Commercial B2 cleaning configuration; separate from Blue/NDAA, spray-painting and NDT variants. CPU, memory, radio, battery capacity and sensor part numbers are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Position assistance",
+            "details": "Front obstacle detection and front distance hold. The B2 table does not establish the Blue variant’s additional side sensors.",
+            "sources": [
+              "https://www.apellix.com/products/power-wash-b2/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight batteries and ground equipment",
+            "details": "Battery-powered drone; supplied system includes eight batteries and two chargers, not eight batteries installed simultaneously. Cleaning fluid comes through external hoses and pumps.",
+            "sources": [
+              "https://www.apellix.com/products/power-wash-b2/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cleaning payload and dimensions",
+            "details": "Compatible with standard nozzles, hoses and pumps. Published pump-side pressure up to 4,000 psi, flow up to 11 US gpm, and working height up to 60 m; these are configuration-dependent cleaning ratings.",
+            "sources": [
+              "https://www.apellix.com/products/power-wash-b2/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Weight and accessories",
+            "details": "21.5 lb without batteries, 25 lb payload rating and 55 lb all-up weight class. Extensions and soft-wash hose included; light bar, parachute and ball valve optional.",
+            "sources": [
+              "https://www.apellix.com/products/power-wash-b2/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Cleaning automation",
+            "details": "Apellix Intelligence Premium autonomous-cleaning software is listed as an optional add-on on the product page.",
+            "sources": [
+              "https://www.apellix.com/products/power-wash-b2/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "amp-cortex-founder-2021",
+        "manufacturer": "AMP Robotics",
+        "models": [
+          "AMP Cortex",
+          "Cortex"
+        ],
+        "configuration": "Architecture described directly by AMP founder Matanya Horowitz in January 2021. Not a parts list for later Cortex-C or Delta variants. CPU/GPU SKU, memory, electrical supply and radio hardware not identified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Vision inference hardware",
+            "details": "Color-camera imagery is processed by a GPU using a neural network; GPU manufacturer and model are not given.",
+            "sources": [
+              "https://www.ctvc.co/matanya-horowitz-amp-robotics/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Material recognition",
+            "details": "Upstream color camera identifies items for sorting; camera and lens models unspecified.",
+            "sources": [
+              "https://www.ctvc.co/matanya-horowitz-amp-robotics/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Sorting cell",
+            "details": "Robot receives decisions from the vision system and places material into existing chutes or bins. The conveyor-mounted mechanism operates inside a safety enclosure.",
+            "sources": [
+              "https://www.ctvc.co/matanya-horowitz-amp-robotics/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Model updates and analytics",
+            "details": "Subscription services provide neural-network updates and business-intelligence reporting. No specific networking protocol or public scanner signature is established.",
+            "sources": [
+              "https://www.ctvc.co/matanya-horowitz-amp-robotics/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "amp-delta-compact-2024",
+        "manufacturer": "AMP Robotics",
+        "models": [
+          "Delta Compact"
+        ],
+        "configuration": "2024 Delta Compact datasheet; not a specification for the standard Delta, Tandem or historical Cortex. CPU/GPU, RAM, storage and camera part numbers unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Sorting vision",
+            "details": "AMP Vision imagery is classified by AMP AI, which directs the sorting robot. Exact camera and accelerator hardware are not published.",
+            "sources": [
+              "https://ampsortation.com/technologies/delta"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electrical and pneumatic supplies",
+            "details": "200–240 V AC, single phase, 50–60 Hz, 30 A breaker; 16 A average current. Air supply: 60 CFM at 120 psi, ISO 4.4.4.",
+            "sources": [
+              "https://amp-cms.cdn.prismic.io/amp-cms/65bb3620615e73009ec42d1c_AMP_Delta%E2%84%A2_Compact_Datasheet.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Wired connectivity and operator panel",
+            "details": "IEEE 802.3 Ethernet, CAT5 or better; recommended internet upload 10 Mbps plus 1 Mbps per added unit, download 30 Mbps. Control-cabinet touchscreen: 23 inches.",
+            "sources": [
+              "https://amp-cms.cdn.prismic.io/amp-cms/65bb3620615e73009ec42d1c_AMP_Delta%E2%84%A2_Compact_Datasheet.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Sorting mechanism",
+            "details": "Belt-mounted arm, 135–227 kg system weight, up to two drop locations and 1 kg objects. Up to 65 picks/minute; optional floor mounting and facility emergency-stop integration.",
+            "sources": [
+              "https://amp-cms.cdn.prismic.io/amp-cms/65bb3620615e73009ec42d1c_AMP_Delta%E2%84%A2_Compact_Datasheet.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operations software",
+            "details": "2024 sheet specifies AMP Clarity with an optional Premium subscription. Current Delta page describes AMP Insight; supplied software depends on release and service agreement.",
+            "sources": [
+              "https://amp-cms.cdn.prismic.io/amp-cms/65bb3620615e73009ec42d1c_AMP_Delta%E2%84%A2_Compact_Datasheet.pdf",
+              "https://ampsortation.com/technologies/delta"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -277695,8 +278746,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 294,
-    "devices_with_system_profiles": 280,
-    "devices_with_documented_compute": 130
+    "system_profiles": 303,
+    "devices_with_system_profiles": 288,
+    "devices_with_documented_compute": 132
   }
 }

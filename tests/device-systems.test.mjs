@@ -545,6 +545,35 @@ test('delivery and companion robot evidence keeps revision and accessory boundar
  assert.equal(profileIds(system('Geek+','P800R V6')).length,0);
 });
 
+test('survey drones and sorting systems keep hardware revisions and ground controllers separate',()=>{
+ const original=system('Autel Robotics','EVO II'),v3=system('Autel Robotics','EVO II Pro V3');
+ assert.match(text(original.sections.sensors),/48 MP half-inch/);
+ assert.doesNotMatch(text(original.sections.radios),/902|5.725/);
+ assert.match(text(v3.sections.radios),/902–928 MHz.*FCC\/ISED/);
+ assert.match(text(v3.sections.sensors),/20 MP one-inch/);
+ assert.match(text(v3.sections.memory),/128 GB is separate ground-station storage/);
+ assert.equal(v3.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Autel Robotics','EVO II Dual V3')).includes('autel-evo-ii-pro-v3'),false);
+ const ebee=system('AgEagle (senseFly)','eBee X series');
+ assert.match(text(ebee.sections.power),/SI050003.*3,700.*SI050017.*4,900/);
+ assert.match(text(ebee.sections.radios),/does not establish ordinary Wi-Fi/);
+ const puma=system('AeroVironment','Puma 3 AE');
+ assert.match(text(puma.sections.sensors),/i45 N.*5 MP/);
+ assert.match(text(puma.sections.interfaces),/VTOL kit.*optional/);
+ assert.equal(puma.sections.compute.status,'not-established');
+ assert.match(text(system('AeroVironment','P550').sections.software),/Kinesis GCS as future/);
+ const b2=system('Apellix','B2 Power Wash');
+ assert.match(text(b2.sections.power),/not eight batteries installed simultaneously/);
+ assert.doesNotMatch(text(b2.sections.sensors.facts.map(f=>f.details)),/has.*side sensors/);
+ assert.equal(profileIds(system('Apellix','Blue')).includes('apellix-b2-power-wash'),false);
+ const cortex=system('AMP Robotics','AMP Cortex'),delta=system('AMP Robotics','Delta Compact');
+ assert.match(text(cortex.sections.compute),/GPU.*model are not given/);
+ assert.equal(cortex.sections.power.status,'not-established');
+ assert.match(text(delta.sections.power),/30 A breaker; 16 A average/);
+ assert.equal(delta.sections.radios.status,'not-established');
+ assert.match(text(system('Asteria Aerospace','A200-XT').sections.sensors),/alternative mission packages/);
+});
+
 test('marine, agricultural and humanoid configurations retain their hardware boundaries',()=>{
  const a4=system('AeiROBOT','Alice 4'),m1=system('AeiROBOT','ALICE M1'),a5=system('AeiROBOT','ALICE 5');
  assert.match(text(a4.sections.compute),/i7-1370PE/);

@@ -70,8 +70,8 @@
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
       "rows": 925,
-      "bytes": 10372660,
-      "sha256": "a2d68c23e8ae36873dcf7d8d60ef1a8e19b5dbefe923b01e9f1b6aba66c9cc38",
+      "bytes": 10434954,
+      "sha256": "e938ce0e960312434f7a23a03afbc2fa23a9cf555a6d4495de54820ee132e9c1",
       "collections": {
         "devices": 925,
         "radio_allocations": 182,
@@ -85,9 +85,9 @@
         "devices_with_mac_allocations": 236,
         "devices_with_rf_information": 119,
         "devices_with_scanner_signatures": 11,
-        "system_profiles": 294,
-        "devices_with_system_profiles": 280,
-        "devices_with_documented_compute": 130
+        "system_profiles": 303,
+        "devices_with_system_profiles": 288,
+        "devices_with_documented_compute": 132
       }
     }
   ],
@@ -154,15 +154,15 @@
     },
     {
       "path": "integration/device-systems.json",
-      "sha256": "1dcc81c7a3c9ba351aa2ab6354660bf803d80bd0ab14a5148d012929e8d7f4be"
+      "sha256": "55e44dbcddc20935566cfc5da926e356ae3a0f04e113f0caf29a358b6639650c"
     },
     {
       "path": "public/device-system-model.mjs",
-      "sha256": "7cdc6a1e9cf37bb9b4c6f8c51849567b3d38361785995fae01994eef355f822b"
+      "sha256": "2abaecfd5ff900a1beef5c0d5e123d304cb47ee8fc447a509c0c861ac39a89c2"
     },
     {
       "path": "public/device-system-data.mjs",
-      "sha256": "ed0ff75367c4b708b8e819df58ae63de54a85ff00014cee9fab272860634a5f1"
+      "sha256": "9d38e033ed4aaf7d37c1299fd072062dfebbfc18aa93e9f855ed73ced222f7f7"
     },
     {
       "path": "scripts/enrich_device_systems.mjs",
