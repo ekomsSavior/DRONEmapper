@@ -9,6 +9,42 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 67 separates ground-vehicle variants and retrofit electronics',()=>{
+ const rack=system('Gravis Robotics','Gravis Autonomous Excavator System');
+ assert.match(text(rack.sections.compute),/edge computing.*without an internet/);
+ assert.equal(rack.sections.power.status,'not-established');
+ assert.doesNotMatch(text(rack.sections.compute.facts),/Jetson|Orin/);
+ const roii=system('Autonomous A2Z','ROii');
+ assert.match(text(roii.sections.sensors),/Four LiDARs, five radars, eight cameras/);
+ assert.match(text(roii.sections.power),/70 kWh/);
+ assert.equal(profileIds(system('Autonomous A2Z','COii')).includes('a2z-roii-published-system'),false);
+ assert.equal(profileIds(system('Micropolis Robotics','M-Patrol')).length,3);
+ const m1=system('Micropolis Robotics','M1 Urban'),m2=system('Micropolis Robotics','M2 Urban');
+ assert.match(text(m1.sections.sensors),/Eight intelligent/);
+ assert.match(text(m2.sections.sensors),/Six intelligent/);
+ assert.doesNotMatch(text(m1.sections.power.facts),/53 kWh|16 kWh|38.5 kWh/);
+ assert.equal(m1.sections.memory.status,'not-established');
+ assert.match(text(system('Micropolis Robotics','M-Platform electronics (2026 reference)').configurations),/not a semiconductor identification/);
+});
+
+test('batch 67 keeps ultrasound and wearable revisions distinct from RF identity',()=>{
+ const sr3=system('Square Robot','SR-3');
+ assert.match(text(sr3.sections.sensors),/10 MHz/);
+ assert.doesNotMatch(text(sr3.sections.radios.facts.map(f=>f.details)),/10 MHz/);
+ assert.equal(sr3.sections.compute.status,'not-established');
+ const old=system('Halter','Halter collar (tower-connected generation)'),sat=system('Halter','Halter collar (2026 direct-to-satellite)');
+ assert.match(text(old.sections.radios),/farm towers/);
+ assert.doesNotMatch(text(old.sections.radios.facts.map(f=>f.details)),/satellite/);
+ assert.match(text(sat.sections.radios),/directly through satellites/);
+ assert.equal(profileIds(system('Halter','Halter Smart Collar')).length,2);
+ for(const [maker,name] of [['Square Robot','SR-3'],['Halter','Halter Smart Collar'],['CASUN Intelligent Equipment','C5 Series Forklift AGV'],['August Robotics','August Robotics Drilling Robot']]){
+  const s=system(maker,name);
+  assert.equal(s.complete_bill_of_materials,false);
+  assert.equal(profileIds(system('Unrelated manufacturer',name)).length,0);
+  assert.equal(profileIds(system(maker,name,{kind:'regulatory-equipment'})).length,0);
+ }
+});
+
 test('batch 66 binds dated aircraft references without conflating revisions',()=>{
  const old=name=>system('Unknown manufacturer',name);
  assert.equal(profileIds(old('Raven')).length,2);

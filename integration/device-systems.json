@@ -41210,6 +41210,526 @@
           ]
         }
       ]
+    },
+    {
+      "id": "gravis-rack-retrofit",
+      "manufacturer": "Gravis Robotics",
+      "models": [
+        "Gravis RACK",
+        "Gravis Autonomous Excavator System"
+      ],
+      "configuration": "RACK rooftop retrofit and Slate operator interface. Host excavator or loader engine, battery and hydraulic specifications vary and are not part of this kit description. Exact CPU, RAM, radio modules and Wi-Fi channels are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Edge computer",
+          "details": "Automotive-grade onboard edge computing supports operation without an internet connection; silicon model is unspecified.",
+          "sources": [
+            "https://www.gravisrobotics.com/rack"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "RACK and smart masts",
+          "details": "Forward camera and LiDAR; rear masts combine RTK GNSS, wide-angle HDR cameras and 3D LiDAR. Surround-view sensing supports terrain reconstruction.",
+          "sources": [
+            "https://www.gravisrobotics.com/rack"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Site communications",
+          "details": "Long-range Wi-Fi is built into the smart masts. No network-name pattern, MAC allocation or unique receiver signature is published.",
+          "sources": [
+            "https://www.gravisrobotics.com/rack"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator and machine interfaces",
+          "details": "Rooftop kit for compatible excavators and wheel loaders; Slate tablet includes a wireless stop.",
+          "sources": [
+            "https://www.gravisrobotics.com/rack"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Earthmoving software",
+          "details": "Sensor fusion produces 3D terrain and cut/fill views; the copilot supports loading and excavation workflows.",
+          "sources": [
+            "https://www.gravisrobotics.com/rack"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2z-roii-published-system",
+      "manufacturer": "Autonomous A2Z",
+      "models": [
+        "ROii"
+      ],
+      "configuration": "Manufacturer ROii mid-shuttle specification. This is not COii delivery-vehicle hardware. CPU/GPU, RAM, storage and modem part numbers are not published; 4G/5G support does not establish a unique passive signature.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Redundant controllers",
+          "details": "Multiple controllers monitor one another and evaluate faults; processor silicon is unspecified.",
+          "sources": [
+            "https://autoa2z.ai/ROII"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception and navigation",
+          "details": "Four LiDARs, five radars, eight cameras, wheel encoders, dual GNSS and one IMU.",
+          "sources": [
+            "https://autoa2z.ai/ROII"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Cellular connectivity",
+          "details": "The equipment table lists 4G/5G alongside GNSS; bands and modem manufacturer are not stated.",
+          "sources": [
+            "https://autoa2z.ai/ROII"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Traction and battery",
+          "details": "100 kW electric front-wheel drive and 70 kWh lithium-ion battery. Published charging times: six hours slow or two hours quick.",
+          "sources": [
+            "https://autoa2z.ai/ROII"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Passenger and safety equipment",
+          "details": "Nine seats plus two standing places, automatic wheelchair ramp, USB charging, information displays, door anti-pinch sensors and emergency-stop controls.",
+          "sources": [
+            "https://autoa2z.ai/ROII"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Vehicle control",
+          "details": "In-house autonomous-driving software combines sensor fusion with controller redundancy.",
+          "sources": [
+            "https://autoa2z.ai/ROII"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "micropolis-platform-electronics-2026",
+      "manufacturer": "Micropolis Robotics",
+      "models": [
+        "M-Platform electronics (2026 reference)"
+      ],
+      "configuration": "Current manufacturer platform architecture, shown as a separate reference for the M-Patrol family. Component selection depends on platform and revision; this is not an installed bill of materials for every historical patrol robot. MCU-1.1.0 is a control-unit product name, not a semiconductor identification.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Control electronics",
+          "details": "MCU-1.1.0 master controller runs real-time control and sensor acquisition; RCU-0.1 handles auxiliary actuators. Exact CPU/GPU silicon and memory are unpublished.",
+          "sources": [
+            "https://micropolis.ai/hardware-platform"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle bus and motor drive",
+          "details": "CAN backbone; RCU isolated I/O and H-bridge outputs; MDU 1.0 provides three-phase BLDC commutation and CAN torque control.",
+          "sources": [
+            "https://micropolis.ai/hardware-platform"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Power-management alternatives",
+          "details": "PMU-2.1 accepts 24–48 V; PDU 1.0 distributes protected circuits. Separate HV-PDU 1.0 handles 400–800 V. These are component ratings, not one vehicle-wide voltage.",
+          "sources": [
+            "https://micropolis.ai/hardware-platform"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery architectures",
+          "details": "Liquid-cooled LiFePO4 packs with BMS and CAN telemetry: M01 400 V/38.5 kWh; M1.5 96 V/53 kWh; M2 96 V/16 kWh. Select the applicable platform.",
+          "sources": [
+            "https://micropolis.ai/hardware-platform"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Micropolis Robotics",
+          "models": [
+            "M-Patrol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "micropolis-m1-urban",
+      "manufacturer": "Micropolis Robotics",
+      "models": [
+        "M1 Urban"
+      ],
+      "configuration": "Current M1 Urban member of the M-Patrol family; not an assertion about every older M01-P deployment. NVIDIA branding does not identify a particular Jetson module. RAM, storage and battery-pack part number are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Autonomy compute",
+          "details": "Manufacturer describes NVIDIA-powered processing without naming the processor model.",
+          "sources": [
+            "https://micropolis.ai/products/m1-urban"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Surveillance and obstacle sensing",
+          "details": "Eight intelligent vision sensors and PTZ imaging, with all-around obstacle detection.",
+          "sources": [
+            "https://micropolis.ai/products/m1-urban"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Supported links",
+          "details": "4G/5G, Wi-Fi and an unspecified radio link; no unique broadcast identifier is supplied.",
+          "sources": [
+            "https://micropolis.ai/products/m1-urban"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Drivetrain and endurance",
+          "details": "Four in-wheel motors; advertised battery endurance fourteen hours and charging time six hours, subject to operating conditions.",
+          "sources": [
+            "https://micropolis.ai/products/m1-urban"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Platform and payload",
+          "details": "1,800 kg platform with up to 500 kg payload; double/crab steering and an integrated drone compartment. Drone model is unspecified.",
+          "sources": [
+            "https://micropolis.ai/products/m1-urban"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Micropolis Robotics",
+          "models": [
+            "M-Patrol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "micropolis-m2-urban",
+      "manufacturer": "Micropolis Robotics",
+      "models": [
+        "M2 Urban"
+      ],
+      "configuration": "Current compact M2 Urban patrol configuration. Its six vision sensors and ten-hour endurance must not be replaced by M1 specifications. NVIDIA processor model, memory and modem SKUs are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Autonomy compute",
+          "details": "NVIDIA-powered processing; specific chip or module not named.",
+          "sources": [
+            "https://micropolis.ai/products/m2-urban"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging",
+          "details": "Six intelligent vision sensors and PTZ imaging; all-around obstacle detection.",
+          "sources": [
+            "https://micropolis.ai/products/m2-urban"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Supported links",
+          "details": "4G/5G, Wi-Fi and unspecified radio communications.",
+          "sources": [
+            "https://micropolis.ai/products/m2-urban"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric propulsion",
+          "details": "Four in-wheel motors; manufacturer advertises ten-hour battery operation and 2.9-hour charging.",
+          "sources": [
+            "https://micropolis.ai/products/m2-urban"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Compact chassis",
+          "details": "453 kg robot, up to 350 kg payload, double/crab steering and software-limited 25 km/h speed.",
+          "sources": [
+            "https://micropolis.ai/products/m2-urban"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Micropolis Robotics",
+          "models": [
+            "M-Patrol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "square-robot-sr3-2026",
+      "manufacturer": "Square Robot",
+      "models": [
+        "SR-3"
+      ],
+      "configuration": "August 2026 manufacturer catalog for the submersible tank-inspection robot. Wireless technology, computer silicon, memory and battery specification are not disclosed. Its 10 MHz ultrasound is an acoustic inspection frequency, not an RF scanning channel.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Ultrasonic inspection",
+          "details": "Four 64-element PAUT probes operate at 10 MHz, with overlap between probes; 208 measurements per sequence across 312 mm.",
+          "sources": [
+            "https://squarerobot.com/resources/technical-document/sr-3-catalog"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging and elevation",
+          "details": "High-definition cameras and lights, forward sensor suite and onboard pressure sensor for bottom-elevation measurements.",
+          "sources": [
+            "https://squarerobot.com/resources/technical-document/sr-3-catalog"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mobility and structure",
+          "details": "Eight thrusters, three omniwheels, two shell rollers, flotation/ballast and sediment removal. Robot mass 120 kg; dimensions 1.70 × 0.51 × 0.45 m.",
+          "sources": [
+            "https://squarerobot.com/resources/technical-document/sr-3-catalog"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless subsystem",
+          "details": "Wireless communications are listed, but protocol and frequency are not identified.",
+          "sources": [
+            "https://squarerobot.com/resources/technical-document/sr-3-catalog"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation and data alignment",
+          "details": "Proprietary navigation operates inside GPS-denied tanks and relates inspection imagery to PAUT measurements and robot position.",
+          "sources": [
+            "https://squarerobot.com/resources/technical-document/sr-3-catalog"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "august-dale-drilling",
+      "manufacturer": "August Robotics",
+      "models": [
+        "DALE drilling robot",
+        "August Robotics Drilling Robot"
+      ],
+      "configuration": "Published DALE drilling configuration using DEWALT tooling. Processor, RAM, radio, battery and motor SKUs are not disclosed. The source has a misaligned dust-extraction table cell; no numeric specification is inferred from that cell.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Drilling hardware",
+          "details": "DEWALT SDS Max rotary-hammer tooling with masonry/rebar bits; kit includes robot, guiding station and tablet.",
+          "sources": [
+            "https://www.augustrobotics.com/construction/drilling"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Obstacle and tool sensing",
+          "details": "Obstacle/drop detection, certified-bit identification, and cameras monitoring hole quality and dust accumulation.",
+          "sources": [
+            "https://www.augustrobotics.com/construction/drilling"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Dust control",
+          "details": "Automated dust monitoring and vacuum extraction are part of the drilling system.",
+          "sources": [
+            "https://www.augustrobotics.com/construction/drilling"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operator workflow",
+          "details": "Windows tablet application accepts CAD/CSV drilling points, optimizes paths and coordinates multiple robots.",
+          "sources": [
+            "https://www.augustrobotics.com/construction/drilling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "halter-collar-tower-generation",
+      "manufacturer": "Halter",
+      "models": [
+        "Halter collar (tower-connected generation)"
+      ],
+      "configuration": "Existing library wearable record, not a robot. Manufacturer hardware interview and April 2026 explanation of the prior tower-based architecture. CPU, battery capacity and radio chipset are not disclosed. Satellite capability is documented separately.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Solar supply",
+          "details": "Four solar panels provide power for collar operation; energy-storage capacity is not specified.",
+          "sources": [
+            "https://www.halterhq.com/en-us/articles/a-closer-look-at-the-halter-collar"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Position and animal monitoring",
+          "details": "GPS-enabled collar supports location and behavior monitoring; individual motion-sensor parts are not identified.",
+          "sources": [
+            "https://www.halterhq.com/en-us/articles/a-closer-look-at-the-halter-collar"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Earlier network architecture",
+          "details": "Proprietary long-range radio connects collars to Halter farm towers.",
+          "sources": [
+            "https://www.halterhq.com/news/halter-launches-world-first-virtual-fencing-via-satellite"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Application and updates",
+          "details": "Mobile application manages collar functions; firmware features can be updated over the air.",
+          "sources": [
+            "https://www.halterhq.com/en-us/articles/a-closer-look-at-the-halter-collar"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Halter",
+          "models": [
+            "Halter Smart Collar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "halter-collar-satellite-2026",
+      "manufacturer": "Halter",
+      "models": [
+        "Halter collar (2026 direct-to-satellite)"
+      ],
+      "configuration": "April 2026 satellite-connected product announcement. This does not establish a satellite modem in older tower-connected collars. Exact processor, memory, modem SKU and operating bands are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Satellite-to-cloud connection",
+          "details": "Collars communicate directly through satellites, removing the requirement for Halter towers on the ranch.",
+          "sources": [
+            "https://www.halterhq.com/news/halter-launches-world-first-virtual-fencing-via-satellite"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Power architecture",
+          "details": "Solar-powered wearable; battery chemistry and capacity are not specified in the announcement.",
+          "sources": [
+            "https://www.halterhq.com/news/halter-launches-world-first-virtual-fencing-via-satellite"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Location and behavior",
+          "details": "GPS-enabled collars support animal-location and behavioral monitoring.",
+          "sources": [
+            "https://www.halterhq.com/news/halter-launches-world-first-virtual-fencing-via-satellite"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Connected platform",
+          "details": "Cloud-connected collar data feeds ranch management, behavior monitoring and virtual-fencing features.",
+          "sources": [
+            "https://www.halterhq.com/news/halter-launches-world-first-virtual-fencing-via-satellite"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Halter",
+          "models": [
+            "Halter Smart Collar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "casun-c5-family-catalog",
+      "manufacturer": "CASUN Intelligent Equipment",
+      "models": [
+        "C5 Series Forklift AGV"
+      ],
+      "configuration": "Manufacturer C5 family catalog; model-specific values remain separated. Retrieved indexed catalog text because the PDF host returns HTTP 416. CPU, RAM, motor models and battery capacities are not established by the reviewed excerpt. No broad manufacturer OUI is inferred.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Guidance and protection",
+          "details": "Laser positioning/navigation with front/rear obstacle sensing, mechanical anti-collision protection and emergency stops.",
+          "sources": [
+            "https://www.casun-agv.com/uploads/file/casun-product-catalog.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Fork protection by variant",
+          "details": "C5-B2 uses laser ranging; C5-B6 and C5-D1 use mechanical and photoelectric protection. C5-Q4/Q5/P2 list mechanical protection.",
+          "sources": [
+            "https://www.casun-agv.com/uploads/file/casun-product-catalog.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Fleet connectivity",
+          "details": "The C5 model table lists Wi-Fi/5G communication; exact bands and modules are not named.",
+          "sources": [
+            "https://www.casun-agv.com/uploads/file/casun-product-catalog.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Handling variants",
+          "details": "B2/B6 handle loads, D1 stacks, Q4/Q5 are reach configurations, and P2 is counterbalanced.",
+          "sources": [
+            "https://www.casun-agv.com/uploads/file/casun-product-catalog.pdf"
+          ]
+        }
+      ]
     }
   ]
 }
