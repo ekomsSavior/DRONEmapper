@@ -21688,6 +21688,506 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nilfisk-liberty-sc60-2020-system",
+      "manufacturer": "Nilfisk",
+      "models": [
+        "Nilfisk Liberty SC60",
+        "Liberty SC60",
+        "SC60 X71D",
+        "SC60 X71C"
+      ],
+      "configuration": "November 2020 manual 56091234 for X71D/56123000 and X71C/56123002, plus manufacturer data FAQ. CPU, RAM, camera/LiDAR part numbers, modem bands and radio MAC allocations undisclosed. Later SC60 regional variants may differ.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Autonomy controller",
+          "details": "Brain Control Module (BCM), identified in the manual; underlying processor and memory are not named.",
+          "sources": [
+            "https://nilfiskmexico.com/wp-content/uploads/2022/12/OM56091234-1.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and obstacle sensing",
+          "details": "Two 2D LiDAR functions: mapping and drop-off detection. Front, left and right each have a 2D environment camera and 3D obstacle camera.",
+          "sources": [
+            "https://nilfiskmexico.com/wp-content/uploads/2022/12/OM56091234-1.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Cellular modem",
+          "details": "Built-in 4G LTE modem connects to Brain Corp’s Robotic Operations Center. The manual’s phone notification pairing uses the cloud/SMS service, not evidence of a Bluetooth link.",
+          "sources": [
+            "https://nilfiskmexico.com/wp-content/uploads/2022/12/OM56091234-1.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and cleaning hardware",
+          "details": "24 V battery system, maximum 390 Ah. Both versions have 99 L solution and 104 L recovery tanks; X71D uses two disc brushes, X71C two cylindrical brushes.",
+          "sources": [
+            "https://nilfiskmexico.com/wp-content/uploads/2022/12/OM56091234-1.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator controls",
+          "details": "Autonomy touchscreen, manual driving controls and stop functions; routes are taught by an operator and anchored to visual Home Markers.",
+          "sources": [
+            "https://nilfiskmexico.com/wp-content/uploads/2022/12/OM56091234-1.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation and fleet services",
+          "details": "BrainOS runs taught routes with obstacle handling; ROC provides software updates and optional operator notifications.",
+          "sources": [
+            "https://nilfiskmexico.com/wp-content/uploads/2022/12/OM56091234-1.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Local machine data",
+          "details": "FAQ describes encrypted onboard storage, routinely overwritten with use, and limited transfers to Brain Corp’s cloud. Storage capacity and physical drive model are not specified.",
+          "sources": [
+            "https://www.nilfisk.com/media/cnodeeyh/sc60-machine-data-faq-letter_en.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "naver-rookie-original-cloud-edge-reference",
+      "manufacturer": "Naver Labs",
+      "models": [
+        "Rookie",
+        "Rookie (2022–2024 architecture)"
+      ],
+      "configuration": "Original Rookie service at NAVER 1784 (2022) and separately dated ADLINK integration announcement (May 2024). Processor SKU, RAM, battery and original sensor BOM undisclosed. The later Rookie 2 hardware is a separate configuration.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "2024 edge-platform integration",
+          "details": "ADLINK announced adapting its MVP Series intelligent edge platforms to Rookie. Exact MVP model and CPU are unspecified; this announcement does not identify the computer in every 2022 robot.",
+          "sources": [
+            "https://www.adlinktech.com/en/News/adlink-naver-labs-partnership-amr"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Private 5G installation",
+          "details": "Samsung’s NAVER 1784 network supports 4.7 GHz and 28 GHz. These are network capabilities, not confirmation of both bands in every robot modem.",
+          "sources": [
+            "https://news.samsung.com/us/samsung-naver-cloud-koreas-first-private-5g-network/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Delivery service",
+          "details": "Indoor package, drink and lunch delivery integrated with NAVER’s building services.",
+          "sources": [
+            "https://www.adlinktech.com/en/News/adlink-naver-labs-partnership-amr",
+            "https://news.samsung.com/us/samsung-naver-cloud-koreas-first-private-5g-network/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Cloud-assisted control",
+          "details": "NAVER Cloud supplies shared robot intelligence using digital twins and 3D/HD maps over private 5G. Cloud compute is separate from the robot’s physical controller.",
+          "sources": [
+            "https://news.samsung.com/us/samsung-naver-cloud-koreas-first-private-5g-network/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "naver-rookie2-2025-system",
+      "manufacturer": "Naver Labs",
+      "models": [
+        "Rookie 2"
+      ],
+      "configuration": "November 2025 manufacturer architecture description and current product page. Onboard processor, RAM, radio module and battery capacity undisclosed. Original Rookie’s 2024 MVP announcement is not a confirmed Rookie 2 BOM.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Expanded perception",
+          "details": "Multiple cameras, LiDAR, ToF and barometric sensors; force-sensing bumpers. Individual models and sensor counts unspecified.",
+          "sources": [
+            "https://www.naverlabs.com/en/blogDetail?seq=34093"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Cloud connection",
+          "details": "Manufacturer describes a 5G cloud robot; exact modem, band support and antennas are not identified.",
+          "sources": [
+            "https://www.naverlabs.com/en/rookie"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging and stopping",
+          "details": "Autonomous charging dock and physical brakes. Battery chemistry, capacity, charger rating and drive motors are not specified.",
+          "sources": [
+            "https://www.naverlabs.com/en/blogDetail?seq=34093"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Building and cargo integration",
+          "details": "Modular cargo arrangement, emergency-stop button and hidden handle control; elevator, door, lighting and building-management integration.",
+          "sources": [
+            "https://www.naverlabs.com/en/blogDetail?seq=34093"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control and operating system",
+          "details": "ARC brain multi-robot control, ARC eye localization and web-platform-based ARC mind OS. Combines cloud and on-device localization; local safe-path behavior is described for lost connectivity.",
+          "sources": [
+            "https://www.naverlabs.com/en/blogDetail?seq=34093"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nuro-r2-2020-hardware",
+      "manufacturer": "Nuro",
+      "models": [
+        "Nuro R2",
+        "R2"
+      ],
+      "configuration": "Manufacturer 2020 second-generation vehicle sheet. CPU/GPU, RAM, storage, modem and sensor part numbers undisclosed. Later Nuro Driver/Thor and R3 hardware is not assigned to R2.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Vehicle perception",
+          "details": "Surround cameras, thermal camera, LiDAR, short- and long-range radar, ultrasonics and emergency-vehicle audio detection.",
+          "sources": [
+            "https://nuro.sfo3.digitaloceanspaces.com/Nuro_R2-Spec-Sheet-Letter.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric platform",
+          "details": "31 kWh battery; Level 2 charging at a published 6.6 kWh per hour. Maximum 25 mph; gross weight 1,150 kg and payload 190 kg.",
+          "sources": [
+            "https://nuro.sfo3.digitaloceanspaces.com/Nuro_R2-Spec-Sheet-Letter.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Body and customer access",
+          "details": "2.74 × 1.10 × 1.88 m; 0.634 m³ cargo volume, curbside access doors and external touchscreen.",
+          "sources": [
+            "https://nuro.sfo3.digitaloceanspaces.com/Nuro_R2-Spec-Sheet-Letter.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Redundant control and signaling",
+          "details": "Redundant braking/control systems, automotive lights/signals and pedestrian sound generator.",
+          "sources": [
+            "https://nuro.sfo3.digitaloceanspaces.com/Nuro_R2-Spec-Sheet-Letter.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "primech-hytron-2025-brochure",
+      "manufacturer": "Primech AI",
+      "models": [
+        "Hytron (2025 brochure)",
+        "Hytron"
+      ],
+      "configuration": "Manufacturer brochure uploaded February 2025. CPU, memory, radio modules, sensors and arm model are not named. Its battery figures differ from the current parent-company page; later Orin NX hardware is not presumed installed in this revision.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Mobile platform",
+          "details": "653 × 400 × 1,412 mm, 100 kg and maximum 0.6 m/s. Brochure lists 2.5 hours battery life and 0.5 hour charge time; battery capacity/chemistry unspecified.",
+          "sources": [
+            "https://primech.ai/wp-content/uploads/2025/02/Primech-AI-New-Hytron.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cleaning and tanks",
+          "details": "Robot arm performs bowl brushing, wiping and door interaction; e-water jet, blower and floor mopping. Tanks: 10 L fresh water, 5 L wastewater, 2.5 L detergent.",
+          "sources": [
+            "https://primech.ai/wp-content/uploads/2025/02/Primech-AI-New-Hytron.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Dock and facilities",
+          "details": "Automatic charging, water refill and wastewater discharge; elevator riding capability. Dock dimensions are omitted here because the brochure’s printed size needs clarification.",
+          "sources": [
+            "https://primech.ai/wp-content/uploads/2025/02/Primech-AI-New-Hytron.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operations dashboard",
+          "details": "Task/status monitoring, battery and water alerts, and IoT/building-management integration. Transport protocol and radio hardware unspecified.",
+          "sources": [
+            "https://primech.ai/wp-content/uploads/2025/02/Primech-AI-New-Hytron.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "primech-hytron-current-orin-nx",
+      "manufacturer": "Primech AI",
+      "models": [
+        "Hytron (current Orin NX reference)",
+        "Hytron"
+      ],
+      "configuration": "Current Primech Holdings product description reviewed November 2026. Exact Orin NX memory variant, carrier board, cameras, radio modules, arm and battery capacity undisclosed. HYTRON LITE is a separate product.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard computing",
+          "details": "NVIDIA Jetson Orin NX. The source does not identify the memory variant, carrier or separate motor-control processor.",
+          "sources": [
+            "https://primechholdings.com/companies/primech-ai/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Current operating cycle",
+          "details": "Manufacturer states around four hours operation and two hours recharge; autonomous docking, refill and drainage. Older brochure timing is kept in its own configuration.",
+          "sources": [
+            "https://primechholdings.com/companies/primech-ai/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cleaning mechanism",
+          "details": "Scrubbing, disinfecting, rinsing and drying across bathroom fixtures and floors using electrolysed water and an ozone-enhanced process.",
+          "sources": [
+            "https://primechholdings.com/companies/primech-ai/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous navigation",
+          "details": "SLAM navigation between cleaning zones and floors. Sensor models and localization radio signatures are not disclosed.",
+          "sources": [
+            "https://primechholdings.com/companies/primech-ai/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neolix-x3-public-system-reference",
+      "manufacturer": "Neolix Technologies",
+      "models": [
+        "Neolix X3",
+        "X3"
+      ],
+      "configuration": "Current X3/X6 manufacturer technology page and separately dated November 2025 RoboSense filing. Exact CPU, RAM, batteries and radio modules undisclosed by these sources. X3 Plus and other revisions are not treated as identical.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Central integrated module",
+          "details": "Manufacturer architecture combines onboard computing, sensors, thermal management, connectivity, cleaning and antenna modules in a central assembly; no processor SKU named.",
+          "sources": [
+            "https://www.neolix.cn/productTechnology"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Manufacturer perception architecture",
+          "details": "X3/X6 technology page describes 12 HD cameras and one LiDAR with fused vision/BEV perception. This does not establish one unchanged sensor set for all historical X3 vehicles.",
+          "sources": [
+            "https://www.neolix.cn/productTechnology"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Dated LiDAR installation",
+          "details": "RoboSense’s November 2025 filing identifies Fairy LiDAR installed on Neolix X3 at its November 14 launch. This does not backdate Fairy to earlier X3 builds.",
+          "sources": [
+            "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1125/2025112501075.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Vehicle architecture",
+          "details": "Modular automotive skateboard chassis supports different body sizes; this source does not state an X3 traction battery or motor part number.",
+          "sources": [
+            "https://www.neolix.cn/productTechnology"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Perception and planning",
+          "details": "Transformer-based bird’s-eye-view perception with an occupancy network to represent drivable space; point-to-point routes and autonomous parking.",
+          "sources": [
+            "https://www.neolix.cn/productTechnology"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ottonomy-ottobot-2022-2024-reference",
+      "manufacturer": "Ottonomy",
+      "models": [
+        "Ottobot",
+        "Ottobot 2.0"
+      ],
+      "configuration": "Manufacturer 2022 architecture/launch and NVIDIA October 2024 compute reference. Exact Jetson module, RAM, battery and radio hardware undisclosed. Current Ambarella N1/Contextual AI 2.0 integration is separately dated, not proof that both compute platforms are fitted together.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "2024 onboard acceleration",
+          "details": "NVIDIA Jetson, model unspecified, runs TensorRT inference alongside Ottonomy’s Contextual AI.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/india-robotics-nvidia/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation inputs",
+          "details": "Manufacturer describes real-time fusion of 3D LiDAR and RGB cameras for metric/semantic navigation maps; sensor models unspecified.",
+          "sources": [
+            "https://ottonomy.io/ces/in-the-news/ottonomy-io-unveils-high-information-navigation-mapping-for-autonomous-robots-at-nvidia-gtc-2022/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Delivery chassis",
+          "details": "Ottobot 2.0 has customizable cargo cabins and swerve-drive/crab mobility; zero-radius turns are documented by NVIDIA.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/ottonomy-closes-3-3-million-seed-round-led-by-pi-ventures-and-announces-ottobot-2-0--301598125.html",
+            "https://blogs.nvidia.com/blog/india-robotics-nvidia/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "2022 5G pilot",
+          "details": "Manufacturer reports completed Newlab tests using Verizon 5G. This is a pilot configuration, not guaranteed radio equipment on every delivered Ottobot.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/ottonomy-closes-3-3-million-seed-round-led-by-pi-ventures-and-announces-ottobot-2-0--301598125.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation",
+          "details": "Contextual AI uses information-rich maps for indoor/outdoor operation.",
+          "sources": [
+            "https://ottonomy.io/ces/in-the-news/ottonomy-io-unveils-high-information-navigation-mapping-for-autonomous-robots-at-nvidia-gtc-2022/",
+            "https://blogs.nvidia.com/blog/india-robotics-nvidia/"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Later compute reference",
+          "details": "Current manufacturer page describes Contextual AI 2.0 integration with Ambarella N1-family SoCs. It does not identify the exact N1 SKU or confirm a retrofit to the 2022–2024 configuration.",
+          "sources": [
+            "https://ottonomy.io/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocean-aero-triton-13kwh-sheet",
+      "manufacturer": "Ocean Aero",
+      "models": [
+        "Triton (13.2 kWh sheet)",
+        "Triton"
+      ],
+      "configuration": "Manufacturer two-page sheet, hosted in a July 2024 upload path; document itself has no visible revision date. Processor, memory, sensor models and radio model/bands undisclosed. Current 35 kWh platform is kept separate.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Energy and propulsion",
+          "details": "13.2 kWh battery and 740 W peak solar collection, sail and keel-mounted thrusters. Published length 4.4 m and mass 350 kg.",
+          "sources": [
+            "https://static1.squarespace.com/static/61e9dac712992747079c19d7/t/66a27cc48e0c4d02d0628389/1721924809678/Triton_AUSV.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Surface communications",
+          "details": "Silvus radio, Iridium and cellular are listed; exact modem, band and antenna configurations are not specified.",
+          "sources": [
+            "https://static1.squarespace.com/static/61e9dac712992747079c19d7/t/66a27cc48e0c4d02d0628389/1721924809678/Triton_AUSV.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload locations",
+          "details": "Payload provisions in the body, keel and wing; sensors depend on the selected payload.",
+          "sources": [
+            "https://static1.squarespace.com/static/61e9dac712992747079c19d7/t/66a27cc48e0c4d02d0628389/1721924809678/Triton_AUSV.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation support",
+          "details": "Sheet lists obstacle-avoidance functionality and onboard edge processing without naming a processor or operating system.",
+          "sources": [
+            "https://static1.squarespace.com/static/61e9dac712992747079c19d7/t/66a27cc48e0c4d02d0628389/1721924809678/Triton_AUSV.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocean-aero-triton-35kwh-current",
+      "manufacturer": "Ocean Aero",
+      "models": [
+        "Triton (35 kWh current reference)",
+        "Triton"
+      ],
+      "configuration": "Current manufacturer page reviewed November 2026. CPU, memory, navigation sensor models and specific communications modules undisclosed. Optional communications/payloads vary; earlier 13.2 kWh specifications are not merged into this build.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Current energy system",
+          "details": "35 kWh rechargeable batteries and 1,250 W solar collection, with wind-energy harvesting. Manufacturer describes a 14-foot surface/subsea vehicle.",
+          "sources": [
+            "https://www.oceanaero.com/the-triton"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Communications packages",
+          "details": "LEO satellite, Iridium, cellular and mesh-radio packages are offered. The page also lists GPS, which is a positioning input rather than a telemetry transmitter.",
+          "sources": [
+            "https://www.oceanaero.com/the-triton"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload integration",
+          "details": "Modular sensing payloads and additional communications equipment can be configured for marine research, inspection and environmental monitoring.",
+          "sources": [
+            "https://www.oceanaero.com/the-triton"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mission control",
+          "details": "Manufacturer GUI provides waypoint, payload and multi-vehicle mission management. The page labels Ares Autonomy Stack as coming soon, not installed capability.",
+          "sources": [
+            "https://www.oceanaero.com/the-triton"
+          ]
+        }
+      ]
     }
   ]
 }
