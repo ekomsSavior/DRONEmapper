@@ -23646,6 +23646,561 @@
           ]
         }
       ]
+    },
+    {
+      "id": "robotera-l7-full-body",
+      "manufacturer": "Robot Era",
+      "models": [
+        "RobotEra L7",
+        "L7"
+      ],
+      "configuration": "Full-body L7 manufacturer brochure. The separate L7-U upper body is excluded. Exact x86 CPU, Orin module SKU, RAM and radio components are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "x86 and Orin computing",
+          "details": "Brochure lists 80 TOPS x86 compute plus 275 TOPS Orin compute. The performance figures alone do not establish an AGX Orin SKU or RAM capacity.",
+          "sources": [
+            "https://cos.robotera.com/doc/L7-EN.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision and ranging",
+          "details": "Binocular camera, 3D LiDAR and microphone array; individual sensor models are unspecified.",
+          "sources": [
+            "https://cos.robotera.com/doc/L7-EN.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and chassis",
+          "details": "60 V, 15 Ah battery; 1.71 m tall, 65 kg excluding dexterous hands.",
+          "sources": [
+            "https://cos.robotera.com/doc/L7-EN.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Body and hand actuation",
+          "details": "31 body degrees of freedom excluding hands, 55 including hands. XHAND1 five-finger hands have 12 active degrees of freedom each and direct-drive actuation.",
+          "sources": [
+            "https://cos.robotera.com/doc/L7-EN.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qinetiq-talon5-2021-system",
+      "manufacturer": "QinetiQ",
+      "models": [
+        "TALON 5 (2021 configuration)",
+        "TALON"
+      ],
+      "configuration": "Fifth-generation TALON, 2021 datasheet and TALON 5DOF table. CPU, RAM and battery capacity are unspecified; these component counts are not assigned to TALON VI.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "MPU5 mesh radio",
+          "details": "Persistent Systems MPU5 external IP-mesh radio and Gigabit Ethernet backbone; band/module selection is not established.",
+          "sources": [
+            "https://www.qinetiq.com/-/media/8ccf725867fb4f8295dde541d6938c8f.ashx?ver=5f340c19c0e044f2b8d9bbaf92c97c8c"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera configuration choices",
+          "details": "Gripper, elbow and rear cameras can use infrared-illuminated analog or IOP digital versions. Digital option is 2.1 MP, 1/3-inch CMOS, 720p. PTZ has 26× optical zoom; thermal/night-vision options are separate.",
+          "sources": [
+            "https://www.qinetiq.com/-/media/8ccf725867fb4f8295dde541d6938c8f.ashx?ver=5f340c19c0e044f2b8d9bbaf92c97c8c"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Tracked base",
+          "details": "81 kg including batteries; quoted 3–4 hour operation depends on mission. Battery chemistry and capacity are not specified.",
+          "sources": [
+            "https://www.qinetiq.com/-/media/8ccf725867fb4f8295dde541d6938c8f.ashx?ver=5f340c19c0e044f2b8d9bbaf92c97c8c"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Expansion and controls",
+          "details": "Two IOP-A, one IOP-B, four Gigabit Ethernet, two RS232, USB, CAN and six legacy interfaces. LCU laptop, TRC and UC-LITE controller choices; five-degree-of-freedom arm.",
+          "sources": [
+            "https://www.qinetiq.com/-/media/8ccf725867fb4f8295dde541d6938c8f.ashx?ver=5f340c19c0e044f2b8d9bbaf92c97c8c"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Interoperability",
+          "details": "IOP and SAE JAUS AS4 architecture. Interface compatibility does not identify a unique over-the-air signature.",
+          "sources": [
+            "https://www.qinetiq.com/-/media/8ccf725867fb4f8295dde541d6938c8f.ashx?ver=5f340c19c0e044f2b8d9bbaf92c97c8c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qinetiq-talon6-current-system",
+      "manufacturer": "QinetiQ",
+      "models": [
+        "TALON VI",
+        "TALON"
+      ],
+      "configuration": "Current sixth-generation manufacturer product page. It does not provide a CPU, RAM, battery, camera SKU or exact port-count specification; earlier TALON values are not inherited.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "MPU5 radio",
+          "details": "Manufacturer identifies MPU5 mesh networking. Actual RF module and band remain configuration-dependent.",
+          "sources": [
+            "https://www.qinetiq.com/en-us/what-we-do/research-and-development/autonomous-systems/robotics/robotic-products/talon-medium-sized-tactical-robot"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular platform",
+          "details": "Open input/output architecture supports additional cameras. Revised chassis is narrower with a longer-reach arm than earlier generations; numeric dimensions are not given here.",
+          "sources": [
+            "https://www.qinetiq.com/en-us/what-we-do/research-and-development/autonomous-systems/robotics/robotic-products/talon-medium-sized-tactical-robot"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control architecture",
+          "details": "Autonomy and mapping support with IOP and SAE JAUS AS4 compliance.",
+          "sources": [
+            "https://www.qinetiq.com/en-us/what-we-do/research-and-development/autonomous-systems/robotics/robotic-products/talon-medium-sized-tactical-robot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quantum-vector-au-2024-system",
+      "manufacturer": "Quantum Systems",
+      "models": [
+        "Vector (Australia November 2024 configuration)",
+        "Vector"
+      ],
+      "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Mission computer",
+          "details": "NVIDIA Jetson Orin NX 16 GB is the listed AI/mission processor.",
+          "sources": [
+            "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Compute-module memory",
+          "details": "16 GB in the named Orin NX configuration; storage capacity is not published.",
+          "sources": [
+            "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Control and video link",
+          "details": "AES-256 encrypted IP mesh at 2.2–2.5 GHz. Dual S/C-band options are offered, without a C-band range in this sheet.",
+          "sources": [
+            "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "EO/IR payload alternatives",
+          "details": "NextVision Raptor or Trillium HD40-LV; payload choice must be checked for the individual aircraft.",
+          "sources": [
+            "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric airframe",
+          "details": "8.5 kg take-off weight, 2.8 m wingspan and IP54. Battery capacity and motor model are not identified.",
+          "sources": [
+            "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground station and conversion",
+          "details": "Auterion Skynav or tactical laptop. Shared Vector/Scorpion fuselage, datalink and sensors support fixed-wing/multicopter conversion; this does not apply to Trinity.",
+          "sources": [
+            "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Ground-control software",
+          "details": "QBase Tactical.",
+          "sources": [
+            "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quantum-vector-ai-may2025-system",
+      "manufacturer": "Quantum Systems",
+      "models": [
+        "Vector AI (May 2025 configuration)",
+        "Vector AI",
+        "Vector"
+      ],
+      "configuration": "GmbH QS_VectorAI_Techsheet_250502, May 2025. Memory capacity, radio chipset and battery capacity are undisclosed. Earlier single-processor Vector specifications are not inherited.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Dual onboard AI processors",
+          "details": "Two NVIDIA Jetson Orin NX processors, explicitly named on page 2.",
+          "sources": [
+            "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Dual-band data link",
+          "details": "2.2–2.5 and 4.4–4.9 GHz with AES-256 protection. ADS-B In is listed; ADS-B Out is optional, not proof that every aircraft broadcasts it.",
+          "sources": [
+            "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging and awareness",
+          "details": "NextVision Raptor EO/IR 360° payload option; precision landing and obstacle-awareness systems. Optional additional payloads are not assumed installed.",
+          "sources": [
+            "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric VTOL airframe",
+          "details": "9.5 kg maximum take-off weight, 2.8 m wingspan and IP55. Motor and battery part numbers are not published.",
+          "sources": [
+            "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload expansion",
+          "details": "USB-C Multiconnector and auxiliary payload bays.",
+          "sources": [
+            "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Onboard software architecture",
+          "details": "ROS/Docker modular architecture and Receptor AI software suite.",
+          "sources": [
+            "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rheinmetall-missionmaster-sp2-system",
+      "manufacturer": "Rheinmetall",
+      "models": [
+        "Mission Master SP 2.0 (B253e0524 brochure)",
+        "Mission Master SP"
+      ],
+      "configuration": "SP 2.0 column in manufacturer brochure B253e0524. Earlier SP revisions and the CXT/XT are separate configurations. CPU, RAM, battery capacity and radio part numbers are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "PATH autonomy kit",
+          "details": "PATH A-kit provides the control/autonomy subsystem; no processor SKU is identified.",
+          "sources": [
+            "https://www.rheinmetall.com/Rheinmetall%20Group/brochure-download/Uncrewed-Systems/B253e0524-Rheinmetall-Mission-Master-family.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Autonomy sensor architecture",
+          "details": "PATH integrates LiDAR, radar and cameras. The brochure does not identify individual sensor models or a fixed payload fit.",
+          "sources": [
+            "https://www.rheinmetall.com/Rheinmetall%20Group/brochure-download/Uncrewed-Systems/B253e0524-Rheinmetall-Mission-Master-family.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "SP 2.0 drive",
+          "details": "Electric drive and lithium-ion batteries; hybrid engine/external generator are options. SP 2.0 table gives 1,134 kg and 3.05 × 1.52 × 1.02 m. XT diesel/AGM components are not assigned to SP.",
+          "sources": [
+            "https://www.rheinmetall.com/Rheinmetall%20Group/brochure-download/Uncrewed-Systems/B253e0524-Rheinmetall-Mission-Master-family.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle and operator controls",
+          "details": "Drive-by-wire integration and modular payload mounting; tablet, single-hand controller, smartwatch and soldier-system control options.",
+          "sources": [
+            "https://www.rheinmetall.com/Rheinmetall%20Group/brochure-download/Uncrewed-Systems/B253e0524-Rheinmetall-Mission-Master-family.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Open architecture",
+          "details": "PATH sensor fusion, mapping and navigation with an upgradeable open architecture. Exact operating system is not disclosed.",
+          "sources": [
+            "https://www.rheinmetall.com/Rheinmetall%20Group/brochure-download/Uncrewed-Systems/B253e0524-Rheinmetall-Mission-Master-family.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "promobot-roboc2-oct2024-system",
+      "manufacturer": "Promobot",
+      "models": [
+        "Robo-C 2",
+        "Robo-C2"
+      ],
+      "configuration": "Promobot C2 user manual dated October 2024. Stationary humanoid with transport wheels; not a walking biped. CPU, RAM and Wi-Fi module model are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Vision and audio",
+          "details": "1920×1080 camera up to 30 fps with RGB illumination; omnidirectional microphone and two speakers.",
+          "sources": [
+            "https://promo-bot.ai/wp-content/uploads/2024/10/ENG-Rukovodstvo-polzovatelya-Robot-Promobot-07-10-2024-1.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Network interfaces",
+          "details": "802.11n Wi-Fi at 2.4 or 5 GHz and RJ45 Ethernet. These common interfaces are not unique passive identifiers.",
+          "sources": [
+            "https://promo-bot.ai/wp-content/uploads/2024/10/ENG-Rukovodstvo-polzovatelya-Robot-Promobot-07-10-2024-1.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mains supply and body",
+          "details": "110/230 V AC, 50–60 Hz, maximum 700 W; robot up to 100 kg. Transport wheels move the fixed platform.",
+          "sources": [
+            "https://promo-bot.ai/wp-content/uploads/2024/10/ENG-Rukovodstvo-polzovatelya-Robot-Promobot-07-10-2024-1.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Display and connectors",
+          "details": "10.1-inch TFT IPS touchscreen, 1280×800; HDMI, USB and 12 V XLR display supply.",
+          "sources": [
+            "https://promo-bot.ai/wp-content/uploads/2024/10/ENG-Rukovodstvo-polzovatelya-Robot-Promobot-07-10-2024-1.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Articulated upper body",
+          "details": "Manual lists head/arms/torso motion separately from servo counts: 17 head, three neck, three torso and 13 servos per arm.",
+          "sources": [
+            "https://promo-bot.ai/wp-content/uploads/2024/10/ENG-Rukovodstvo-polzovatelya-Robot-Promobot-07-10-2024-1.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Interaction system",
+          "details": "Linguistic database and analytics services, with cloud synchronization or local-server configuration. SIP telephony and telepresence are optional.",
+          "sources": [
+            "https://promo-bot.ai/wp-content/uploads/2024/10/ENG-Rukovodstvo-polzovatelya-Robot-Promobot-07-10-2024-1.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recycleye-2021-2024-system",
+      "manufacturer": "Recycleye",
+      "models": [
+        "Recycleye Robotics (2021–2024 documented integration)",
+        "Recycleye Robotics"
+      ],
+      "configuration": "NVIDIA 2021 computing account and Recycleye/FANUC 2024 integration account. These references do not establish the exact Jetson SKU, RAM, arm variant or network hardware for every current installation.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NVIDIA Jetson platform",
+          "details": "Supplier identifies Jetson edge computing, with onsite inference. Exact processor module is unspecified.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/recycleye-ai-waste-recycling-jetson/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Conveyor vision",
+          "details": "Recycleye AI vision identifies material on the belt; camera model is not disclosed.",
+          "sources": [
+            "https://recycleye.com/fanuc-recycleye-exclusive-agreement-and-global-innovation-award/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "FANUC robot integration",
+          "details": "Six-axis FANUC LR Mate and iRPickTool visual line tracking. The source does not identify a specific LR Mate model suffix or controller.",
+          "sources": [
+            "https://recycleye.com/fanuc-recycleye-exclusive-agreement-and-global-innovation-award/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Edge and cloud workflow",
+          "details": "DeepStream and TAO tools; GPU-enabled Azure cloud model training, deployed edge models, software updates and cloud log/dashboard processing. Azure servers are not onboard robot components.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/recycleye-ai-waste-recycling-jetson/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recycleye-qualibot-current-system",
+      "manufacturer": "Recycleye",
+      "models": [
+        "QualiBot"
+      ],
+      "configuration": "Current Recycleye Robotics product page. No exact processor, RAM, camera or arm SKU is disclosed; the older documented Jetson implementation is not automatically assigned to QualiBot.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "AI material vision",
+          "details": "Computer vision identifies waste items for sorting; sensor model is unpublished.",
+          "sources": [
+            "https://recycleye.com/robotics-3/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Picking equipment",
+          "details": "FANUC-co-developed arm with suction gripper and pneumatic panel. The page does not establish an exact FANUC model.",
+          "sources": [
+            "https://recycleye.com/robotics-3/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raise-ur20-mobile-system",
+      "manufacturer": "Raise Robotics",
+      "models": [
+        "Raise Mobile Manipulator"
+      ],
+      "configuration": "Universal Robots case study, two-UR20 installation. Earlier UR10e work is mentioned separately. CPU, RAM, battery capacity and wireless protocol are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Arm control boxes",
+          "details": "UR20 control boxes are integrated into the mobile system; the case study does not identify their processor model.",
+          "sources": [
+            "https://www.universal-robots.com/case-stories/raise-robotics/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Dual arm platform",
+          "details": "Two UR20 arms on a mobile robot base. IP65 applies to the UR20 arms, not a demonstrated rating for the entire platform.",
+          "sources": [
+            "https://www.universal-robots.com/case-stories/raise-robotics/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Site positioning and measurements",
+          "details": "Works with total stations; system records bracket alignment and fastener torque. Total-station and torque-sensor models are unspecified.",
+          "sources": [
+            "https://www.universal-robots.com/case-stories/raise-robotics/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "DC battery operation",
+          "details": "UR arms connect directly to the mobile system’s DC battery supply; voltage and energy capacity are not given.",
+          "sources": [
+            "https://www.universal-robots.com/case-stories/raise-robotics/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Construction records",
+          "details": "Software produces position/alignment and torque logs for as-built verification.",
+          "sources": [
+            "https://www.universal-robots.com/case-stories/raise-robotics/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rocsys-s2-charging-robot",
+      "manufacturer": "Rocsys",
+      "models": [
+        "Rocsys S2",
+        "S2"
+      ],
+      "configuration": "Current S2 manufacturer specifications. CPU SKU, RAM, cellular modem, UWB chipset and motor models are not disclosed. Smart Cover is the separate vehicle-side interface.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Industrial computer",
+          "details": "Industrial-grade computer runs Rocsys software and remote-monitoring functions; seven-axis motor-control architecture.",
+          "sources": [
+            "https://www.rocsys.com/rocsys-s2/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Socket camera",
+          "details": "In-house IP67 camera with heating, angled protective glass and backlighting; vision estimates socket pose in six degrees of freedom.",
+          "sources": [
+            "https://www.rocsys.com/rocsys-s2/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Connectivity",
+          "details": "Wired and 4G options. Smart Cover supports UWB vehicle-to-charging-robot communication; band and chipset are not specified.",
+          "sources": [
+            "https://www.rocsys.com/rocsys-s2/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Robot supply",
+          "details": "Single-phase 110–240 V AC, under 10 A; approximately 250 kg. This is robot input power, not the EV charger’s output rating.",
+          "sources": [
+            "https://www.rocsys.com/rocsys-s2/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Connector handling",
+          "details": "Electromagnetic locking and compliant suspension; API/web interface. S2-H adds environmental/protective and visibility equipment.",
+          "sources": [
+            "https://www.rocsys.com/rocsys-s2/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Service layer",
+          "details": "Remote monitoring and over-the-air software updates; manufacturer says operation can continue without network connectivity.",
+          "sources": [
+            "https://www.rocsys.com/rocsys-s2/"
+          ]
+        }
+      ]
     }
   ]
 }
