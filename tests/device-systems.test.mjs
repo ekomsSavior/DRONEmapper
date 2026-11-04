@@ -9,6 +9,47 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 40 preserves aircraft/controller, optional sensor and battery-revision boundaries',()=>{
+ const teal=system('Teal Drones','Teal 2'),tac=system('Teal Drones','Teal Air Control (TAC ground controller)');
+ assert.doesNotMatch(text(teal.sections.compute.facts.map(f=>f.details)),/Snapdragon|845/);
+ assert.match(text(tac.sections.compute),/845/);
+ assert.match(text(teal.sections.power),/60 Wh/);
+ assert.match(text(tac.sections.memory),/6 GB/);
+ const bw=system('Red Cat Holdings','Teal Black Widow');
+ assert.match(text(bw.sections.compute),/RB5/);
+ assert.match(text(bw.sections.sensors),/Ocellus/);
+ assert.equal(bw.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Red Cat Holdings','Black Widow AiN')).length,0);
+ const s2=system('Skydio','Skydio 2');
+ assert.match(text(s2.sections.compute),/Tegra X2/);
+ assert.match(text(s2.sections.compute),/QCS605/);
+ assert.equal(profileIds(system('Skydio','Skydio 2',{kind:'regulatory-equipment'})).length,0);
+ const r10=system('Skydio','Skydio R10 (current technical specification)'),old=system('Skydio','Skydio R10 (2025 brochure configuration)');
+ assert.match(text(r10.sections.power),/4900 mAh.*70 Wh/);
+ assert.doesNotMatch(text(r10.sections.power.facts.map(f=>f.details)),/6000|86.4/);
+ assert.match(text(old.sections.power),/6000 mAh.*86.4 Wh/);
+ assert.equal(profileIds(system('Skydio','Skydio R10')).length,2);
+ const t7=system('Tennant Company','Tennant T7AMR (May 2020 autonomy parts)');
+ assert.match(text(t7.sections.compute),/1248248/);
+ assert.match(text(t7.sections.sensors),/TiM551/);
+ assert.doesNotMatch(text(t7.sections.radios.facts),/LTE|802.11/);
+ assert.equal(profileIds(system('Tennant Company','Tennant T7AMR')).length,2);
+ const gemini=system('TechnipFMC','Gemini ROV');
+ assert.match(text(gemini.sections.sensors),/600 kHz.*acoustic/);
+ assert.match(text(gemini.sections.radios),/tethered/);
+ assert.equal(gemini.sections.compute.status,'not-established');
+ const sm=system('Sea Machines Robotics','SM200');
+ assert.equal(sm.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Sea Machines Robotics','SM300 / SM200')).length,2);
+ assert.match(text(system('Shield AI','Shield AI V-BAT').sections.sensors),/ADS-B Out.*option/);
+ const pb=system('Teledyne FLIR','PackBot 525'),cent=system('Teledyne FLIR','Centaur');
+ assert.match(text(pb.sections.power),/BB-2590/);
+ assert.match(text(pb.sections.radios),/MPU5/);
+ assert.match(text(cent.sections.radios),/200 m fibre/);
+ assert.doesNotMatch(text(cent.sections.radios.facts),/MPU5/);
+ assert.equal(system('Seegrid','Palion AMR').sections.compute.status,'not-established');
+});
+
 test('industrial robot configurations retain radio and controller boundaries',()=>{
  const guard=system('Ascento','Ascento Guard'),research=system('Ascento','Ascento Research');
  assert.equal(guard.sections.compute.status,'not-established');

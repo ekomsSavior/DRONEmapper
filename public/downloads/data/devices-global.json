@@ -107168,13 +107168,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "redcat-black-widow-ocellus-system",
+            "configuration": "Current Ocellus configuration; AiN navigation options are not assumed installed. RAM is undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Qualcomm RB5",
+                "details": "RB5 platform with eight Kryo 585 CPU cores and Adreno 650 GPU.",
+                "sources": [
+                  "https://redcataerial.com/solutions/black-widow/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "redcat-black-widow-ocellus-system",
+                "configuration": "Current Ocellus configuration; AiN navigation options are not assumed installed. RAM is undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -107183,28 +107202,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Doodle link",
+                "details": "Doodle hex-band radio; a shared radio family is not a unique aircraft identifier.",
+                "sources": [
+                  "https://redcataerial.com/solutions/black-widow/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "redcat-black-widow-ocellus-system",
+                "configuration": "Current Ocellus configuration; AiN navigation options are not assumed installed. RAM is undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Ocellus 3CP",
+                "details": "Three-axis gimbal: FLIR Boson 640 R+, 35 mm 12 MP telephoto and 8 mm 16 MP wide-angle cameras.",
+                "sources": [
+                  "https://redcataerial.com/solutions/black-widow/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "redcat-black-widow-ocellus-system",
+                "configuration": "Current Ocellus configuration; AiN navigation options are not assumed installed. RAM is undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft configuration",
+                "details": "1.93 kg; preliminary 40-minute endurance estimate with Ocellus 3CP, pending final testing.",
+                "sources": [
+                  "https://redcataerial.com/solutions/black-widow/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "redcat-black-widow-ocellus-system",
+                "configuration": "Current Ocellus configuration; AiN navigation options are not assumed installed. RAM is undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modularity",
+                "details": "Replaceable arms and payloads; civilian GNSS and dual-band L1/L2 options.",
+                "sources": [
+                  "https://redcataerial.com/solutions/black-widow/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "redcat-black-widow-ocellus-system",
+                "configuration": "Current Ocellus configuration; AiN navigation options are not assumed installed. RAM is undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Vision software",
+                "details": "FLIR Prism AI; Reveal Farsight, Athena AI and Palantir VNAV are optional.",
+                "sources": [
+                  "https://redcataerial.com/solutions/black-widow/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "redcat-black-widow-ocellus-system",
+                "configuration": "Current Ocellus configuration; AiN navigation options are not assumed installed. RAM is undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -107218,13 +107302,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -111503,13 +111581,37 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "seamachines-sm300-2017-system",
+            "configuration": "2017 autonomy retrofit architecture. Host-vessel propulsion is separate; Siemens processor models and RAM are not stated.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "seamachines-sm200-remote-helm",
+            "configuration": "SM200 remote-control system, 2019/2022 manufacturer accounts. SM300 autonomous navigation and Siemens components are not automatically assigned to SM200.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Industrial controller",
+                "details": "Marine industrial Siemens components and computers inside an IP67 electrical enclosure.",
+                "sources": [
+                  "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seamachines-sm300-2017-system",
+                "configuration": "2017 autonomy retrofit architecture. Host-vessel propulsion is separate; Siemens processor models and RAM are not stated.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -111518,13 +111620,51 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Remote helm",
+                "details": "Joystick remote control quoted at one kilometre. Radio bands/hardware are unspecified.",
+                "sources": [
+                  "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seamachines-sm300-2017-system",
+                "configuration": "2017 autonomy retrofit architecture. Host-vessel propulsion is separate; Siemens processor models and RAM are not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Wireless helm",
+                "details": "Line-of-sight wireless helm and propulsion control, quoted up to 1,000 m; protocol and chipset undisclosed.",
+                "sources": [
+                  "https://sea-machines.com/bureau-veritas-grants-first-type-approval-for-wireless-remote-helm-control-systems-to-sea-machines/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seamachines-sm200-remote-helm",
+                "configuration": "SM200 remote-control system, 2019/2022 manufacturer accounts. SM300 autonomous navigation and Siemens components are not automatically assigned to SM200.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vessel navigation inputs",
+                "details": "Integrates DGPS, AIS and radar data from vessel instruments; individual sensor manufacturers are unspecified.",
+                "sources": [
+                  "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seamachines-sm300-2017-system",
+                "configuration": "2017 autonomy retrofit architecture. Host-vessel propulsion is separate; Siemens processor models and RAM are not stated.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -111533,13 +111673,63 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Retrofit controls",
+                "details": "Interfaces with vessel propulsion, auxiliary equipment and onboard payloads.",
+                "sources": [
+                  "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seamachines-sm300-2017-system",
+                "configuration": "2017 autonomy retrofit architecture. Host-vessel propulsion is separate; Siemens processor models and RAM are not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Belt-pack controller",
+                "details": "Wearable control unit operates helm, propulsion, auxiliaries and payload equipment.",
+                "sources": [
+                  "https://sea-machines.com/bureau-veritas-grants-first-type-approval-for-wireless-remote-helm-control-systems-to-sea-machines/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seamachines-sm200-remote-helm",
+                "configuration": "SM200 remote-control system, 2019/2022 manufacturer accounts. SM300 autonomous navigation and Siemens components are not automatically assigned to SM200.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "TALOS",
+                "details": "Operator interface supports waypoint/grid navigation, multi-vessel command and collision-avoidance functions.",
+                "sources": [
+                  "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seamachines-sm300-2017-system",
+                "configuration": "2017 autonomy retrofit architecture. Host-vessel propulsion is separate; Siemens processor models and RAM are not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Control scope",
+                "details": "Remote joystick control. The 2019 account assigns autonomous operation specifically to SM300.",
+                "sources": [
+                  "https://sea-machines.com/top-8-capabilities-sea-machines-adds-to-commercial-surface-vessels/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seamachines-sm200-remote-helm",
+                "configuration": "SM200 remote-control system, 2019/2022 manufacturer accounts. SM300 autonomous navigation and Siemens components are not automatically assigned to SM200.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -111553,13 +111743,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -111603,8 +111788,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "seegrid-palion-family-2022",
+            "configuration": "2022 manufacturer family description, not one uniform hardware build. CPU, RAM, radio, battery and individual sensor SKUs remain unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -111623,8 +111814,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Seegrid IQ perception",
+                "details": "Cameras and LiDAR combined with 3D computer vision and machine-learning models.",
+                "sources": [
+                  "https://seegrid.com/news/seegrid-amrs-recognized-by-modern-materials-handling-for-transforming-manufacturing-operations-at-guardian-industries/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seegrid-palion-family-2022",
+                "configuration": "2022 manufacturer family description, not one uniform hardware build. CPU, RAM, radio, battery and individual sensor SKUs remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -111638,8 +111842,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet control",
+                "details": "Fleet Central enterprise software coordinates the Palion fleet. The account includes Tow Tractor and Lift variants; their mechanical specifications are not interchangeable.",
+                "sources": [
+                  "https://seegrid.com/news/seegrid-amrs-recognized-by-modern-materials-handling-for-transforming-manufacturing-operations-at-guardian-industries/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seegrid-palion-family-2022",
+                "configuration": "2022 manufacturer family description, not one uniform hardware build. CPU, RAM, radio, battery and individual sensor SKUs remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -111656,10 +111873,8 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -112457,8 +112672,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "shield-vbat-heavy-fuel-system",
+            "configuration": "Current heavy-fuel aircraft specification. Payloads are selectable; they are not all installed on every aircraft. CPU, RAM and radio-band details are unpublished here.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -112472,28 +112693,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Link options",
+                "details": "MPU5 or C-band radio configurations; SATCOM provides an additional beyond-line-of-sight option. No unique passive fingerprint is established.",
+                "sources": [
+                  "https://shield.ai/v-bat/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "shield-vbat-heavy-fuel-system",
+                "configuration": "Current heavy-fuel aircraft specification. Payloads are selectable; they are not all installed on every aircraft. CPU, RAM and radio-band details are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Selectable payloads",
+                "details": "Hoodtech 11/9/6-series imaging, ViDAR or SAR; anti-jam GNSS and M-code options. ADS-B Out is a listed option, not a universal broadcast.",
+                "sources": [
+                  "https://shield.ai/v-bat/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "shield-vbat-heavy-fuel-system",
+                "configuration": "Current heavy-fuel aircraft specification. Payloads are selectable; they are not all installed on every aircraft. CPU, RAM and radio-band details are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Airframe power",
+                "details": "JP5 heavy-fuel engine with ducted fan; 75 kg maximum gross takeoff mass, 3.8 m wingspan. 600 W available for payloads.",
+                "sources": [
+                  "https://shield.ai/v-bat/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "shield-vbat-heavy-fuel-system",
+                "configuration": "Current heavy-fuel aircraft specification. Payloads are selectable; they are not all installed on every aircraft. CPU, RAM and radio-band details are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular payload fit",
+                "details": "Mission-dependent payload installation; imaging and navigation equipment must be identified per configuration.",
+                "sources": [
+                  "https://shield.ai/v-bat/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "shield-vbat-heavy-fuel-system",
+                "configuration": "Current heavy-fuel aircraft specification. Payloads are selectable; they are not all installed on every aircraft. CPU, RAM and radio-band details are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Hivemind upgrade",
+                "details": "2025 block-upgrade announcement describes a Hivemind Pilot-ready configuration; that announcement alone does not prove every existing V-BAT has the upgrade.",
+                "sources": [
+                  "https://shield.ai/shield-ai-unveils-v-bat-block-upgrade-powered-by-hivemind-advanced-autonomy-satcom-and-heavy-fuel-engine-among-new-features/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "shield-vbat-heavy-fuel-system",
+                "configuration": "Current heavy-fuel aircraft specification. Payloads are selectable; they are not all installed on every aircraft. CPU, RAM and radio-band details are unpublished here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -112518,12 +112804,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -114032,23 +114313,96 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "skydio-r10-current-system",
+            "configuration": "Current technical page. Its 70 Wh battery differs from the 2025 brochure’s 86.4 Wh pack; configurations remain separate. RAM/modem SKU unspecified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "skydio-r10-2025-brochure-system",
+            "configuration": "2025 brochure configuration. Its battery figures must not be substituted into the current technical-page profile.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Main processor",
+                "details": "Qualcomm Snapdragon 865 SoC.",
+                "sources": [
+                  "https://www.skydio.com/r10/technical-specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-current-system",
+                "configuration": "Current technical page. Its 70 Wh battery differs from the 2025 brochure’s 86.4 Wh pack; configurations remain separate. RAM/modem SKU unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Processor",
+                "details": "Qualcomm Snapdragon 865 SoC.",
+                "sources": [
+                  "https://www.skydio.com/resources/datasheets/r10-data-sheet"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-2025-brochure-system",
+                "configuration": "2025 brochure configuration. Its battery figures must not be substituted into the current technical-page profile.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Internal storage",
+                "details": "Encrypted internal storage; capacity not disclosed.",
+                "sources": [
+                  "https://www.skydio.com/r10/technical-specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-current-system",
+                "configuration": "Current technical page. Its 70 Wh battery differs from the 2025 brochure’s 86.4 Wh pack; configurations remain separate. RAM/modem SKU unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "Connect SL and Connect 5G",
+                "details": "Wi-Fi 6 at 2400–2483.5 and 5150–5850 MHz; LTE/5G frequency ranges listed as 600–960 and 1700–2200 MHz. AES-256 for SL and AES-128 for 5G.",
+                "sources": [
+                  "https://www.skydio.com/r10/technical-specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-current-system",
+                "configuration": "Current technical page. Its 70 Wh battery differs from the 2025 brochure’s 86.4 Wh pack; configurations remain separate. RAM/modem SKU unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Wireless systems",
+                "details": "Connect SL Wi-Fi 6 and Connect 5G LTE/5G; bands not listed in this brochure.",
+                "sources": [
+                  "https://www.skydio.com/resources/datasheets/r10-data-sheet"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-2025-brochure-system",
+                "configuration": "2025 brochure configuration. Its battery figures must not be substituted into the current technical-page profile.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Published model communications",
                 "details": "Connect SL plus cellular; visual navigation",
@@ -114063,18 +114417,81 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging and navigation",
+                "details": "1-inch 12.5 MP main camera; two forward Samsung 1/2.8-inch 32 MP stereo cameras, 200° field of view. NightSense forward visible illumination.",
+                "sources": [
+                  "https://www.skydio.com/r10/technical-specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-current-system",
+                "configuration": "Current technical page. Its 70 Wh battery differs from the 2025 brochure’s 86.4 Wh pack; configurations remain separate. RAM/modem SKU unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Main camera",
+                "details": "1-inch 12.5 MP sensor, f/1.95 and 93° diagonal field of view.",
+                "sources": [
+                  "https://www.skydio.com/resources/datasheets/r10-data-sheet"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-2025-brochure-system",
+                "configuration": "2025 brochure configuration. Its battery figures must not be substituted into the current technical-page profile.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Current flight battery",
+                "details": "4900 mAh, 14.4 V, 70 Wh lithium-ion. 785 g aircraft, nominal 20-minute flight and three-hour perch time.",
+                "sources": [
+                  "https://www.skydio.com/r10/technical-specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-current-system",
+                "configuration": "Current technical page. Its 70 Wh battery differs from the 2025 brochure’s 86.4 Wh pack; configurations remain separate. RAM/modem SKU unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "2025 brochure battery",
+                "details": "6000 mAh, 14.4 V, 86.4 Wh rechargeable lithium-ion; nominal 20-minute flight time.",
+                "sources": [
+                  "https://www.skydio.com/resources/datasheets/r10-data-sheet"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-2025-brochure-system",
+                "configuration": "2025 brochure configuration. Its battery figures must not be substituted into the current technical-page profile.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Pairing",
+                "details": "Wired pairing with the controller.",
+                "sources": [
+                  "https://www.skydio.com/r10/technical-specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "skydio-r10-current-system",
+                "configuration": "Current technical page. Its 70 Wh battery differs from the 2025 brochure’s 86.4 Wh pack; configurations remain separate. RAM/modem SKU unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -114103,11 +114520,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -119099,38 +119511,123 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "teal2-aircraft-system",
+            "configuration": "Aircraft and paired-control interface. The Snapdragon specifications on the manufacturer page belong to the separate TAC ground controller; aircraft CPU/RAM are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flight controller",
+                "details": "MAVLink-compliant flight controller; processor SKU unspecified.",
+                "sources": [
+                  "https://redcataerial.com/solutions/teal-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "teal2-aircraft-system",
+                "configuration": "Aircraft and paired-control interface. The Snapdragon specifications on the manufacturer page belong to the separate TAC ground controller; aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Removable recording",
+                "details": "MicroSD recording; RAM capacity unspecified.",
+                "sources": [
+                  "https://redcataerial.com/solutions/teal-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "teal2-aircraft-system",
+                "configuration": "Aircraft and paired-control interface. The Snapdragon specifications on the manufacturer page belong to the separate TAC ground controller; aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "2.4 GHz system",
+                "details": "DHS documents the 2.4 GHz package; manufacturer specifies AES-256 downlink encryption.",
+                "sources": [
+                  "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf",
+                  "https://redcataerial.com/solutions/teal-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "teal2-aircraft-system",
+                "configuration": "Aircraft and paired-control interface. The Snapdragon specifications on the manufacturer page belong to the separate TAC ground controller; aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Hadron 640R payload",
+                "details": "FLIR Hadron 640R combines 16 MP colour imaging and Boson 640 radiometric thermal imaging on a two-axis gimbal.",
+                "sources": [
+                  "https://redcataerial.com/solutions/teal-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "teal2-aircraft-system",
+                "configuration": "Aircraft and paired-control interface. The Snapdragon specifications on the manufacturer page belong to the separate TAC ground controller; aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "DHS identifies a 22.2 V, 60 Wh lithium-ion Teal Performance Battery Pack, approximately 0.84 lb. Aircraft mass 2.75 lb; quoted maximum flight time 30 minutes.",
+                "sources": [
+                  "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "teal2-aircraft-system",
+                "configuration": "Aircraft and paired-control interface. The Snapdragon specifications on the manufacturer page belong to the separate TAC ground controller; aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Control software",
+                "details": "TAC ground station with Teal QGC, Tomahawk Robotics Kinesis and ATAK UAS Tool support.",
+                "sources": [
+                  "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "teal2-aircraft-system",
+                "configuration": "Aircraft and paired-control interface. The Snapdragon specifications on the manufacturer page belong to the separate TAC ground controller; aircraft CPU/RAM are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -119167,12 +119664,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -119227,8 +119718,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "technipfmc-gemini-rev4-system",
+            "configuration": "Schilling GEMINI REV4 sensor configuration (2021), with 2023 manufacturer hydraulic-system documentation. CPU, RAM and electronics-board SKUs are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -119242,28 +119739,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Surface data transport",
+                "details": "H.264 RTSP video over Ethernet; up to four HD streams to a surface PC. This is tethered communication, not a Wi-Fi signature.",
+                "sources": [
+                  "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "technipfmc-gemini-rev4-system",
+                "configuration": "Schilling GEMINI REV4 sensor configuration (2021), with 2023 manufacturer hydraulic-system documentation. CPU, RAM and electronics-board SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation instruments",
+                "details": "Valeport miniIPS depth sensor, iXblue Octans Nano motion reference unit and Teledyne RDI Pioneer 600 kHz DVL. The DVL is acoustic, not an RF transmitter.",
+                "sources": [
+                  "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "technipfmc-gemini-rev4-system",
+                "configuration": "Schilling GEMINI REV4 sensor configuration (2021), with 2023 manufacturer hydraulic-system documentation. CPU, RAM and electronics-board SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Manipulation feedback",
+                "details": "Two six-degree-of-freedom manipulators with force-sensing wrists and integrated machine-vision cameras and lights.",
+                "sources": [
+                  "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "technipfmc-gemini-rev4-system",
+                "configuration": "Schilling GEMINI REV4 sensor configuration (2021), with 2023 manufacturer hydraulic-system documentation. CPU, RAM and electronics-board SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Hydraulics and propulsion",
+                "details": "Seven Schilling thrusters, 250 hp hydraulic power unit and 150 hp auxiliary ISOL8 eight-cylinder pump.",
+                "sources": [
+                  "https://www.technipfmc.com/media/z0apyfk4/gemini-rov-datasheet.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "technipfmc-gemini-rev4-system",
+                "configuration": "Schilling GEMINI REV4 sensor configuration (2021), with 2023 manufacturer hydraulic-system documentation. CPU, RAM and electronics-board SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Tool and video interfaces",
+                "details": "100 Mb Ethernet through the arm and 120 W tool power; topside HDMI/NTSC/PAL video outputs.",
+                "sources": [
+                  "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "technipfmc-gemini-rev4-system",
+                "configuration": "Schilling GEMINI REV4 sensor configuration (2021), with 2023 manufacturer hydraulic-system documentation. CPU, RAM and electronics-board SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Station keeping",
+                "details": "StationKeep V2 control.",
+                "sources": [
+                  "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "technipfmc-gemini-rev4-system",
+                "configuration": "Schilling GEMINI REV4 sensor configuration (2021), with 2023 manufacturer hydraulic-system documentation. CPU, RAM and electronics-board SKUs are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -119288,12 +119862,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -119463,8 +120032,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "flir-centaur-june2022-system",
+            "configuration": "June 29, 2022 manufacturer specification. CPU/RAM, battery capacity and radio make/band are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -119478,23 +120053,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless and tether links",
+                "details": "Radio quoted at 800 m line-of-sight or 150 m non-line-of-sight; 200 m fibre-tether option.",
+                "sources": [
+                  "https://defense.flir.com/globalassets/defense/datasheets--brochures/centaur_datasheet-ltr-22-0629_web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flir-centaur-june2022-system",
+                "configuration": "June 29, 2022 manufacturer specification. CPU/RAM, battery capacity and radio make/band are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "PTZ imaging",
+                "details": "Visible, near-infrared and long-wave infrared camera suite. MultiRAE Pro, JCAD, FIDO XT, Radiac and FirstDefender RMX are compatible sensor payloads, not universal fit.",
+                "sources": [
+                  "https://defense.flir.com/globalassets/defense/datasheets--brochures/centaur_datasheet-ltr-22-0629_web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flir-centaur-june2022-system",
+                "configuration": "June 29, 2022 manufacturer specification. CPU/RAM, battery capacity and radio make/band are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobility and endurance",
+                "details": "Tracked, zero-radius turn; manufacturer quotes up to eight hours and mass below 164 lb. Battery details are unspecified.",
+                "sources": [
+                  "https://defense.flir.com/globalassets/defense/datasheets--brochures/centaur_datasheet-ltr-22-0629_web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flir-centaur-june2022-system",
+                "configuration": "June 29, 2022 manufacturer specification. CPU/RAM, battery capacity and radio make/band are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Controller and arm",
+                "details": "MOCU3 rugged laptop and hand controller. Five-degree-of-freedom arm, 75.5-inch vertical reach; IOP-compliant expansion.",
+                "sources": [
+                  "https://defense.flir.com/globalassets/defense/datasheets--brochures/centaur_datasheet-ltr-22-0629_web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flir-centaur-june2022-system",
+                "configuration": "June 29, 2022 manufacturer specification. CPU/RAM, battery capacity and radio make/band are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -119525,10 +120152,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -119741,8 +120364,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "flir-packbot525-may2022-system",
+            "configuration": "May 30, 2022 manufacturer specification. Onboard CPU/RAM and radio operating band are not disclosed. Accessory sensors are separate options.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -119756,23 +120385,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "MANET radio",
+                "details": "Persistent Systems MPU5 using Wave Relay MANET; shared radio equipment does not uniquely identify a PackBot.",
+                "sources": [
+                  "https://defense.flir.com/globalassets/defense/datasheets--brochures/packbot-525_datasheet-ltr-22-0520-web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flir-packbot525-may2022-system",
+                "configuration": "May 30, 2022 manufacturer specification. Onboard CPU/RAM and radio operating band are not disclosed. Accessory sensors are separate options.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Standard awareness",
+                "details": "Three HD cameras, two-way audio and laser range finder. LWIR thermal camera and CBRN payloads are optional.",
+                "sources": [
+                  "https://defense.flir.com/globalassets/defense/datasheets--brochures/packbot-525_datasheet-ltr-22-0520-web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flir-packbot525-may2022-system",
+                "configuration": "May 30, 2022 manufacturer specification. Onboard CPU/RAM and radio operating band are not disclosed. Accessory sensors are separate options.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Batteries and mobility",
+                "details": "Two BB-2590 batteries for up to four hours or four for up to eight hours. Optional in-situ charging. 26.3 kg without batteries; zero-radius tracked turn.",
+                "sources": [
+                  "https://defense.flir.com/globalassets/defense/datasheets--brochures/packbot-525_datasheet-ltr-22-0520-web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flir-packbot525-may2022-system",
+                "configuration": "May 30, 2022 manufacturer specification. Onboard CPU/RAM and radio operating band are not disclosed. Accessory sensors are separate options.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Control and manipulation",
+                "details": "uPoint touchscreen tablet with optional hand controllers; accessory ports. Arm lifts 20 kg close-in or 5 kg at 1.87 m extension.",
+                "sources": [
+                  "https://defense.flir.com/globalassets/defense/datasheets--brochures/packbot-525_datasheet-ltr-22-0520-web.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flir-packbot525-may2022-system",
+                "configuration": "May 30, 2022 manufacturer specification. Onboard CPU/RAM and radio operating band are not disclosed. Accessory sensors are separate options.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -119803,10 +120484,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -120222,13 +120899,37 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tennant-t7amr-may2020-parts",
+            "configuration": "May 2020 manufacturer parts guide. Part numbers identify service assemblies, not necessarily processor or sensor silicon. CPU/RAM unspecified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "tennant-t7amr-2022-operation",
+            "configuration": "T7AMR column of the 2022 joint T380AMR/T7AMR specification. Do not copy T380AMR figures or newer runtime claims into this revision.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Autonomy controller",
+                "details": "AMR BCM controller assembly, Tennant part 1248248.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-t7amr-may2020-parts",
+                "configuration": "May 2020 manufacturer parts guide. Part numbers identify service assemblies, not necessarily processor or sensor silicon. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -120237,28 +120938,117 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Telemetry hardware",
+                "details": "Telemetry controller 1243815 and antenna 1243814. No supported band or modem SKU is established by this parts list.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-t7amr-may2020-parts",
+                "configuration": "May 2020 manufacturer parts guide. Part numbers identify service assemblies, not necessarily processor or sensor silicon. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera assemblies",
+                "details": "2D camera 1240062; front IFM O3D 3D assembly 1240059; left/right IFM O3X 3D cameras 1240239/1240632.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-t7amr-may2020-parts",
+                "configuration": "May 2020 manufacturer parts guide. Part numbers identify service assemblies, not necessarily processor or sensor silicon. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Range sensors",
+                "details": "TiM551 LiDAR assembly 1240525; horizontal LiDAR assembly 1240234, model unspecified.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-t7amr-may2020-parts",
+                "configuration": "May 2020 manufacturer parts guide. Part numbers identify service assemblies, not necessarily processor or sensor silicon. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and charger",
+                "details": "24 V, 360 Ah system: four lithium-ion or four flooded lead-acid batteries. Listed runtime six/four hours respectively; offboard 24 V, 41.3 A charger, 100–240 V AC input.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t380amr/t380amr-t7amr-specifications-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-t7amr-2022-operation",
+                "configuration": "T7AMR column of the 2022 joint T380AMR/T7AMR specification. Do not copy T380AMR figures or newer runtime claims into this revision.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Local controls",
+                "details": "Touch LCD 1240639; separate upper, lower and power harnesses and AMR service cable.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-t7amr-may2020-parts",
+                "configuration": "May 2020 manufacturer parts guide. Part numbers identify service assemblies, not necessarily processor or sensor silicon. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Cleaning hardware",
+                "details": "650 mm disk cleaning path at 225 rpm; 110 L solution and recovery tanks. Maximum down-pressure 86 kg.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t380amr/t380amr-t7amr-specifications-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-t7amr-2022-operation",
+                "configuration": "T7AMR column of the 2022 joint T380AMR/T7AMR specification. Do not copy T380AMR figures or newer runtime claims into this revision.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "BrainOS modes",
+                "details": "BrainOS supports teach-and-repeat and area-fill operation through the LCD touchscreen.",
+                "sources": [
+                  "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t380amr/t380amr-t7amr-specifications-en-noam.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tennant-t7amr-2022-operation",
+                "configuration": "T7AMR column of the 2022 joint T380AMR/T7AMR specification. Do not copy T380AMR figures or newer runtime claims into this revision.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -120272,13 +121062,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -296914,6 +297698,800 @@
             ]
           }
         ]
+      },
+      {
+        "id": "teal2-aircraft-system",
+        "manufacturer": "Teal Drones",
+        "models": [
+          "Teal 2"
+        ],
+        "configuration": "Aircraft and paired-control interface. The Snapdragon specifications on the manufacturer page belong to the separate TAC ground controller; aircraft CPU/RAM are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight controller",
+            "details": "MAVLink-compliant flight controller; processor SKU unspecified.",
+            "sources": [
+              "https://redcataerial.com/solutions/teal-2/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Hadron 640R payload",
+            "details": "FLIR Hadron 640R combines 16 MP colour imaging and Boson 640 radiometric thermal imaging on a two-axis gimbal.",
+            "sources": [
+              "https://redcataerial.com/solutions/teal-2/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Removable recording",
+            "details": "MicroSD recording; RAM capacity unspecified.",
+            "sources": [
+              "https://redcataerial.com/solutions/teal-2/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "2.4 GHz system",
+            "details": "DHS documents the 2.4 GHz package; manufacturer specifies AES-256 downlink encryption.",
+            "sources": [
+              "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf",
+              "https://redcataerial.com/solutions/teal-2/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "DHS identifies a 22.2 V, 60 Wh lithium-ion Teal Performance Battery Pack, approximately 0.84 lb. Aircraft mass 2.75 lb; quoted maximum flight time 30 minutes.",
+            "sources": [
+              "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Control software",
+            "details": "TAC ground station with Teal QGC, Tomahawk Robotics Kinesis and ATAK UAS Tool support.",
+            "sources": [
+              "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "teal-tac-ground-controller-system",
+        "manufacturer": "Teal Drones",
+        "models": [
+          "Teal Air Control (TAC ground controller)"
+        ],
+        "configuration": "Ground controller, not the Teal 2 aircraft processor. Values follow the manufacturer’s TAC section.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Snapdragon 845",
+            "details": "Qualcomm Snapdragon 845: octa-core Kryo 385 CPU, Adreno 630 GPU and Spectra 280 image processor.",
+            "sources": [
+              "https://redcataerial.com/solutions/teal-2/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Controller RAM",
+            "details": "6 GB LPDDR4X.",
+            "sources": [
+              "https://redcataerial.com/solutions/teal-2/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Video downlink",
+            "details": "720p, approximately 300 ms latency and AES-256 encryption.",
+            "sources": [
+              "https://redcataerial.com/solutions/teal-2/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Controller endurance",
+            "details": "Manufacturer quotes six hours; capacity undisclosed.",
+            "sources": [
+              "https://redcataerial.com/solutions/teal-2/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Controller OS",
+            "details": "Android.",
+            "sources": [
+              "https://redcataerial.com/solutions/teal-2/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "redcat-black-widow-ocellus-system",
+        "manufacturer": "Red Cat Holdings",
+        "models": [
+          "Black Widow (Ocellus 3CP configuration)",
+          "Teal Black Widow",
+          "Black Widow"
+        ],
+        "configuration": "Current Ocellus configuration; AiN navigation options are not assumed installed. RAM is undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Qualcomm RB5",
+            "details": "RB5 platform with eight Kryo 585 CPU cores and Adreno 650 GPU.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Ocellus 3CP",
+            "details": "Three-axis gimbal: FLIR Boson 640 R+, 35 mm 12 MP telephoto and 8 mm 16 MP wide-angle cameras.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Doodle link",
+            "details": "Doodle hex-band radio; a shared radio family is not a unique aircraft identifier.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft configuration",
+            "details": "1.93 kg; preliminary 40-minute endurance estimate with Ocellus 3CP, pending final testing.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modularity",
+            "details": "Replaceable arms and payloads; civilian GNSS and dual-band L1/L2 options.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Vision software",
+            "details": "FLIR Prism AI; Reveal Farsight, Athena AI and Palantir VNAV are optional.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "redcat-web-gcs-system",
+        "manufacturer": "Red Cat Holdings",
+        "models": [
+          "WEB ground control station"
+        ],
+        "configuration": "Controller specifications; do not assign its interfaces or endurance to the aircraft.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Controller radio",
+            "details": "AES-256; M1–M6, 1625–2510 MHz, channel/band hopping.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Controller battery",
+            "details": "220 Wh; quoted 12-hour runtime.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Connections",
+            "details": "Nett Warrior backhaul, USB-C power output and HDMI video output.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control environment",
+            "details": "Android with ATAK UAS Tool and QGC.",
+            "sources": [
+              "https://redcataerial.com/solutions/black-widow/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "skydio2-manual2023-system",
+        "manufacturer": "Skydio",
+        "models": [
+          "Skydio 2 (2023 manual configuration)",
+          "Skydio 2"
+        ],
+        "configuration": "Skydio 2 column, 2023 operator manual pages 49–51. Separate from 2+ and from regulatory controller/radio records.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autonomy SoC",
+            "details": "NVIDIA Tegra X2: 256-core Pascal GPU, dual Denver 2 and quad ARM Cortex-A57 CPUs.",
+            "sources": [
+              "https://support.skydio.com/hc/article_attachments/15085615535387"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Camera processor",
+            "details": "Qualcomm QCS605 with Adreno 615, octa-core Kryo 300 and Hexagon 685 DSP (two HVX units).",
+            "sources": [
+              "https://support.skydio.com/hc/article_attachments/15085615535387"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "RAM and recording",
+            "details": "4 GB 128-bit LPDDR4 for autonomy; removable U3/V30 microSD for imagery.",
+            "sources": [
+              "https://support.skydio.com/hc/article_attachments/15085615535387"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless link",
+            "details": "2.4–2.483, 5.18–5.24 and 5.725–5.85 GHz. Standard Wi-Fi widths 20/40/80 MHz; Skydio Link 5/10 MHz.",
+            "sources": [
+              "https://support.skydio.com/hc/article_attachments/15085615535387"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Cameras and navigation",
+            "details": "Sony IMX577 12.3 MP main sensor; six Sony 1/3-inch 4K colour navigation cameras, f/1.8 and 200° field of view. GPS/GLONASS.",
+            "sources": [
+              "https://support.skydio.com/hc/article_attachments/15085615535387"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Airframe and endurance",
+            "details": "775 g with battery; nominal 23-minute flight time. Battery capacity is not specified in these tables.",
+            "sources": [
+              "https://support.skydio.com/hc/article_attachments/15085615535387"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Visual autonomy",
+            "details": "Omnidirectional obstacle avoidance using top/bottom trinocular camera groups.",
+            "sources": [
+              "https://support.skydio.com/hc/article_attachments/15085615535387"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "skydio-r10-current-system",
+        "manufacturer": "Skydio",
+        "models": [
+          "Skydio R10 (current technical specification)",
+          "Skydio R10",
+          "R10"
+        ],
+        "configuration": "Current technical page. Its 70 Wh battery differs from the 2025 brochure’s 86.4 Wh pack; configurations remain separate. RAM/modem SKU unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Main processor",
+            "details": "Qualcomm Snapdragon 865 SoC.",
+            "sources": [
+              "https://www.skydio.com/r10/technical-specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Internal storage",
+            "details": "Encrypted internal storage; capacity not disclosed.",
+            "sources": [
+              "https://www.skydio.com/r10/technical-specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Connect SL and Connect 5G",
+            "details": "Wi-Fi 6 at 2400–2483.5 and 5150–5850 MHz; LTE/5G frequency ranges listed as 600–960 and 1700–2200 MHz. AES-256 for SL and AES-128 for 5G.",
+            "sources": [
+              "https://www.skydio.com/r10/technical-specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging and navigation",
+            "details": "1-inch 12.5 MP main camera; two forward Samsung 1/2.8-inch 32 MP stereo cameras, 200° field of view. NightSense forward visible illumination.",
+            "sources": [
+              "https://www.skydio.com/r10/technical-specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Current flight battery",
+            "details": "4900 mAh, 14.4 V, 70 Wh lithium-ion. 785 g aircraft, nominal 20-minute flight and three-hour perch time.",
+            "sources": [
+              "https://www.skydio.com/r10/technical-specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Pairing",
+            "details": "Wired pairing with the controller.",
+            "sources": [
+              "https://www.skydio.com/r10/technical-specs"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "skydio-r10-2025-brochure-system",
+        "manufacturer": "Skydio",
+        "models": [
+          "Skydio R10 (2025 brochure configuration)",
+          "Skydio R10",
+          "R10"
+        ],
+        "configuration": "2025 brochure configuration. Its battery figures must not be substituted into the current technical-page profile.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Processor",
+            "details": "Qualcomm Snapdragon 865 SoC.",
+            "sources": [
+              "https://www.skydio.com/resources/datasheets/r10-data-sheet"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "2025 brochure battery",
+            "details": "6000 mAh, 14.4 V, 86.4 Wh rechargeable lithium-ion; nominal 20-minute flight time.",
+            "sources": [
+              "https://www.skydio.com/resources/datasheets/r10-data-sheet"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Main camera",
+            "details": "1-inch 12.5 MP sensor, f/1.95 and 93° diagonal field of view.",
+            "sources": [
+              "https://www.skydio.com/resources/datasheets/r10-data-sheet"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless systems",
+            "details": "Connect SL Wi-Fi 6 and Connect 5G LTE/5G; bands not listed in this brochure.",
+            "sources": [
+              "https://www.skydio.com/resources/datasheets/r10-data-sheet"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tennant-t7amr-may2020-parts",
+        "manufacturer": "Tennant Company",
+        "models": [
+          "Tennant T7AMR (May 2020 autonomy parts)",
+          "Tennant T7AMR",
+          "T7AMR"
+        ],
+        "configuration": "May 2020 manufacturer parts guide. Part numbers identify service assemblies, not necessarily processor or sensor silicon. CPU/RAM unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autonomy controller",
+            "details": "AMR BCM controller assembly, Tennant part 1248248.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera assemblies",
+            "details": "2D camera 1240062; front IFM O3D 3D assembly 1240059; left/right IFM O3X 3D cameras 1240239/1240632.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Range sensors",
+            "details": "TiM551 LiDAR assembly 1240525; horizontal LiDAR assembly 1240234, model unspecified.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Telemetry hardware",
+            "details": "Telemetry controller 1243815 and antenna 1243814. No supported band or modem SKU is established by this parts list.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Local controls",
+            "details": "Touch LCD 1240639; separate upper, lower and power harnesses and AMR service cable.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/t7amr-parts-guide-en-noam.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tennant-t7amr-2022-operation",
+        "manufacturer": "Tennant Company",
+        "models": [
+          "Tennant T7AMR (2022 operating specification)",
+          "Tennant T7AMR",
+          "T7AMR"
+        ],
+        "configuration": "T7AMR column of the 2022 joint T380AMR/T7AMR specification. Do not copy T380AMR figures or newer runtime claims into this revision.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Battery and charger",
+            "details": "24 V, 360 Ah system: four lithium-ion or four flooded lead-acid batteries. Listed runtime six/four hours respectively; offboard 24 V, 41.3 A charger, 100–240 V AC input.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t380amr/t380amr-t7amr-specifications-en-noam.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cleaning hardware",
+            "details": "650 mm disk cleaning path at 225 rpm; 110 L solution and recovery tanks. Maximum down-pressure 86 kg.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t380amr/t380amr-t7amr-specifications-en-noam.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "BrainOS modes",
+            "details": "BrainOS supports teach-and-repeat and area-fill operation through the LCD touchscreen.",
+            "sources": [
+              "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t380amr/t380amr-t7amr-specifications-en-noam.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "technipfmc-gemini-rev4-system",
+        "manufacturer": "TechnipFMC",
+        "models": [
+          "Gemini ROV"
+        ],
+        "configuration": "Schilling GEMINI REV4 sensor configuration (2021), with 2023 manufacturer hydraulic-system documentation. CPU, RAM and electronics-board SKUs are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Navigation instruments",
+            "details": "Valeport miniIPS depth sensor, iXblue Octans Nano motion reference unit and Teledyne RDI Pioneer 600 kHz DVL. The DVL is acoustic, not an RF transmitter.",
+            "sources": [
+              "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Manipulation feedback",
+            "details": "Two six-degree-of-freedom manipulators with force-sensing wrists and integrated machine-vision cameras and lights.",
+            "sources": [
+              "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Surface data transport",
+            "details": "H.264 RTSP video over Ethernet; up to four HD streams to a surface PC. This is tethered communication, not a Wi-Fi signature.",
+            "sources": [
+              "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hydraulics and propulsion",
+            "details": "Seven Schilling thrusters, 250 hp hydraulic power unit and 150 hp auxiliary ISOL8 eight-cylinder pump.",
+            "sources": [
+              "https://www.technipfmc.com/media/z0apyfk4/gemini-rov-datasheet.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Tool and video interfaces",
+            "details": "100 Mb Ethernet through the arm and 120 W tool power; topside HDMI/NTSC/PAL video outputs.",
+            "sources": [
+              "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Station keeping",
+            "details": "StationKeep V2 control.",
+            "sources": [
+              "https://www.technipfmc.com/media/0kanstvt/data-sheet_schilling-gemini_rev4.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seamachines-sm300-2017-system",
+        "manufacturer": "Sea Machines Robotics",
+        "models": [
+          "SM300 (2017 configuration)",
+          "SM300",
+          "SM300 / SM200"
+        ],
+        "configuration": "2017 autonomy retrofit architecture. Host-vessel propulsion is separate; Siemens processor models and RAM are not stated.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Industrial controller",
+            "details": "Marine industrial Siemens components and computers inside an IP67 electrical enclosure.",
+            "sources": [
+              "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vessel navigation inputs",
+            "details": "Integrates DGPS, AIS and radar data from vessel instruments; individual sensor manufacturers are unspecified.",
+            "sources": [
+              "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Remote helm",
+            "details": "Joystick remote control quoted at one kilometre. Radio bands/hardware are unspecified.",
+            "sources": [
+              "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Retrofit controls",
+            "details": "Interfaces with vessel propulsion, auxiliary equipment and onboard payloads.",
+            "sources": [
+              "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "TALOS",
+            "details": "Operator interface supports waypoint/grid navigation, multi-vessel command and collision-avoidance functions.",
+            "sources": [
+              "https://sea-machines.com/sea-machines-announces-release-of-the-sea-machines-300-autonomy-system/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seamachines-sm200-remote-helm",
+        "manufacturer": "Sea Machines Robotics",
+        "models": [
+          "SM200 remote helm",
+          "SM200",
+          "SM300 / SM200"
+        ],
+        "configuration": "SM200 remote-control system, 2019/2022 manufacturer accounts. SM300 autonomous navigation and Siemens components are not automatically assigned to SM200.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Wireless helm",
+            "details": "Line-of-sight wireless helm and propulsion control, quoted up to 1,000 m; protocol and chipset undisclosed.",
+            "sources": [
+              "https://sea-machines.com/bureau-veritas-grants-first-type-approval-for-wireless-remote-helm-control-systems-to-sea-machines/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Belt-pack controller",
+            "details": "Wearable control unit operates helm, propulsion, auxiliaries and payload equipment.",
+            "sources": [
+              "https://sea-machines.com/bureau-veritas-grants-first-type-approval-for-wireless-remote-helm-control-systems-to-sea-machines/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control scope",
+            "details": "Remote joystick control. The 2019 account assigns autonomous operation specifically to SM300.",
+            "sources": [
+              "https://sea-machines.com/top-8-capabilities-sea-machines-adds-to-commercial-surface-vessels/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shield-vbat-heavy-fuel-system",
+        "manufacturer": "Shield AI",
+        "models": [
+          "V-BAT (heavy-fuel configuration)",
+          "Shield AI V-BAT",
+          "V-BAT"
+        ],
+        "configuration": "Current heavy-fuel aircraft specification. Payloads are selectable; they are not all installed on every aircraft. CPU, RAM and radio-band details are unpublished here.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Link options",
+            "details": "MPU5 or C-band radio configurations; SATCOM provides an additional beyond-line-of-sight option. No unique passive fingerprint is established.",
+            "sources": [
+              "https://shield.ai/v-bat/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Selectable payloads",
+            "details": "Hoodtech 11/9/6-series imaging, ViDAR or SAR; anti-jam GNSS and M-code options. ADS-B Out is a listed option, not a universal broadcast.",
+            "sources": [
+              "https://shield.ai/v-bat/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Airframe power",
+            "details": "JP5 heavy-fuel engine with ducted fan; 75 kg maximum gross takeoff mass, 3.8 m wingspan. 600 W available for payloads.",
+            "sources": [
+              "https://shield.ai/v-bat/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular payload fit",
+            "details": "Mission-dependent payload installation; imaging and navigation equipment must be identified per configuration.",
+            "sources": [
+              "https://shield.ai/v-bat/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Hivemind upgrade",
+            "details": "2025 block-upgrade announcement describes a Hivemind Pilot-ready configuration; that announcement alone does not prove every existing V-BAT has the upgrade.",
+            "sources": [
+              "https://shield.ai/shield-ai-unveils-v-bat-block-upgrade-powered-by-hivemind-advanced-autonomy-satcom-and-heavy-fuel-engine-among-new-features/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "flir-packbot525-may2022-system",
+        "manufacturer": "Teledyne FLIR",
+        "models": [
+          "PackBot 525"
+        ],
+        "configuration": "May 30, 2022 manufacturer specification. Onboard CPU/RAM and radio operating band are not disclosed. Accessory sensors are separate options.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "MANET radio",
+            "details": "Persistent Systems MPU5 using Wave Relay MANET; shared radio equipment does not uniquely identify a PackBot.",
+            "sources": [
+              "https://defense.flir.com/globalassets/defense/datasheets--brochures/packbot-525_datasheet-ltr-22-0520-web.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Standard awareness",
+            "details": "Three HD cameras, two-way audio and laser range finder. LWIR thermal camera and CBRN payloads are optional.",
+            "sources": [
+              "https://defense.flir.com/globalassets/defense/datasheets--brochures/packbot-525_datasheet-ltr-22-0520-web.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Batteries and mobility",
+            "details": "Two BB-2590 batteries for up to four hours or four for up to eight hours. Optional in-situ charging. 26.3 kg without batteries; zero-radius tracked turn.",
+            "sources": [
+              "https://defense.flir.com/globalassets/defense/datasheets--brochures/packbot-525_datasheet-ltr-22-0520-web.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Control and manipulation",
+            "details": "uPoint touchscreen tablet with optional hand controllers; accessory ports. Arm lifts 20 kg close-in or 5 kg at 1.87 m extension.",
+            "sources": [
+              "https://defense.flir.com/globalassets/defense/datasheets--brochures/packbot-525_datasheet-ltr-22-0520-web.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "flir-centaur-june2022-system",
+        "manufacturer": "Teledyne FLIR",
+        "models": [
+          "Centaur"
+        ],
+        "configuration": "June 29, 2022 manufacturer specification. CPU/RAM, battery capacity and radio make/band are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Wireless and tether links",
+            "details": "Radio quoted at 800 m line-of-sight or 150 m non-line-of-sight; 200 m fibre-tether option.",
+            "sources": [
+              "https://defense.flir.com/globalassets/defense/datasheets--brochures/centaur_datasheet-ltr-22-0629_web.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "PTZ imaging",
+            "details": "Visible, near-infrared and long-wave infrared camera suite. MultiRAE Pro, JCAD, FIDO XT, Radiac and FirstDefender RMX are compatible sensor payloads, not universal fit.",
+            "sources": [
+              "https://defense.flir.com/globalassets/defense/datasheets--brochures/centaur_datasheet-ltr-22-0629_web.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobility and endurance",
+            "details": "Tracked, zero-radius turn; manufacturer quotes up to eight hours and mass below 164 lb. Battery details are unspecified.",
+            "sources": [
+              "https://defense.flir.com/globalassets/defense/datasheets--brochures/centaur_datasheet-ltr-22-0629_web.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Controller and arm",
+            "details": "MOCU3 rugged laptop and hand controller. Five-degree-of-freedom arm, 75.5-inch vertical reach; IOP-compliant expansion.",
+            "sources": [
+              "https://defense.flir.com/globalassets/defense/datasheets--brochures/centaur_datasheet-ltr-22-0629_web.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seegrid-palion-family-2022",
+        "manufacturer": "Seegrid",
+        "models": [
+          "Palion AMR"
+        ],
+        "configuration": "2022 manufacturer family description, not one uniform hardware build. CPU, RAM, radio, battery and individual sensor SKUs remain unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Seegrid IQ perception",
+            "details": "Cameras and LiDAR combined with 3D computer vision and machine-learning models.",
+            "sources": [
+              "https://seegrid.com/news/seegrid-amrs-recognized-by-modern-materials-handling-for-transforming-manufacturing-operations-at-guardian-industries/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet control",
+            "details": "Fleet Central enterprise software coordinates the Palion fleet. The account includes Tow Tractor and Lift variants; their mechanical specifications are not interchangeable.",
+            "sources": [
+              "https://seegrid.com/news/seegrid-amrs-recognized-by-modern-materials-handling-for-transforming-manufacturing-operations-at-guardian-industries/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -296930,8 +298508,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 472,
-    "devices_with_system_profiles": 414,
-    "devices_with_documented_compute": 192
+    "system_profiles": 488,
+    "devices_with_system_profiles": 424,
+    "devices_with_documented_compute": 197
   }
 }
