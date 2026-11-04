@@ -9,6 +9,54 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 63 binds Argo codes without conflating float manufacturers or revisions',()=>{
+ const argo=code=>system('Unknown manufacturer',code);
+ assert.deepEqual(profileIds(argo('ALTO')),['mrv-alto-published-system']);
+ assert.match(text(argo('ALTO').sections.sensors),/alternatives/);
+ assert.equal(argo('ALTO').sections.compute.status,'not-established');
+ assert.deepEqual(profileIds(argo('S2A')),['mrv-s2a-published-system']);
+ assert.deepEqual(profileIds(argo('SOLO_II')),['scripps-solo-ii-historical']);
+ assert.deepEqual(profileIds(argo('SOLO_BGC_MRV')),['mrv-s2bgc-published-system']);
+ assert.equal(profileIds(argo('SOLO_BGC')).length,0);
+ assert.deepEqual(profileIds(argo('NAVIS_A')),['seabird-navis-2016-core']);
+ assert.match(text(argo('NAVIS_A').sections.radios),/9523.*RUDICS/);
+ assert.equal(profileIds(argo('NAVIS_EBR')).length,0);
+ assert.deepEqual(profileIds(argo('APEX')),['apex-apf9a-2017-argos']);
+ assert.match(text(argo('APEX').sections.compute),/APF9A/);
+ assert.equal(profileIds(argo('APEX_D')).length,0);
+ assert.equal(profileIds(system('Other manufacturer','ALTO')).length,0);
+ assert.equal(profileIds(system('Unknown manufacturer','Unidentified float')).length,0);
+ assert.equal(profileIds(system('Unknown manufacturer','ALTO',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('batch 63 keeps telemetry, servicing, controller options and payloads distinct',()=>{
+ const argo=code=>system('Unknown manufacturer',code);
+ assert.equal(profileIds(argo('ARVOR')).length,2);
+ const argos=system('NKE Instrumentation','ARVOR L'), iridium=system('NKE Instrumentation','ARVOR-I');
+ assert.match(text(argos.sections.compute),/I535/);
+ assert.doesNotMatch(text(argos.sections.radios.facts.map(f=>f.details)),/9602/);
+ assert.match(text(iridium.sections.radios),/9602/);
+ assert.equal(iridium.sections.compute.status,'not-established');
+ assert.equal(profileIds(argo('ARVOR2')).length,0);
+ assert.match(text(argo('ARVOR_D').sections.compute),/certain ARVOR_D configurations/);
+ const solo=argo('SOLO_D');
+ assert.match(text(solo.sections.radios),/XBee.*band is not specified/);
+ assert.match(text(solo.sections.power),/January 2018.*TL-6930/);
+ assert.equal(solo.sections.compute.status,'not-established');
+ assert.equal(profileIds(argo('SOLO_D_MRV')).length,0);
+ const usea=argo('PROVOR_V');
+ assert.match(text(usea.sections.compute),/APMT.*USEA/);
+ assert.match(text(usea.sections.sensors),/configurable payloads/);
+ assert.match(text(usea.sections.power),/standard PROVOR_V is not automatically a Jumbo/);
+ assert.deepEqual(profileIds(usea),profileIds(argo('PROVOR_V_JUMBO')));
+ assert.equal(profileIds(argo('PROVOR_IV')).length,0);
+ assert.equal(usea.sections.memory.status,'not-established');
+ for(const code of ['ALTO','S2A','APEX','NAVIS_A','ARVOR','ARVOR_D','SOLO_D','PROVOR_V']){
+  assert.equal(argo(code).complete_bill_of_materials,false);
+  assert.ok(argo(code).sections.identification.facts.every(f=>!f.pattern));
+ }
+});
+
 test('batch 62 matches Skydio FCC hosts and preserves module versus host boundaries',()=>{
  const equipment=id=>system('Skydio','regulatory equipment',{kind:'regulatory-equipment',fcc_id:id});
  const ca=equipment('2ATQRCA');
