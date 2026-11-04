@@ -119903,13 +119903,37 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tekever-ar5-evolution-gtekv-2023",
+            "configuration": "AAIB-documented G-TEKV configuration, manufactured in 2019 and examined in 2023. This individual aircraft does not establish universal AR5 fit. CPU/RAM unspecified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "tekever-ar5-2025-maritime-options",
+            "configuration": "Manufacturer brochure contains Patrol and Deep Find configurations. Named payloads and navigation modules are selectable configurations, not universal fit. CPU/RAM unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Autopilot",
+                "details": "Custom autopilot; silicon model unpublished. Optional visual-based navigation module.",
+                "sources": [
+                  "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-2025-maritime-options",
+                "configuration": "Manufacturer brochure contains Patrol and Deep Find configurations. Named payloads and navigation modules are selectable configurations, not universal fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -119918,33 +119942,147 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Redundant data links",
+                "details": "Six links, including primary/backup radio-line-of-sight, 4G and satellite links. Primary SATCOM carries command, telemetry and video; backup prioritizes command. Radio frequencies are not disclosed.",
+                "sources": [
+                  "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-evolution-gtekv-2023",
+                "configuration": "AAIB-documented G-TEKV configuration, manufactured in 2019 and examined in 2023. This individual aircraft does not establish universal AR5 fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Data links",
+                "details": "Radio-line-of-sight and SATCOM; Link-16 integration is listed for Deep Find. Frequencies/modem models unspecified.",
+                "sources": [
+                  "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-2025-maritime-options",
+                "configuration": "Manufacturer brochure contains Patrol and Deep Find configurations. Named payloads and navigation modules are selectable configurations, not universal fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Payload options",
+                "details": "Deep Find lists IMSAR NSP-7/NSP-5 radar and Hoodtech AC14 imaging. Other listed options include AIS, EPIRB and EO/IR gimbals.",
+                "sources": [
+                  "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-2025-maritime-options",
+                "configuration": "Manufacturer brochure contains Patrol and Deep Find configurations. Named payloads and navigation modules are selectable configurations, not universal fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Twin piston engines",
+                "details": "Two 3W two-stroke engines; system description gives 170 cc boxer engines. Airframe maximum takeoff mass 180 kg; this aircraft’s authorization limited it to 165 kg.",
+                "sources": [
+                  "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-evolution-gtekv-2023",
+                "configuration": "AAIB-documented G-TEKV configuration, manufactured in 2019 and examined in 2023. This individual aircraft does not establish universal AR5 fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Airframe and endurance",
+                "details": "Twin-engine aircraft, 180 kg maximum takeoff mass and 50 kg payload capacity. Brochure quotes 16–20 hours depending on payload.",
+                "sources": [
+                  "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-2025-maritime-options",
+                "configuration": "Manufacturer brochure contains Patrol and Deep Find configurations. Named payloads and navigation modules are selectable configurations, not universal fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Ground station",
+                "details": "Separate crewed station controls the aircraft and payload.",
+                "sources": [
+                  "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-evolution-gtekv-2023",
+                "configuration": "AAIB-documented G-TEKV configuration, manufactured in 2019 and examined in 2023. This individual aircraft does not establish universal AR5 fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Payload architecture",
+                "details": "Modular payload and datalink integration; automatic runway takeoff and landing.",
+                "sources": [
+                  "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-2025-maritime-options",
+                "configuration": "Manufacturer brochure contains Patrol and Deep Find configurations. Named payloads and navigation modules are selectable configurations, not universal fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight contingency logic",
+                "details": "Automatic return-to-home and landing capability documented by AAIB.",
+                "sources": [
+                  "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-evolution-gtekv-2023",
+                "configuration": "AAIB-documented G-TEKV configuration, manufactured in 2019 and examined in 2023. This individual aircraft does not establish universal AR5 fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "ADS-B configuration",
+                "details": "Mode S ADS-B transponder fitted to this aircraft. This does not establish ADS-B on every AR5.",
+                "sources": [
+                  "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tekever-ar5-evolution-gtekv-2023",
+                "configuration": "AAIB-documented G-TEKV configuration, manufactured in 2019 and examined in 2023. This individual aircraft does not establish universal AR5 fit. CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -119953,14 +120091,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -120527,8 +120658,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "seabotix-vlbv300-revb-system",
+            "configuration": "Legacy SeaBotix manufacturer sheet, specification-page footer 13-4009 REV B, preserved by distributor Deeptech. Not the later vLBV300II specification. CPU/RAM undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -120542,28 +120679,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Tethered transport",
+                "details": "Standard 250 m, 8.9 mm tether; optional lengths to 2,000 m. This is a wired underwater link, not a Wi-Fi signature.",
+                "sources": [
+                  "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabotix-vlbv300-revb-system",
+                "configuration": "Legacy SeaBotix manufacturer sheet, specification-page footer 13-4009 REV B, preserved by distributor Deeptech. Not the later vLBV300II specification. CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera and lighting",
+                "details": "650-line colour camera, NTSC/PAL, 180° tilt; 2,160-lumen LED illumination. Sonar, USBL and HD/rear cameras are optional.",
+                "sources": [
+                  "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabotix-vlbv300-revb-system",
+                "configuration": "Legacy SeaBotix manufacturer sheet, specification-page footer 13-4009 REV B, preserved by distributor Deeptech. Not the later vLBV300II specification. CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Propulsion and supply",
+                "details": "Six direct-drive brushless DC thrusters: four vectored, two vertical. Surface control system requires 3,000 W, 100–240 V AC. Vehicle mass 18.1 kg; depth rating 300 m.",
+                "sources": [
+                  "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabotix-vlbv300-revb-system",
+                "configuration": "Legacy SeaBotix manufacturer sheet, specification-page footer 13-4009 REV B, preserved by distributor Deeptech. Not the later vLBV300II specification. CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Operator equipment",
+                "details": "Weatherproof colour LCD and removable controls in a rugged case; slip-ring tether reel.",
+                "sources": [
+                  "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabotix-vlbv300-revb-system",
+                "configuration": "Legacy SeaBotix manufacturer sheet, specification-page footer 13-4009 REV B, preserved by distributor Deeptech. Not the later vLBV300II specification. CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Automatic control",
+                "details": "Depth, heading and trim functions with video telemetry overlay.",
+                "sources": [
+                  "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabotix-vlbv300-revb-system",
+                "configuration": "Legacy SeaBotix manufacturer sheet, specification-page footer 13-4009 REV B, preserved by distributor Deeptech. Not the later vLBV300II specification. CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -120572,18 +120774,26 @@
           },
           "other": {
             "title": "Other published specifications",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "other",
+                "component": "Lifecycle",
+                "details": "Teledyne announced vLBV discontinuation in March 2025; service and parts depend on availability.",
+                "sources": [
+                  "https://www.teledynemarine.com/en-us/products/Pages/vlbv300ii.aspx"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabotix-vlbv300-revb-system",
+                "configuration": "Legacy SeaBotix manufacturer sheet, specification-page footer 13-4009 REV B, preserved by distributor Deeptech. Not the later vLBV300II specification. CPU/RAM undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           }
         },
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -121370,8 +121580,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "terabase-terafab-v2-system",
+            "configuration": "March 2026 field-tested V2 architecture. CPU/RAM, robot-arm SKU, sensor models, power and radios remain undisclosed. Rover full autonomy was still expected, not confirmed deployed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -121400,13 +121616,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Assembly and transport",
+                "details": "Outdoor line preassembles PV modules onto tracker torque tubes, with in-line quality control; dedicated rovers transport assemblies to installation points.",
+                "sources": [
+                  "https://www.terabase.energy/resources/terabase-energys-next-generation-terafab-completes-field-testing-ready-for-deployment"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "terabase-terafab-v2-system",
+                "configuration": "March 2026 field-tested V2 architecture. CPU/RAM, robot-arm SKU, sensor models, power and radios remain undisclosed. Rover full autonomy was still expected, not confirmed deployed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Manufacturing execution",
+                "details": "AI-assisted Manufacturing Execution System coordinates and optimizes plant construction.",
+                "sources": [
+                  "https://www.terabase.energy/resources/terabase-energys-next-generation-terafab-completes-field-testing-ready-for-deployment"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "terabase-terafab-v2-system",
+                "configuration": "March 2026 field-tested V2 architecture. CPU/RAM, robot-arm SKU, sensor models, power and radios remain undisclosed. Rover full autonomy was still expected, not confirmed deployed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -121425,8 +121667,6 @@
           "radios",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -122390,8 +122630,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tevel-far-perception-system",
+            "configuration": "Manufacturer discloses perception and harvesting architecture, not a component BOM. CPU/RAM, camera SKU, radio and electrical supply remain unverified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -122410,8 +122656,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Fruit perception",
+                "details": "Computer vision distinguishes fruit and foliage, estimates size/ripeness and tracks individual fruit through data fusion. Camera hardware unspecified.",
+                "sources": [
+                  "https://www.tevel-tech.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tevel-far-perception-system",
+                "configuration": "Manufacturer discloses perception and harvesting architecture, not a component BOM. CPU/RAM, camera SKU, radio and electrical supply remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -122420,13 +122679,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Harvesting mechanism",
+                "details": "Flying robot interacts with foliage and picks fruit in the stated 50–700 g range.",
+                "sources": [
+                  "https://www.tevel-tech.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tevel-far-perception-system",
+                "configuration": "Manufacturer discloses perception and harvesting architecture, not a component BOM. CPU/RAM, camera SKU, radio and electrical supply remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control and fleet data",
+                "details": "Trajectory planning, stabilization and fleet optimization. Harvest records include fruit weight/size, colour, disease indicators, timestamp and geolocation.",
+                "sources": [
+                  "https://www.tevel-tech.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tevel-far-perception-system",
+                "configuration": "Manufacturer discloses perception and harvesting architecture, not a component BOM. CPU/RAM, camera SKU, radio and electrical supply remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -122443,10 +122728,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -122488,8 +122770,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tevel-far-perception-system",
+            "configuration": "Manufacturer discloses perception and harvesting architecture, not a component BOM. CPU/RAM, camera SKU, radio and electrical supply remain unverified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -122508,8 +122796,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Fruit perception",
+                "details": "Computer vision distinguishes fruit and foliage, estimates size/ripeness and tracks individual fruit through data fusion. Camera hardware unspecified.",
+                "sources": [
+                  "https://www.tevel-tech.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tevel-far-perception-system",
+                "configuration": "Manufacturer discloses perception and harvesting architecture, not a component BOM. CPU/RAM, camera SKU, radio and electrical supply remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -122518,13 +122819,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Harvesting mechanism",
+                "details": "Flying robot interacts with foliage and picks fruit in the stated 50–700 g range.",
+                "sources": [
+                  "https://www.tevel-tech.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tevel-far-perception-system",
+                "configuration": "Manufacturer discloses perception and harvesting architecture, not a component BOM. CPU/RAM, camera SKU, radio and electrical supply remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control and fleet data",
+                "details": "Trajectory planning, stabilization and fleet optimization. Harvest records include fruit weight/size, colour, disease indicators, timestamp and geolocation.",
+                "sources": [
+                  "https://www.tevel-tech.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tevel-far-perception-system",
+                "configuration": "Manufacturer discloses perception and harvesting architecture, not a component BOM. CPU/RAM, camera SKU, radio and electrical supply remain unverified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -122541,10 +122868,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -122586,13 +122910,37 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "textron-ripsaw-m5-platform",
+            "configuration": "Current manufacturer M5 specifications. M3, A3 and M1 columns are separate vehicles. CPU, RAM, battery capacity and radio SKU unspecified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "textron-ripsaw-m5-flir2020",
+            "configuration": "FLIR’s October 2020 M5 integration account. Deployable robots are accessories, not onboard processors. CPU/RAM and radio-band specifications unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "SUMIT360 processing",
+                "details": "Onboard processing stitches images from SUMIT360 multispectral modules; processor model unspecified.",
+                "sources": [
+                  "https://defense.flir.com/en-ca/about/news/flir-intelligent-sensing-technology-sets-the-textron-ripsaw-m5-robotic-vehicle-apart/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "textron-ripsaw-m5-flir2020",
+                "configuration": "FLIR’s October 2020 M5 integration account. Deployable robots are accessories, not onboard processors. CPU/RAM and radio-band specifications unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -122606,18 +122954,69 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vehicle cameras",
+                "details": "SUMIT360 surrounds the vehicle with multispectral imaging. TacFLIR 280-HD gimbal combines high-definition optics and inertial navigation.",
+                "sources": [
+                  "https://defense.flir.com/en-ca/about/news/flir-intelligent-sensing-technology-sets-the-textron-ripsaw-m5-robotic-vehicle-apart/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "textron-ripsaw-m5-flir2020",
+                "configuration": "FLIR’s October 2020 M5 integration account. Deployable robots are accessories, not onboard processors. CPU/RAM and radio-band specifications unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Drivetrain",
+                "details": "Diesel/hybrid-electric drivetrain. M5 specification lists 21,000 lb gross weight and speed above 25 mph.",
+                "sources": [
+                  "https://www.textronsystems.com/products/ground-robotic-vehicles-family-products"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "textron-ripsaw-m5-platform",
+                "configuration": "Current manufacturer M5 specifications. M3, A3 and M1 columns are separate vehicles. CPU, RAM, battery capacity and radio SKU unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload deck",
+                "details": "M5 dimensions 234 × 105 inches; 60-inch deck height and 8,000 lb payload capacity. Field-modular payload installation.",
+                "sources": [
+                  "https://www.textronsystems.com/products/ground-robotic-vehicles-family-products"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "textron-ripsaw-m5-platform",
+                "configuration": "Current manufacturer M5 specifications. M3, A3 and M1 columns are separate vehicles. CPU, RAM, battery capacity and radio SKU unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Paired robotic accessories",
+                "details": "R80D SkyRaider aerial accessory supports tethered/untethered use; deployable FLIR SUGV provides a separate ground-robot view.",
+                "sources": [
+                  "https://defense.flir.com/en-ca/about/news/flir-intelligent-sensing-technology-sets-the-textron-ripsaw-m5-robotic-vehicle-apart/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "textron-ripsaw-m5-flir2020",
+                "configuration": "FLIR’s October 2020 M5 integration account. Deployable robots are accessories, not onboard processors. CPU/RAM and radio-band specifications unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -122636,12 +123035,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -122884,13 +123279,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "torc-cascadia-flex-orin-2025",
+            "configuration": "March 2025 production-platform announcement, following closed-course validation, with scaled market entry targeted for 2027. Not proof that all earlier test trucks use this hardware.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Flex Jupiter / NVIDIA",
+                "details": "Flex Jupiter multi-chip compute architecture using NVIDIA DRIVE AGX and DRIVE Orin SoCs. DRIVE Thor is a future upgrade direction, not installed hardware established here.",
+                "sources": [
+                  "https://torc.ai/nvidia-flex-industry-first-physical-ai-platform-autonomous-trucks/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "torc-cascadia-flex-orin-2025",
+                "configuration": "March 2025 production-platform announcement, following closed-course validation, with scaled market entry targeted for 2027. Not proof that all earlier test trucks use this hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -122904,8 +123318,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception inputs",
+                "details": "LiDAR, radar and cameras; manufacturers and quantities undisclosed.",
+                "sources": [
+                  "https://torc.ai/nvidia-flex-industry-first-physical-ai-platform-autonomous-trucks/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "torc-cascadia-flex-orin-2025",
+                "configuration": "March 2025 production-platform announcement, following closed-course validation, with scaled market entry targeted for 2027. Not proof that all earlier test trucks use this hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -122914,13 +123341,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle integration",
+                "details": "Autonomous-ready Freightliner Cascadia with redundant vehicle systems and multi-sensor connectivity.",
+                "sources": [
+                  "https://torc.ai/nvidia-flex-industry-first-physical-ai-platform-autonomous-trucks/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "torc-cascadia-flex-orin-2025",
+                "configuration": "March 2025 production-platform announcement, following closed-course validation, with scaled market entry targeted for 2027. Not proof that all earlier test trucks use this hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operating environment",
+                "details": "NVIDIA DriveOS runs with Torc’s autonomous-driving software.",
+                "sources": [
+                  "https://torc.ai/nvidia-flex-industry-first-physical-ai-platform-autonomous-trucks/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "torc-cascadia-flex-orin-2025",
+                "configuration": "March 2025 production-platform announcement, following closed-course validation, with scaled market entry targeted for 2027. Not proof that all earlier test trucks use this hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -122934,13 +123387,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -122984,13 +123433,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "torc-asimov-pacifica2018",
+            "configuration": "2018 installation on a 2017 Chrysler Pacifica Hybrid and January 2019 Asimov capabilities sheet. Separate from the later Cascadia truck compute platform; CPU/RAM unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Automotive computer",
+                "details": "Automotive-grade computers, without processor or board SKU disclosure.",
+                "sources": [
+                  "https://torc.ai/torc-integrates-autonomous-vehicle-technology-in-chrysler-pacifica/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "torc-asimov-pacifica2018",
+                "configuration": "2018 installation on a 2017 Chrysler Pacifica Hybrid and January 2019 Asimov capabilities sheet. Separate from the later Cascadia truck compute platform; CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -123004,13 +123472,39 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Surround perception",
+                "details": "LiDAR, radar, cameras and GPS antennas integrated with the vehicle body.",
+                "sources": [
+                  "https://torc.ai/torc-integrates-autonomous-vehicle-technology-in-chrysler-pacifica/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "torc-asimov-pacifica2018",
+                "configuration": "2018 installation on a 2017 Chrysler Pacifica Hybrid and January 2019 Asimov capabilities sheet. Separate from the later Cascadia truck compute platform; CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Host vehicle",
+                "details": "2017 Chrysler Pacifica Hybrid platform; autonomy-system electrical draw is not specified.",
+                "sources": [
+                  "https://torc.ai/torc-integrates-autonomous-vehicle-technology-in-chrysler-pacifica/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "torc-asimov-pacifica2018",
+                "configuration": "2018 installation on a 2017 Chrysler Pacifica Hybrid and January 2019 Asimov capabilities sheet. Separate from the later Cascadia truck compute platform; CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -123019,8 +123513,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Asimov stack",
+                "details": "Self-driving software with multi-sensor tracking and fault-response capabilities documented in January 2019.",
+                "sources": [
+                  "https://torc.ai/wp-content/uploads/2024/04/Evolving_Asimov.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "torc-asimov-pacifica2018",
+                "configuration": "2018 installation on a 2017 Chrysler Pacifica Hybrid and January 2019 Asimov capabilities sheet. Separate from the later Cascadia truck compute platform; CPU/RAM unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -123034,13 +123541,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -123180,13 +123683,37 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "toyota-epalette-may2024",
+            "configuration": "December 2024 Miyata-factory deployment of a customized e-Palette. CPU/RAM and sensor SKUs undisclosed; no assumptions from other May Mobility vehicle types.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "toyota-epalette-ntt2025",
+            "configuration": "March 2025 NTT Central Training Center demonstration, Chofu. Network details apply to this trial, not every e-Palette.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Autonomous-driving kit",
+                "details": "May Mobility driving kit occupies Toyota’s provisioned sensor/computer installation spaces. Processor SKU undisclosed.",
+                "sources": [
+                  "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "toyota-epalette-may2024",
+                "configuration": "December 2024 Miyata-factory deployment of a customized e-Palette. CPU/RAM and sensor SKUs undisclosed; no assumptions from other May Mobility vehicle types.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -123195,28 +123722,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Local 5G trial",
+                "details": "NTT East local 5G infrastructure supports the demonstration and remote-monitoring functions; onboard modem SKU/bands unspecified.",
+                "sources": [
+                  "https://maymobility.com/posts/may-mobility-inc-and-ntt-group-collaboration-launches-autonomous-driving-demonstration-experiment-using-e-palette"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "toyota-epalette-ntt2025",
+                "configuration": "March 2025 NTT Central Training Center demonstration, Chofu. Network details apply to this trial, not every e-Palette.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vehicle sensing",
+                "details": "Surrounding sensors provide driving inputs; this deployment account does not enumerate their hardware.",
+                "sources": [
+                  "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "toyota-epalette-may2024",
+                "configuration": "December 2024 Miyata-factory deployment of a customized e-Palette. CPU/RAM and sensor SKUs undisclosed; no assumptions from other May Mobility vehicle types.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Vehicle platform",
+                "details": "Battery-electric e-Palette; capacity not given for this custom configuration.",
+                "sources": [
+                  "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "toyota-epalette-may2024",
+                "configuration": "December 2024 Miyata-factory deployment of a customized e-Palette. CPU/RAM and sensor SKUs undisclosed; no assumptions from other May Mobility vehicle types.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Integration provisions",
+                "details": "Toyota provides connection leads and installation spaces for third-party driving kits.",
+                "sources": [
+                  "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "toyota-epalette-may2024",
+                "configuration": "December 2024 Miyata-factory deployment of a customized e-Palette. CPU/RAM and sensor SKUs undisclosed; no assumptions from other May Mobility vehicle types.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "MPDM",
+                "details": "May Mobility Multi-Policy Decision Making; this factory service uses an onboard autonomous-vehicle operator.",
+                "sources": [
+                  "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "toyota-epalette-may2024",
+                "configuration": "December 2024 Miyata-factory deployment of a customized e-Palette. CPU/RAM and sensor SKUs undisclosed; no assumptions from other May Mobility vehicle types.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Remote operation service",
+                "details": "May Mobility ADS paired with NTT demonstration-site remote monitoring.",
+                "sources": [
+                  "https://maymobility.com/posts/may-mobility-inc-and-ntt-group-collaboration-launches-autonomous-driving-demonstration-experiment-using-e-palette"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "toyota-epalette-ntt2025",
+                "configuration": "March 2025 NTT Central Training Center demonstration, Chofu. Network details apply to this trial, not every e-Palette.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -123230,13 +123834,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -123378,8 +123976,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "trombia-free-system",
+            "configuration": "Current manufacturer configuration. CPU/RAM, modem and sensor silicon are unspecified. Published runtime figures use differing conditions, so no single runtime is inferred.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -123393,28 +123997,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Operator controller",
+                "details": "Radio controller for route teaching. Band, protocol and modem SKU are not disclosed.",
+                "sources": [
+                  "https://trombia.com/products/trombia-free/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trombia-free-system",
+                "configuration": "Current manufacturer configuration. CPU/RAM, modem and sensor silicon are unspecified. Published runtime figures use differing conditions, so no single runtime is inferred.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and remote view",
+                "details": "3D LiDAR, GNSS and odometry feed sensor fusion. Internet-connected 360° camera view supports remote assistance.",
+                "sources": [
+                  "https://trombia.com/products/trombia-free/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trombia-free-system",
+                "configuration": "Current manufacturer configuration. CPU/RAM, modem and sensor silicon are unspecified. Published runtime figures use differing conditions, so no single runtime is inferred.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric sweeper",
+                "details": "34 kWh lithium-ion/LiFePO battery; 2,300 kg empty mass. Airknife cleaning and 1.2 m³ hopper.",
+                "sources": [
+                  "https://trombia.com/products/trombia-free/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trombia-free-system",
+                "configuration": "Current manufacturer configuration. CPU/RAM, modem and sensor silicon are unspecified. Published runtime figures use differing conditions, so no single runtime is inferred.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Service stations",
+                "details": "Optional automatic debris-emptying/washing station or manual servicing ramp.",
+                "sources": [
+                  "https://trombia.com/products/trombia-free/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trombia-free-system",
+                "configuration": "Current manufacturer configuration. CPU/RAM, modem and sensor silicon are unspecified. Published runtime figures use differing conditions, so no single runtime is inferred.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Smooth platform",
+                "details": "Cloud mission scheduling, remote assistance and diagnostic monitoring; local navigation uses the onboard sensor-fusion system.",
+                "sources": [
+                  "https://trombia.com/products/trombia-free/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "trombia-free-system",
+                "configuration": "Current manufacturer configuration. CPU/RAM, modem and sensor silicon are unspecified. Published runtime figures use differing conditions, so no single runtime is inferred.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -123430,11 +124099,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -123777,8 +124441,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tutor-cassie-mobile-system",
+            "configuration": "Current mobile Cassie page, not an older fixed-cell configuration. CPU/GPU, RAM and battery capacity unspecified. Model parameter count is not memory capacity.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -123792,28 +124462,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Network transport",
+                "details": "Physical Ethernet specified. No wireless radio or fingerprint established.",
+                "sources": [
+                  "https://tutorintelligence.com/cassie"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tutor-cassie-mobile-system",
+                "configuration": "Current mobile Cassie page, not an older fixed-cell configuration. CPU/GPU, RAM and battery capacity unspecified. Model parameter count is not memory capacity.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and safety",
+                "details": "Four active stereo depth cameras, 2D LiDAR and two 3D LiDAR units.",
+                "sources": [
+                  "https://tutorintelligence.com/cassie"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tutor-cassie-mobile-system",
+                "configuration": "Current mobile Cassie page, not an older fixed-cell configuration. CPU/GPU, RAM and battery capacity unspecified. Model parameter count is not memory capacity.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobile base",
+                "details": "Four-wheel battery platform; quoted 16-hour operation. Charging requires 208–240 V, 30 A. Onboard vacuum eliminates external compressed air.",
+                "sources": [
+                  "https://tutorintelligence.com/cassie"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tutor-cassie-mobile-system",
+                "configuration": "Current mobile Cassie page, not an older fixed-cell configuration. CPU/GPU, RAM and battery capacity unspecified. Model parameter count is not memory capacity.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Handling and I/O",
+                "details": "Telescoping lift, individually controlled vacuum cups, tablet controls and EVE external-sensor I/O hub.",
+                "sources": [
+                  "https://tutorintelligence.com/cassie"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tutor-cassie-mobile-system",
+                "configuration": "Current mobile Cassie page, not an older fixed-cell configuration. CPU/GPU, RAM and battery capacity unspecified. Model parameter count is not memory capacity.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Turing and Tutor Portal",
+                "details": "Turing 200M-parameter foundation-model series; cloud portal exposes authorized live video and operational metrics.",
+                "sources": [
+                  "https://tutorintelligence.com/cassie"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tutor-cassie-mobile-system",
+                "configuration": "Current mobile Cassie page, not an older fixed-cell configuration. CPU/GPU, RAM and battery capacity unspecified. Model parameter count is not memory capacity.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -123829,11 +124564,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -123875,8 +124605,29 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "twinny-nargo60-current",
+            "configuration": "Current NarGo60 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "twinny-nargo100-current",
+            "configuration": "Current NarGo100 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "twinny-nargo500ft-current",
+            "configuration": "Current NarGo500FT configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "twinny-nargod40-current",
+            "configuration": "Current NarGoD40 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -123890,23 +124641,219 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi and LTE.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo60-current",
+                "configuration": "Current NarGo60 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi and LTE.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo100-current",
+                "configuration": "Current NarGo100 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi and LTE.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo500ft-current",
+                "configuration": "Current NarGo500FT configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi and LTE.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargod40-current",
+                "configuration": "Current NarGoD40 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "3D/2D LiDAR and contact bumper.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo60-current",
+                "configuration": "Current NarGo60 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "3D/2D LiDAR and contact bumper.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo100-current",
+                "configuration": "Current NarGo100 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "3D/2D LiDAR and contact bumper.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo500ft-current",
+                "configuration": "Current NarGo500FT configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "3D/2D LiDAR and contact bumper.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargod40-current",
+                "configuration": "Current NarGoD40 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery operation",
+                "details": "Up to eight hours; charging under three hours.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo60-current",
+                "configuration": "Current NarGo60 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery operation",
+                "details": "Up to eight hours; charging under three hours.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo100-current",
+                "configuration": "Current NarGo100 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery operation",
+                "details": "Up to four hours; charging under two hours.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo500ft-current",
+                "configuration": "Current NarGo500FT configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery operation",
+                "details": "29.4 V, 54 Ah; up to eight hours.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargod40-current",
+                "configuration": "Current NarGoD40 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Handling",
+                "details": "60 kg payload. ",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo60-current",
+                "configuration": "Current NarGo60 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Handling",
+                "details": "100 kg payload. ",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo100-current",
+                "configuration": "Current NarGo100 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Handling",
+                "details": "500 kg payload. Fork and pallet sensor.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargo500ft-current",
+                "configuration": "Current NarGo500FT configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Handling",
+                "details": "30 kg payload. Lockable compartment; elevator integration.",
+                "sources": [
+                  "https://twinny.ai/en/product/nargo"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "twinny-nargod40-current",
+                "configuration": "Current NarGoD40 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -123927,10 +124874,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -298492,6 +299435,747 @@
             ]
           }
         ]
+      },
+      {
+        "id": "tekever-ar5-evolution-gtekv-2023",
+        "manufacturer": "TEKEVER",
+        "models": [
+          "AR5 Evolution Mk 2 (G-TEKV, 2023)",
+          "AR5"
+        ],
+        "configuration": "AAIB-documented G-TEKV configuration, manufactured in 2019 and examined in 2023. This individual aircraft does not establish universal AR5 fit. CPU/RAM unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Twin piston engines",
+            "details": "Two 3W two-stroke engines; system description gives 170 cc boxer engines. Airframe maximum takeoff mass 180 kg; this aircraft’s authorization limited it to 165 kg.",
+            "sources": [
+              "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Redundant data links",
+            "details": "Six links, including primary/backup radio-line-of-sight, 4G and satellite links. Primary SATCOM carries command, telemetry and video; backup prioritizes command. Radio frequencies are not disclosed.",
+            "sources": [
+              "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "ADS-B configuration",
+            "details": "Mode S ADS-B transponder fitted to this aircraft. This does not establish ADS-B on every AR5.",
+            "sources": [
+              "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Ground station",
+            "details": "Separate crewed station controls the aircraft and payload.",
+            "sources": [
+              "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight contingency logic",
+            "details": "Automatic return-to-home and landing capability documented by AAIB.",
+            "sources": [
+              "https://assets.publishing.service.gov.uk/media/6501c4845b07380013029e26/Tekever_AR5_Evolution_Mk_2_G-TEKV_10-23.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tekever-ar5-2025-maritime-options",
+        "manufacturer": "TEKEVER",
+        "models": [
+          "AR5 (2025 maritime/defence brochure)",
+          "AR5"
+        ],
+        "configuration": "Manufacturer brochure contains Patrol and Deep Find configurations. Named payloads and navigation modules are selectable configurations, not universal fit. CPU/RAM unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autopilot",
+            "details": "Custom autopilot; silicon model unpublished. Optional visual-based navigation module.",
+            "sources": [
+              "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Payload options",
+            "details": "Deep Find lists IMSAR NSP-7/NSP-5 radar and Hoodtech AC14 imaging. Other listed options include AIS, EPIRB and EO/IR gimbals.",
+            "sources": [
+              "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Data links",
+            "details": "Radio-line-of-sight and SATCOM; Link-16 integration is listed for Deep Find. Frequencies/modem models unspecified.",
+            "sources": [
+              "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Airframe and endurance",
+            "details": "Twin-engine aircraft, 180 kg maximum takeoff mass and 50 kg payload capacity. Brochure quotes 16–20 hours depending on payload.",
+            "sources": [
+              "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload architecture",
+            "details": "Modular payload and datalink integration; automatic runway takeoff and landing.",
+            "sources": [
+              "https://www.tekever.com/wp-content/uploads/2026/04/TEKEVER_AR5_2025_Maritime_Defence.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seabotix-vlbv300-revb-system",
+        "manufacturer": "Teledyne Marine",
+        "models": [
+          "SeaBotix vLBV300 (13-4009 REV B)",
+          "SeaBotix vLBV",
+          "vLBV300"
+        ],
+        "configuration": "Legacy SeaBotix manufacturer sheet, specification-page footer 13-4009 REV B, preserved by distributor Deeptech. Not the later vLBV300II specification. CPU/RAM undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera and lighting",
+            "details": "650-line colour camera, NTSC/PAL, 180° tilt; 2,160-lumen LED illumination. Sonar, USBL and HD/rear cameras are optional.",
+            "sources": [
+              "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion and supply",
+            "details": "Six direct-drive brushless DC thrusters: four vectored, two vertical. Surface control system requires 3,000 W, 100–240 V AC. Vehicle mass 18.1 kg; depth rating 300 m.",
+            "sources": [
+              "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Tethered transport",
+            "details": "Standard 250 m, 8.9 mm tether; optional lengths to 2,000 m. This is a wired underwater link, not a Wi-Fi signature.",
+            "sources": [
+              "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator equipment",
+            "details": "Weatherproof colour LCD and removable controls in a rugged case; slip-ring tether reel.",
+            "sources": [
+              "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Automatic control",
+            "details": "Depth, heading and trim functions with video telemetry overlay.",
+            "sources": [
+              "https://deeptech.se/wp-content/uploads/2014/10/vLBV300.pdf"
+            ]
+          },
+          {
+            "section": "other",
+            "component": "Lifecycle",
+            "details": "Teledyne announced vLBV discontinuation in March 2025; service and parts depend on availability.",
+            "sources": [
+              "https://www.teledynemarine.com/en-us/products/Pages/vlbv300ii.aspx"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "textron-ripsaw-m5-platform",
+        "manufacturer": "Textron Systems",
+        "models": [
+          "Ripsaw M5 (platform specification)",
+          "Ripsaw M5 (RCV)",
+          "Ripsaw M5"
+        ],
+        "configuration": "Current manufacturer M5 specifications. M3, A3 and M1 columns are separate vehicles. CPU, RAM, battery capacity and radio SKU unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Drivetrain",
+            "details": "Diesel/hybrid-electric drivetrain. M5 specification lists 21,000 lb gross weight and speed above 25 mph.",
+            "sources": [
+              "https://www.textronsystems.com/products/ground-robotic-vehicles-family-products"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload deck",
+            "details": "M5 dimensions 234 × 105 inches; 60-inch deck height and 8,000 lb payload capacity. Field-modular payload installation.",
+            "sources": [
+              "https://www.textronsystems.com/products/ground-robotic-vehicles-family-products"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "textron-ripsaw-m5-flir2020",
+        "manufacturer": "Textron Systems",
+        "models": [
+          "Ripsaw M5 (FLIR October 2020 configuration)",
+          "Ripsaw M5 (RCV)",
+          "Ripsaw M5"
+        ],
+        "configuration": "FLIR’s October 2020 M5 integration account. Deployable robots are accessories, not onboard processors. CPU/RAM and radio-band specifications unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "SUMIT360 processing",
+            "details": "Onboard processing stitches images from SUMIT360 multispectral modules; processor model unspecified.",
+            "sources": [
+              "https://defense.flir.com/en-ca/about/news/flir-intelligent-sensing-technology-sets-the-textron-ripsaw-m5-robotic-vehicle-apart/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vehicle cameras",
+            "details": "SUMIT360 surrounds the vehicle with multispectral imaging. TacFLIR 280-HD gimbal combines high-definition optics and inertial navigation.",
+            "sources": [
+              "https://defense.flir.com/en-ca/about/news/flir-intelligent-sensing-technology-sets-the-textron-ripsaw-m5-robotic-vehicle-apart/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Paired robotic accessories",
+            "details": "R80D SkyRaider aerial accessory supports tethered/untethered use; deployable FLIR SUGV provides a separate ground-robot view.",
+            "sources": [
+              "https://defense.flir.com/en-ca/about/news/flir-intelligent-sensing-technology-sets-the-textron-ripsaw-m5-robotic-vehicle-apart/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trombia-free-system",
+        "manufacturer": "Trombia Technologies",
+        "models": [
+          "Trombia Free"
+        ],
+        "configuration": "Current manufacturer configuration. CPU/RAM, modem and sensor silicon are unspecified. Published runtime figures use differing conditions, so no single runtime is inferred.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Navigation and remote view",
+            "details": "3D LiDAR, GNSS and odometry feed sensor fusion. Internet-connected 360° camera view supports remote assistance.",
+            "sources": [
+              "https://trombia.com/products/trombia-free/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric sweeper",
+            "details": "34 kWh lithium-ion/LiFePO battery; 2,300 kg empty mass. Airknife cleaning and 1.2 m³ hopper.",
+            "sources": [
+              "https://trombia.com/products/trombia-free/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Operator controller",
+            "details": "Radio controller for route teaching. Band, protocol and modem SKU are not disclosed.",
+            "sources": [
+              "https://trombia.com/products/trombia-free/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Service stations",
+            "details": "Optional automatic debris-emptying/washing station or manual servicing ramp.",
+            "sources": [
+              "https://trombia.com/products/trombia-free/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Smooth platform",
+            "details": "Cloud mission scheduling, remote assistance and diagnostic monitoring; local navigation uses the onboard sensor-fusion system.",
+            "sources": [
+              "https://trombia.com/products/trombia-free/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "torc-cascadia-flex-orin-2025",
+        "manufacturer": "Torc Robotics",
+        "models": [
+          "Autonomous Freightliner Cascadia (March 2025 compute platform)",
+          "Autonomous Freightliner Cascadia (Torc)"
+        ],
+        "configuration": "March 2025 production-platform announcement, following closed-course validation, with scaled market entry targeted for 2027. Not proof that all earlier test trucks use this hardware.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flex Jupiter / NVIDIA",
+            "details": "Flex Jupiter multi-chip compute architecture using NVIDIA DRIVE AGX and DRIVE Orin SoCs. DRIVE Thor is a future upgrade direction, not installed hardware established here.",
+            "sources": [
+              "https://torc.ai/nvidia-flex-industry-first-physical-ai-platform-autonomous-trucks/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception inputs",
+            "details": "LiDAR, radar and cameras; manufacturers and quantities undisclosed.",
+            "sources": [
+              "https://torc.ai/nvidia-flex-industry-first-physical-ai-platform-autonomous-trucks/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle integration",
+            "details": "Autonomous-ready Freightliner Cascadia with redundant vehicle systems and multi-sensor connectivity.",
+            "sources": [
+              "https://torc.ai/nvidia-flex-industry-first-physical-ai-platform-autonomous-trucks/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operating environment",
+            "details": "NVIDIA DriveOS runs with Torc’s autonomous-driving software.",
+            "sources": [
+              "https://torc.ai/nvidia-flex-industry-first-physical-ai-platform-autonomous-trucks/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "torc-asimov-pacifica2018",
+        "manufacturer": "Torc Robotics",
+        "models": [
+          "Torc Asimov System (2018 Pacifica installation)",
+          "Torc Asimov System"
+        ],
+        "configuration": "2018 installation on a 2017 Chrysler Pacifica Hybrid and January 2019 Asimov capabilities sheet. Separate from the later Cascadia truck compute platform; CPU/RAM unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Automotive computer",
+            "details": "Automotive-grade computers, without processor or board SKU disclosure.",
+            "sources": [
+              "https://torc.ai/torc-integrates-autonomous-vehicle-technology-in-chrysler-pacifica/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Surround perception",
+            "details": "LiDAR, radar, cameras and GPS antennas integrated with the vehicle body.",
+            "sources": [
+              "https://torc.ai/torc-integrates-autonomous-vehicle-technology-in-chrysler-pacifica/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Host vehicle",
+            "details": "2017 Chrysler Pacifica Hybrid platform; autonomy-system electrical draw is not specified.",
+            "sources": [
+              "https://torc.ai/torc-integrates-autonomous-vehicle-technology-in-chrysler-pacifica/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Asimov stack",
+            "details": "Self-driving software with multi-sensor tracking and fault-response capabilities documented in January 2019.",
+            "sources": [
+              "https://torc.ai/wp-content/uploads/2024/04/Evolving_Asimov.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tevel-far-perception-system",
+        "manufacturer": "Tevel Aerobotics",
+        "models": [
+          "Flying Autonomous Robot (FAR)",
+          "Tevel Flying Autonomous Robot"
+        ],
+        "configuration": "Manufacturer discloses perception and harvesting architecture, not a component BOM. CPU/RAM, camera SKU, radio and electrical supply remain unverified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Fruit perception",
+            "details": "Computer vision distinguishes fruit and foliage, estimates size/ripeness and tracks individual fruit through data fusion. Camera hardware unspecified.",
+            "sources": [
+              "https://www.tevel-tech.com/technology/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Harvesting mechanism",
+            "details": "Flying robot interacts with foliage and picks fruit in the stated 50–700 g range.",
+            "sources": [
+              "https://www.tevel-tech.com/technology/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control and fleet data",
+            "details": "Trajectory planning, stabilization and fleet optimization. Harvest records include fruit weight/size, colour, disease indicators, timestamp and geolocation.",
+            "sources": [
+              "https://www.tevel-tech.com/technology/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "twinny-nargo60-current",
+        "manufacturer": "Twinny",
+        "models": [
+          "NarGo60",
+          "NarGo"
+        ],
+        "configuration": "Current NarGo60 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi and LTE.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "3D/2D LiDAR and contact bumper.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery operation",
+            "details": "Up to eight hours; charging under three hours.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Handling",
+            "details": "60 kg payload. ",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "twinny-nargo100-current",
+        "manufacturer": "Twinny",
+        "models": [
+          "NarGo100",
+          "NarGo"
+        ],
+        "configuration": "Current NarGo100 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi and LTE.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "3D/2D LiDAR and contact bumper.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery operation",
+            "details": "Up to eight hours; charging under three hours.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Handling",
+            "details": "100 kg payload. ",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "twinny-nargo500ft-current",
+        "manufacturer": "Twinny",
+        "models": [
+          "NarGo500FT",
+          "NarGo"
+        ],
+        "configuration": "Current NarGo500FT configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi and LTE.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "3D/2D LiDAR and contact bumper.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery operation",
+            "details": "Up to four hours; charging under two hours.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Handling",
+            "details": "500 kg payload. Fork and pallet sensor.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "twinny-nargod40-current",
+        "manufacturer": "Twinny",
+        "models": [
+          "NarGoD40",
+          "NarGo"
+        ],
+        "configuration": "Current NarGoD40 configuration. CPU/RAM unspecified. NarGo is a family, not one uniform build.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi and LTE.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "3D/2D LiDAR and contact bumper.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery operation",
+            "details": "29.4 V, 54 Ah; up to eight hours.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Handling",
+            "details": "30 kg payload. Lockable compartment; elevator integration.",
+            "sources": [
+              "https://twinny.ai/en/product/nargo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tutor-cassie-mobile-system",
+        "manufacturer": "Tutor Intelligence",
+        "models": [
+          "Cassie"
+        ],
+        "configuration": "Current mobile Cassie page, not an older fixed-cell configuration. CPU/GPU, RAM and battery capacity unspecified. Model parameter count is not memory capacity.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Vision and safety",
+            "details": "Four active stereo depth cameras, 2D LiDAR and two 3D LiDAR units.",
+            "sources": [
+              "https://tutorintelligence.com/cassie"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobile base",
+            "details": "Four-wheel battery platform; quoted 16-hour operation. Charging requires 208–240 V, 30 A. Onboard vacuum eliminates external compressed air.",
+            "sources": [
+              "https://tutorintelligence.com/cassie"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Network transport",
+            "details": "Physical Ethernet specified. No wireless radio or fingerprint established.",
+            "sources": [
+              "https://tutorintelligence.com/cassie"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Handling and I/O",
+            "details": "Telescoping lift, individually controlled vacuum cups, tablet controls and EVE external-sensor I/O hub.",
+            "sources": [
+              "https://tutorintelligence.com/cassie"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Turing and Tutor Portal",
+            "details": "Turing 200M-parameter foundation-model series; cloud portal exposes authorized live video and operational metrics.",
+            "sources": [
+              "https://tutorintelligence.com/cassie"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "toyota-epalette-may2024",
+        "manufacturer": "Toyota",
+        "models": [
+          "e-Palette with May Mobility driving kit (Miyata 2024)",
+          "e-Palette with May Mobility driving kit"
+        ],
+        "configuration": "December 2024 Miyata-factory deployment of a customized e-Palette. CPU/RAM and sensor SKUs undisclosed; no assumptions from other May Mobility vehicle types.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autonomous-driving kit",
+            "details": "May Mobility driving kit occupies Toyota’s provisioned sensor/computer installation spaces. Processor SKU undisclosed.",
+            "sources": [
+              "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vehicle sensing",
+            "details": "Surrounding sensors provide driving inputs; this deployment account does not enumerate their hardware.",
+            "sources": [
+              "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Vehicle platform",
+            "details": "Battery-electric e-Palette; capacity not given for this custom configuration.",
+            "sources": [
+              "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Integration provisions",
+            "details": "Toyota provides connection leads and installation spaces for third-party driving kits.",
+            "sources": [
+              "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "MPDM",
+            "details": "May Mobility Multi-Policy Decision Making; this factory service uses an onboard autonomous-vehicle operator.",
+            "sources": [
+              "https://maymobility.com/posts/may-mobility-to-launch-autonomous-e-palette-at-toyota-motor-kyushu-factory-japan"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "toyota-epalette-ntt2025",
+        "manufacturer": "Toyota",
+        "models": [
+          "e-Palette with May Mobility driving kit (NTT 2025 trial)",
+          "e-Palette with May Mobility driving kit"
+        ],
+        "configuration": "March 2025 NTT Central Training Center demonstration, Chofu. Network details apply to this trial, not every e-Palette.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Local 5G trial",
+            "details": "NTT East local 5G infrastructure supports the demonstration and remote-monitoring functions; onboard modem SKU/bands unspecified.",
+            "sources": [
+              "https://maymobility.com/posts/may-mobility-inc-and-ntt-group-collaboration-launches-autonomous-driving-demonstration-experiment-using-e-palette"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Remote operation service",
+            "details": "May Mobility ADS paired with NTT demonstration-site remote monitoring.",
+            "sources": [
+              "https://maymobility.com/posts/may-mobility-inc-and-ntt-group-collaboration-launches-autonomous-driving-demonstration-experiment-using-e-palette"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "terabase-terafab-v2-system",
+        "manufacturer": "Terabase Energy",
+        "models": [
+          "Terafab V2 (March 2026)",
+          "Terafab"
+        ],
+        "configuration": "March 2026 field-tested V2 architecture. CPU/RAM, robot-arm SKU, sensor models, power and radios remain undisclosed. Rover full autonomy was still expected, not confirmed deployed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Assembly and transport",
+            "details": "Outdoor line preassembles PV modules onto tracker torque tubes, with in-line quality control; dedicated rovers transport assemblies to installation points.",
+            "sources": [
+              "https://www.terabase.energy/resources/terabase-energys-next-generation-terafab-completes-field-testing-ready-for-deployment"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Manufacturing execution",
+            "details": "AI-assisted Manufacturing Execution System coordinates and optimizes plant construction.",
+            "sources": [
+              "https://www.terabase.energy/resources/terabase-energys-next-generation-terafab-completes-field-testing-ready-for-deployment"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -298508,8 +300192,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 488,
-    "devices_with_system_profiles": 424,
-    "devices_with_documented_compute": 197
+    "system_profiles": 505,
+    "devices_with_system_profiles": 436,
+    "devices_with_documented_compute": 202
   }
 }

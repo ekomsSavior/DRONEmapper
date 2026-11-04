@@ -9,6 +9,43 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 41 keeps trials, generations, tether links and shared robot families separate',()=>{
+ const ar=system('TEKEVER','AR5 Evolution Mk 2 (G-TEKV, 2023)');
+ assert.match(text(ar.sections.power),/3W.*170 cc/);
+ assert.match(text(ar.sections.identification),/this aircraft/);
+ assert.equal(ar.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('TEKEVER','AR5')).length,2);
+ const marine=system('Teledyne Marine','SeaBotix vLBV');
+ assert.match(text(marine.sections.power),/3,000 W.*100–240/);
+ assert.match(text(marine.sections.radios),/wired underwater/);
+ assert.equal(profileIds(system('Teledyne Marine','vLBV300II')).length,0);
+ const m5=system('Textron Systems','Ripsaw M5 (RCV)');
+ assert.equal(profileIds(m5).length,2);
+ assert.match(text(m5.sections.sensors),/SUMIT360/);
+ assert.match(text(m5.sections.interfaces),/8,000 lb/);
+ assert.equal(profileIds(system('Textron Systems','Ripsaw M3')).length,0);
+ const casc=system('Torc Robotics','Autonomous Freightliner Cascadia (Torc)'),asimov=system('Torc Robotics','Torc Asimov System');
+ assert.match(text(casc.sections.compute),/DRIVE Orin/);
+ assert.match(text(casc.sections.compute),/Thor.*future upgrade/);
+ assert.doesNotMatch(text(asimov.sections.compute.facts.map(f=>f.details)),/Orin|Jupiter|Thor/);
+ assert.equal(casc.sections.memory.status,'not-established');
+ const d40=system('Twinny','NarGoD40'),fork=system('Twinny','NarGo500FT');
+ assert.match(text(d40.sections.interfaces),/30 kg/);
+ assert.match(text(d40.sections.power),/29.4 V, 54 Ah/);
+ assert.doesNotMatch(text(fork.sections.power.facts.map(f=>f.details)),/54 Ah/);
+ assert.equal(profileIds(system('Twinny','NarGo')).length,4);
+ assert.equal(profileIds(system('Twinny','NarGo500')).length,0);
+ const cassie=system('Tutor Intelligence','Cassie');
+ assert.equal(cassie.sections.memory.status,'not-established');
+ assert.match(text(cassie.sections.software),/200M-parameter/);
+ assert.match(text(cassie.sections.sensors),/Four active stereo/);
+ const may=system('Toyota','e-Palette with May Mobility driving kit (Miyata 2024)');
+ assert.equal(may.sections.radios.status,'not-established');
+ assert.equal(profileIds(system('Toyota','e-Palette with May Mobility driving kit')).length,2);
+ assert.match(text(system('Terabase Energy','Terafab').configurations),/autonomy was still expected/);
+ assert.equal(system('Tevel Aerobotics','Tevel Flying Autonomous Robot').sections.compute.status,'not-established');
+});
+
 test('batch 40 preserves aircraft/controller, optional sensor and battery-revision boundaries',()=>{
  const teal=system('Teal Drones','Teal 2'),tac=system('Teal Drones','Teal Air Control (TAC ground controller)');
  assert.doesNotMatch(text(teal.sections.compute.facts.map(f=>f.details)),/Snapdragon|845/);
