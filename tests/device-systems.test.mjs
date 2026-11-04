@@ -692,7 +692,8 @@ test('supplier disclosures and platform revisions remain model-specific',()=>{
  assert.match(text(system('Anduril Industries','Anduril Dive-LD').sections.interfaces),/RS-422/);
  assert.deepEqual(profileIds(system('Anduril Industries','Anduril Dive-XL')),['anduril-dive-xl-2026']);
  assert.doesNotMatch(text(system('Anduril Industries','Anduril Dive-XL').sections.interfaces.facts.map(f=>f.details)),/RS-422/);
- assert.equal(profileIds(system('Amazon Prime Air','MK27-2')).length,0);
+ assert.deepEqual(profileIds(system('Amazon Prime Air','MK27-2')),['amazon-mk27-2-published-aircraft']);
+ assert.equal(system('Amazon Prime Air','MK27-2').sections.compute.status,'not-established');
  assert.match(text(system('Amazon Prime Air','MK30').sections.compute),/separate computer/);
  assert.equal(system('Amazon Prime Air','MK30').sections.radios.status,'not-established');
 });
@@ -2258,6 +2259,32 @@ test('batch 53 does not invent a DP3 alias or undocumented arm and controller pa
  assert.equal(vulcan.sections.power.status,'not-established');
  assert.equal(profileIds(system('ICON','Titan')).length,0);
  assert.equal(profileIds(system('Verkada','CM42',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('batch 68 separates delivery-aircraft generations and configured robot components',()=>{
+ const m600=system('Flytrex','FTX-M600P'),sky=system('Flytrex','SKY II');
+ assert.match(text(m600.sections.power),/Six propellers/);
+ assert.match(text(sky.sections.power),/Eight propellers/);
+ assert.notDeepEqual(profileIds(m600),profileIds(sky));
+ assert.equal(m600.sections.radios.status,'not-established');
+ const kite=system('Swoop Aero','Kite');
+ assert.equal(profileIds(kite).length,2);
+ assert.doesNotMatch(text(kite.sections.radios.facts.map(f=>f.details)),/9523/);
+ const moon=system('Flexiv','Moonlight');
+ assert.match(text(moon.sections.compute),/Hesper/);
+ assert.match(text(moon.sections.power),/optional 42–62 VDC/);
+ assert.equal(moon.sections.memory.status,'not-established');
+ assert.equal(moon.sections.radios.status,'not-established');
+ const lancer=system('Forterra','Forterra Lancer');
+ assert.match(text(lancer.sections.sensors),/Rev7 OS1/);
+ assert.match(text(lancer.sections.sensors),/REV8 as future work/);
+ assert.match(text(lancer.sections.compute),/FC180/);
+ assert.equal(profileIds(system('Crow Industries','Fenris')).length,2);
+ assert.equal(profileIds(system('Crow Industries','Fenris mining prototype')).length,0);
+ const m2=system('Matternet','M2');
+ assert.match(text(m2.sections.power),/Amprius silicon-anode/);
+ assert.equal(profileIds(system('Matternet','M2 Block 2')).length,0);
+ assert.equal(profileIds(system('Forterra','Forterra Lancer',{kind:'regulatory-equipment'})).length,0);
 });
 
 test('batch 60 scopes warehouse radios, historical ratings and fleet configurations',()=>{

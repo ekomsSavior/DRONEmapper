@@ -21211,7 +21211,7 @@
         "Matternet M2"
       ],
       "configuration": "Current manufacturer M2 system page and company securities filing. CPU, RAM, battery capacity and sensor chipsets undisclosed. Block 2 or earlier revision-specific components are not inferred.",
-      "reviewed_on": "2026-11-03",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "power",
@@ -21253,6 +21253,14 @@
           "details": "3D geofencing, in-flight monitoring and flight termination functions. Main operating system is not specified.",
           "sources": [
             "https://investor.matternet.com/sec-filings/all-sec-filings/content/0001213900-26-084193/ea0299883-s1a1_matternet.htm"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "M2 battery-cell update (May 2026)",
+          "details": "Matternet confirms deployed M2 aircraft use Amprius silicon-anode lithium-ion cells. Cell SKU/capacity are not disclosed; the next-generation platform and early-2027 production target are separate future plans.",
+          "sources": [
+            "https://www.matternet.com/newsroom/matternet-and-amprius-partner-to-advance-drone-delivery"
           ]
         }
       ]
@@ -41727,6 +41735,468 @@
           "details": "B2/B6 handle loads, D1 stacks, Q4/Q5 are reach configurations, and P2 is counterbalanced.",
           "sources": [
             "https://www.casun-agv.com/uploads/file/casun-product-catalog.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flytrex-ftx-m600p-faa-2024",
+      "manufacturer": "Flytrex",
+      "models": [
+        "FTX-M600P"
+      ],
+      "configuration": "December 2024 FAA environmental assessment, aircraft descriptions on printed pages 11–12. This is the six-propeller model, not Sky II. CPU, memory, radio parts and individual navigation sensors are not disclosed. Noise-survey microphones and weather-station equipment are not aircraft components.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Computer installation",
+          "details": "System computers are mounted beneath the airframe; processor models are not specified.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20241210_CauseyDFW_FinalEA_FONSI_ROD.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Airframe and supply",
+          "details": "Six propellers on evenly spaced arms; rechargeable lithium-ion batteries and emergency parachute.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20241210_CauseyDFW_FinalEA_FONSI_ROD.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload handling",
+          "details": "Underslung package container; delivery lowers the package by tether while hovering.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20241210_CauseyDFW_FinalEA_FONSI_ROD.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Route control",
+          "details": "Preplanned flights use Flytrex automated route planning, returning to the distribution center after delivery.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20241210_CauseyDFW_FinalEA_FONSI_ROD.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flytrex-sky-ii-faa-2024",
+      "manufacturer": "Flytrex",
+      "models": [
+        "SKY II",
+        "Flytrex delivery drone (Sky2)"
+      ],
+      "configuration": "December 2024 FAA Sky II description, distinct from FTX-M600P. No processor, memory, modem or battery-capacity SKU is published in the reviewed aircraft description.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Computer installation",
+          "details": "Computers, power system and winch occupy the center of the carbon-fiber airframe.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20241210_CauseyDFW_FinalEA_FONSI_ROD.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Propulsion and safety",
+          "details": "Eight propellers on a hash-shaped frame; rechargeable lithium-ion supply and emergency parachute.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20241210_CauseyDFW_FinalEA_FONSI_ROD.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Delivery mechanism",
+          "details": "Winch lowers packages without a delivery box; the published payload limit is 8.8 lb.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20241210_CauseyDFW_FinalEA_FONSI_ROD.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight workflow",
+          "details": "Automated route planning and preplanned outbound/return flight, with tether delivery from a hover.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20241210_CauseyDFW_FinalEA_FONSI_ROD.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swoop-kite-certus-2022",
+      "manufacturer": "Swoop Aero",
+      "models": [
+        "Kite (2022 Certus integration)"
+      ],
+      "configuration": "April 2022 supplier-confirmed satellite integration. This source does not identify the radio-module SKU, flight processor, battery or sensors. Earlier Swoop aircraft using Iridium Core 9523 are not evidence of that module in Kite.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Satellite service",
+          "details": "Iridium confirms Certus 100 integration in the Swoop Aero Kite UAV for global connectivity; exact terminal hardware is not named.",
+          "sources": [
+            "https://ifp.iridium.com/blog/swoop-aero-integrates-iridium-certus-100-into-kite-uav/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Swoop Aero",
+          "models": [
+            "Kite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kite-aero-kite-current",
+      "manufacturer": "Kite Aero",
+      "models": [
+        "KITE (2026 manufacturer specification)"
+      ],
+      "configuration": "Current successor-manufacturer configuration, following Kite Aero’s March 2025 acquisition of Swoop Aero assets. Shown alongside the earlier Kite reference; these current specifications do not establish every component of an older FAA-declared aircraft. CPU, RAM, battery capacity and modem SKUs are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electric VTOL aircraft",
+          "details": "Redundant all-electric fixed-wing VTOL powertrain; current sheet lists 26.5 kg maximum takeoff mass and up to 4 kg payload.",
+          "sources": [
+            "https://kite.aero/kite-spec-sheet/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Command links",
+          "details": "Current specification lists SATCOM and LTE; the operations description also lists simultaneous region-specific direct links.",
+          "sources": [
+            "https://kite.aero/kite-spec-sheet/",
+            "https://kite.aero/kite/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload compartment",
+          "details": "250 × 125 × 205 mm compartment; aircraft wingspan 2.72 m.",
+          "sources": [
+            "https://kite.aero/kite-spec-sheet/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "AXIOM and ground control",
+          "details": "iPad ground-control interface monitors multiple aircraft. Cloud route checks, approval/version management and a component digital twin support operations and maintenance.",
+          "sources": [
+            "https://kite.aero/kite/"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Product lineage",
+          "details": "Kite Aero records its March 2025 acquisition of Swoop Aero’s aircraft and operations-software assets.",
+          "sources": [
+            "https://kite.aero/media/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Swoop Aero",
+          "models": [
+            "Kite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amazon-mk27-2-published-aircraft",
+      "manufacturer": "Amazon Prime Air",
+      "models": [
+        "MK27-2"
+      ],
+      "configuration": "FAA model-specific aircraft and operational descriptions. MK30 hardware is not assigned to this older model. Exact processor, memory, radio and camera SKUs remain undisclosed. FAA operational decision was checked through its indexed text; direct PDF retrieval returned HTTP 403.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electric hexacopter",
+          "details": "Battery-powered six-propeller aircraft, transitioning between vertical and forward flight.",
+          "sources": [
+            "https://www.faa.gov/media/68446",
+            "https://www.faa.gov/sites/faa.gov/files/Amazon-TX-SEA_508-Final.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Delivery perception",
+          "details": "Improved cameras detect people and obstacles beneath the aircraft during delivery and landing; sensor part numbers are not named.",
+          "sources": [
+            "https://downloads.regulations.gov/FAA-2019-0622-0013/attachment_1.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Contingency control",
+          "details": "An obstructed or uncertain delivery area triggers abort/return. The described design maintains controlled flight after one propulsion-unit failure.",
+          "sources": [
+            "https://downloads.regulations.gov/FAA-2019-0622-0013/attachment_1.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Internal cargo",
+          "details": "Packages travel inside an internal cargo bay; the February 2024 assessment lists a 4.9 lb payload limit.",
+          "sources": [
+            "https://www.faa.gov/sites/faa.gov/files/Amazon-TX-SEA_508-Final.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flexiv-moonlight-hesper-2026",
+      "manufacturer": "Flexiv",
+      "models": [
+        "Moonlight"
+      ],
+      "configuration": "August 2026 linked manufacturer datasheet and product page; PDF table visually checked. Hesper is the controller product name, not a CPU. Memory and wireless modules are unpublished. Web/PDF working-height and base-diameter values differ, so those dimensions are not merged.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Hesper controller",
+          "details": "External Hesper control box; processor silicon and memory are not identified.",
+          "sources": [
+            "https://www.flexiv.com/uploaded/en/resource/file/2026/08/11/f3i601dgmh9.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Force sensing",
+          "details": "Force measurements down to 0.1 N with 1 kHz response; optional camera/vision accessories support visual guidance.",
+          "sources": [
+            "https://www.flexiv.com/uploaded/en/resource/file/2026/08/11/f3i601dgmh9.pdf",
+            "https://www.flexiv.com/product/moonlight"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Controller supply",
+          "details": "100–240 VAC at 50–60 Hz; optional 42–62 VDC input. Listed consumption 600 W; I/O supply 24 V, 2 A.",
+          "sources": [
+            "https://www.flexiv.com/uploaded/en/resource/file/2026/08/11/f3i601dgmh9.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Wired I/O and industrial networking",
+          "details": "16 digital inputs and 16 outputs. Modbus TCP and Ethernet TCP/IP master; optional slave protocols include Modbus TCP, PROFINET, EtherNet/IP and CC-Link.",
+          "sources": [
+            "https://www.flexiv.com/uploaded/en/resource/file/2026/08/11/f3i601dgmh9.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Manipulator and tooling",
+          "details": "Three-axis parallel manipulator, 7 kg payload, hollow ISO 9409-1-50-4-M6 tool flange; separate Motion Bar supplies operator safety controls.",
+          "sources": [
+            "https://www.flexiv.com/uploaded/en/resource/file/2026/08/11/f3i601dgmh9.pdf",
+            "https://www.flexiv.com/product/moonlight"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Programming",
+          "details": "Teach Pendant runs Flexiv Elements visual programming; jogging and floating support teaching.",
+          "sources": [
+            "https://www.flexiv.com/product/moonlight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "forterra-lancer-2026",
+      "manufacturer": "Forterra",
+      "models": [
+        "Forterra Lancer"
+      ],
+      "configuration": "Current Lancer manufacturer configuration with October 2026 supplier confirmation. FC180 is a compute-platform model, not an identified CPU. Processor silicon, RAM, storage, modem parts and exact bands are not disclosed. Planned Ouster REV8 adoption is not installed Rev7 equipment.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "FC180 edge computer",
+          "details": "Forterra FC180 integrates onboard perception, behavior generation and vehicle control.",
+          "sources": [
+            "https://www.forterra.com/lancer"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception suite",
+          "details": "Dual LiDAR, 4D radar and EO/IR. Ouster identifies Rev7 OS1 LiDAR in deployed Lancer vehicles; its October announcement describes REV8 as future work.",
+          "sources": [
+            "https://www.forterra.com/lancer",
+            "https://ouster.gcs-web.com/news-releases/news-release-details/ouster-sensors-play-key-role-forterras-lancer-completing-1426"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Vektor communications",
+          "details": "Published supported links are mesh, LTE/3G and satellite, with adaptive data routing. Frequencies and module SKUs are unspecified.",
+          "sources": [
+            "https://www.forterra.com/lancer"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Vehicle platform",
+          "details": "Polaris Ranger XD 1500 Premium base with selectable all-wheel drive; published bed payload 1,250 lb and reinforced towing capacity 3,500 lb.",
+          "sources": [
+            "https://www.forterra.com/lancer"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mission integration",
+          "details": "Open architecture supports configurable sensor and mission payloads; equipment varies by deployment.",
+          "sources": [
+            "https://www.forterra.com/lancer"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy and operator control",
+          "details": "AutoDrive handles driving; command interfaces include TerraLink, TAK and WMI.",
+          "sources": [
+            "https://www.forterra.com/lancer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "airbound-trt-published-architecture",
+      "manufacturer": "Airbound",
+      "models": [
+        "TRT"
+      ],
+      "configuration": "Manufacturer TRT airframe and flight-systems description. Exact CPU, RAM, storage, battery, propulsion motors, navigation sensors and radios remain undisclosed; no parts are inferred from generic autonomy claims.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight controllers",
+          "details": "Airbound describes internally designed flight controllers; chip and board identifiers are not provided.",
+          "sources": [
+            "https://www.airbound.com/technology"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight architecture",
+          "details": "Thrust-vectored blended-wing tailsitter transitions from vertical launch to wing-borne cruise; carbon-fiber structure, 1.4 m wingspan.",
+          "sources": [
+            "https://www.airbound.com/",
+            "https://www.airbound.com/technology"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload envelope",
+          "details": "Published aircraft mass approximately 1.5 kg with approximately 1 kg payload and 2.5 kg all-up mass.",
+          "sources": [
+            "https://www.airbound.com/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Aircraft and ground software",
+          "details": "Manufacturer develops aircraft and ground-station control software for autonomous delivery operations.",
+          "sources": [
+            "https://www.airbound.com/technology"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crow-fenris-base-payload",
+      "manufacturer": "Crow Industries",
+      "models": [
+        "Fenris"
+      ],
+      "configuration": "Current manufacturer defense configuration; does not describe every mining or earlier Fenris variant. Processor, battery, memory and radio SKUs are not disclosed. The separately documented Parry integration is not assumed standard on every Fenris.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Base sensing payload",
+          "details": "Manufacturer lists visual, infrared and thermal sensing; individual cameras are unnamed.",
+          "sources": [
+            "https://crowindustriesinc.com/defense"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload integration",
+          "details": "Supports third-party sensing payloads; published payload capacity for this configuration is up to 200 kg.",
+          "sources": [
+            "https://crowindustriesinc.com/defense"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control modes",
+          "details": "Teleoperation and autonomous operation are offered. The page describes future multi-vehicle C2 capability separately from established hardware.",
+          "sources": [
+            "https://crowindustriesinc.com/defense"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crow-fenris-parry-integration-2026",
+      "manufacturer": "Crow Industries",
+      "models": [
+        "Fenris (Parry integration, 2026)"
+      ],
+      "configuration": "March 2026 integration announcement confirmed by Crow and first-hand supplier Parry Labs. Configuration-specific integration, not a universal Fenris BOM. Exact computer SKU, CPU, memory and radio frequencies are not published.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Parry edge computing",
+          "details": "Partner-confirmed integration adds Parry Labs edge compute and autonomy infrastructure; no semiconductor model is named.",
+          "sources": [
+            "https://www.linkedin.com/posts/parrylabs_defensetech-robotics-edgecompute-activity-7435709210878775296-5fy_",
+            "https://crowindustriesinc.com/newsroom"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Link continuity",
+          "details": "Supplier describes automatic communication-path/band switching; actual bands and radio-module identities are unspecified.",
+          "sources": [
+            "https://www.linkedin.com/posts/parrylabs_defensetech-robotics-edgecompute-activity-7435709210878775296-5fy_"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "GEMMI operator integration",
+          "details": "Fenris is integrated with Parry’s GEMMI for coordinated control of multiple unmanned platforms.",
+          "sources": [
+            "https://www.linkedin.com/posts/parrylabs_defensetech-robotics-edgecompute-activity-7435709210878775296-5fy_"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Crow Industries",
+          "models": [
+            "Fenris"
           ]
         }
       ]
