@@ -9,6 +9,30 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 88 binds named processors to documented device generations',()=>{
+ const a1=system('Unitree Robotics','Unitree A1');
+ assert.match(text(a1.sections.compute),/UP Board/);
+ assert.match(text(a1.sections.compute),/Raspberry Pi 4B, TX2 or NX/);
+ assert.match(text(a1.sections.sensors),/RealSense D435i/);
+ assert.equal(a1.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Unitree Robotics','Go1')).includes('unitree-a1'),false);
+ const mini=system('Dronetag','Mini');
+ assert.match(text(mini.sections.compute),/nRF9160/);
+ assert.match(text(mini.sections.compute),/nRF52833/);
+ assert.match(text(mini.sections.memory),/separate processor memory spaces/);
+ assert.equal(profileIds(system('Dronetag','Mini 4G')).includes('dronetag-mini'),false);
+ const cart=system('Cartken','Cartken Courier');
+ assert.match(text(cart.sections.compute),/October 2022/);
+ assert.match(text(cart.sections.compute),/Jetson AGX Orin/);
+ assert.doesNotMatch(text(cart.sections.compute),/Core Ultra|358H/);
+ assert.equal(cart.sections.memory.status,'not-established');
+ const whiz=system('SoftBank Robotics','Whiz');
+ assert.match(text(whiz.sections.compute),/2019.*Jetson TX2/);
+ assert.match(text(whiz.configurations),/does not prove every later hardware revision/);
+ assert.equal(profileIds(system('SoftBank Robotics','Whiz i')).includes('softbank-whiz'),false);
+ assert.equal(profileIds(system('Dronetag','Mini',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 87 separates robot families, dated demonstrations and unnamed components',()=>{
  const alpha=system('Alphadroid','Alpha AMR');
  assert.match(text(alpha.sections.compute),/Intel Core i7/);

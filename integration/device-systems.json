@@ -2031,8 +2031,8 @@
         "Unitree A1",
         "A1"
       ],
-      "configuration": "A1 Standard / Exploration configurations; Exploration adds lidar and an AI module. The cited page does not name the CPU silicon.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "A1 Standard / Exploration family, with the controller architecture documented by Unitree. Perception boards vary: Raspberry Pi, TX2 or NX are alternatives, not three installed boards. Exploration adds lidar. Main MCU SKU, exact UP Board revision and installed memory capacity remain unspecified.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "sensors",
@@ -2064,6 +2064,31 @@
           "details": "Secondary-development interfaces expose sensor data and motor commands. Optional microphone, voice and ultrasonic modules depend on configuration.",
           "sources": [
             "https://www.unitree.com/a1/"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Controller and perception computers",
+          "details": "Unitree describes a proprietary main control board, an UP Board motion computer and a separate perception computer, connected by an internal switch. Its support documentation lists Raspberry Pi 4B, TX2 or NX perception-board alternatives.",
+          "sources": [
+            "https://unitree-guide-docs.unitree.com/en/latest/docs/Common/RobotNetwork.html",
+            "https://github.com/UnitreeSupport/Unitree_Docs/blob/master/docs/A1/A1.md"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Documented depth-camera configuration",
+          "details": "Unitree’s A1 support guide identifies Intel RealSense D435i and librealsense. This names the camera in that documented configuration rather than every modified A1.",
+          "sources": [
+            "https://github.com/UnitreeSupport/Unitree_Docs/blob/master/docs/A1/A1.md"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Local Wi-Fi access",
+          "details": "The support guide documents a robot-hosted Wi-Fi hotspot for the app and local video interface; RF bands and radio chipset are not specified.",
+          "sources": [
+            "https://github.com/UnitreeSupport/Unitree_Docs/blob/master/docs/A1/A1.md"
           ]
         }
       ]
@@ -4008,8 +4033,8 @@
       "models": [
         "Mini"
       ],
-      "configuration": "Original Dronetag Mini, not Mini 4G. Standalone identification module; processor and memory part numbers are not specified.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Original Dronetag Mini, not Mini 4G. Nordic’s December 2021 design report names the nRF9160 and nRF52833. Memory figures below describe those chips, not a verified inventory of every external memory component.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "radios",
@@ -4049,6 +4074,41 @@
           "details": "Broadcast and network identification; manufacturer references ASTM F3411 and EN 4709-002.",
           "sources": [
             "https://help.dronetag.com/dronetag-mini/specification/"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Cellular application processor",
+          "details": "nRF9160 SiP combines the application processor and LTE-M/NB-IoT modem. Its application CPU is a 64 MHz Arm Cortex-M33.",
+          "sources": [
+            "https://www.nordicsemi.com/Nordic-news/2021/12/Dronetag-Mini-employs-Nordic-nRF9160-SiP-and-nRF52833-SoC",
+            "https://www.nordicsemi.com/Products/nRF9160"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Bluetooth processor",
+          "details": "nRF52833 SoC provides Bluetooth LE / Long Range. Its CPU is a 64 MHz Arm Cortex-M4 with floating-point support.",
+          "sources": [
+            "https://www.nordicsemi.com/Nordic-news/2021/12/Dronetag-Mini-employs-Nordic-nRF9160-SiP-and-nRF52833-SoC",
+            "https://www.nordicsemi.com/Products/nRF52833"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "On-chip memory",
+          "details": "nRF9160: 1 MB flash and 256 KB RAM. nRF52833: 512 KB flash and 128 KB RAM. These are separate processor memory spaces, not one pooled RAM total.",
+          "sources": [
+            "https://www.nordicsemi.com/Products/nRF9160",
+            "https://www.nordicsemi.com/Products/nRF52833"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Embedded development stack",
+          "details": "Nordic’s Mini design account identifies nRF Connect SDK and the Zephyr RTOS ecosystem.",
+          "sources": [
+            "https://www.nordicsemi.com/Nordic-news/2021/12/Dronetag-Mini-employs-Nordic-nRF9160-SiP-and-nRF52833-SoC"
           ]
         }
       ]
@@ -6638,8 +6698,8 @@
       "models": [
         "Cartken Courier"
       ],
-      "configuration": "Current Courier reference with Cartken platform-level navigation and connectivity. The 2022 Jetson AGX Orin deployment report does not identify the board revision of every present Courier.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Current Courier reference with platform-level navigation and connectivity. The compute fact is explicitly the Cartken delivery configuration reported in October 2022; it does not establish the board revision in every current Courier. Later Intel evaluation/deployment material is not assigned to this model without a model-specific crosswalk.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "sensors",
@@ -6679,6 +6739,14 @@
           "details": "Mapped operating areas, predefined driving corridors, adjustable delivery routes and fleet management with remote assistance.",
           "sources": [
             "https://cartken.com/"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "2022 delivery-platform compute reference",
+          "details": "NVIDIA’s October 2022 customer report names Jetson AGX Orin processing six cameras and wheel odometry for navigation. The module memory variant and carrier board are unspecified; this is dated platform evidence, not a universal Courier BOM.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/cartken-robots-as-a-service-for-deliveries/"
           ]
         }
       ]
@@ -7629,8 +7697,8 @@
         "SoftBank Whiz",
         "Whiz"
       ],
-      "configuration": "Whiz specification from SoftBank Robotics APAC. Whiz i and other cleaning robots are separate. Processor SKU, RAM and radio module are not disclosed.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Original Whiz, with APAC product specifications and NVIDIA’s May 2019 commercial-production architecture reference. Whiz i and other cleaning robots remain separate. The dated compute report does not prove every later hardware revision; installed RAM and radio module remain unverified.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "sensors",
@@ -7662,6 +7730,22 @@
           "details": "Onboard BrainOS learns operator-taught cleaning routes; up to six routes per Home Location Code.",
           "sources": [
             "https://apac.softbankrobotics.com/apac/solution/whiz-maximum-cleaning-efficiency-with-cutting-edge-ai/"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Original commercial-production autonomy module",
+          "details": "NVIDIA’s 2019 Brain Corp case study identifies Jetson TX2 for the Whiz commercial configuration and its onboard BrainOS sensor processing. The document specifies a 256-core CUDA GPU.",
+          "sources": [
+            "https://developer.download.nvidia.com/assets/embedded/downloads/jetson_solution_showcase-brain_corp.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "2019 autonomy software components",
+          "details": "The same implementation uses JetPack SDK and CUDA modules. Secure boot and disk encryption are supported capabilities; the source does not prove the settings of any individual robot.",
+          "sources": [
+            "https://developer.download.nvidia.com/assets/embedded/downloads/jetson_solution_showcase-brain_corp.pdf"
           ]
         }
       ]
