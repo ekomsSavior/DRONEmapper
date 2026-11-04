@@ -9,6 +9,33 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 85 separates documented robot revisions, RID modules and aircraft variants',()=>{
+ const amy=system('Pangolin Robot','Amy');
+ assert.match(text(amy.sections.compute),/industrial PC/);
+ assert.match(text(amy.sections.power),/24 V/);
+ assert.match(text(amy.configurations),/filename says 10th.*introduction says 8th/);
+ assert.equal(amy.sections.memory.status,'not-established');
+ const y=system('Shenzhen Uditech','Yomie');
+ assert.match(text(y.sections.compute),/Jetson Nano and RK3399/);
+ assert.match(text(y.configurations),/not proof.*older hotel/);
+ assert.equal(y.sections.memory.status,'not-established');
+ const teal=system('Teal','unrelated label',{kind:'regulatory-equipment',fcc_id:'2A9Z7-TD000'});
+ assert.match(text(teal.sections.radios),/coded-PHY/);
+ assert.match(text(teal.sections.power),/3 V, 200 mA/);
+ assert.equal(teal.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Teal','50247 Bluetooth Module')).length,0);
+ assert.equal(profileIds(system('Wrong vendor','50247',{kind:'regulatory-equipment',fcc_id:'2A9Z7-TD000'})).length,0);
+ const wing=system('Wing Aviation LLC','Hummingbird');
+ assert.match(text(wing.sections.power),/16 propellers/);
+ assert.equal(profileIds(system('Wing Aviation LLC','Hummingbird v2')).length,0);
+ assert.equal(wing.sections.compute.status,'not-established');
+ const best=system('EM&E Group','aunav.BEST');
+ assert.match(text(best.sections.radios),/communications relay/);
+ assert.equal(best.sections.compute.status,'not-established');
+ assert.equal(best.sections.power.status,'not-established');
+ assert.match(text(best.configurations),/NEO HD.*not assigned/);
+});
+
 test('batch 81 scopes marine links, subsystem computers and fleet references',()=>{
  const meco=system('Interactive Robotics and Vision Laboratory (IRV Lab)','MeCO AUV');
  assert.match(text(meco.sections.compute),/Orin NX.*Teensy 4.1/);

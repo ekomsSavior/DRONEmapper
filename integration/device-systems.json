@@ -47089,6 +47089,322 @@
           ]
         }
       ]
+    },
+    {
+      "id": "pangolin-amy-manual-422",
+      "manufacturer": "Pangolin Robot",
+      "models": [
+        "Amy — manual V4.2.2 configuration"
+      ],
+      "configuration": "Manufacturer manual V4.2.2, hosted in November 2021. The filename says 10th generation but its introduction says 8th; details are scoped to this document, not all Amy generations. CPU model, RAM, radio chipset and battery capacity are not given.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Industrial PC",
+          "details": "Manual identifies an onboard industrial PC; processor vendor and SKU are not specified.",
+          "sources": [
+            "https://www.alpharobotics.com.cn/uploads/Amy-English-Manual-10th-20211124.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Local wireless networking",
+          "details": "Onboard Wi-Fi router supports connection from a phone; network settings also allow selecting a site Wi-Fi network. Band and chipset are unspecified.",
+          "sources": [
+            "https://www.alpharobotics.com.cn/uploads/Amy-English-Manual-10th-20211124.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Laser navigation",
+          "details": "Laser sensing supports indoor mapping, point-to-point navigation and obstacle stops. Sensor part number is not named.",
+          "sources": [
+            "https://www.alpharobotics.com.cn/uploads/Amy-English-Manual-10th-20211124.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and charging dock",
+          "details": "24 V battery system and automatic return to a charging pile; manual also describes lithium-battery precautions. Capacity is unspecified.",
+          "sources": [
+            "https://www.alpharobotics.com.cn/uploads/Amy-English-Manual-10th-20211124.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Human interaction",
+          "details": "Touchscreen, spoken delivery prompts and emergency-stop control.",
+          "sources": [
+            "https://www.alpharobotics.com.cn/uploads/Amy-English-Manual-10th-20211124.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Robot applications",
+          "details": "CsjRobotStudio Android mapping app; onboard Android interface and navigation software have separate update/version information.",
+          "sources": [
+            "https://www.alpharobotics.com.cn/uploads/Amy-English-Manual-10th-20211124.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Pangolin Robot",
+          "models": [
+            "Amy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "excelland-yomie-m6-2022",
+      "manufacturer": "Shenzhen Uditech",
+      "models": [
+        "Yomie M6 — UDM06XX 2022 reference"
+      ],
+      "configuration": "Manufacturer manual APN0000241 V0.4.1 (6 September 2022), preserved in a public manual archive, identifies Yomie M6 / UDM06XX. This is a documented family reference for the broad Yomie record, not proof of the hardware used in older hotel deployments. RAM, storage and sensor chip models are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Two named computing platforms",
+          "details": "The specification names NVIDIA Jetson Nano and RK3399. It does not assign their individual workloads or establish RAM variants.",
+          "sources": [
+            "https://device.report/manual/5913767"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operating platforms",
+          "details": "Android and ROS, with an Android deployment application for mapping and delivery setup.",
+          "sources": [
+            "https://device.report/manual/5913767"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi",
+          "details": "Manufacturer specifies Wi-Fi; the UDM06XX grant lists 2412–2462 MHz. Do not assign the separately certified Excelland LoRa accessory to every M6.",
+          "sources": [
+            "https://device.report/manual/5913767",
+            "https://fccid.io/2A7P8-UDM06XX"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and obstacle sensing",
+          "details": "Lidar navigation with sonar, collision sensing and a depth camera. Individual sensor models are unspecified.",
+          "sources": [
+            "https://device.report/manual/5913767"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and dock",
+          "details": "12 Ah battery; rated voltage 48 V and non-charging power 60 W. Contact charging supports automatic docking.",
+          "sources": [
+            "https://device.report/manual/5913767"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Delivery cabinet and display",
+          "details": "26-litre cabinet, 10 kg load and 10.1-inch 1280 × 800 touchscreen in the manual’s M6 specification.",
+          "sources": [
+            "https://device.report/manual/5913767"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Certification reference",
+          "details": "FCC ID 2A7P8-UDM06XX identifies the filed service robot, not a MAC address or a guaranteed broadcast name.",
+          "sources": [
+            "https://fccid.io/2A7P8-UDM06XX"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Shenzhen Uditech",
+          "models": [
+            "Yomie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teal-50247-rid-module-2023",
+      "manufacturer": "Teal",
+      "models": [
+        "50247 Bluetooth Module"
+      ],
+      "configuration": "Teal module 50247, FCC ID 2A9Z7-TD000, report TR7805_03 with December 2022 testing and March 2023 issue date. This is the Remote ID module, not a complete Teal aircraft or its command/video link. CPU, RAM and radio IC are not established.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Remote ID broadcast",
+          "details": "BLE and Bluetooth 5 Long Range coded-PHY telemetry beacons for FAA Part 89. Report tests the 2.4 GHz radio; this is not evidence of Wi-Fi.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A9Z7-TD000/6488127.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Certified antenna",
+          "details": "Installation manual specifies ANT-2.4-FPC-LV series; test report identifies an integral 4.3 dBi antenna.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A9Z7-TD000/6488127.pdf",
+            "https://device.report/manual/8032912"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Module supply",
+          "details": "Tested rating: 3 V, 200 mA. This is the module supply, not aircraft battery capacity.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A9Z7-TD000/6488127.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Aircraft-to-module data",
+          "details": "The host aircraft flight computers control the module and supply broadcast telemetry. The Dell laptop in the test setup is laboratory equipment.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A9Z7-TD000/6488127.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Tested firmware",
+          "details": "Report identifies revision V2.0.3; no processor or software source code is established.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A9Z7-TD000/6488127.pdf"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Module dimensions",
+          "details": "Reported module size is 29 × 15.2 × 4 mm. Exact FCC ID matching limits this profile to the filed equipment record.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A9Z7-TD000/6488127.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2A9Z7-TD000"
+      ]
+    },
+    {
+      "id": "wing-hummingbird-7000wb-2023",
+      "manufacturer": "Wing Aviation LLC",
+      "models": [
+        "Hummingbird 7000W-B — DFW 2023 reference"
+      ],
+      "configuration": "FAA November 2023 DFW assessment identifies 7000W-B. This is a specific reference for the broad Hummingbird record, not a component crosswalk to Hummingbird v2 or the later 8000-A. CPU, RAM, communications hardware and navigation sensor models are not specified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electric aircraft",
+          "details": "Rechargeable lithium-ion battery power; 16 propellers in the 7000W-B configuration. Battery capacity and motor models are not disclosed.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/Final_EA_for_Wing_at_DFW_Nov23_ADA_Signed.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Delivery mechanism and launch pads",
+          "details": "Aircraft, nest launch pads and planning software form the described system. A retractable line lowers packages while the aircraft hovers.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/Final_EA_for_Wing_at_DFW_Nov23_ADA_Signed.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mission planning",
+          "details": "Wing software assigns missions, deconflicts traffic and plans outbound/return routes; flight-path variability reduces repeated overflight of one location.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/Final_EA_for_Wing_at_DFW_Nov23_ADA_Signed.pdf"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Configuration distinction",
+          "details": "7000W-B is described as a noise-reduced derivative of 7000W-A. Maximum package is 2.7 lb; combined aircraft and payload remain under 15 lb.",
+          "sources": [
+            "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/Final_EA_for_Wing_at_DFW_Nov23_ADA_Signed.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Wing Aviation LLC",
+          "models": [
+            "Hummingbird"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eme-aunav-best-2025",
+      "manufacturer": "EM&E Group",
+      "models": [
+        "aunav.BEST — 2025 public configuration"
+      ],
+      "configuration": "Manufacturer launch release and October 2025 demonstration, with common aunav control-system documentation. Public sources do not identify processor, RAM, battery, sensor part numbers or radio frequencies. NEO HD stabilization and NEXT manipulator specifications are not assigned to BEST.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Variable-width chassis",
+          "details": "BEST can change its width and accept mission-specific modules; reconnaissance, logistics and casualty-evacuation configurations are described.",
+          "sources": [
+            "https://tedae.org/defensa/eme-group-lanza-un-nuevo-ugv-con-geometria-variable-el-aunav-best/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision integration",
+          "details": "Launch release identifies native integration with EM&E vision modules, without camera or detector part numbers.",
+          "sources": [
+            "https://tedae.org/defensa/eme-group-lanza-un-nuevo-ugv-con-geometria-variable-el-aunav-best/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Demonstrated communications relay",
+          "details": "October 2025 trials used a drone as a communications relay for remote operation. The drone model, modem and frequency are not disclosed.",
+          "sources": [
+            "https://eme-es.com/eme-group-demuestra-la-efectividad-de-su-aunav-best-como-ugv-nacional-con-capacidad-de-neutralizacion-de-blancos/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Common operator station",
+          "details": "aunav.ROCS is the manufacturer’s shared family controller, supporting multiple user profiles and up to eight camera views. It is a ground controller, not an onboard CPU specification.",
+          "sources": [
+            "https://eme-es.com/en/robotics/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Reported automation",
+          "details": "Launch release describes integrated AI without naming an algorithm, accelerator or autonomy level.",
+          "sources": [
+            "https://tedae.org/defensa/eme-group-lanza-un-nuevo-ugv-con-geometria-variable-el-aunav-best/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "EM&E Group",
+          "models": [
+            "aunav.BEST"
+          ]
+        }
+      ]
     }
   ]
 }
