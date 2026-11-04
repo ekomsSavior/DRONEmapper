@@ -924,6 +924,43 @@ test('batch 33 separates installed controllers, configurable hardware and softwa
  assert.equal(a21.sections.compute.status,'not-established');
 });
 
+test('batch 35 keeps specific installations, options and research leads separate',()=>{
+ const swr=system('Novarc Technologies','Spool Welding Robot (SWR)');
+ assert.match(text(swr.sections.compute),/Intel and NVIDIA/);
+ assert.match(text(swr.sections.power),/Power Wave R450/);
+ assert.doesNotMatch(text(swr.sections.compute.facts.map(f=>f.details)),/Orin|Xavier|Core i7/);
+ const eg=system('Okibo','EG7'),plus=system('Okibo','EG7+');
+ assert.match(text(eg.sections.power),/5.38 kWh.*OK7A/);
+ assert.match(text(eg.sections.sensors),/Force\/torque.*LiDAR/);
+ assert.match(text(plus.sections.power),/15 kWh/);
+ assert.equal(plus.sections.sensors.status,'not-established');
+ assert.doesNotMatch(text(plus.sections.power.facts.map(f=>f.details)),/389 kg|5.38/);
+ const m=system('Oceaneering','Millennium 208'),mp=system('Oceaneering','Millennium Plus');
+ assert.match(text(m.sections.compute),/OPAC/);
+ assert.match(text(m.sections.interfaces),/Titan 4.*Rig Master/);
+ assert.match(text(m.sections.sensors),/Rowe Technologies/);
+ assert.match(text(m.sections.interfaces),/rather than an underwater Wi-Fi/);
+ assert.equal(mp.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(mp.sections.sensors.facts.map(f=>f.details)),/Rowe|CDL/);
+ assert.equal(profileIds(system('Oceaneering','Millennium ROV')).length,1);
+ const o22=system('Outrider','Outrider Yard Truck (2022 kit)'),o25=system('Outrider','Outrider Yard Truck (2025 system)');
+ assert.match(text(o22.sections.sensors),/Ouster/);
+ assert.equal(o25.sections.sensors.status,'not-established');
+ assert.match(text(o25.sections.interfaces),/RH Sheppard/);
+ assert.equal(profileIds(system('Outrider','Outrider Yard Truck')).length,2);
+ const old=system('Ocius Technology','Bluebottle (2020 Bruce/Beth classes)'),trial=system('Ocius Technology','Bluebottle (2023 marine-mammal trial)'),cur=system('Ocius Technology','Bluebottle (current 7.4 m hull)');
+ assert.match(text(old.sections.power),/14–21 kWh/);
+ assert.match(text(old.sections.power),/14–27 kWh/);
+ assert.match(text(trial.sections.radios),/Iridium/);
+ assert.doesNotMatch(text(cur.sections.power.facts.map(f=>f.details)),/14–27|14–21/);
+ assert.equal(cur.sections.radios.status,'not-established');
+ assert.equal(profileIds(system('Ocius Technology','Bluebottle')).length,3);
+ const orchard=system('Orchard Robotics','Orchard Vision System');
+ assert.equal(orchard.sections.compute.status,'not-established');
+ assert.match(text(orchard.sections.other),/Jetson SKU/);
+ assert.match(text(orchard.sections.interfaces),/does not make the host vehicle autonomous/);
+});
+
 test('batch 34 preserves robot generations, controller evidence and network scope',()=>{
  const sc=system('Nilfisk','Nilfisk Liberty SC60');
  assert.match(text(sc.sections.compute),/Brain Control Module/);

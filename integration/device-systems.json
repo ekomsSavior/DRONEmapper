@@ -22188,6 +22188,504 @@
           ]
         }
       ]
+    },
+    {
+      "id": "novarc-swr-noveye-system",
+      "manufacturer": "Novarc Technologies",
+      "models": [
+        "Spool Welding Robot (SWR)",
+        "SWR with NovEye Autonomy"
+      ],
+      "configuration": "Manufacturer SWR and NovEye Autonomy descriptions. NovEye is a particular control package; CPU/GPU SKUs, RAM, camera model and wireless pendant protocol are undisclosed. Options differ by installation.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "NovEye computing hardware",
+          "details": "Intel and NVIDIA processors are named for NovEye Autonomy, without specific chips or board models.",
+          "sources": [
+            "https://www.novarctech.com/technologies/noveye-autonomy/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Welding perception",
+          "details": "Torch-mounted camera supplies live images to the control system; NovEye also describes process-measurement sensors and a sonic sensor.",
+          "sources": [
+            "https://www.novarctech.com/company/press/advanced-ai/",
+            "https://www.novarctech.com/technologies/noveye-autonomy/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Operator pendant",
+          "details": "Wireless handheld control is advertised; band, protocol and radio manufacturer are not identified.",
+          "sources": [
+            "https://www.novarctech.com/products/spool-welding-robot/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electrical supply",
+          "details": "Lincoln Power Wave R450 welding source. The North American robot supply is three-phase 208Y/120 V, 60 Hz, 23 A; the welding source has separate supply requirements.",
+          "sources": [
+            "https://www.novarctech.com/products/spool-welding-robot/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Robot and controls",
+          "details": "Three-axis arm, pneumatic height adjustment, HMI and handheld controller. Optional positioner integration, travelling base and dual torch.",
+          "sources": [
+            "https://www.novarctech.com/products/spool-welding-robot/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Welding and production data",
+          "details": "NovEye adjusts motion from live process observations. NovData records production information; NovSync provides remote reports and videos. Transport details are unspecified.",
+          "sources": [
+            "https://www.novarctech.com/products/spool-welding-robot/",
+            "https://www.novarctech.com/company/press/advanced-ai/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "okibo-eg7-datasheet-system",
+      "manufacturer": "Okibo",
+      "models": [
+        "EG7",
+        "EG-7"
+      ],
+      "configuration": "EG7 manufacturer sheet linked from the product page (April 2025 upload). Its 389 kg and 5.38 kWh figures differ from the rounded current web description. CPU, RAM, sensor models and radio hardware undisclosed; EG7+ is separate.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Sensing",
+          "details": "Force/torque sensing and LiDAR are explicitly listed; individual parts and quantities are not specified.",
+          "sources": [
+            "https://okibo.com/wp-content/uploads/2025/04/EG7-okibo-data-sheet-digital.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and chassis",
+          "details": "5.38 kWh battery; 230/110 V charging. OK7A base has four swerve wheels, 90 mm ground clearance and 389 kg mass.",
+          "sources": [
+            "https://okibo.com/wp-content/uploads/2025/04/EG7-okibo-data-sheet-digital.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Working mechanism",
+          "details": "Detachable manipulator and quick-change toolheads. Sheet lists 3,272 mm maximum manipulator reach, 70 L hopper and pump rated up to 6 L/min.",
+          "sources": [
+            "https://okibo.com/wp-content/uploads/2025/04/EG7-okibo-data-sheet-digital.pdf",
+            "https://okibo.com/our-robot/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Onboard autonomy",
+          "details": "Builds a live spatial model and coordinates arm/base movement. External Wi-Fi, 5G and site markers are not required for operation; this is not proof that no radio is fitted.",
+          "sources": [
+            "https://okibo.com/our-robot/",
+            "https://okibo.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "okibo-eg7-plus-current-system",
+      "manufacturer": "Okibo",
+      "models": [
+        "EG7+"
+      ],
+      "configuration": "Current manufacturer EG7+ description. Processor, RAM, sensor models, radio modules and chassis mass undisclosed. EG7’s detailed sheet does not establish the EG7+ parts list.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Battery and drive",
+          "details": "15 kWh rechargeable lithium-ion battery, advertised ten-hour operation, and omnidirectional swerve drive.",
+          "sources": [
+            "https://okibo.com/our-robot/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Working equipment",
+          "details": "Up to 24 ft reach for painting, sanding and finishing. Shares the platform’s quick-change toolhead approach; exact manipulator model not named.",
+          "sources": [
+            "https://okibo.com/our-robot/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy stack",
+          "details": "Uses Okibo’s live environment modeling and coordinated mobile-base/arm planning. Individual sensor specifications are not published for this version.",
+          "sources": [
+            "https://okibo.com/our-robot/",
+            "https://okibo.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oceaneering-millennium-208-2018",
+      "manufacturer": "Oceaneering",
+      "models": [
+        "Millennium 208",
+        "Millennium ROV"
+      ],
+      "configuration": "Oceaneering sheet RSC/18/RR/ML208/TSS/001 Rev 00, February 26, 2018, hosted by operator Reach Subsea. Applies to vehicle 208, not every Millennium. CPU and memory undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Control system",
+          "details": "OPAC control system; the sheet names the controller architecture but not its processor.",
+          "sources": [
+            "https://reachsubsea.no/wp-content/uploads/2023/03/Datasheet-Millennium-208Rev.-00.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and imaging",
+          "details": "Kongsberg sonar/altimeter, CDL gyro, Paroscientific depth transducer, Rowe Technologies DVL and Honeywell compass. Three color cameras from DeepSea Power & Light, DSSI and Kongsberg.",
+          "sources": [
+            "https://reachsubsea.no/wp-content/uploads/2023/03/Datasheet-Millennium-208Rev.-00.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Vehicle power",
+          "details": "Two 110 hp hydraulic power units at 3,000 VAC; 3,000 m depth rating, 2,500 kg mass and 360 kg payload.",
+          "sources": [
+            "https://reachsubsea.no/wp-content/uploads/2023/03/Datasheet-Millennium-208Rev.-00.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Manipulators",
+          "details": "Schilling Titan 4 seven-function starboard arm and Rig Master five-function port arm; DSSI M-1001-LED-01 lights.",
+          "sources": [
+            "https://reachsubsea.no/wp-content/uploads/2023/03/Datasheet-Millennium-208Rev.-00.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tethered telemetry",
+          "details": "Full-duplex Focal 903 fiber-optic telemetry to the surface, rather than an underwater Wi-Fi link. Operator van uses rig broadband; modem details unspecified.",
+          "sources": [
+            "https://reachsubsea.no/wp-content/uploads/2023/03/Datasheet-Millennium-208Rev.-00.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oceaneering-millennium-plus-2017",
+      "manufacturer": "Oceaneering",
+      "models": [
+        "Millennium Plus ROV",
+        "Millennium Plus"
+      ],
+      "configuration": "Manufacturer sheet dated August 16, 2017, still linked from its product page. Configuration options are explicit; CPU, RAM and camera part numbers undisclosed. Vehicle 208’s named components are not inherited.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Hydraulic vehicle",
+          "details": "Two 110 hp units; four horizontal and four vertical thrusters. 4,000 kg, 3.3 × 1.7 × 1.9 m, 3,000 m standard depth rating; 4,000 m optional.",
+          "sources": [
+            "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "Survey gyro, backup fluxgate compass, digiquartz depth sensor with analog backup, and DVL. Listed sonar choices: Kongsberg 1071/1171 or Tritech SeaKing.",
+          "sources": [
+            "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging",
+          "details": "SD and HD cameras; 3D HD optional. Lighting uses quartz-halogen or high-intensity LED units.",
+          "sources": [
+            "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tooling and data",
+          "details": "Two five- or seven-function manipulators. Optional RS232/RS485, Ethernet and optical-fiber interfaces; 24 V DC/110 V AC payload supplies.",
+          "sources": [
+            "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Vehicle control",
+          "details": "Fly-by-wire station keeping with automatic heading, depth, altitude and pitch control. Surface connection uses an electro-optical tether and cage/top-hat TMS.",
+          "sources": [
+            "https://oceaneering.canto.com/download/document/m8lmrpktql1ut151i4d61fkp72/original.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outrider-yard-truck-2022-kit",
+      "manufacturer": "Outrider",
+      "models": [
+        "Outrider Yard Truck",
+        "Outrider Yard Truck (2022 kit)"
+      ],
+      "configuration": "July 7, 2022 manufacturer release for its autonomy-ready Orange EV Class 8 yard-truck configuration. DRIVE processor, LiDAR SKU, RAM, radio hardware and traction-battery capacity undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Perception computer",
+          "details": "NVIDIA DRIVE platform; no chip or board revision is named.",
+          "sources": [
+            "https://www.outrider.ai/press-releases/outrider-releases-next-gen-autonomy-kit-for-scaling-distribution-yard-automation/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "LiDAR",
+          "details": "Ouster high-resolution LiDAR sensors, with model and count unspecified.",
+          "sources": [
+            "https://www.outrider.ai/press-releases/outrider-releases-next-gen-autonomy-kit-for-scaling-distribution-yard-automation/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Base vehicle",
+          "details": "Battery-electric, drive-by-wire Class 8 yard truck specified with Orange EV.",
+          "sources": [
+            "https://www.outrider.ai/press-releases/outrider-releases-next-gen-autonomy-kit-for-scaling-distribution-yard-automation/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Trailer handling",
+          "details": "Yaskawa industrial arm connects/disconnects trailer lines. Kit uses field-swappable units; exact arm model undisclosed.",
+          "sources": [
+            "https://www.outrider.ai/press-releases/outrider-releases-next-gen-autonomy-kit-for-scaling-distribution-yard-automation/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy and service",
+          "details": "Outrider software manages trailer movement and yard-system integration, with remote support and software updates. Wireless transport is not specified.",
+          "sources": [
+            "https://www.outrider.ai/press-releases/outrider-releases-next-gen-autonomy-kit-for-scaling-distribution-yard-automation/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outrider-yard-truck-2025-system",
+      "manufacturer": "Outrider",
+      "models": [
+        "Outrider Yard Truck (2025 system)",
+        "Outrider Yard Truck"
+      ],
+      "configuration": "July 10, 2025 manufacturer safety-system release. Exact compute, steering, camera/LiDAR, radio and battery revisions undisclosed; the 2022 sensor list is not assumed unchanged.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Approved computing supplier",
+          "details": "NVIDIA is named among the approved hardware suppliers; the release does not name a processor or board.",
+          "sources": [
+            "https://www.outrider.ai/press-releases/outrider-builds-first-in-industry-safety-system-for-driverless-yard-operations/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric truck platform",
+          "details": "Orange EV is named as the electric yard-truck platform supplier.",
+          "sources": [
+            "https://www.outrider.ai/press-releases/outrider-builds-first-in-industry-safety-system-for-driverless-yard-operations/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Steering and coupling",
+          "details": "RH Sheppard drive-by-wire steering; TrailerConnect arm connects trailer brake/electric lines, or the system integrates with automatic couplings for captive fleets. Yaskawa is an approved hardware supplier.",
+          "sources": [
+            "https://www.outrider.ai/press-releases/outrider-builds-first-in-industry-safety-system-for-driverless-yard-operations/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Vehicle and cloud layers",
+          "details": "Autonomy stack is paired with cloud management and trailer inventory tracking. Manufacturer describes a redundant safety system; the cloud service is separate from the vehicle computer.",
+          "sources": [
+            "https://www.outrider.ai/press-releases/outrider-builds-first-in-industry-safety-system-for-driverless-yard-operations/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocius-bluebottle-2020-classes",
+      "manufacturer": "Ocius Technology",
+      "models": [
+        "Bluebottle (2020 Bruce/Beth classes)",
+        "Bluebottle"
+      ],
+      "configuration": "Manufacturer Bluebottle Specifications 2020 brochure, hosted by an exhibition organizer. Bruce and Beth are distinct sizes; CPU, RAM and communications modules undisclosed. Current 7.4 m hull is separate.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Bruce energy system",
+          "details": "5.6 m Bruce: solar up to 500 W and configurable 14–21 kWh storage; wind sail and wave-powered rudder flipper supplement propulsion.",
+          "sources": [
+            "https://aal-manual-prod.s3.ap-south-1.amazonaws.com/Production/exb_doc/403/5958/GxZToUql7MFi1720739388pdf.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Beth energy system",
+          "details": "6.8 m Beth: solar up to 1,500 W and configurable 14–27 kWh storage; same renewable-energy approach, with different hull/payload capacity.",
+          "sources": [
+            "https://aal-manual-prod.s3.ap-south-1.amazonaws.com/Production/exb_doc/403/5958/GxZToUql7MFi1720739388pdf.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular sensor payloads",
+          "details": "Dry payload bay and wet keel cassette/winch accommodate mission-specific sensors. Brochure lists Bruce 150 kg dry/150 kg wet, Beth 350 kg dry/200 kg wet.",
+          "sources": [
+            "https://aal-manual-prod.s3.ap-south-1.amazonaws.com/Production/exb_doc/403/5958/GxZToUql7MFi1720739388pdf.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocius-bluebottle-2023-acoustic-trial",
+      "manufacturer": "Ocius Technology",
+      "models": [
+        "Bluebottle (2023 marine-mammal trial)",
+        "Bluebottle"
+      ],
+      "configuration": "Manufacturer report of a September 2023 scientific trial. This is a documented payload installation, not the standard fit of every Bluebottle. Main CPU, RAM and satellite terminal model undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Scientific payload",
+          "details": "JASCO OceanObserver acoustic acquisition/processing system and nine-channel towed hydrophone array. Radar and a zoom camera are also described.",
+          "sources": [
+            "https://ocius.com.au/news/20231005_moby/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Surface satellite link",
+          "details": "Iridium carried processed whale detections to analysts; this does not establish an open broadcast decoder or a Wi-Fi identifier.",
+          "sources": [
+            "https://ocius.com.au/news/20231005_moby/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload integration",
+          "details": "16 m array deployed using a keel winch and 60 m tow cable; the winch stows it for transit.",
+          "sources": [
+            "https://ocius.com.au/news/20231005_moby/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Processing and reporting",
+          "details": "Onboard acoustic processing; mission data integrated into BO-MTS SeaSuite. This payload processor is separate from the undisclosed main vehicle computer.",
+          "sources": [
+            "https://ocius.com.au/news/20231005_moby/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocius-bluebottle-current-hull",
+      "manufacturer": "Ocius Technology",
+      "models": [
+        "Bluebottle (current 7.4 m hull)",
+        "Bluebottle"
+      ],
+      "configuration": "Current manufacturer description, reviewed November 2026. CPU, memory, battery capacity and radio modules undisclosed. Earlier Bruce/Beth battery specifications are not assigned to this hull.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Hull and energy variants",
+          "details": "7.4 m vessel using solar, wind and wave energy. The Hybrid variant adds a diesel generator; it is not present on the renewable-only version.",
+          "sources": [
+            "https://ocius.com.au/products/bluebottle/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Launch and recovery",
+          "details": "Boat-ramp launch using a standard 4×4 vehicle or crane. Hybrid shares the hull, trailer and launch arrangement.",
+          "sources": [
+            "https://ocius.com.au/products/bluebottle/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orchard-fruitscope-public-architecture",
+      "manufacturer": "Orchard Robotics",
+      "models": [
+        "Orchard Vision System",
+        "FruitScope Vision System"
+      ],
+      "configuration": "Manufacturer product description and employer-authored engineering postings. Exact shipping CPU, camera, RAM, GNSS/IMU, power and radio models undisclosed. Recruitment describes engineering work, not a certified production BOM.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Vision and localization",
+          "details": "Vehicle-mounted camera assembly. Employer descriptions identify stereo depth and GNSS fusion, with IMU synchronization in engineering work; no sensor part numbers are established.",
+          "sources": [
+            "https://www.orchard.ai/",
+            "https://jobs.generalcatalyst.com/companies/orchard-robotics-2/jobs/54989217-robotics-hardware-engineer",
+            "https://jobs.ashbyhq.com/orchard/d9a6c7d4-0494-4eef-bec9-0353ef3c1661"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mounting and operation",
+          "details": "Attaches to tractors, ATVs and other farm vehicles for crop surveys at published speeds of 1–12 mph. This camera accessory does not make the host vehicle autonomous.",
+          "sources": [
+            "https://www.orchard.ai/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Farm data platform",
+          "details": "FruitScope OS presents per-plant measurements and maps. Canary AI provides farm decision support; cloud functions are not an onboard processor specification.",
+          "sources": [
+            "https://www.orchard.ai/"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Compute research lead",
+          "details": "The company’s hardware-engineering posting explicitly involves NVIDIA Jetson, camera, IMU and GNSS synchronization. It does not identify a Jetson SKU or prove one module is installed in every released system.",
+          "sources": [
+            "https://jobs.generalcatalyst.com/companies/orchard-robotics-2/jobs/54989217-robotics-hardware-engineer"
+          ]
+        }
+      ]
     }
   ]
 }
