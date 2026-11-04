@@ -44942,6 +44942,317 @@
           ]
         }
       ]
+    },
+    {
+      "id": "mlb-bat3-usda-2008",
+      "manufacturer": "MLB",
+      "models": [
+        "BAT 3 (USDA 2008 configuration)"
+      ],
+      "configuration": "USDA/NMSU researchers’ June 2010 paper documents September 2008 operations. This MLB aircraft is distinct from Northrop Grumman BAT. Exact CPU, RAM, modem and powerplant model are not identified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Airborne logging computer",
+          "details": "Onboard computer records image timestamps, GPS position, elevation, pitch, roll and heading; processor part is unspecified.",
+          "sources": [
+            "https://www.ars.usda.gov/ARSUserFiles/30501000/acquisition.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Camera storage",
+          "details": "Canon camera uses an 8 GB memory card. This is image storage, not flight-computer RAM.",
+          "sources": [
+            "https://www.ars.usda.gov/ARSUserFiles/30501000/acquisition.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Imaging and navigation",
+          "details": "Canon SD900 10-megapixel still camera in the left wing; separate optical-zoom video camera in a three-axis nose gimbal. GPS guides the aircraft.",
+          "sources": [
+            "https://www.ars.usda.gov/ARSUserFiles/30501000/acquisition.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Telemetry and live video",
+          "details": "Ground station receives telemetry and live video. The study does not establish frequencies, protocol or chipset.",
+          "sources": [
+            "https://www.ars.usda.gov/ARSUserFiles/30501000/acquisition.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground support equipment",
+          "details": "Laptop, video deck and telemetry antenna form the documented ground station; laptop hardware is not onboard.",
+          "sources": [
+            "https://www.ars.usda.gov/ARSUserFiles/30501000/acquisition.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Waypoint flight and image workflow",
+          "details": "Ground software uploads flight lines and waypoint changes. Post-flight PreSync orthorectification is separate from airborne flight control.",
+          "sources": [
+            "https://www.ars.usda.gov/ARSUserFiles/30501000/acquisition.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "BAT 3 UAS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rotomotion-sr30-nlr-2008",
+      "manufacturer": "Rotomotion",
+      "models": [
+        "SR30 (North Little Rock configuration)"
+      ],
+      "configuration": "North Little Rock police aircraft description, revision 1 dated October 31, 2008, preserved by EFF. Processor, memory, engine part and camera models are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Installed day and thermal cameras",
+          "details": "Operator states both day-zoom and infrared cameras were installed as purchased, on a pan/tilt mount capable of observing independently of helicopter heading.",
+          "sources": [
+            "https://www.eff.org/files/filenode/north-little-rock-pd-2011_aircraft_system.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Manual safety-control link",
+          "details": "Manual control uses a 2.4 GHz safety controller. This does not identify a Wi-Fi protocol or a device-specific scanning signature.",
+          "sources": [
+            "https://www.eff.org/files/filenode/north-little-rock-pd-2011_aircraft_system.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Fuel-powered helicopter",
+          "details": "Fuel-powered main/tail-rotor platform; the filing specifies neither fuel grade nor engine model.",
+          "sources": [
+            "https://www.eff.org/files/filenode/north-little-rock-pd-2011_aircraft_system.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload mount",
+          "details": "Pan/tilt camera mount; approximate maximum payload 10 lb and takeoff weight 25 lb.",
+          "sources": [
+            "https://www.eff.org/files/filenode/north-little-rock-pd-2011_aircraft_system.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous flight",
+          "details": "Automatic takeoff and landing are documented alongside manual safety control.",
+          "sources": [
+            "https://www.eff.org/files/filenode/north-little-rock-pd-2011_aircraft_system.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Rotomotion SR30 UAS helicopter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leptron-avenger-2015",
+      "manufacturer": "Leptron Unmanned Aircraft Systems",
+      "models": [
+        "Avenger (2015 brochure)"
+      ],
+      "configuration": "Manufacturer’s November 2015 brochure. Historical family reference; it does not prove the exact components of Arlington’s earlier aircraft. CPU, memory, radio chipsets and battery capacity are unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight controller",
+          "details": "Full-featured autopilot is documented without a board or processor model.",
+          "sources": [
+            "https://www.leptron.com/pdf/leptron_avenger.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Digital communication options",
+          "details": "L-, S- and C-band digital links, encrypted or unencrypted, are listed; long-range analog/digital/HD packages are optional. Exact channels are not supplied.",
+          "sources": [
+            "https://www.leptron.com/pdf/leptron_avenger.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and payload options",
+          "details": "Kit lists laser altimeter and L1/GLONASS GPS. Dual FLIR/HD, multispectral, DSLR and RTK/DGPS are optional configurations.",
+          "sources": [
+            "https://www.leptron.com/pdf/leptron_avenger.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric rotor system",
+          "details": "Kit includes two flight batteries and charger. Brochure rates main rotor at 10 hp and tail rotor at 2 hp.",
+          "sources": [
+            "https://www.leptron.com/pdf/leptron_avenger.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground display and payload mounts",
+          "details": "12-inch daylight-readable ground LCD; front or underside payload mounts rated for 10 lb.",
+          "sources": [
+            "https://www.leptron.com/pdf/leptron_avenger.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight modes",
+          "details": "Wireless handheld control or waypoint ground-station operation; automatic takeoff/landing and low-battery landing functions.",
+          "sources": [
+            "https://www.leptron.com/pdf/leptron_avenger.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Leptron Avenger"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmist-cq10a-2005",
+      "manufacturer": "MMIST",
+      "models": [
+        "CQ-10A SnowGoose (2005)"
+      ],
+      "configuration": "US Department of Defense UAS Roadmap 2005, section 2.3.5. This is the CQ-10A powered parafoil, not the later CQ-10B autogyro. CPU, memory and modem parts are unspecified; a reported operator’s precise installation is not established.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Rotax powerplant",
+          "details": "Rotax 914 UL engine, 110 hp; MOGAS/AVGAS fuel with configuration-dependent capacity up to 91 US gallons.",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo141033/pdf/GOVPUB-D-PURL-gpo141033.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Published data-link architecture",
+          "details": "Table lists LOS/BLOS command-and-control with L-band frequency and a separate LOS video row. Exact video band and modem are not identified.",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo141033/pdf/GOVPUB-D-PURL-gpo141033.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and configurable payload",
+          "details": "GPS-guided flight; mission sensors are configurable, with no fixed camera model specified.",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo141033/pdf/GOVPUB-D-PURL-gpo141033.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular bays",
+          "details": "Six individual payload or fuel bins in a modular powered-parafoil platform; maximum cargo payload 575 lb.",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo141033/pdf/GOVPUB-D-PURL-gpo141033.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Programmed flight",
+          "details": "Programmable guidance supports preplanned flight. Processor implementation and operating system are not published in this source.",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo141033/pdf/GOVPUB-D-PURL-gpo141033.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "CQ-10A Snowgoose"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cu-tempest-2010-2013",
+      "manufacturer": "University of Colorado Boulder",
+      "models": [
+        "Tempest (RECUV 2010–2013)"
+      ],
+      "configuration": "January 2015 paper by the aircraft’s CU Boulder researchers, mirrored by the University at Albany. Describes VORTEX2 2010 and AVIATE 2013 configurations; not NASA Tempest-2 or TTwistor. CPU, RAM, battery capacity and radio parts are unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Cloud Cap autopilot",
+          "details": "Piccolo SL flight controller in the RECUV avionics package; semiconductor model is not identified.",
+          "sources": [
+            "https://www.atmos.albany.edu/daes/atmclasses/env327/References/UAS-jtech-d-13-00236%252E1.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Atmospheric instruments",
+          "details": "Underwing Vaisala RS92 measures pressure, temperature and humidity. June 2013 AVIATE trials separately tested an Aeroprobe five-hole air-data probe.",
+          "sources": [
+            "https://www.atmos.albany.edu/daes/atmclasses/env327/References/UAS-jtech-d-13-00236%252E1.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric airframe",
+          "details": "Modified competition slope-soaring glider fuselage incorporates electric propulsion; motor and pack models are not stated.",
+          "sources": [
+            "https://www.atmos.albany.edu/daes/atmclasses/env327/References/UAS-jtech-d-13-00236%252E1.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Research payload installation",
+          "details": "Underwing meteorological probe and integrated avionics/payload compartment; the paper does not identify connector pinouts.",
+          "sources": [
+            "https://www.atmos.albany.edu/daes/atmclasses/env327/References/UAS-jtech-d-13-00236%252E1.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight-state estimation",
+          "details": "Piccolo proprietary state-estimation algorithm is identified; application firmware and operating system are not specified.",
+          "sources": [
+            "https://www.atmos.albany.edu/daes/atmclasses/env327/References/UAS-jtech-d-13-00236%252E1.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Unknown manufacturer",
+          "models": [
+            "Tempest miniature UAS"
+          ]
+        }
+      ]
     }
   ]
 }

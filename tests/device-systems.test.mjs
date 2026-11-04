@@ -2547,3 +2547,23 @@ test('batch 60 scopes warehouse radios, historical ratings and fleet configurati
  assert.equal(profileIds(system('Geek+','P800R')).length,1);
  assert.equal(profileIds(system('Amazon','Amazon Robotics fleet',{kind:'regulatory-equipment'})).length,0);
 });
+
+test('batch 78 preserves historical aircraft and subsystem boundaries',()=>{
+ const bat=system('Unknown manufacturer','BAT 3 UAS');
+ assert.match(text(bat.sections.memory),/8 GB.*not flight-computer RAM/);
+ assert.match(text(bat.configurations),/distinct from Northrop/);
+ const sr=system('Unknown manufacturer','Rotomotion SR30 UAS helicopter');
+ assert.match(text(sr.sections.radios),/does not identify a Wi-Fi protocol/);
+ assert.equal(sr.sections.compute.status,'not-established');
+ const av=system('Unknown manufacturer','Leptron Avenger');
+ assert.match(text(av.sections.sensors),/optional configurations/);
+ assert.equal(av.sections.memory.status,'not-established');
+ const snow=system('Unknown manufacturer','CQ-10A Snowgoose');
+ assert.match(text(snow.sections.power),/Rotax 914 UL/);
+ assert.equal(profileIds(system('MMIST','CQ-10B')).length,0);
+ const temp=system('Unknown manufacturer','Tempest miniature UAS');
+ assert.match(text(temp.sections.compute),/Piccolo SL/);
+ assert.doesNotMatch(text(temp.sections.compute.facts),/Pixhawk/);
+ assert.equal(profileIds(system('University of Colorado Boulder','TTwistor')).length,0);
+ assert.equal(profileIds(system('MLB','BAT 3',{kind:'regulatory-equipment'})).length,0);
+});
