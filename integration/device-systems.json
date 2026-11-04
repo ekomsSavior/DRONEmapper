@@ -16644,7 +16644,7 @@
       "models": [
         "Aurora Driver"
       ],
-      "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+      "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents. Hirschbach’s fleet entry links to this common Aurora architecture only; it does not establish a specific truck generation or installed parts.",
       "reviewed_on": "2026-11-03",
       "facts": [
         {
@@ -16685,6 +16685,22 @@
           "details": "Perception, planning and driving software work with fault-management and fallback systems. Current FAQ describes Aurora’s Verifiable AI approach.",
           "sources": [
             "https://aurora.tech/newsroom/have-questions-about-aurora-and-avs-get-your-answers-here"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Hirschbach fleet relationship",
+          "details": "Aurora’s April 2026 release documents Driver-powered freight service for Hirschbach. Its 500-truck expansion was a non-binding MOU for deliveries beginning in 2027, not an installed fleet count.",
+          "sources": [
+            "https://ir.aurora.tech/news-events/press-releases/detail/136/leading-carrier-selects-aurora-to-scale-autonomous-fleet-to-500-trucks"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Hirschbach Motor Lines",
+          "models": [
+            "Hirschbach Autonomous Freight Operations"
           ]
         }
       ]
@@ -45935,6 +45951,283 @@
           "manufacturer": "Swarmbotics AI",
           "models": [
             "FireAnt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meco-auv-march2025",
+      "manufacturer": "Interactive Robotics and Vision Laboratory (IRV Lab)",
+      "models": [
+        "MeCO AUV (March 2025 research configuration)"
+      ],
+      "configuration": "University of Minnesota builders’ March 2025 paper. Modular research vehicle; individual builds can differ. Jetson RAM variant, SSD capacity, camera and thruster part numbers are not established in the cited text.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Jetson and microcontrollers",
+          "details": "NVIDIA Jetson Orin NX handles autonomy; Teensy 4.1 boards handle motor control and menu displays.",
+          "sources": [
+            "https://arxiv.org/html/2503.10928v1"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Mission storage",
+          "details": "SSD in the center tube stores mission data; capacity is unspecified.",
+          "sources": [
+            "https://arxiv.org/html/2503.10928v1"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Redundant battery distribution",
+          "details": "Four LiPo batteries total 385 Wh. Either side tube can supply the vehicle; ancillary circuits use 5 V buses. Five thrusters provide non-holonomic six-degree-of-freedom control.",
+          "sources": [
+            "https://arxiv.org/html/2503.10928v1"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and vision",
+          "details": "AHRS near the center of gravity and a front stereo camera; camera connects directly to Jetson.",
+          "sources": [
+            "https://arxiv.org/html/2503.10928v1"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tether and human interfaces",
+          "details": "Ethernet switch connects computers and detachable Fathom tether; tether carries data, not power. Three OLEDs, HREyes LED rings and SIREN acoustic output support diver interaction.",
+          "sources": [
+            "https://arxiv.org/html/2503.10928v1"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Distributed control",
+          "details": "ROS 2 and Docker on Jetson; micro-ROS with DDS-XRCE over Ethernet connects timing-sensitive Teensy control loops.",
+          "sources": [
+            "https://arxiv.org/html/2503.10928v1"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Interactive Robotics and Vision Laboratory (IRV Lab)",
+          "models": [
+            "MeCO AUV"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "havoc-rampage-july2026",
+      "manufacturer": "Havoc",
+      "models": [
+        "Rampage (July 2026 product brief)"
+      ],
+      "configuration": "Havoc Product Brief Rampage-09, July 28, 2026. Rampage is a configuration reference for the broader Havoc USV entry, not identification of every Havoc vessel as Rampage. CPU, RAM, modem, sensor models and battery capacity are unpublished.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electric propulsion and solar recharge",
+          "details": "Electric drive rated 7.5 kW and 60 VDC maximum; battery plus integrated solar charging.",
+          "sources": [
+            "https://cdn.sanity.io/files/oifvdcku/production/56e19f41dd62f7cbd0ca185a5efa916ed128ae9c.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular surface vessel",
+          "details": "14 ft 2 in long, 4 ft 10 in beam, 10 in draft and 300 lb payload capacity. Payloads are reconfigurable rather than one fixed sensor suite.",
+          "sources": [
+            "https://cdn.sanity.io/files/oifvdcku/production/56e19f41dd62f7cbd0ca185a5efa916ed128ae9c.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Edge autonomy",
+          "details": "Havoc software combines navigation, path planning and collision avoidance with operator monitoring and retasking; processor implementation is not supplied.",
+          "sources": [
+            "https://cdn.sanity.io/files/oifvdcku/production/56e19f41dd62f7cbd0ca185a5efa916ed128ae9c.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Havoc",
+          "models": [
+            "Rampage"
+          ]
+        },
+        {
+          "manufacturer": "HavocAI",
+          "models": [
+            "Havoc USV"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l3harris-asview-architecture",
+      "manufacturer": "L3Harris",
+      "models": [
+        "ASView control architecture"
+      ],
+      "configuration": "Manufacturer’s ASView system description. For the combined ASView / C-Worker inventory entry this covers the control system; it does not select a C-Worker hull, engine or mission payload. CPU, memory, modem models and RF bands are unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "ASView-Core",
+          "details": "Vessel interface manager and autonomy processor; semiconductor part number is not disclosed.",
+          "sources": [
+            "https://www.l3harris.com/all-capabilities/asview-control-system"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "ASView-Base",
+          "details": "Base server/radio enclosure is shore-side or on a mothership, not the vessel’s onboard CPU.",
+          "sources": [
+            "https://www.l3harris.com/all-capabilities/asview-control-system"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator and safety controls",
+          "details": "ASView-Bridge provides the PC graphical interface; ASView-Helm is the portable controller. Emergency stop and AIS-based last-response function can disengage propulsion.",
+          "sources": [
+            "https://www.l3harris.com/all-capabilities/asview-control-system"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation modes",
+          "details": "Waypoint and line following, heading/track hold, station keeping, remote control and COLREG-aware path planning.",
+          "sources": [
+            "https://www.l3harris.com/all-capabilities/asview-control-system"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "L3Harris",
+          "models": [
+            "ASView / C-Worker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nyk-suzaku-dffas-2022",
+      "manufacturer": "NYK Line",
+      "models": [
+        "Suzaku DFFAS demonstrator (2022 trial)"
+      ],
+      "configuration": "Operator and subsystem suppliers describe the February–March 2022 Suzaku trial. This is the demonstrator linked by the inventory entry, not every NYK ship or later MEGURI2040 installation. CPU, RAM, radio-module and propulsion part numbers are not supplied.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Furuno Action Planning Unit",
+          "details": "APU integrates navigation targets and plans actions within the APExS autonomous navigation system; chip model unpublished.",
+          "sources": [
+            "https://www.furuno.co.jp/en/news/general/general_category.html?dispmid=961&itemid=1127"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Radar and camera fusion",
+          "details": "Millimeter-wave radar, X/S-band radar, AIS and Orca AI image recognition supply target data.",
+          "sources": [
+            "https://www.furuno.co.jp/en/news/general/general_category.html?dispmid=961&itemid=1127"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "18-camera watchkeeping",
+          "details": "Orca AI reports 18 onboard cameras with 360° day/night coverage; exact camera models not identified.",
+          "sources": [
+            "https://www.orca-ai.io/resource/worlds-first-autonomous-commercial-ship-voyage-in-congested-water-successfully-completed/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Ship-to-shore connection",
+          "details": "Satellite and terrestrial communication lines link the ship to its fleet operation center.",
+          "sources": [
+            "https://www.nyk.com/english/news/2022/20220303_02.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Navigation controls",
+          "details": "APU sends commands to autopilot, dynamic positioning and speedpilot; shore operators can assume remote control.",
+          "sources": [
+            "https://www.furuno.co.jp/en/news/general/general_category.html?dispmid=961&itemid=1127"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous and shore support",
+          "details": "DFFAS separates onboard autonomy, land-side monitoring/emergency response, and the communications system; engine-abnormality prediction supports shore operations.",
+          "sources": [
+            "https://www.nyk.com/english/news/2022/20220303_02.html"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "NYK Line",
+          "models": [
+            "NYK Autonomous Ship Demonstrator"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kongsberg-remote-autonomous-system",
+      "manufacturer": "Kongsberg Maritime",
+      "models": [
+        "Remote and autonomous vessel architecture"
+      ],
+      "configuration": "System-family reference for the inventory’s Autonomous Vessel System, not one named ship or universal BOM. Kongsberg offers complete systems, operational services and individual retrofits. CPU, memory, sensor parts, propulsion and battery depend on the vessel.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Vessel-to-operations-center options",
+          "details": "Remote Operations Centre can connect through satellite, WLAN, 4G or 5G as appropriate to the installation; these are alternatives, not confirmed radios on every vessel.",
+          "sources": [
+            "https://www.kongsbergmaritime.com/segments/ship-types/autonomous-ships/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Shore workstations",
+          "details": "Qualified shore personnel can monitor a fleet or control a vessel in transit and harbor; unexpected events can trigger return from autonomous to remote control.",
+          "sources": [
+            "https://www.kongsbergmaritime.com/segments/ship-types/autonomous-ships/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Crossing and docking functions",
+          "details": "Autocrossing coordinates vessel sensors with power and propulsion for predictable transits; autodocking supports repeated docking operations.",
+          "sources": [
+            "https://www.kongsbergmaritime.com/segments/ship-types/autonomous-ships/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Kongsberg Maritime",
+          "models": [
+            "Autonomous Vessel System"
           ]
         }
       ]

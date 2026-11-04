@@ -9,6 +9,32 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 81 scopes marine links, subsystem computers and fleet references',()=>{
+ const meco=system('Interactive Robotics and Vision Laboratory (IRV Lab)','MeCO AUV');
+ assert.match(text(meco.sections.compute),/Orin NX.*Teensy 4.1/);
+ assert.match(text(meco.sections.interfaces),/data, not power/);
+ assert.match(text(meco.sections.power),/385 Wh/);
+ assert.equal(meco.sections.radios.status,'not-established');
+ const ramp=system('Havoc','Rampage');
+ assert.match(text(ramp.sections.power),/7.5 kW.*60 VDC/);
+ assert.equal(ramp.sections.compute.status,'not-established');
+ assert.match(text(system('HavocAI','Havoc USV').configurations),/not identification of every Havoc/);
+ const asv=system('L3Harris','ASView / C-Worker');
+ assert.match(text(asv.sections.radios),/not the vessel’s onboard CPU/);
+ assert.equal(asv.sections.power.status,'not-established');
+ const nyk=system('NYK Line','NYK Autonomous Ship Demonstrator');
+ assert.match(text(nyk.sections.sensors),/18 onboard cameras/);
+ assert.match(text(nyk.configurations),/2022 Suzaku/);
+ assert.equal(nyk.sections.memory.status,'not-established');
+ const km=system('Kongsberg Maritime','Autonomous Vessel System');
+ assert.match(text(km.sections.radios),/alternatives, not confirmed/);
+ assert.equal(km.sections.compute.status,'not-established');
+ const h=system('Hirschbach Motor Lines','Hirschbach Autonomous Freight Operations');
+ assert.match(text(h.sections.identification),/non-binding MOU/);
+ assert.match(text(h.configurations),/common Aurora architecture only/);
+ assert.equal(profileIds(system('Havoc','Rampage',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 80 distinguishes planned architectures, prototype generations and named AI models',()=>{
  const xp=system('XPeng Robotics','XPENG Robotaxi');
  assert.match(text(xp.sections.compute),/Four.*Turing/);
