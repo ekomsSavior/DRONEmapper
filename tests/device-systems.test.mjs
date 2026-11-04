@@ -9,6 +9,52 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('equipment profiles require exact FCC identity and cannot become host BOMs',()=>{
+ const module=(maker,fcc_id,name='unrelated supplied label')=>system(maker,name,{kind:'regulatory-equipment',fcc_id});
+ const a=module('Skydio','2ATQRA40'),b=module('Skydio, Inc.','ri7fn990a40');
+ assert.deepEqual(profileIds(a),profileIds(b));
+ assert.match(text(a.sections.compute),/Snapdragon X65/);
+ assert.equal(a.record_scope,'regulatory-equipment');
+ assert.equal(a.sections.memory.status,'not-established');
+ assert.doesNotMatch(text(a.sections.identification),/Manufacturer MAC allocations/);
+ assert.equal(profileIds(module('Nuro','2ATQRA40')).length,0);
+ assert.equal(profileIds(module('Skydio','2ATQRA40S')).length,0);
+ assert.equal(profileIds(module('Skydio','2ATQRSMODBV3S')).length,0);
+ assert.equal(profileIds(system('Skydio','Telit FN990A40 radio module')).length,0);
+ assert.equal(profileIds(system('Skydio','Telit FN990A40 radio module',{fcc_id:'2ATQRA40'})).length,0);
+ const radio=module('Skydio','2ATQRSMO5GV1','C78 Controller');
+ assert.match(text(radio.sections.compute),/QCA6174A/);
+ assert.match(text(radio.sections.power),/780 mA/);
+ assert.match(text(radio.configurations),/radio module only/);
+ const cards=includeReviewedSystemModels(libraryModels());
+ const c=cards.find(r=>r.fcc_id==='2ATQRA40');
+ assert.ok(c);assert.equal(c.kind,'regulatory-equipment');
+ assert.deepEqual(profileIds(systemBreakdown(c)),profileIds(a));
+ assert.equal(includeReviewedSystemModels(cards).length,cards.length);
+});
+
+test('equipment configurations retain disabled radios and separate host power domains',()=>{
+ const module=(maker,fcc_id)=>system(maker,'module',{kind:'regulatory-equipment',fcc_id});
+ const zip=module('Zipline','2BML6P2EV1-0');
+ assert.match(text(zip.sections.radios),/Bluetooth and 5 GHz are disabled/);
+ assert.match(text(zip.sections.compute),/AX210D2W/);
+ assert.equal(profileIds(module('Zipline','2BML6P2EV3-0')).length,0);
+ const wifi=module('Nuro','2A98RDJZCGWA');
+ assert.match(text(wifi.sections.compute),/88W9098 \/ 88Q9098 alternatives/);
+ assert.match(text(wifi.sections.radios),/5260–5320 \/ 5500–5720/);
+ assert.match(text(wifi.sections.radios),/channels 149–165/);
+ const cellular=module('Nuro','2A98RDJZCGCA');
+ assert.match(text(cellular.sections.power),/typically 3.8 V/);
+ assert.match(text(cellular.sections.memory),/LPDDR2 SDRAM and NAND/);
+ assert.match(text(cellular.sections.interfaces),/PCIe is marked under development/);
+ assert.equal(cellular.sections.sensors.status,'not-established');
+ const host=system('Nuro','Camera Aggregator (DVT2 / SW 3.14)');
+ assert.match(text(host.sections.sensors),/NEO-M8T/);
+ assert.match(text(host.sections.power),/12 VDC/);
+ assert.equal(host.sections.compute.status,'not-established');
+ assert.equal(host.configurations.length,1);
+});
+
 test('mining profiles preserve retrofit, power-package and generation boundaries',()=>{
  const k=system('Komatsu','930E AHS');
  assert.equal(k.configurations.length,2);

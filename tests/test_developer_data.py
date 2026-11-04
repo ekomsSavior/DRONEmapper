@@ -116,6 +116,19 @@ class DeveloperDataTests(unittest.TestCase):
         self.assertIn('RI7FN990A40',x10['fcc_ids'])
         self.assertNotIn('2ATQRA40',x10['fcc_ids'])
 
+    def test_reviewed_module_components_are_in_export_without_host_inference(self):
+        equipment={d['fcc_id']:d for d in self.global_data['devices'] if d['kind']=='regulatory-equipment'}
+        relabel=equipment['2ATQRA40']
+        self.assertEqual(relabel['product'],'Telit FN990A40 (Skydio relabel)')
+        self.assertEqual(relabel['contributed_product'],'Fibocom FN990A40')
+        self.assertEqual(relabel['mac_allocations'],[])
+        self.assertEqual(relabel['scanner_signatures'],[])
+        self.assertEqual(relabel['system_breakdown']['record_scope'],'regulatory-equipment')
+        self.assertIn('Snapdragon X65',json.dumps(relabel['system_breakdown']['sections']['compute']))
+        self.assertEqual(equipment['2ATQRSMODBV3S']['system_breakdown']['configurations'],[])
+        zipline=equipment['2BML6P2EV1-0']['system_breakdown']
+        self.assertIn('Bluetooth and 5 GHz are disabled',json.dumps(zipline['sections']['radios']))
+
     def test_csv_is_reversible_and_not_spreadsheet_executable(self):
         cases=['=1+1','  =1+1','+cmd','-cmd','@SUM(1)',"'literal",'\tformula','line,quote"\nnext']
         rows=list(csv.DictReader(io.StringIO(export.csv_bytes(['text'],[{'text':s} for s in cases]).decode())))

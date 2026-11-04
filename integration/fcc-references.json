@@ -104,7 +104,7 @@
       "lookup_url": "https://fccid.io/2AZKTRADE8C",
       "scanner_signature": false,
       "contributor_notes": {
-        "text": "FCC Part 95M. 79.0\u201381.0 GHz automotive radar.",
+        "text": "FCC Part 95M. 79.0–81.0 GHz automotive radar.",
         "status": "unverified contextual claim; not a detection rule"
       }
     },
@@ -577,7 +577,7 @@
     },
     {
       "fcc_id": "2ATQRA40",
-      "product": "Fibocom FN990A40",
+      "product": "Telit FN990A40 (Skydio relabel)",
       "product_code": "A40",
       "equipment_class": "5G NR Module",
       "frequencies_mhz": [
@@ -610,6 +610,15 @@
         "source": "https://support.skydio.com/hc/en-us/articles/40739840785947-Skydio-Product-Radio-Certification-Information",
         "reviewed_on": "2026-11-02",
         "scope": "Identifier and product association only; dates and frequency claims in the supplied index still require grant review."
+      },
+      "contributed_product": "Fibocom FN990A40",
+      "product_identity_evidence": {
+        "reviewed_on": "2026-11-03",
+        "scope": "Module maker/name and electrically unchanged identifier relabel only; other contributed fields retain their original evidence status.",
+        "sources": [
+          "https://fccid.io/2ATQRA40/Letter/2ATQRA40-cvrltr-Change-In-FCC-ID-Request-8558937.pdf",
+          "https://fccid.io/2ATQRA40/Letter/2ATQRA40-cvrltr-FCC-Change-in-ID-Authorization-8558938.pdf"
+        ]
       }
     },
     {

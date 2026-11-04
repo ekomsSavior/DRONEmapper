@@ -1,4 +1,4 @@
-import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b55';
+import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b56';
 import {libraryModels} from './device-library-model.mjs';
 import {macAllocationsFor,formatMacPrefix} from './device-mac-model.mjs';
 import {robotSignatures} from './robot-signatures.mjs';
@@ -15,6 +15,13 @@ const aliases=new Map([
 const makerOf=r=>aliases.get(norm(r.maker||r.manufacturer))||norm(r.maker||r.manufacturer);
 const namesOf=r=>new Set([r.name,r.model,...(r.aliases||[]),...(r.models||[])].filter(Boolean).map(norm));
 const matches=(a,b)=>makerOf(a)===makerOf(b)&&[...namesOf(a)].some(n=>namesOf(b).has(n));
+const fccKey=value=>String(value||'').trim().toUpperCase();
+// Module documentation must be explicitly bound to an equipment identifier.
+// Matching a vendor or product name alone cannot import an aircraft's BOM.
+const profileMatches=(record,profile)=>record.kind==='regulatory-equipment'
+ ? makerOf(record)===makerOf(profile)&&Boolean(fccKey(record.fcc_id))&&
+   (profile.fcc_ids||[]).some(id=>fccKey(id)===fccKey(record.fcc_id))
+ : !profile.fcc_ids?.length&&matches(record,profile);
 const references=libraryModels();
 const urls=r=>[...new Set([...(r.sources||[]),r.source,r.url].filter(u=>typeof u==='string'&&u.startsWith('https://')))];
 export const systemSections=[
@@ -48,7 +55,7 @@ function specSection(key){
 
 export function systemBreakdown(record){
  const sections=Object.fromEntries(systemSections.map(([key,title])=>[key,{title,status:'not-established',facts:[]}]));
- const profiles=record.kind==='regulatory-equipment'?[]:deviceSystems.profiles.filter(p=>matches(record,p));
+ const profiles=deviceSystems.profiles.filter(p=>profileMatches(record,p));
  const reference=record.kind==='regulatory-equipment'?null:references.find(r=>matches(record,r));
  const add=(section,fact)=>{
   if(!sections[section]||!fact.sources?.length)return;
@@ -86,7 +93,7 @@ export function systemBreakdown(record){
   component:'Remote ID declaration reference',details:'A valid received serial must pass the catalog’s full serial-range and length checks. A declaration alone is not a received observation or authenticated identity.',
   sources:[...new Set(rid.map(r=>r.evidence_url))],evidence:'reviewed-declaration',
  });
- if(record.kind==='regulatory-equipment')add('radios',{
+ if(record.kind==='regulatory-equipment'&&(record.frequencies_mhz?.length||!profiles.length))add('radios',{
   component:'FCC equipment reference '+record.fcc_id,
   details:record.frequencies_mhz?.length?JSON.stringify(record.frequencies_mhz)+' MHz':'Frequency ranges are not established in this record.',
   sources:[record.source||record.lookup_url].filter(u=>u?.startsWith('https://')),
@@ -94,7 +101,7 @@ export function systemBreakdown(record){
   configuration:'This equipment record only; not a component assignment to every vehicle from the associated vendor.',
  });
  // References with no hardware revision cannot support a model-specific BOM.
- const type=norm(record.category)==='software'?'software-platform':/program|family|concept/i.test(record.category||'')?'program-or-family':/unknown model/i.test(record.name||'')?'unidentified-model':'device-or-configuration';
+ const type=record.kind==='regulatory-equipment'?'regulatory-equipment':norm(record.category)==='software'?'software-platform':/program|family|concept/i.test(record.category||'')?'program-or-family':/unknown model/i.test(record.name||'')?'unidentified-model':'device-or-configuration';
  return {
   schema_version:1,record_scope:type,complete_bill_of_materials:false,
   status:profiles.length?'reviewed-components':Object.values(sections).some(s=>s.facts.length)?'reference-only':'research-needed',
@@ -115,6 +122,18 @@ export function systemSearchText(record){
 export function includeReviewedSystemModels(records){
  const models=[...records];
  for(const profile of deviceSystems.profiles){
+  if(profile.fcc_ids?.length){
+   for(const fcc_id of profile.fcc_ids){
+    if(models.some(record=>record.kind==='regulatory-equipment'&&makerOf(record)===makerOf(profile)&&fccKey(record.fcc_id)===fccKey(fcc_id)))continue;
+    const source=profile.facts.flatMap(f=>f.sources)[0];
+    models.push({maker:profile.manufacturer,name:profile.models[0]+' · '+fcc_id,aliases:[],
+     kind:'regulatory-equipment',fcc_id,category:'Radio equipment',
+     description:profile.configuration,source,url:source,
+     connection:profile.facts.filter(f=>f.section==='radios').map(f=>f.component).join(' · ')||'Module communications reference.',
+     reception:'Equipment configuration reference; not a received observation or a unique scanner signature.'});
+   }
+   continue;
+  }
   const primary=profile.models[0];
   if(models.some(record=>matches(record,{...profile,models:[primary]})))continue;
   const source=profile.facts.flatMap(f=>f.sources)[0];

@@ -70,8 +70,8 @@
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
       "rows": 925,
-      "bytes": 12725640,
-      "sha256": "df35f30e213fefe04c18de89c33d3fc96f6d1eea88b61b36c6d04b31c812d094",
+      "bytes": 12784916,
+      "sha256": "cb9d3f253c72fdfd90170fcd558cb209552ba6590f2ef43f34e6415921c43ca7",
       "collections": {
         "devices": 925,
         "radio_allocations": 182,
@@ -85,9 +85,9 @@
         "devices_with_mac_allocations": 236,
         "devices_with_rf_information": 119,
         "devices_with_scanner_signatures": 11,
-        "system_profiles": 697,
-        "devices_with_system_profiles": 596,
-        "devices_with_documented_compute": 283
+        "system_profiles": 705,
+        "devices_with_system_profiles": 604,
+        "devices_with_documented_compute": 290
       }
     }
   ],
@@ -110,7 +110,7 @@
     },
     {
       "path": "integration/fcc-references.json",
-      "sha256": "4f3daf4847802f67d1000410d16c63aa749ff727747ad641c543d3da00fafc7e"
+      "sha256": "bdd3f961bc54e49bda5cab906aee379777bf1e730a39cd199ac0644f6b70a63a"
     },
     {
       "path": "integration/robot-platforms.json",
@@ -154,15 +154,15 @@
     },
     {
       "path": "integration/device-systems.json",
-      "sha256": "5a932b18c98ade4c166d639cf0e1bf5ee3f203e175ff98102fa93b1cca5a34ac"
+      "sha256": "a1978ba69baa0f27eefdbb7862077330d05385db11bed6d97b1e98a3b30ec02b"
     },
     {
       "path": "public/device-system-model.mjs",
-      "sha256": "bb7d546d918b4bb25cc7535bf72d83d77879c05f3fef16e51415146631f04862"
+      "sha256": "b686fb69b0a1305c0da6c557300b5ac3ac37ea3b1a23f63f11267ed0d0f1e0c6"
     },
     {
       "path": "public/device-system-data.mjs",
-      "sha256": "9d5573811401d227c137bf47c950d15b757d21b4095665d1883c30161a261c35"
+      "sha256": "8ac3485057687d546a74d6356ee7f3934bd8bbf9c745c7358ff1331541cdf590"
     },
     {
       "path": "scripts/enrich_device_systems.mjs",

@@ -1,7 +1,7 @@
 import {companyWebsite,modelWebsite} from './company-links.mjs';
 import {libraryModels} from './device-library-model.mjs?v=20261101-robots';
 import {macAllocationsFor,formatMacPrefix,macReviewedOn} from './device-mac-model.mjs';
-import {systemBreakdown,includeReviewedSystemModels} from './device-system-model.mjs?v=20261103-systems-b55';
+import {systemBreakdown,includeReviewedSystemModels} from './device-system-model.mjs?v=20261103-systems-b56';
 const $=id=>document.getElementById(id);
 let models=includeReviewedSystemModels(libraryModels());
 let inventoryStatus='Loading map inventory…';
@@ -52,8 +52,8 @@ function render(){
   const card=make('article','','reference-card');
   card.append(make('p',m.maker+' · '+m.category,'eyebrow'),make('h2',m.name),make('p',m.description));
   if(m.records)card.append(make('p',`${m.records.toLocaleString()} map records · ${Object.entries(m.record_types).map(([k,v])=>`${k}: ${v}`).join(' · ')}`),make('p',m.operators.length?'Reported operators: '+m.operators.join(', '):''));
-  const allocations=macAllocationsFor(m.maker);
-  card.append(make('p',allocations.length?'Manufacturer MAC prefixes: '+allocations.map(formatMacPrefix).join(' · '):m.maker==='Unknown manufacturer'?'MAC prefix: manufacturer not identified in the source record.':'MAC prefix: no verified match in the reviewed registries.'));
+  const allocations=m.kind==='regulatory-equipment'?[]:macAllocationsFor(m.maker);
+  card.append(make('p',m.kind==='regulatory-equipment'?'MAC prefix: no module-specific assignment established.':allocations.length?'Manufacturer MAC prefixes: '+allocations.map(formatMacPrefix).join(' · '):m.maker==='Unknown manufacturer'?'MAC prefix: manufacturer not identified in the source record.':'MAC prefix: no verified match in the reviewed registries.'));
   if(allocations.length){
    const registrations=make('details');registrations.append(make('summary','MAC registration sources'));
    registrations.append(make('p',`Manufacturer allocations; use on this particular model is not verified. Reviewed ${macReviewedOn}.`));

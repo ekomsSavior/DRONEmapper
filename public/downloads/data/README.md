@@ -58,6 +58,12 @@ precise receiver coordinates, credentials or applicant contact records are inclu
   Software platforms, model families and unidentified records cannot establish
   an individual unit's hardware. Component names and shared RF bands are not
   unique passive detection signatures and do not install new scanner decoders.
+  Profiles with `fcc_ids` bind only to regulatory-equipment entries with the
+  exact identifier and associated vendor. They do not join aircraft by product
+  name or vendor alone. A module's generic chipset capabilities can exceed its
+  host's enabled functions; dated configuration restrictions remain explicit.
+  Module supply rails are separate from host battery/input voltage. Corrected
+  product identities retain `contributed_product` and primary-source evidence.
 - `radio_allocations` has the same facts as the MAC CSV; shared provenance is in
   `radio_allocation_provenance`. Only the reviewed device-manufacturer allowlist
   is included. Each record keeps its exact registrant and prefix length.

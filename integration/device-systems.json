@@ -35182,6 +35182,437 @@
           ]
         }
       ]
+    },
+    {
+      "id": "skydio-smodbv1-module",
+      "manufacturer": "Skydio",
+      "models": [
+        "SkydioLink Gen 2 SMODBV1 radio module"
+      ],
+      "configuration": "SMODBV1 integration manual v1.0. These are radio-module components, not the processor or complete BOM of an aircraft, controller or dock. No numerical memory capacity or complete module power budget is disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Radio silicon",
+          "details": "Connector pinout identifies QCA6174A; another supply row abbreviates it as QCA617A. This identifies the connectivity IC, not the host application processor.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV1/User-Manual/User-Manual-6014732.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Dual-band module",
+          "details": "SkydioLink dual-band radio with two IPEX u.FL 20441-001E-01 antenna connectors.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV1/User-Manual/User-Manual-6014732.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Host connection",
+          "details": "Two Hirose DF30FC-40DP-0.4V board connectors, spaced 38.44 mm; mating DF30FC-40DS-0.4V. J9800 carries power, four-bit SDIO, command, clock and enable signals.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV1/User-Manual/User-Manual-6014732.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Thermal integration",
+          "details": "Shielding doubles as heat spreader; installation requires a thermal connection such as a graphite strap to the host chassis.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV1/User-Manual/User-Manual-6014732.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Regional radio configuration",
+          "details": "Host factory configuration and GPS-based region handling govern radio frequency and power.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV1/User-Manual/User-Manual-6014732.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2ATQRSMODBV1"
+      ]
+    },
+    {
+      "id": "skydio-smodbv3-module",
+      "manufacturer": "Skydio",
+      "models": [
+        "SkydioLink Gen 3 SMODBV3 radio module"
+      ],
+      "configuration": "Gen 3 integration guide v1.1, January 2025, for 2ATQRSMODBV3 only. Does not establish the SMODBV3S revision, host CPU, module chipset, memory capacity or numerical supply requirements.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Dual-band antenna system",
+          "details": "Approved antenna table covers 2.4 and 5 GHz sub-bands; four IPEX u.FL 20279-001E-03 connectors. External N-type antennas are installation-dependent, not standard on every host.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV3/User-Manual/SkydioLink-Gen-3-Dual-Band-Module-Integration-Guide-V1-1-7973697.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Board connectors",
+          "details": "Two Hirose FX12B-60P-0.4SV connectors; J3000 carries host power and control. The guide prints a truncated mating-part designation, so no full replacement part is inferred.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV3/User-Manual/SkydioLink-Gen-3-Dual-Band-Module-Integration-Guide-V1-1-7973697.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Heat removal",
+          "details": "Shielding serves as a heat spreader with a thermal path to the host chassis, for example a graphite strap.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV3/User-Manual/SkydioLink-Gen-3-Dual-Band-Module-Integration-Guide-V1-1-7973697.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Controlled radio settings",
+          "details": "Factory host software sets permitted operating frequency and power; end-user modification is not provided.",
+          "sources": [
+            "https://fccid.io/2ATQRSMODBV3/User-Manual/SkydioLink-Gen-3-Dual-Band-Module-Integration-Guide-V1-1-7973697.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2ATQRSMODBV3"
+      ]
+    },
+    {
+      "id": "skydio-smo5gv1-module",
+      "manufacturer": "Skydio",
+      "models": [
+        "SkydioLink SMO5GV1 5 GHz radio module"
+      ],
+      "configuration": "SkydioLink integration manual for 2ATQRSMO5GV1. The contributed index associates this identifier with C78 Controller, but this profile describes the radio module only. Host CPU, RAM, storage and complete controller hardware are not established here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Radio IC",
+          "details": "J9800 pinout explicitly names QCA6174A; the 3.3 V row shortens the label to QCA617A.",
+          "sources": [
+            "https://fccid.io/2ATQRSMO5GV1/User-Manual/Integration-Manual-5200889.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Radio identity",
+          "details": "SkydioLink 5 GHz module, FCC 2ATQRSMO5GV1 and ISED 25280-SMO5GV1.",
+          "sources": [
+            "https://fccid.io/2ATQRSMO5GV1/User-Manual/Integration-Manual-5200889.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Module supply rails",
+          "details": "5 V supply for RF front ends, at least 780 mA; 3.3 V for switcher/radio and 1.8 V radio supply. These are module rails, not a host battery specification.",
+          "sources": [
+            "https://fccid.io/2ATQRSMO5GV1/User-Manual/Integration-Manual-5200889.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "SDIO host interface",
+          "details": "J9800 provides four data lines, SDIO command and clock, plus Wi-Fi enable.",
+          "sources": [
+            "https://fccid.io/2ATQRSMO5GV1/User-Manual/Integration-Manual-5200889.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2ATQRSMO5GV1"
+      ]
+    },
+    {
+      "id": "skydio-telit-fn990a40-module",
+      "manufacturer": "Skydio",
+      "models": [
+        "Telit FN990A40 radio module"
+      ],
+      "configuration": "Telit FN990A40, original RI7FN990A40 and electrically unchanged Skydio relabel 2ATQRA40. Standard A40 product brief; A28 and HP variants excluded. Module capabilities do not establish features enabled in every Skydio host. Memory capacities and aircraft processors are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "identification",
+          "component": "Manufacturer correction",
+          "details": "Skydio and Telit authorization letters identify Telit FN990A40, not Fibocom. Change of FCC identifier preserves the original electrical hardware.",
+          "sources": [
+            "https://fccid.io/2ATQRA40/Letter/2ATQRA40-cvrltr-Change-In-FCC-ID-Request-8558937.pdf",
+            "https://fccid.io/2ATQRA40/Letter/2ATQRA40-cvrltr-FCC-Change-in-ID-Authorization-8558938.pdf"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Cellular modem",
+          "details": "Qualcomm Snapdragon X65. The X62 listed for FN990A28 is a different variant.",
+          "sources": [
+            "https://www.telit.com/wp-content/uploads/2025/01/TC_FN990Axx_Product_Brief.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Cellular capabilities",
+          "details": "5G sub-6 GHz SA/NSA, FDD/TDD, Release 16; LTE Category 20 and 3G fallback. Supported bands and network configuration require the regional module specification.",
+          "sources": [
+            "https://www.telit.com/wp-content/uploads/2025/01/TC_FN990Axx_Product_Brief.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning capability",
+          "details": "gpsOne Gen 9 L1 GNSS; dedicated or shared RF path. This is module capability, not a verified aircraft navigation configuration.",
+          "sources": [
+            "https://www.telit.com/wp-content/uploads/2025/01/TC_FN990Axx_Product_Brief.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Module supply",
+          "details": "Nominal 3.3 VDC; not the host vehicle battery voltage.",
+          "sources": [
+            "https://www.telit.com/wp-content/uploads/2025/01/TC_FN990Axx_Product_Brief.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Host and antenna interfaces",
+          "details": "M.2, 30×52×2.25 mm; PCIe Gen 3 one lane, USB 3.1 Gen 2 and 1.8/3 V SIM. Four cellular antenna connections plus GNSS.",
+          "sources": [
+            "https://www.telit.com/wp-content/uploads/2025/01/TC_FN990Axx_Product_Brief.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Integration support",
+          "details": "FOTA updates, Windows/Linux drivers and SGP.22 eSIM support.",
+          "sources": [
+            "https://www.telit.com/wp-content/uploads/2025/01/TC_FN990Axx_Product_Brief.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "RI7FN990A40",
+        "2ATQRA40"
+      ]
+    },
+    {
+      "id": "zipline-ax210d2w-p2-2024",
+      "manufacturer": "Zipline",
+      "models": [
+        "Intel AX210D2W (Zipline Platform 2 configuration)"
+      ],
+      "configuration": "December 2024 Platform 2 configuration, FCC 2BML6P2EV1-0. Radio module only; no P2 flight processor, memory, battery or newer P2EV3 computer assignment. Chip capabilities must not override the later host-specific disabled functions.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Connectivity module",
+          "details": "Intel AX210D2W, relabeled from PD9AX210D2 with Intel authorization; not an aircraft application CPU.",
+          "sources": [
+            "https://fccid.io/2BML6P2EV1-0/Letter/11-USA-AX210D2W-1-7905984.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Enabled P2 configuration",
+          "details": "December 17 change request restricts this configuration to 2.4 GHz Wi-Fi: Bluetooth and 5 GHz are disabled in software. Two Wi-Fi modules coexist with two cellular modules identified as XMR2021EC25AFDL.",
+          "sources": [
+            "https://fccid.io/2BML6P2EV1-0/Letter/C2PC-Request-Letter-7925049.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Module form factor and buses",
+          "details": "Intel lists D2W as the M.2 1216 version, 12×16×1.7 mm nominal; PCIe for Wi-Fi and USB for Bluetooth. Bluetooth bus capability does not mean enabled Bluetooth in this host.",
+          "sources": [
+            "https://www.intel.com/content/www/us/en/products/docs/wireless/wi-fi-6e-ax210-module-brief.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Host integration controls",
+          "details": "Zipline-only integration uses authorized antennas and host labeling; 802.11n MIMO test mode is documented.",
+          "sources": [
+            "https://fccid.io/2BML6P2EV1-0/User-Manual/AX210D2W-C2PC-guide-7925058.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2BML6P2EV1-0"
+      ]
+    },
+    {
+      "id": "nuro-jodyw374-module",
+      "manufacturer": "Nuro",
+      "models": [
+        "JODY-W374 (Nuro radio configuration)"
+      ],
+      "configuration": "Nuro 2A98RDJZCGWA, documented in Camera Aggregator DVT2 / software 3.14. JODY-W3 R15 describes component-family capabilities; the Nuro filings establish the deployed restrictions. Exact ordering suffix, module memory and host processor are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "identification",
+          "component": "Module association",
+          "details": "2023 test filing identifies u-blox Jody W374, original XPYJODYW374, within the Nuro host.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A98RDJZCGWA/6754316.pdf"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Radio chipset family",
+          "details": "JODY-W374 datasheet lists NXP 88W9098 / 88Q9098 alternatives. The filing does not resolve which silicon variant or ordering suffix Nuro installed.",
+          "sources": [
+            "https://content.u-blox.com/sites/default/files/documents/JODY-W3_DataSheet_UBX-19010615.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Enabled-band restrictions",
+          "details": "August 2023 change disables Bluetooth 2402–2480 MHz and Wi-Fi 5260–5320 / 5500–5720 MHz in software. Adds an antenna type and cellular co-transmission with 2A98RDJZCGCA.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A98RDJZCGWA/6754294.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Tested 5 GHz operation",
+          "details": "DVT2 test covers 5150–5250 MHz channels 36–48 and 5725–5850 MHz channels 149–165, using 802.11a/g/n/ac modes. Do not interpret the restriction as disabling all 5 GHz.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A98RDJZCGWA/6754317.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Component host buses",
+          "details": "W374 supports PCIe or SDIO for Wi-Fi and UART for Bluetooth, with two antenna pins. These capabilities do not prove which host bus was wired or enable disabled Bluetooth.",
+          "sources": [
+            "https://content.u-blox.com/sites/default/files/documents/JODY-W3_DataSheet_UBX-19010615.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2A98RDJZCGWA"
+      ]
+    },
+    {
+      "id": "nuro-eg18na-module",
+      "manufacturer": "Nuro",
+      "models": [
+        "Quectel EG18-NA (Nuro cellular configuration)"
+      ],
+      "configuration": "Nuro 2A98RDJZCGCA, associated by the 2023 Camera Aggregator DVT2 filing with Quectel EG18-NA / XMR202002EG18NA. Component architecture uses EG18 Hardware Design v1.0. Optional/under-development interfaces are not treated as installed. Processor SKU and memory capacities remain undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Host cellular module",
+          "details": "Camera Aggregator filing identifies EG18-NA, with LTE FDD/TDD and W-CDMA operation. Exact regional bands remain those of the filing, not every EG18 variant.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A98RDJZCGWA/6754316.pdf"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Module architecture",
+          "details": "Separate baseband, transceiver, RF front end and power-management blocks; no baseband part number disclosed.",
+          "sources": [
+            "https://quectel.com/content/uploads/2021/03/Quectel_EG18_Hardware_Design_V1.0.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Module memory types",
+          "details": "LPDDR2 SDRAM and NAND flash appear in the block diagram; capacities are not supplied.",
+          "sources": [
+            "https://quectel.com/content/uploads/2021/03/Quectel_EG18_Hardware_Design_V1.0.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Module supply",
+          "details": "3.3–4.3 V, typically 3.8 V. The host’s 12 V input is a separate power domain.",
+          "sources": [
+            "https://quectel.com/content/uploads/2021/03/Quectel_EG18_Hardware_Design_V1.0.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Supported host interfaces",
+          "details": "USB 3.0/2.0, main/debug UART, two 1.8/3 V SIM interfaces in dual-SIM single-standby mode, and PCM. PCIe is marked under development in this revision and is not asserted as available.",
+          "sources": [
+            "https://quectel.com/content/uploads/2021/03/Quectel_EG18_Hardware_Design_V1.0.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control and updates",
+          "details": "Quectel AT commands; USB 2.0 firmware upgrade and DFOTA.",
+          "sources": [
+            "https://quectel.com/content/uploads/2021/03/Quectel_EG18_Hardware_Design_V1.0.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2A98RDJZCGCA"
+      ]
+    },
+    {
+      "id": "nuro-camera-aggregator-dvt2",
+      "manufacturer": "Nuro",
+      "models": [
+        "Camera Aggregator (DVT2 / SW 3.14)"
+      ],
+      "configuration": "Exact automotive data-device test configuration, August 2023. Not a complete Nuro R2/R3 vehicle BOM or evidence of its autonomous-driving CPU. Host processor, RAM, storage and camera sensor models are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Identified radios",
+          "details": "Quectel EG18-NA cellular and u-blox Jody W374 Wi-Fi; Nuro module IDs 2A98RDJZCGCA and 2A98RDJZCGWA.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A98RDJZCGWA/6754316.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "GNSS receiver",
+          "details": "Separate u-blox NEO-M8T concurrent GNSS module; not assumed to be the cellular module’s internal receiver.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A98RDJZCGWA/6754316.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Host input",
+          "details": "12 VDC in the test configuration; distinct from individual module supply rails.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A98RDJZCGWA/6754316.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tested external antenna",
+          "details": "Taoglas MA9906.A.007.dp, IP67 external antenna. The 5 GHz test lists two transmitting chains and 20/40/80 MHz modes.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A98RDJZCGWA/6754317.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Configuration-specific radio restrictions",
+          "details": "August 2023 update disables Bluetooth and selected 5 GHz bands; the modules’ generic capability lists are broader than this host configuration.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2A98RDJZCGWA/6754294.pdf"
+          ]
+        }
+      ]
     }
   ]
 }
