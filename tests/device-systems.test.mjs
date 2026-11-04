@@ -574,6 +574,39 @@ test('survey drones and sorting systems keep hardware revisions and ground contr
  assert.match(text(system('Asteria Aerospace','A200-XT').sections.sensors),/alternative mission packages/);
 });
 
+test('industrial and vehicle profiles preserve revisions, quantities and uncertain component labels',()=>{
+ const autox=system('AutoX','AutoX RoboTaxi');
+ assert.match(text(autox.sections.compute),/two Ampere.*900 TOPS.*2,200 TOPS/);
+ assert.match(text(autox.sections.sensors),/AR0820AT/);
+ assert.match(text(autox.sections.sensors),/Four supplied arrays are not the total/);
+ assert.equal(autox.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('AutoX','Gen4 RoboTaxi')).includes('autox-gen5-2021'),false);
+ const mag=system('Botsync','MAG 1500');
+ assert.match(text(mag.sections.memory),/16 GB RAM and 64 GB SSD/);
+ assert.match(text(mag.sections.sensors),/D345i.*unresolved.*not silently changed to D435i/);
+ assert.equal(mag.sections.radios.status,'not-established');
+ assert.equal(profileIds(system('Botsync','MAG1500 Fork')).includes('botsync-mag1500-single-conveyor'),false);
+ const i5=system('AUBO Robotics','i5'),family=system('AUBO Robotics','AUBO i-Series');
+ assert.match(text(i5.sections.compute),/AUBO-CB-M/);
+ assert.match(text(family.sections.interfaces),/RS485 is optional/);
+ assert.doesNotMatch(text(family.sections.power),/886.5|2,000 W/);
+ assert.equal(profileIds(system('AUBO Robotics','i5S')).includes('aubo-i5-cb-m-2024'),false);
+ assert.equal(profileIds(system('Aurora','Aurora Driver'))[0],'aurora-driver-common-architecture');
+ const old=system('Aurora Innovation','Aurora Driver on Peterbilt 579 (PACCAR)');
+ const newer=system('Aurora Innovation','Aurora Driver on International LT (2nd-gen)');
+ assert.match(text(old.sections.compute),/dual-lane liquid-cooled/);
+ assert.doesNotMatch(text(old.sections.sensors.facts.map(f=>f.details)),/one-kilometer/);
+ assert.match(text(newer.sections.sensors),/one-kilometer/);
+ assert.doesNotMatch(text(newer.sections.compute.facts.map(f=>f.details)),/Thor|Orin/);
+ const avride=system('Avride','Avride Robotaxi (Hyundai Ioniq 5)');
+ assert.match(text(avride.sections.sensors),/Five LiDARs, four radars and thirteen cameras/);
+ assert.equal(avride.sections.memory.status,'not-established');
+ assert.match(text(system('Baidu','Apollo RT6').sections.sensors),/eight LiDARs and twelve cameras/);
+ assert.match(text(system('Brokk','Brokk 170').sections.power),/24 kW ABB/);
+ assert.equal(profileIds(system('Brokk','Brokk 170+')).includes('brokk-170-smartpower'),false);
+ assert.equal(system('AES Corporation','Maximo').sections.radios.status,'not-established');
+});
+
 test('marine, agricultural and humanoid configurations retain their hardware boundaries',()=>{
  const a4=system('AeiROBOT','Alice 4'),m1=system('AeiROBOT','ALICE M1'),a5=system('AeiROBOT','ALICE 5');
  assert.match(text(a4.sections.compute),/i7-1370PE/);

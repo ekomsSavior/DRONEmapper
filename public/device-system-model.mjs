@@ -1,4 +1,4 @@
-import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b24';
+import {deviceSystems} from './device-system-data.mjs?v=20261103-systems-b25';
 import {libraryModels} from './device-library-model.mjs';
 import {macAllocationsFor,formatMacPrefix} from './device-mac-model.mjs';
 import {robotSignatures} from './robot-signatures.mjs';
@@ -6,7 +6,7 @@ import {robotSignatures} from './robot-signatures.mjs';
 const norm=value=>String(value||'').trim().replace(/\s+/g,' ').toLowerCase();
 const aliases=new Map([
  ['unitree','unitree robotics'],['parrot drones','parrot'],['parrot drones sas','parrot'],
- ['skydio, inc.','skydio'],['anduril','anduril industries'],
+ ['skydio, inc.','skydio'],['anduril','anduril industries'],['aurora','aurora innovation'],
  ['nao robot','aldebaran robotics'],['cobalt ai','cobalt robotics'],
 ]);
 const makerOf=r=>aliases.get(norm(r.maker||r.manufacturer))||norm(r.maker||r.manufacturer);

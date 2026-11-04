@@ -3373,13 +3373,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aes-maximo-solar-platform",
+            "configuration": "AES-incubated Maximo solar-construction platform; publications span generations, with the current company site naming Max 4.0. CPU/GPU SKU, RAM, radio hardware, battery ratings and sensor part numbers remain unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard autonomy",
+                "details": "AES describes onboard computation for vision, alignment and module placement; no processor part number is supplied. A processor illustration alone is not a hardware assignment.",
+                "sources": [
+                  "https://www.aes.com/energy-insights/maximo-how-aes-incubated-first-its-kind-solar-field-robot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aes-maximo-solar-platform",
+                "configuration": "AES-incubated Maximo solar-construction platform; publications span generations, with the current company site naming Max 4.0. CPU/GPU SKU, RAM, radio hardware, battery ratings and sensor part numbers remain unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -3393,23 +3412,77 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and worksite safety",
+                "details": "Computer vision checks placement and corrects inconsistencies; safety sensing includes people detection and collision avoidance. Camera and safety-sensor SKUs are not identified.",
+                "sources": [
+                  "https://www.aes.com/energy-insights/maximo-how-aes-incubated-first-its-kind-solar-field-robot",
+                  "https://www.aes.com/energy-insights/meet-maximo-ai-powered-robot-changing-solar-energy-sector"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aes-maximo-solar-platform",
+                "configuration": "AES-incubated Maximo solar-construction platform; publications span generations, with the current company site naming Max 4.0. CPU/GPU SKU, RAM, radio hardware, battery ratings and sensor part numbers remain unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Field power",
+                "details": "Battery charge is monitored by the operator interface; AES describes a mobile microgrid supporting extended field shifts. Pack voltage, energy and propulsion topology are unspecified.",
+                "sources": [
+                  "https://www.aes.com/energy-insights/maximo-how-aes-incubated-first-its-kind-solar-field-robot",
+                  "https://www.aes.com/energy-insights/meet-maximo-ai-powered-robot-changing-solar-energy-sector"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aes-maximo-solar-platform",
+                "configuration": "AES-incubated Maximo solar-construction platform; publications span generations, with the current company site naming Max 4.0. CPU/GPU SKU, RAM, radio hardware, battery ratings and sensor part numbers remain unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Construction tooling",
+                "details": "Mobile robotic module handling, placement and fastening; tooling compatibility is validated for specific module, clamp, rail and tracker combinations.",
+                "sources": [
+                  "https://www.aes.com/energy-insights/maximo-how-aes-incubated-first-its-kind-solar-field-robot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aes-maximo-solar-platform",
+                "configuration": "AES-incubated Maximo solar-construction platform; publications span generations, with the current company site naming Max 4.0. CPU/GPU SKU, RAM, radio hardware, battery ratings and sensor part numbers remain unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet and autonomy stack",
+                "details": "Current Maximo architecture names Cortex vision/planning, Form robots/tooling and MaxIQ fleet-performance software with a training-data feedback loop. These software layers do not identify a unique radio signature.",
+                "sources": [
+                  "https://maxrobotics.ai/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aes-maximo-solar-platform",
+                "configuration": "AES-incubated Maximo solar-construction platform; publications span generations, with the current company site naming Max 4.0. CPU/GPU SKU, RAM, radio hardware, battery ratings and sensor part numbers remain unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -3423,13 +3496,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -15999,13 +16067,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aubo-i-series-arm",
+            "configuration": "Shared i-series arm architecture from the current hardware manual. Individual i3/i5/i7/i10/i12/i20 payloads, geometry and controllers differ; this family record does not assign one model’s ratings to all arms. CPU and memory undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Articulated control architecture",
+                "details": "Six articulated joints move the end tool under controller commands. Controller hardware and supplied package must be identified separately.",
+                "sources": [
+                  "https://developer.aubo-robotics.cn/en/hardware/user_manual/robot_arm_i_user_manual.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aubo-i-series-arm",
+                "configuration": "Shared i-series arm architecture from the current hardware manual. Individual i3/i5/i7/i10/i12/i20 payloads, geometry and controllers differ; this family record does not assign one model’s ratings to all arms. CPU and memory undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -16024,18 +16111,57 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Joint drives",
+                "details": "Joint motors and holding brakes maintain arm posture when power is removed; power demand depends on model and program.",
+                "sources": [
+                  "https://developer.aubo-robotics.cn/en/hardware/user_manual/robot_arm_i_user_manual.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aubo-i-series-arm",
+                "configuration": "Shared i-series arm architecture from the current hardware manual. Individual i3/i5/i7/i10/i12/i20 payloads, geometry and controllers differ; this family record does not assign one model’s ratings to all arms. CPU and memory undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Wrist and tools",
+                "details": "Wrist HandGuide control and eight-wire tool I/O carrying 12/24 V, digital and analog signals. Tool RS485 is optional. External grippers and sensors are attachments, not a standard sensing inventory.",
+                "sources": [
+                  "https://developer.aubo-robotics.cn/en/hardware/user_manual/robot_arm_i_user_manual.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aubo-i-series-arm",
+                "configuration": "Shared i-series arm architecture from the current hardware manual. Individual i3/i5/i7/i10/i12/i20 payloads, geometry and controllers differ; this family record does not assign one model’s ratings to all arms. CPU and memory undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Configuration",
+                "details": "AuboStudio configures tool I/O and arm operation through the teach-pendant interface.",
+                "sources": [
+                  "https://developer.aubo-robotics.cn/en/hardware/user_manual/robot_arm_i_user_manual.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aubo-i-series-arm",
+                "configuration": "Shared i-series arm architecture from the current hardware manual. Individual i3/i5/i7/i10/i12/i20 payloads, geometry and controllers differ; this family record does not assign one model’s ratings to all arms. CPU and memory undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -16049,13 +16175,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
           "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -16211,13 +16333,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aurora-driver-common-architecture",
+            "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Primary and fallback compute",
+                "details": "Main driving computer plus a separate fallback computer; fault-management software monitors hardware/software health and can transfer control after a failure.",
+                "sources": [
+                  "https://aurora.tech/newsroom/have-questions-about-aurora-and-avs-get-your-answers-here"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -16231,23 +16372,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Modular sensor pods",
+                "details": "Overlapping cameras, proprietary FirstLight LiDAR and imaging radar form pods adapted to each vehicle installation.",
+                "sources": [
+                  "https://aurora.tech/newsroom/the-transferable-hardware-behind-aurora-driver-powered-cars-and-trucks"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Hardware power distribution",
+                "details": "2021 safety report describes a central hardware hub conditioning/distributing its own power and synchronizing the sensors; vehicle and revision determine electrical ratings.",
+                "sources": [
+                  "https://assets.ctfassets.net/8byw6jksp7h2/12klTCAz1K43qbYuyZQUxe/b9eb91087815ecc1e54ff3a80e9ef580/Aurora_VSSA_2021_Final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle integration",
+                "details": "2021 report describes an umbilical linking the self-driving hardware to the vehicle. Physical connector and bus assignments are not published there.",
+                "sources": [
+                  "https://assets.ctfassets.net/8byw6jksp7h2/12klTCAz1K43qbYuyZQUxe/b9eb91087815ecc1e54ff3a80e9ef580/Aurora_VSSA_2021_Final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Driving and fault management",
+                "details": "Perception, planning and driving software work with fault-management and fallback systems. Current FAQ describes Aurora’s Verifiable AI approach.",
+                "sources": [
+                  "https://aurora.tech/newsroom/have-questions-about-aurora-and-avs-get-your-answers-here"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -16271,13 +16464,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "radios"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -16331,13 +16519,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aurora-driver-common-architecture",
+            "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Primary and fallback compute",
+                "details": "Main driving computer plus a separate fallback computer; fault-management software monitors hardware/software health and can transfer control after a failure.",
+                "sources": [
+                  "https://aurora.tech/newsroom/have-questions-about-aurora-and-avs-get-your-answers-here"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -16351,23 +16558,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Modular sensor pods",
+                "details": "Overlapping cameras, proprietary FirstLight LiDAR and imaging radar form pods adapted to each vehicle installation.",
+                "sources": [
+                  "https://aurora.tech/newsroom/the-transferable-hardware-behind-aurora-driver-powered-cars-and-trucks"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Hardware power distribution",
+                "details": "2021 safety report describes a central hardware hub conditioning/distributing its own power and synchronizing the sensors; vehicle and revision determine electrical ratings.",
+                "sources": [
+                  "https://assets.ctfassets.net/8byw6jksp7h2/12klTCAz1K43qbYuyZQUxe/b9eb91087815ecc1e54ff3a80e9ef580/Aurora_VSSA_2021_Final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle integration",
+                "details": "2021 report describes an umbilical linking the self-driving hardware to the vehicle. Physical connector and bus assignments are not published there.",
+                "sources": [
+                  "https://assets.ctfassets.net/8byw6jksp7h2/12klTCAz1K43qbYuyZQUxe/b9eb91087815ecc1e54ff3a80e9ef580/Aurora_VSSA_2021_Final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Driving and fault management",
+                "details": "Perception, planning and driving software work with fault-management and fallback systems. Current FAQ describes Aurora’s Verifiable AI approach.",
+                "sources": [
+                  "https://aurora.tech/newsroom/have-questions-about-aurora-and-avs-get-your-answers-here"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-driver-common-architecture",
+                "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -16391,13 +16650,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "radios"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -16451,13 +16705,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aurora-international-lt-gen2-2026",
+            "configuration": "July 2026 International LT launch and second-generation commercial hardware kit. Exact CPU/GPU, memory, radio, truck powertrain and battery configurations are not disclosed; do not substitute announced future-generation silicon.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Second-generation hardware kit",
+                "details": "Aurora reports a more efficient onboard computer in the second-generation commercial kit; no silicon model or memory size is specified.",
+                "sources": [
+                  "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-international-lt-gen2-2026",
+                "configuration": "July 2026 International LT launch and second-generation commercial hardware kit. Exact CPU/GPU, memory, radio, truck powertrain and battery configurations are not disclosed; do not substitute announced future-generation silicon.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -16471,8 +16744,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "FirstLight revision",
+                "details": "Proprietary long-range FMCW LiDAR with an advertised one-kilometer range for this kit; the range is not assigned to older Peterbilt hardware.",
+                "sources": [
+                  "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-international-lt-gen2-2026",
+                "configuration": "July 2026 International LT launch and second-generation commercial hardware kit. Exact CPU/GPU, memory, radio, truck powertrain and battery configurations are not disclosed; do not substitute announced future-generation silicon.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -16481,13 +16767,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Host truck",
+                "details": "Second-generation driverless hardware is integrated with the International LT Series vehicle; the kit is engineered for one million miles of operation.",
+                "sources": [
+                  "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm",
+                  "https://aurora.tech/newsroom/your-questions-about-our-latest-driverless-launch-answered"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-international-lt-gen2-2026",
+                "configuration": "July 2026 International LT launch and second-generation commercial hardware kit. Exact CPU/GPU, memory, radio, truck powertrain and battery configurations are not disclosed; do not substitute announced future-generation silicon.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Driving system",
+                "details": "Aurora Driver operates the vehicle without a person in the driving seat in this launch configuration. An occasional roadside-assistance rider is described separately from the driving system.",
+                "sources": [
+                  "https://aurora.tech/newsroom/your-questions-about-our-latest-driverless-launch-answered"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-international-lt-gen2-2026",
+                "configuration": "July 2026 International LT launch and second-generation commercial hardware kit. Exact CPU/GPU, memory, radio, truck powertrain and battery configurations are not disclosed; do not substitute announced future-generation silicon.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -16511,13 +16824,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "power"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -16571,13 +16880,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aurora-peterbilt579-2022",
+            "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Dual-lane driving computer",
+                "details": "Q3 2022 shareholder letter describes dual-lane liquid-cooled computers with redundant processing, self-health monitoring and fallback capability on its new Peterbilt 579 fleet.",
+                "sources": [
+                  "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-peterbilt579-2022",
+                "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -16591,8 +16919,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "2022 perception revision",
+                "details": "FirstLight FMCW LiDAR with health reporting, integrated liquid cooling and cleaning. Upgraded camera system is illustrated as 8 MP with 32-bit HDR, versus prior 2 MP/24-bit imagery.",
+                "sources": [
+                  "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-peterbilt579-2022",
+                "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -16601,13 +16942,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle platform",
+                "details": "Peterbilt identifies its Model 579 as the host truck and distinguishes its 15-inch driver dashboard from the Aurora autonomy hardware.",
+                "sources": [
+                  "https://www.peterbilt.com/news-and-events/press-releases/peterbilt-showcases-first-model-579-with-aurora-driver"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-peterbilt579-2022",
+                "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet software context",
+                "details": "The Q3 2022 letter reports Aurora Driver Beta 4.0 and fault-management/fallback development. This is historical hardware/software evidence, not a current fleet-version assertion.",
+                "sources": [
+                  "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aurora-peterbilt579-2022",
+                "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -16631,13 +16998,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "power"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -19945,13 +20308,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "autox-gen5-2021",
+            "configuration": "Gen5 configuration described by NVIDIA and onsemi in 2021. Generic AutoX records must not be assumed to use Gen5. CPU, GPU board SKU, memory, powertrain and communications modules remain unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "NVIDIA DRIVE accelerator architecture",
+                "details": "NVIDIA identifies two Ampere-architecture GPUs, quoting 900 TOPS for that compute core and 2,200 TOPS for the overall Gen5 platform. These are distinct claims, not interchangeable processor ratings.",
+                "sources": [
+                  "https://blogs.nvidia.cn/blog/autox-full-self-driving-nvidia-drive/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autox-gen5-2021",
+                "configuration": "Gen5 configuration described by NVIDIA and onsemi in 2021. Generic AutoX records must not be assumed to use Gen5. CPU, GPU board SKU, memory, powertrain and communications modules remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -19965,8 +20347,33 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Named camera components",
+                "details": "onsemi identifies 28 AR0820AT 8 MP image sensors and four SiPM arrays supplied for LiDAR. Four supplied arrays are not the total vehicle LiDAR count.",
+                "sources": [
+                  "https://investor.onsemi.com/news-releases/news-release-details/semiconductor-intelligent-sensing-technologies-enable-360deg"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autox-gen5-2021",
+                "configuration": "Gen5 configuration described by NVIDIA and onsemi in 2021. Generic AutoX records must not be assumed to use Gen5. CPU, GPU board SKU, memory, powertrain and communications modules remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Surround perception",
+                "details": "NVIDIA describes 28 cameras, six high-resolution LiDAR units and surround 4D millimeter-wave radar for the Gen5 system.",
+                "sources": [
+                  "https://blogs.nvidia.cn/blog/autox-full-self-driving-nvidia-drive/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autox-gen5-2021",
+                "configuration": "Gen5 configuration described by NVIDIA and onsemi in 2021. Generic AutoX records must not be assumed to use Gen5. CPU, GPU board SKU, memory, powertrain and communications modules remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -19980,8 +20387,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy stack",
+                "details": "NVIDIA DRIVE-based computing runs autonomous-driving neural networks with capacity reserved for upgrades; the cited sources do not establish a Wi-Fi/BLE identification pattern.",
+                "sources": [
+                  "https://blogs.nvidia.cn/blog/autox-full-self-driving-nvidia-drive/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "autox-gen5-2021",
+                "configuration": "Gen5 configuration described by NVIDIA and onsemi in 2021. Generic AutoX records must not be assumed to use Gen5. CPU, GPU board SKU, memory, powertrain and communications modules remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -19995,13 +20415,10 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -20932,13 +21349,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "avride-ioniq5-driver",
+            "configuration": "Avride’s published Universal Driver sensor arrangement, associated with its documented Ioniq 5 fleet. Individual vehicles and revisions may differ. Processor SKU, RAM, storage, radio modules, battery trim and radar frequency unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Vehicle computer",
+                "details": "Specialized onboard computer described as comparable to server-grade hardware; exact CPU/GPU not named.",
+                "sources": [
+                  "https://www.avride.ai/driver"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "avride-ioniq5-driver",
+                "configuration": "Avride’s published Universal Driver sensor arrangement, associated with its documented Ioniq 5 fleet. Individual vehicles and revisions may differ. Processor SKU, RAM, storage, radio modules, battery trim and radar frequency unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -20952,8 +21388,33 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Surround suite",
+                "details": "Five LiDARs, four radars and thirteen cameras. Proprietary central LiDAR: over 300 m range and 0.1-degree resolution; side LiDAR coverage within 50 m. Radars detect approaching vehicles up to 300 m.",
+                "sources": [
+                  "https://www.avride.ai/driver"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "avride-ioniq5-driver",
+                "configuration": "Avride’s published Universal Driver sensor arrangement, associated with its documented Ioniq 5 fleet. Individual vehicles and revisions may differ. Processor SKU, RAM, storage, radio modules, battery trim and radar frequency unpublished.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Sensor maintenance",
+                "details": "Physical sensor-cleaning equipment and software filtering address precipitation, fog and other interference.",
+                "sources": [
+                  "https://www.avride.ai/driver"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "avride-ioniq5-driver",
+                "configuration": "Avride’s published Universal Driver sensor arrangement, associated with its documented Ioniq 5 fleet. Individual vehicles and revisions may differ. Processor SKU, RAM, storage, radio modules, battery trim and radar frequency unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -20962,13 +21423,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle integration",
+                "details": "Nebius identifies Hyundai Ioniq 5 vehicles as the fleet platform supplied through Avride’s Hyundai partnership. Host-vehicle trim and battery pack are not specified.",
+                "sources": [
+                  "https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "avride-ioniq5-driver",
+                "configuration": "Avride’s published Universal Driver sensor arrangement, associated with its documented Ioniq 5 fleet. Individual vehicles and revisions may differ. Processor SKU, RAM, storage, radio modules, battery trim and radar frequency unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Localization and planning",
+                "details": "LiDAR localization uses maintained 3D maps rather than GPS alone; fused perception feeds prediction and route/speed/trajectory planning.",
+                "sources": [
+                  "https://www.avride.ai/driver"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "avride-ioniq5-driver",
+                "configuration": "Avride’s published Universal Driver sensor arrangement, associated with its documented Ioniq 5 fleet. Individual vehicles and revisions may differ. Processor SKU, RAM, storage, radio modules, battery trim and radar frequency unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -20982,13 +21469,9 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -21792,13 +22275,33 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "baidu-apollo-rt6-2022",
+            "configuration": "Baidu’s July 2022 unveiling specification. Later RT6 production revisions may differ; no chipset, RAM, radio-module, battery-capacity or sensor-SKU assignment is made.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Redundant automotive compute",
+                "details": "Dual automotive-grade computing units with advertised aggregate performance up to 1,200 TOPS; main/backup architecture, processor models unspecified.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/baidu-unveils-next-gen-autonomous-vehicle-ready-to-provide-driverless-robotaxi-half-of-taxi-fares-301590644.html",
+                  "https://home.baidu.com/home/index/news_detail/id/17982"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "baidu-apollo-rt6-2022",
+                "configuration": "Baidu’s July 2022 unveiling specification. Later RT6 production revisions may differ; no chipset, RAM, radio-module, battery-capacity or sensor-SKU assignment is made.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -21812,23 +22315,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Launch sensor suite",
+                "details": "38 sensors, including eight LiDARs and twelve cameras, in the 2022 specification. Remaining sensor types are not itemized in the English release.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/baidu-unveils-next-gen-autonomous-vehicle-ready-to-provide-driverless-robotaxi-half-of-taxi-fares-301590644.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "baidu-apollo-rt6-2022",
+                "configuration": "Baidu’s July 2022 unveiling specification. Later RT6 production revisions may differ; no chipset, RAM, radio-module, battery-capacity or sensor-SKU assignment is made.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Vehicle architecture",
+                "details": "Purpose-built battery-electric vehicle on Baidu’s Xinghe electrical/electronic architecture, rather than a conventional-car retrofit. Motor and battery details are not supplied.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/baidu-unveils-next-gen-autonomous-vehicle-ready-to-provide-driverless-robotaxi-half-of-taxi-fares-301590644.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "baidu-apollo-rt6-2022",
+                "configuration": "Baidu’s July 2022 unveiling specification. Later RT6 production revisions may differ; no chipset, RAM, radio-module, battery-capacity or sensor-SKU assignment is made.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cabin and dimensions",
+                "details": "Detachable steering-wheel design, electric sliding doors and passenger interaction system; 4,760 mm length and 2,830 mm wheelbase.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/baidu-unveils-next-gen-autonomous-vehicle-ready-to-provide-driverless-robotaxi-half-of-taxi-fares-301590644.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "baidu-apollo-rt6-2022",
+                "configuration": "Baidu’s July 2022 unveiling specification. Later RT6 production revisions may differ; no chipset, RAM, radio-module, battery-capacity or sensor-SKU assignment is made.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fault handling",
+                "details": "Baidu describes redundant hardware/software plus integrated vehicle/autonomy fault diagnosis and risk-degradation handling.",
+                "sources": [
+                  "https://home.baidu.com/home/index/news_detail/id/17982"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "baidu-apollo-rt6-2022",
+                "configuration": "Baidu’s July 2022 unveiling specification. Later RT6 production revisions may differ; no chipset, RAM, radio-module, battery-capacity or sensor-SKU assignment is made.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -21842,13 +22397,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -24654,18 +25204,50 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "botsync-mag1500-single-conveyor",
+            "configuration": "Single Conveyor configuration used as a reference for the unspecific MAG 1500 record; Lifter, Tugger and Fork versions differ. CPU, radio module and operating system unpublished. Camera part designation in the sheet needs manufacturer clarification.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard computer",
+                "details": "Manufacturer specifies a high-performance computer without a CPU SKU.",
+                "sources": [
+                  "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "botsync-mag1500-single-conveyor",
+                "configuration": "Single Conveyor configuration used as a reference for the unspecific MAG 1500 record; Lifter, Tugger and Fork versions differ. CPU, radio module and operating system unpublished. Camera part designation in the sheet needs manufacturer clarification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Compute storage",
+                "details": "16 GB RAM and 64 GB SSD.",
+                "sources": [
+                  "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "botsync-mag1500-single-conveyor",
+                "configuration": "Single Conveyor configuration used as a reference for the unspecific MAG 1500 record; Lifter, Tugger and Fork versions differ. CPU, radio module and operating system unpublished. Camera part designation in the sheet needs manufacturer clarification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
@@ -24674,18 +25256,57 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Safety and perception",
+                "details": "Two front/rear 2D safety LiDARs, two mechanical bumpers and four emergency-stop buttons. Sheet literally names an Intel D345i 3D camera; this designation is unresolved and is not silently changed to D435i.",
+                "sources": [
+                  "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "botsync-mag1500-single-conveyor",
+                "configuration": "Single Conveyor configuration used as a reference for the unspecific MAG 1500 record; Lifter, Tugger and Fork versions differ. CPU, radio module and operating system unpublished. Camera part designation in the sheet needs manufacturer clarification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and drive",
+                "details": "48 V, 70 Ah LiFePO4 battery; advertised 9–10 hours runtime and 2–3 hours charging. Dual-spring suspension, on-spot turning; 1.4 m/s unloaded, 1.2 m/s loaded.",
+                "sources": [
+                  "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "botsync-mag1500-single-conveyor",
+                "configuration": "Single Conveyor configuration used as a reference for the unspecific MAG 1500 record; Lifter, Tugger and Fork versions differ. CPU, radio module and operating system unpublished. Camera part designation in the sheet needs manufacturer clarification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload and service connections",
+                "details": "1,500 kg payload; 550 kg includes 350 kg base and 200 kg conveyor. Two RJ45 GbE, two USB 3.1, six GPIO and manual charge connection; 4.3-inch 800×480 HMI.",
+                "sources": [
+                  "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "botsync-mag1500-single-conveyor",
+                "configuration": "Single Conveyor configuration used as a reference for the unspecific MAG 1500 record; Lifter, Tugger and Fork versions differ. CPU, radio module and operating system unpublished. Camera part designation in the sheet needs manufacturer clarification.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -24704,12 +25325,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -27385,13 +28001,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "brokk-170-smartpower",
+            "configuration": "Original SmartPower Brokk 170, not the later 170+ generation. Remotely operated demolition machine; no autonomous-navigation capability is established. CPU, memory, sensor and radio-chip part numbers unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Machine and operator controls",
+                "details": "Brokk SmartPower electrical system and separate portable SmartRemote controller. Their processor models are unspecified.",
+                "sources": [
+                  "https://www.brokk.com/product/brokk-170/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brokk-170-smartpower",
+                "configuration": "Original SmartPower Brokk 170, not the later 170+ generation. Remotely operated demolition machine; no autonomous-navigation capability is established. CPU, memory, sensor and radio-chip part numbers unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -27400,8 +28035,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Remote-control link",
+                "details": "Digital professional-radio connection or cable; advertised radio range up to 300 m. Frequency and packet format are not specified.",
+                "sources": [
+                  "https://www.brokk.com/product/brokk-170/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brokk-170-smartpower",
+                "configuration": "Original SmartPower Brokk 170, not the later 170+ generation. Remotely operated demolition machine; no autonomous-navigation capability is established. CPU, memory, sensor and radio-chip part numbers unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -27410,13 +28058,51 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric and hydraulic drive",
+                "details": "24 kW ABB motor with soft/direct start. Ratings apply to 400 V/50 Hz or 440 V/60 Hz; technical table recommends 63 A supply, while reduced operation on 32 A is advertised.",
+                "sources": [
+                  "https://www.brokk.com/product/brokk-170/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brokk-170-smartpower",
+                "configuration": "Original SmartPower Brokk 170, not the later 170+ generation. Remotely operated demolition machine; no autonomous-navigation capability is established. CPU, memory, sensor and radio-chip part numbers unpublished.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Hydraulics and mobility",
+                "details": "85 L hydraulic system, variable load-sensing pump, 18 MPa system pressure and 23 MPa attachment pressure. Pump flow 69/83 L/min at 50/60 Hz; tracked travel up to 2.1 km/h.",
+                "sources": [
+                  "https://www.brokk.com/product/brokk-170/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brokk-170-smartpower",
+                "configuration": "Original SmartPower Brokk 170, not the later 170+ generation. Remotely operated demolition machine; no autonomous-navigation capability is established. CPU, memory, sensor and radio-chip part numbers unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Attachments",
+                "details": "1,600 kg machine excluding options/tool; recommended attachment mass 270 kg. Hydraulic tools, cooling and CAN cable connection are configuration options.",
+                "sources": [
+                  "https://www.brokk.com/product/brokk-170/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "brokk-170-smartpower",
+                "configuration": "Original SmartPower Brokk 170, not the later 170+ generation. Remotely operated demolition machine; no autonomous-navigation capability is established. CPU, memory, sensor and radio-chip part numbers unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -27435,12 +28121,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
           "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -278730,6 +279412,544 @@
             ]
           }
         ]
+      },
+      {
+        "id": "brokk-170-smartpower",
+        "manufacturer": "Brokk",
+        "models": [
+          "Brokk 170",
+          "170"
+        ],
+        "configuration": "Original SmartPower Brokk 170, not the later 170+ generation. Remotely operated demolition machine; no autonomous-navigation capability is established. CPU, memory, sensor and radio-chip part numbers unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Machine and operator controls",
+            "details": "Brokk SmartPower electrical system and separate portable SmartRemote controller. Their processor models are unspecified.",
+            "sources": [
+              "https://www.brokk.com/product/brokk-170/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Remote-control link",
+            "details": "Digital professional-radio connection or cable; advertised radio range up to 300 m. Frequency and packet format are not specified.",
+            "sources": [
+              "https://www.brokk.com/product/brokk-170/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric and hydraulic drive",
+            "details": "24 kW ABB motor with soft/direct start. Ratings apply to 400 V/50 Hz or 440 V/60 Hz; technical table recommends 63 A supply, while reduced operation on 32 A is advertised.",
+            "sources": [
+              "https://www.brokk.com/product/brokk-170/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hydraulics and mobility",
+            "details": "85 L hydraulic system, variable load-sensing pump, 18 MPa system pressure and 23 MPa attachment pressure. Pump flow 69/83 L/min at 50/60 Hz; tracked travel up to 2.1 km/h.",
+            "sources": [
+              "https://www.brokk.com/product/brokk-170/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Attachments",
+            "details": "1,600 kg machine excluding options/tool; recommended attachment mass 270 kg. Hydraulic tools, cooling and CAN cable connection are configuration options.",
+            "sources": [
+              "https://www.brokk.com/product/brokk-170/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aubo-i-series-arm",
+        "manufacturer": "AUBO Robotics",
+        "models": [
+          "AUBO i-Series"
+        ],
+        "configuration": "Shared i-series arm architecture from the current hardware manual. Individual i3/i5/i7/i10/i12/i20 payloads, geometry and controllers differ; this family record does not assign one model’s ratings to all arms. CPU and memory undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Articulated control architecture",
+            "details": "Six articulated joints move the end tool under controller commands. Controller hardware and supplied package must be identified separately.",
+            "sources": [
+              "https://developer.aubo-robotics.cn/en/hardware/user_manual/robot_arm_i_user_manual.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Joint drives",
+            "details": "Joint motors and holding brakes maintain arm posture when power is removed; power demand depends on model and program.",
+            "sources": [
+              "https://developer.aubo-robotics.cn/en/hardware/user_manual/robot_arm_i_user_manual.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Wrist and tools",
+            "details": "Wrist HandGuide control and eight-wire tool I/O carrying 12/24 V, digital and analog signals. Tool RS485 is optional. External grippers and sensors are attachments, not a standard sensing inventory.",
+            "sources": [
+              "https://developer.aubo-robotics.cn/en/hardware/user_manual/robot_arm_i_user_manual.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Configuration",
+            "details": "AuboStudio configures tool I/O and arm operation through the teach-pendant interface.",
+            "sources": [
+              "https://developer.aubo-robotics.cn/en/hardware/user_manual/robot_arm_i_user_manual.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aubo-i5-cb-m-2024",
+        "manufacturer": "AUBO Robotics",
+        "models": [
+          "AUBO i5",
+          "i5"
+        ],
+        "configuration": "January 2024 i5 package with AUBO-CB-M controller and AUBO-TP pendant. Not i5S or every i-series arm. CPU, RAM, storage and internal sensor part numbers are unpublished; controller manuals can describe later revisions.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Separate controller and pendant",
+            "details": "AUBO-CB-M control cabinet and AUBO-TP teach pendant; arm is a six-axis manipulator. No processor SKU is identified.",
+            "sources": [
+              "https://aubocdn.aubo-robotics.cn/official_website/hardware/AUBO_Robotics_EN_202401_i5.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Arm and power supply",
+            "details": "5 kg payload, 886.5 mm reach, 24 kg arm; typical 200 W and 2,000 W peak. Cabinet input 100–240 V AC, 50–60 Hz.",
+            "sources": [
+              "https://aubocdn.aubo-robotics.cn/official_website/hardware/AUBO_Robotics_EN_202401_i5.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Field and tool connections",
+            "details": "Ethernet, Modbus RTU/TCP and optional Profinet; tool RS485 and power connector. Cabinet 24 V/3 A I/O supply; tool selectable 0/12/24 V, 0.8 A.",
+            "sources": [
+              "https://aubocdn.aubo-robotics.cn/official_website/hardware/AUBO_Robotics_EN_202401_i5.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Controller service and I/O",
+            "details": "USB supports updates and project import/export. CB-M manual lists 32 digital inputs and outputs, four analog inputs and outputs; safety and general channels have separate configuration.",
+            "sources": [
+              "https://developer.aubo-robotics.cn/en/hardware/user_manual/controller_m_user_manual.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Integration APIs",
+            "details": "SDK for C/C++/C#/Lua/Python, ROS support and API. Wired fieldbus support does not establish a Wi-Fi/BLE broadcast signature.",
+            "sources": [
+              "https://aubocdn.aubo-robotics.cn/official_website/hardware/AUBO_Robotics_EN_202401_i5.pdf",
+              "https://developer.aubo-robotics.cn/en/hardware/user_manual/controller_m_user_manual.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "botsync-mag1500-single-conveyor",
+        "manufacturer": "Botsync",
+        "models": [
+          "MAG1500 Single Conveyor",
+          "MAG 1500"
+        ],
+        "configuration": "Single Conveyor configuration used as a reference for the unspecific MAG 1500 record; Lifter, Tugger and Fork versions differ. CPU, radio module and operating system unpublished. Camera part designation in the sheet needs manufacturer clarification.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard computer",
+            "details": "Manufacturer specifies a high-performance computer without a CPU SKU.",
+            "sources": [
+              "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Compute storage",
+            "details": "16 GB RAM and 64 GB SSD.",
+            "sources": [
+              "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Safety and perception",
+            "details": "Two front/rear 2D safety LiDARs, two mechanical bumpers and four emergency-stop buttons. Sheet literally names an Intel D345i 3D camera; this designation is unresolved and is not silently changed to D435i.",
+            "sources": [
+              "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and drive",
+            "details": "48 V, 70 Ah LiFePO4 battery; advertised 9–10 hours runtime and 2–3 hours charging. Dual-spring suspension, on-spot turning; 1.4 m/s unloaded, 1.2 m/s loaded.",
+            "sources": [
+              "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload and service connections",
+            "details": "1,500 kg payload; 550 kg includes 350 kg base and 200 kg conveyor. Two RJ45 GbE, two USB 3.1, six GPIO and manual charge connection; 4.3-inch 800×480 HMI.",
+            "sources": [
+              "https://www.botsync.co/pdfs/products/MAG1500%20Single%20Conveyor.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aes-maximo-solar-platform",
+        "manufacturer": "AES Corporation",
+        "models": [
+          "Maximo"
+        ],
+        "configuration": "AES-incubated Maximo solar-construction platform; publications span generations, with the current company site naming Max 4.0. CPU/GPU SKU, RAM, radio hardware, battery ratings and sensor part numbers remain unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard autonomy",
+            "details": "AES describes onboard computation for vision, alignment and module placement; no processor part number is supplied. A processor illustration alone is not a hardware assignment.",
+            "sources": [
+              "https://www.aes.com/energy-insights/maximo-how-aes-incubated-first-its-kind-solar-field-robot"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and worksite safety",
+            "details": "Computer vision checks placement and corrects inconsistencies; safety sensing includes people detection and collision avoidance. Camera and safety-sensor SKUs are not identified.",
+            "sources": [
+              "https://www.aes.com/energy-insights/maximo-how-aes-incubated-first-its-kind-solar-field-robot",
+              "https://www.aes.com/energy-insights/meet-maximo-ai-powered-robot-changing-solar-energy-sector"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Field power",
+            "details": "Battery charge is monitored by the operator interface; AES describes a mobile microgrid supporting extended field shifts. Pack voltage, energy and propulsion topology are unspecified.",
+            "sources": [
+              "https://www.aes.com/energy-insights/maximo-how-aes-incubated-first-its-kind-solar-field-robot",
+              "https://www.aes.com/energy-insights/meet-maximo-ai-powered-robot-changing-solar-energy-sector"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Construction tooling",
+            "details": "Mobile robotic module handling, placement and fastening; tooling compatibility is validated for specific module, clamp, rail and tracker combinations.",
+            "sources": [
+              "https://www.aes.com/energy-insights/maximo-how-aes-incubated-first-its-kind-solar-field-robot"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet and autonomy stack",
+            "details": "Current Maximo architecture names Cortex vision/planning, Form robots/tooling and MaxIQ fleet-performance software with a training-data feedback loop. These software layers do not identify a unique radio signature.",
+            "sources": [
+              "https://maxrobotics.ai/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aurora-driver-common-architecture",
+        "manufacturer": "Aurora Innovation",
+        "models": [
+          "Aurora Driver"
+        ],
+        "configuration": "Architecture-level reference, not one universal truck bill of materials. Sensor ranges and compute change by generation. CPU/GPU models, memory, radio modules and their frequencies are not established by these documents.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Primary and fallback compute",
+            "details": "Main driving computer plus a separate fallback computer; fault-management software monitors hardware/software health and can transfer control after a failure.",
+            "sources": [
+              "https://aurora.tech/newsroom/have-questions-about-aurora-and-avs-get-your-answers-here"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Modular sensor pods",
+            "details": "Overlapping cameras, proprietary FirstLight LiDAR and imaging radar form pods adapted to each vehicle installation.",
+            "sources": [
+              "https://aurora.tech/newsroom/the-transferable-hardware-behind-aurora-driver-powered-cars-and-trucks"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hardware power distribution",
+            "details": "2021 safety report describes a central hardware hub conditioning/distributing its own power and synchronizing the sensors; vehicle and revision determine electrical ratings.",
+            "sources": [
+              "https://assets.ctfassets.net/8byw6jksp7h2/12klTCAz1K43qbYuyZQUxe/b9eb91087815ecc1e54ff3a80e9ef580/Aurora_VSSA_2021_Final.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle integration",
+            "details": "2021 report describes an umbilical linking the self-driving hardware to the vehicle. Physical connector and bus assignments are not published there.",
+            "sources": [
+              "https://assets.ctfassets.net/8byw6jksp7h2/12klTCAz1K43qbYuyZQUxe/b9eb91087815ecc1e54ff3a80e9ef580/Aurora_VSSA_2021_Final.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Driving and fault management",
+            "details": "Perception, planning and driving software work with fault-management and fallback systems. Current FAQ describes Aurora’s Verifiable AI approach.",
+            "sources": [
+              "https://aurora.tech/newsroom/have-questions-about-aurora-and-avs-get-your-answers-here"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aurora-peterbilt579-2022",
+        "manufacturer": "Aurora Innovation",
+        "models": [
+          "Aurora Driver on Peterbilt 579 (PACCAR)"
+        ],
+        "configuration": "Documented 2022 development-fleet hardware reference. Later commercial trucks can have different components; this does not apply the 2026 International LT kit to Peterbilt. CPU/GPU, memory, radio and engine configuration unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Dual-lane driving computer",
+            "details": "Q3 2022 shareholder letter describes dual-lane liquid-cooled computers with redundant processing, self-health monitoring and fallback capability on its new Peterbilt 579 fleet.",
+            "sources": [
+              "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "2022 perception revision",
+            "details": "FirstLight FMCW LiDAR with health reporting, integrated liquid cooling and cleaning. Upgraded camera system is illustrated as 8 MP with 32-bit HDR, versus prior 2 MP/24-bit imagery.",
+            "sources": [
+              "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle platform",
+            "details": "Peterbilt identifies its Model 579 as the host truck and distinguishes its 15-inch driver dashboard from the Aurora autonomy hardware.",
+            "sources": [
+              "https://www.peterbilt.com/news-and-events/press-releases/peterbilt-showcases-first-model-579-with-aurora-driver"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet software context",
+            "details": "The Q3 2022 letter reports Aurora Driver Beta 4.0 and fault-management/fallback development. This is historical hardware/software evidence, not a current fleet-version assertion.",
+            "sources": [
+              "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-22-000125/0001828108-22-000125.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aurora-international-lt-gen2-2026",
+        "manufacturer": "Aurora Innovation",
+        "models": [
+          "Aurora Driver on International LT (2nd-gen)"
+        ],
+        "configuration": "July 2026 International LT launch and second-generation commercial hardware kit. Exact CPU/GPU, memory, radio, truck powertrain and battery configurations are not disclosed; do not substitute announced future-generation silicon.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Second-generation hardware kit",
+            "details": "Aurora reports a more efficient onboard computer in the second-generation commercial kit; no silicon model or memory size is specified.",
+            "sources": [
+              "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "FirstLight revision",
+            "details": "Proprietary long-range FMCW LiDAR with an advertised one-kilometer range for this kit; the range is not assigned to older Peterbilt hardware.",
+            "sources": [
+              "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Host truck",
+            "details": "Second-generation driverless hardware is integrated with the International LT Series vehicle; the kit is engineered for one million miles of operation.",
+            "sources": [
+              "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm",
+              "https://aurora.tech/newsroom/your-questions-about-our-latest-driverless-launch-answered"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Driving system",
+            "details": "Aurora Driver operates the vehicle without a person in the driving seat in this launch configuration. An occasional roadside-assistance rider is described separately from the driving system.",
+            "sources": [
+              "https://aurora.tech/newsroom/your-questions-about-our-latest-driverless-launch-answered"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "autox-gen5-2021",
+        "manufacturer": "AutoX",
+        "models": [
+          "AutoX Gen5 RoboTaxi",
+          "AutoX RoboTaxi"
+        ],
+        "configuration": "Gen5 configuration described by NVIDIA and onsemi in 2021. Generic AutoX records must not be assumed to use Gen5. CPU, GPU board SKU, memory, powertrain and communications modules remain unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "NVIDIA DRIVE accelerator architecture",
+            "details": "NVIDIA identifies two Ampere-architecture GPUs, quoting 900 TOPS for that compute core and 2,200 TOPS for the overall Gen5 platform. These are distinct claims, not interchangeable processor ratings.",
+            "sources": [
+              "https://blogs.nvidia.cn/blog/autox-full-self-driving-nvidia-drive/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Named camera components",
+            "details": "onsemi identifies 28 AR0820AT 8 MP image sensors and four SiPM arrays supplied for LiDAR. Four supplied arrays are not the total vehicle LiDAR count.",
+            "sources": [
+              "https://investor.onsemi.com/news-releases/news-release-details/semiconductor-intelligent-sensing-technologies-enable-360deg"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Surround perception",
+            "details": "NVIDIA describes 28 cameras, six high-resolution LiDAR units and surround 4D millimeter-wave radar for the Gen5 system.",
+            "sources": [
+              "https://blogs.nvidia.cn/blog/autox-full-self-driving-nvidia-drive/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy stack",
+            "details": "NVIDIA DRIVE-based computing runs autonomous-driving neural networks with capacity reserved for upgrades; the cited sources do not establish a Wi-Fi/BLE identification pattern.",
+            "sources": [
+              "https://blogs.nvidia.cn/blog/autox-full-self-driving-nvidia-drive/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "baidu-apollo-rt6-2022",
+        "manufacturer": "Baidu",
+        "models": [
+          "Apollo RT6"
+        ],
+        "configuration": "Baidu’s July 2022 unveiling specification. Later RT6 production revisions may differ; no chipset, RAM, radio-module, battery-capacity or sensor-SKU assignment is made.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Redundant automotive compute",
+            "details": "Dual automotive-grade computing units with advertised aggregate performance up to 1,200 TOPS; main/backup architecture, processor models unspecified.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/baidu-unveils-next-gen-autonomous-vehicle-ready-to-provide-driverless-robotaxi-half-of-taxi-fares-301590644.html",
+              "https://home.baidu.com/home/index/news_detail/id/17982"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Launch sensor suite",
+            "details": "38 sensors, including eight LiDARs and twelve cameras, in the 2022 specification. Remaining sensor types are not itemized in the English release.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/baidu-unveils-next-gen-autonomous-vehicle-ready-to-provide-driverless-robotaxi-half-of-taxi-fares-301590644.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Vehicle architecture",
+            "details": "Purpose-built battery-electric vehicle on Baidu’s Xinghe electrical/electronic architecture, rather than a conventional-car retrofit. Motor and battery details are not supplied.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/baidu-unveils-next-gen-autonomous-vehicle-ready-to-provide-driverless-robotaxi-half-of-taxi-fares-301590644.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cabin and dimensions",
+            "details": "Detachable steering-wheel design, electric sliding doors and passenger interaction system; 4,760 mm length and 2,830 mm wheelbase.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/baidu-unveils-next-gen-autonomous-vehicle-ready-to-provide-driverless-robotaxi-half-of-taxi-fares-301590644.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fault handling",
+            "details": "Baidu describes redundant hardware/software plus integrated vehicle/autonomy fault diagnosis and risk-degradation handling.",
+            "sources": [
+              "https://home.baidu.com/home/index/news_detail/id/17982"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "avride-ioniq5-driver",
+        "manufacturer": "Avride",
+        "models": [
+          "Avride Robotaxi (Hyundai Ioniq 5)"
+        ],
+        "configuration": "Avride’s published Universal Driver sensor arrangement, associated with its documented Ioniq 5 fleet. Individual vehicles and revisions may differ. Processor SKU, RAM, storage, radio modules, battery trim and radar frequency unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Vehicle computer",
+            "details": "Specialized onboard computer described as comparable to server-grade hardware; exact CPU/GPU not named.",
+            "sources": [
+              "https://www.avride.ai/driver"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Surround suite",
+            "details": "Five LiDARs, four radars and thirteen cameras. Proprietary central LiDAR: over 300 m range and 0.1-degree resolution; side LiDAR coverage within 50 m. Radars detect approaching vehicles up to 300 m.",
+            "sources": [
+              "https://www.avride.ai/driver"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Sensor maintenance",
+            "details": "Physical sensor-cleaning equipment and software filtering address precipitation, fog and other interference.",
+            "sources": [
+              "https://www.avride.ai/driver"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle integration",
+            "details": "Nebius identifies Hyundai Ioniq 5 vehicles as the fleet platform supplied through Avride’s Hyundai partnership. Host-vehicle trim and battery pack are not specified.",
+            "sources": [
+              "https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Localization and planning",
+            "details": "LiDAR localization uses maintained 3D maps rather than GPS alone; fused perception feeds prediction and route/speed/trajectory planning.",
+            "sources": [
+              "https://www.avride.ai/driver"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -278746,8 +279966,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 303,
-    "devices_with_system_profiles": 288,
-    "devices_with_documented_compute": 132
+    "system_profiles": 314,
+    "devices_with_system_profiles": 299,
+    "devices_with_documented_compute": 143
   }
 }
