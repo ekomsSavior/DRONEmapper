@@ -11075,10 +11075,11 @@
       "models": [
         "Sherpa 2.0",
         "Sherpa V2.0",
-        "Sherpa"
+        "Sherpa",
+        "Sherpa Version 2.0"
       ],
-      "configuration": "September 2024 Sherpa V2.0 reference. Later standard/NDAA builds require separate confirmation; ground-station hardware is not aircraft hardware.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "September 2024 Sherpa V2.0 reference. Later standard/NDAA builds require separate confirmation; ground-station hardware is not aircraft hardware. Named aerial-cleaner configuration within the generic cleaner entry; not Lavo ground hardware.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "compute",
@@ -11150,6 +11151,30 @@
           "details": "ASTM F3411-19 equipped. Transport-specific reception still needs confirmation.",
           "sources": [
             "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Obstacle and vision sensing",
+          "details": "Forward 24 GHz radar and 1080p FPV camera.",
+          "sources": [
+            "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Separate ground controller",
+          "details": "Eight-core CPU, 2 GB RAM, 16 GB storage and Android 9; not aircraft memory.",
+          "sources": [
+            "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Sherpa/User%20Manual/Lucid%20Sherpa%20Specification%20Sheet.pdf?hsLang=en"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Lucid Bots",
+          "models": [
+            "Lucid Bots Cleaner"
           ]
         }
       ]
@@ -43996,6 +44021,321 @@
           "details": "Wing’s July 2022 aircraft-library description identifies common avionics and software developed through Hummingbird operations. No processor or board is named, and concept designs are not presumed deployed.",
           "sources": [
             "https://wing.com/news/wings-aircraft-library"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "am-general-ugv-2026",
+      "manufacturer": "AM General",
+      "models": [
+        "AM General UGV"
+      ],
+      "configuration": "UGV specification REV042226: 13-Series chassis configuration. No processor SKU, memory, modem or navigation-sensor part number is disclosed. Earlier development announcements do not establish the same powertrain.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Edge autonomy computer",
+          "details": "AI processing is onboard; processor and board are unnamed.",
+          "sources": [
+            "https://www.amgeneral.com/wp-content/uploads/2026/05/UGV_Spec_Sheet.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "6.5 L turbocharged eight-cylinder engine",
+          "details": "Common-rail direct injection and air-to-air intercooling; diesel, JP-8 or F-24 fuel compatibility.",
+          "sources": [
+            "https://www.amgeneral.com/wp-content/uploads/2026/05/UGV_Spec_Sheet.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Inertial navigation",
+          "details": "INS is specified alongside obstacle detection; individual sensor types and models are not enumerated.",
+          "sources": [
+            "https://www.amgeneral.com/wp-content/uploads/2026/05/UGV_Spec_Sheet.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular vehicle architecture",
+          "details": "MOSA design, drive-by-wire conversion, L-track cargo fittings and a wireless-controlled service crane.",
+          "sources": [
+            "https://www.amgeneral.com/wp-content/uploads/2026/05/UGV_Spec_Sheet.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Supervised autonomy",
+          "details": "Teleoperation, leader/follower operation and network integration are described; no RF protocol or frequency is published.",
+          "sources": [
+            "https://www.amgeneral.com/wp-content/uploads/2026/05/UGV_Spec_Sheet.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ff-fx-aegis-ultra-manual",
+      "manufacturer": "Faraday Future",
+      "models": [
+        "FX Aegis Ultra"
+      ],
+      "configuration": "Ultra configuration from the FF EAI Robotics manufacturer manual, mirrored with FCC exhibits. This is a named configuration within the generic FX Aegis entry. CPU, RAM and radio chipset are unspecified; Futurist humanoid hardware is not assigned to it.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Forward FPV camera",
+          "details": "Provides live video; sensor part number and resolution are not given.",
+          "sources": [
+            "https://fccid.io/m/91c539a9051187070130c69d1b7242e34a54811648e39b8b69e3213c6840c004.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Replaceable lithium battery",
+          "details": "Rated 43.2 V, 4.6 Ah. Manual describes a swappable pack and twelve articulated joints.",
+          "sources": [
+            "https://fccid.io/m/91c539a9051187070130c69d1b7242e34a54811648e39b8b69e3213c6840c004.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi controller connection",
+          "details": "The controller selects the robot network shown on its nameplate. A printed example is not a universal device-identification pattern.",
+          "sources": [
+            "https://fccid.io/m/91c539a9051187070130c69d1b7242e34a54811648e39b8b69e3213c6840c004.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Expansion connectors",
+          "details": "One gigabit RJ45, two USB Type-A ports, two DC outputs for 12/24 V, one SBUS and one UART interface.",
+          "sources": [
+            "https://fccid.io/m/91c539a9051187070130c69d1b7242e34a54811648e39b8b69e3213c6840c004.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Robot SDK and controller app",
+          "details": "Manual describes a development SDK, motion interfaces and controller video recording. Recordings are stored in the controller gallery; robot storage capacity is unknown.",
+          "sources": [
+            "https://fccid.io/m/91c539a9051187070130c69d1b7242e34a54811648e39b8b69e3213c6840c004.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Faraday Future",
+          "models": [
+            "FX Aegis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lucid-lavo-v12",
+      "manufacturer": "Lucid Bots",
+      "models": [
+        "Lavo Bot"
+      ],
+      "configuration": "Lavo operator manual v1.2, July 2024 filename. Ground-cleaner configuration, separate from Sherpa. CPU, memory, radio chipset and perception sensors are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Battery and wheel drive",
+          "details": "56 V lithium battery system; four geared electric wheel drives with omnidirectional mecanum wheels. A 7.5 Ah pack is the documented runtime example.",
+          "sources": [
+            "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Lavo%20Bot/User%20Manual/LB_Lavo_Bot_User_Manual_240726.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Joystick radio control",
+          "details": "Manual specifies a 5.8 GHz control link; waveform and device-specific broadcast identifiers are not established.",
+          "sources": [
+            "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Lavo%20Bot/User%20Manual/LB_Lavo_Bot_User_Manual_240726.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cleaning assembly",
+          "details": "24-inch Whisper Wash surface cleaner, stainless ball valve and quick-connect pressure hose; the pressure washer is external equipment.",
+          "sources": [
+            "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Lavo%20Bot/User%20Manual/LB_Lavo_Bot_User_Manual_240726.pdf?hsLang=en"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Selectable speed modes",
+          "details": "Normal, slow and cruise modes. The manual describes remote joystick control, not autonomous navigation.",
+          "sources": [
+            "https://knowledge.lucidbots.com/hubfs/Customer%20Success/Knowledge%20Base/Lavo%20Bot/User%20Manual/LB_Lavo_Bot_User_Manual_240726.pdf?hsLang=en"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Lucid Bots",
+          "models": [
+            "Lucid Bots Cleaner"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "may-legacy-shuttle-fleet-2021",
+      "manufacturer": "May Mobility",
+      "models": [
+        "Lexus RX450h / Polaris GEM"
+      ],
+      "configuration": "Historical 2021 shuttle configurations, documented by deployment partners. Not the later Sienna fleet. CPU, memory, modem, individual sensor models and battery ratings are unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Two distinct vehicle platforms",
+          "details": "Lexus RX 450h vehicles use hybrid-electric propulsion; wheelchair-accessible Polaris GEM vehicles are fully electric.",
+          "sources": [
+            "https://mcity.umich.edu/mcity-supports-new-on-demand-autonomous-shuttle-service-now-available-in-ann-arbor/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "May perception retrofit",
+          "details": "Toyota describes multiple LiDAR units, radars and cameras with combined sensor interpretation; it does not publish per-vehicle counts.",
+          "sources": [
+            "https://pressroom.toyota.com/toyota-mobility-foundation-supports-may-mobility-to-bring-autonomous-shuttle-service-to-hoosier-residents/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Lexus drive-by-wire",
+          "details": "Toyota specifically identifies the RX 450h drive-by-wire interface. This statement does not identify a Polaris controller.",
+          "sources": [
+            "https://pressroom.toyota.com/toyota-mobility-foundation-supports-may-mobility-to-bring-autonomous-shuttle-service-to-hoosier-residents/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Multi-Policy Decision Making",
+          "details": "MPDM evaluates simulated traffic scenarios to choose driving actions. The 2021 Ann Arbor service retained onboard vehicle operators.",
+          "sources": [
+            "https://pressroom.toyota.com/toyota-mobility-foundation-supports-may-mobility-to-bring-autonomous-shuttle-service-to-hoosier-residents/",
+            "https://mcity.umich.edu/mcity-supports-new-on-demand-autonomous-shuttle-service-now-available-in-ann-arbor/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnh-raven-trident-2022",
+      "manufacturer": "CNH Industrial",
+      "models": [
+        "Case IH Trident 5550 with Raven Autonomy"
+      ],
+      "configuration": "August 2022 demonstrator; limited 2023 availability was announced. This named configuration illustrates the generic CNH/Raven entry, not every Case IH or New Holland vehicle. Processor SKU, memory, radio and engine parts are not established by this source.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Raven perception controller",
+          "details": "Onboard AI interprets camera imagery; processor and accelerator are unnamed.",
+          "sources": [
+            "https://media.cnh.com/North-America/case-ih/cih-latest-news/industry-s-first-autonomous-spreader-debuts-at-farm-progress-show/s/ee41cbbc-9440-4094-b450-018027d96abb"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera and radar array",
+          "details": "Combined sensing surrounds the vehicle for obstacle detection; camera and radar models are not specified.",
+          "sources": [
+            "https://media.cnh.com/North-America/case-ih/cih-latest-news/industry-s-first-autonomous-spreader-debuts-at-farm-progress-show/s/ee41cbbc-9440-4094-b450-018027d96abb"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mobile supervision",
+          "details": "Operators plan and monitor field work from a mobile device; cab controls remain available. This does not establish the underlying radio network.",
+          "sources": [
+            "https://media.cnh.com/North-America/case-ih/cih-latest-news/industry-s-first-autonomous-spreader-debuts-at-farm-progress-show/s/ee41cbbc-9440-4094-b450-018027d96abb"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Raven autonomy stack",
+          "details": "Integrates steering/guidance, propulsion control, perception and path planning using mapped field boundaries.",
+          "sources": [
+            "https://media.cnh.com/North-America/case-ih/cih-latest-news/industry-s-first-autonomous-spreader-debuts-at-farm-progress-show/s/ee41cbbc-9440-4094-b450-018027d96abb"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "CNH Industrial",
+          "models": [
+            "CNH Raven Autonomy (Case IH / New Holland)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "formic-raas-platform-reference",
+      "manufacturer": "Formic",
+      "models": [
+        "Formic Cobot RaaS"
+      ],
+      "configuration": "Current Formic platform with a separately identified Essential palletizer example. RaaS is a service spanning different robot arms and cells, not one fixed BOM. CPU SKU, RAM, wireless hardware and specific arm/controller model require the installed configuration.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Industrial PLC and edge gateway",
+          "details": "Formic Core architecture describes PLC-based control with an edge gateway; chip and board models are not named.",
+          "sources": [
+            "https://formic.co/magic"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision and cell safety",
+          "details": "Platform uses RGB/depth perception, light curtains and area scanners; selection depends on the cell.",
+          "sources": [
+            "https://formic.co/magic"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Multi-vendor integration",
+          "details": "Platform lists KUKA, ABB, FANUC and Doosan robot support plus MES/ERP/SCADA interfaces; these are supported alternatives, not all installed together.",
+          "sources": [
+            "https://formic.co/magic"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Essential palletizer example",
+          "details": "Manufacturer datasheet specifies a vacuum tool and up to five feet of conveyor. This is one offered cell configuration.",
+          "sources": [
+            "https://formic.co/downloads/Formic-Cobot-Palletizer-Datasheet.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Facility services",
+          "details": "Palletizer installations require electrical power and compressed air; ratings depend on the scoped cell.",
+          "sources": [
+            "https://formic.co/solutions/palletizing"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Core and Cortex",
+          "details": "Core handles robot control/perception; Cortex supplies fleet telemetry, remote diagnostics and OTA delivery. No universal radio protocol follows from these services.",
+          "sources": [
+            "https://formic.co/magic"
           ]
         }
       ]

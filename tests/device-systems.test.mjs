@@ -9,6 +9,37 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 75 keeps aircraft, ground cleaner and fleet configurations distinct',()=>{
+ const sherpa=system('Lucid Bots','Sherpa Version 2.0');
+ assert.match(text(sherpa.sections.compute),/STM32F765/);
+ assert.match(text(sherpa.sections.compute),/not aircraft memory/);
+ assert.match(text(sherpa.sections.radios),/HL7588.*RC7620/);
+ const lavo=system('Lucid Bots','Lavo Bot');
+ assert.equal(lavo.sections.compute.status,'not-established');
+ assert.match(text(lavo.sections.power),/56 V/);
+ assert.doesNotMatch(text(lavo.sections.power),/44.4/);
+ assert.equal(profileIds(system('Lucid Bots','Lucid Bots Cleaner')).length,2);
+ assert.equal(profileIds(system('Lucid Bots','Sherpa Version 1.0')).length,0);
+ const aegis=system('Faraday Future','FX Aegis');
+ assert.match(text(aegis.sections.interfaces),/SBUS/);
+ assert.equal(aegis.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(aegis.sections.compute.facts),/Orin/);
+ const am=system('AM General','AM General UGV');
+ assert.match(text(am.sections.power),/6.5 L/);
+ assert.doesNotMatch(text(am.sections.power.facts),/hybrid/);
+ const old=system('May Mobility','Lexus RX450h / Polaris GEM');
+ assert.match(text(old.configurations),/Historical 2021/);
+ assert.equal(old.sections.compute.status,'not-established');
+ assert.match(text(old.sections.interfaces),/does not identify a Polaris controller/);
+ const raven=system('CNH Industrial','CNH Raven Autonomy (Case IH / New Holland)');
+ assert.match(text(raven.configurations),/2022/);
+ assert.equal(raven.sections.power.status,'not-established');
+ const formic=system('Formic','Formic Cobot RaaS');
+ assert.match(text(formic.sections.interfaces),/supported alternatives/);
+ assert.equal(formic.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Lucid Bots','Sherpa Version 2.0',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 74 separates dock components, aircraft revisions and planned features',()=>{
  const easy=system('Easy Aerial','Easy Aerial Drone-in-a-Box');
  assert.match(text(easy.sections.compute),/Intel Pentium Silver/);
