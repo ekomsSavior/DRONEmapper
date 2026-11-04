@@ -121436,13 +121436,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "scripps-spray-historical-design",
+            "configuration": "Scripps developer description of the historical Spray design. Mission payloads are alternatives, not a claim that every vehicle carries all listed sensors. The source describes a microprocessor controller but does not name its chip, RAM or storage.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Mission control",
+                "details": "Microprocessor controller inside the three-piece 6061 aluminum pressure housing.",
+                "sources": [
+                  "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-spray-historical-design",
+                "configuration": "Scripps developer description of the historical Spray design. Mission payloads are alternatives, not a claim that every vehicle carries all listed sensors. The source describes a microprocessor controller but does not name its chip, RAM or storage.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -121451,23 +121470,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Surface communication",
+                "details": "Redundant combined GPS/Iridium antennas in the wings; the glider rolls 90 degrees at the surface to expose one antenna.",
+                "sources": [
+                  "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-spray-historical-design",
+                "configuration": "Scripps developer description of the historical Spray design. Mission payloads are alternatives, not a claim that every vehicle carries all listed sensors. The source describes a microprocessor controller but does not name its chip, RAM or storage.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and payload choices",
+                "details": "Compass, attitude sensing and GPS; mission payloads have included modified pumped SBE 41CP CTD, Sea Point optics, Tritech PA200 altimeter and Sontek Argonaut-SGP 750 kHz ADCP.",
+                "sources": [
+                  "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-spray-historical-design",
+                "configuration": "Scripps developer description of the historical Spray design. Mission payloads are alternatives, not a claim that every vehicle carries all listed sensors. The source describes a microprocessor controller but does not name its chip, RAM or storage.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and buoyancy",
+                "details": "52 DD lithium cells provide 13 MJ in this design. A reciprocating hydraulic pump changes volume by 250 cc; moving battery packs control pitch and roll.",
+                "sources": [
+                  "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-spray-historical-design",
+                "configuration": "Scripps developer description of the historical Spray design. Mission payloads are alternatives, not a claim that every vehicle carries all listed sensors. The source describes a microprocessor controller but does not name its chip, RAM or storage.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Pressure hull",
+                "details": "1500 m maximum design depth; 2 m length, 20 cm diameter, 110 cm wingspan and 51.8 kg mass, with 3.5 kg payload.",
+                "sources": [
+                  "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-spray-historical-design",
+                "configuration": "Scripps developer description of the historical Spray design. Mission payloads are alternatives, not a claim that every vehicle carries all listed sensors. The source describes a microprocessor controller but does not name its chip, RAM or storage.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -121486,12 +121557,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -141151,8 +141217,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "apex-deep-2025-published-system",
+            "configuration": "Deep column of the 2025 APEX manufacturer brochure. Standard, optional and future payloads are distinguished. Processor, controller revision and memory are not established; the APF11 specification for standard APEX is not applied here.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -141166,33 +141238,111 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Satellite telemetry choices",
+                "details": "Iridium circuit-switched RUDICS is standard; SBD is optional.",
+                "sources": [
+                  "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apex-deep-2025-published-system",
+                "configuration": "Deep column of the 2025 APEX manufacturer brochure. Standard, optional and future payloads are distinguished. Processor, controller revision and memory are not established; the APF11 specification for standard APEX is not applied here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "CTD and optional oxygen",
+                "details": "SBE 61 CTD is standard. Aanderaa 4831 and RINKO III ARO-CAV oxygen sensors are options; nitrate sensing is listed as future availability.",
+                "sources": [
+                  "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apex-deep-2025-published-system",
+                "configuration": "Deep column of the 2025 APEX manufacturer brochure. Standard, optional and future payloads are distinguished. Processor, controller revision and memory are not established; the APF11 specification for standard APEX is not applied here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Power supply",
+                "details": "Primary lithium batteries are standard for Deep APEX. The brochure does not list alkaline batteries for this variant.",
+                "sources": [
+                  "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apex-deep-2025-published-system",
+                "configuration": "Deep column of the 2025 APEX manufacturer brochure. Standard, optional and future payloads are distinguished. Processor, controller revision and memory are not established; the APF11 specification for standard APEX is not applied here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Deep pressure enclosure",
+                "details": "Glass-sphere pressure housing and 6000 m operating depth; handles and wooden transport crate are standard.",
+                "sources": [
+                  "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apex-deep-2025-published-system",
+                "configuration": "Deep column of the 2025 APEX manufacturer brochure. Standard, optional and future payloads are distinguished. Processor, controller revision and memory are not established; the APF11 specification for standard APEX is not applied here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Optional ice avoidance",
+                "details": "Ice-avoidance capability is optional; its inclusion must be checked for an individual configuration.",
+                "sources": [
+                  "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apex-deep-2025-published-system",
+                "configuration": "Deep column of the 2025 APEX manufacturer brochure. Standard, optional and future payloads are distinguished. Processor, controller revision and memory are not established; the APF11 specification for standard APEX is not applied here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Argo platform identity",
+                "details": "Argo code APEX_D identifies this platform under Teledyne Webb Research / Webb Research; it is a catalog identity, not a radio signature.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/APEX_D/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "apex-deep-2025-published-system",
+                "configuration": "Deep column of the 2025 APEX manufacturer brochure. Standard, optional and future payloads are distinguished. Processor, controller revision and memory are not established; the APF11 specification for standard APEX is not applied here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -141202,13 +141352,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -141608,13 +141752,33 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "nke-arvor2-pfv2",
+            "configuration": "Argo registry identification of ARVOR2 and its PFV2 controller. Partial component evidence: exact MCU, memory, radio module, battery and installed sensor revision remain unestablished. Earlier ARVOR-I or I535 specifications are not substituted.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Controller board",
+                "details": "PFV2 primary controller board is explicitly identified for ARVOR2. The registry does not name the processor silicon or its memory.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/ARVOR2/",
+                  "https://vocab.nerc.ac.uk/collection/R28/current/CB0013/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor2-pfv2",
+                "configuration": "Argo registry identification of ARVOR2 and its PFV2 controller. Partial component evidence: exact MCU, memory, radio module, battery and installed sensor revision remain unestablished. Earlier ARVOR-I or I535 specifications are not substituted.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -141648,8 +141812,21 @@
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Argo platform identity",
+                "details": "Argo code ARVOR2 identifies this platform under NKE Instrumentation; it is a catalog identity, not a radio signature.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/ARVOR2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor2-pfv2",
+                "configuration": "Argo registry identification of ARVOR2 and its PFV2 controller. Partial component evidence: exact MCU, memory, radio module, battery and installed sensor revision remain unestablished. Earlier ARVOR-I or I535 specifications are not substituted.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -141658,14 +141835,12 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
           "sensors",
           "power",
           "interfaces",
-          "software",
-          "identification"
+          "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -141704,13 +141879,61 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "nke-arvor-c-2010",
+            "configuration": "Original coastal ARVOR-C described by its Ifremer developers in 2010, with controller architecture explained in their later Arvor-Cm paper. The multisensor CM revision has separate dimensions and electronics.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "nke-arvor-cm-2015",
+            "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Original navigation board",
+                "details": "The Arvor-family I535 board uses an ATmega128 microcontroller and sequentially controls sensors, satellite communication and hydraulics. This does not specify ARVOR2 electronics.",
+                "sources": [
+                  "https://archimer.ifremer.fr/doc/00321/43176/66494.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-c-2010",
+                "configuration": "Original coastal ARVOR-C described by its Ifremer developers in 2010, with controller architecture explained in their later Arvor-Cm paper. The multisensor CM revision has separate dimensions and electronics.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Separated navigation and acquisition",
+                "details": "I535/ATmega128 navigation controls hydraulics and satellite communication. A separate Ifremer-designed acquisition board handles sensors; NKE supplies its software.",
+                "sources": [
+                  "https://archimer.ifremer.fr/doc/00321/43176/66494.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-cm-2015",
+                "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "Documented acquisition-board option",
+                "details": "Argo identifies CAMAT256 as a secondary controller in certain ARVOR_CM configurations.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R28/current/CB0012/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-cm-2015",
+                "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -141719,33 +141942,183 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Mission and preparation links",
+                "details": "Two-way Iridium and a combined GPS/Iridium antenna; Bluetooth supports local programming and tests.",
+                "sources": [
+                  "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-c-2010",
+                "configuration": "Original coastal ARVOR-C described by its Ifremer developers in 2010, with controller architecture explained in their later Arvor-Cm paper. The multisensor CM revision has separate dimensions and electronics.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "radios",
+                "component": "Satellite and local links",
+                "details": "Iridium SBD, 12-channel GPS and Bluetooth preparation interface; magnetic start.",
+                "sources": [
+                  "https://nke-instrumentation.com/wp-content/uploads/2018/01/ARVOR-CM_UK2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-cm-2015",
+                "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Core measurement package",
+                "details": "Pumped Sea-Bird CTD. Oxygen, turbidity and fluorescence additions were under development in this 2010 account, not universal installed equipment.",
+                "sources": [
+                  "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-c-2010",
+                "configuration": "Original coastal ARVOR-C described by its Ifremer developers in 2010, with controller architecture explained in their later Arvor-Cm paper. The multisensor CM revision has separate dimensions and electronics.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Core and optional measurements",
+                "details": "SBE 41CP CTD; optional oxygen, fluorometer and turbidity sensors. Listed payload alternatives include Turner, Wet Labs and Seapoint products.",
+                "sources": [
+                  "https://nke-instrumentation.com/wp-content/uploads/2018/01/ARVOR-CM_UK2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-cm-2015",
+                "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Buoyancy and station holding",
+                "details": "High-pressure pump and external oil bladder; seafloor anti-drift claws enable coastal stationing.",
+                "sources": [
+                  "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-c-2010",
+                "configuration": "Original coastal ARVOR-C described by its Ifremer developers in 2010, with controller architecture explained in their later Arvor-Cm paper. The multisensor CM revision has separate dimensions and electronics.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Energy and buoyancy",
+                "details": "Lithium batteries, separately backed real-time clock, oil pump and valve; 400 dbar rating.",
+                "sources": [
+                  "https://nke-instrumentation.com/wp-content/uploads/2018/01/ARVOR-CM_UK2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-cm-2015",
+                "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Original pressure package",
+                "details": "450 m design rating; under 20 kg, approximately 2.1 m long and 11 cm diameter. Magnetic activation.",
+                "sources": [
+                  "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-c-2010",
+                "configuration": "Original coastal ARVOR-C described by its Ifremer developers in 2010, with controller architecture explained in their later Arvor-Cm paper. The multisensor CM revision has separate dimensions and electronics.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Sensor connections",
+                "details": "The 2016 CM architecture supports up to five RS232 sensor outputs and two analog sensor outputs.",
+                "sources": [
+                  "https://archimer.ifremer.fr/doc/00321/43176/66494.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-cm-2015",
+                "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "CM housing",
+                "details": "Glass-reinforced plastic hull and syntactic foam; 25–26 kg depending on payload, 12.5 cm hull diameter and 195 cm total height.",
+                "sources": [
+                  "https://nke-instrumentation.com/wp-content/uploads/2018/01/ARVOR-CM_UK2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-cm-2015",
+                "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomous cycle",
+                "details": "Selectable profiling cycles, bottom stationing and remote mission changes through satellite telemetry.",
+                "sources": [
+                  "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-c-2010",
+                "configuration": "Original coastal ARVOR-C described by its Ifremer developers in 2010, with controller architecture explained in their later Arvor-Cm paper. The multisensor CM revision has separate dimensions and electronics.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Argo platform identity",
+                "details": "Argo code ARVOR_C identifies this platform under NKE Instrumentation; it is a catalog identity, not a radio signature.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/ARVOR_C/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-c-2010",
+                "configuration": "Original coastal ARVOR-C described by its Ifremer developers in 2010, with controller architecture explained in their later Arvor-Cm paper. The multisensor CM revision has separate dimensions and electronics.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "identification",
+                "component": "Argo platform identity",
+                "details": "Argo code ARVOR_C identifies this platform under NKE Instrumentation; it is a catalog identity, not a radio signature.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/ARVOR_C/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-arvor-cm-2015",
+                "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -141754,14 +142127,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -144537,8 +144903,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "seabird-navis-ebr-2017",
+            "configuration": "External Bladder Redesign discussed by Sea-Bird at the 2017 Argo technical workshop. EBR denotes a mechanical redesign, not a guaranteed N1/N2 controller, modem chip or memory capacity. No N2 prototype features are attributed to all EBR floats.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -144552,23 +144924,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Surface telemetry",
+                "details": "Navis communications and positioning use Iridium and GPS. The workshop does not establish one modem part number for every EBR float.",
+                "sources": [
+                  "https://argo.ucsd.edu/wp-content/uploads/sites/361/2022/05/Report_floattechnicalworshop_2017.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabird-navis-ebr-2017",
+                "configuration": "External Bladder Redesign discussed by Sea-Bird at the 2017 Argo technical workshop. EBR denotes a mechanical redesign, not a guaranteed N1/N2 controller, modem chip or memory capacity. No N2 prototype features are attributed to all EBR floats.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Core ocean measurements",
+                "details": "CTD profiling is the documented core measurement function; sensor and controller revisions must be checked against individual metadata.",
+                "sources": [
+                  "https://argo.ucsd.edu/wp-content/uploads/sites/361/2022/05/Report_floattechnicalworshop_2017.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabird-navis-ebr-2017",
+                "configuration": "External Bladder Redesign discussed by Sea-Bird at the 2017 Argo technical workshop. EBR denotes a mechanical redesign, not a guaranteed N1/N2 controller, modem chip or memory capacity. No N2 prototype features are attributed to all EBR floats.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Buoyancy systems",
+                "details": "Oil-pump profiling system and a separate surface air bladder; workshop diagnostics include internal pressure and vacuum testing.",
+                "sources": [
+                  "https://argo.ucsd.edu/wp-content/uploads/sites/361/2022/05/Report_floattechnicalworshop_2017.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabird-navis-ebr-2017",
+                "configuration": "External Bladder Redesign discussed by Sea-Bird at the 2017 Argo technical workshop. EBR denotes a mechanical redesign, not a guaranteed N1/N2 controller, modem chip or memory capacity. No N2 prototype features are attributed to all EBR floats.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "EBR mechanical changes",
+                "details": "Revised external air bladder, cowling and vent arrangement address surface buoyancy and reliability.",
+                "sources": [
+                  "https://argo.ucsd.edu/wp-content/uploads/sites/361/2022/05/Report_floattechnicalworshop_2017.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabird-navis-ebr-2017",
+                "configuration": "External Bladder Redesign discussed by Sea-Bird at the 2017 Argo technical workshop. EBR denotes a mechanical redesign, not a guaranteed N1/N2 controller, modem chip or memory capacity. No N2 prototype features are attributed to all EBR floats.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -144577,8 +145001,21 @@
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Argo platform identity",
+                "details": "Argo code NAVIS_EBR identifies this platform under Sea-Bird; it is a catalog identity, not a radio signature.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/NAVIS_EBR/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "seabird-navis-ebr-2017",
+                "configuration": "External Bladder Redesign discussed by Sea-Bird at the 2017 Argo technical workshop. EBR denotes a mechanical redesign, not a guaranteed N1/N2 controller, modem chip or memory capacity. No N2 prototype features are attributed to all EBR floats.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -144589,12 +145026,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -145123,13 +145555,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "nke-provor-cts3-2006",
+            "configuration": "NKE PROVOR CTS3 manual, revision C dated 9 October 2006. This historical member of the PROVOR family is distinct from CTS3.1, CTS4 and CTS5. Processor silicon, RAM and storage capacities are not documented here.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Controller option",
+                "details": "Argo identifies I458 as a primary board in certain PROVOR CTS3 and CTS3-DO configurations; the board designation is not a processor chip model.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R28/current/CB0010/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts3-2006",
+                "configuration": "NKE PROVOR CTS3 manual, revision C dated 9 October 2006. This historical member of the PROVOR family is distinct from CTS3.1, CTS4 and CTS5. Processor silicon, RAM and storage capacities are not documented here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -145138,23 +145589,87 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Satellite telemetry",
+                "details": "Argos transmitter sends scientific and engineering messages at the surface; Argos also provides positioning. The transmitter identifier is not a MAC address.",
+                "sources": [
+                  "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts3-2006",
+                "configuration": "NKE PROVOR CTS3 manual, revision C dated 9 October 2006. This historical member of the PROVOR family is distinct from CTS3.1, CTS4 and CTS5. Processor silicon, RAM and storage capacities are not documented here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Measurement package",
+                "details": "Sea-Bird SBE 41CP conductivity, temperature and pressure instrumentation.",
+                "sources": [
+                  "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts3-2006",
+                "configuration": "NKE PROVOR CTS3 manual, revision C dated 9 October 2006. This historical member of the PROVOR family is distinct from CTS3.1, CTS4 and CTS5. Processor silicon, RAM and storage capacities are not documented here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery chemistry",
+                "details": "10.8 V lithium thionyl-chloride battery supply.",
+                "sources": [
+                  "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts3-2006",
+                "configuration": "NKE PROVOR CTS3 manual, revision C dated 9 October 2006. This historical member of the PROVOR family is distinct from CTS3.1, CTS4 and CTS5. Processor silicon, RAM and storage capacities are not documented here.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Vertical movement",
+                "details": "Pump, solenoid valve and external oil bladder control buoyancy.",
+                "sources": [
+                  "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts3-2006",
+                "configuration": "NKE PROVOR CTS3 manual, revision C dated 9 October 2006. This historical member of the PROVOR family is distinct from CTS3.1, CTS4 and CTS5. Processor silicon, RAM and storage capacities are not documented here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Housing and servicing",
+                "details": "Aluminum pressure cylinder, 17 cm diameter and 120 cm body length; 2000 m rating. A cabled terminal interface supports local preparation.",
+                "sources": [
+                  "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts3-2006",
+                "configuration": "NKE PROVOR CTS3 manual, revision C dated 9 October 2006. This historical member of the PROVOR family is distinct from CTS3.1, CTS4 and CTS5. Processor silicon, RAM and storage capacities are not documented here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -145163,8 +145678,21 @@
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Argo platform identity",
+                "details": "Argo code PROVOR identifies this platform under NKE / Martec; it is a catalog identity, not a radio signature.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/PROVOR/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts3-2006",
+                "configuration": "NKE PROVOR CTS3 manual, revision C dated 9 October 2006. This historical member of the PROVOR family is distinct from CTS3.1, CTS4 and CTS5. Processor silicon, RAM and storage capacities are not documented here.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -145173,14 +145701,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -145219,48 +145741,171 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "nke-provor-cts4-provbioii",
+            "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Navigation and science boards",
+                "details": "Argo identifies CTS4 as a dual-board float with I535 navigation and CAMAT256 acquisition in certain configurations.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/PROVOR_III/",
+                  "https://vocab.nerc.ac.uk/collection/R28/current/CB0012/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts4-provbioii",
+                "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "2013 science-board architecture",
+                "details": "Ifremer/ASICA science board uses an 8-bit low-power MCU, separate from the navigation board; NKE industrialized the design and software.",
+                "sources": [
+                  "https://www.mercator-ocean.eu/wp-content/uploads/2015/05/Mercator-Ocean-newsletter-2013_48.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts4-provbioii",
+                "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "2013 science-board memory",
+                "details": "128/256 KB code memory, 64 KB RAM and 8 MB data memory. These are acquisition-board figures, not a combined whole-float RAM total.",
+                "sources": [
+                  "https://www.mercator-ocean.eu/wp-content/uploads/2015/05/Mercator-Ocean-newsletter-2013_48.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts4-provbioii",
+                "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Mission and preparation communication",
+                "details": "Iridium SBD or RUDICS, GPS and Bluetooth; magnetic start with audible self-test.",
+                "sources": [
+                  "https://nke-instrumentation.com/wp-content/uploads/2018/01/PROVOR-CTS4_UK4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts4-provbioii",
+                "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Core CTD and optional science payloads",
+                "details": "SBE 41CP CTD; options include Aanderaa 4330, ECOtriplet, C-Rover, OCR504 and SUNA.",
+                "sources": [
+                  "https://nke-instrumentation.com/wp-content/uploads/2018/01/PROVOR-CTS4_UK4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts4-provbioii",
+                "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Energy and buoyancy",
+                "details": "Lithium cells, separate clock battery, oil pump and ballast; anodized aluminum hull with syntactic foam, rated to 2000 dbar.",
+                "sources": [
+                  "https://nke-instrumentation.com/wp-content/uploads/2018/01/PROVOR-CTS4_UK4.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts4-provbioii",
+                "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "2013 science-board I/O",
+                "details": "Six extended serial ports, an eight-channel 12-bit ADC and switchable sensor power regulators.",
+                "sources": [
+                  "https://www.mercator-ocean.eu/wp-content/uploads/2015/05/Mercator-Ocean-newsletter-2013_48.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts4-provbioii",
+                "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "2013 mission control",
+                "details": "Independent sensor scheduling and remote mission updates; the described revision supports up to ten profiles per cycle and five sampling-depth zones per sensor.",
+                "sources": [
+                  "https://www.mercator-ocean.eu/wp-content/uploads/2015/05/Mercator-Ocean-newsletter-2013_48.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts4-provbioii",
+                "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Argo platform identity",
+                "details": "Argo code PROVOR_III identifies this platform under NKE Instrumentation; it is a catalog identity, not a radio signature.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/PROVOR_III/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "nke-provor-cts4-provbioii",
+                "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -145268,16 +145913,7 @@
             "facts": []
           }
         },
-        "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
-        ],
+        "missing_sections": [],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
     },
@@ -147720,13 +148356,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "scripps-solo-bgc-2022-0004",
+            "configuration": "Representative Scripps-built configuration: float 0004 / WMO 5906767, deployed March 2022. Operator metadata establishes this hardware; it is not a universal SOLO BGC BOM or an MRV S2-BGC specification. MCU silicon and RAM are undisclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Control boards",
+                "details": "GG32 revision 6.3 primary board and GGM4 secondary board.",
+                "sources": [
+                  "https://sio-argo.ucsd.edu/MET0004.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-solo-bgc-2022-0004",
+                "configuration": "Representative Scripps-built configuration: float 0004 / WMO 5906767, deployed March 2022. Operator metadata establishes this hardware; it is not a universal SOLO BGC BOM or an MRV S2-BGC specification. MCU silicon and RAM are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -147735,18 +148390,69 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Surface telemetry",
+                "details": "Iridium satellite transmission.",
+                "sources": [
+                  "https://sio-argo.ucsd.edu/MET0004.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-solo-bgc-2022-0004",
+                "configuration": "Representative Scripps-built configuration: float 0004 / WMO 5906767, deployed March 2022. Operator metadata establishes this hardware; it is not a universal SOLO BGC BOM or an MRV S2-BGC specification. MCU silicon and RAM are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Physical and chemical measurements",
+                "details": "SBE 41CP CTD with Druck 2900 PSIA pressure sensor; SBE 83 oxygen optode, SUNA V2 nitrate and SeaFET pH.",
+                "sources": [
+                  "https://sio-argo.ucsd.edu/MET0004.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-solo-bgc-2022-0004",
+                "configuration": "Representative Scripps-built configuration: float 0004 / WMO 5906767, deployed March 2022. Operator metadata establishes this hardware; it is not a universal SOLO BGC BOM or an MRV S2-BGC specification. MCU silicon and RAM are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Optical sensors",
+                "details": "WET Labs ECO_FLBBCD and OCR504_ICSW supply optical backscatter/fluorescence and irradiance measurements.",
+                "sources": [
+                  "https://sio-argo.ucsd.edu/MET0004.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-solo-bgc-2022-0004",
+                "configuration": "Representative Scripps-built configuration: float 0004 / WMO 5906767, deployed March 2022. Operator metadata establishes this hardware; it is not a universal SOLO BGC BOM or an MRV S2-BGC specification. MCU silicon and RAM are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Separate battery loads",
+                "details": "Tadiran PulsePlus hybrid-lithium packs: pump uses four eight-D-cell 15 V packs; CPU and pH each use one four-C-cell 7 V pack.",
+                "sources": [
+                  "https://sio-argo.ucsd.edu/MET0004.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-solo-bgc-2022-0004",
+                "configuration": "Representative Scripps-built configuration: float 0004 / WMO 5906767, deployed March 2022. Operator metadata establishes this hardware; it is not a universal SOLO BGC BOM or an MRV S2-BGC specification. MCU silicon and RAM are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -147755,13 +148461,39 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Documented firmware",
+                "details": "Main-board ROM is SBE60203Mar22; CTD firmware is 7.2.5.",
+                "sources": [
+                  "https://sio-argo.ucsd.edu/MET0004.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-solo-bgc-2022-0004",
+                "configuration": "Representative Scripps-built configuration: float 0004 / WMO 5906767, deployed March 2022. Operator metadata establishes this hardware; it is not a universal SOLO BGC BOM or an MRV S2-BGC specification. MCU silicon and RAM are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Argo platform identity",
+                "details": "Argo code SOLO_BGC identifies this platform under Scripps Institution of Oceanography; it is a catalog identity, not a radio signature.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/SOLO_BGC/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "scripps-solo-bgc-2022-0004",
+                "configuration": "Representative Scripps-built configuration: float 0004 / WMO 5906767, deployed March 2022. Operator metadata establishes this hardware; it is not a universal SOLO BGC BOM or an MRV S2-BGC specification. MCU silicon and RAM are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -147770,14 +148502,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "interfaces"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -150132,8 +150858,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "laoshan-xuanwu-v21-2024",
+            "configuration": "March 2024 developer presentation, specifically the V2.1 variant comparison on page 4. Earlier pages use inconsistent V2 naming, so their battery-capacity figures are not assigned to V2.1. CPU, RAM, storage and cell chemistry are undisclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -150147,23 +150879,75 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Satellite telemetry",
+                "details": "Two-way Iridium communications; the development overview includes retransmission capability.",
+                "sources": [
+                  "https://pol.ouc.edu.cn/_upload/article/files/96/5e/a403b8304abcad490c07599829be/0d5533b7-6c4c-43d7-a39f-729211353443.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "laoshan-xuanwu-v21-2024",
+                "configuration": "March 2024 developer presentation, specifically the V2.1 variant comparison on page 4. Earlier pages use inconsistent V2 naming, so their battery-capacity figures are not assigned to V2.1. CPU, RAM, storage and cell chemistry are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Deep CTD",
+                "details": "Sea-Bird SBE 61 conductivity, temperature and depth package.",
+                "sources": [
+                  "https://pol.ouc.edu.cn/_upload/article/files/96/5e/a403b8304abcad490c07599829be/0d5533b7-6c4c-43d7-a39f-729211353443.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "laoshan-xuanwu-v21-2024",
+                "configuration": "March 2024 developer presentation, specifically the V2.1 variant comparison on page 4. Earlier pages use inconsistent V2 naming, so their battery-capacity figures are not assigned to V2.1. CPU, RAM, storage and cell chemistry are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "V2.1 buoyancy configuration",
+                "details": "V2.1 includes buoyancy compensation and an estimated 160-cycle endurance; page 4 distinguishes it from the uncompensated V2.0 configuration.",
+                "sources": [
+                  "https://pol.ouc.edu.cn/_upload/article/files/96/5e/a403b8304abcad490c07599829be/0d5533b7-6c4c-43d7-a39f-729211353443.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "laoshan-xuanwu-v21-2024",
+                "configuration": "March 2024 developer presentation, specifically the V2.1 variant comparison on page 4. Earlier pages use inconsistent V2 naming, so their battery-capacity figures are not assigned to V2.1. CPU, RAM, storage and cell chemistry are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "V2.1 pressure package",
+                "details": "6000 dbar depth rating; 60 cm diameter, 130 cm height and 58.3 kg mass in the variant comparison.",
+                "sources": [
+                  "https://pol.ouc.edu.cn/_upload/article/files/96/5e/a403b8304abcad490c07599829be/0d5533b7-6c4c-43d7-a39f-729211353443.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "laoshan-xuanwu-v21-2024",
+                "configuration": "March 2024 developer presentation, specifically the V2.1 variant comparison on page 4. Earlier pages use inconsistent V2 naming, so their battery-capacity figures are not assigned to V2.1. CPU, RAM, storage and cell chemistry are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -150172,8 +150956,21 @@
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Argo platform identity",
+                "details": "Argo code XUANWU identifies this platform under Laoshan Laboratory / QNLM; it is a catalog identity, not a radio signature.",
+                "sources": [
+                  "https://vocab.nerc.ac.uk/collection/R23/current/XUANWU/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "laoshan-xuanwu-v21-2024",
+                "configuration": "March 2024 developer presentation, specifically the V2.1 variant comparison on page 4. Earlier pages use inconsistent V2 naming, so their battery-capacity figures are not assigned to V2.1. CPU, RAM, storage and cell chemistry are undisclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -150184,12 +150981,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -329393,6 +330185,690 @@
             ]
           }
         ]
+      },
+      {
+        "id": "apex-deep-2025-published-system",
+        "manufacturer": "Teledyne Webb Research",
+        "models": [
+          "Deep APEX",
+          "APEX_D"
+        ],
+        "configuration": "Deep column of the 2025 APEX manufacturer brochure. Standard, optional and future payloads are distinguished. Processor, controller revision and memory are not established; the APF11 specification for standard APEX is not applied here.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Argo platform identity",
+            "details": "Argo code APEX_D identifies this platform under Teledyne Webb Research / Webb Research; it is a catalog identity, not a radio signature.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/APEX_D/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Satellite telemetry choices",
+            "details": "Iridium circuit-switched RUDICS is standard; SBD is optional.",
+            "sources": [
+              "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "CTD and optional oxygen",
+            "details": "SBE 61 CTD is standard. Aanderaa 4831 and RINKO III ARO-CAV oxygen sensors are options; nitrate sensing is listed as future availability.",
+            "sources": [
+              "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Power supply",
+            "details": "Primary lithium batteries are standard for Deep APEX. The brochure does not list alkaline batteries for this variant.",
+            "sources": [
+              "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Deep pressure enclosure",
+            "details": "Glass-sphere pressure housing and 6000 m operating depth; handles and wooden transport crate are standard.",
+            "sources": [
+              "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Optional ice avoidance",
+            "details": "Ice-avoidance capability is optional; its inclusion must be checked for an individual configuration.",
+            "sources": [
+              "https://www.teledynemarine.com/en-us/products/SiteAssets/Webb%20Research/Apex%20Float%20Brochure%202025%20Digital.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Unknown manufacturer",
+            "models": [
+              "APEX_D"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nke-arvor-c-2010",
+        "manufacturer": "NKE Instrumentation",
+        "models": [
+          "ARVOR-C (2010)",
+          "ARVOR_C"
+        ],
+        "configuration": "Original coastal ARVOR-C described by its Ifremer developers in 2010, with controller architecture explained in their later Arvor-Cm paper. The multisensor CM revision has separate dimensions and electronics.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Argo platform identity",
+            "details": "Argo code ARVOR_C identifies this platform under NKE Instrumentation; it is a catalog identity, not a radio signature.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/ARVOR_C/"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Original navigation board",
+            "details": "The Arvor-family I535 board uses an ATmega128 microcontroller and sequentially controls sensors, satellite communication and hydraulics. This does not specify ARVOR2 electronics.",
+            "sources": [
+              "https://archimer.ifremer.fr/doc/00321/43176/66494.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Mission and preparation links",
+            "details": "Two-way Iridium and a combined GPS/Iridium antenna; Bluetooth supports local programming and tests.",
+            "sources": [
+              "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Core measurement package",
+            "details": "Pumped Sea-Bird CTD. Oxygen, turbidity and fluorescence additions were under development in this 2010 account, not universal installed equipment.",
+            "sources": [
+              "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Buoyancy and station holding",
+            "details": "High-pressure pump and external oil bladder; seafloor anti-drift claws enable coastal stationing.",
+            "sources": [
+              "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Original pressure package",
+            "details": "450 m design rating; under 20 kg, approximately 2.1 m long and 11 cm diameter. Magnetic activation.",
+            "sources": [
+              "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomous cycle",
+            "details": "Selectable profiling cycles, bottom stationing and remote mission changes through satellite telemetry.",
+            "sources": [
+              "https://archimer.ifremer.fr/doc/00002/11302/10299.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Unknown manufacturer",
+            "models": [
+              "ARVOR_C"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nke-arvor-cm-2015",
+        "manufacturer": "NKE Instrumentation",
+        "models": [
+          "ARVOR-CM",
+          "ARVOR-Cm"
+        ],
+        "configuration": "2015 manufacturer brochure and 2016 developer paper for multisensor ARVOR-CM. Representative coastal-family revision, not the original 2010 ARVOR-C. Science-board capacities depend on revision.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Argo platform identity",
+            "details": "Argo code ARVOR_C identifies this platform under NKE Instrumentation; it is a catalog identity, not a radio signature.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/ARVOR_C/"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Separated navigation and acquisition",
+            "details": "I535/ATmega128 navigation controls hydraulics and satellite communication. A separate Ifremer-designed acquisition board handles sensors; NKE supplies its software.",
+            "sources": [
+              "https://archimer.ifremer.fr/doc/00321/43176/66494.pdf"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Documented acquisition-board option",
+            "details": "Argo identifies CAMAT256 as a secondary controller in certain ARVOR_CM configurations.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R28/current/CB0012/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Sensor connections",
+            "details": "The 2016 CM architecture supports up to five RS232 sensor outputs and two analog sensor outputs.",
+            "sources": [
+              "https://archimer.ifremer.fr/doc/00321/43176/66494.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Core and optional measurements",
+            "details": "SBE 41CP CTD; optional oxygen, fluorometer and turbidity sensors. Listed payload alternatives include Turner, Wet Labs and Seapoint products.",
+            "sources": [
+              "https://nke-instrumentation.com/wp-content/uploads/2018/01/ARVOR-CM_UK2.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Satellite and local links",
+            "details": "Iridium SBD, 12-channel GPS and Bluetooth preparation interface; magnetic start.",
+            "sources": [
+              "https://nke-instrumentation.com/wp-content/uploads/2018/01/ARVOR-CM_UK2.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Energy and buoyancy",
+            "details": "Lithium batteries, separately backed real-time clock, oil pump and valve; 400 dbar rating.",
+            "sources": [
+              "https://nke-instrumentation.com/wp-content/uploads/2018/01/ARVOR-CM_UK2.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "CM housing",
+            "details": "Glass-reinforced plastic hull and syntactic foam; 25–26 kg depending on payload, 12.5 cm hull diameter and 195 cm total height.",
+            "sources": [
+              "https://nke-instrumentation.com/wp-content/uploads/2018/01/ARVOR-CM_UK2.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Unknown manufacturer",
+            "models": [
+              "ARVOR_C"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nke-provor-cts3-2006",
+        "manufacturer": "NKE Instrumentation",
+        "models": [
+          "PROVOR CTS3",
+          "PROVOR (2006 CTS3 configuration)"
+        ],
+        "configuration": "NKE PROVOR CTS3 manual, revision C dated 9 October 2006. This historical member of the PROVOR family is distinct from CTS3.1, CTS4 and CTS5. Processor silicon, RAM and storage capacities are not documented here.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Argo platform identity",
+            "details": "Argo code PROVOR identifies this platform under NKE / Martec; it is a catalog identity, not a radio signature.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/PROVOR/"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Controller option",
+            "details": "Argo identifies I458 as a primary board in certain PROVOR CTS3 and CTS3-DO configurations; the board designation is not a processor chip model.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R28/current/CB0010/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Satellite telemetry",
+            "details": "Argos transmitter sends scientific and engineering messages at the surface; Argos also provides positioning. The transmitter identifier is not a MAC address.",
+            "sources": [
+              "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Measurement package",
+            "details": "Sea-Bird SBE 41CP conductivity, temperature and pressure instrumentation.",
+            "sources": [
+              "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery chemistry",
+            "details": "10.8 V lithium thionyl-chloride battery supply.",
+            "sources": [
+              "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Vertical movement",
+            "details": "Pump, solenoid valve and external oil bladder control buoyancy.",
+            "sources": [
+              "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Housing and servicing",
+            "details": "Aluminum pressure cylinder, 17 cm diameter and 120 cm body length; 2000 m rating. A cabled terminal interface supports local preparation.",
+            "sources": [
+              "https://www.coriolis.eu.org/content/download/23261/160270/file/4.2_MUT_PROVOR_CTS3_DOC050503_C_20061009.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Unknown manufacturer",
+            "models": [
+              "PROVOR"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nke-provor-cts4-provbioii",
+        "manufacturer": "NKE Instrumentation",
+        "models": [
+          "PROVOR CTS4",
+          "PROVOR_III",
+          "ProvBioII"
+        ],
+        "configuration": "CTS4 dual-board platform, with the separately identified 2013 ProvBioII science-board implementation. Those memory and I/O figures describe the developer-paper revision, not every subsequent CTS4. Optional sensors vary by mission.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Argo platform identity",
+            "details": "Argo code PROVOR_III identifies this platform under NKE Instrumentation; it is a catalog identity, not a radio signature.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/PROVOR_III/"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Navigation and science boards",
+            "details": "Argo identifies CTS4 as a dual-board float with I535 navigation and CAMAT256 acquisition in certain configurations.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/PROVOR_III/",
+              "https://vocab.nerc.ac.uk/collection/R28/current/CB0012/"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "2013 science-board architecture",
+            "details": "Ifremer/ASICA science board uses an 8-bit low-power MCU, separate from the navigation board; NKE industrialized the design and software.",
+            "sources": [
+              "https://www.mercator-ocean.eu/wp-content/uploads/2015/05/Mercator-Ocean-newsletter-2013_48.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "2013 science-board memory",
+            "details": "128/256 KB code memory, 64 KB RAM and 8 MB data memory. These are acquisition-board figures, not a combined whole-float RAM total.",
+            "sources": [
+              "https://www.mercator-ocean.eu/wp-content/uploads/2015/05/Mercator-Ocean-newsletter-2013_48.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "2013 science-board I/O",
+            "details": "Six extended serial ports, an eight-channel 12-bit ADC and switchable sensor power regulators.",
+            "sources": [
+              "https://www.mercator-ocean.eu/wp-content/uploads/2015/05/Mercator-Ocean-newsletter-2013_48.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Mission and preparation communication",
+            "details": "Iridium SBD or RUDICS, GPS and Bluetooth; magnetic start with audible self-test.",
+            "sources": [
+              "https://nke-instrumentation.com/wp-content/uploads/2018/01/PROVOR-CTS4_UK4.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Core CTD and optional science payloads",
+            "details": "SBE 41CP CTD; options include Aanderaa 4330, ECOtriplet, C-Rover, OCR504 and SUNA.",
+            "sources": [
+              "https://nke-instrumentation.com/wp-content/uploads/2018/01/PROVOR-CTS4_UK4.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Energy and buoyancy",
+            "details": "Lithium cells, separate clock battery, oil pump and ballast; anodized aluminum hull with syntactic foam, rated to 2000 dbar.",
+            "sources": [
+              "https://nke-instrumentation.com/wp-content/uploads/2018/01/PROVOR-CTS4_UK4.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "2013 mission control",
+            "details": "Independent sensor scheduling and remote mission updates; the described revision supports up to ten profiles per cycle and five sampling-depth zones per sensor.",
+            "sources": [
+              "https://www.mercator-ocean.eu/wp-content/uploads/2015/05/Mercator-Ocean-newsletter-2013_48.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Unknown manufacturer",
+            "models": [
+              "PROVOR_III"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seabird-navis-ebr-2017",
+        "manufacturer": "Sea-Bird Scientific",
+        "models": [
+          "NAVIS_EBR",
+          "Navis EBR"
+        ],
+        "configuration": "External Bladder Redesign discussed by Sea-Bird at the 2017 Argo technical workshop. EBR denotes a mechanical redesign, not a guaranteed N1/N2 controller, modem chip or memory capacity. No N2 prototype features are attributed to all EBR floats.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Argo platform identity",
+            "details": "Argo code NAVIS_EBR identifies this platform under Sea-Bird; it is a catalog identity, not a radio signature.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/NAVIS_EBR/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "EBR mechanical changes",
+            "details": "Revised external air bladder, cowling and vent arrangement address surface buoyancy and reliability.",
+            "sources": [
+              "https://argo.ucsd.edu/wp-content/uploads/sites/361/2022/05/Report_floattechnicalworshop_2017.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Buoyancy systems",
+            "details": "Oil-pump profiling system and a separate surface air bladder; workshop diagnostics include internal pressure and vacuum testing.",
+            "sources": [
+              "https://argo.ucsd.edu/wp-content/uploads/sites/361/2022/05/Report_floattechnicalworshop_2017.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Surface telemetry",
+            "details": "Navis communications and positioning use Iridium and GPS. The workshop does not establish one modem part number for every EBR float.",
+            "sources": [
+              "https://argo.ucsd.edu/wp-content/uploads/sites/361/2022/05/Report_floattechnicalworshop_2017.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Core ocean measurements",
+            "details": "CTD profiling is the documented core measurement function; sensor and controller revisions must be checked against individual metadata.",
+            "sources": [
+              "https://argo.ucsd.edu/wp-content/uploads/sites/361/2022/05/Report_floattechnicalworshop_2017.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Unknown manufacturer",
+            "models": [
+              "NAVIS_EBR"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nke-arvor2-pfv2",
+        "manufacturer": "NKE Instrumentation",
+        "models": [
+          "ARVOR2",
+          "ARVOR 2"
+        ],
+        "configuration": "Argo registry identification of ARVOR2 and its PFV2 controller. Partial component evidence: exact MCU, memory, radio module, battery and installed sensor revision remain unestablished. Earlier ARVOR-I or I535 specifications are not substituted.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Argo platform identity",
+            "details": "Argo code ARVOR2 identifies this platform under NKE Instrumentation; it is a catalog identity, not a radio signature.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/ARVOR2/"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Controller board",
+            "details": "PFV2 primary controller board is explicitly identified for ARVOR2. The registry does not name the processor silicon or its memory.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/ARVOR2/",
+              "https://vocab.nerc.ac.uk/collection/R28/current/CB0013/"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Unknown manufacturer",
+            "models": [
+              "ARVOR2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "scripps-solo-bgc-2022-0004",
+        "manufacturer": "Scripps Institution of Oceanography Instrument Development Group",
+        "models": [
+          "SOLO_BGC",
+          "SOLO BGC (Scripps 2022 configuration)"
+        ],
+        "configuration": "Representative Scripps-built configuration: float 0004 / WMO 5906767, deployed March 2022. Operator metadata establishes this hardware; it is not a universal SOLO BGC BOM or an MRV S2-BGC specification. MCU silicon and RAM are undisclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Argo platform identity",
+            "details": "Argo code SOLO_BGC identifies this platform under Scripps Institution of Oceanography; it is a catalog identity, not a radio signature.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/SOLO_BGC/"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Control boards",
+            "details": "GG32 revision 6.3 primary board and GGM4 secondary board.",
+            "sources": [
+              "https://sio-argo.ucsd.edu/MET0004.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Documented firmware",
+            "details": "Main-board ROM is SBE60203Mar22; CTD firmware is 7.2.5.",
+            "sources": [
+              "https://sio-argo.ucsd.edu/MET0004.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Surface telemetry",
+            "details": "Iridium satellite transmission.",
+            "sources": [
+              "https://sio-argo.ucsd.edu/MET0004.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Physical and chemical measurements",
+            "details": "SBE 41CP CTD with Druck 2900 PSIA pressure sensor; SBE 83 oxygen optode, SUNA V2 nitrate and SeaFET pH.",
+            "sources": [
+              "https://sio-argo.ucsd.edu/MET0004.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Optical sensors",
+            "details": "WET Labs ECO_FLBBCD and OCR504_ICSW supply optical backscatter/fluorescence and irradiance measurements.",
+            "sources": [
+              "https://sio-argo.ucsd.edu/MET0004.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Separate battery loads",
+            "details": "Tadiran PulsePlus hybrid-lithium packs: pump uses four eight-D-cell 15 V packs; CPU and pH each use one four-C-cell 7 V pack.",
+            "sources": [
+              "https://sio-argo.ucsd.edu/MET0004.html"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Unknown manufacturer",
+            "models": [
+              "SOLO_BGC"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "laoshan-xuanwu-v21-2024",
+        "manufacturer": "Laoshan Laboratory",
+        "models": [
+          "XUANWU",
+          "HM6000",
+          "Xuanwu V2.1"
+        ],
+        "configuration": "March 2024 developer presentation, specifically the V2.1 variant comparison on page 4. Earlier pages use inconsistent V2 naming, so their battery-capacity figures are not assigned to V2.1. CPU, RAM, storage and cell chemistry are undisclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Argo platform identity",
+            "details": "Argo code XUANWU identifies this platform under Laoshan Laboratory / QNLM; it is a catalog identity, not a radio signature.",
+            "sources": [
+              "https://vocab.nerc.ac.uk/collection/R23/current/XUANWU/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Satellite telemetry",
+            "details": "Two-way Iridium communications; the development overview includes retransmission capability.",
+            "sources": [
+              "https://pol.ouc.edu.cn/_upload/article/files/96/5e/a403b8304abcad490c07599829be/0d5533b7-6c4c-43d7-a39f-729211353443.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Deep CTD",
+            "details": "Sea-Bird SBE 61 conductivity, temperature and depth package.",
+            "sources": [
+              "https://pol.ouc.edu.cn/_upload/article/files/96/5e/a403b8304abcad490c07599829be/0d5533b7-6c4c-43d7-a39f-729211353443.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "V2.1 buoyancy configuration",
+            "details": "V2.1 includes buoyancy compensation and an estimated 160-cycle endurance; page 4 distinguishes it from the uncompensated V2.0 configuration.",
+            "sources": [
+              "https://pol.ouc.edu.cn/_upload/article/files/96/5e/a403b8304abcad490c07599829be/0d5533b7-6c4c-43d7-a39f-729211353443.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "V2.1 pressure package",
+            "details": "6000 dbar depth rating; 60 cm diameter, 130 cm height and 58.3 kg mass in the variant comparison.",
+            "sources": [
+              "https://pol.ouc.edu.cn/_upload/article/files/96/5e/a403b8304abcad490c07599829be/0d5533b7-6c4c-43d7-a39f-729211353443.pdf"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Unknown manufacturer",
+            "models": [
+              "XUANWU"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "scripps-spray-historical-design",
+        "manufacturer": "Scripps Institution of Oceanography Instrument Development Group",
+        "models": [
+          "Spray glider",
+          "Spray"
+        ],
+        "configuration": "Scripps developer description of the historical Spray design. Mission payloads are alternatives, not a claim that every vehicle carries all listed sensors. The source describes a microprocessor controller but does not name its chip, RAM or storage.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Mission control",
+            "details": "Microprocessor controller inside the three-piece 6061 aluminum pressure housing.",
+            "sources": [
+              "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Surface communication",
+            "details": "Redundant combined GPS/Iridium antennas in the wings; the glider rolls 90 degrees at the surface to expose one antenna.",
+            "sources": [
+              "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and payload choices",
+            "details": "Compass, attitude sensing and GPS; mission payloads have included modified pumped SBE 41CP CTD, Sea Point optics, Tritech PA200 altimeter and Sontek Argonaut-SGP 750 kHz ADCP.",
+            "sources": [
+              "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and buoyancy",
+            "details": "52 DD lithium cells provide 13 MJ in this design. A reciprocating hydraulic pump changes volume by 250 cc; moving battery packs control pitch and roll.",
+            "sources": [
+              "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Pressure hull",
+            "details": "1500 m maximum design depth; 2 m length, 20 cm diameter, 110 cm wingspan and 51.8 kg mass, with 3.5 kg payload.",
+            "sources": [
+              "https://spray.ucsd.edu/pub/rel/info/spray_description.php"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -329409,8 +330885,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 765,
-    "devices_with_system_profiles": 658,
-    "devices_with_documented_compute": 315
+    "system_profiles": 775,
+    "devices_with_system_profiles": 667,
+    "devices_with_documented_compute": 321
   }
 }

@@ -9,6 +9,55 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 64 separates float generations and representative electronics',()=>{
+ const argo=code=>system('Unknown manufacturer',code);
+ const deep=argo('APEX_D');
+ assert.deepEqual(profileIds(deep),['apex-deep-2025-published-system']);
+ assert.equal(deep.sections.compute.status,'not-established');
+ assert.match(text(deep.sections.sensors),/SBE 61.*optional|SBE 61.*options/);
+ assert.match(text(deep.sections.radios),/RUDICS.*standard.*SBD.*optional/);
+ const coastal=argo('ARVOR_C');
+ assert.equal(profileIds(coastal).length,2);
+ const original=system('NKE Instrumentation','ARVOR-C (2010)');
+ const cm=system('NKE Instrumentation','ARVOR-CM');
+ assert.match(text(original.sections.compute),/ATmega128/);
+ assert.match(text(original.sections.interfaces),/450 m/);
+ assert.match(text(cm.sections.interfaces),/five RS232.*two analog/);
+ assert.match(text(cm.sections.power),/400 dbar/);
+ assert.equal(original.sections.memory.status,'not-established');
+ assert.match(text(argo('PROVOR').sections.compute),/I458/);
+ assert.match(text(argo('PROVOR_III').sections.memory),/64 KB RAM.*8 MB/);
+ assert.equal(argo('PROVOR').sections.memory.status,'not-established');
+ const newer=argo('ARVOR2');
+ assert.match(text(newer.sections.compute),/PFV2/);
+ assert.equal(newer.sections.radios.status,'not-established');
+ assert.equal(newer.sections.power.status,'not-established');
+ assert.equal(argo('NAVIS_EBR').sections.compute.status,'not-established');
+ assert.doesNotMatch(text(argo('NAVIS_EBR').sections.radios.facts),/9523/);
+});
+
+test('batch 64 preserves operator configuration and contradictory revision boundaries',()=>{
+ const argo=code=>system('Unknown manufacturer',code);
+ const bgc=argo('SOLO_BGC');
+ assert.deepEqual(profileIds(bgc),['scripps-solo-bgc-2022-0004']);
+ assert.match(text(bgc.sections.compute),/GG32.*6.3.*GGM4/);
+ assert.match(text(bgc.sections.power),/four eight-D-cell 15 V.*four-C-cell 7 V/);
+ assert.equal(bgc.sections.memory.status,'not-established');
+ assert.notDeepEqual(profileIds(bgc),profileIds(argo('SOLO_BGC_MRV')));
+ const xuanwu=argo('XUANWU');
+ assert.match(text(xuanwu.sections.interfaces),/58.3 kg/);
+ assert.doesNotMatch(text(xuanwu.sections.power.facts),/216 Ah|125 Ah/);
+ assert.equal(xuanwu.sections.compute.status,'not-established');
+ const spray=system('Scripps Institution of Oceanography Instrument Development Group','Spray glider');
+ assert.match(text(spray.sections.power),/52 DD lithium.*13 MJ/);
+ assert.doesNotMatch(text(spray.sections.compute),/Tattletale/);
+ for(const code of ['APEX_D','ARVOR_C','ARVOR2','PROVOR','PROVOR_III','NAVIS_EBR','SOLO_BGC','XUANWU']){
+  assert.equal(argo(code).complete_bill_of_materials,false);
+  assert.equal(profileIds(system('Other manufacturer',code)).length,0);
+  assert.equal(profileIds(system('Unknown manufacturer',code,{kind:'regulatory-equipment'})).length,0);
+ }
+});
+
 test('batch 63 binds Argo codes without conflating float manufacturers or revisions',()=>{
  const argo=code=>system('Unknown manufacturer',code);
  assert.deepEqual(profileIds(argo('ALTO')),['mrv-alto-published-system']);
@@ -17,13 +66,13 @@ test('batch 63 binds Argo codes without conflating float manufacturers or revisi
  assert.deepEqual(profileIds(argo('S2A')),['mrv-s2a-published-system']);
  assert.deepEqual(profileIds(argo('SOLO_II')),['scripps-solo-ii-historical']);
  assert.deepEqual(profileIds(argo('SOLO_BGC_MRV')),['mrv-s2bgc-published-system']);
- assert.equal(profileIds(argo('SOLO_BGC')).length,0);
+ assert.ok(!profileIds(argo('SOLO_BGC')).includes('mrv-s2bgc-published-system'));
  assert.deepEqual(profileIds(argo('NAVIS_A')),['seabird-navis-2016-core']);
  assert.match(text(argo('NAVIS_A').sections.radios),/9523.*RUDICS/);
- assert.equal(profileIds(argo('NAVIS_EBR')).length,0);
+ assert.ok(!profileIds(argo('NAVIS_EBR')).includes('seabird-navis-2016-core'));
  assert.deepEqual(profileIds(argo('APEX')),['apex-apf9a-2017-argos']);
  assert.match(text(argo('APEX').sections.compute),/APF9A/);
- assert.equal(profileIds(argo('APEX_D')).length,0);
+ assert.ok(!profileIds(argo('APEX_D')).includes('apex-apf9a-2017-argos'));
  assert.equal(profileIds(system('Other manufacturer','ALTO')).length,0);
  assert.equal(profileIds(system('Unknown manufacturer','Unidentified float')).length,0);
  assert.equal(profileIds(system('Unknown manufacturer','ALTO',{kind:'regulatory-equipment'})).length,0);
@@ -37,7 +86,7 @@ test('batch 63 keeps telemetry, servicing, controller options and payloads disti
  assert.doesNotMatch(text(argos.sections.radios.facts.map(f=>f.details)),/9602/);
  assert.match(text(iridium.sections.radios),/9602/);
  assert.equal(iridium.sections.compute.status,'not-established');
- assert.equal(profileIds(argo('ARVOR2')).length,0);
+ assert.ok(!profileIds(argo('ARVOR2')).includes('nke-arvor-argos-l-configuration'));
  assert.match(text(argo('ARVOR_D').sections.compute),/certain ARVOR_D configurations/);
  const solo=argo('SOLO_D');
  assert.match(text(solo.sections.radios),/XBee.*band is not specified/);
