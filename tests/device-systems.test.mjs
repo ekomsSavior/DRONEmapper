@@ -9,6 +9,38 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 61 keeps vehicle processors, FCC modules and radio revisions separate',()=>{
+ const equipment=(id)=>system('Waymo','E-band Automotive Radar Sensor',{kind:'regulatory-equipment',fcc_id:id});
+ const old=equipment('2AZKT710-60000W'),next=equipment('2AZKTRADE8C');
+ assert.deepEqual(profileIds(old),['waymo-rade6-2021-radar']);
+ assert.deepEqual(profileIds(next),['waymo-rade8c-2024-radar']);
+ assert.match(text(old.sections.radios),/77.103–79.663/);
+ assert.doesNotMatch(text(old.sections.radios),/79.036–80.978/);
+ assert.match(text(next.sections.radios),/79.036–80.978/);
+ assert.equal(next.sections.compute.status,'not-established');
+ const tele=system('Waymo','Telematics module',{kind:'regulatory-equipment',fcc_id:'2AZKT710-99000W'});
+ assert.match(text(tele.sections.compute),/Cortex-A7.*not the vehicle autonomy computer/);
+ assert.match(text(tele.sections.radios),/88W8897/);
+ assert.ok(!profileIds(system('Waymo','Waymo Driver')).includes('waymo-telematics-2021-modules'));
+ assert.equal(profileIds(system('Waymo','Telematics module')).length,0);
+ assert.equal(profileIds(equipment('2AZKT-unverified')).length,0);
+ const zip=system('Zipline','Platform 2 Computer',{kind:'regulatory-equipment',fcc_id:'2BML6P2EV3-0'});
+ assert.match(text(zip.sections.radios),/does not establish simultaneous MIMO/);
+ assert.match(text(zip.sections.power),/48 V/);
+ assert.equal(zip.sections.compute.status,'not-established');
+});
+
+test('batch 61 MDX-1 keeps V2 battery and storage separate from original EVO Max',()=>{
+ const v2=system('Autel Robotics','MDX-1');
+ assert.deepEqual(profileIds(v2),['autel-mdx1-v2-manual']);
+ assert.match(text(v2.sections.memory),/128 GB.*64 GB/);
+ assert.match(text(v2.sections.power),/14.76 V, 9248 mAh, 136.5 Wh/);
+ assert.match(text(v2.sections.sensors),/regional hardware/);
+ assert.match(text(v2.sections.software),/not the aircraft operating system/);
+ assert.equal(v2.sections.compute.status,'not-established');
+ assert.ok(!profileIds(system('Autel Robotics','EVO Max 4T')).includes('autel-mdx1-v2-manual'));
+});
+
 test('batch 59 separates same-name robots and preserves unknown food-service processors',()=>{
  const food=system('Chowbotics Sally','Sally');
  assert.match(text(food.sections.radios),/cellular/i);
@@ -171,7 +203,8 @@ test('equipment configurations retain disabled radios and separate host power do
  const zip=module('Zipline','2BML6P2EV1-0');
  assert.match(text(zip.sections.radios),/Bluetooth and 5 GHz are disabled/);
  assert.match(text(zip.sections.compute),/AX210D2W/);
- assert.equal(profileIds(module('Zipline','2BML6P2EV3-0')).length,0);
+ assert.deepEqual(profileIds(module('Zipline','2BML6P2EV3-0')),['zipline-p2ev3-radio-test-2026']);
+ assert.equal(module('Zipline','2BML6P2EV3-0').sections.compute.status,'not-established');
  const wifi=module('Nuro','2A98RDJZCGWA');
  assert.match(text(wifi.sections.compute),/88W9098 \/ 88Q9098 alternatives/);
  assert.match(text(wifi.sections.radios),/5260–5320 \/ 5500–5720/);
@@ -795,7 +828,7 @@ test('security, education and aircraft profiles keep host hardware and revisions
  assert.match(text(h520.sections.power),/6200 mAh/);
  assert.doesNotMatch(text(h520.sections.power),/31.32 Wh/);
  assert.equal(profileIds(system('Yuneec','H520E-RTK')).length,0);
- assert.equal(profileIds(system('Autel Robotics','EVO Max 4T V2')).length,0);
+ assert.deepEqual(profileIds(system('Autel Robotics','EVO Max 4T V2')),['autel-mdx1-v2-manual']);
  assert.match(text(system('Autel Robotics','EVO Max 4T').sections.power),/ABX41: 9248/);
  assert.match(text(system('Ava Robotics','Ava').sections.power),/seven hours/);
  assert.equal(profileIds(system('Ava Robotics','Ava Mobile Base')).length,0);

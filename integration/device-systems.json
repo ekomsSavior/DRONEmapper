@@ -37612,6 +37612,356 @@
           ]
         }
       ]
+    },
+    {
+      "id": "autel-mdx1-v2-manual",
+      "manufacturer": "Autel Robotics",
+      "models": [
+        "MDX-1",
+        "EVO Max 4T V2",
+        "EVO Max 4N V2",
+        "EVO Max 4NZ V2"
+      ],
+      "configuration": "MDX-1 / EVO Max V2 manufacturer manual; not the original MDX generation. Camera and radar configurations vary. CPU, RAM and radio-chip part numbers are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "memory",
+          "component": "Aircraft storage",
+          "details": "128 GB internal storage, approximately 64 GB available; microSD expansion up to 1 TB.",
+          "sources": [
+            "https://device.report/m/8be9e9f9cd3a82a2fc1260f99c8de0b24c02fced8fa157bfbfa4e878adcaa239"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Aircraft links",
+          "details": "802.11a/b/g/n/ac/ax Wi-Fi: 2.4, 5.2 and 5.8 GHz region-dependent bands. Video link additionally supports 902–928 MHz in FCC/ISED regions.",
+          "sources": [
+            "https://device.report/m/8be9e9f9cd3a82a2fc1260f99c8de0b24c02fced8fa157bfbfa4e878adcaa239"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and avoidance",
+          "details": "GPS/Galileo/BDS/GLONASS, visual positioning and obstacle cameras. Six-direction 60–64 GHz radar or downward 24–24.25 GHz radar depends on regional hardware; RTK is optional.",
+          "sources": [
+            "https://device.report/m/8be9e9f9cd3a82a2fc1260f99c8de0b24c02fced8fa157bfbfa4e878adcaa239"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Interchangeable imaging payload",
+          "details": "Fusion 4T V2, Fusion 4N V2 or Fusion 4NZ-L V2 gimbal according to purchased variant; their camera specifications are not interchangeable.",
+          "sources": [
+            "https://device.report/m/8be9e9f9cd3a82a2fc1260f99c8de0b24c02fced8fa157bfbfa4e878adcaa239"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Aircraft battery",
+          "details": "ABX41-D: 4S Li-Po, 14.76 V, 9248 mAh, 136.5 Wh. MDX120W charger; battery hot swap requires prior app enablement.",
+          "sources": [
+            "https://device.report/m/8be9e9f9cd3a82a2fc1260f99c8de0b24c02fced8fa157bfbfa4e878adcaa239"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Propulsion and controller",
+          "details": "Four motors; 1158CW/CCW propellers. EF9-3 Smart Controller V3 provides USB-C, USB-A and HDMI.",
+          "sources": [
+            "https://device.report/m/8be9e9f9cd3a82a2fc1260f99c8de0b24c02fced8fa157bfbfa4e878adcaa239"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Ground controller",
+          "details": "Smart Controller V3 runs Android 11-based software and Autel Enterprise; this is not the aircraft operating system.",
+          "sources": [
+            "https://device.report/m/8be9e9f9cd3a82a2fc1260f99c8de0b24c02fced8fa157bfbfa4e878adcaa239"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "waymo-murata-lb1bn-module",
+      "manufacturer": "Waymo",
+      "models": [
+        "Communication Module"
+      ],
+      "configuration": "Exact FCC 2AZKT71099000WIFI change-ID configuration. Specifications describe the Murata radio module, not a vehicle autonomy computer. Host CPU, RAM and storage are not established.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "identification",
+          "component": "Module lineage",
+          "details": "Murata’s October 2021 authorization links Waymo FCC 2AZKT71099000WIFI to original FCC VPYLB1BN.",
+          "sources": [
+            "https://device.report/m/1beba1c5532e2bad3c9bd05a120b1e6c9613f7d3c8751f739e0e8a5a6772d275"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Radio chipset and standards",
+          "details": "Murata LBEQ6ZZ1BN contains Marvell 88W8897 with a 40 MHz reference crystal; 802.11a/b/g/n/ac MIMO plus Bluetooth BR/EDR/LE. These shared chips and protocols are not unique Waymo identifiers.",
+          "sources": [
+            "https://manuals.plus/m/cd905f2a7818a417f0515d086bbab12f515999c3288a3ee0e223a20eb25e5a57.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Published radio bands",
+          "details": "2.4 GHz and 5 GHz bands; 20/40 MHz 802.11n and up to 80 MHz 802.11ac channel widths. Channel availability depends on regional certification.",
+          "sources": [
+            "https://manuals.plus/m/cd905f2a7818a417f0515d086bbab12f515999c3288a3ee0e223a20eb25e5a57.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "RF supply",
+          "details": "VDD33 nominal 3.3 V supplies the module RF circuitry, not the whole vehicle.",
+          "sources": [
+            "https://manuals.plus/m/cd905f2a7818a417f0515d086bbab12f515999c3288a3ee0e223a20eb25e5a57.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Physical module",
+          "details": "20.9 × 18.5 × 2.6 mm integrated transceiver; host connector and bus are not specified in this public manual.",
+          "sources": [
+            "https://manuals.plus/m/cd905f2a7818a417f0515d086bbab12f515999c3288a3ee0e223a20eb25e5a57.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2AZKT71099000WIFI"
+      ]
+    },
+    {
+      "id": "waymo-telematics-2021-modules",
+      "manufacturer": "Waymo",
+      "models": [
+        "Telematics module"
+      ],
+      "configuration": "FCC 2AZKT710-99000W, DEKRA March 2021 configuration. Component capabilities do not establish their enabled functions in Waymo firmware. Vehicle autonomy processor, total memory and host supply remain undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Internal communication modules",
+          "details": "Two WWAN modules bearing FCC 2AX2UAR7592V1 and one WLAN module bearing VPYLB1BN.",
+          "sources": [
+            "https://manuals.plus/m/a8c7d20c34ad00616a37021684c00856bcd69fab6fe2f9ae3ea2d9026b9efe30"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Tested wireless interfaces",
+          "details": "Dual-band 802.11a/b/g/n/ac and Bluetooth 4.0. Report lists 2.4 GHz channels and 5 GHz UNII bands, with 80 MHz 802.11ac support.",
+          "sources": [
+            "https://manuals.plus/m/a8c7d20c34ad00616a37021684c00856bcd69fab6fe2f9ae3ea2d9026b9efe30"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "WLAN silicon",
+          "details": "The contained Murata LBEQ6ZZ1BN manual identifies Marvell 88W8897. It is radio silicon, not proof of Waymo’s main autonomy processor.",
+          "sources": [
+            "https://manuals.plus/m/cd905f2a7818a417f0515d086bbab12f515999c3288a3ee0e223a20eb25e5a57.pdf",
+            "https://manuals.plus/m/a8c7d20c34ad00616a37021684c00856bcd69fab6fe2f9ae3ea2d9026b9efe30"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Cellular module application core",
+          "details": "Carrier listing for the exact contained FCC ID identifies Rolling Wireless AR7592-1: ARM Cortex-A7 application core at 1.2 GHz. This is the modem module’s customer core, not the vehicle autonomy computer.",
+          "sources": [
+            "https://opendevelopment.verizonwireless.com/design-and-build/approved-modules/module/32209",
+            "https://manuals.plus/m/a8c7d20c34ad00616a37021684c00856bcd69fab6fe2f9ae3ea2d9026b9efe30"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Cellular module capability",
+          "details": "AR7592-1 supports LTE Cat 6, WCDMA and GSM; the carrier listing includes LTE B2/B4/B5/B12/B13. Enabled bands depend on the host configuration and carrier.",
+          "sources": [
+            "https://opendevelopment.verizonwireless.com/design-and-build/approved-modules/module/32209"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Module positioning capability",
+          "details": "AR7592 supports GPS, GLONASS, Galileo, BeiDou and QZSS. Public module capability does not prove Waymo uses it for primary vehicle positioning.",
+          "sources": [
+            "https://opendevelopment.verizonwireless.com/design-and-build/approved-modules/module/32209"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Module interfaces",
+          "details": "Carrier documentation lists UART and GPIO on the cellular module. Host-level pinout and external connectors are not disclosed.",
+          "sources": [
+            "https://opendevelopment.verizonwireless.com/design-and-build/approved-modules/module/32209"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2AZKT710-99000W"
+      ]
+    },
+    {
+      "id": "waymo-rade6-2021-radar",
+      "manufacturer": "Waymo",
+      "models": [
+        "E-band Automotive Radar Sensor"
+      ],
+      "configuration": "Exact FCC 2AZKT710-60000W / RADE6 configuration, UL September 2021 report. Radar processing chip, memory and internal bus remain undisclosed. Millimeter-wave frequencies are outside ordinary Wi-Fi, Bluetooth and direct HackRF/RTL-SDR reception.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Radar architecture",
+          "details": "FMCW automotive radar with digital beam-forming scanning antenna; LRES W6/W4, MRES and HRES operating modes.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2AZKT710-60000W/5467634.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Tested frequency ranges",
+          "details": "LRES W6/W4: 77.103–79.663 GHz; MRES: 77.232–79.792 GHz; HRES: 77.411–79.731 GHz.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2AZKT710-60000W/5467634.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Integrated antenna",
+          "details": "Integral 29 × 2 × 1 mm antenna, reported gain 15.1 dBi. External test-interface boards are not treated as installed vehicle components.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2AZKT710-60000W/5467634.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Sensor supply",
+          "details": "Nominal 12 V DC external supply. Reported peak EIRP reaches 38.15 dBm in HRES; radiated power is not electrical consumption.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2AZKT710-60000W/5467634.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Tested firmware",
+          "details": "EUT firmware 382046355. The separately named test-laptop script is not the sensor’s onboard operating system.",
+          "sources": [
+            "https://fcc.report/FCC-ID/2AZKT710-60000W/5467634.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2AZKT710-60000W"
+      ]
+    },
+    {
+      "id": "waymo-rade8c-2024-radar",
+      "manufacturer": "Waymo",
+      "models": [
+        "E-band Automotive Radar Sensor"
+      ],
+      "configuration": "Exact FCC 2AZKTRADE8C / RADE8C, UL March 2024 report. Not interchangeable with RADE6. Processor and memory are undisclosed; the radar requires suitable millimeter-wave receiving hardware.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Radar architecture",
+          "details": "FMCW digital beam-forming radar with LRES W6/W4, MRES and HRES modes.",
+          "sources": [
+            "https://fccid.io/2AZKTRADE8C/Test-Report/14841575-E1V2-Waymo-FCC-Part-95M-Final-Test-Report-7412699.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Tested frequency ranges",
+          "details": "LRES W6/W4: 79.036–80.978 GHz; MRES: 79.046–80.968 GHz; HRES: 79.044–80.950 GHz.",
+          "sources": [
+            "https://fccid.io/2AZKTRADE8C/Test-Report/14841575-E1V2-Waymo-FCC-Part-95M-Final-Test-Report-7412699.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Antenna arrays",
+          "details": "Four integral patch arrays radiate sequentially. Each array is 25 × 2 × 1 mm with reported gain 16 dBi.",
+          "sources": [
+            "https://fccid.io/2AZKTRADE8C/Test-Report/14841575-E1V2-Waymo-FCC-Part-95M-Final-Test-Report-7412699.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Sensor supply and emissions",
+          "details": "Nominal 12 V DC car supply at test. HRES maximum measured average/peak EIRP: 33.45/43.98 dBm; not electrical consumption ratings.",
+          "sources": [
+            "https://fccid.io/2AZKTRADE8C/Test-Report/14841575-E1V2-Waymo-FCC-Part-95M-Final-Test-Report-7412699.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Tested firmware",
+          "details": "Software/firmware revision cl@549997726 identifies the tested configuration; no onboard operating system or public telemetry interface is disclosed.",
+          "sources": [
+            "https://fccid.io/2AZKTRADE8C/Test-Report/14841575-E1V2-Waymo-FCC-Part-95M-Final-Test-Report-7412699.pdf"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2AZKTRADE8C"
+      ]
+    },
+    {
+      "id": "zipline-p2ev3-radio-test-2026",
+      "manufacturer": "Zipline",
+      "models": [
+        "Platform 2 Computer"
+      ],
+      "configuration": "Exact FCC 2BML6P2EV3-0 / ZFC-P2EV3-0, HCT April 2026 radio report. This public report does not identify the CPU, RAM, storage or flight sensors; confidential exhibit listings are not component evidence.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Tested Wi-Fi operation",
+          "details": "802.11g/n HT20 at 2437 MHz, channel 6. Report describes SISO operation and tests two antenna chains individually; it does not establish simultaneous MIMO.",
+          "sources": [
+            "https://device.report/m/cfa7b4bee7b57c3340a59a62d8390bdc9c6ef667d98e98b3cc27b648ddac105a"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "RF antenna configuration",
+          "details": "FPC dipole antenna, peak gain 6.5 dBi. Maximum measured conducted output 27.44 dBm (554.63 mW). These values apply to the tested configuration.",
+          "sources": [
+            "https://device.report/m/cfa7b4bee7b57c3340a59a62d8390bdc9c6ef667d98e98b3cc27b648ddac105a"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Module input",
+          "details": "48 V supply in the equipment description; no battery chemistry, pack capacity or whole-aircraft consumption is specified.",
+          "sources": [
+            "https://device.report/m/cfa7b4bee7b57c3340a59a62d8390bdc9c6ef667d98e98b3cc27b648ddac105a"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Hardware and firmware revision",
+          "details": "Hardware 003A; firmware DRTU.07190.23.70.0. Engineering-mode tests fixed the transmit frequency; channel activity alone cannot identify a Zipline aircraft.",
+          "sources": [
+            "https://device.report/m/cfa7b4bee7b57c3340a59a62d8390bdc9c6ef667d98e98b3cc27b648ddac105a"
+          ]
+        }
+      ],
+      "fcc_ids": [
+        "2BML6P2EV3-0"
+      ]
     }
   ]
 }
