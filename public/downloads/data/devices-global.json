@@ -16985,8 +16985,19 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "artly-barista-platform",
+            "configuration": "Barista platform reference. Hardware changes across installations; UR3e and Hitbot products elsewhere in the catalog do not establish this robot’s arm. Processor, memory, RF, electrical rating and exact sensor parts undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "artly-barista-gtc2025-hand",
+            "configuration": "GTC 2025 demonstrated upgrade; not confirmation that every deployed Barista Bot has this hand. Exact hand model, local processor, memory and power unspecified. NVIDIA cloud hardware is not treated as an onboard BOM.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -17005,8 +17016,33 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "Computer vision informs the coffee-making workflow and real-time decisions.",
+                "sources": [
+                  "https://www.artly.ai/applications"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "artly-barista-platform",
+                "configuration": "Barista platform reference. Hardware changes across installations; UR3e and Hitbot products elsewhere in the catalog do not establish this robot’s arm. Processor, memory, RF, electrical rating and exact sensor parts undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Demonstration capture",
+                "details": "Training captures hand and finger movement for imitation learning; capture equipment is separate from deployed robot sensing.",
+                "sources": [
+                  "https://www.artly.ai/research/bionic-hand-upgrade"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "artly-barista-gtc2025-hand",
+                "configuration": "GTC 2025 demonstrated upgrade; not confirmation that every deployed Barista Bot has this hand. Exact hand model, local processor, memory and power unspecified. NVIDIA cloud hardware is not treated as an onboard BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -17015,13 +17051,63 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Manipulation",
+                "details": "Robotic arm handles coffee preparation and latte-art movements; actuator and gripper model not specified.",
+                "sources": [
+                  "https://www.artly.ai/hardwares/barista-bot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "artly-barista-platform",
+                "configuration": "Barista platform reference. Hardware changes across installations; UR3e and Hitbot products elsewhere in the catalog do not establish this robot’s arm. Processor, memory, RF, electrical rating and exact sensor parts undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "End-effector revision",
+                "details": "A bionic hand replaces the industrial gripper, expanding cup, utensil and ingredient handling.",
+                "sources": [
+                  "https://www.artly.ai/research/bionic-hand-upgrade"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "artly-barista-gtc2025-hand",
+                "configuration": "GTC 2025 demonstrated upgrade; not confirmation that every deployed Barista Bot has this hand. Exact hand model, local processor, memory and power unspecified. NVIDIA cloud hardware is not treated as an onboard BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Skill acquisition",
+                "details": "Deep learning and motion capture reproduce human barista techniques.",
+                "sources": [
+                  "https://www.artly.ai/hardwares/barista-bot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "artly-barista-platform",
+                "configuration": "Barista platform reference. Hardware changes across installations; UR3e and Hitbot products elsewhere in the catalog do not establish this robot’s arm. Processor, memory, RF, electrical rating and exact sensor parts undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Action-model pipeline",
+                "details": "VLA policies use motion-capture demonstrations; NVIDIA accelerators and cloud GPUs support models and training, with Isaac Sim providing simulation data.",
+                "sources": [
+                  "https://www.artly.ai/research/bionic-hand-upgrade"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "artly-barista-gtc2025-hand",
+                "configuration": "GTC 2025 demonstrated upgrade; not confirmation that every deployed Barista Bot has this hand. Exact hand model, local processor, memory and power unspecified. NVIDIA cloud hardware is not treated as an onboard BOM.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -17038,10 +17124,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -23653,13 +23736,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "badger-digital-teammate2025",
+            "configuration": "2025 manufacturer hardware diagram and platform page. Does not transfer every sensor to older Marty robots. CPU, RAM, radio frequencies and battery capacity are not specified; a separate 5G trial is not assumed installed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Payload computer",
+                "details": "Diagram identifies a payload PC, without processor model or accelerator details.",
+                "sources": [
+                  "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "badger-digital-teammate2025",
+                "configuration": "2025 manufacturer hardware diagram and platform page. Does not transfer every sensor to older Marty robots. CPU, RAM, radio frequencies and battery capacity are not specified; a separate 5G trial is not assumed installed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -23673,23 +23775,77 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Retail perception",
+                "details": "Top-stock, depth, human-detection, product and floor cameras; lidar; RFID antennas; barcode reader; LED shelf lighting.",
+                "sources": [
+                  "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "badger-digital-teammate2025",
+                "configuration": "2025 manufacturer hardware diagram and platform page. Does not transfer every sensor to older Marty robots. CPU, RAM, radio frequencies and battery capacity are not specified; a separate 5G trial is not assumed installed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Rechargeable power",
+                "details": "Lithium battery with approximately 16-hour runtime; robot returns to a charging station after a cycle.",
+                "sources": [
+                  "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf",
+                  "https://www.badger-technologies.com/platform/robots.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "badger-digital-teammate2025",
+                "configuration": "2025 manufacturer hardware diagram and platform page. Does not transfer every sensor to older Marty robots. CPU, RAM, radio frequencies and battery capacity are not specified; a separate 5G trial is not assumed installed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Store interfaces",
+                "details": "Retail-media display and barcode reader; integration with store systems, dashboards and mobile access.",
+                "sources": [
+                  "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "badger-digital-teammate2025",
+                "configuration": "2025 manufacturer hardware diagram and platform page. Does not transfer every sensor to older Marty robots. CPU, RAM, radio frequencies and battery capacity are not specified; a separate 5G trial is not assumed installed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "ROS and cloud analytics",
+                "details": "Platform page identifies upgradeable ROS. Captured retail data feeds cloud analytics and operational alerts.",
+                "sources": [
+                  "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf",
+                  "https://www.badger-technologies.com/platform/robots.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "badger-digital-teammate2025",
+                "configuration": "2025 manufacturer hardware diagram and platform page. Does not transfer every sensor to older Marty robots. CPU, RAM, radio frequencies and battery capacity are not specified; a separate 5G trial is not assumed installed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -23703,13 +23859,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -30645,13 +30796,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "built-exosystem-trenching",
+            "configuration": "Trenching upgrade specification for compatible 15–50 ton excavators. The kit is distinct from its host excavator; host engine, hydraulics and power ratings depend on installation. CPU SKU, GPU models, RAM and radio parts unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Liquid-cooled autonomy computer",
+                "details": "Manufacturer specifies 64-core Intel Xeon processing and dual NVIDIA GPUs. It does not identify processor SKU, socket count or GPU generation.",
+                "sources": [
+                  "https://www.builtrobotics.com/solutions/trenching"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "built-exosystem-trenching",
+                "configuration": "Trenching upgrade specification for compatible 15–50 ton excavators. The kit is distinct from its host excavator; host engine, hydraulics and power ratings depend on installation. CPU SKU, GPU models, RAM and radio parts unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -30660,13 +30830,40 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Remote emergency stop",
+                "details": "Wireless emergency-stop control is listed, without frequency, protocol or transmitter model.",
+                "sources": [
+                  "https://www.builtrobotics.com/solutions/trenching"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "built-exosystem-trenching",
+                "configuration": "Trenching upgrade specification for compatible 15–50 ton excavators. The kit is distinct from its host excavator; host engine, hydraulics and power ratings depend on installation. CPU SKU, GPU models, RAM and radio parts unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Position and environment",
+                "details": "360-degree camera coverage, RTK GPS and IMUs support movement and positioning. Vertical laser ranging is described in the broader technology reference.",
+                "sources": [
+                  "https://www.builtrobotics.com/solutions/trenching",
+                  "https://www.builtrobotics.com/technology"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "built-exosystem-trenching",
+                "configuration": "Trenching upgrade specification for compatible 15–50 ton excavators. The kit is distinct from its host excavator; host engine, hydraulics and power ratings depend on installation. CPU SKU, GPU models, RAM and radio parts unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -30675,13 +30872,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Excavator retrofit",
+                "details": "Reversible rear-mounted kit preserves manual operation; bucket dimensions are entered in software, including wear updates.",
+                "sources": [
+                  "https://www.builtrobotics.com/solutions/trenching"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "built-exosystem-trenching",
+                "configuration": "Trenching upgrade specification for compatible 15–50 ton excavators. The kit is distinct from its host excavator; host engine, hydraulics and power ratings depend on installation. CPU SKU, GPU models, RAM and radio parts unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Everest and Guardian",
+                "details": "Everest manages operations and as-built records; Guardian provides remote monitoring. Geofencing and smart cameras are safety-system elements.",
+                "sources": [
+                  "https://www.builtrobotics.com/solutions/trenching"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "built-exosystem-trenching",
+                "configuration": "Trenching upgrade specification for compatible 15–50 ton excavators. The kit is distinct from its host excavator; host engine, hydraulics and power ratings depend on installation. CPU SKU, GPU models, RAM and radio parts unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -30695,13 +30918,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -30971,13 +31189,37 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "cafex-2017-2018-founder-reference",
+            "configuration": "Dated interviews with founder Henry Hu: 2017 launch and 2018 second generation. Not a current universal kiosk BOM. CPU SKU, memory, radio modules and electrical requirements undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "cafex-current-commercial-controls",
+            "configuration": "Current commercial software and operator interfaces, separate from the dated arm reference. No processor, radio, electrical or mechanical revision is inferred from an app or payment integration.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Controller",
+                "details": "2017 interview describes a Linux controller; processor unspecified.",
+                "sources": [
+                  "https://www.engineering.com/cafe-x-launches-a-robotic-coffee-service/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cafex-2017-2018-founder-reference",
+                "configuration": "Dated interviews with founder Henry Hu: 2017 launch and 2018 second generation. Not a current universal kiosk BOM. CPU SKU, memory, radio modules and electrical requirements undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -31001,13 +31243,76 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Industrial arm",
+                "details": "Six-axis Mitsubishi arm, described as rated for 4–5 kg in 2017; transfers cups through dispensing and pickup positions.",
+                "sources": [
+                  "https://www.engineering.com/cafe-x-launches-a-robotic-coffee-service/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cafex-2017-2018-founder-reference",
+                "configuration": "Dated interviews with founder Henry Hu: 2017 launch and 2018 second generation. Not a current universal kiosk BOM. CPU SKU, memory, radio modules and electrical requirements undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "2018 gripper change",
+                "details": "Coffeebar 2.0 retains the robot arm but changes its gripper to handle 8 oz and 12 oz hot cups and 12 oz cold cups.",
+                "sources": [
+                  "https://thespoon.tech/an-interview-cafe-xs-henry-hu-about-the-companys-new-coffee-making-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cafex-2017-2018-founder-reference",
+                "configuration": "Dated interviews with founder Henry Hu: 2017 launch and 2018 second generation. Not a current universal kiosk BOM. CPU SKU, memory, radio modules and electrical requirements undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Customer ordering",
+                "details": "QR-based mobile ordering uses Stripe; an iPadOS point-of-sale app integrates Square payment devices.",
+                "sources": [
+                  "https://www.cafexapp.com/software"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cafex-current-commercial-controls",
+                "configuration": "Current commercial software and operator interfaces, separate from the dated arm reference. No processor, radio, electrical or mechanical revision is inferred from an app or payment integration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ordering and motion",
+                "details": "2017 system uses a motion library and customer ordering app; 2018 app adds multiple-drink orders.",
+                "sources": [
+                  "https://www.engineering.com/cafe-x-launches-a-robotic-coffee-service/",
+                  "https://thespoon.tech/an-interview-cafe-xs-henry-hu-about-the-companys-new-coffee-making-robot/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cafex-2017-2018-founder-reference",
+                "configuration": "Dated interviews with founder Henry Hu: 2017 launch and 2018 second generation. Not a current universal kiosk BOM. CPU SKU, memory, radio modules and electrical requirements undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Operational console",
+                "details": "Web tools manage orders, pricing and inventory; analytics export data, remote controls assist staff, and mobile controls support cleaning and restocking.",
+                "sources": [
+                  "https://www.cafexapp.com/software"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "cafex-current-commercial-controls",
+                "configuration": "Current commercial software and operator interfaces, separate from the dated arm reference. No processor, radio, electrical or mechanical revision is inferred from an app or payment integration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -31021,13 +31326,10 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -34688,18 +34990,50 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "corvus-one-2026-hardware",
+            "configuration": "Manufacturer 2026 system description. Exact processor, RAM, storage capacity, radio chipset and battery capacity are not disclosed. Trident is a separate forklift-mounted system, not an aircraft component.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard perception and control",
+                "details": "Vision is processed onboard; manufacturer reports a flight-control loop below 10 ms, without naming the processor.",
+                "sources": [
+                  "https://www.corvus-robotics.com/american-made-warehouse-drones"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "corvus-one-2026-hardware",
+                "configuration": "Manufacturer 2026 system description. Exact processor, RAM, storage capacity, radio chipset and battery capacity are not disclosed. Trident is a separate forklift-mounted system, not an aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Inventory storage architecture",
+                "details": "Inventory images, video and scans are stored on-site; optional paid cloud hosting is available. Aircraft storage capacity not stated.",
+                "sources": [
+                  "https://www.corvus-robotics.com/corvus-one"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "corvus-one-2026-hardware",
+                "configuration": "Manufacturer 2026 system description. Exact processor, RAM, storage capacity, radio chipset and battery capacity are not disclosed. Trident is a separate forklift-mounted system, not an aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
@@ -34708,23 +35042,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and inventory sensing",
+                "details": "Fourteen onboard cameras support collision avoidance; an industrial barcode scanner reads 1D/2D labels. RFID scanning is not offered.",
+                "sources": [
+                  "https://www.corvus-robotics.com/corvus-one"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "corvus-one-2026-hardware",
+                "configuration": "Manufacturer 2026 system description. Exact processor, RAM, storage capacity, radio chipset and battery capacity are not disclosed. Trident is a separate forklift-mounted system, not an aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery system",
+                "details": "Manufacturer reports a lithium battery tested to UN 38.3 and certified to UL 2054; voltage and energy capacity unspecified.",
+                "sources": [
+                  "https://www.corvus-robotics.com/american-made-warehouse-drones"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "corvus-one-2026-hardware",
+                "configuration": "Manufacturer 2026 system description. Exact processor, RAM, storage capacity, radio chipset and battery capacity are not disclosed. Trident is a separate forklift-mounted system, not an aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Landing pad and warehouse integration",
+                "details": "Landing pad requires Ethernet and power. API or file import/export connects warehouse-management systems.",
+                "sources": [
+                  "https://www.corvus-robotics.com/corvus-one"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "corvus-one-2026-hardware",
+                "configuration": "Manufacturer 2026 system description. Exact processor, RAM, storage capacity, radio chipset and battery capacity are not disclosed. Trident is a separate forklift-mounted system, not an aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Independent indoor navigation",
+                "details": "Flights do not require warehouse Wi-Fi, GPS or installed navigation beacons; this does not establish absence of all onboard radios.",
+                "sources": [
+                  "https://www.corvus-robotics.com/corvus-one"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "corvus-one-2026-hardware",
+                "configuration": "Manufacturer 2026 system description. Exact processor, RAM, storage capacity, radio chipset and battery capacity are not disclosed. Trident is a separate forklift-mounted system, not an aircraft component.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -34738,13 +35124,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -57889,13 +58269,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "doordash-dot-product",
+            "configuration": "DoorDash product description, reviewed November 2026. Processor, memory, radar frequency, modem, battery capacity and motor models are unpublished; remote assistance does not establish a specific cellular chipset.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Autonomy architecture",
+                "details": "Onboard computers use a redundant, fail-safe architecture; exact hardware and redundancy topology unspecified.",
+                "sources": [
+                  "https://about.doordash.com/en-us/dot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "doordash-dot-product",
+                "configuration": "DoorDash product description, reviewed November 2026. Processor, memory, radar frequency, modem, battery capacity and motor models are unpublished; remote assistance does not establish a specific cellular chipset.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -57909,23 +58308,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Surround perception",
+                "details": "LiDAR, radar and cameras provide 360-degree awareness; individual sensor manufacturers and quantities unspecified.",
+                "sources": [
+                  "https://about.doordash.com/en-us/dot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "doordash-dot-product",
+                "configuration": "DoorDash product description, reviewed November 2026. Processor, memory, radar frequency, modem, battery capacity and motor models are unpublished; remote assistance does not establish a specific cellular chipset.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric drive and battery",
+                "details": "All-electric vehicle with a removable battery; manufacturer claims more than six hours per charge.",
+                "sources": [
+                  "https://about.doordash.com/en-us/dot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "doordash-dot-product",
+                "configuration": "DoorDash product description, reviewed November 2026. Processor, memory, radar frequency, modem, battery capacity and motor models are unpublished; remote assistance does not establish a specific cellular chipset.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Delivery compartment",
+                "details": "Locked, insulated payload space opens through the DoorDash app.",
+                "sources": [
+                  "https://about.doordash.com/en-us/dot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "doordash-dot-product",
+                "configuration": "DoorDash product description, reviewed November 2026. Processor, memory, radar frequency, modem, battery capacity and motor models are unpublished; remote assistance does not establish a specific cellular chipset.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Dispatch and assistance",
+                "details": "Autonomous Delivery Platform allocates orders among delivery modes. Remote staff can assist with unexpected situations.",
+                "sources": [
+                  "https://about.doordash.com/en-us/dot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "doordash-dot-product",
+                "configuration": "DoorDash product description, reviewed November 2026. Processor, memory, radar frequency, modem, battery capacity and motor models are unpublished; remote assistance does not establish a specific cellular chipset.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -57939,13 +58390,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -64727,8 +65173,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "farmwise-titan-founder2023",
+            "configuration": "March 2023 interview with FarmWise cofounder Sebastien Boyer. Titan is self-propelled; the newer tractor-pulled Vulcan is separate. Processor, RAM, camera models, radio and propulsion hardware not established.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -64747,8 +65199,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Crop recognition",
+                "details": "Machine vision distinguishes planted crops from weeds to guide mechanical removal around each plant.",
+                "sources": [
+                  "https://news.mit.edu/2023/titanic-robots-farming-more-sustainable-0309"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "farmwise-titan-founder2023",
+                "configuration": "March 2023 interview with FarmWise cofounder Sebastien Boyer. Titan is self-propelled; the newer tractor-pulled Vulcan is separate. Processor, RAM, camera models, radio and propulsion hardware not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -64757,13 +65222,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Mechanical weeding and operator controls",
+                "details": "AI-controlled small blades cut weeds; an operator uses an iPad while walking alongside and checking progress.",
+                "sources": [
+                  "https://news.mit.edu/2023/titanic-robots-farming-more-sustainable-0309"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "farmwise-titan-founder2023",
+                "configuration": "March 2023 interview with FarmWise cofounder Sebastien Boyer. Titan is self-propelled; the newer tractor-pulled Vulcan is separate. Processor, RAM, camera models, radio and propulsion hardware not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Recognition models",
+                "details": "Crop-specific learned recognition guides blade movement; the company was expanding its supported crop dataset.",
+                "sources": [
+                  "https://news.mit.edu/2023/titanic-robots-farming-more-sustainable-0309"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "farmwise-titan-founder2023",
+                "configuration": "March 2023 interview with FarmWise cofounder Sebastien Boyer. Titan is self-propelled; the newer tractor-pulled Vulcan is separate. Processor, RAM, camera models, radio and propulsion hardware not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -64780,10 +65271,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -315556,6 +316044,401 @@
             ]
           }
         ]
+      },
+      {
+        "id": "corvus-one-2026-hardware",
+        "manufacturer": "Corvus",
+        "models": [
+          "Corvus One"
+        ],
+        "configuration": "Manufacturer 2026 system description. Exact processor, RAM, storage capacity, radio chipset and battery capacity are not disclosed. Trident is a separate forklift-mounted system, not an aircraft component.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard perception and control",
+            "details": "Vision is processed onboard; manufacturer reports a flight-control loop below 10 ms, without naming the processor.",
+            "sources": [
+              "https://www.corvus-robotics.com/american-made-warehouse-drones"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Inventory storage architecture",
+            "details": "Inventory images, video and scans are stored on-site; optional paid cloud hosting is available. Aircraft storage capacity not stated.",
+            "sources": [
+              "https://www.corvus-robotics.com/corvus-one"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and inventory sensing",
+            "details": "Fourteen onboard cameras support collision avoidance; an industrial barcode scanner reads 1D/2D labels. RFID scanning is not offered.",
+            "sources": [
+              "https://www.corvus-robotics.com/corvus-one"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery system",
+            "details": "Manufacturer reports a lithium battery tested to UN 38.3 and certified to UL 2054; voltage and energy capacity unspecified.",
+            "sources": [
+              "https://www.corvus-robotics.com/american-made-warehouse-drones"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Landing pad and warehouse integration",
+            "details": "Landing pad requires Ethernet and power. API or file import/export connects warehouse-management systems.",
+            "sources": [
+              "https://www.corvus-robotics.com/corvus-one"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Independent indoor navigation",
+            "details": "Flights do not require warehouse Wi-Fi, GPS or installed navigation beacons; this does not establish absence of all onboard radios.",
+            "sources": [
+              "https://www.corvus-robotics.com/corvus-one"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "farmwise-titan-founder2023",
+        "manufacturer": "FarmWise",
+        "models": [
+          "FarmWise Titan",
+          "Titan"
+        ],
+        "configuration": "March 2023 interview with FarmWise cofounder Sebastien Boyer. Titan is self-propelled; the newer tractor-pulled Vulcan is separate. Processor, RAM, camera models, radio and propulsion hardware not established.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Crop recognition",
+            "details": "Machine vision distinguishes planted crops from weeds to guide mechanical removal around each plant.",
+            "sources": [
+              "https://news.mit.edu/2023/titanic-robots-farming-more-sustainable-0309"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Mechanical weeding and operator controls",
+            "details": "AI-controlled small blades cut weeds; an operator uses an iPad while walking alongside and checking progress.",
+            "sources": [
+              "https://news.mit.edu/2023/titanic-robots-farming-more-sustainable-0309"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Recognition models",
+            "details": "Crop-specific learned recognition guides blade movement; the company was expanding its supported crop dataset.",
+            "sources": [
+              "https://news.mit.edu/2023/titanic-robots-farming-more-sustainable-0309"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "doordash-dot-product",
+        "manufacturer": "DoorDash",
+        "models": [
+          "Dot"
+        ],
+        "configuration": "DoorDash product description, reviewed November 2026. Processor, memory, radar frequency, modem, battery capacity and motor models are unpublished; remote assistance does not establish a specific cellular chipset.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autonomy architecture",
+            "details": "Onboard computers use a redundant, fail-safe architecture; exact hardware and redundancy topology unspecified.",
+            "sources": [
+              "https://about.doordash.com/en-us/dot"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Surround perception",
+            "details": "LiDAR, radar and cameras provide 360-degree awareness; individual sensor manufacturers and quantities unspecified.",
+            "sources": [
+              "https://about.doordash.com/en-us/dot"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric drive and battery",
+            "details": "All-electric vehicle with a removable battery; manufacturer claims more than six hours per charge.",
+            "sources": [
+              "https://about.doordash.com/en-us/dot"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Delivery compartment",
+            "details": "Locked, insulated payload space opens through the DoorDash app.",
+            "sources": [
+              "https://about.doordash.com/en-us/dot"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Dispatch and assistance",
+            "details": "Autonomous Delivery Platform allocates orders among delivery modes. Remote staff can assist with unexpected situations.",
+            "sources": [
+              "https://about.doordash.com/en-us/dot"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "built-exosystem-trenching",
+        "manufacturer": "Built Robotics",
+        "models": [
+          "Exosystem"
+        ],
+        "configuration": "Trenching upgrade specification for compatible 15–50 ton excavators. The kit is distinct from its host excavator; host engine, hydraulics and power ratings depend on installation. CPU SKU, GPU models, RAM and radio parts unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Liquid-cooled autonomy computer",
+            "details": "Manufacturer specifies 64-core Intel Xeon processing and dual NVIDIA GPUs. It does not identify processor SKU, socket count or GPU generation.",
+            "sources": [
+              "https://www.builtrobotics.com/solutions/trenching"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Position and environment",
+            "details": "360-degree camera coverage, RTK GPS and IMUs support movement and positioning. Vertical laser ranging is described in the broader technology reference.",
+            "sources": [
+              "https://www.builtrobotics.com/solutions/trenching",
+              "https://www.builtrobotics.com/technology"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Remote emergency stop",
+            "details": "Wireless emergency-stop control is listed, without frequency, protocol or transmitter model.",
+            "sources": [
+              "https://www.builtrobotics.com/solutions/trenching"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Excavator retrofit",
+            "details": "Reversible rear-mounted kit preserves manual operation; bucket dimensions are entered in software, including wear updates.",
+            "sources": [
+              "https://www.builtrobotics.com/solutions/trenching"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Everest and Guardian",
+            "details": "Everest manages operations and as-built records; Guardian provides remote monitoring. Geofencing and smart cameras are safety-system elements.",
+            "sources": [
+              "https://www.builtrobotics.com/solutions/trenching"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "badger-digital-teammate2025",
+        "manufacturer": "Badger Technologies",
+        "models": [
+          "Badger Multipurpose Robot",
+          "Digital Teammate (2025 hardware diagram)"
+        ],
+        "configuration": "2025 manufacturer hardware diagram and platform page. Does not transfer every sensor to older Marty robots. CPU, RAM, radio frequencies and battery capacity are not specified; a separate 5G trial is not assumed installed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Payload computer",
+            "details": "Diagram identifies a payload PC, without processor model or accelerator details.",
+            "sources": [
+              "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Retail perception",
+            "details": "Top-stock, depth, human-detection, product and floor cameras; lidar; RFID antennas; barcode reader; LED shelf lighting.",
+            "sources": [
+              "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Rechargeable power",
+            "details": "Lithium battery with approximately 16-hour runtime; robot returns to a charging station after a cycle.",
+            "sources": [
+              "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf",
+              "https://www.badger-technologies.com/platform/robots.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Store interfaces",
+            "details": "Retail-media display and barcode reader; integration with store systems, dashboards and mobile access.",
+            "sources": [
+              "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "ROS and cloud analytics",
+            "details": "Platform page identifies upgradeable ROS. Captured retail data feeds cloud analytics and operational alerts.",
+            "sources": [
+              "https://www.badger-technologies.com/dam/jcr:c4edb6ce-13ce-4766-85c5-2a514217cb19/Badger%20Fact%20Sheet_08_Digital%20(1).pdf",
+              "https://www.badger-technologies.com/platform/robots.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "artly-barista-platform",
+        "manufacturer": "Artly Coffee",
+        "models": [
+          "Artly Barista Bot"
+        ],
+        "configuration": "Barista platform reference. Hardware changes across installations; UR3e and Hitbot products elsewhere in the catalog do not establish this robot’s arm. Processor, memory, RF, electrical rating and exact sensor parts undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Computer vision informs the coffee-making workflow and real-time decisions.",
+            "sources": [
+              "https://www.artly.ai/applications"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Manipulation",
+            "details": "Robotic arm handles coffee preparation and latte-art movements; actuator and gripper model not specified.",
+            "sources": [
+              "https://www.artly.ai/hardwares/barista-bot"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Skill acquisition",
+            "details": "Deep learning and motion capture reproduce human barista techniques.",
+            "sources": [
+              "https://www.artly.ai/hardwares/barista-bot"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "artly-barista-gtc2025-hand",
+        "manufacturer": "Artly Coffee",
+        "models": [
+          "Barista Bot (GTC 2025 hand upgrade)",
+          "Artly Barista Bot"
+        ],
+        "configuration": "GTC 2025 demonstrated upgrade; not confirmation that every deployed Barista Bot has this hand. Exact hand model, local processor, memory and power unspecified. NVIDIA cloud hardware is not treated as an onboard BOM.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "End-effector revision",
+            "details": "A bionic hand replaces the industrial gripper, expanding cup, utensil and ingredient handling.",
+            "sources": [
+              "https://www.artly.ai/research/bionic-hand-upgrade"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Demonstration capture",
+            "details": "Training captures hand and finger movement for imitation learning; capture equipment is separate from deployed robot sensing.",
+            "sources": [
+              "https://www.artly.ai/research/bionic-hand-upgrade"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Action-model pipeline",
+            "details": "VLA policies use motion-capture demonstrations; NVIDIA accelerators and cloud GPUs support models and training, with Isaac Sim providing simulation data.",
+            "sources": [
+              "https://www.artly.ai/research/bionic-hand-upgrade"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cafex-2017-2018-founder-reference",
+        "manufacturer": "Cafe X",
+        "models": [
+          "Cafe X Robotic Coffee Kiosk",
+          "Robotic Coffeebar 1.0 / 2.0 (2017–2018)"
+        ],
+        "configuration": "Dated interviews with founder Henry Hu: 2017 launch and 2018 second generation. Not a current universal kiosk BOM. CPU SKU, memory, radio modules and electrical requirements undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Controller",
+            "details": "2017 interview describes a Linux controller; processor unspecified.",
+            "sources": [
+              "https://www.engineering.com/cafe-x-launches-a-robotic-coffee-service/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Industrial arm",
+            "details": "Six-axis Mitsubishi arm, described as rated for 4–5 kg in 2017; transfers cups through dispensing and pickup positions.",
+            "sources": [
+              "https://www.engineering.com/cafe-x-launches-a-robotic-coffee-service/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "2018 gripper change",
+            "details": "Coffeebar 2.0 retains the robot arm but changes its gripper to handle 8 oz and 12 oz hot cups and 12 oz cold cups.",
+            "sources": [
+              "https://thespoon.tech/an-interview-cafe-xs-henry-hu-about-the-companys-new-coffee-making-robot/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ordering and motion",
+            "details": "2017 system uses a motion library and customer ordering app; 2018 app adds multiple-drink orders.",
+            "sources": [
+              "https://www.engineering.com/cafe-x-launches-a-robotic-coffee-service/",
+              "https://thespoon.tech/an-interview-cafe-xs-henry-hu-about-the-companys-new-coffee-making-robot/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cafex-current-commercial-controls",
+        "manufacturer": "Cafe X",
+        "models": [
+          "Cafe X Robotic Coffee Kiosk"
+        ],
+        "configuration": "Current commercial software and operator interfaces, separate from the dated arm reference. No processor, radio, electrical or mechanical revision is inferred from an app or payment integration.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Customer ordering",
+            "details": "QR-based mobile ordering uses Stripe; an iPadOS point-of-sale app integrates Square payment devices.",
+            "sources": [
+              "https://www.cafexapp.com/software"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operational console",
+            "details": "Web tools manage orders, pricing and inventory; analytics export data, remote controls assist staff, and mobile controls support cleaning and restocking.",
+            "sources": [
+              "https://www.cafexapp.com/software"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -315572,8 +316455,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 653,
-    "devices_with_system_profiles": 559,
-    "devices_with_documented_compute": 263
+    "system_profiles": 662,
+    "devices_with_system_profiles": 566,
+    "devices_with_documented_compute": 268
   }
 }

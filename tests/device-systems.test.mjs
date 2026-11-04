@@ -1615,3 +1615,41 @@ test('batch 50 retains identified processors and explicit unknowns',()=>{
  assert.equal(system('AirForestry','AirForestry Harvesting System').sections.compute.status,'not-established');
  assert.equal(profileIds(system('Embodied','Moxie',{kind:'regulatory-equipment'})).length,0);
 });
+
+test('batch 52 keeps warehouse, agricultural and retrofit evidence scoped',()=>{
+ const corvus=system('Corvus','Corvus One');
+ assert.match(text(corvus.sections.sensors),/RFID scanning is not offered/);
+ assert.match(text(corvus.sections.software),/does not establish absence of all onboard radios/);
+ assert.match(text(corvus.sections.memory),/stored on-site.*Aircraft storage capacity not stated/);
+ assert.doesNotMatch(text(corvus.sections.compute.facts.map(f=>f.details)),/Jetson|NVIDIA|Intel/);
+ const titan=system('FarmWise','FarmWise Titan');
+ assert.deepEqual(profileIds(titan),profileIds(system('FarmWise','Titan')));
+ assert.equal(titan.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('FarmWise','Vulcan')).length,0);
+ const kit=system('Built Robotics','Exosystem');
+ assert.match(text(kit.sections.compute),/64-core Intel Xeon.*dual NVIDIA/);
+ assert.equal(kit.sections.power.status,'not-established');
+ assert.match(text(kit.configurations),/distinct from its host excavator/);
+ const badger=system('Badger Technologies','Badger Multipurpose Robot');
+ assert.match(text(badger.sections.compute),/payload PC.*without processor model/);
+ assert.match(text(badger.sections.sensors),/RFID antennas/);
+ assert.equal(profileIds(system('Badger Technologies','Marty')).length,0);
+ assert.equal(profileIds(system('Corvus','Corvus One',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('batch 52 separates demonstrated hands and historical kiosks from current software',()=>{
+ const art=system('Artly Coffee','Artly Barista Bot');
+ assert.equal(profileIds(art).length,2);
+ assert.equal(profileIds(system('Artly Coffee','Barista Bot (GTC 2025 hand upgrade)')).length,1);
+ assert.equal(art.sections.compute.status,'not-established');
+ assert.match(text(art.sections.software),/cloud GPUs/);
+ assert.doesNotMatch(text(art.sections.interfaces.facts.map(f=>f.details)),/UR3e|Hitbot/);
+ const cafe=system('Cafe X','Cafe X Robotic Coffee Kiosk');
+ assert.match(text(cafe.sections.compute),/2017.*Linux/);
+ assert.equal(cafe.sections.memory.status,'not-established');
+ assert.match(text(cafe.configurations),/Not a current universal kiosk BOM/);
+ assert.match(text(cafe.sections.interfaces),/iPadOS/);
+ const dot=system('DoorDash','Dot');
+ assert.match(text(dot.sections.compute),/redundant, fail-safe/);
+ assert.equal(dot.sections.radios.status,'not-established');
+});
