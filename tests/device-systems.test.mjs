@@ -9,6 +9,46 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 59 separates same-name robots and preserves unknown food-service processors',()=>{
+ const food=system('Chowbotics Sally','Sally');
+ assert.match(text(food.sections.radios),/cellular/i);
+ assert.match(text(food.sections.interfaces),/Twenty-two ingredient/);
+ assert.equal(food.sections.compute.status,'not-established');
+ assert.ok(!profileIds(system('Realbotix','Sally')).includes('chowbotics-sally20-manual'));
+ const botrista=system('Botrista','Botrista DrinkBot');
+ assert.match(text(botrista.sections.radios),/Wi-Fi/);
+ assert.match(text(botrista.sections.power),/110 V and 15 A/);
+ assert.equal(botrista.sections.compute.status,'not-established');
+ const hyphen=system('Hyphen','Hyphen Makeline');
+ assert.match(text(hyphen.sections.interfaces),/RJ45 Ethernet/);
+ assert.equal(hyphen.sections.radios.status,'not-established');
+ assert.match(text(system('RoboBurger','RoboBurger Kiosk').sections.power),/single revision-specific rating is not established/);
+});
+
+test('batch 59 does not backfill current factory controllers or catalog options into older systems',()=>{
+ const factory=system('Bright Machines','Bright Factory (CX5340 reference line)');
+ assert.match(text(factory.sections.compute),/Atom x6425RE/);
+ assert.match(text(factory.sections.memory),/does not disclose installed RAM/);
+ assert.match(text(factory.sections.power),/not total cell power/);
+ const old=system('Bright Machines','Bright Machines Microfactory');
+ assert.equal(old.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(old.sections.memory.facts),/LPDDR4/);
+ assert.match(text(old.sections.software),/products being assembled/);
+ const kitchen=system('Spyce (Infinite Kitchen)','Spyce Infinite Kitchen');
+ assert.match(text(kitchen.sections.compute),/not the main application CPU/);
+ assert.equal(kitchen.sections.memory.status,'not-established');
+});
+
+test('batch 59 warehouse architecture stays within the named product configuration',()=>{
+ const lgv=system('E80 Group','LGV');
+ assert.match(text(lgv.sections.radios),/not a unique passive signature/);
+ assert.equal(lgv.sections.compute.status,'not-established');
+ assert.match(text(system('System Logistics','System Logistics AS/RS').sections.compute),/Exact PLC model and processor are not named/);
+ assert.match(text(system('Berkshire Grey','Berkshire Grey System').sections.interfaces),/SpectrumGripper/);
+ assert.equal(profileIds(system('Berkshire Grey','Scoop Trailer Unloader')).length,0);
+ assert.equal(profileIds(system('Bright Machines','Bright Factory (CX5340 reference line)',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 58 keeps warehouse and restaurant hardware revisions separate',()=>{
  const oem=system('Zebra Technologies','Fetch100 OEM Base');
  const research=system('Zebra Technologies','Fetch100 Research');

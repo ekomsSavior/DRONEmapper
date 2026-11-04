@@ -36842,6 +36842,555 @@
           ]
         }
       ]
+    },
+    {
+      "id": "botrista-drinkbot-pro-v110323",
+      "manufacturer": "Botrista",
+      "models": [
+        "DrinkBot Pro (manual V110323)",
+        "Botrista DrinkBot"
+      ],
+      "configuration": "DrinkBot Pro manual V110323, linked by the manufacturer training site. CPU, RAM/storage, radio chipset, Wi-Fi bands and sensor part numbers are not disclosed. This does not establish specifications for every later BotristaPro revision.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Wireless connection",
+          "details": "Wi-Fi supports software updates, menu downloads and remote troubleshooting; no model-specific broadcast signature is supplied.",
+          "sources": [
+            "https://drive.google.com/file/d/165eRrTEGUB7ky6Ji7DmG60f-6JepyJWP/view"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Wired network and operator interface",
+          "details": "Ethernet is recommended; touch interface selects recipes, size and sugar level.",
+          "sources": [
+            "https://drive.google.com/file/d/165eRrTEGUB7ky6Ji7DmG60f-6JepyJWP/view"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electrical supply",
+          "details": "Manual rates the unit at 110 V and 15 A.",
+          "sources": [
+            "https://drive.google.com/file/d/165eRrTEGUB7ky6Ji7DmG60f-6JepyJWP/view"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Dispensing and cooling hardware",
+          "details": "Twelve ingredient tubes serve eight refrigerated and four ambient bag-in-box stores. Fourteen dispensing nozzles, a honeycomb blending cup and blender rinser form the beverage path; refrigerated lines extend to the nozzles.",
+          "sources": [
+            "https://drive.google.com/file/d/165eRrTEGUB7ky6Ji7DmG60f-6JepyJWP/view"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Recipes and maintenance",
+          "details": "Menu downloads, drink customization and cleaning/refill notifications are described in the operator manual.",
+          "sources": [
+            "https://drive.google.com/file/d/165eRrTEGUB7ky6Ji7DmG60f-6JepyJWP/view"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Water and drain",
+          "details": "Manufacturer specifies filtered cold water, minimum 40 psi, and a nearby drain.",
+          "sources": [
+            "https://drive.google.com/file/d/165eRrTEGUB7ky6Ji7DmG60f-6JepyJWP/view"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Manual provenance",
+          "details": "Manufacturer training page links this DrinkBot Pro user manual and component tutorials.",
+          "sources": [
+            "https://www.botrista.info/faq"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chowbotics-sally20-manual",
+      "manufacturer": "Chowbotics Sally",
+      "models": [
+        "Sally 2.0",
+        "Sally"
+      ],
+      "configuration": "Sally 2.0 manufacturer operator manual, mirrored by Parts Town. Not the unrelated Realbotix humanoid named Sally. Processor, RAM/storage and cellular modem SKU/bands are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Network connection",
+          "details": "Manual specifies cellular connectivity and discourages Ethernet/Wi-Fi for this configuration.",
+          "sources": [
+            "https://www.partstown.com.mx/modelManual/CWB-Sally-20_iom.pdf?v=1655476730309"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electrical and refrigeration",
+          "details": "Published rating: dedicated 120 V AC, 20 A, 60 Hz service. Refrigeration uses R134a. The manual also prints NEMA 5-15R; confirm the unit-specific installation requirement rather than reconciling that discrepancy by assumption.",
+          "sources": [
+            "https://www.partstown.com.mx/modelManual/CWB-Sally-20_iom.pdf?v=1655476730309"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator and customer displays",
+          "details": "15.6-inch tablet interface; optional 32-inch 720p LED ChowboticsTV. Payment terminal and receipt printer are described as options.",
+          "sources": [
+            "https://www.partstown.com.mx/modelManual/CWB-Sally-20_iom.pdf?v=1655476730309"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Dispensing mechanics",
+          "details": "Twenty-two ingredient canisters feed a carousel, motor-arm and chute assembly. Outer and inner motors, guide rail and control panel are identified.",
+          "sources": [
+            "https://www.partstown.com.mx/modelManual/CWB-Sally-20_iom.pdf?v=1655476730309"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Temperature monitoring",
+          "details": "Refrigeration temperature LCD and software warnings report out-of-range temperature.",
+          "sources": [
+            "https://www.partstown.com.mx/modelManual/CWB-Sally-20_iom.pdf?v=1655476730309"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Meal interface",
+          "details": "Tablet software manages bowl selection, ingredient customization and nutritional information.",
+          "sources": [
+            "https://www.partstown.com.mx/modelManual/CWB-Sally-20_iom.pdf?v=1655476730309"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hyphen-makeline-published-configuration",
+      "manufacturer": "Hyphen",
+      "models": [
+        "Hyphen Makeline"
+      ],
+      "configuration": "Published configurable Makeline architecture. CPU, RAM/storage and exact sensor/RFID chipsets are not disclosed. Cabinet ratings are per module, not total line consumption; no Wi-Fi or RFID frequency is inferred.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Modular line",
+          "details": "One to six ingredient dispensing cabinets, with denest and lift cabinets; hot, cold and ambient ingredient holding. Ten-inch touch HMI and cabinet light indicators.",
+          "sources": [
+            "https://www.usehyphen.com/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Portion and configuration sensing",
+          "details": "Weight-based dispensing; RFID-equipped dispensers support configuration checks. Digitally regulated cabinet temperatures.",
+          "sources": [
+            "https://www.usehyphen.com/specs"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Meal tracking",
+          "details": "Manufacturer additionally identifies LiDAR and vision systems; models and optical specifications are unspecified.",
+          "sources": [
+            "https://www.usehyphen.com/features"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Network and orders",
+          "details": "Cat5e/6 RJ45 Ethernet; published bandwidth requirement 15 Mbps down / 10 Mbps up. Orders enter through API, POS integration or HMI.",
+          "sources": [
+            "https://www.usehyphen.com/specs"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Cabinet supply ratings",
+          "details": "208–240 V, 60 Hz, single phase. Denest/lift: 0.16 kW each; cold: 0.95 kW; hot: 2.25 kW; dry: 0.3 kW. Forced-air refrigeration uses R290.",
+          "sources": [
+            "https://www.usehyphen.com/specs"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet configuration",
+          "details": "Plating patterns can be updated across the fleet remotely; this does not identify a wireless transport.",
+          "sources": [
+            "https://www.usehyphen.com/features"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roboburger-kiosk-published-architecture",
+      "manufacturer": "RoboBurger",
+      "models": [
+        "RoboBurger Kiosk"
+      ],
+      "configuration": "Published kiosk architecture; the page combines specifications and Gen-3 preorder material without clearly assigning every rating to a revision. Main processor, memory, network hardware and camera models are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Food preparation modules",
+          "details": "Refrigeration, grill, bun toaster, assembly and boxed-product delivery are integrated into one cabinet. Published capacity is approximately 70 burgers per refill.",
+          "sources": [
+            "https://roboburger.com/our-product/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Cameras",
+          "details": "Built-in cameras support quality/security monitoring and live viewing; no camera sensor SKU is supplied.",
+          "sources": [
+            "https://roboburger.com/our-product/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Remote operations",
+          "details": "Cloud monitoring covers inventory and performance; digital payment and menu configuration are supported. The page does not specify radio bands or network protocols.",
+          "sources": [
+            "https://roboburger.com/our-product/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Conflicting published electrical ratings",
+          "details": "The page lists 220 V / 11 A or 110 V / 22 A in one block, and 220 V / 30 A in another. A single revision-specific rating is not established; these must not be combined into one specification.",
+          "sources": [
+            "https://roboburger.com/our-product/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cleaning and plumbing",
+          "details": "Integrated self-cleaning system; manufacturer states no external plumbing is required.",
+          "sources": [
+            "https://roboburger.com/our-product/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spyce-sweetgreen-infinite-kitchen-clearpath",
+      "manufacturer": "Spyce (Infinite Kitchen)",
+      "models": [
+        "Sweetgreen Infinite Kitchen (ClearPath configuration)",
+        "Spyce Infinite Kitchen"
+      ],
+      "configuration": "Supplier case study with Sweetgreen’s director of automation. Applies to the described Infinite Kitchen production configuration, not every earlier Spyce kitchen. Main CPU, RAM/storage, network hardware and input power are not identified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Embedded motion control",
+          "details": "Teknic ClearPath-MC integrated servo units execute programmed position sequences locally. This identifies the motion-controller family, not the main application CPU or silicon SKU.",
+          "sources": [
+            "https://teknic.com/customer-stories/sweetgreen/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mixer actuation",
+          "details": "Servo-driven linkage grasps a bowl, rotates it through 720 degrees to mix, then returns it to the conveyor. Simple control inputs trigger stored moves.",
+          "sources": [
+            "https://teknic.com/customer-stories/sweetgreen/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Assembly path",
+          "details": "Conveyor and automated ingredient tubes assemble bowls; supplier reports approximately 500 bowls per hour.",
+          "sources": [
+            "https://teknic.com/customer-stories/sweetgreen/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Servo feedback",
+          "details": "ClearPath integrates a high-resolution encoder with its brushless motor, drive electronics and motion controller.",
+          "sources": [
+            "https://teknic.com/customer-stories/sweetgreen/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Production motor enclosure",
+          "details": "Case study describes IP67 servo assemblies with M12 connectors; exact motor part numbers and pin assignments are not published.",
+          "sources": [
+            "https://teknic.com/customer-stories/sweetgreen/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bright-factory-cx5340-2026",
+      "manufacturer": "Bright Machines",
+      "models": [
+        "Bright Factory (CX5340 reference line)"
+      ],
+      "configuration": "August 2026 supplier-confirmed reference line, subsequently deployed at a customer site. Not assigned to historical Microfactory cells. CX5340 catalog options below are distinguished from the installation’s undisclosed configuration.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Cell controller",
+          "details": "Each cell uses a Beckhoff CX5340 Embedded PC; a separate, unspecified Beckhoff controller coordinates the line.",
+          "sources": [
+            "https://www.beckhoff.com/en-nz/company/applications-and-references/assembling-the-future-of-ai-enabled-manufacturing.html"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Processor",
+          "details": "CX5340 uses a quad-core Intel Atom x6425RE at 1.9 GHz.",
+          "sources": [
+            "https://www.beckhoff.com/en-nz/products/ipc/embedded-pcs/cx5300-intel-atom-r-x6/cx5340.html"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Controller capabilities",
+          "details": "CX5340 catalog: 8 GB LPDDR4 standard, factory option 16 GB; CFast and microSD slots. Case study does not disclose installed RAM option or storage capacity.",
+          "sources": [
+            "https://www.beckhoff.com/en-nz/products/ipc/embedded-pcs/cx5300-intel-atom-r-x6/cx5340.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Real-time I/O and safety",
+          "details": "EtherCAT connects motion and I/O. EL-series terminals, IP67 EP-series boxes, IO-Link peripherals and TwinSAFE/FSoE implement distributed control and safety.",
+          "sources": [
+            "https://www.beckhoff.com/en-nz/company/applications-and-references/assembling-the-future-of-ai-enabled-manufacturing.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Assembly and line sensing",
+          "details": "Smart Skills supports 3D navigation, inspection and force control. Line equipment includes RFID readers; exact sensor models are unspecified.",
+          "sources": [
+            "https://www.beckhoff.com/en-nz/company/applications-and-references/assembling-the-future-of-ai-enabled-manufacturing.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control and telemetry",
+          "details": "Windows and TwinCAT 3; OPC UA Server links the control layer to proprietary orchestration and cloud monitoring with encryption.",
+          "sources": [
+            "https://www.beckhoff.com/en-nz/company/applications-and-references/assembling-the-future-of-ai-enabled-manufacturing.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Computer ports",
+          "details": "CX5340 base includes two RJ45 ports up to 2.5 Gbit/s, four USB 3.1 ports and DisplayPort. Additional fieldbus interfaces are optional.",
+          "sources": [
+            "https://www.beckhoff.com/en-nz/products/ipc/embedded-pcs/cx5300-intel-atom-r-x6/cx5340.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Controller supply",
+          "details": "CX5340: 24 V DC, passive cooling and integrated one-second UPS. Catalog maximum draw 19 W, or 38 W while charging UPS; this is not total cell power.",
+          "sources": [
+            "https://www.beckhoff.com/en-nz/products/ipc/embedded-pcs/cx5300-intel-atom-r-x6/cx5340.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bright-microfactory-published-architecture",
+      "manufacturer": "Bright Machines",
+      "models": [
+        "Bright Machines Microfactory"
+      ],
+      "configuration": "Manufacturer’s A3 product listing and hardware-team demonstration. CPU, RAM/storage, robot-arm models, controller part numbers, radio modules and electrical ratings are not established by these sources. Bright Factory’s later CX5340 configuration is kept separate.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Assembly modules",
+          "details": "Bright Robotic Cells, material feeders, manual stations and collaborative robots form configurable assembly lines.",
+          "sources": [
+            "https://www.linkedin.com/posts/bright-machines_explore-our-robotics-offerings-the-rise-activity-7234243271487598594-qhQn"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Local and cloud layers",
+          "details": "Embedded real-time firmware runs the cells. Brightware orchestration can be deployed on premises or in enterprise cloud infrastructure, with bidirectional synchronization of production state.",
+          "sources": [
+            "https://www.automate.org/products/bright-machines/bright-machines-microfactory"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Inspection and traceability",
+          "details": "Manufacturer describes software-driven assembly/inspection and product traceability; CPU/GPU servers mentioned in the demonstration are products being assembled, not identified robot controllers.",
+          "sources": [
+            "https://www.linkedin.com/posts/bright-machines_explore-our-robotics-offerings-the-rise-activity-7234243271487598594-qhQn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e80-lgv-published-architecture",
+      "manufacturer": "E80 Group",
+      "models": [
+        "LGV"
+      ],
+      "configuration": "Configurable E80 laser-guided vehicle family. CPU, memory, radio chipsets, battery voltage/capacity and individual vehicle model are unspecified. SmartDect and stereo-vision features describe equipped configurations, not a verified retrofit to every historical LGV.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and obstacle protection",
+          "details": "Laser-guided navigation for pallet handling; proximity laser scanners and alarm systems protect the operating area.",
+          "sources": [
+            "https://www.e80group.com/en/agv-lgv-systems",
+            "https://www.e80group.com/en/safety"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "SmartDect UWB",
+          "details": "Equipped vehicles communicate with worker tags to estimate position, speed and direction; published detection distance up to 50 feet. UWB chipset and operating frequency are not disclosed and this is not a unique passive signature.",
+          "sources": [
+            "https://www.e80group.com/en/safety"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "People Detection configuration",
+          "details": "Stereo-camera network and deep-learning processing reconstruct nearby people and obstacles in 3D; sensor and processor SKUs are unspecified.",
+          "sources": [
+            "https://www.e80group.com/en/safety"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and charging",
+          "details": "Flash Battery lithium batteries and inductive charging are documented; daily battery monitoring is provided through Flash Data Center.",
+          "sources": [
+            "https://www.e80group.com/en/agv-lgv-systems",
+            "https://www.e80group.com/en/smart-factory/automated-guided-vehicle-systems-increase-efficiency-and-safety"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Plant coordination",
+          "details": "SM.I.LE80 manages fleet movement and intralogistics, integrates with plant ERP and supports remote supervision.",
+          "sources": [
+            "https://www.e80group.com/en/smart-factory/automated-guided-vehicle-systems-increase-efficiency-and-safety"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Handling equipment",
+          "details": "Configurable pallet forks, double-depth storage and side-by-side load handling connect vehicles with conveyors, storage and truck-loading systems.",
+          "sources": [
+            "https://www.e80group.com/en/agv-lgv-systems"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "system-logistics-asrs-architecture",
+      "manufacturer": "System Logistics",
+      "models": [
+        "System Logistics AS/RS"
+      ],
+      "configuration": "Configurable AS/RS and published System Logistics Suite control architecture. Not a fixed bill of materials for every plant. PLC CPU model, server processor, RAM/storage, sensor part numbers and power ratings remain unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Control hierarchy",
+          "details": "PLC-based electrical and safety control sits below a material-flow controller, which communicates with warehouse management. Exact PLC model and processor are not named.",
+          "sources": [
+            "https://www.systemlogistics.de/en/solutions/software-interfaces/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Enterprise integration",
+          "details": "WCS/WMS/MFC connect with ERP, MES, yard and labor systems. SAP EWM-MFS integration uses bidirectional telegram interfaces to PLCs.",
+          "sources": [
+            "https://www.systemlogistics.de/en/solutions/software-interfaces/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "HMI and engineering",
+          "details": "Manufacturer lists Zenon/WinCC visualization and TIA/E-Plan engineering; vehicle control, monitoring/analytics and virtual commissioning are available modules.",
+          "sources": [
+            "https://www.systemlogistics.de/en/solutions/software-interfaces/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Storage hardware",
+          "details": "AS/RS configurations include stacker cranes, fast-rotation storage and miniload systems. Stacker cranes can use single/double-depth telescopic forks or multi-depth satellite trolleys; selection is project-specific.",
+          "sources": [
+            "https://www.systemlogistics.com/media/1882/System-Logistics-Report-2022-EN.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "berkshire-grey-core-picking-2026",
+      "manufacturer": "Berkshire Grey",
+      "models": [
+        "Core Robotic Picking System (2026)",
+        "Berkshire Grey System"
+      ],
+      "configuration": "Core picking configuration documented in 2026; one named system within the broad Berkshire Grey catalog entry. Not the BOM of every sorter or trailer unloader. CPU/GPU, memory, arm model, radio interfaces and power ratings are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception and grip detection",
+          "details": "Vision evaluates item pose and grasp points. Vacuum/suction feedback checks grip security; sensor models are unspecified.",
+          "sources": [
+            "https://www.berkshiregrey.com/solutions/core-robotic-picking-system/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "End effector",
+          "details": "SpectrumGripper uses adaptive suction and quick-change cups for varied packaging; product sheet describes handling up to 6 kg.",
+          "sources": [
+            "https://www.berkshiregrey.com/solutions/core-robotic-picking-system/",
+            "https://51192180.fs1.hubspotusercontent-na1.net/hubfs/51192180/BG-Core-product-sheet.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Picking stack",
+          "details": "BG Pilot combines perception, grasp selection, motion planning and orchestration; product-specific compute hardware is not named.",
+          "sources": [
+            "https://www.berkshiregrey.com/solutions/core-robotic-picking-system/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Warehouse integration",
+          "details": "Configurations connect with AS/RS, AMRs, sorters, put walls and auto-baggers. AutoStore CarouselAI and VersaAI are named integrations, not evidence of identical internal hardware.",
+          "sources": [
+            "https://www.berkshiregrey.com/solutions/core-robotic-picking-system/"
+          ]
+        }
+      ]
     }
   ]
 }
