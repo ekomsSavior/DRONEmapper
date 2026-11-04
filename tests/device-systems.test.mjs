@@ -9,6 +9,30 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 70 keeps radio equipment, power ratings and vehicle revisions scoped',()=>{
+ const penguin=system('Edge Autonomy','Penguin C Mk2');
+ assert.match(text(penguin.sections.power),/28 cc/);
+ assert.equal(penguin.sections.compute.status,'not-established');
+ const trackx=system('Patria','Patria TRACKX UGV');
+ assert.match(text(trackx.configurations),/concept mock-up/);
+ assert.match(text(trackx.sections.power),/not evidence of the UGV engine output/);
+ assert.equal(trackx.sections.radios.status,'not-established');
+ const termit=system('Tencore','TerMIT');
+ assert.match(text(termit.configurations),/Earlier generations must not inherit/);
+ assert.match(text(termit.sections.power),/Wiring topology, cell chemistry/);
+ assert.equal(profileIds(system('Tencore','TerMIT 1.0')).length,0);
+ const radio=(id)=>system('AeroVironment','Radio',{kind:'regulatory-equipment',fcc_id:id});
+ const ddl=radio('PZR-68460'),xbee=radio('PZR-79902');
+ assert.match(text(ddl.sections.radios),/TDMA and TDD/);
+ assert.equal(ddl.sections.compute.status,'not-established');
+ assert.match(text(xbee.sections.compute),/EFM32G230/);
+ assert.match(text(xbee.sections.compute),/Programmable option.*not established/);
+ assert.equal(xbee.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('Other vendor','Radio',{kind:'regulatory-equipment',fcc_id:'PZR-79902'})).length,0);
+ assert.equal(profileIds(system('AeroVironment','79902 XBee 900 MHz module')).length,0);
+ assert.equal(profileIds(system('AeroVironment','Radio',{kind:'regulatory-equipment',fcc_id:'PZR-OTHER'})).length,0);
+});
+
 test('batch 69 separates firmware targets, robot editions and subassembly ratings',()=>{
  const cub=system('Petoi','OpenCat Cub firmware target');
  assert.equal(profileIds(cub).length,2);

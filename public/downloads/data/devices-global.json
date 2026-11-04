@@ -3203,8 +3203,14 @@
         "schema_version": 1,
         "record_scope": "regulatory-equipment",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "av-68460-mini-ddl-module",
+            "configuration": "AeroVironment OEM integration instructions dated January 26, 2016, filed under FCC ID PZR-68460. Module evidence only; it does not establish which aircraft carries it. Silicon, memory, input-power rating and host bus are not disclosed in this manual. A shared band is not a Wi-Fi or drone identity.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -3218,8 +3224,32 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "DDL physical-link architecture",
+                "details": "2.4 GHz mini-DDL uses a star topology with TDMA and TDD between matching modules. The manual does not identify it as IEEE 802.11.",
+                "sources": [
+                  "https://fccid.io/PZR-68460/User-Manual/OEM-Instructions-2959689.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-68460-mini-ddl-module",
+                "configuration": "AeroVironment OEM integration instructions dated January 26, 2016, filed under FCC ID PZR-68460. Module evidence only; it does not establish which aircraft carries it. Silicon, memory, input-power rating and host bus are not disclosed in this manual. A shared band is not a Wi-Fi or drone identity.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "radios",
+                "component": "Documented channel configuration",
+                "details": "2016 manual lists 5 MHz bandwidth and centers 2415, 2425, 2435, 2445 and 2455 MHz. These are this manual’s settings, not every configuration in the wider FCC grant.",
+                "sources": [
+                  "https://fccid.io/PZR-68460/User-Manual/OEM-Instructions-2959689.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-68460-mini-ddl-module",
+                "configuration": "AeroVironment OEM integration instructions dated January 26, 2016, filed under FCC ID PZR-68460. Module evidence only; it does not establish which aircraft carries it. Silicon, memory, input-power rating and host bus are not disclosed in this manual. A shared band is not a Wi-Fi or drone identity.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "FCC equipment reference PZR-68460",
                 "details": "[[2403,2475]] MHz",
@@ -3243,13 +3273,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Approved antenna examples",
+                "details": "Manufacturer references 70958 dual-patch, LINX ANT-2.4-CW-RH monopole and 68856 broadband dipole antennas; host integration determines the installed option.",
+                "sources": [
+                  "https://fccid.io/PZR-68460/User-Manual/OEM-Instructions-2959689.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-68460-mini-ddl-module",
+                "configuration": "AeroVironment OEM integration instructions dated January 26, 2016, filed under FCC ID PZR-68460. Module evidence only; it does not establish which aircraft carries it. Silicon, memory, input-power rating and host bus are not disclosed in this manual. A shared band is not a Wi-Fi or drone identity.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Network roles",
+                "details": "OEM instructions cover Arbiter, Client and Viewer roles.",
+                "sources": [
+                  "https://fccid.io/PZR-68460/User-Manual/OEM-Instructions-2959689.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-68460-mini-ddl-module",
+                "configuration": "AeroVironment OEM integration instructions dated January 26, 2016, filed under FCC ID PZR-68460. Module evidence only; it does not establish which aircraft carries it. Silicon, memory, input-power rating and host bus are not disclosed in this manual. A shared band is not a Wi-Fi or drone identity.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -3267,8 +3323,6 @@
           "memory",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -3324,13 +3378,33 @@
         "schema_version": 1,
         "record_scope": "regulatory-equipment",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "av-79902-xbee-900hp-family",
+            "configuration": "PZR-79902 grant records a change of identification from Digi MCQ-XB900HP. Digi data describes the original XBee-PRO 900HP family; standard and Programmable options are not collapsed into one configuration. This does not identify an aircraft processor or prove every AeroVironment product contains the module.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Original radio-family controller",
+                "details": "Digi identifies an ADF7023 transceiver and EFM32G230 Cortex-M3 at 28 MHz. The additional MC9S08QE32 belongs only to the Programmable option; that option is not established for this AeroVironment record.",
+                "sources": [
+                  "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp",
+                  "https://fccid.io/PZR-79902"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-79902-xbee-900hp-family",
+                "configuration": "PZR-79902 grant records a change of identification from Digi MCQ-XB900HP. Digi data describes the original XBee-PRO 900HP family; standard and Programmable options are not collapsed into one configuration. This does not identify an aircraft processor or prove every AeroVironment product contains the module.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -3339,8 +3413,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "FHSS radio",
+                "details": "Original family operates in 902–928 MHz with 10 or 200 kbit/s modes. AeroVironment’s authorization lists 902.4–927.6 MHz; this is not Wi-Fi or Bluetooth.",
+                "sources": [
+                  "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp",
+                  "https://fccid.io/PZR-79902"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-79902-xbee-900hp-family",
+                "configuration": "PZR-79902 grant records a change of identification from Digi MCQ-XB900HP. Digi data describes the original XBee-PRO 900HP family; standard and Programmable options are not collapsed into one configuration. This does not identify an aircraft processor or prove every AeroVironment product contains the module.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "FCC equipment reference PZR-79902",
                 "details": "[[902.4,927.6]] MHz",
@@ -3359,23 +3446,75 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Option-dependent module supply",
+                "details": "Digi lists 2.1–3.6 V for the standard module and 2.4–3.6 V for Programmable. These are radio-module input ratings, not a host battery specification.",
+                "sources": [
+                  "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-79902-xbee-900hp-family",
+                "configuration": "PZR-79902 grant records a change of identification from Digi MCQ-XB900HP. Digi data describes the original XBee-PRO 900HP family; standard and Programmable options are not collapsed into one configuration. This does not identify an aircraft processor or prove every AeroVironment product contains the module.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Original family data ports",
+                "details": "3 V UART and SPI; GPIO options include digital I/O, four 10-bit ADC inputs and two PWM outputs.",
+                "sources": [
+                  "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-79902-xbee-900hp-family",
+                "configuration": "PZR-79902 grant records a change of identification from Digi MCQ-XB900HP. Digi data describes the original XBee-PRO 900HP family; standard and Programmable options are not collapsed into one configuration. This does not identify an aircraft processor or prove every AeroVironment product contains the module.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Original family networking",
+                "details": "DigiMesh and point-to-point/multipoint modes are supported; configured firmware is not established by the grant alone.",
+                "sources": [
+                  "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-79902-xbee-900hp-family",
+                "configuration": "PZR-79902 grant records a change of identification from Digi MCQ-XB900HP. Digi data describes the original XBee-PRO 900HP family; standard and Programmable options are not collapsed into one configuration. This does not identify an aircraft processor or prove every AeroVironment product contains the module.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Tested host boundary",
+                "details": "2017 test report identifies a Quantix revision-13 test host and separate TI WL18MODGI Wi-Fi/Bluetooth module. That co-location is test-configuration evidence, not a universal aircraft assignment.",
+                "sources": [
+                  "https://device.report/m/057bb55aad9cd5465ae6c2067b12cb38018f3063a4e485ebdd62ea155c6e3cbf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "av-79902-xbee-900hp-family",
+                "configuration": "PZR-79902 grant records a change of identification from Digi MCQ-XB900HP. Digi data describes the original XBee-PRO 900HP family; standard and Programmable options are not collapsed into one configuration. This does not identify an aircraft processor or prove every AeroVironment product contains the module.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -3384,13 +3523,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "sensors"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -63080,8 +63214,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "edge-penguin-c-mk2-2020",
+            "configuration": "UAV Factory November 2020 Mk2 announcement preserved by Redwire. Group 2/3 configurations and payload options are distinguished. Processor, RAM, autopilot hardware and exact radio SKU/bands are not disclosed. This aircraft uses an engine; an existing catalog electric-propulsion claim is not supported by this primary source.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -63095,28 +63235,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Published datalink",
+                "details": "Silvus 2×2 MIMO radio with mesh networking and beamforming. Radio part number and frequency allocation are not specified.",
+                "sources": [
+                  "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "edge-penguin-c-mk2-2020",
+                "configuration": "UAV Factory November 2020 Mk2 announcement preserved by Redwire. Group 2/3 configurations and payload options are distinguished. Processor, RAM, autopilot hardware and exact radio SKU/bands are not disclosed. This aircraft uses an engine; an existing catalog electric-propulsion claim is not supported by this primary source.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Payload configurations",
+                "details": "Epsilon 140 LC day/night payload was used for the reported 25.5-hour demonstration. Epsilon 175 and 180 gimbals are compatible options, not simultaneous standard equipment.",
+                "sources": [
+                  "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "edge-penguin-c-mk2-2020",
+                "configuration": "UAV Factory November 2020 Mk2 announcement preserved by Redwire. Group 2/3 configurations and payload options are distinguished. Processor, RAM, autopilot hardware and exact radio SKU/bands are not disclosed. This aircraft uses an engine; an existing catalog electric-propulsion claim is not supported by this primary source.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Propulsion",
+                "details": "28 cc electronic-fuel-injection engine with an upgraded fuel-pump system.",
+                "sources": [
+                  "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "edge-penguin-c-mk2-2020",
+                "configuration": "UAV Factory November 2020 Mk2 announcement preserved by Redwire. Group 2/3 configurations and payload options are distinguished. Processor, RAM, autopilot hardware and exact radio SKU/bands are not disclosed. This aircraft uses an engine; an existing catalog electric-propulsion claim is not supported by this primary source.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular payload nose",
+                "details": "Swappable nose includes motorized roll stabilization and protects the payload during recovery; aircraft accommodates roughly 4 kg payloads up to eight inches diameter.",
+                "sources": [
+                  "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "edge-penguin-c-mk2-2020",
+                "configuration": "UAV Factory November 2020 Mk2 announcement preserved by Redwire. Group 2/3 configurations and payload options are distinguished. Processor, RAM, autopilot hardware and exact radio SKU/bands are not disclosed. This aircraft uses an engine; an existing catalog electric-propulsion claim is not supported by this primary source.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Navigation boundary",
+                "details": "GPS-denied operation is claimed, but its sensors, computing hardware and navigation method are not described.",
+                "sources": [
+                  "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "edge-penguin-c-mk2-2020",
+                "configuration": "UAV Factory November 2020 Mk2 announcement preserved by Redwire. Group 2/3 configurations and payload options are distinguished. Processor, RAM, autopilot hardware and exact radio SKU/bands are not disclosed. This aircraft uses an engine; an existing catalog electric-propulsion claim is not supported by this primary source.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -63132,11 +63337,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -110378,8 +110578,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "patria-trackx-ugv-2026-concept",
+            "configuration": "June 2026 concept mock-up, not a production autonomous vehicle. Patria identifies the TRACKX chassis and RENK HSWL 076 transmission. Supplier specifications below describe that transmission, not tested UGV performance. No CPU, RAM, autonomous sensor package or radio model is disclosed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -110398,18 +110604,81 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Drivetrain monitoring",
+                "details": "RENK describes integrated condition monitoring; individual sensors and control processors are not named.",
+                "sources": [
+                  "https://www.renk.com/en/products/vehicles/transmissions/hswl-076"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "patria-trackx-ugv-2026-concept",
+                "configuration": "June 2026 concept mock-up, not a production autonomous vehicle. Patria identifies the TRACKX chassis and RENK HSWL 076 transmission. Supplier specifications below describe that transmission, not tested UGV performance. No CPU, RAM, autonomous sensor package or radio model is disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Named drivetrain",
+                "details": "TRACKX modular tracked platform with RENK HSWL 076 transmission.",
+                "sources": [
+                  "https://www.patriagroup.com/newsroom/news/2026/patria-and-renk-present-next-generation-unmanned-ground-vehicle-ugv-concept-at-eurosatory-2026"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "patria-trackx-ugv-2026-concept",
+                "configuration": "June 2026 concept mock-up, not a production autonomous vehicle. Patria identifies the TRACKX chassis and RENK HSWL 076 transmission. Supplier specifications below describe that transmission, not tested UGV performance. No CPU, RAM, autonomous sensor package or radio model is disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Transmission component rating",
+                "details": "HSWL 076 supplier table lists six forward/six reverse speeds and maximum input power 300 kW. This is transmission capacity, not evidence of the UGV engine output.",
+                "sources": [
+                  "https://www.renk.com/en/products/vehicles/transmissions/hswl-076"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "patria-trackx-ugv-2026-concept",
+                "configuration": "June 2026 concept mock-up, not a production autonomous vehicle. Patria identifies the TRACKX chassis and RENK HSWL 076 transmission. Supplier specifications below describe that transmission, not tested UGV performance. No CPU, RAM, autonomous sensor package or radio model is disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Electronic mobility control",
+                "details": "Concept combines the transmission with drive-by-wire architecture for remote operation and future autonomy.",
+                "sources": [
+                  "https://www.patriagroup.com/newsroom/news/2026/patria-and-renk-present-next-generation-unmanned-ground-vehicle-ugv-concept-at-eurosatory-2026"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "patria-trackx-ugv-2026-concept",
+                "configuration": "June 2026 concept mock-up, not a production autonomous vehicle. Patria identifies the TRACKX chassis and RENK HSWL 076 transmission. Supplier specifications below describe that transmission, not tested UGV performance. No CPU, RAM, autonomous sensor package or radio model is disclosed.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "Expansion architecture",
+                "details": "Transmission has digital interfaces and a power take-off interface supporting additional drive modules; hybrid capability does not establish a fitted electric motor.",
+                "sources": [
+                  "https://www.renk.com/en/products/vehicles/transmissions/hswl-076"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "patria-trackx-ugv-2026-concept",
+                "configuration": "June 2026 concept mock-up, not a production autonomous vehicle. Patria identifies the TRACKX chassis and RENK HSWL 076 transmission. Supplier specifications below describe that transmission, not tested UGV performance. No CPU, RAM, autonomous sensor package or radio model is disclosed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -110431,9 +110700,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -135010,8 +135276,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tencore-termit-2-published-system",
+            "configuration": "Current TerMIT 2.0 manufacturer specification, shown as a configuration reference for the generic TerMIT record. Earlier generations must not inherit these ratings. CPU, memory, radio module and battery chemistry are not disclosed. Payload modules are optional and their individual runtime is not whole-vehicle endurance.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -135030,18 +135302,69 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation cameras",
+                "details": "Day, night and thermal cameras are listed; sensor manufacturers, resolutions and image-processing hardware are not identified.",
+                "sources": [
+                  "https://tencore.com.ua/termit"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tencore-termit-2-published-system",
+                "configuration": "Current TerMIT 2.0 manufacturer specification, shown as a configuration reference for the generic TerMIT record. Earlier generations must not inherit these ratings. CPU, memory, radio module and battery chemistry are not disclosed. Payload modules are optional and their individual runtime is not whole-vehicle endurance.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric tracked chassis",
+                "details": "Electric propulsion; listed road/off-road speeds are 15/12 km/h with range up to 40 km. Test load and conditions are unspecified.",
+                "sources": [
+                  "https://tencore.com.ua/termit"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tencore-termit-2-published-system",
+                "configuration": "Current TerMIT 2.0 manufacturer specification, shown as a configuration reference for the generic TerMIT record. Earlier generations must not inherit these ratings. CPU, memory, radio module and battery chemistry are not disclosed. Payload modules are optional and their individual runtime is not whole-vehicle endurance.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "Published battery configuration",
+                "details": "Manufacturer lists four 73 Ah, 20S batteries. Wiring topology, cell chemistry and nominal voltage are not given; combined watt-hours are therefore not inferred.",
+                "sources": [
+                  "https://tencore.com.ua/termit"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tencore-termit-2-published-system",
+                "configuration": "Current TerMIT 2.0 manufacturer specification, shown as a configuration reference for the generic TerMIT record. Earlier generations must not inherit these ratings. CPU, memory, radio module and battery chemistry are not disclosed. Payload modules are optional and their individual runtime is not whole-vehicle endurance.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular platform",
+                "details": "Tracked chassis with interchangeable payload modules; unarmored base mass 570±20 kg, armored 640±20 kg.",
+                "sources": [
+                  "https://tencore.com.ua/termit"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tencore-termit-2-published-system",
+                "configuration": "Current TerMIT 2.0 manufacturer specification, shown as a configuration reference for the generic TerMIT record. Earlier generations must not inherit these ratings. CPU, memory, radio module and battery chemistry are not disclosed. Payload modules are optional and their individual runtime is not whole-vehicle endurance.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -135063,9 +135386,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -339786,6 +340106,269 @@
             ]
           }
         ]
+      },
+      {
+        "id": "edge-penguin-c-mk2-2020",
+        "manufacturer": "Edge Autonomy",
+        "models": [
+          "Penguin C Mk2"
+        ],
+        "configuration": "UAV Factory November 2020 Mk2 announcement preserved by Redwire. Group 2/3 configurations and payload options are distinguished. Processor, RAM, autopilot hardware and exact radio SKU/bands are not disclosed. This aircraft uses an engine; an existing catalog electric-propulsion claim is not supported by this primary source.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Propulsion",
+            "details": "28 cc electronic-fuel-injection engine with an upgraded fuel-pump system.",
+            "sources": [
+              "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Published datalink",
+            "details": "Silvus 2×2 MIMO radio with mesh networking and beamforming. Radio part number and frequency allocation are not specified.",
+            "sources": [
+              "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Payload configurations",
+            "details": "Epsilon 140 LC day/night payload was used for the reported 25.5-hour demonstration. Epsilon 175 and 180 gimbals are compatible options, not simultaneous standard equipment.",
+            "sources": [
+              "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular payload nose",
+            "details": "Swappable nose includes motorized roll stabilization and protects the payload during recovery; aircraft accommodates roughly 4 kg payloads up to eight inches diameter.",
+            "sources": [
+              "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Navigation boundary",
+            "details": "GPS-denied operation is claimed, but its sensors, computing hardware and navigation method are not described.",
+            "sources": [
+              "https://rdw.com/newsroom/uav-factory-announces-the-release-of-penguin-c-mk2-system/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "patria-trackx-ugv-2026-concept",
+        "manufacturer": "Patria",
+        "models": [
+          "Patria TRACKX UGV"
+        ],
+        "configuration": "June 2026 concept mock-up, not a production autonomous vehicle. Patria identifies the TRACKX chassis and RENK HSWL 076 transmission. Supplier specifications below describe that transmission, not tested UGV performance. No CPU, RAM, autonomous sensor package or radio model is disclosed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Named drivetrain",
+            "details": "TRACKX modular tracked platform with RENK HSWL 076 transmission.",
+            "sources": [
+              "https://www.patriagroup.com/newsroom/news/2026/patria-and-renk-present-next-generation-unmanned-ground-vehicle-ugv-concept-at-eurosatory-2026"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Electronic mobility control",
+            "details": "Concept combines the transmission with drive-by-wire architecture for remote operation and future autonomy.",
+            "sources": [
+              "https://www.patriagroup.com/newsroom/news/2026/patria-and-renk-present-next-generation-unmanned-ground-vehicle-ugv-concept-at-eurosatory-2026"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Transmission component rating",
+            "details": "HSWL 076 supplier table lists six forward/six reverse speeds and maximum input power 300 kW. This is transmission capacity, not evidence of the UGV engine output.",
+            "sources": [
+              "https://www.renk.com/en/products/vehicles/transmissions/hswl-076"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion architecture",
+            "details": "Transmission has digital interfaces and a power take-off interface supporting additional drive modules; hybrid capability does not establish a fitted electric motor.",
+            "sources": [
+              "https://www.renk.com/en/products/vehicles/transmissions/hswl-076"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Drivetrain monitoring",
+            "details": "RENK describes integrated condition monitoring; individual sensors and control processors are not named.",
+            "sources": [
+              "https://www.renk.com/en/products/vehicles/transmissions/hswl-076"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tencore-termit-2-published-system",
+        "manufacturer": "Tencore",
+        "models": [
+          "TerMIT 2.0"
+        ],
+        "configuration": "Current TerMIT 2.0 manufacturer specification, shown as a configuration reference for the generic TerMIT record. Earlier generations must not inherit these ratings. CPU, memory, radio module and battery chemistry are not disclosed. Payload modules are optional and their individual runtime is not whole-vehicle endurance.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Electric tracked chassis",
+            "details": "Electric propulsion; listed road/off-road speeds are 15/12 km/h with range up to 40 km. Test load and conditions are unspecified.",
+            "sources": [
+              "https://tencore.com.ua/termit"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Published battery configuration",
+            "details": "Manufacturer lists four 73 Ah, 20S batteries. Wiring topology, cell chemistry and nominal voltage are not given; combined watt-hours are therefore not inferred.",
+            "sources": [
+              "https://tencore.com.ua/termit"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation cameras",
+            "details": "Day, night and thermal cameras are listed; sensor manufacturers, resolutions and image-processing hardware are not identified.",
+            "sources": [
+              "https://tencore.com.ua/termit"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular platform",
+            "details": "Tracked chassis with interchangeable payload modules; unarmored base mass 570±20 kg, armored 640±20 kg.",
+            "sources": [
+              "https://tencore.com.ua/termit"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Tencore",
+            "models": [
+              "TerMIT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "av-68460-mini-ddl-module",
+        "manufacturer": "AeroVironment",
+        "models": [
+          "68460 mini-DDL transceiver"
+        ],
+        "configuration": "AeroVironment OEM integration instructions dated January 26, 2016, filed under FCC ID PZR-68460. Module evidence only; it does not establish which aircraft carries it. Silicon, memory, input-power rating and host bus are not disclosed in this manual. A shared band is not a Wi-Fi or drone identity.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "DDL physical-link architecture",
+            "details": "2.4 GHz mini-DDL uses a star topology with TDMA and TDD between matching modules. The manual does not identify it as IEEE 802.11.",
+            "sources": [
+              "https://fccid.io/PZR-68460/User-Manual/OEM-Instructions-2959689.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Documented channel configuration",
+            "details": "2016 manual lists 5 MHz bandwidth and centers 2415, 2425, 2435, 2445 and 2455 MHz. These are this manual’s settings, not every configuration in the wider FCC grant.",
+            "sources": [
+              "https://fccid.io/PZR-68460/User-Manual/OEM-Instructions-2959689.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Approved antenna examples",
+            "details": "Manufacturer references 70958 dual-patch, LINX ANT-2.4-CW-RH monopole and 68856 broadband dipole antennas; host integration determines the installed option.",
+            "sources": [
+              "https://fccid.io/PZR-68460/User-Manual/OEM-Instructions-2959689.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Network roles",
+            "details": "OEM instructions cover Arbiter, Client and Viewer roles.",
+            "sources": [
+              "https://fccid.io/PZR-68460/User-Manual/OEM-Instructions-2959689.pdf"
+            ]
+          }
+        ],
+        "fcc_ids": [
+          "PZR-68460"
+        ]
+      },
+      {
+        "id": "av-79902-xbee-900hp-family",
+        "manufacturer": "AeroVironment",
+        "models": [
+          "79902 XBee 900 MHz module"
+        ],
+        "configuration": "PZR-79902 grant records a change of identification from Digi MCQ-XB900HP. Digi data describes the original XBee-PRO 900HP family; standard and Programmable options are not collapsed into one configuration. This does not identify an aircraft processor or prove every AeroVironment product contains the module.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Original radio-family controller",
+            "details": "Digi identifies an ADF7023 transceiver and EFM32G230 Cortex-M3 at 28 MHz. The additional MC9S08QE32 belongs only to the Programmable option; that option is not established for this AeroVironment record.",
+            "sources": [
+              "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp",
+              "https://fccid.io/PZR-79902"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "FHSS radio",
+            "details": "Original family operates in 902–928 MHz with 10 or 200 kbit/s modes. AeroVironment’s authorization lists 902.4–927.6 MHz; this is not Wi-Fi or Bluetooth.",
+            "sources": [
+              "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp",
+              "https://fccid.io/PZR-79902"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Option-dependent module supply",
+            "details": "Digi lists 2.1–3.6 V for the standard module and 2.4–3.6 V for Programmable. These are radio-module input ratings, not a host battery specification.",
+            "sources": [
+              "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Original family data ports",
+            "details": "3 V UART and SPI; GPIO options include digital I/O, four 10-bit ADC inputs and two PWM outputs.",
+            "sources": [
+              "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Original family networking",
+            "details": "DigiMesh and point-to-point/multipoint modes are supported; configured firmware is not established by the grant alone.",
+            "sources": [
+              "https://hub.digi.com/dp/path%3D/marketing/asset/ds_xbeepro900hp"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Tested host boundary",
+            "details": "2017 test report identifies a Quantix revision-13 test host and separate TI WL18MODGI Wi-Fi/Bluetooth module. That co-location is test-configuration evidence, not a universal aircraft assignment.",
+            "sources": [
+              "https://device.report/m/057bb55aad9cd5465ae6c2067b12cb38018f3063a4e485ebdd62ea155c6e3cbf"
+            ]
+          }
+        ],
+        "fcc_ids": [
+          "PZR-79902"
+        ]
       }
     ]
   },
@@ -339802,8 +340385,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 825,
-    "devices_with_system_profiles": 723,
-    "devices_with_documented_compute": 354
+    "system_profiles": 830,
+    "devices_with_system_profiles": 728,
+    "devices_with_documented_compute": 355
   }
 }
