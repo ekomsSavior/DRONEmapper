@@ -9,6 +9,32 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 69 separates firmware targets, robot editions and subassembly ratings',()=>{
+ const cub=system('Petoi','OpenCat Cub firmware target');
+ assert.equal(profileIds(cub).length,2);
+ const v0=system('Petoi','OpenCat Cub / BiBoard V0 reference');
+ const v1=system('Petoi','OpenCat Cub / BiBoard V1 reference');
+ assert.match(text(v0.sections.memory),/16 MB/);
+ assert.doesNotMatch(text(v0.sections.interfaces.facts),/CH343P/);
+ assert.match(text(v1.sections.interfaces),/CH343P/);
+ assert.doesNotMatch(text(v1.sections.memory.facts),/16 MB/);
+ assert.match(text(cub.sections.identification),/fallback/);
+ assert.match(text(system('Anyverse Dynamics','Anyverse K15').sections.compute),/precision and semiconductor model are unspecified/);
+ const north=system('Sharpa','Sharpa North');
+ assert.equal(north.sections.compute.status,'not-established');
+ assert.match(text(north.sections.power),/hand ratings, not whole-robot/);
+ assert.match(text(north.configurations),/not battery endurance/);
+ const gmo=system('GMO AI & Robotics','GMO AIR G1');
+ assert.match(text(gmo.sections.compute),/Basic has no additional/);
+ assert.match(text(gmo.sections.sensors),/G1-Comp instead lists D455/);
+ assert.equal(gmo.sections.memory.status,'not-established');
+ const jose=system('IntBot','José (IntBot humanoid)');
+ assert.equal(jose.sections.compute.status,'not-established');
+ assert.equal(jose.sections.radios.status,'not-established');
+ assert.equal(profileIds(system('IntBot','Nylo')).length,0);
+ assert.equal(profileIds(system('Petoi','OpenCat Cub firmware target',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 67 separates ground-vehicle variants and retrofit electronics',()=>{
  const rack=system('Gravis Robotics','Gravis Autonomous Excavator System');
  assert.match(text(rack.sections.compute),/edge computing.*without an internet/);

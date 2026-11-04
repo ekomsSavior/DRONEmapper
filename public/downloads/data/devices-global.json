@@ -16468,13 +16468,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "anyverse-k15-published-system",
+            "configuration": "Manufacturer K15 product specification, checked through indexed primary-page text after direct retrieval failed. TOPS is a performance claim, not a processor identity. CPU/accelerator part numbers, RAM, storage, battery capacity and radio modules are not published in the reviewed material.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Published compute capability",
+                "details": "Manufacturer lists more than 1,000 TOPS; accelerator count, precision and semiconductor model are unspecified.",
+                "sources": [
+                  "https://anyverse.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anyverse-k15-published-system",
+                "configuration": "Manufacturer K15 product specification, checked through indexed primary-page text after direct retrieval failed. TOPS is a performance claim, not a processor identity. CPU/accelerator part numbers, RAM, storage, battery capacity and radio modules are not published in the reviewed material.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -16488,23 +16507,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Multimodal sensing",
+                "details": "Published architecture combines vision, tactile and force sensing; individual sensor parts are not identified.",
+                "sources": [
+                  "https://anyverse.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anyverse-k15-published-system",
+                "configuration": "Manufacturer K15 product specification, checked through indexed primary-page text after direct retrieval failed. TOPS is a performance claim, not a processor identity. CPU/accelerator part numbers, RAM, storage, battery capacity and radio modules are not published in the reviewed material.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Runtime claim",
+                "details": "Advertised battery runtime is six hours; load/test conditions and battery specifications are not supplied.",
+                "sources": [
+                  "https://anyverse.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anyverse-k15-published-system",
+                "configuration": "Manufacturer K15 product specification, checked through indexed primary-page text after direct retrieval failed. TOPS is a performance claim, not a processor identity. CPU/accelerator part numbers, RAM, storage, battery capacity and radio modules are not published in the reviewed material.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Manipulation hardware",
+                "details": "32 degrees of freedom; listed single-arm payload above 6 kg and manipulation accuracy 2 mm.",
+                "sources": [
+                  "https://anyverse.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anyverse-k15-published-system",
+                "configuration": "Manufacturer K15 product specification, checked through indexed primary-page text after direct retrieval failed. TOPS is a performance claim, not a processor identity. CPU/accelerator part numbers, RAM, storage, battery capacity and radio modules are not published in the reviewed material.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Embodied control",
+                "details": "MWA latent world model predicts physical states; reinforcement learning and end-to-end perception/action support manipulation.",
+                "sources": [
+                  "https://anyverse.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anyverse-k15-published-system",
+                "configuration": "Manufacturer K15 product specification, checked through indexed primary-page text after direct retrieval failed. TOPS is a performance claim, not a processor identity. CPU/accelerator part numbers, RAM, storage, battery capacity and radio modules are not published in the reviewed material.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -16518,13 +16589,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -80308,13 +80374,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "gmo-air-unitree-g1-configurations",
+            "configuration": "GMO’s own G1 configuration catalog and deployment announcement establish Unitree G1 hardware. Current offerings are configuration references; the October 2025 event does not identify its exact edition. GMO currently says its operated G1 fleet uses Edu Plus. Optional AGX Orin/Thor rear docks and hands are not assumed installed.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Edition-dependent compute",
+                "details": "Basic has no additional development compute module. Edu Standard, Edu Plus and Edu Boxing list an internal 100-TOPS module without identifying its silicon in this comparison.",
+                "sources": [
+                  "https://gmo-humanoid.shop/unitree/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gmo-air-unitree-g1-configurations",
+                "configuration": "GMO’s own G1 configuration catalog and deployment announcement establish Unitree G1 hardware. Current offerings are configuration references; the October 2025 event does not identify its exact edition. GMO currently says its operated G1 fleet uses Edu Plus. Optional AGX Orin/Thor rear docks and hands are not assumed installed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -80323,33 +80408,112 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Common connectivity",
+                "details": "Wi-Fi 6 and Bluetooth 5.2; the catalog does not name radio chips or a unique broadcast identity.",
+                "sources": [
+                  "https://gmo-humanoid.shop/unitree/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gmo-air-unitree-g1-configurations",
+                "configuration": "GMO’s own G1 configuration catalog and deployment announcement establish Unitree G1 hardware. Current offerings are configuration references; the October 2025 event does not identify its exact edition. GMO currently says its operated G1 fleet uses Edu Plus. Optional AGX Orin/Thor rear docks and hands are not assumed installed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Edition-dependent perception",
+                "details": "Basic and listed Edu variants use RealSense D435i plus 3D LiDAR; G1-Comp instead lists D455. Sensor choice must follow the actual edition.",
+                "sources": [
+                  "https://gmo-humanoid.shop/unitree/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gmo-air-unitree-g1-configurations",
+                "configuration": "GMO’s own G1 configuration catalog and deployment announcement establish Unitree G1 hardware. Current offerings are configuration references; the October 2025 event does not identify its exact edition. GMO currently says its operated G1 fleet uses Edu Plus. Optional AGX Orin/Thor rear docks and hands are not assumed installed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and charging",
+                "details": "Quick-release 13-cell, 9,000 mAh battery; charger output 54 V, 5 A. Approximately two hours is an operating estimate.",
+                "sources": [
+                  "https://gmo-humanoid.shop/unitree/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gmo-air-unitree-g1-configurations",
+                "configuration": "GMO’s own G1 configuration catalog and deployment announcement establish Unitree G1 hardware. Current offerings are configuration references; the October 2025 event does not identify its exact edition. GMO currently says its operated G1 fleet uses Edu Plus. Optional AGX Orin/Thor rear docks and hands are not assumed installed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Physical configuration",
+                "details": "Basic/Edu Standard have 23 body degrees of freedom; Edu Plus/Boxing have 29. Hands and rear compute docks are selectable accessories.",
+                "sources": [
+                  "https://gmo-humanoid.shop/unitree/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gmo-air-unitree-g1-configurations",
+                "configuration": "GMO’s own G1 configuration catalog and deployment announcement establish Unitree G1 hardware. Current offerings are configuration references; the October 2025 event does not identify its exact edition. GMO currently says its operated G1 fleet uses Edu Plus. Optional AGX Orin/Thor rear docks and hands are not assumed installed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Programming access",
+                "details": "Edu variants support secondary development through Unitree SDK; Basic is limited to supplied controller/app functions.",
+                "sources": [
+                  "https://gmo-humanoid.shop/unitree/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gmo-air-unitree-g1-configurations",
+                "configuration": "GMO’s own G1 configuration catalog and deployment announcement establish Unitree G1 hardware. Current offerings are configuration references; the October 2025 event does not identify its exact edition. GMO currently says its operated G1 fleet uses Edu Plus. Optional AGX Orin/Thor rear docks and hands are not assumed installed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Operator and manufacturer",
+                "details": "GMO documents deployment of G1; its catalog identifies the platform as Unitree, rather than a separately manufactured GMO robot.",
+                "sources": [
+                  "https://ai-robotics.gmo/en/news/article/ebisubunkasai/",
+                  "https://gmo-humanoid.shop/unitree/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gmo-air-unitree-g1-configurations",
+                "configuration": "GMO’s own G1 configuration catalog and deployment announcement establish Unitree G1 hardware. Current offerings are configuration references; the October 2025 event does not identify its exact edition. GMO currently says its operated G1 fleet uses Edu Plus. Optional AGX Orin/Thor rear docks and hands are not assumed installed.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "other": {
             "title": "Other published specifications",
@@ -80358,14 +80522,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
-          "identification"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -87874,8 +88031,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "intbot-jose-published-interaction-stack",
+            "configuration": "Named airport deployment and manufacturer interaction architecture. CPU, memory, battery, radio, camera/microphone SKUs and underlying humanoid chassis are not disclosed in the reviewed primary sources. Nylo, AGIbot or Unitree hardware is not assigned to José merely because IntBot also sells those products.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -87894,8 +88057,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Interaction inputs",
+                "details": "IntBot’s platform combines visual, audio and spatial inputs; the manufacturer lists José among its deployments, but does not identify his individual sensor modules.",
+                "sources": [
+                  "https://www.intbot.ai/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "intbot-jose-published-interaction-stack",
+                "configuration": "Named airport deployment and manufacturer interaction architecture. CPU, memory, battery, radio, camera/microphone SKUs and underlying humanoid chassis are not disclosed in the reviewed primary sources. Nylo, AGIbot or Unitree hardware is not assigned to José merely because IntBot also sells those products.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -87904,13 +88080,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Airport information integration",
+                "details": "Operator describes flight information, terminal maps, directions and ground-transport information. Backend APIs, network transport and credentials are not published.",
+                "sources": [
+                  "https://www.flysanjose.com/jose"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "intbot-jose-published-interaction-stack",
+                "configuration": "Named airport deployment and manufacturer interaction architecture. CPU, memory, battery, radio, camera/microphone SKUs and underlying humanoid chassis are not disclosed in the reviewed primary sources. Nylo, AGIbot or Unitree hardware is not assigned to José merely because IntBot also sells those products.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Social intelligence",
+                "details": "IntEngine coordinates conversational responses, movement and expression. The airport confirms José supports more than 50 languages.",
+                "sources": [
+                  "https://www.intbot.ai/",
+                  "https://www.flysanjose.com/jose"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "intbot-jose-published-interaction-stack",
+                "configuration": "Named airport deployment and manufacturer interaction architecture. CPU, memory, battery, radio, camera/microphone SKUs and underlying humanoid chassis are not disclosed in the reviewed primary sources. Nylo, AGIbot or Unitree hardware is not assigned to José merely because IntBot also sells those products.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -87927,10 +88130,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -113863,23 +114063,97 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "petoi-cub-biboard-v1-reference",
+            "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+            "reviewed_on": "2026-11-04"
+          },
+          {
+            "id": "petoi-cub-biboard-v0-reference",
+            "configuration": "Alternative V0 controller reference supported by the reviewed firmware’s board selections. Not a claim that a Cub-named transmitter has V0 hardware. Kept separate from V1 because processor packaging, flash, USB bridge and supply details differ.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "BiBoard V1 controller option",
+                "details": "ESP32-U4WDH on ESP32-MINI-1, dual-core Xtensa LX6. This is the V1 board reference, not proof every Cub-named receiver uses it.",
+                "sources": [
+                  "https://docs.petoi.com/biboard/biboard-v1-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v1-reference",
+                "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "compute",
+                "component": "V0 controller option",
+                "details": "ESP32-based BiBoard; exact module package is not specified in this V0 guide.",
+                "sources": [
+                  "https://docs.petoi.com/biboard",
+                  "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/OpenCatEsp32.ino"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v0-reference",
+                "configuration": "Alternative V0 controller reference supported by the reviewed firmware’s board selections. Not a claim that a Cub-named transmitter has V0 hardware. Kept separate from V1 because processor packaging, flash, USB bridge and supply details differ.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "V1 memory",
+                "details": "520 KB SRAM, 448 KB ROM and 4 MB flash. External M24C64 EEPROM is optional; newer firmware can use internal flash instead.",
+                "sources": [
+                  "https://docs.petoi.com/biboard/biboard-v1-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v1-reference",
+                "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "memory",
+                "component": "V0 memory",
+                "details": "16 MB flash and a 64-kbit external EEPROM; no Cub-specific memory configuration is established.",
+                "sources": [
+                  "https://docs.petoi.com/biboard"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v0-reference",
+                "configuration": "Alternative V0 controller reference supported by the reviewed firmware’s board selections. Not a claim that a Cub-named transmitter has V0 hardware. Kept separate from V1 because processor packaging, flash, USB bridge and supply details differ.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "radios",
+                "component": "V1 radios",
+                "details": "2.4 GHz 802.11b/g/n Wi-Fi and Bluetooth 4.2 BR/EDR/BLE.",
+                "sources": [
+                  "https://docs.petoi.com/biboard/biboard-v1-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v1-reference",
+                "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "Published model communications",
                 "details": "Default CubXX_BLE firmware name.",
@@ -113892,28 +114166,130 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "V1 board sensing",
+                "details": "Guide identifies MPU6050 motion sensing and a touch-pad socket. Optional peripheral support in source code does not prove sensors are fitted.",
+                "sources": [
+                  "https://docs.petoi.com/biboard/biboard-v1-guide",
+                  "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/OpenCatEsp32.ino"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v1-reference",
+                "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "V0 motion sensor",
+                "details": "MPU6050 six-axis IMU on the controller.",
+                "sources": [
+                  "https://docs.petoi.com/biboard"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v0-reference",
+                "configuration": "Alternative V0 controller reference supported by the reviewed firmware’s board selections. Not a claim that a Cub-named transmitter has V0 hardware. Kept separate from V1 because processor packaging, flash, USB bridge and supply details differ.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "V1 board supply",
+                "details": "7–9 V input with 5 V operating supply; these board values do not identify a Cub battery pack.",
+                "sources": [
+                  "https://docs.petoi.com/biboard/biboard-v1-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v1-reference",
+                "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "power",
+                "component": "V0 supply paths",
+                "details": "USB 5 V powers the controller electronics; 7.4 V battery input, up to 8.4 V, additionally supplies servo and expansion power.",
+                "sources": [
+                  "https://docs.petoi.com/biboard"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v0-reference",
+                "configuration": "Alternative V0 controller reference supported by the reviewed firmware’s board selections. Not a claim that a Cub-named transmitter has V0 hardware. Kept separate from V1 because processor packaging, flash, USB bridge and supply details differ.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "V1 ports",
+                "details": "Twelve PWM servo outputs, CH343P USB/serial bridge, UART2/I2C/analog Grove sockets and Raspberry Pi connector.",
+                "sources": [
+                  "https://docs.petoi.com/biboard/biboard-v1-guide"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v1-reference",
+                "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "V0 board interfaces",
+                "details": "CP2102 USB/serial bridge, USB-C, 12 PWM outputs, analog inputs, two serial ports, I2C and Raspberry Pi wiring interface.",
+                "sources": [
+                  "https://docs.petoi.com/biboard"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v0-reference",
+                "configuration": "Alternative V0 controller reference supported by the reviewed firmware’s board selections. Not a claim that a Cub-named transmitter has V0 hardware. Kept separate from V1 because processor packaging, flash, USB bridge and supply details differ.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Firmware configuration",
+                "details": "OpenCatEsp32 has separate model and board selections. Serial initialization is 115200 baud; extension modules are conditional firmware capabilities.",
+                "sources": [
+                  "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/OpenCatEsp32.ino"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v1-reference",
+                "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "identification",
+                "component": "Default name boundary",
+                "details": "Firmware generates Cub plus two hexadecimal characters for its fallback name; BLE appends _BLE. A custom name can replace it, and the pattern alone does not establish robot model or board.",
+                "sources": [
+                  "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/configConstants.h",
+                  "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/bleUart.h"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "petoi-cub-biboard-v1-reference",
+                "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+                "reviewed_on": "2026-11-04"
+              },
               {
                 "component": "Possible ground robot · Petoi Cub-style BLE",
                 "details": "Default BiBoard firmware name only; two hexadecimal suffix characters. Custom names and other boards may not match. No service is required because this firmware does not explicitly advertise one.",
@@ -113945,14 +114321,7 @@
             "facts": []
           }
         },
-        "missing_sections": [
-          "compute",
-          "memory",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
-        ],
+        "missing_sections": [],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
     },
@@ -124559,8 +124928,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "sharpa-north-w01-configuration",
+            "configuration": "North humanoid and manufacturer-documented W01 hand integration. Hand specifications below describe the current W01 reference, not every earlier North build. CPU, main-system RAM, radio parts and whole-robot battery are not disclosed. CES operating hours are a demonstration schedule, not battery endurance. W01 variant-specific table columns are not merged.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -124579,23 +124954,89 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception and contact",
+                "details": "North uses real-time visual tracking. The DQ configuration uses W01 tactile/force feedback for contact-rich handling.",
+                "sources": [
+                  "https://www.sharpa.com/pages/north",
+                  "https://www.sharpa.com/pages/north-at-work"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sharpa-north-w01-configuration",
+                "configuration": "North humanoid and manufacturer-documented W01 hand integration. Hand specifications below describe the current W01 reference, not every earlier North build. CPU, main-system RAM, radio parts and whole-robot battery are not disclosed. CES operating hours are a demonstration schedule, not battery endurance. W01 variant-specific table columns are not merged.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Hand electrical supply only",
+                "details": "W01 specifies 18–28 V input and 0.75 A static current at 20 V. These are hand ratings, not whole-robot consumption or battery capacity.",
+                "sources": [
+                  "https://www.sharpa.com/pages/w01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sharpa-north-w01-configuration",
+                "configuration": "North humanoid and manufacturer-documented W01 hand integration. Hand specifications below describe the current W01 reference, not every earlier North build. CPU, main-system RAM, radio parts and whole-robot battery are not disclosed. CES operating hours are a demonstration schedule, not battery endurance. W01 variant-specific table columns are not merged.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Humanoid mechanism",
+                "details": "67 degrees of freedom with coordinated two-handed manipulation.",
+                "sources": [
+                  "https://www.sharpa.com/pages/north"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sharpa-north-w01-configuration",
+                "configuration": "North humanoid and manufacturer-documented W01 hand integration. Hand specifications below describe the current W01 reference, not every earlier North build. CPU, main-system RAM, radio parts and whole-robot battery are not disclosed. CES operating hours are a demonstration schedule, not battery endurance. W01 variant-specific table columns are not merged.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "W01 hand reference",
+                "details": "Current W01 has 22 active joints and a 1000BASE-T Ethernet interface; listed control communication rate is 500 Hz.",
+                "sources": [
+                  "https://www.sharpa.com/pages/w01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sharpa-north-w01-configuration",
+                "configuration": "North humanoid and manufacturer-documented W01 hand integration. Hand specifications below describe the current W01 reference, not every earlier North build. CPU, main-system RAM, radio parts and whole-robot battery are not disclosed. CES operating hours are a demonstration schedule, not battery endurance. W01 variant-specific table columns are not merged.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Manipulation stack",
+                "details": "North combines a latent world model, CraftNet trajectory generation and real-time tactile grasp control. W01 supports SharpaPilot SDK and ROS 2 integration.",
+                "sources": [
+                  "https://www.sharpa.com/pages/north-at-work",
+                  "https://www.sharpa.com/pages/w01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "sharpa-north-w01-configuration",
+                "configuration": "North humanoid and manufacturer-documented W01 hand integration. Hand specifications below describe the current W01 reference, not every earlier North build. CPU, main-system RAM, radio parts and whole-robot battery are not disclosed. CES operating hours are a demonstration schedule, not battery endurance. W01 variant-specific table columns are not merged.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -124612,10 +125053,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -338994,6 +339431,361 @@
             ]
           }
         ]
+      },
+      {
+        "id": "anyverse-k15-published-system",
+        "manufacturer": "Anyverse Dynamics",
+        "models": [
+          "Anyverse K15",
+          "K15"
+        ],
+        "configuration": "Manufacturer K15 product specification, checked through indexed primary-page text after direct retrieval failed. TOPS is a performance claim, not a processor identity. CPU/accelerator part numbers, RAM, storage, battery capacity and radio modules are not published in the reviewed material.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Published compute capability",
+            "details": "Manufacturer lists more than 1,000 TOPS; accelerator count, precision and semiconductor model are unspecified.",
+            "sources": [
+              "https://anyverse.com/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Multimodal sensing",
+            "details": "Published architecture combines vision, tactile and force sensing; individual sensor parts are not identified.",
+            "sources": [
+              "https://anyverse.com/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Runtime claim",
+            "details": "Advertised battery runtime is six hours; load/test conditions and battery specifications are not supplied.",
+            "sources": [
+              "https://anyverse.com/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Manipulation hardware",
+            "details": "32 degrees of freedom; listed single-arm payload above 6 kg and manipulation accuracy 2 mm.",
+            "sources": [
+              "https://anyverse.com/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Embodied control",
+            "details": "MWA latent world model predicts physical states; reinforcement learning and end-to-end perception/action support manipulation.",
+            "sources": [
+              "https://anyverse.com/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sharpa-north-w01-configuration",
+        "manufacturer": "Sharpa",
+        "models": [
+          "Sharpa North",
+          "North"
+        ],
+        "configuration": "North humanoid and manufacturer-documented W01 hand integration. Hand specifications below describe the current W01 reference, not every earlier North build. CPU, main-system RAM, radio parts and whole-robot battery are not disclosed. CES operating hours are a demonstration schedule, not battery endurance. W01 variant-specific table columns are not merged.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Humanoid mechanism",
+            "details": "67 degrees of freedom with coordinated two-handed manipulation.",
+            "sources": [
+              "https://www.sharpa.com/pages/north"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception and contact",
+            "details": "North uses real-time visual tracking. The DQ configuration uses W01 tactile/force feedback for contact-rich handling.",
+            "sources": [
+              "https://www.sharpa.com/pages/north",
+              "https://www.sharpa.com/pages/north-at-work"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "W01 hand reference",
+            "details": "Current W01 has 22 active joints and a 1000BASE-T Ethernet interface; listed control communication rate is 500 Hz.",
+            "sources": [
+              "https://www.sharpa.com/pages/w01"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hand electrical supply only",
+            "details": "W01 specifies 18–28 V input and 0.75 A static current at 20 V. These are hand ratings, not whole-robot consumption or battery capacity.",
+            "sources": [
+              "https://www.sharpa.com/pages/w01"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Manipulation stack",
+            "details": "North combines a latent world model, CraftNet trajectory generation and real-time tactile grasp control. W01 supports SharpaPilot SDK and ROS 2 integration.",
+            "sources": [
+              "https://www.sharpa.com/pages/north-at-work",
+              "https://www.sharpa.com/pages/w01"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gmo-air-unitree-g1-configurations",
+        "manufacturer": "GMO AI & Robotics",
+        "models": [
+          "GMO AIR G1"
+        ],
+        "configuration": "GMO’s own G1 configuration catalog and deployment announcement establish Unitree G1 hardware. Current offerings are configuration references; the October 2025 event does not identify its exact edition. GMO currently says its operated G1 fleet uses Edu Plus. Optional AGX Orin/Thor rear docks and hands are not assumed installed.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Edition-dependent compute",
+            "details": "Basic has no additional development compute module. Edu Standard, Edu Plus and Edu Boxing list an internal 100-TOPS module without identifying its silicon in this comparison.",
+            "sources": [
+              "https://gmo-humanoid.shop/unitree/g1/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Edition-dependent perception",
+            "details": "Basic and listed Edu variants use RealSense D435i plus 3D LiDAR; G1-Comp instead lists D455. Sensor choice must follow the actual edition.",
+            "sources": [
+              "https://gmo-humanoid.shop/unitree/g1/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Common connectivity",
+            "details": "Wi-Fi 6 and Bluetooth 5.2; the catalog does not name radio chips or a unique broadcast identity.",
+            "sources": [
+              "https://gmo-humanoid.shop/unitree/g1/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and charging",
+            "details": "Quick-release 13-cell, 9,000 mAh battery; charger output 54 V, 5 A. Approximately two hours is an operating estimate.",
+            "sources": [
+              "https://gmo-humanoid.shop/unitree/g1/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Physical configuration",
+            "details": "Basic/Edu Standard have 23 body degrees of freedom; Edu Plus/Boxing have 29. Hands and rear compute docks are selectable accessories.",
+            "sources": [
+              "https://gmo-humanoid.shop/unitree/g1/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Programming access",
+            "details": "Edu variants support secondary development through Unitree SDK; Basic is limited to supplied controller/app functions.",
+            "sources": [
+              "https://gmo-humanoid.shop/unitree/g1/"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Operator and manufacturer",
+            "details": "GMO documents deployment of G1; its catalog identifies the platform as Unitree, rather than a separately manufactured GMO robot.",
+            "sources": [
+              "https://ai-robotics.gmo/en/news/article/ebisubunkasai/",
+              "https://gmo-humanoid.shop/unitree/g1/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "petoi-cub-biboard-v1-reference",
+        "manufacturer": "Petoi",
+        "models": [
+          "OpenCat Cub / BiBoard V1 reference"
+        ],
+        "configuration": "Firmware target and explicitly selected BiBoard V1 reference, not an identified commercial Cub robot. The reviewed sketch defaults to Bittle; Cub is a selectable target and also the naming fallback for non-Bittle/non-Nybble builds. Physical Cub reception, battery, actuator assembly and installed add-ons are unverified. A Cub BLE name cannot identify the board revision.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "BiBoard V1 controller option",
+            "details": "ESP32-U4WDH on ESP32-MINI-1, dual-core Xtensa LX6. This is the V1 board reference, not proof every Cub-named receiver uses it.",
+            "sources": [
+              "https://docs.petoi.com/biboard/biboard-v1-guide"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "V1 memory",
+            "details": "520 KB SRAM, 448 KB ROM and 4 MB flash. External M24C64 EEPROM is optional; newer firmware can use internal flash instead.",
+            "sources": [
+              "https://docs.petoi.com/biboard/biboard-v1-guide"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "V1 radios",
+            "details": "2.4 GHz 802.11b/g/n Wi-Fi and Bluetooth 4.2 BR/EDR/BLE.",
+            "sources": [
+              "https://docs.petoi.com/biboard/biboard-v1-guide"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "V1 board sensing",
+            "details": "Guide identifies MPU6050 motion sensing and a touch-pad socket. Optional peripheral support in source code does not prove sensors are fitted.",
+            "sources": [
+              "https://docs.petoi.com/biboard/biboard-v1-guide",
+              "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/OpenCatEsp32.ino"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "V1 board supply",
+            "details": "7–9 V input with 5 V operating supply; these board values do not identify a Cub battery pack.",
+            "sources": [
+              "https://docs.petoi.com/biboard/biboard-v1-guide"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "V1 ports",
+            "details": "Twelve PWM servo outputs, CH343P USB/serial bridge, UART2/I2C/analog Grove sockets and Raspberry Pi connector.",
+            "sources": [
+              "https://docs.petoi.com/biboard/biboard-v1-guide"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Firmware configuration",
+            "details": "OpenCatEsp32 has separate model and board selections. Serial initialization is 115200 baud; extension modules are conditional firmware capabilities.",
+            "sources": [
+              "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/OpenCatEsp32.ino"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Default name boundary",
+            "details": "Firmware generates Cub plus two hexadecimal characters for its fallback name; BLE appends _BLE. A custom name can replace it, and the pattern alone does not establish robot model or board.",
+            "sources": [
+              "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/configConstants.h",
+              "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/src/bleUart.h"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Petoi",
+            "models": [
+              "OpenCat Cub firmware target"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "petoi-cub-biboard-v0-reference",
+        "manufacturer": "Petoi",
+        "models": [
+          "OpenCat Cub / BiBoard V0 reference"
+        ],
+        "configuration": "Alternative V0 controller reference supported by the reviewed firmware’s board selections. Not a claim that a Cub-named transmitter has V0 hardware. Kept separate from V1 because processor packaging, flash, USB bridge and supply details differ.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "V0 controller option",
+            "details": "ESP32-based BiBoard; exact module package is not specified in this V0 guide.",
+            "sources": [
+              "https://docs.petoi.com/biboard",
+              "https://github.com/PetoiCamp/OpenCatEsp32/blob/f5aba6b9cb7e4f2062f77365fbcd0c388acf32ef/OpenCatEsp32.ino"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "V0 memory",
+            "details": "16 MB flash and a 64-kbit external EEPROM; no Cub-specific memory configuration is established.",
+            "sources": [
+              "https://docs.petoi.com/biboard"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "V0 motion sensor",
+            "details": "MPU6050 six-axis IMU on the controller.",
+            "sources": [
+              "https://docs.petoi.com/biboard"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "V0 supply paths",
+            "details": "USB 5 V powers the controller electronics; 7.4 V battery input, up to 8.4 V, additionally supplies servo and expansion power.",
+            "sources": [
+              "https://docs.petoi.com/biboard"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "V0 board interfaces",
+            "details": "CP2102 USB/serial bridge, USB-C, 12 PWM outputs, analog inputs, two serial ports, I2C and Raspberry Pi wiring interface.",
+            "sources": [
+              "https://docs.petoi.com/biboard"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Petoi",
+            "models": [
+              "OpenCat Cub firmware target"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "intbot-jose-published-interaction-stack",
+        "manufacturer": "IntBot",
+        "models": [
+          "José (IntBot humanoid)"
+        ],
+        "configuration": "Named airport deployment and manufacturer interaction architecture. CPU, memory, battery, radio, camera/microphone SKUs and underlying humanoid chassis are not disclosed in the reviewed primary sources. Nylo, AGIbot or Unitree hardware is not assigned to José merely because IntBot also sells those products.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Interaction inputs",
+            "details": "IntBot’s platform combines visual, audio and spatial inputs; the manufacturer lists José among its deployments, but does not identify his individual sensor modules.",
+            "sources": [
+              "https://www.intbot.ai/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Social intelligence",
+            "details": "IntEngine coordinates conversational responses, movement and expression. The airport confirms José supports more than 50 languages.",
+            "sources": [
+              "https://www.intbot.ai/",
+              "https://www.flysanjose.com/jose"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Airport information integration",
+            "details": "Operator describes flight information, terminal maps, directions and ground-transport information. Backend APIs, network transport and credentials are not published.",
+            "sources": [
+              "https://www.flysanjose.com/jose"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -339010,8 +339802,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 819,
-    "devices_with_system_profiles": 718,
-    "devices_with_documented_compute": 351
+    "system_profiles": 825,
+    "devices_with_system_profiles": 723,
+    "devices_with_documented_compute": 354
   }
 }
