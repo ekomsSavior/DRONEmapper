@@ -34521,13 +34521,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "devanthro-robody-current",
+            "configuration": "Current hardware reference; Devanthro reports several generations since 2023. Exact Orin variant, RAM, storage, battery capacity and radio-module identifiers are unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard computers",
+                "details": "NVIDIA Jetson Orin plus Orin Nano; the larger Orin module is not identified as AGX or NX.",
+                "sources": [
+                  "https://www.devanthro.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "devanthro-robody-current",
+                "configuration": "Current hardware reference; Devanthro reports several generations since 2023. Exact Orin variant, RAM, storage, battery capacity and radio-module identifiers are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -34541,23 +34560,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "4K fisheye RGB cameras, millimeter-wave radar and stereo microphones; sensor SKUs and radar frequency unspecified.",
+                "sources": [
+                  "https://www.devanthro.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "devanthro-robody-current",
+                "configuration": "Current hardware reference; Devanthro reports several generations since 2023. Exact Orin variant, RAM, storage, battery capacity and radio-module identifiers are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobile base and charging",
+                "details": "Differential-drive base; 60 kg, 1.65 m tall; advertised six-hour operation and self-docking.",
+                "sources": [
+                  "https://www.devanthro.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "devanthro-robody-current",
+                "configuration": "Current hardware reference; Devanthro reports several generations since 2023. Exact Orin variant, RAM, storage, battery capacity and radio-module identifiers are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Manipulation hardware",
+                "details": "QDD and Dynamixel actuators; two 6-DOF arms with 1.5 kg payload each, two-finger grippers and a 3-DOF neck.",
+                "sources": [
+                  "https://www.devanthro.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "devanthro-robody-current",
+                "configuration": "Current hardware reference; Devanthro reports several generations since 2023. Exact Orin variant, RAM, storage, battery capacity and radio-module identifiers are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Robot control",
+                "details": "ROS 2 middleware with human-in-the-loop VR telepresence and stereoscopic video. This configuration is not described as fully autonomous.",
+                "sources": [
+                  "https://www.devanthro.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "devanthro-robody-current",
+                "configuration": "Current hardware reference; Devanthro reports several generations since 2023. Exact Orin variant, RAM, storage, battery capacity and radio-module identifiers are unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -34571,13 +34642,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -35257,8 +35323,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dexterity-dexr-2023",
+            "configuration": "DexR trailer-loading robot in Dexterity’s September 2023 announcement. This does not establish the later Mech hardware BOM; CPU, memory, radios, battery and camera SKUs are unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -35277,8 +35349,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception and contact feedback",
+                "details": "Vision builds a 3D representation of boxes and trailer space; force control supplies contact feedback while packing.",
+                "sources": [
+                  "https://2024.modexshow.com/press/release/7433"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexterity-dexr-2023",
+                "configuration": "DexR trailer-loading robot in Dexterity’s September 2023 announcement. This does not establish the later Mech hardware BOM; CPU, memory, radios, battery and camera SKUs are unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -35287,13 +35372,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Dual-arm loading system",
+                "details": "Autonomous mobile base docks to a powered conveyor; two arms can pick and place boxes concurrently.",
+                "sources": [
+                  "https://2024.modexshow.com/press/release/7433"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexterity-dexr-2023",
+                "configuration": "DexR trailer-loading robot in Dexterity’s September 2023 announcement. This does not establish the later Mech hardware BOM; CPU, memory, radios, battery and camera SKUs are unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Loading pipeline",
+                "details": "Integrated motion planning coordinates both arms; packing software updates the trailer model as boxes arrive and learns from completed placements.",
+                "sources": [
+                  "https://2024.modexshow.com/press/release/7433"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexterity-dexr-2023",
+                "configuration": "DexR trailer-loading robot in Dexterity’s September 2023 announcement. This does not establish the later Mech hardware BOM; CPU, memory, radios, battery and camera SKUs are unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -35310,10 +35421,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -35355,13 +35463,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dexterity-mech-beckhoff-2026",
+            "configuration": "2026 Mech platform and supplier-disclosed control architecture. The lower-level controller is separate from the AI computer; AI accelerator, installed memory/storage, radio and battery capacity remain unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Machine-control computer",
+                "details": "Beckhoff CX5240 with Intel Atom x5-E3940 handles motion and safety logic. It is not identified as the robot’s AI inference computer.",
+                "sources": [
+                  "https://www.beckhoff.com/en-us/company/applications-and-references/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexterity-mech-beckhoff-2026",
+                "configuration": "2026 Mech platform and supplier-disclosed control architecture. The lower-level controller is separate from the AI computer; AI accelerator, installed memory/storage, radio and battery capacity remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -35375,23 +35502,88 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Inertial module",
+                "details": "Beckhoff EP3751-0260 EtherCAT box supplies accelerometer and gyroscope measurements.",
+                "sources": [
+                  "https://www.beckhoff.com/en-us/company/applications-and-references/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexterity-mech-beckhoff-2026",
+                "configuration": "2026 Mech platform and supplier-disclosed control architecture. The lower-level controller is separate from the AI computer; AI accelerator, installed memory/storage, radio and battery capacity remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Vision and force control",
+                "details": "Up to sixteen cameras; arm torque control operates at 4 kHz. Camera SKUs are not disclosed.",
+                "sources": [
+                  "https://dexterity.ai/mech"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexterity-mech-beckhoff-2026",
+                "configuration": "2026 Mech platform and supplier-disclosed control architecture. The lower-level controller is separate from the AI computer; AI accelerator, installed memory/storage, radio and battery capacity remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobile manipulation platform",
+                "details": "Battery-powered rover with four steerable wheels and dual vacuum pumps; two Kawasaki-manufactured arms, HiWin motion components, 60 kg combined lift and 5.4 m armspan.",
+                "sources": [
+                  "https://dexterity.ai/mech"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexterity-mech-beckhoff-2026",
+                "configuration": "2026 Mech platform and supplier-disclosed control architecture. The lower-level controller is separate from the AI computer; AI accelerator, installed memory/storage, radio and battery capacity remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Internal control buses",
+                "details": "EtherCAT and CAN, PCB-mounted Beckhoff EJ-series I/O and TwinSAFE functional safety. Generic wireless EtherCAT capability does not establish an installed RF module.",
+                "sources": [
+                  "https://www.beckhoff.com/en-us/company/applications-and-references/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexterity-mech-beckhoff-2026",
+                "configuration": "2026 Mech platform and supplier-disclosed control architecture. The lower-level controller is separate from the AI computer; AI accelerator, installed memory/storage, radio and battery capacity remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Separated software layers",
+                "details": "Windows 10 IoT Enterprise on the CX5240; Dexterity Physical AI supplies higher-level decisions and can operate standalone or with cloud services.",
+                "sources": [
+                  "https://www.beckhoff.com/en-us/company/applications-and-references/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse.html",
+                  "https://dexterity.ai/mech"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexterity-mech-beckhoff-2026",
+                "configuration": "2026 Mech platform and supplier-disclosed control architecture. The lower-level controller is separate from the AI computer; AI accelerator, installed memory/storage, radio and battery capacity remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -35405,13 +35597,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -56872,13 +57059,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ecorobotix-ara-620sg2-ts42",
+            "configuration": "620 S G2 / TS4.2 manual configuration used as a qualified ARA reference. This is a tractor-mounted precision sprayer, not a self-driving tractor. Exact CPU/GPU, RAM, storage and modem parts remain unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Distributed vision computers",
+                "details": "Six vision boxes each contain an image-processing computer, LED-control board and cooling fan; processor models are not named.",
+                "sources": [
+                  "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ecorobotix-ara-620sg2-ts42",
+                "configuration": "620 S G2 / TS4.2 manual configuration used as a qualified ARA reference. This is a tractor-mounted precision sprayer, not a self-driving tractor. Exact CPU/GPU, RAM, storage and modem parts remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -56887,28 +57093,105 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control-panel and Internet links",
+                "details": "Router and switch in the main electrical box, with Wi-Fi and 4G antenna. Radio bands, MAC allocations and modem SKU are not established.",
+                "sources": [
+                  "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ecorobotix-ara-620sg2-ts42",
+                "configuration": "620 S G2 / TS4.2 manual configuration used as a qualified ARA reference. This is a tractor-mounted precision sprayer, not a self-driving tractor. Exact CPU/GPU, RAM, storage and modem parts remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and speed measurement",
+                "details": "Each box has a target-recognition camera, four flash LEDs and a visual-odometry camera; a boom pressure sensor feeds one vision computer.",
+                "sources": [
+                  "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ecorobotix-ara-620sg2-ts42",
+                "configuration": "620 S G2 / TS4.2 manual configuration used as a qualified ARA reference. This is a tractor-mounted precision sprayer, not a self-driving tractor. Exact CPU/GPU, RAM, storage and modem parts remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Tractor-driven electrical supply",
+                "details": "Two 12 V lead batteries in series provide 24 V; a PTO-driven 28 V alternator recharges them. Vision boxes have RTC backup batteries.",
+                "sources": [
+                  "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ecorobotix-ara-620sg2-ts42",
+                "configuration": "620 S G2 / TS4.2 manual configuration used as a qualified ARA reference. This is a tractor-mounted precision sprayer, not a self-driving tractor. Exact CPU/GPU, RAM, storage and modem parts remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Spray actuation",
+                "details": "Three master vision boxes drive solenoid valves across three booms; remote on/off and boom-height controls.",
+                "sources": [
+                  "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ecorobotix-ara-620sg2-ts42",
+                "configuration": "620 S G2 / TS4.2 manual configuration used as a qualified ARA reference. This is a tractor-mounted precision sprayer, not a self-driving tractor. Exact CPU/GPU, RAM, storage and modem parts remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Nozzle assembly",
+                "details": "156 Euspray OC1X502 nozzles, 152 effective with all three booms; 6.04 m effective spray width and 10 ms minimum valve opening.",
+                "sources": [
+                  "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/technical-data"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ecorobotix-ara-620sg2-ts42",
+                "configuration": "620 S G2 / TS4.2 manual configuration used as a qualified ARA reference. This is a tractor-mounted precision sprayer, not a self-driving tractor. Exact CPU/GPU, RAM, storage and modem parts remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Local detection loop",
+                "details": "Target recognition and visual odometry time nozzle activation to the machine’s forward motion.",
+                "sources": [
+                  "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ecorobotix-ara-620sg2-ts42",
+                "configuration": "620 S G2 / TS4.2 manual configuration used as a qualified ARA reference. This is a tractor-mounted precision sprayer, not a self-driving tractor. Exact CPU/GPU, RAM, storage and modem parts remain unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -56922,13 +57205,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -58898,8 +59175,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "engineai-se01-reference",
+            "configuration": "Current SE01 product-page hardware reference. No exact CPU/GPU, RAM, radio, battery capacity or sensor part numbers are established; T800 components are not inherited.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -58918,18 +59201,57 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception and feedback",
+                "details": "LiDAR, depth and infrared cameras; body diagram labels RGB-D, an IMU and high-precision force sensors.",
+                "sources": [
+                  "https://en.engineai.com.cn/product-se01.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-se01-reference",
+                "configuration": "Current SE01 product-page hardware reference. No exact CPU/GPU, RAM, radio, battery capacity or sensor part numbers are established; T800 components are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electromechanical platform",
+                "details": "Removable battery with power-management system; proprietary planetary, harmonic and linear joint actuators. The page’s ambiguous battery-capacity display is not used as a rating.",
+                "sources": [
+                  "https://en.engineai.com.cn/product-se01.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-se01-reference",
+                "configuration": "Current SE01 product-page hardware reference. No exact CPU/GPU, RAM, radio, battery capacity or sensor part numbers are established; T800 components are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "External connections and hands",
+                "details": "Gigabit Ethernet and USB 3.0; six-DOF dexterous hand with force feedback, plus two speakers.",
+                "sources": [
+                  "https://en.engineai.com.cn/product-se01.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-se01-reference",
+                "configuration": "Current SE01 product-page hardware reference. No exact CPU/GPU, RAM, radio, battery capacity or sensor part numbers are established; T800 components are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -58951,9 +59273,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -58996,43 +59315,244 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "engineai-t800-developer-manual-202610",
+            "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "engineai-t800-retail-editions",
+            "configuration": "Retail comparison read November 2026. These edition specifications differ from the October developer manual; no equivalence between its NEZHA controller and the retail eight-core CPU is established.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Two onboard computers",
+                "details": "Four-core NEZHA Robot PC, called NeZha N97 in the interface table, plus a twelve-core NVIDIA Jetson AGX Orin AI PC.",
+                "sources": [
+                  "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01",
+                  "https://en.engineai.com.cn/open/docs/t800/t800/robot-specifications-electrical-interfaces?entry=docs&product=pm01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-developer-manual-202610",
+                "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Edition-dependent AI module",
+                "details": "Basic: Orin NX 16G. Open Source, Pro and Max: AGX Orin 64G, with Thor offered on request. All list an unnamed eight-core base CPU.",
+                "sources": [
+                  "https://en.engineai.com.cn/product-t800.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-retail-editions",
+                "configuration": "Retail comparison read November 2026. These edition specifications differ from the October developer manual; no equivalence between its NEZHA controller and the retail eight-core CPU is established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Memory and storage",
+                "details": "Robot PC: 8 GB RAM and 64 GB storage. AI PC: 64 GB RAM and 256 GB SSD.",
+                "sources": [
+                  "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-developer-manual-202610",
+                "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "memory",
+                "component": "AI module memory",
+                "details": "Basic: 16 GB; higher editions: 64 GB. Installed storage is not listed.",
+                "sources": [
+                  "https://en.engineai.com.cn/product-t800.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-retail-editions",
+                "configuration": "Retail comparison read November 2026. These edition specifications differ from the October developer manual; no equivalence between its NEZHA controller and the retail eight-core CPU is established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless connection",
+                "details": "Network diagram places Wi-Fi on the application computer; radio chipset and band are unspecified in this manual.",
+                "sources": [
+                  "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-developer-manual-202610",
+                "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Edition-dependent connections",
+                "details": "Wi-Fi 5 and Bluetooth 5.0 throughout; Max additionally lists 5G. These are shared standards, not unique robot identifiers.",
+                "sources": [
+                  "https://en.engineai.com.cn/product-t800.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-retail-editions",
+                "configuration": "Retail comparison read November 2026. These edition specifications differ from the October developer manual; no equivalence between its NEZHA controller and the retail eight-core CPU is established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and ranging",
+                "details": "Odin2 head module integrates stereo RGB, LiDAR and IMU over Gigabit Ethernet; two SC132GS global-shutter image sensors and 940 nm optical ranging.",
+                "sources": [
+                  "https://en.engineai.com.cn/open/docs/t800/t800/t800-sensor-configuration?entry=docs&product=pm01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-developer-manual-202610",
+                "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Inertial and interaction sensors",
+                "details": "Torso IMU documentation lists Yesense YIS320-E11 UART / YIS320-E30 USB alternatives. Four microphones and two speakers; Pro adds five tactile sensors per hand.",
+                "sources": [
+                  "https://en.engineai.com.cn/open/docs/t800/t800/t800-sensor-configuration?entry=docs&product=pm01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-developer-manual-202610",
+                "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Edition-dependent perception",
+                "details": "Basic lists an Intel binocular camera and no 3D LiDAR. Open Source, Pro and Max list binocular cameras plus LiDAR; sensor SKUs unspecified.",
+                "sources": [
+                  "https://en.engineai.com.cn/product-t800.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-retail-editions",
+                "configuration": "Retail comparison read November 2026. These edition specifications differ from the October developer manual; no equivalence between its NEZHA controller and the retail eight-core CPU is established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Documented battery",
+                "details": "Removable ternary-lithium battery: 61.2 V, 20 Ah, 1.22 kWh; charged outside the robot. This is not evidence of the retail page’s advertised solid-state battery chemistry.",
+                "sources": [
+                  "https://en.engineai.com.cn/open/docs/t800/t800/battery?entry=docs&product=pm01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-developer-manual-202610",
+                "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Body configurations",
+                "details": "Developer: 25 DOF, approximately 84.5 kg. Pro: 29 body DOF plus fourteen hand DOF, approximately 85.3 kg; 1.73 m tall.",
+                "sources": [
+                  "https://en.engineai.com.cn/open/docs/t800/t800/robot-specifications-electrical-interfaces?entry=docs&product=pm01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-developer-manual-202610",
+                "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery configuration",
+                "details": "Quick-removal lithium battery; capacity not established by the retail table.",
+                "sources": [
+                  "https://en.engineai.com.cn/product-t800.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-retail-editions",
+                "configuration": "Retail comparison read November 2026. These edition specifications differ from the October developer manual; no equivalence between its NEZHA controller and the retail eight-core CPU is established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Local wiring",
+                "details": "Both computers connect by Ethernet to an onboard router. External RJ45 plus separate USB-A 3.0 connections to the Orin and NEZHA computers.",
+                "sources": [
+                  "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01",
+                  "https://en.engineai.com.cn/open/docs/t800/t800/robot-specifications-electrical-interfaces?entry=docs&product=pm01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-developer-manual-202610",
+                "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Joint configurations",
+                "details": "Basic/Open Source: 25 DOF. Pro: 43 including hands. Max: 46 including hands and a three-axis waist.",
+                "sources": [
+                  "https://en.engineai.com.cn/product-t800.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-retail-editions",
+                "configuration": "Retail comparison read November 2026. These edition specifications differ from the October developer manual; no equivalence between its NEZHA controller and the retail eight-core CPU is established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Developer stack",
+                "details": "Ubuntu on both computers; ROS 2 interfaces expose motion and sensor topics for authorized development.",
+                "sources": [
+                  "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01",
+                  "https://en.engineai.com.cn/open/docs/t800/03/chapter-0-overview-and-development-preparation-copy?entry=docs&product=pm01"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "engineai-t800-developer-manual-202610",
+                "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -59046,13 +59566,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -62437,8 +62950,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "flyingbasket-fb3-current",
+            "configuration": "Current FB3 cargo-platform reference. Flight controller, CPU, memory, radio chip/bands and battery voltage/capacity are unpublished. The page’s safety block names FB4, so its ADS-B/radar claims are not assigned to FB3.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -62452,23 +62971,99 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Ground-control packages",
+                "details": "RF plus 4G links are listed for the ground-control packages; exact air-interface protocols are not specified.",
+                "sources": [
+                  "https://flyingbasket.com/fb3-order"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flyingbasket-fb3-current",
+                "configuration": "Current FB3 cargo-platform reference. Flight controller, CPU, memory, radio chip/bands and battery voltage/capacity are unpublished. The page’s safety block names FB4, so its ADS-B/radar claims are not assigned to FB3.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Optional satellite link",
+                "details": "Air-and-ground Starlink C2 is offered for Standard and Pro kits, not Essentials.",
+                "sources": [
+                  "https://flyingbasket.com/fb3-order"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flyingbasket-fb3-current",
+                "configuration": "Current FB3 cargo-platform reference. Flight controller, CPU, memory, radio chip/bands and battery voltage/capacity are unpublished. The page’s safety block names FB4, so its ADS-B/radar claims are not assigned to FB3.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Package-specific video",
+                "details": "Gimbal video in all three kits; additional FPV video in Pro. Camera models and resolutions unspecified.",
+                "sources": [
+                  "https://flyingbasket.com/fb3-order"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flyingbasket-fb3-current",
+                "configuration": "Current FB3 cargo-platform reference. Flight controller, CPU, memory, radio chip/bands and battery voltage/capacity are unpublished. The page’s safety block names FB4, so its ADS-B/radar claims are not assigned to FB3.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric propulsion",
+                "details": "Eight propulsion units powered by four swappable lithium-ion battery packs; 70 kg empty mass and 100 kg maximum cargo.",
+                "sources": [
+                  "https://flyingbasket.com/fb3-order"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flyingbasket-fb3-current",
+                "configuration": "Current FB3 cargo-platform reference. Flight controller, CPU, memory, radio chip/bands and battery voltage/capacity are unpublished. The page’s safety block names FB4, so its ADS-B/radar claims are not assigned to FB3.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Operator equipment",
+                "details": "Essentials: seven-inch handheld GCS. Standard: ten-inch handheld GCS. Pro: three-screen mobile GCS. These are alternative kits.",
+                "sources": [
+                  "https://flyingbasket.com/fb3-order"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flyingbasket-fb3-current",
+                "configuration": "Current FB3 cargo-platform reference. Flight controller, CPU, memory, radio chip/bands and battery voltage/capacity are unpublished. The page’s safety block names FB4, so its ADS-B/radar claims are not assigned to FB3.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Charging options",
+                "details": "Essentials includes a 7 kW single-phase charger; Standard/Pro include a 16 kW three-phase charger.",
+                "sources": [
+                  "https://flyingbasket.com/fb3-order"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flyingbasket-fb3-current",
+                "configuration": "Current FB3 cargo-platform reference. Flight controller, CPU, memory, radio chip/bands and battery voltage/capacity are unpublished. The page’s safety block names FB4, so its ADS-B/radar claims are not assigned to FB3.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -62489,10 +63084,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -72409,8 +73000,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "harris-carrier-h6-family",
+            "configuration": "Current modular H6 family. Generic records do not identify the fitted powertrain; Electric, Hybrid EFI and Hydrone configurations are documented separately. Processor silicon, RAM and storage are not identified here.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -72429,18 +73026,57 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation reference",
+                "details": "Platform specification lists triple-redundant IMU and dual RTK GNSS; sensor part numbers unspecified.",
+                "sources": [
+                  "https://harrisaerial.com/carrier-h6-platform/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harris-carrier-h6-family",
+                "configuration": "Current modular H6 family. Generic records do not identify the fitted powertrain; Electric, Hybrid EFI and Hydrone configurations are documented separately. Processor silicon, RAM and storage are not identified here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Alternative powertrains",
+                "details": "Shared folding hexacopter airframe accepts battery-electric, gasoline/EFI hybrid or hydrogen fuel-cell systems; these are alternatives.",
+                "sources": [
+                  "https://harrisaerial.com/carrier-h6-platform/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harris-carrier-h6-family",
+                "configuration": "Current modular H6 family. Generic records do not identify the fitted powertrain; Electric, Hybrid EFI and Hydrone configurations are documented separately. Processor silicon, RAM and storage are not identified here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Modular payload bay",
+                "details": "UART, Ethernet, CAN, USB and GPIO with 12/24/48 V payload power; payload sensors are selectable.",
+                "sources": [
+                  "https://harrisaerial.com/carrier-h6-platform/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harris-carrier-h6-family",
+                "configuration": "Current modular H6 family. Generic records do not identify the fitted powertrain; Electric, Hybrid EFI and Hydrone configurations are documented separately. Processor silicon, RAM and storage are not identified here.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -72471,9 +73107,6 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -72499,8 +73132,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "harris-carrier-h8e-support",
+            "configuration": "Legacy H8E identified explicitly in Harris support documentation; not the newer HX8. Family-wide service guidance is qualified below. CPU, Cube revision, battery capacity, RAM and storage capacity are not established.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -72514,13 +73153,51 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Carrier radio configurations",
+                "details": "Support documentation describes RF Design 900 MHz, Microhard 2.4 GHz and HereLink alternatives; the fitted radio must be established per aircraft.",
+                "sources": [
+                  "https://harrisaerialsupport.com/connectivity/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harris-carrier-h8e-support",
+                "configuration": "Legacy H8E identified explicitly in Harris support documentation; not the newer HX8. Family-wide service guidance is qualified below. CPU, Cube revision, battery capacity, RAM and storage capacity are not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "H8E calibration instructions identify compass and IMU/accelerometer, with GPS checked before flight.",
+                "sources": [
+                  "https://harrisaerialsupport.com/flight-performance/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harris-carrier-h8e-support",
+                "configuration": "Legacy H8E identified explicitly in Harris support documentation; not the newer HX8. Family-wide service guidance is qualified below. CPU, Cube revision, battery capacity, RAM and storage capacity are not established.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Configuration-dependent FPV camera",
+                "details": "Carrier service guide pairs Microhard with InVID Ethernet video and HereLink with CamPark mini-HDMI video; H8 camera mounting is explicitly discussed.",
+                "sources": [
+                  "https://harrisaerialsupport.com/connectivity/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harris-carrier-h8e-support",
+                "configuration": "Legacy H8E identified explicitly in Harris support documentation; not the newer HX8. Family-wide service guidance is qualified below. CPU, Cube revision, battery capacity, RAM and storage capacity are not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -72529,8 +73206,21 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Service connection",
+                "details": "H8E setup uses USB or telemetry with Mission Planner. General Carrier guidance locates flight logs on an SD card beside the Cube autopilot; the exact H8E controller revision is not given.",
+                "sources": [
+                  "https://harrisaerialsupport.com/flight-performance/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harris-carrier-h8e-support",
+                "configuration": "Legacy H8E identified explicitly in Harris support documentation; not the newer HX8. Family-wide service guidance is qualified below. CPU, Cube revision, battery capacity, RAM and storage capacity are not established.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -72539,8 +73229,20 @@
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "identification",
+                "component": "Published Remote ID template",
+                "details": "Support instructions form the Basic ID from 18136 + H8E + vehicle serial. This is a configured serial template, not a MAC address or proof of nearby reception.",
+                "sources": [
+                  "https://harrisaerialsupport.com/connectivity/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "harris-carrier-h8e-support",
+                "configuration": "Legacy H8E identified explicitly in Harris support documentation; not the newer HX8. Family-wide service guidance is qualified below. CPU, Cube revision, battery capacity, RAM and storage capacity are not established.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Remote ID declaration reference",
                 "details": "A valid received serial must pass the catalog’s full serial-range and length checks. A declaration alone is not a received observation or authenticated identity.",
@@ -72560,10 +73262,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
           "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -281521,6 +282220,701 @@
             ]
           }
         ]
+      },
+      {
+        "id": "devanthro-robody-current",
+        "manufacturer": "Devanthro",
+        "models": [
+          "Robody"
+        ],
+        "configuration": "Current hardware reference; Devanthro reports several generations since 2023. Exact Orin variant, RAM, storage, battery capacity and radio-module identifiers are unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard computers",
+            "details": "NVIDIA Jetson Orin plus Orin Nano; the larger Orin module is not identified as AGX or NX.",
+            "sources": [
+              "https://www.devanthro.com/technology/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "4K fisheye RGB cameras, millimeter-wave radar and stereo microphones; sensor SKUs and radar frequency unspecified.",
+            "sources": [
+              "https://www.devanthro.com/technology/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobile base and charging",
+            "details": "Differential-drive base; 60 kg, 1.65 m tall; advertised six-hour operation and self-docking.",
+            "sources": [
+              "https://www.devanthro.com/technology/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Manipulation hardware",
+            "details": "QDD and Dynamixel actuators; two 6-DOF arms with 1.5 kg payload each, two-finger grippers and a 3-DOF neck.",
+            "sources": [
+              "https://www.devanthro.com/technology/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Robot control",
+            "details": "ROS 2 middleware with human-in-the-loop VR telepresence and stereoscopic video. This configuration is not described as fully autonomous.",
+            "sources": [
+              "https://www.devanthro.com/technology/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dexterity-mech-beckhoff-2026",
+        "manufacturer": "Dexterity",
+        "models": [
+          "Mech"
+        ],
+        "configuration": "2026 Mech platform and supplier-disclosed control architecture. The lower-level controller is separate from the AI computer; AI accelerator, installed memory/storage, radio and battery capacity remain unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Machine-control computer",
+            "details": "Beckhoff CX5240 with Intel Atom x5-E3940 handles motion and safety logic. It is not identified as the robot’s AI inference computer.",
+            "sources": [
+              "https://www.beckhoff.com/en-us/company/applications-and-references/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Inertial module",
+            "details": "Beckhoff EP3751-0260 EtherCAT box supplies accelerometer and gyroscope measurements.",
+            "sources": [
+              "https://www.beckhoff.com/en-us/company/applications-and-references/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and force control",
+            "details": "Up to sixteen cameras; arm torque control operates at 4 kHz. Camera SKUs are not disclosed.",
+            "sources": [
+              "https://dexterity.ai/mech"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobile manipulation platform",
+            "details": "Battery-powered rover with four steerable wheels and dual vacuum pumps; two Kawasaki-manufactured arms, HiWin motion components, 60 kg combined lift and 5.4 m armspan.",
+            "sources": [
+              "https://dexterity.ai/mech"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Internal control buses",
+            "details": "EtherCAT and CAN, PCB-mounted Beckhoff EJ-series I/O and TwinSAFE functional safety. Generic wireless EtherCAT capability does not establish an installed RF module.",
+            "sources": [
+              "https://www.beckhoff.com/en-us/company/applications-and-references/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Separated software layers",
+            "details": "Windows 10 IoT Enterprise on the CX5240; Dexterity Physical AI supplies higher-level decisions and can operate standalone or with cloud services.",
+            "sources": [
+              "https://www.beckhoff.com/en-us/company/applications-and-references/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse.html",
+              "https://dexterity.ai/mech"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dexterity-dexr-2023",
+        "manufacturer": "Dexterity",
+        "models": [
+          "DexR",
+          "Dexterity DXR"
+        ],
+        "configuration": "DexR trailer-loading robot in Dexterity’s September 2023 announcement. This does not establish the later Mech hardware BOM; CPU, memory, radios, battery and camera SKUs are unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Perception and contact feedback",
+            "details": "Vision builds a 3D representation of boxes and trailer space; force control supplies contact feedback while packing.",
+            "sources": [
+              "https://2024.modexshow.com/press/release/7433"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Dual-arm loading system",
+            "details": "Autonomous mobile base docks to a powered conveyor; two arms can pick and place boxes concurrently.",
+            "sources": [
+              "https://2024.modexshow.com/press/release/7433"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Loading pipeline",
+            "details": "Integrated motion planning coordinates both arms; packing software updates the trailer model as boxes arrive and learns from completed placements.",
+            "sources": [
+              "https://2024.modexshow.com/press/release/7433"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "engineai-t800-developer-manual-202610",
+        "manufacturer": "EngineAI",
+        "models": [
+          "T800 Developer / Pro (October 2026 manual)",
+          "T800"
+        ],
+        "configuration": "October 2026 Developer/Pro manual configuration, offered as a dated reference for generic T800 records. It differs from the retail edition table; do not combine its NEZHA/Odin2/battery specifications with the retail Basic edition.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Two onboard computers",
+            "details": "Four-core NEZHA Robot PC, called NeZha N97 in the interface table, plus a twelve-core NVIDIA Jetson AGX Orin AI PC.",
+            "sources": [
+              "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01",
+              "https://en.engineai.com.cn/open/docs/t800/t800/robot-specifications-electrical-interfaces?entry=docs&product=pm01"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Memory and storage",
+            "details": "Robot PC: 8 GB RAM and 64 GB storage. AI PC: 64 GB RAM and 256 GB SSD.",
+            "sources": [
+              "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and ranging",
+            "details": "Odin2 head module integrates stereo RGB, LiDAR and IMU over Gigabit Ethernet; two SC132GS global-shutter image sensors and 940 nm optical ranging.",
+            "sources": [
+              "https://en.engineai.com.cn/open/docs/t800/t800/t800-sensor-configuration?entry=docs&product=pm01"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Inertial and interaction sensors",
+            "details": "Torso IMU documentation lists Yesense YIS320-E11 UART / YIS320-E30 USB alternatives. Four microphones and two speakers; Pro adds five tactile sensors per hand.",
+            "sources": [
+              "https://en.engineai.com.cn/open/docs/t800/t800/t800-sensor-configuration?entry=docs&product=pm01"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless connection",
+            "details": "Network diagram places Wi-Fi on the application computer; radio chipset and band are unspecified in this manual.",
+            "sources": [
+              "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Documented battery",
+            "details": "Removable ternary-lithium battery: 61.2 V, 20 Ah, 1.22 kWh; charged outside the robot. This is not evidence of the retail page’s advertised solid-state battery chemistry.",
+            "sources": [
+              "https://en.engineai.com.cn/open/docs/t800/t800/battery?entry=docs&product=pm01"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Body configurations",
+            "details": "Developer: 25 DOF, approximately 84.5 kg. Pro: 29 body DOF plus fourteen hand DOF, approximately 85.3 kg; 1.73 m tall.",
+            "sources": [
+              "https://en.engineai.com.cn/open/docs/t800/t800/robot-specifications-electrical-interfaces?entry=docs&product=pm01"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Local wiring",
+            "details": "Both computers connect by Ethernet to an onboard router. External RJ45 plus separate USB-A 3.0 connections to the Orin and NEZHA computers.",
+            "sources": [
+              "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01",
+              "https://en.engineai.com.cn/open/docs/t800/t800/robot-specifications-electrical-interfaces?entry=docs&product=pm01"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Developer stack",
+            "details": "Ubuntu on both computers; ROS 2 interfaces expose motion and sensor topics for authorized development.",
+            "sources": [
+              "https://en.engineai.com.cn/open/docs/t800/t800/onboard-computer-network-architecture-diagram?entry=docs&product=pm01",
+              "https://en.engineai.com.cn/open/docs/t800/03/chapter-0-overview-and-development-preparation-copy?entry=docs&product=pm01"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "engineai-t800-retail-editions",
+        "manufacturer": "EngineAI",
+        "models": [
+          "T800 retail editions",
+          "T800"
+        ],
+        "configuration": "Retail comparison read November 2026. These edition specifications differ from the October developer manual; no equivalence between its NEZHA controller and the retail eight-core CPU is established.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Edition-dependent AI module",
+            "details": "Basic: Orin NX 16G. Open Source, Pro and Max: AGX Orin 64G, with Thor offered on request. All list an unnamed eight-core base CPU.",
+            "sources": [
+              "https://en.engineai.com.cn/product-t800.html"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "AI module memory",
+            "details": "Basic: 16 GB; higher editions: 64 GB. Installed storage is not listed.",
+            "sources": [
+              "https://en.engineai.com.cn/product-t800.html"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Edition-dependent perception",
+            "details": "Basic lists an Intel binocular camera and no 3D LiDAR. Open Source, Pro and Max list binocular cameras plus LiDAR; sensor SKUs unspecified.",
+            "sources": [
+              "https://en.engineai.com.cn/product-t800.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Edition-dependent connections",
+            "details": "Wi-Fi 5 and Bluetooth 5.0 throughout; Max additionally lists 5G. These are shared standards, not unique robot identifiers.",
+            "sources": [
+              "https://en.engineai.com.cn/product-t800.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Joint configurations",
+            "details": "Basic/Open Source: 25 DOF. Pro: 43 including hands. Max: 46 including hands and a three-axis waist.",
+            "sources": [
+              "https://en.engineai.com.cn/product-t800.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery configuration",
+            "details": "Quick-removal lithium battery; capacity not established by the retail table.",
+            "sources": [
+              "https://en.engineai.com.cn/product-t800.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "engineai-se01-reference",
+        "manufacturer": "EngineAI",
+        "models": [
+          "SE01"
+        ],
+        "configuration": "Current SE01 product-page hardware reference. No exact CPU/GPU, RAM, radio, battery capacity or sensor part numbers are established; T800 components are not inherited.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Perception and feedback",
+            "details": "LiDAR, depth and infrared cameras; body diagram labels RGB-D, an IMU and high-precision force sensors.",
+            "sources": [
+              "https://en.engineai.com.cn/product-se01.html"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electromechanical platform",
+            "details": "Removable battery with power-management system; proprietary planetary, harmonic and linear joint actuators. The page’s ambiguous battery-capacity display is not used as a rating.",
+            "sources": [
+              "https://en.engineai.com.cn/product-se01.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "External connections and hands",
+            "details": "Gigabit Ethernet and USB 3.0; six-DOF dexterous hand with force feedback, plus two speakers.",
+            "sources": [
+              "https://en.engineai.com.cn/product-se01.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ecorobotix-ara-620sg2-ts42",
+        "manufacturer": "Ecorobotix",
+        "models": [
+          "ARA 620 S G2 TS4.2",
+          "ARA"
+        ],
+        "configuration": "620 S G2 / TS4.2 manual configuration used as a qualified ARA reference. This is a tractor-mounted precision sprayer, not a self-driving tractor. Exact CPU/GPU, RAM, storage and modem parts remain unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Distributed vision computers",
+            "details": "Six vision boxes each contain an image-processing computer, LED-control board and cooling fan; processor models are not named.",
+            "sources": [
+              "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and speed measurement",
+            "details": "Each box has a target-recognition camera, four flash LEDs and a visual-odometry camera; a boom pressure sensor feeds one vision computer.",
+            "sources": [
+              "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Control-panel and Internet links",
+            "details": "Router and switch in the main electrical box, with Wi-Fi and 4G antenna. Radio bands, MAC allocations and modem SKU are not established.",
+            "sources": [
+              "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Tractor-driven electrical supply",
+            "details": "Two 12 V lead batteries in series provide 24 V; a PTO-driven 28 V alternator recharges them. Vision boxes have RTC backup batteries.",
+            "sources": [
+              "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spray actuation",
+            "details": "Three master vision boxes drive solenoid valves across three booms; remote on/off and boom-height controls.",
+            "sources": [
+              "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Nozzle assembly",
+            "details": "156 Euspray OC1X502 nozzles, 152 effective with all three booms; 6.04 m effective spray width and 10 ms minimum valve opening.",
+            "sources": [
+              "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/technical-data"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Local detection loop",
+            "details": "Target recognition and visual odometry time nozzle activation to the machine’s forward motion.",
+            "sources": [
+              "https://help.ecorobotix.com/en/ara/user-manual/620_s_g2-ts4-2/electrical-system"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "harris-carrier-h6-family",
+        "manufacturer": "Harris Aerial",
+        "models": [
+          "Carrier H6"
+        ],
+        "configuration": "Current modular H6 family. Generic records do not identify the fitted powertrain; Electric, Hybrid EFI and Hydrone configurations are documented separately. Processor silicon, RAM and storage are not identified here.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Alternative powertrains",
+            "details": "Shared folding hexacopter airframe accepts battery-electric, gasoline/EFI hybrid or hydrogen fuel-cell systems; these are alternatives.",
+            "sources": [
+              "https://harrisaerial.com/carrier-h6-platform/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation reference",
+            "details": "Platform specification lists triple-redundant IMU and dual RTK GNSS; sensor part numbers unspecified.",
+            "sources": [
+              "https://harrisaerial.com/carrier-h6-platform/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Modular payload bay",
+            "details": "UART, Ethernet, CAN, USB and GPIO with 12/24/48 V payload power; payload sensors are selectable.",
+            "sources": [
+              "https://harrisaerial.com/carrier-h6-platform/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "harris-h6-electric-current",
+        "manufacturer": "Harris Aerial",
+        "models": [
+          "Carrier H6 Electric"
+        ],
+        "configuration": "Current manufacturer specification, separate from older H6 datasheets and other powertrains. Exact processor silicon, RAM, storage and RF-module SKU are unspecified; receiver-only ADS-B does not make this aircraft an ADS-B transmitter.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight controller",
+            "details": "Cube Orange+ running a customized ArduPilot stack.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-electric/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Published radio options",
+            "details": "2.4 GHz ISM and 902–928 MHz; configured hardware and regional permissions determine the fitted band.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-electric/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Inertial and air-traffic inputs",
+            "details": "Triple-redundant IMU and ADS-B receiver; camera/LiDAR payloads are optional integrations.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-electric/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Powertrain",
+            "details": "Two parallel 12S1P 16,000 mAh LiPo packs: 44.4 V nominal, 32 Ah combined; AS150U-F connector. Six KV100-equivalent motors and 29.2 × 9.2-inch propellers.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-electric/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload and ground control",
+            "details": "UART, Ethernet, CAN, GPIO and USB; regulated 5/12/24/48 V outputs. Ground-control choices include C-GCS, C-NAV, C-SRoC or HereLink.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-electric/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "harris-h6-hybrid-current",
+        "manufacturer": "Harris Aerial",
+        "models": [
+          "Carrier H6 Hybrid EFI"
+        ],
+        "configuration": "Current manufacturer specification, separate from older H6 datasheets and other powertrains. Exact processor silicon, RAM, storage and RF-module SKU are unspecified; receiver-only ADS-B does not make this aircraft an ADS-B transmitter.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight controller",
+            "details": "Cube Orange+ running a customized ArduPilot stack.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hybrid/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Published radio options",
+            "details": "2.4 GHz ISM and 902–928 MHz; configured hardware and regional permissions determine the fitted band.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hybrid/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Inertial and air-traffic inputs",
+            "details": "Triple-redundant IMU and ADS-B receiver; camera/LiDAR payloads are optional integrations.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hybrid/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Powertrain",
+            "details": "H2400 EFI two-stroke gasoline generator, 2.4 kW continuous, 6.5 L tank; two 6S1P LiPo backup packs provide a stated five-minute reserve.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hybrid/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload and ground control",
+            "details": "UART, Ethernet, CAN, GPIO and USB; regulated 5/12/24/48 V outputs. Ground-control choices include C-GCS, C-NAV, C-SRoC or HereLink.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hybrid/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "harris-h6-hydrone-current",
+        "manufacturer": "Harris Aerial",
+        "models": [
+          "Carrier H6 Hydrone"
+        ],
+        "configuration": "Current manufacturer specification, separate from older H6 datasheets and other powertrains. Exact processor silicon, RAM, storage and RF-module SKU are unspecified; receiver-only ADS-B does not make this aircraft an ADS-B transmitter.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Flight controller",
+            "details": "Cube Orange+ running a customized ArduPilot stack.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hydrone/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Published radio options",
+            "details": "2.4 GHz ISM and 902–928 MHz; configured hardware and regional permissions determine the fitted band.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hydrone/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Inertial and air-traffic inputs",
+            "details": "Triple-redundant IMU and ADS-B receiver; camera/LiDAR payloads are optional integrations.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hydrone/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Powertrain",
+            "details": "2.4 kW hydrogen fuel-cell module, 10.8 L / 350-bar cylinder and 6S2P LiPo backup. Fuel-cell and battery reserves depend on configuration.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hydrone/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload and ground control",
+            "details": "UART, Ethernet, CAN, GPIO and USB; regulated 5/12/24/48 V outputs. Ground-control choices include C-GCS, C-NAV, C-SRoC or HereLink.",
+            "sources": [
+              "https://harrisaerial.com/carrier-drones/carrier-h6-hydrone/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "harris-carrier-h8e-support",
+        "manufacturer": "Harris Aerial",
+        "models": [
+          "Carrier H8E"
+        ],
+        "configuration": "Legacy H8E identified explicitly in Harris support documentation; not the newer HX8. Family-wide service guidance is qualified below. CPU, Cube revision, battery capacity, RAM and storage capacity are not established.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "H8E calibration instructions identify compass and IMU/accelerometer, with GPS checked before flight.",
+            "sources": [
+              "https://harrisaerialsupport.com/flight-performance/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Service connection",
+            "details": "H8E setup uses USB or telemetry with Mission Planner. General Carrier guidance locates flight logs on an SD card beside the Cube autopilot; the exact H8E controller revision is not given.",
+            "sources": [
+              "https://harrisaerialsupport.com/flight-performance/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Carrier radio configurations",
+            "details": "Support documentation describes RF Design 900 MHz, Microhard 2.4 GHz and HereLink alternatives; the fitted radio must be established per aircraft.",
+            "sources": [
+              "https://harrisaerialsupport.com/connectivity/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Configuration-dependent FPV camera",
+            "details": "Carrier service guide pairs Microhard with InVID Ethernet video and HereLink with CamPark mini-HDMI video; H8 camera mounting is explicitly discussed.",
+            "sources": [
+              "https://harrisaerialsupport.com/connectivity/"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Published Remote ID template",
+            "details": "Support instructions form the Basic ID from 18136 + H8E + vehicle serial. This is a configured serial template, not a MAC address or proof of nearby reception.",
+            "sources": [
+              "https://harrisaerialsupport.com/connectivity/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "flyingbasket-fb3-current",
+        "manufacturer": "FlyingBasket",
+        "models": [
+          "FB3"
+        ],
+        "configuration": "Current FB3 cargo-platform reference. Flight controller, CPU, memory, radio chip/bands and battery voltage/capacity are unpublished. The page’s safety block names FB4, so its ADS-B/radar claims are not assigned to FB3.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Electric propulsion",
+            "details": "Eight propulsion units powered by four swappable lithium-ion battery packs; 70 kg empty mass and 100 kg maximum cargo.",
+            "sources": [
+              "https://flyingbasket.com/fb3-order"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Ground-control packages",
+            "details": "RF plus 4G links are listed for the ground-control packages; exact air-interface protocols are not specified.",
+            "sources": [
+              "https://flyingbasket.com/fb3-order"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator equipment",
+            "details": "Essentials: seven-inch handheld GCS. Standard: ten-inch handheld GCS. Pro: three-screen mobile GCS. These are alternative kits.",
+            "sources": [
+              "https://flyingbasket.com/fb3-order"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Charging options",
+            "details": "Essentials includes a 7 kW single-phase charger; Standard/Pro include a 16 kW three-phase charger.",
+            "sources": [
+              "https://flyingbasket.com/fb3-order"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Optional satellite link",
+            "details": "Air-and-ground Starlink C2 is offered for Standard and Pro kits, not Essentials.",
+            "sources": [
+              "https://flyingbasket.com/fb3-order"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Package-specific video",
+            "details": "Gimbal video in all three kits; additional FPV video in Pro. Camera models and resolutions unspecified.",
+            "sources": [
+              "https://flyingbasket.com/fb3-order"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -281537,8 +282931,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 331,
-    "devices_with_system_profiles": 310,
-    "devices_with_documented_compute": 149
+    "system_profiles": 344,
+    "devices_with_system_profiles": 319,
+    "devices_with_documented_compute": 153
   }
 }
