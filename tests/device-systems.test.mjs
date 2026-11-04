@@ -477,7 +477,7 @@ test('DJI industrial airframes keep camera, battery and controller variants dist
  const m30=system('DJI','M30'),m30t=system('DJI','M30T');
  assert.doesNotMatch(text(m30.sections.sensors),/VOx/);
  assert.match(text(m30t.sections.sensors),/640×512/);
- assert.equal(profileIds(system('DJI','M30 Dock version')).length,0);
+ assert.ok(!profileIds(system('DJI','M30 Dock version')).includes('dji-m30'));
  assert.match(text(system('DJI','M3T').sections.sensors),/12 μm/);
  assert.doesNotMatch(text(system('DJI','M3T').sections.sensors),/8 μm/);
  assert.match(text(system('DJI','M3TA').sections.sensors),/8 μm/);
@@ -539,7 +539,7 @@ test('electric and service robot revisions keep their processor and power bounda
  assert.match(text(upper.sections.power),/Corded/);
  assert.match(system('Gausium','Phantas').configurations[0].configuration,/65 kg/);
  assert.doesNotMatch(text(system('Gausium','Phantas').sections.power.facts.map(f=>f.details)),/48 kg/);
- assert.equal(profileIds(system('Zero Zero Robotics','HOVERAir X1 Pro')).length,0);
+ assert.doesNotMatch(text(system('Zero Zero Robotics','HOVERAir X1 Pro').sections.memory.facts.map(f=>f.details)),/64 GB/);
  assert.match(text(system('Scythe Robotics','M.52').sections.compute),/May 2022/);
  assert.equal(system('Relay Robotics','Relay').sections.compute.status,'not-established');
 });
@@ -1490,4 +1490,49 @@ test('batch 47 keeps optional ground modules and incorrect manufacturer attribut
  assert.match(text(legacy.configurations),/attribution is inaccurate/);
  assert.equal(profileIds(system('Baykar','Unknown model')).length,0);
  assert.equal(profileIds(system('Baykar','Bayraktar TB2',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('batch 48 resolves exact consumer model codes without merging distinct hardware',()=>{
+ const se=system('FIMI X8 SE 2022 Drone','FMWRJ03A8');
+ const tele=system('FIMI X8 Tele Drone','FMWRJ04A1');
+ const max=system('FIMI','FIMI X8 Tele Max');
+ assert.match(text(se.sections.power),/11.4 V nominal.*13.05 V charge limit/);
+ assert.match(text(tele.sections.radios),/Bluetooth 5.1/);
+ assert.match(text(tele.sections.sensors),/front\/rear vision/);
+ assert.doesNotMatch(text(max.sections.sensors.facts.map(f=>f.details)),/front\/rear/);
+ assert.doesNotMatch(text(max.sections.radios.facts.map(f=>f.details)),/5.8 GHz|Bluetooth/);
+ assert.match(text(max.sections.compute),/AI ISP/);
+ assert.equal(profileIds(system('FIMI','FMWRJ03A8-unknown')).length,0);
+ const pro=system('ZERO ZERO ROBOTICS','ZZ-H-1-003');
+ const pm=system('ZERO ZERO ROBOTICS','ZZ-H-1-004');
+ assert.match(text(pro.sections.memory),/32 GB/);
+ assert.match(text(pm.sections.memory),/64 GB/);
+ assert.match(text(pro.sections.radios),/Wi-Fi 5/);
+ assert.match(text(pm.sections.radios),/Wi-Fi 6/);
+ assert.doesNotMatch(text(pro.sections.sensors.facts.map(f=>f.details)),/rear ToF plus vision/);
+ assert.match(text(pm.sections.sensors),/rear ToF plus vision/);
+ assert.equal(pro.sections.compute.status,'not-established');
+});
+
+test('batch 48 preserves Dock, Avata and Quantum configuration boundaries',()=>{
+ const dock=system('DJI','M30 Dock version');
+ const thermal=system('DJI','M30T Dock version');
+ assert.match(text(dock.sections.power),/3511 motors.*two TB30/);
+ assert.doesNotMatch(text(dock.sections.sensors.facts.map(f=>f.details)),/VOx/);
+ assert.match(text(thermal.sections.sensors),/640×512.*VOx/);
+ assert.doesNotMatch(text(thermal.sections.power.facts.map(f=>f.details)),/Lead-acid|lead-acid/);
+ assert.equal(profileIds(system('DJI','M30T (EU&KR)')).length,0);
+ const a=system('DJI','Avata 360 (DVN3XT)');
+ const b=system('DJI','DJI Avata 360 (DVN3NT)');
+ assert.deepEqual(profileIds(a),profileIds(b));
+ assert.match(text(a.sections.identification),/Wi-Fi Beacon/);
+ assert.match(text(a.sections.memory),/42 GB/);
+ assert.match(text(a.configurations),/no cellular modem is inferred/);
+ const tr=system('Quantum Systems','Trinity Pro');
+ assert.match(text(tr.sections.compute),/Quantum-Skynode/);
+ assert.equal(tr.sections.memory.status,'not-established');
+ assert.equal(tr.sections.radios.status,'not-established');
+ assert.equal(profileIds(system('Quantum Systems','Vector (and Trinity)')).length,3);
+ assert.equal(profileIds(system('Quantum-Systems','Trinity R14')).length,0);
+ assert.equal(profileIds(system('FIMI','FMWRJ03A8',{kind:'regulatory-equipment'})).length,0);
 });

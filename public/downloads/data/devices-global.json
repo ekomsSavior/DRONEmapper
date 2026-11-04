@@ -42407,8 +42407,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-avata360-2026",
+            "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -42417,38 +42423,142 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Storage",
+                "details": "42 GB internal recording storage plus microSD.",
+                "sources": [
+                  "https://repair.dji.com/help/content?customId=01700007264&documentType=&lang=en&paperDocType=ARTICLE&re=US&spaceId=17",
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless interfaces",
+                "details": "O4+; Wi-Fi 6 and Bluetooth 5.4. Published O4+ bands: 2.4000–2.4835, 5.170–5.250 and 5.725–5.850 GHz, subject to region.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_Safety_Guidelines.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging",
+                "details": "Dual 1/1.1-inch CMOS sensors, f/1.9; 360-degree and single-lens modes.",
+                "sources": [
+                  "https://store.dji.com/nz/product/dji-avata-360?from=site-nav&set_region=NZ"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation sensing",
+                "details": "GNSS, omnidirectional vision, forward LiDAR and 3D infrared. Omnidirectional avoidance operates in 360 mode; single-lens mode supports forward avoidance.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "BWXVN1-2700-14.32 replaceable flight battery; 2700 mAh lithium-ion.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf",
+                  "https://store.dji.com/ca/product/dji-avata-360-intelligent-flight-battery?from=site-nav&set_region=CA&vid=214941"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Data export",
+                "details": "USB-C and microSD; QuickTransfer over Wi-Fi.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control software",
+                "details": "DJI Fly; supported controller and goggles combinations differ.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "identification",
+                "component": "Remote ID transport",
+                "details": "Manual documents direct Remote ID using Wi-Fi Beacon. This is a protocol reference, not a confirmed local detection.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Manufacturer MAC allocations",
                 "details": "04:A8:5A · 0C:9A:E6 · 34:91:F0 · 34:D2:62 · 48:1C:B9 · 4C:43:F6 · 58:B8:58 · 60:60:1F · 88:29:85 · 8C:58:23 · 9C:5A:8A · C8:A1:62 · E4:7A:2C · EC:72:F7",
@@ -42475,13 +42585,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -42647,8 +42751,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-avata360-2026",
+            "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -42657,38 +42767,142 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Storage",
+                "details": "42 GB internal recording storage plus microSD.",
+                "sources": [
+                  "https://repair.dji.com/help/content?customId=01700007264&documentType=&lang=en&paperDocType=ARTICLE&re=US&spaceId=17",
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless interfaces",
+                "details": "O4+; Wi-Fi 6 and Bluetooth 5.4. Published O4+ bands: 2.4000–2.4835, 5.170–5.250 and 5.725–5.850 GHz, subject to region.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_Safety_Guidelines.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging",
+                "details": "Dual 1/1.1-inch CMOS sensors, f/1.9; 360-degree and single-lens modes.",
+                "sources": [
+                  "https://store.dji.com/nz/product/dji-avata-360?from=site-nav&set_region=NZ"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation sensing",
+                "details": "GNSS, omnidirectional vision, forward LiDAR and 3D infrared. Omnidirectional avoidance operates in 360 mode; single-lens mode supports forward avoidance.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "BWXVN1-2700-14.32 replaceable flight battery; 2700 mAh lithium-ion.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf",
+                  "https://store.dji.com/ca/product/dji-avata-360-intelligent-flight-battery?from=site-nav&set_region=CA&vid=214941"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Data export",
+                "details": "USB-C and microSD; QuickTransfer over Wi-Fi.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control software",
+                "details": "DJI Fly; supported controller and goggles combinations differ.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "identification",
+                "component": "Remote ID transport",
+                "details": "Manual documents direct Remote ID using Wi-Fi Beacon. This is a protocol reference, not a confirmed local detection.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-avata360-2026",
+                "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Manufacturer MAC allocations",
                 "details": "04:A8:5A · 0C:9A:E6 · 34:91:F0 · 34:D2:62 · 48:1C:B9 · 4C:43:F6 · 58:B8:58 · 60:60:1F · 88:29:85 · 8C:58:23 · 9C:5A:8A · C8:A1:62 · E4:7A:2C · EC:72:F7",
@@ -42715,13 +42929,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -44820,8 +45028,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-m30-dock-v18",
+            "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -44830,33 +45044,112 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording media",
+                "details": "32 GB microSD supplied; up to 128 GB supported.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 Enterprise",
+                "details": "2.4000–2.4835 and 5.725–5.850 GHz; regional limits apply.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf",
+                  "https://dl.djicdn.com/downloads/m30_series_dock_bundle/20230613/M30T_Dock_Version_User_Guide_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Cameras and navigation",
+                "details": "48 MP zoom, 12 MP wide, FPV, 905 nm rangefinder; RTK GNSS and vision/infrared ranging.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Propulsion and batteries",
+                "details": "3511 motors; two TB30 packs, each 5880 mAh, 131.6 Wh, Li-ion 6S.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "Aircraft PSDK connector; compatible DJI Dock provides charging.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Remote operations",
+                "details": "DJI FlightHub 2 via Dock.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -44888,13 +45181,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -45939,8 +46226,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-m30t-dock-v18",
+            "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -45949,33 +46242,124 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording media",
+                "details": "32 GB microSD supplied; up to 128 GB supported.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O3 Enterprise",
+                "details": "2.4000–2.4835 and 5.725–5.850 GHz; regional limits apply.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf",
+                  "https://dl.djicdn.com/downloads/m30_series_dock_bundle/20230613/M30T_Dock_Version_User_Guide_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Cameras and navigation",
+                "details": "48 MP zoom, 12 MP wide, FPV, 905 nm rangefinder; RTK GNSS and vision/infrared ranging.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Thermal payload",
+                "details": "640×512 uncooled VOx detector; M30T only.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Propulsion and batteries",
+                "details": "3511 motors; two TB30 packs, each 5880 mAh, 131.6 Wh, Li-ion 6S.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Expansion",
+                "details": "Aircraft PSDK connector; compatible DJI Dock provides charging.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Remote operations",
+                "details": "DJI FlightHub 2 via Dock.",
+                "sources": [
+                  "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-m30t-dock-v18",
+                "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -46007,13 +46391,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -64336,8 +64714,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "fimi-x8se2022-v2-manual",
+            "configuration": "X8 SE 2022 V2 manual v3.0.2; model FMWRJ03A8. Processor, RAM and radio chipset unpublished. Battery nominal voltage follows the specification table, not the charging-voltage sentence.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -64346,33 +64730,111 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording media",
+                "details": "U3-or-better microSD, 8–256 GB.",
+                "sources": [
+                  "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8se2022-v2-manual",
+                "configuration": "X8 SE 2022 V2 manual v3.0.2; model FMWRJ03A8. Processor, RAM and radio chipset unpublished. Battery nominal voltage follows the specification table, not the charging-voltage sentence.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft control band",
+                "details": "2.400–2.4835 GHz; protocol chipset unspecified.",
+                "sources": [
+                  "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8se2022-v2-manual",
+                "configuration": "X8 SE 2022 V2 manual v3.0.2; model FMWRJ03A8. Processor, RAM and radio chipset unpublished. Battery nominal voltage follows the specification table, not the charging-voltage sentence.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera and positioning",
+                "details": "Sony 1/2-inch CMOS, f/1.6; GPS/GLONASS/CNSS, optical flow and ultrasonic ranging.",
+                "sources": [
+                  "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8se2022-v2-manual",
+                "configuration": "X8 SE 2022 V2 manual v3.0.2; model FMWRJ03A8. Processor, RAM and radio chipset unpublished. Battery nominal voltage follows the specification table, not the charging-voltage sentence.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Aircraft battery",
+                "details": "4500 mAh, 11.4 V nominal, 51.3 Wh; 13.05 V charge limit. Controller battery is separate.",
+                "sources": [
+                  "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8se2022-v2-manual",
+                "configuration": "X8 SE 2022 V2 manual v3.0.2; model FMWRJ03A8. Processor, RAM and radio chipset unpublished. Battery nominal voltage follows the specification table, not the charging-voltage sentence.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload mounting",
+                "details": "Removable megaphone module; three-axis camera gimbal.",
+                "sources": [
+                  "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8se2022-v2-manual",
+                "configuration": "X8 SE 2022 V2 manual v3.0.2; model FMWRJ03A8. Processor, RAM and radio chipset unpublished. Battery nominal voltage follows the specification table, not the charging-voltage sentence.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Companion software",
+                "details": "FIMI Navi 2020 provides control and firmware updates.",
+                "sources": [
+                  "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8se2022-v2-manual",
+                "configuration": "X8 SE 2022 V2 manual v3.0.2; model FMWRJ03A8. Processor, RAM and radio chipset unpublished. Battery nominal voltage follows the specification table, not the charging-voltage sentence.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -64404,13 +64866,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -64446,48 +64902,157 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "fimi-x8tele-manual20250314",
+            "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Image processing",
+                "details": "Dedicated ISP described; semiconductor model unspecified.",
+                "sources": [
+                  "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8tele-manual20250314",
+                "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording storage",
+                "details": "microSD; recommended cards include capacities through 512 GB.",
+                "sources": [
+                  "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8tele-manual20250314",
+                "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless links",
+                "details": "Manual lists 2.4/5.8 GHz controller links and Bluetooth 5.1. Cellular enhanced-video module is optional.",
+                "sources": [
+                  "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8tele-manual20250314",
+                "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera and navigation",
+                "details": "48 MP 1/2-inch wide and 13 MP 1/2.5-inch tele sensors; three-axis gimbal, front/rear vision, downward optical flow/ToF and GPS/Galileo/GLONASS.",
+                "sources": [
+                  "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8tele-manual20250314",
+                "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Alternative flight batteries",
+                "details": "Standard: LiPo 3S, 4650 mAh, 11.55 V, 53.7 Wh. Plus: Li-ion 4S, 5000 mAh, 14.4 V, 72 Wh.",
+                "sources": [
+                  "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8tele-manual20250314",
+                "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Expansion connector",
+                "details": "12-pin female data connector.",
+                "sources": [
+                  "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8tele-manual20250314",
+                "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Companion app",
+                "details": "FIMI Navi 3.0.",
+                "sources": [
+                  "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8tele-manual20250314",
+                "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "identification",
+                "component": "Model cross-reference",
+                "details": "Manufacturer FCC test report names X8 Tele as FMWRJ04A1, FCC ID 2AYVYFMWRJ04A1.",
+                "sources": [
+                  "https://fcc.report/FCC-ID/2AYVYFMWRJ04A1/7410377.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "fimi-x8tele-manual20250314",
+                "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Manufacturer MAC allocations",
                 "details": "6C:DF:FB:E0:00:00/28",
@@ -64513,15 +65078,7 @@
             "facts": []
           }
         },
-        "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
-        ],
+        "missing_sections": [],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
     },
@@ -109285,43 +109842,270 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "quantum-vector-au-2024-system",
+            "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "quantum-vector-ai-may2025-system",
+            "configuration": "GmbH QS_VectorAI_Techsheet_250502, May 2025. Memory capacity, radio chipset and battery capacity are undisclosed. Earlier single-processor Vector specifications are not inherited.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "quantum-trinity-pro-public",
+            "configuration": "Trinity Pro configuration within the broad Vector/Trinity catalog reference. No equivalence is established to FAA Trinity R6/R7/R8/R10/R14 revisions. CPU SKU, RAM, storage capacity and radio chipset unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Mission computer",
+                "details": "NVIDIA Jetson Orin NX 16 GB is the listed AI/mission processor.",
+                "sources": [
+                  "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-au-2024-system",
+                "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Dual onboard AI processors",
+                "details": "Two NVIDIA Jetson Orin NX processors, explicitly named on page 2.",
+                "sources": [
+                  "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-ai-may2025-system",
+                "configuration": "GmbH QS_VectorAI_Techsheet_250502, May 2025. Memory capacity, radio chipset and battery capacity are undisclosed. Earlier single-processor Vector specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Quantum-Skynode",
+                "details": "Named autopilot and separate Linux mission computer; processor models not disclosed.",
+                "sources": [
+                  "https://quantum-systems.com/trinity-pro/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-trinity-pro-public",
+                "configuration": "Trinity Pro configuration within the broad Vector/Trinity catalog reference. No equivalence is established to FAA Trinity R6/R7/R8/R10/R14 revisions. CPU SKU, RAM, storage capacity and radio chipset unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Compute-module memory",
+                "details": "16 GB in the named Orin NX configuration; storage capacity is not published.",
+                "sources": [
+                  "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-au-2024-system",
+                "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control and video link",
+                "details": "AES-256 encrypted IP mesh at 2.2–2.5 GHz. Dual S/C-band options are offered, without a C-band range in this sheet.",
+                "sources": [
+                  "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-au-2024-system",
+                "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Dual-band data link",
+                "details": "2.2–2.5 and 4.4–4.9 GHz with AES-256 protection. ADS-B In is listed; ADS-B Out is optional, not proof that every aircraft broadcasts it.",
+                "sources": [
+                  "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-ai-may2025-system",
+                "configuration": "GmbH QS_VectorAI_Techsheet_250502, May 2025. Memory capacity, radio chipset and battery capacity are undisclosed. Earlier single-processor Vector specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "EO/IR payload alternatives",
+                "details": "NextVision Raptor or Trillium HD40-LV; payload choice must be checked for the individual aircraft.",
+                "sources": [
+                  "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-au-2024-system",
+                "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Imaging and awareness",
+                "details": "NextVision Raptor EO/IR 360° payload option; precision landing and obstacle-awareness systems. Optional additional payloads are not assumed installed.",
+                "sources": [
+                  "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-ai-may2025-system",
+                "configuration": "GmbH QS_VectorAI_Techsheet_250502, May 2025. Memory capacity, radio chipset and battery capacity are undisclosed. Earlier single-processor Vector specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation and survey payloads",
+                "details": "Downward LiDAR; interchangeable RGB, oblique, multispectral or LiDAR payloads. iBase GNSS reference station is separate ground equipment.",
+                "sources": [
+                  "https://quantum-systems.com/trinity-pro/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-trinity-pro-public",
+                "configuration": "Trinity Pro configuration within the broad Vector/Trinity catalog reference. No equivalence is established to FAA Trinity R6/R7/R8/R10/R14 revisions. CPU SKU, RAM, storage capacity and radio chipset unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric airframe",
+                "details": "8.5 kg take-off weight, 2.8 m wingspan and IP54. Battery capacity and motor model are not identified.",
+                "sources": [
+                  "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-au-2024-system",
+                "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Electric VTOL airframe",
+                "details": "9.5 kg maximum take-off weight, 2.8 m wingspan and IP55. Motor and battery part numbers are not published.",
+                "sources": [
+                  "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-ai-may2025-system",
+                "configuration": "GmbH QS_VectorAI_Techsheet_250502, May 2025. Memory capacity, radio chipset and battery capacity are undisclosed. Earlier single-processor Vector specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Ground station and conversion",
+                "details": "Auterion Skynav or tactical laptop. Shared Vector/Scorpion fuselage, datalink and sensors support fixed-wing/multicopter conversion; this does not apply to Trinity.",
+                "sources": [
+                  "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-au-2024-system",
+                "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Payload expansion",
+                "details": "USB-C Multiconnector and auxiliary payload bays.",
+                "sources": [
+                  "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-ai-may2025-system",
+                "configuration": "GmbH QS_VectorAI_Techsheet_250502, May 2025. Memory capacity, radio chipset and battery capacity are undisclosed. Earlier single-processor Vector specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Payload connection",
+                "details": "Quick-lock compartment supports interchangeable sensor modules.",
+                "sources": [
+                  "https://quantum-systems.com/trinity-pro/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-trinity-pro-public",
+                "configuration": "Trinity Pro configuration within the broad Vector/Trinity catalog reference. No equivalence is established to FAA Trinity R6/R7/R8/R10/R14 revisions. CPU SKU, RAM, storage capacity and radio chipset unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground-control software",
+                "details": "QBase Tactical.",
+                "sources": [
+                  "https://quantum-systems.com/au/wp-content/uploads/sites/3/2024/11/QS_Vector_Technical_A4_AUS_Version_241115_digital.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-au-2024-system",
+                "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Onboard software architecture",
+                "details": "ROS/Docker modular architecture and Receptor AI software suite.",
+                "sources": [
+                  "https://lp.quantum-systems.com/hubfs/Downloadables/Downloadables%20GmbH/QS_VectorAI_Techsheet_250502_Screen.pdf?hsLang=en"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-vector-ai-may2025-system",
+                "configuration": "GmbH QS_VectorAI_Techsheet_250502, May 2025. Memory capacity, radio chipset and battery capacity are undisclosed. Earlier single-processor Vector specifications are not inherited.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Flight stack",
+                "details": "Linux mission computer and QBase 3D mission planning; automatic diagnostics and terrain-aware flight planning.",
+                "sources": [
+                  "https://quantum-systems.com/trinity-pro/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "quantum-trinity-pro-public",
+                "configuration": "Trinity Pro configuration within the broad Vector/Trinity catalog reference. No equivalence is established to FAA Trinity R6/R7/R8/R10/R14 revisions. CPU SKU, RAM, storage capacity and radio chipset unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -109344,15 +110128,7 @@
             "facts": []
           }
         },
-        "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
-        ],
+        "missing_sections": [],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
     },
@@ -150679,8 +151455,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hoverair-x1-pro",
+            "configuration": "Separate HOVERAir X1 PRO configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -150689,38 +151471,128 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording storage",
+                "details": "32 GB internal plus microSD.",
+                "sources": [
+                  "https://hoverair.com/pages/x1-pro-and-promax"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-pro",
+                "configuration": "Separate HOVERAir X1 PRO configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wi-Fi",
+                "details": "Wi-Fi 5; 2.4/5 GHz bands vary by region.",
+                "sources": [
+                  "https://hoverair.com/pages/x1-pro-and-promax"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-pro",
+                "configuration": "Separate HOVERAir X1 PRO configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging and positioning",
+                "details": "1/2-inch image sensor; rear ToF; downward vision/ToF; two-axis gimbal.",
+                "sources": [
+                  "https://hoverair.com/pages/x1-pro-and-promax"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-pro",
+                "configuration": "Separate HOVERAir X1 PRO configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "1920 mAh, 7.38 V, 14.17 Wh lithium battery; replaceable pack.",
+                "sources": [
+                  "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-pro",
+                "configuration": "Separate HOVERAir X1 PRO configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Connection",
+                "details": "USB-C charging/data; optional Beacon/joystick controller.",
+                "sources": [
+                  "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-pro",
+                "configuration": "Separate HOVERAir X1 PRO configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control app",
+                "details": "HOVER X1 with automatic tracking and app-based control.",
+                "sources": [
+                  "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-pro",
+                "configuration": "Separate HOVERAir X1 PRO configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "identification",
+                "component": "Manufacturer model code",
+                "details": "HOVERAir X1 PRO corresponds to ZZ-H-1-003.",
+                "sources": [
+                  "https://d.otto.de/files/d9c341d6-212a-5be4-a257-56f1f12a0259.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-pro",
+                "configuration": "Separate HOVERAir X1 PRO configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Manufacturer MAC allocations",
                 "details": "84:83:19 · C8:63:14:40:00:00/28",
@@ -150748,13 +151620,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -150800,8 +151666,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hoverair-x1-promax",
+            "configuration": "Separate HOVERAir X1 PROMAX configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -150810,38 +151682,128 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Recording storage",
+                "details": "64 GB internal plus microSD.",
+                "sources": [
+                  "https://hoverair.com/pages/x1-pro-and-promax"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-promax",
+                "configuration": "Separate HOVERAir X1 PROMAX configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wi-Fi",
+                "details": "Wi-Fi 6; 2.4/5 GHz bands vary by region.",
+                "sources": [
+                  "https://hoverair.com/pages/x1-pro-and-promax"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-promax",
+                "configuration": "Separate HOVERAir X1 PROMAX configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Imaging and positioning",
+                "details": "1/1.3-inch image sensor; rear ToF plus vision; downward vision/ToF; two-axis gimbal.",
+                "sources": [
+                  "https://hoverair.com/pages/x1-pro-and-promax"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-promax",
+                "configuration": "Separate HOVERAir X1 PROMAX configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight battery",
+                "details": "1920 mAh, 7.38 V, 14.17 Wh lithium battery; replaceable pack.",
+                "sources": [
+                  "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-promax",
+                "configuration": "Separate HOVERAir X1 PROMAX configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Connection",
+                "details": "USB-C charging/data; optional Beacon/joystick controller.",
+                "sources": [
+                  "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-promax",
+                "configuration": "Separate HOVERAir X1 PROMAX configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Control app",
+                "details": "HOVER X1 with automatic tracking and app-based control.",
+                "sources": [
+                  "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-promax",
+                "configuration": "Separate HOVERAir X1 PROMAX configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
-            "status": "reference-only",
+            "status": "documented",
             "facts": [
+              {
+                "section": "identification",
+                "component": "Manufacturer model code",
+                "details": "HOVERAir X1 PROMAX corresponds to ZZ-H-1-004.",
+                "sources": [
+                  "https://d.otto.de/files/d9c341d6-212a-5be4-a257-56f1f12a0259.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hoverair-x1-promax",
+                "configuration": "Separate HOVERAir X1 PROMAX configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+                "reviewed_on": "2026-11-03"
+              },
               {
                 "component": "Manufacturer MAC allocations",
                 "details": "84:83:19 · C8:63:14:40:00:00/28",
@@ -150869,13 +151831,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "compute"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -303891,7 +304847,8 @@
         "manufacturer": "Quantum Systems",
         "models": [
           "Vector (Australia November 2024 configuration)",
-          "Vector"
+          "Vector",
+          "Vector (and Trinity)"
         ],
         "configuration": "Australian technical sheet QS_Vector_Technical_A4_AUS_Version_241115. This is a dated Vector configuration, not the later dual-processor Vector AI or the Trinity survey aircraft.",
         "reviewed_on": "2026-11-03",
@@ -303960,7 +304917,8 @@
         "models": [
           "Vector AI (May 2025 configuration)",
           "Vector AI",
-          "Vector"
+          "Vector",
+          "Vector (and Trinity)"
         ],
         "configuration": "GmbH QS_VectorAI_Techsheet_250502, May 2025. Memory capacity, radio chipset and battery capacity are undisclosed. Earlier single-processor Vector specifications are not inherited.",
         "reviewed_on": "2026-11-03",
@@ -311292,6 +312250,596 @@
             ]
           }
         ]
+      },
+      {
+        "id": "fimi-x8se2022-v2-manual",
+        "manufacturer": "FIMI",
+        "models": [
+          "FIMI X8 SE 2022 V2",
+          "FMWRJ03A8"
+        ],
+        "configuration": "X8 SE 2022 V2 manual v3.0.2; model FMWRJ03A8. Processor, RAM and radio chipset unpublished. Battery nominal voltage follows the specification table, not the charging-voltage sentence.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Camera and positioning",
+            "details": "Sony 1/2-inch CMOS, f/1.6; GPS/GLONASS/CNSS, optical flow and ultrasonic ranging.",
+            "sources": [
+              "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft control band",
+            "details": "2.400–2.4835 GHz; protocol chipset unspecified.",
+            "sources": [
+              "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Aircraft battery",
+            "details": "4500 mAh, 11.4 V nominal, 51.3 Wh; 13.05 V charge limit. Controller battery is separate.",
+            "sources": [
+              "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording media",
+            "details": "U3-or-better microSD, 8–256 GB.",
+            "sources": [
+              "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload mounting",
+            "details": "Removable megaphone module; three-axis camera gimbal.",
+            "sources": [
+              "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Companion software",
+            "details": "FIMI Navi 2020 provides control and firmware updates.",
+            "sources": [
+              "https://www.fimi.com/download/x8se2022/FIMI_X8_SE_2022_V2_User_Manual_V3.0.2_EN.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fimi-x8tele-manual20250314",
+        "manufacturer": "FIMI",
+        "models": [
+          "FIMI X8 Tele",
+          "FMWRJ04A1"
+        ],
+        "configuration": "X8 Tele manual v3 dated March 2025; 2024 manufacturer test filing identifies FMWRJ04A1. Tele Max is separately documented. ISP SKU, RAM and radio chips unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Model cross-reference",
+            "details": "Manufacturer FCC test report names X8 Tele as FMWRJ04A1, FCC ID 2AYVYFMWRJ04A1.",
+            "sources": [
+              "https://fcc.report/FCC-ID/2AYVYFMWRJ04A1/7410377.pdf"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "Image processing",
+            "details": "Dedicated ISP described; semiconductor model unspecified.",
+            "sources": [
+              "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera and navigation",
+            "details": "48 MP 1/2-inch wide and 13 MP 1/2.5-inch tele sensors; three-axis gimbal, front/rear vision, downward optical flow/ToF and GPS/Galileo/GLONASS.",
+            "sources": [
+              "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless links",
+            "details": "Manual lists 2.4/5.8 GHz controller links and Bluetooth 5.1. Cellular enhanced-video module is optional.",
+            "sources": [
+              "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Alternative flight batteries",
+            "details": "Standard: LiPo 3S, 4650 mAh, 11.55 V, 53.7 Wh. Plus: Li-ion 4S, 5000 mAh, 14.4 V, 72 Wh.",
+            "sources": [
+              "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording storage",
+            "details": "microSD; recommended cards include capacities through 512 GB.",
+            "sources": [
+              "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion connector",
+            "details": "12-pin female data connector.",
+            "sources": [
+              "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Companion app",
+            "details": "FIMI Navi 3.0.",
+            "sources": [
+              "https://www-host.fimi.com/download/x8tele/FIMI-X8-Tele-User-Manual-V3-20250314.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fimi-x8tele-max-v112",
+        "manufacturer": "FIMI",
+        "models": [
+          "FIMI X8 Tele Max"
+        ],
+        "configuration": "Tele Max v1.1.2 manual. Kept separate from Tele: this revision lists a 2.4 GHz controller and downward positioning; Tele front/rear obstacle sensors are not carried over. CPU, RAM and radio SKU unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Imaging processor",
+            "details": "AI ISP described for low-light processing; chip model unnamed.",
+            "sources": [
+              "https://www.fimi.com/download/x8tele-max/FIMI-X8-Tele-Max-User-Manual-V1.1.2.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Cameras and positioning",
+            "details": "48 MP 1/2-inch wide and 13 MP 1/2.5-inch tele cameras; three-axis gimbal, downward optical flow/ToF, BeiDou/GPS/GLONASS/Galileo.",
+            "sources": [
+              "https://www.fimi.com/download/x8tele-max/FIMI-X8-Tele-Max-User-Manual-V1.1.2.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Control system",
+            "details": "Controller specification: 2.4000–2.4835 GHz. Optional enhanced transmission module uses cellular service.",
+            "sources": [
+              "https://www.fimi.com/download/x8tele-max/FIMI-X8-Tele-Max-User-Manual-V1.1.2.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery choices",
+            "details": "4650 mAh, 11.55 V, 53.7 Wh LiPo 3S or Plus 5000 mAh, 14.4 V, 72 Wh Li-ion 4S.",
+            "sources": [
+              "https://www.fimi.com/download/x8tele-max/FIMI-X8-Tele-Max-User-Manual-V1.1.2.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Image recording",
+            "details": "microSD; recommended card list extends to 512 GB.",
+            "sources": [
+              "https://www.fimi.com/download/x8tele-max/FIMI-X8-Tele-Max-User-Manual-V1.1.2.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "12-pin female data connector.",
+            "sources": [
+              "https://www.fimi.com/download/x8tele-max/FIMI-X8-Tele-Max-User-Manual-V1.1.2.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control app",
+            "details": "FIMI Navi 3.0; flight records remain on the mobile device unless the user uploads them.",
+            "sources": [
+              "https://www.fimi.com/download/x8tele-max/FIMI-X8-Tele-Max-User-Manual-V1.1.2.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hoverair-x1-pro",
+        "manufacturer": "ZERO ZERO ROBOTICS",
+        "models": [
+          "HOVERAir X1 PRO",
+          "ZZ-H-1-003"
+        ],
+        "configuration": "Separate HOVERAir X1 PRO configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Manufacturer model code",
+            "details": "HOVERAir X1 PRO corresponds to ZZ-H-1-003.",
+            "sources": [
+              "https://d.otto.de/files/d9c341d6-212a-5be4-a257-56f1f12a0259.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording storage",
+            "details": "32 GB internal plus microSD.",
+            "sources": [
+              "https://hoverair.com/pages/x1-pro-and-promax"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging and positioning",
+            "details": "1/2-inch image sensor; rear ToF; downward vision/ToF; two-axis gimbal.",
+            "sources": [
+              "https://hoverair.com/pages/x1-pro-and-promax"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wi-Fi",
+            "details": "Wi-Fi 5; 2.4/5 GHz bands vary by region.",
+            "sources": [
+              "https://hoverair.com/pages/x1-pro-and-promax"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "1920 mAh, 7.38 V, 14.17 Wh lithium battery; replaceable pack.",
+            "sources": [
+              "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Connection",
+            "details": "USB-C charging/data; optional Beacon/joystick controller.",
+            "sources": [
+              "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control app",
+            "details": "HOVER X1 with automatic tracking and app-based control.",
+            "sources": [
+              "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hoverair-x1-promax",
+        "manufacturer": "ZERO ZERO ROBOTICS",
+        "models": [
+          "HOVERAir X1 PROMAX",
+          "ZZ-H-1-004"
+        ],
+        "configuration": "Separate HOVERAir X1 PROMAX configuration. January 2025 manufacturer declaration establishes the model code. Processor and RAM undisclosed; common guide does not override model-specific Wi-Fi generation.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Manufacturer model code",
+            "details": "HOVERAir X1 PROMAX corresponds to ZZ-H-1-004.",
+            "sources": [
+              "https://d.otto.de/files/d9c341d6-212a-5be4-a257-56f1f12a0259.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording storage",
+            "details": "64 GB internal plus microSD.",
+            "sources": [
+              "https://hoverair.com/pages/x1-pro-and-promax"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Imaging and positioning",
+            "details": "1/1.3-inch image sensor; rear ToF plus vision; downward vision/ToF; two-axis gimbal.",
+            "sources": [
+              "https://hoverair.com/pages/x1-pro-and-promax"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wi-Fi",
+            "details": "Wi-Fi 6; 2.4/5 GHz bands vary by region.",
+            "sources": [
+              "https://hoverair.com/pages/x1-pro-and-promax"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "1920 mAh, 7.38 V, 14.17 Wh lithium battery; replaceable pack.",
+            "sources": [
+              "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Connection",
+            "details": "USB-C charging/data; optional Beacon/joystick controller.",
+            "sources": [
+              "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control app",
+            "details": "HOVER X1 with automatic tracking and app-based control.",
+            "sources": [
+              "https://static.hoverair.com/support/Quick%20Start%20Guide_20250916.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-avata360-2026",
+        "manufacturer": "DJI",
+        "models": [
+          "DJI Avata 360",
+          "Avata 360 (DVN3XT)",
+          "DJI Avata 360 (DVN3NT)"
+        ],
+        "configuration": "2026 manufacturer manual covers DVN3NT/DVN3XT. Regional communication functions vary; no cellular modem is inferred from the code. CPU, RAM and RF chipset undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Imaging",
+            "details": "Dual 1/1.1-inch CMOS sensors, f/1.9; 360-degree and single-lens modes.",
+            "sources": [
+              "https://store.dji.com/nz/product/dji-avata-360?from=site-nav&set_region=NZ"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation sensing",
+            "details": "GNSS, omnidirectional vision, forward LiDAR and 3D infrared. Omnidirectional avoidance operates in 360 mode; single-lens mode supports forward avoidance.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless interfaces",
+            "details": "O4+; Wi-Fi 6 and Bluetooth 5.4. Published O4+ bands: 2.4000–2.4835, 5.170–5.250 and 5.725–5.850 GHz, subject to region.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_Safety_Guidelines.pdf"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "Remote ID transport",
+            "details": "Manual documents direct Remote ID using Wi-Fi Beacon. This is a protocol reference, not a confirmed local detection.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Storage",
+            "details": "42 GB internal recording storage plus microSD.",
+            "sources": [
+              "https://repair.dji.com/help/content?customId=01700007264&documentType=&lang=en&paperDocType=ARTICLE&re=US&spaceId=17",
+              "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight battery",
+            "details": "BWXVN1-2700-14.32 replaceable flight battery; 2700 mAh lithium-ion.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf",
+              "https://store.dji.com/ca/product/dji-avata-360-intelligent-flight-battery?from=site-nav&set_region=CA&vid=214941"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Data export",
+            "details": "USB-C and microSD; QuickTransfer over Wi-Fi.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Control software",
+            "details": "DJI Fly; supported controller and goggles combinations differ.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_Avata_360/DJI_Avata_360_User_Manual_en.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-m30-dock-v18",
+        "manufacturer": "DJI",
+        "models": [
+          "M30 Dock version"
+        ],
+        "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Propulsion and batteries",
+            "details": "3511 motors; two TB30 packs, each 5880 mAh, 131.6 Wh, Li-ion 6S.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Cameras and navigation",
+            "details": "48 MP zoom, 12 MP wide, FPV, 905 nm rangefinder; RTK GNSS and vision/infrared ranging.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 Enterprise",
+            "details": "2.4000–2.4835 and 5.725–5.850 GHz; regional limits apply.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf",
+              "https://dl.djicdn.com/downloads/m30_series_dock_bundle/20230613/M30T_Dock_Version_User_Guide_EN.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording media",
+            "details": "32 GB microSD supplied; up to 128 GB supported.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "Aircraft PSDK connector; compatible DJI Dock provides charging.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Remote operations",
+            "details": "DJI FlightHub 2 via Dock.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-m30t-dock-v18",
+        "manufacturer": "DJI",
+        "models": [
+          "M30T Dock version"
+        ],
+        "configuration": "Dock aircraft, February 2024 manual v1.8. CPU/RAM unpublished. Dock edge computers and backup lead-acid battery are ground equipment.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Propulsion and batteries",
+            "details": "3511 motors; two TB30 packs, each 5880 mAh, 131.6 Wh, Li-ion 6S.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Cameras and navigation",
+            "details": "48 MP zoom, 12 MP wide, FPV, 905 nm rangefinder; RTK GNSS and vision/infrared ranging.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O3 Enterprise",
+            "details": "2.4000–2.4835 and 5.725–5.850 GHz; regional limits apply.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf",
+              "https://dl.djicdn.com/downloads/m30_series_dock_bundle/20230613/M30T_Dock_Version_User_Guide_EN.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Recording media",
+            "details": "32 GB microSD supplied; up to 128 GB supported.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Expansion",
+            "details": "Aircraft PSDK connector; compatible DJI Dock provides charging.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Remote operations",
+            "details": "DJI FlightHub 2 via Dock.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Thermal payload",
+            "details": "640×512 uncooled VOx detector; M30T only.",
+            "sources": [
+              "https://terra-1-g.djicdn.com/6189933d30024fc1b331bffe4fe41837/dock/UM/DJI_Dock_User_Manual_en.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "quantum-trinity-pro-public",
+        "manufacturer": "Quantum Systems",
+        "models": [
+          "Trinity Pro",
+          "Vector (and Trinity)"
+        ],
+        "configuration": "Trinity Pro configuration within the broad Vector/Trinity catalog reference. No equivalence is established to FAA Trinity R6/R7/R8/R10/R14 revisions. CPU SKU, RAM, storage capacity and radio chipset unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Quantum-Skynode",
+            "details": "Named autopilot and separate Linux mission computer; processor models not disclosed.",
+            "sources": [
+              "https://quantum-systems.com/trinity-pro/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and survey payloads",
+            "details": "Downward LiDAR; interchangeable RGB, oblique, multispectral or LiDAR payloads. iBase GNSS reference station is separate ground equipment.",
+            "sources": [
+              "https://quantum-systems.com/trinity-pro/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload connection",
+            "details": "Quick-lock compartment supports interchangeable sensor modules.",
+            "sources": [
+              "https://quantum-systems.com/trinity-pro/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight stack",
+            "details": "Linux mission computer and QBase 3D mission planning; automatic diagnostics and terrain-aware flight planning.",
+            "sources": [
+              "https://quantum-systems.com/trinity-pro/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -311308,8 +312856,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 613,
-    "devices_with_system_profiles": 527,
-    "devices_with_documented_compute": 254
+    "system_profiles": 622,
+    "devices_with_system_profiles": 536,
+    "devices_with_documented_compute": 256
   }
 }
