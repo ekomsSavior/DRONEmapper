@@ -43666,6 +43666,339 @@
           ]
         }
       ]
+    },
+    {
+      "id": "droneup-ecosystem-2024",
+      "manufacturer": "DroneUp",
+      "models": [
+        "DroneUp Autonomous Ecosystem"
+      ],
+      "configuration": "March 2024 ecosystem configuration, not a parts list for every later DroneUp aircraft. CPU, memory, radio hardware, sensor part numbers and battery specifications are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Onboard vertical-clearance sensing",
+          "details": "Measures height above obstacles; the announcement does not identify the sensor technology.",
+          "sources": [
+            "https://www.droneup.com/news/introducing-the-droneup-ecosystem"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "DBX ground infrastructure",
+          "details": "Climate-controlled package storage and automated aircraft pickup/landing. DBX is ground equipment.",
+          "sources": [
+            "https://www.droneup.com/news/introducing-the-droneup-ecosystem"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Package grasper and winch",
+          "details": "Aircraft combines internal package storage with a claw-like grasper and winch for delivery.",
+          "sources": [
+            "https://www.droneup.com/news/introducing-the-droneup-ecosystem"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Planned onboard charging",
+          "details": "Announced as a future capability in March 2024; this source does not verify its subsequent deployment or charging hardware.",
+          "sources": [
+            "https://www.droneup.com/news/introducing-the-droneup-ecosystem"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous flight coordination",
+          "details": "Route planning, multi-aircraft supervision, digitized maps and detect-and-avoid functionality; no particular DAA sensor is named.",
+          "sources": [
+            "https://www.droneup.com/news/introducing-the-droneup-ecosystem"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flock-aerodome-dfr-architecture",
+      "manufacturer": "Flock Safety",
+      "models": [
+        "Flock Aerodome DFR"
+      ],
+      "configuration": "Documented platform integrations. Aircraft, dock and airspace equipment vary by deployment; this is not a universal aircraft BOM. Processor, memory, modem and battery parts are unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Hextronics battery-swapping dock",
+          "details": "Flock describes an integrated ground dock adaptable to multiple aircraft; this does not identify a battery model.",
+          "sources": [
+            "https://www.flocksafety.com/blog/the-5-as-of-dfr-the-dna-of-a-drone-as-first-responder-program"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "O.W.L. 3-D radar integration",
+          "details": "Airspace-awareness equipment, not an onboard drone radar. Deployment-specific hardware must be confirmed separately.",
+          "sources": [
+            "https://www.flocksafety.com/blog/the-5-as-of-dfr-the-dna-of-a-drone-as-first-responder-program"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Air Traffic Awareness Module inputs",
+          "details": "Integrates radar, ADS-B reception, RF detection and Remote ID. These are awareness inputs, not a disclosure of the aircraft command radio.",
+          "sources": [
+            "https://www.flocksafety.com/blog/the-5-as-of-dfr-the-dna-of-a-drone-as-first-responder-program"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Aerodome remote operations",
+          "details": "Coordinates missions, augmented-reality overlays, dock operations and third-party incident information. The platform supports multiple aircraft types.",
+          "sources": [
+            "https://www.flocksafety.com/blog/the-5-as-of-dfr-the-dna-of-a-drone-as-first-responder-program"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flock-das-2025",
+      "manufacturer": "Flock Safety",
+      "models": [
+        "Flock Drone as Automated Security"
+      ],
+      "configuration": "September 2025 Flock-authored product announcement. Aircraft and dock model, CPU, RAM, camera part numbers, radio and battery details are not named; no DJI or Alpha hardware is inferred.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "HD and thermal video",
+          "details": "Docked aircraft supplies live visible and thermal imagery; specific cameras are not identified.",
+          "sources": [
+            "https://www.globenewswire.com/news-release/2025/09/25/3156622/0/en/Flock-Safety-Launches-Flock-Aerodome-Drone-as-Automated-Security-for-Private-Enterprises.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "FlockOS enterprise integrations",
+          "details": "Connects alarm panels, video-management and access-control systems, plus Flock vehicle alerts.",
+          "sources": [
+            "https://www.globenewswire.com/news-release/2025/09/25/3156622/0/en/Flock-Safety-Launches-Flock-Aerodome-Drone-as-Automated-Security-for-Private-Enterprises.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operator-initiated automated response",
+          "details": "An operator dispatches the aircraft after a camera/audio alert; autonomous flight follows. Geofencing, obstacle avoidance, precision landing and flight logs are listed.",
+          "sources": [
+            "https://www.globenewswire.com/news-release/2025/09/25/3156622/0/en/Flock-Safety-Launches-Flock-Aerodome-Drone-as-Automated-Security-for-Private-Enterprises.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "easy-aerial-sams-egcs-reference",
+      "manufacturer": "Easy Aerial",
+      "models": [
+        "SAMS / SAMS-T system reference"
+      ],
+      "configuration": "Manufacturer capability brochure: SAMS/SAMS-T, EGV hangars and the separately described EGCS controller. This is a configuration reference for the generic library entry; it does not establish which controller accompanies every installation. Aircraft CPU, RAM, radio frequency and battery specifications remain unpublished.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Associated EGCS ground controller",
+          "details": "Handheld industrial tablet uses Intel Pentium Silver; exact SKU and RAM are unstated. This identifies ground-controller compute, not an aircraft processor.",
+          "sources": [
+            "https://pdfs-of-qr-codes.s3.amazonaws.com/0f59304c1fe55485d3639bf7e6c0c86c.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "EGCS RF datalink",
+          "details": "Adjustable 1 W, 2×2 MIMO and LDPC; AES-256 encryption. No frequency or modem part is supplied.",
+          "sources": [
+            "https://pdfs-of-qr-codes.s3.amazonaws.com/0f59304c1fe55485d3639bf7e6c0c86c.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Free-flight or tether power",
+          "details": "EGV free-flight configuration recharges after landing; tethered configuration supplies continuous power and communications.",
+          "sources": [
+            "https://pdfs-of-qr-codes.s3.amazonaws.com/0f59304c1fe55485d3639bf7e6c0c86c.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "EGV50 / EGV70 / EGV90 hangars",
+          "details": "Different-sized ground enclosures support quadcopter or hexacopter configurations, including mobile land and maritime platforms.",
+          "sources": [
+            "https://pdfs-of-qr-codes.s3.amazonaws.com/0f59304c1fe55485d3639bf7e6c0c86c.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Selectable payload categories",
+          "details": "Brochure lists EO/IR cameras, radar and other payload choices; they are not all standard or simultaneously installed.",
+          "sources": [
+            "https://pdfs-of-qr-codes.s3.amazonaws.com/0f59304c1fe55485d3639bf7e6c0c86c.pdf"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Easy Aerial",
+          "models": [
+            "Easy Aerial Drone-in-a-Box"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elroy-chaparral-platform",
+      "manufacturer": "Elroy Air",
+      "models": [
+        "Chaparral"
+      ],
+      "configuration": "Current Chaparral product architecture with a separately dated C1 flight-test power reference. Generic Elroy VTOL records show this named platform, not a complete parts list for all prototypes. Processor, memory, radio, navigation sensors and motor/engine part numbers are unspecified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Distributed electric propulsion",
+          "details": "Current aircraft page specifies eight vertical-lift propellers and four forward-cruise propellers with a hybrid-electric powertrain.",
+          "sources": [
+            "https://elroyair.com/chaparral/aircraft/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "2023 C1 demonstrator power source",
+          "details": "November 2023 first-flight report identifies a turbogenerator and high-power batteries on C1. No generator model or battery rating is given; later revisions must not inherit unverified parts.",
+          "sources": [
+            "https://elroyair.com/company/news/press-releases/first-flight-hVTOL-Chaparral/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Interchangeable cargo pods",
+          "details": "Palletized Pod uses an L-Track cargo attachment; Express Pod uses quick-release buckles. These are alternative cargo configurations.",
+          "sources": [
+            "https://elroyair.com/chaparral/cargo-pod/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Unattended cargo delivery",
+          "details": "Manufacturer describes automated delivery using its cargo-pod system; computing hardware is not identified.",
+          "sources": [
+            "https://elroyair.com/chaparral/cargo-pod/"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Elroy Air",
+          "models": [
+            "Elroy Air VTOL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flirtey-eagle-2019-2021",
+      "manufacturer": "Flirtey (SkyDrop)",
+      "models": [
+        "Flirtey Eagle"
+      ],
+      "configuration": "Historical Eagle configuration from Flirtey-authored 2019 and 2021 announcements. Presented for the generic Flirtey delivery entry; not a parts list for every SkyDrop revision. CPU, memory, radios, navigation sensors and battery/propulsion components remain undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Retractable package tether",
+          "details": "Lowers cargo while aircraft remains airborne, then retracts the tether.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/flirtey-unveils-the-future-of-drone-delivery-with-never-before-seen-video-and-images-of-its-latest-industry-leading-drone-and-technology-with-senator-catherine-cortez-masto-at-the-national-press-club-in-washington-dc-300913869.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Flirtey Portal",
+          "details": "Associated ground takeoff-and-landing platform; no charging mechanism is established by this source.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/flirtey-unveils-the-future-of-drone-delivery-with-never-before-seen-video-and-images-of-its-latest-industry-leading-drone-and-technology-with-senator-catherine-cortez-masto-at-the-national-press-club-in-washington-dc-300913869.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Implemented parachute system",
+          "details": "March 2021 manufacturer statement confirms an installed recovery system; this is distinct from an unbuilt patent concept.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/flirtey-to-certify-and-expand-production-of-the-flirtey-eagle-drone-delivery-system-301240669.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous fleet supervision",
+          "details": "Flight software supports a remote pilot overseeing multiple aircraft; public source does not specify its operating system or protocol.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/flirtey-unveils-the-future-of-drone-delivery-with-never-before-seen-video-and-images-of-its-latest-industry-leading-drone-and-technology-with-senator-catherine-cortez-masto-at-the-national-press-club-in-washington-dc-300913869.html"
+          ]
+        }
+      ],
+      "record_bindings": [
+        {
+          "manufacturer": "Flirtey (SkyDrop)",
+          "models": [
+            "Flirtey Delivery Drone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wing-delivery-platform-reference",
+      "manufacturer": "Wing",
+      "models": [
+        "Wing Delivery Aircraft"
+      ],
+      "configuration": "Wing delivery-platform reference. Current generic architecture does not establish the exact hardware of each FAA Hummingbird revision. Processor, memory, radio chipsets/bands, navigation sensor parts and battery ratings are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Separate lift and cruise propulsion",
+          "details": "Vertical-lift motors handle takeoff, delivery and landing; separate motors provide forward cruise. No universal motor count is assigned to all revisions.",
+          "sources": [
+            "https://wing.com/technology"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tethered delivery",
+          "details": "Aircraft lowers packages to the delivery point while remaining airborne.",
+          "sources": [
+            "https://wing.com/technology"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Automated mission operation",
+          "details": "Flight planning and delivery operations are automated with human supervision; this does not identify a radio protocol.",
+          "sources": [
+            "https://wing.com/technology"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Shared avionics design approach",
+          "details": "Wing’s July 2022 aircraft-library description identifies common avionics and software developed through Hummingbird operations. No processor or board is named, and concept designs are not presumed deployed.",
+          "sources": [
+            "https://wing.com/news/wings-aircraft-library"
+          ]
+        }
+      ]
     }
   ]
 }

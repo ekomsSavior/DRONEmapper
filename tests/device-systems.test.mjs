@@ -9,6 +9,32 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 74 separates dock components, aircraft revisions and planned features',()=>{
+ const easy=system('Easy Aerial','Easy Aerial Drone-in-a-Box');
+ assert.match(text(easy.sections.compute),/Intel Pentium Silver/);
+ assert.match(text(easy.sections.compute),/not an aircraft processor/);
+ assert.equal(easy.sections.memory.status,'not-established');
+ const dfr=system('Flock Safety','Flock Aerodome DFR');
+ assert.match(text(dfr.sections.power),/Hextronics/);
+ assert.match(text(dfr.sections.sensors),/not an onboard drone radar/);
+ assert.equal(dfr.sections.compute.status,'not-established');
+ const das=system('Flock Safety','Flock Drone as Automated Security');
+ assert.notDeepEqual(profileIds(dfr),profileIds(das));
+ assert.doesNotMatch(text(das.sections.radios.facts),/cellular modems/);
+ const up=system('DroneUp','DroneUp Autonomous Ecosystem');
+ assert.match(text(up.sections.power),/future capability in March 2024/);
+ const elroy=system('Elroy Air','Elroy Air VTOL');
+ assert.match(text(elroy.sections.power),/eight vertical-lift propellers and four forward/);
+ assert.match(text(elroy.sections.power),/2023/);
+ assert.equal(elroy.sections.compute.status,'not-established');
+ const eagle=system('Flirtey (SkyDrop)','Flirtey Delivery Drone');
+ assert.match(text(eagle.sections.interfaces),/March 2021/);
+ const wing=system('Wing','Wing Delivery Aircraft');
+ assert.match(text(wing.sections.compute),/No processor or board is named/);
+ assert.equal(profileIds(system('Wing Aviation LLC','Hummingbird v2')).length,0);
+ assert.equal(profileIds(system('Easy Aerial','Easy Aerial Drone-in-a-Box',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 73 separates delivery revisions, ground compute and radio evidence',()=>{
  const manna=system('Manna Aero','Manna Delivery Drone');
  assert.match(text(manna.sections.compute),/Three flight-control computers/);
