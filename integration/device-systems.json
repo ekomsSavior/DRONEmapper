@@ -14222,6 +14222,562 @@
           ]
         }
       ]
+    },
+    {
+      "id": "neura-mipa-v5-2026",
+      "manufacturer": "NEURA Robotics",
+      "models": [
+        "MiPA"
+      ],
+      "configuration": "Manufacturer V5 datasheet dated June 5, 2026 and current product page. CPU/GPU, RAM, storage, battery chemistry/capacity and radio module are not specified. Not the older Gen 3 specification.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Multimodal perception",
+          "details": "LiDAR, RGB camera/webcam, infrared, ultrasonic, GPS and environmental temperature/humidity sensors. Manufacturer describes 360-degree perception and touchless human detection to three metres.",
+          "sources": [
+            "https://neurarobotics.px.media/plk/7D/MiPA_NEURA_Robotics_Datasheet_Web.pdf",
+            "https://neura-robotics.com/products/mipa/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless connectivity",
+          "details": "Wi-Fi and Bluetooth; radio versions, chipsets and broadcast identifiers are not identified.",
+          "sources": [
+            "https://neura-robotics.com/products/mipa/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mobile base and charging",
+          "details": "Actuated wheels and a linear axis; advertised motion endurance 2–8 hours with automatic recharging. Battery capacity and test duty cycle are not disclosed.",
+          "sources": [
+            "https://neurarobotics.px.media/plk/7D/MiPA_NEURA_Robotics_Datasheet_Web.pdf",
+            "https://neura-robotics.com/products/mipa/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Manipulation and interaction",
+          "details": "17 base-robot degrees of freedom excluding end effectors; 3 kg single-arm payload. Touch display, projector, microphone array, amplifier/speakers and LEDs; modular shelf, table, hook and tool-change attachments.",
+          "sources": [
+            "https://neurarobotics.px.media/plk/7D/MiPA_NEURA_Robotics_Datasheet_Web.pdf",
+            "https://neura-robotics.com/products/mipa/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Application and autonomy stack",
+          "details": "Neuraverse no-code applications, fleet deployment and digital-twin simulation; NEURA Gym training. SLAM navigation, path planning, computer vision and language-model interaction; developer API access advertised.",
+          "sources": [
+            "https://neurarobotics.px.media/plk/7D/MiPA_NEURA_Robotics_Datasheet_Web.pdf",
+            "https://neura-robotics.com/products/mipa/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "figure-02-launch-2024",
+      "manufacturer": "Figure AI",
+      "models": [
+        "Figure 02",
+        "F.02"
+      ],
+      "configuration": "August 2024 launch configuration, not Figure 03 or later Helix revisions. NVIDIA names RTX-based modules but not GPU SKU, CPU, RAM or storage; radio hardware and battery chemistry are undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard AI modules",
+          "details": "Two NVIDIA RTX GPU-based modules; NVIDIA attributes a threefold inference gain over the first-generation robot to adding the second module. No specific RTX or Jetson model established.",
+          "sources": [
+            "https://blogs.nvidia.com/blog/figure-humanoid-robot-autonomous/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Vision and audio",
+          "details": "Six onboard RGB cameras, microphones and speakers; sensor part numbers unspecified.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/figure-unveils-figure-02-its-second-generation-humanoid-setting-new-standards-in-ai-and-robotics-302214889.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Torso battery",
+          "details": "Custom 2.25 kWh battery pack inside the torso. Launch release gives energy capacity, not a tested operating-hour rating.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/figure-unveils-figure-02-its-second-generation-humanoid-setting-new-standards-in-ai-and-robotics-302214889.html"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Hands and packaging",
+          "details": "Fourth-generation hands have 16 degrees of freedom each. Power and compute cables are routed inside the structure; connector and actuator SKUs are not published.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/figure-unveils-figure-02-its-second-generation-humanoid-setting-new-standards-in-ai-and-robotics-302214889.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Launch inference architecture",
+          "details": "Onboard vision-language reasoning; launch speech models developed with OpenAI. NVIDIA Isaac Sim/Omniverse and off-robot NVIDIA GPUs support simulation and training; these are not additional onboard modules.",
+          "sources": [
+            "https://www.prnewswire.com/news-releases/figure-unveils-figure-02-its-second-generation-humanoid-setting-new-standards-in-ai-and-robotics-302214889.html",
+            "https://blogs.nvidia.com/blog/figure-humanoid-robot-autonomous/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amazon-proteus-ti-2024",
+      "manufacturer": "Amazon",
+      "models": [
+        "Proteus"
+      ],
+      "configuration": "TI September 2024 Proteus component disclosure, with Amazon/AWS autonomy description. Not every Amazon mobile robot or the newer natural-language Proteus revision. Installed RAM, storage, radio, battery and camera/LiDAR SKUs undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Safety and vision processors",
+          "details": "TI identifies TDA4VM and DRA821 embedded processors, with an RM46L852 safety microcontroller supporting the TDA4VM in Proteus.",
+          "sources": [
+            "https://www.ti.com/about-ti/behind-chip/customer-stories/amazon-robotics.html"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "TDA4VM core architecture",
+          "details": "TI lists dual Arm Cortex-A72, six Cortex-R5F cores, C7x and C66x DSPs, a vision accelerator and PowerVR GPU for this SoC. Chip capabilities do not establish robot clock settings or enabled functions.",
+          "sources": [
+            "https://www.ti.com/about-ti/behind-chip/customer-stories/amazon-robotics.html",
+            "https://www.ti.com/product/TDA4VM"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Local perception",
+          "details": "Vision and object classification maintain a protective boundary around people; Amazon/AWS also documents LiDAR and 3D point-cloud navigation.",
+          "sources": [
+            "https://www.ti.com/about-ti/behind-chip/customer-stories/amazon-robotics.html",
+            "https://aws.amazon.com/about-aws/learn-from-amazon/e-commerce/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Internal communication",
+          "details": "TI documents Ethernet, CAN and RS-485 connectivity solutions in the robot design. These are internal/system interfaces, not passive wireless identifiers.",
+          "sources": [
+            "https://www.ti.com/about-ti/behind-chip/customer-stories/amazon-robotics.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electrical subsystem",
+          "details": "TI power-management ICs accompany the embedded processors. Exact PMIC SKU, battery chemistry and capacity are not disclosed.",
+          "sources": [
+            "https://www.ti.com/about-ti/behind-chip/customer-stories/amazon-robotics.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous control",
+          "details": "Embedded diagnostics support safe rerouting or shutdown; Amazon SageMaker supports development of perception models. This is separate from the onboard processors that execute robot control.",
+          "sources": [
+            "https://www.ti.com/about-ti/behind-chip/customer-stories/amazon-robotics.html",
+            "https://aws.amazon.com/about-aws/learn-from-amazon/e-commerce/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amazon-hercules",
+      "manufacturer": "Amazon",
+      "models": [
+        "Hercules"
+      ],
+      "configuration": "Amazon’s published Hercules mobile-drive architecture. CPU, memory, storage, radio module, battery specification and actuator models are not disclosed. Do not inherit Proteus chips.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Camera navigation",
+          "details": "Forward-facing 3D camera recognizes people, shelves and obstacles; camera-readable floor markers support localization and pod finding.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/amazon-hercules-robot"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Human-presence communication",
+          "details": "Amazon documents locating employees through Wi-Fi Tech Vest transmitters. No exact radio module, channel or device-specific beacon pattern is given.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/amazon-hercules-robot"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Drive and lift",
+          "details": "Wheeled drive slides below a storage pod and lifts it for transport; published capacity up to 1,250 lb. Electrical ratings and charging hardware unspecified.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/amazon-hercules-robot"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Local and fleet planning",
+          "details": "Local movement decisions operate under centralized order-driven fleet planning; safety responses include electrical-power loss.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/amazon-hercules-robot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amazon-titan-launch",
+      "manufacturer": "Amazon",
+      "models": [
+        "Titan"
+      ],
+      "configuration": "Amazon’s November 2023 Titan launch architecture. Component reuse is documented at subsystem level only: no CPU, RAM, storage, radio or battery capacity can be inferred from other robots.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Control hardware lineage",
+          "details": "Uses hardware components from Proteus to support operating-system execution, planning and interfaces. Amazon does not identify which chips are shared.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/amazon-unveils-titan-fulfillment-center-robot"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception subsystem",
+          "details": "Computer vision and obstacle-detection systems are derived from Xanthus; exact camera and sensor models undisclosed.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/amazon-unveils-titan-fulfillment-center-robot"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Charging and lift",
+          "details": "Reuses the Hercules battery/charging-management solution; maximum load 2,500 lb. Battery energy, motor and charger ratings unspecified.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/amazon-unveils-titan-fulfillment-center-robot"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator subsystem",
+          "details": "Xanthus-derived user controls and interfaces to other fulfillment-center systems; port and protocol details not published.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/amazon-unveils-titan-fulfillment-center-robot"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Warehouse operation",
+          "details": "Mobile transport of large-item storage loads under Amazon’s fulfillment workflows. Operating-system name and version undisclosed.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/amazon-unveils-titan-fulfillment-center-robot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exotec-skypod-2025",
+      "manufacturer": "Exotec",
+      "models": [
+        "Skypod"
+      ],
+      "configuration": "Next-generation Skypod introduced February 2025; manufacturer specifications and integrator Klinkhammer’s 2025 brochure. CPU, memory, storage, radio hardware and battery capacity undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Obstacle detection",
+          "details": "Laser scanner for obstacle detection; scanner manufacturer and model not specified.",
+          "sources": [
+            "https://www.klinkhammer.com/fileadmin/user_upload/Pdfs/2025-150_KLH_Skypod-Broschuere-E-web.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Drive and charging",
+          "details": "Four-wheel drive, maximum 4 m/s and rack climbing to 14 m. Lithium battery with booster opportunity charging; integrator specifies about five charging minutes per operating hour.",
+          "sources": [
+            "https://www.exotec.com/system/automated-warehouse-robots/",
+            "https://www.klinkhammer.com/fileadmin/user_upload/Pdfs/2025-150_KLH_Skypod-Broschuere-E-web.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Container handling",
+          "details": "30 kg payload; standard Exotec bins/trays or customer containers. Robot interfaces with racks, picking workstations and automatic Exchangers.",
+          "sources": [
+            "https://www.exotec.com/system/automated-warehouse-robots/",
+            "https://www.klinkhammer.com/fileadmin/user_upload/Pdfs/2025-150_KLH_Skypod-Broschuere-E-web.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Warehouse coordination",
+          "details": "Central route coordination, order buffering, sequencing and pick-and-pack integration. Redesigned robot-to-robot picking workstations are part of the 2025 system.",
+          "sources": [
+            "https://www.klinkhammer.com/fileadmin/user_upload/Pdfs/2025-150_KLH_Skypod-Broschuere-E-web.pdf",
+            "https://www.exotec.com/news/exotec-launches-next-generation-of-skypod-system-an-all-in-one-robot-based-as-rs-that-addresses-the-majority-of-processes-within-a-warehouse/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anduril-dive-ld-2022",
+      "manufacturer": "Anduril Industries",
+      "models": [
+        "Anduril Dive-LD",
+        "Dive-LD"
+      ],
+      "configuration": "Anduril-authored 2022 Australian product sheet, publicly mirrored by Second Line of Defense. Not Dive-XL/Ghost Shark. Processor, memory, battery chemistry, navigation sensor models and wireless/acoustic modem are not specified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Energy and endurance",
+          "details": "93 kWh stated energy capacity; four days at 4 knots with SAS survey payload, versus ten days at 2.5 knots without payload. Published 2022 mass 2,700 kg; 5.8 m long and 1.2 m diameter.",
+          "sources": [
+            "https://sldinfo.com/wp-content/uploads/2022/10/2022-slick-DIVE-LD-AUS.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload and wired interfaces",
+          "details": "Ethernet, RS-232, RS-485 and RS-422. More than one cubic metre payload volume and open software/mechanical/electrical interfaces; wired ports do not establish an RF signature.",
+          "sources": [
+            "https://sldinfo.com/wp-content/uploads/2022/10/2022-slick-DIVE-LD-AUS.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Configurable survey payloads",
+          "details": "Options include side-scan/synthetic-aperture sonar, sub-bottom profiler, multibeam echo sounder, magnetometer and cameras. Up to five payloads can be integrated; none is asserted as universal equipment.",
+          "sources": [
+            "https://sldinfo.com/wp-content/uploads/2022/10/2022-slick-DIVE-LD-AUS.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Vehicle autonomy",
+          "details": "Planned autonomous missions can execute without continuous communication or human intervention, returning to a pier or vessel. Current product page retains modular open-interface design.",
+          "sources": [
+            "https://sldinfo.com/wp-content/uploads/2022/10/2022-slick-DIVE-LD-AUS.pdf",
+            "https://www.anduril.com/dive-ld"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anduril-ghost-2022",
+      "manufacturer": "Anduril Industries",
+      "models": [
+        "Anduril Ghost",
+        "Ghost"
+      ],
+      "configuration": "Anduril-authored 2022 Ghost sheet, publicly mirrored by Second Line of Defense; not Ghost-X. Onboard processor, RAM, storage and battery capacity are not named. Toughbook is a separate ground station.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Imaging payload",
+          "details": "Trillium HD45 gimbal: 720p global-shutter EO sensor and 640 × 512 long-wave infrared sensor, with optical zoom. Payload is configuration-specific.",
+          "sources": [
+            "https://sldinfo.com/wp-content/uploads/2022/10/2022-slick-Ghost-AUS.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Documented radio options",
+          "details": "Silvus StreamCaster or Persistent Systems MPU5 Wave Relay; S-band or C-band configurations. These shared radios/bands do not uniquely identify Ghost.",
+          "sources": [
+            "https://sldinfo.com/wp-content/uploads/2022/10/2022-slick-Ghost-AUS.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and airframe",
+          "details": "Battery-powered VTOL platform; 2022 sheet advertises 60-minute duration, 37 lb base weight and 42 lb maximum takeoff weight. Battery chemistry and motor models unspecified.",
+          "sources": [
+            "https://sldinfo.com/wp-content/uploads/2022/10/2022-slick-Ghost-AUS.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground control and modular bays",
+          "details": "External Panasonic Toughbook 55 and radio; six field-connectable IP67 payload options and five-pound additional payload capacity beyond the base gimbal/radio.",
+          "sources": [
+            "https://sldinfo.com/wp-content/uploads/2022/10/2022-slick-Ghost-AUS.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Lattice integration",
+          "details": "Lattice OS supports mission planning, multi-aircraft control, computer vision and sensor fusion; underlying onboard OS and firmware versions undisclosed.",
+          "sources": [
+            "https://sldinfo.com/wp-content/uploads/2022/10/2022-slick-Ghost-AUS.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anduril-ghost-x-2025",
+      "manufacturer": "Anduril Industries",
+      "models": [
+        "Anduril Ghost-X",
+        "Ghost-X",
+        "Ghost X"
+      ],
+      "configuration": "DHS SAVER February 2025 survey, section 3.2, plus current manufacturer page. Survey specifies 20 lb payload while current page specifies 25 lb: revision/configuration difference unresolved. CPU, RAM, storage and exact radio SKU not established.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Listed imaging choices",
+          "details": "NextVision Raptor and Trillium HD45 camera payload options; not proof both are fitted to every aircraft.",
+          "sources": [
+            "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Ground-control radio choices",
+          "details": "DHS identifies Silvus as default and Persistent Systems as a customer-selected alternative. Specific frequency/channel and chipset are not established by this survey.",
+          "sources": [
+            "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Single/dual battery operation",
+          "details": "Survey lists 44 lb single-battery or 54.9 lb dual-battery weight, and up to 80 cruise minutes with two batteries. Each battery approximately 10.4 lb and 214 Wh/kg; manufacturer retains dual-battery architecture.",
+          "sources": [
+            "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf",
+            "https://www.anduril.com/ghost"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "External control and payload rail",
+          "details": "Toughbook 55 ground station is separate from aircraft compute. Manufacturer describes a standard rail and swappable payload modules.",
+          "sources": [
+            "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf",
+            "https://www.anduril.com/ghost"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control architecture",
+          "details": "LatticeOS in the survey; software-defined platform supports multiple payloads and optional vision-based navigation. Software options are not assumed installed everywhere.",
+          "sources": [
+            "https://www.dhs.gov/sites/default/files/2025-02/25_0210_st_nustl_saver_blue_uas_market_survey.pdf",
+            "https://www.anduril.com/ghost"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amazon-mk30",
+      "manufacturer": "Amazon",
+      "models": [
+        "Prime Air MK30"
+      ],
+      "configuration": "MK30 manufacturer architecture, distinct from MK27-2. CPU, memory, storage and radio module are not publicly identified in the reviewed sources. Multiple catalog naming variants share this same sourced configuration.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Redundant flight-control computers",
+          "details": "Primary flight-control algorithm is monitored by a separate computer; anomalies can transfer control to a backup controller. Amazon does not name the processor chips.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Detect-and-avoid perception",
+          "details": "Onboard cameras and other sensors identify obstacles during flight and delivery. Sensor counts and part numbers are not published in these sources.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages",
+            "https://www.primeair.amazon/technology"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric delivery aircraft",
+          "details": "Fully electric propulsion; published delivery capability is five-pound packages. Battery capacity, chemistry and motor/ESC models unspecified.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages",
+            "https://www.primeair.amazon/technology"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Planning and onboard control",
+          "details": "Ground flight-planning systems set routes; onboard machine learning supports obstacle avoidance and return-to-home behavior, with ground flight-monitor oversight.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages",
+            "https://www.primeair.amazon/technology"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amazon-primeair-mk30",
+      "manufacturer": "Amazon Prime Air",
+      "models": [
+        "MK30",
+        "Amazon Prime Air MK30"
+      ],
+      "configuration": "MK30 manufacturer architecture, distinct from MK27-2. CPU, memory, storage and radio module are not publicly identified in the reviewed sources. Multiple catalog naming variants share this same sourced configuration.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Redundant flight-control computers",
+          "details": "Primary flight-control algorithm is monitored by a separate computer; anomalies can transfer control to a backup controller. Amazon does not name the processor chips.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Detect-and-avoid perception",
+          "details": "Onboard cameras and other sensors identify obstacles during flight and delivery. Sensor counts and part numbers are not published in these sources.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages",
+            "https://www.primeair.amazon/technology"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric delivery aircraft",
+          "details": "Fully electric propulsion; published delivery capability is five-pound packages. Battery capacity, chemistry and motor/ESC models unspecified.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages",
+            "https://www.primeair.amazon/technology"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Planning and onboard control",
+          "details": "Ground flight-planning systems set routes; onboard machine learning supports obstacle avoidance and return-to-home behavior, with ground flight-monitor oversight.",
+          "sources": [
+            "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages",
+            "https://www.primeair.amazon/technology"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -9,6 +9,31 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('supplier disclosures and platform revisions remain model-specific',()=>{
+ const proteus=system('Amazon','Proteus'),titan=system('Amazon','Titan');
+ assert.match(text(proteus.sections.compute),/TDA4VM/);
+ assert.match(text(proteus.sections.compute),/RM46L852/);
+ assert.doesNotMatch(titan.sections.compute.facts.map(f=>f.details).join(' '),/TDA4VM|DRA821|RM46L852/);
+ assert.equal(profileIds(system('Amazon','Amazon Robotics fleet')).length,0);
+ assert.equal(profileIds(system('Amazon','Proteus next generation')).length,0);
+ const f02=system('Figure AI','Figure 02');
+ assert.match(text(f02.sections.compute),/Two NVIDIA RTX/);
+ assert.match(text(f02.sections.power),/2.25 kWh/);
+ assert.doesNotMatch(f02.sections.power.facts.map(f=>f.details).join(' '),/5.hour|five.hour|10.hour|20.hour/);
+ assert.match(text(system('NEURA Robotics','MiPA').sections.interfaces),/excluding end effectors/);
+ assert.equal(profileIds(system('NEURA Robotics','MiPA Gen 3')).length,0);
+ const ghost=system('Anduril Industries','Anduril Ghost'),x=system('Anduril Industries','Anduril Ghost-X');
+ assert.deepEqual(profileIds(ghost),['anduril-ghost-2022']);
+ assert.deepEqual(profileIds(x),['anduril-ghost-x-2025']);
+ assert.equal(x.sections.compute.status,'not-established');
+ assert.match(text(x.configurations),/20 lb.*25 lb/);
+ assert.match(text(system('Anduril Industries','Anduril Dive-LD').sections.interfaces),/RS-422/);
+ assert.equal(profileIds(system('Anduril Industries','Anduril Dive-XL')).length,0);
+ assert.equal(profileIds(system('Amazon Prime Air','MK27-2')).length,0);
+ assert.match(text(system('Amazon Prime Air','MK30').sections.compute),/separate computer/);
+ assert.equal(system('Amazon Prime Air','MK30').sections.radios.status,'not-established');
+});
+
 test('humanoid family records retain variant and demonstration boundaries',()=>{
  const d9=system('Pudu Robotics','PUDU D9');
  assert.match(text(d9.sections.compute),/275 TOPS/);
