@@ -1282,3 +1282,47 @@ test('batch 42 isolates autonomous-vehicle compute platforms and robot revisions
  assert.equal(profileIds(system('WeRide','Robobus')).length,2);
  assert.equal(system('WeRide','Robosweeper S6').sections.compute.status,'not-established');
 });
+
+test('batch 43 keeps XAG controller, battery and payload revisions separate',()=>{
+ const p100=system('XAG','P100'),pro=system('XAG','P100 Pro'),p150=system('XAG','P150'),max=system('XAG','P150 Max'),p60=system('XAG','P60');
+ assert.match(text(p100.sections.compute),/SuperX 4 Pro/);
+ assert.match(text(p100.sections.power),/two packs/);
+ assert.equal(pro.sections.compute.status,'not-established');
+ assert.match(text(pro.sections.sensors),/RD24912.*TR24S100/);
+ assert.match(text(p150.sections.compute),/SuperX 5 Pro/);
+ assert.match(text(max.sections.compute),/SuperX 5 Ultra/);
+ assert.match(text(max.sections.interfaces),/Single-battery.*50 L.*40 kg/);
+ assert.match(text(max.sections.power),/52.5 V/);
+ assert.match(text(p60.sections.power),/48.75 V/);
+ assert.match(text(p60.sections.interfaces),/25 kg payload.*not 30 kg/);
+ assert.equal(max.sections.memory.status,'not-established');
+ assert.equal(profileIds(system('XAG','Unknown model')).length,0);
+ assert.equal(profileIds(system('XAG','XAG agricultural drones (P/V-series)')).length,0);
+});
+
+test('batch 43 separates robot generations and optional compute from base hardware',()=>{
+ const lite=system('X-Humanoid','Tiangong Lite 1.0'),tg3=system('X-Humanoid','Tiangong 3.0');
+ assert.match(text(lite.sections.compute),/10-core.*optional expansion/);
+ assert.match(text(lite.sections.memory),/16 GB.*256 GB/);
+ assert.match(text(lite.sections.software),/ROS 1/);
+ assert.equal(tg3.sections.memory.status,'not-established');
+ assert.doesNotMatch(text(tg3.sections.compute.facts.map(f=>f.details)),/Intel|Orin|Thor/);
+ assert.match(text(tg3.sections.power),/15 Ah plus 3 Ah/);
+ assert.equal(profileIds(system('X-Humanoid','Tiangong')).length,2);
+ const iron=system('XPeng Robotics','XPeng IRON');
+ assert.match(text(iron.sections.compute),/Three proprietary Turing/);
+ assert.match(text(iron.sections.interfaces),/76.*21/);
+ assert.equal(iron.sections.power.status,'not-established');
+ const al=system('WIRobotics','ALLEX');
+ assert.match(text(al.configurations),/without a lower body/);
+ assert.match(text(al.sections.sensors),/without dedicated force sensors/);
+ const y3=system('Yandex','Yandex Rover R3 (December 2021)'),y4=system('Yandex','Yandex Rover R4 (October 2025)');
+ assert.match(text(y3.sections.sensors),/64-beam.*nine ultrasonic/);
+ assert.doesNotMatch(text(y4.sections.sensors.facts.map(f=>f.details)),/64|nine/);
+ assert.equal(profileIds(system('Yandex','Yandex Rover')).length,2);
+ const generic=system('XOcean','XOcean USV'),named=system('XOcean','XO-450 (2024 IMO engineering configuration)');
+ assert.equal(generic.sections.compute.status,'not-established');
+ assert.match(text(named.sections.compute),/PLC, industrial PC/);
+ assert.match(text(named.sections.radios),/Class B AIS.*No unique/);
+ assert.equal(profileIds(system('Westwell','Q-Truck')).length,2);
+});

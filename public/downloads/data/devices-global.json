@@ -140856,8 +140856,19 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "westwell-qtruck-current",
+            "configuration": "Current Westwell cabless container-transport platform. CPU/RAM, wireless modem and battery energy capacity are unpublished here. Sensor model history is separately identified.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "westwell-qtruck-hesai2024",
+            "configuration": "Hesai’s July 29, 2024 supplier release; model-specific sensor evidence, not a universal bill of materials for every Q-Truck revision.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -140876,23 +140887,87 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception and safety",
+                "details": "LiDAR with stated 200 m detection and stereo cameras with stated 80 m detection; contact collision beams and four emergency-stop buttons.",
+                "sources": [
+                  "https://en.westwell-lab.com/products/qomolo/Q-Truck"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "westwell-qtruck-current",
+                "configuration": "Current Westwell cabless container-transport platform. CPU/RAM, wireless modem and battery energy capacity are unpublished here. Sensor model history is separately identified.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Hesai XT32 LiDAR",
+                "details": "Supplier explicitly identifies XT32 mid-range LiDAR on Q-Trucks. Vehicle quantities and complete camera/radar inventory are not specified.",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/hesai-and-westwell-partner-to-accelerate-global-expansion-in-autonomous-driving-for-logistics-302208431.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "westwell-qtruck-hesai2024",
+                "configuration": "Hesai’s July 29, 2024 supplier release; model-specific sensor evidence, not a universal bill of materials for every Q-Truck revision.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Redundant power",
+                "details": "Battery-electric vehicle with battery swapping; dual power supplies and low-voltage battery health monitoring.",
+                "sources": [
+                  "https://en.westwell-lab.com/products/qomolo/Q-Truck"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "westwell-qtruck-current",
+                "configuration": "Current Westwell cabless container-transport platform. CPU/RAM, wireless modem and battery energy capacity are unpublished here. Sensor model history is separately identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle safety",
+                "details": "Dual-source electrohydraulic steering pumps and complementary electronic braking/parking-brake redundancy.",
+                "sources": [
+                  "https://en.westwell-lab.com/products/qomolo/Q-Truck"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "westwell-qtruck-current",
+                "configuration": "Current Westwell cabless container-transport platform. CPU/RAM, wireless modem and battery energy capacity are unpublished here. Sensor model history is separately identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "WellDrive",
+                "details": "Onboard perception, localization, planning and vehicle control.",
+                "sources": [
+                  "https://en.westwell-lab.com/products/qomolo/Q-Truck"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "westwell-qtruck-current",
+                "configuration": "Current Westwell cabless container-transport platform. CPU/RAM, wireless modem and battery energy capacity are unpublished here. Sensor model history is separately identified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -140918,11 +140993,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "radios"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -142054,8 +142125,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "wirobotics-allex-upperbody",
+            "configuration": "Current manufacturer specification describes an upper-body robot without a lower body. CPU, RAM, power source and radio protocol are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -142074,8 +142151,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Force interaction",
+                "details": "Manufacturer describes detecting roughly 100 gf forces without dedicated force sensors. No particular tactile-sensor chip is established.",
+                "sources": [
+                  "https://corp.wirobotics.com/en/product/allex"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wirobotics-allex-upperbody",
+                "configuration": "Current manufacturer specification describes an upper-body robot without a lower body. CPU, RAM, power source and radio protocol are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -142084,8 +142174,21 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Hand and actuation",
+                "details": "Hand/arm specification lists 15 DoF including fingers and wrist; this is not a total-body joint count. Low-friction actuators and a gravity-compensation waist; hand about 700 g and below-shoulder assembly about 5 kg.",
+                "sources": [
+                  "https://corp.wirobotics.com/en/product/allex"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wirobotics-allex-upperbody",
+                "configuration": "Current manufacturer specification describes an upper-body robot without a lower body. CPU, RAM, power source and radio protocol are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -142099,17 +142202,28 @@
           },
           "other": {
             "title": "Other published specifications",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "other",
+                "component": "Manipulation specification",
+                "details": "Fingertip repeatability ≤0.5 mm, maximum fingertip force 40 N, one-hand handling above 3 kg and hook grip above 30 kg.",
+                "sources": [
+                  "https://corp.wirobotics.com/en/product/allex"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "wirobotics-allex-upperbody",
+                "configuration": "Current manufacturer specification describes an upper-body robot without a lower body. CPU, RAM, power source and radio protocol are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           }
         },
         "missing_sections": [
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -142366,43 +142480,223 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "tiangong-lite10-manual",
+            "configuration": "Manufacturer Lite 1.0 manual, printed pages 11–13. Base hardware and optional expansion modules are distinguished. Exact Intel CPU SKU is not stated.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "tiangong30-current",
+            "configuration": "Current manufacturer parameter graphic; distinct from Lite 1.0. Processor SKU and RAM are not identified in this graphic; no chip model is inferred from TOPS.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Intel x86 controller",
+                "details": "10-core / 12-thread Intel x86 CPU, up to 4.7 GHz. Two AGX Orin 64 modules are optional expansion hardware, not part of every base robot.",
+                "sources": [
+                  "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong-lite10-manual",
+                "configuration": "Manufacturer Lite 1.0 manual, printed pages 11–13. Base hardware and optional expansion modules are distinguished. Exact Intel CPU SKU is not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Main control and AI modules",
+                "details": "4.8 GHz main controller and a stated 2,070 TOPS compute module.",
+                "sources": [
+                  "https://www.x-humanoid.com/detail/jstg.html",
+                  "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong30-current",
+                "configuration": "Current manufacturer parameter graphic; distinct from Lite 1.0. Processor SKU and RAM are not identified in this graphic; no chip model is inferred from TOPS.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Base controller storage",
+                "details": "16 GB RAM and 256 GB SSD.",
+                "sources": [
+                  "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong-lite10-manual",
+                "configuration": "Manufacturer Lite 1.0 manual, printed pages 11–13. Base hardware and optional expansion modules are distinguished. Exact Intel CPU SKU is not stated.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless interfaces",
+                "details": "Wi-Fi 6 and Bluetooth; chipsets and antenna configurations undisclosed.",
+                "sources": [
+                  "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong-lite10-manual",
+                "configuration": "Manufacturer Lite 1.0 manual, printed pages 11–13. Base hardware and optional expansion modules are distinguished. Exact Intel CPU SKU is not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "External communication",
+                "details": "Wi-Fi 6E, Bluetooth and 5G are listed; modem models unspecified.",
+                "sources": [
+                  "https://www.x-humanoid.com/detail/jstg.html",
+                  "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong30-current",
+                "configuration": "Current manufacturer parameter graphic; distinct from Lite 1.0. Processor SKU and RAM are not identified in this graphic; no chip model is inferred from TOPS.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Base sensors",
+                "details": "Two RGB-D cameras, in head and torso, plus a high-precision IMU. Extra cameras, wrist force sensors and microphone array are optional.",
+                "sources": [
+                  "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong-lite10-manual",
+                "configuration": "Manufacturer Lite 1.0 manual, printed pages 11–13. Base hardware and optional expansion modules are distinguished. Exact Intel CPU SKU is not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "Depth cameras, LiDAR and high-precision IMU. Outdoor navigation backpack and OCC surround perception are future expansions in this specification.",
+                "sources": [
+                  "https://www.x-humanoid.com/detail/jstg.html",
+                  "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong30-current",
+                "configuration": "Current manufacturer parameter graphic; distinct from Lite 1.0. Processor SKU and RAM are not identified in this graphic; no chip model is inferred from TOPS.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery",
+                "details": "48 V, 15 Ah ternary-lithium pack; stated two-hour walking or four-hour standing endurance.",
+                "sources": [
+                  "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong-lite10-manual",
+                "configuration": "Manufacturer Lite 1.0 manual, printed pages 11–13. Base hardware and optional expansion modules are distinguished. Exact Intel CPU SKU is not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Hot-swappable batteries",
+                "details": "15 Ah plus 3 Ah battery arrangement; voltage and energy capacity undisclosed.",
+                "sources": [
+                  "https://www.x-humanoid.com/detail/jstg.html",
+                  "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong30-current",
+                "configuration": "Current manufacturer parameter graphic; distinct from Lite 1.0. Processor SKU and RAM are not identified in this graphic; no chip model is inferred from TOPS.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Body and buses",
+                "details": "20 integrated joints: four per arm and six per leg. Ethernet and internal CAN/EtherCAT at 1 kHz.",
+                "sources": [
+                  "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong-lite10-manual",
+                "configuration": "Manufacturer Lite 1.0 manual, printed pages 11–13. Base hardware and optional expansion modules are distinguished. Exact Intel CPU SKU is not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Joints and internal buses",
+                "details": "31 body DoF, configurable dexterous hands, maximum joint torque 400 Nm; CAN FD and EtherCAT. Height 170 cm and mass 64.5 kg.",
+                "sources": [
+                  "https://www.x-humanoid.com/detail/jstg.html",
+                  "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong30-current",
+                "configuration": "Current manufacturer parameter graphic; distinct from Lite 1.0. Processor SKU and RAM are not identified in this graphic; no chip model is inferred from TOPS.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operating environment",
+                "details": "Ubuntu 22.04.4 LTS and ROS 1.",
+                "sources": [
+                  "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong-lite10-manual",
+                "configuration": "Manufacturer Lite 1.0 manual, printed pages 11–13. Base hardware and optional expansion modules are distinguished. Exact Intel CPU SKU is not stated.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Communication layer",
+                "details": "Proprietary high-speed middleware; voice interaction and multimodal lip-motion detection are listed.",
+                "sources": [
+                  "https://www.x-humanoid.com/detail/jstg.html",
+                  "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "tiangong30-current",
+                "configuration": "Current manufacturer parameter graphic; distinct from Lite 1.0. Processor SKU and RAM are not identified in this graphic; no chip model is inferred from TOPS.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -142416,13 +142710,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -142459,13 +142746,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "xag-p100-platform",
+            "configuration": "Original P100 specifications, distinct from P100 Pro. Controller silicon, RAM and radio module SKU unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "SuperX 4 Pro",
+                "details": "SuperX 4 Pro intelligent flight-control system; underlying CPU unspecified.",
+                "sources": [
+                  "https://www.xa.com/en/p100"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100-platform",
+                "configuration": "Original P100 specifications, distinct from P100 Pro. Controller silicon, RAM and radio module SKU unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -142474,28 +142780,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "ACS2G control link",
+                "details": "ACS2G controller operates at 2.4000–2.4835 GHz under the listed SRRC configuration.",
+                "sources": [
+                  "https://www.xa.com/en/p100/p100specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100-platform",
+                "configuration": "Original P100 specifications, distinct from P100 Pro. Controller silicon, RAM and radio module SKU unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and camera",
+                "details": "RTK GNSS positioning; 1/2.9-inch CMOS PSL camera with 3.2 mm lens, 1080p/720p at 30 fps and H.264 output.",
+                "sources": [
+                  "https://www.xa.com/en/p100/p100specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100-platform",
+                "configuration": "Original P100 specifications, distinct from P100 Pro. Controller silicon, RAM and radio module SKU unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Motors and batteries",
+                "details": "A45 motors rated 4,000 W each; VC13200 ESCs and 47 × 18-inch props. B13960S 13S LiPo packs: 48.1 V, 20 Ah, 962 Wh each. Manufacturer endurance tests specify two packs.",
+                "sources": [
+                  "https://www.xa.com/en/p100/p100specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100-platform",
+                "configuration": "Original P100 specifications, distinct from P100 Pro. Controller silicon, RAM and radio module SKU unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload modules",
+                "details": "RevoSpray 2: 40 L tank and two peristaltic pumps, 12 L/min total. RevoCast 2: 60 L container and 40 kg payload.",
+                "sources": [
+                  "https://www.xa.com/en/p100/p100specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100-platform",
+                "configuration": "Original P100 specifications, distinct from P100 Pro. Controller silicon, RAM and radio module SKU unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "XAG One",
+                "details": "Autonomous task planning and field-data sharing; handheld manual control also supported.",
+                "sources": [
+                  "https://www.xa.com/en/p100"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100-platform",
+                "configuration": "Original P100 specifications, distinct from P100 Pro. Controller silicon, RAM and radio module SKU unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -142527,13 +142898,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -142569,8 +142934,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "xag-p100pro-platform",
+            "configuration": "P100 Pro manufacturer specification. No controller CPU/RAM identification; do not inherit P100 or P150 electronics.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -142584,28 +142955,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control equipment",
+                "details": "ARC3 Pro supports 2.4/5.8 GHz; ACS2G lists 2.4000–2.4835 GHz. Regional configurations differ; radar is not a communications identifier.",
+                "sources": [
+                  "https://www.xa.com/en/p100pro/p100prospecs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100pro-platform",
+                "configuration": "P100 Pro manufacturer specification. No controller CPU/RAM identification; do not inherit P100 or P150 electronics.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Radar and imaging",
+                "details": "RD24912 MIMO imaging radar and TR24S100 terrain radar both operate at 24 GHz. PSL camera: 1/2.9-inch CMOS, 1080p30 H.264. Optional RealTerra 2 mapping module: 12 MP mechanical-shutter camera.",
+                "sources": [
+                  "https://www.xa.com/en/p100pro/p100prospecs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100pro-platform",
+                "configuration": "P100 Pro manufacturer specification. No controller CPU/RAM identification; do not inherit P100 or P150 electronics.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Powertrain",
+                "details": "A50 motors rated 4,100 W each, VC13200 ESCs and 55 × 15-inch props. B13960S 13S LiPo battery: 48.1 V, 20 Ah, 962 Wh per pack.",
+                "sources": [
+                  "https://www.xa.com/en/p100pro/p100prospecs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100pro-platform",
+                "configuration": "P100 Pro manufacturer specification. No controller CPU/RAM identification; do not inherit P100 or P150 electronics.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Application modules",
+                "details": "50 L RevoSpray 3 with dual pumps, 22 L/min maximum; 80 L RevoCast 3 container, 50 kg payload and 150 kg/min maximum.",
+                "sources": [
+                  "https://www.xa.com/en/p100pro/p100prospecs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100pro-platform",
+                "configuration": "P100 Pro manufacturer specification. No controller CPU/RAM identification; do not inherit P100 or P150 electronics.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Task navigation",
+                "details": "Autonomous application routes, RTK-based inertial navigation and virtual RTK support.",
+                "sources": [
+                  "https://www.xa.com/en/p100pro"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p100pro-platform",
+                "configuration": "P100 Pro manufacturer specification. No controller CPU/RAM identification; do not inherit P100 or P150 electronics.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -142638,12 +143074,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -142679,13 +143110,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "xag-p150-platform",
+            "configuration": "P150 / RevoSpray 4 specification; separate from P150 Max. CPU silicon, RAM and modem part numbers undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "SuperX 5 Pro",
+                "details": "SuperX 5 Pro intelligent control system.",
+                "sources": [
+                  "https://www.xa.com/en/p150"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150-platform",
+                "configuration": "P150 / RevoSpray 4 specification; separate from P150 Max. CPU silicon, RAM and modem part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -142694,28 +143144,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control links",
+                "details": "ACS4 M3ACS4A: 2.4000–2.4835 GHz; SRC4 and DL1 also support regional 5.8 GHz operation. Bluetooth Quick Link belongs to the control-stick workflow.",
+                "sources": [
+                  "https://www.xa.com/en/p150",
+                  "https://www.xa.com/en/p150/p150specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150-platform",
+                "configuration": "P150 / RevoSpray 4 specification; separate from P150 Max. CPU silicon, RAM and modem part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Radar and FPV",
+                "details": "RD2488 imaging radar and TR24S100_24 terrain radar: 24 GHz. Forward/downward FPV: 1/2.8-inch 2 MP CMOS, 1080p30 H.264/H.265. Optional RealTerra 3: 12 MP mechanical-shutter mapping camera.",
+                "sources": [
+                  "https://www.xa.com/en/p150/p150specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150-platform",
+                "configuration": "P150 / RevoSpray 4 specification; separate from P150 Max. CPU silicon, RAM and modem part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric propulsion",
+                "details": "A55 motors rated 4,700 W each, XESC-F360 ESCs and 1,530 mm props. M1PPA13970BH LiPo battery: 48.75 V, 20 Ah per pack; maximum charge current 100 A.",
+                "sources": [
+                  "https://www.xa.com/en/p150/p150specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150-platform",
+                "configuration": "P150 / RevoSpray 4 specification; separate from P150 Max. CPU silicon, RAM and modem part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload systems",
+                "details": "RevoSpray 4: 60 L rated / 70 L maximum tank, 30 L/min dual-pump flow. RevoCast 4: 115 L container, 70 kg payload.",
+                "sources": [
+                  "https://www.xa.com/en/p150/p150specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150-platform",
+                "configuration": "P150 / RevoSpray 4 specification; separate from P150 Max. CPU silicon, RAM and modem part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "XAG One 6.0",
+                "details": "Field planning, variable-rate application, task coordination and map sharing.",
+                "sources": [
+                  "https://www.xa.com/en/p150"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150-platform",
+                "configuration": "P150 / RevoSpray 4 specification; separate from P150 Max. CPU silicon, RAM and modem part numbers undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -142747,13 +143263,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -142789,13 +143299,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "xag-p150max-platform",
+            "configuration": "P150 Max / RevoSpray 5 manufacturer specification. CPU/RAM unpublished. Single-battery operation has lower payload limits than the full configuration.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "SuperX 5 Ultra",
+                "details": "SuperX 5 Ultra control system; processor part numbers unspecified.",
+                "sources": [
+                  "https://www.xa.com/en/p150max"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150max-platform",
+                "configuration": "P150 Max / RevoSpray 5 manufacturer specification. CPU/RAM unpublished. Single-battery operation has lower payload limits than the full configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -142804,28 +143333,96 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "XLink and controllers",
+                "details": "SRC5 XLink HD video/control; ACS4/SRC5 specifications list 2.400–2.4835 and 5.725–5.850 GHz, subject to regional configuration.",
+                "sources": [
+                  "https://www.xa.com/en/p150max",
+                  "https://xa.com/en/p150max/p150maxspecs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150max-platform",
+                "configuration": "P150 Max / RevoSpray 5 manufacturer specification. CPU/RAM unpublished. Single-battery operation has lower payload limits than the full configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Radar, FPV and positioning",
+                "details": "RD2488_25 24 GHz imaging radar, 1.5–100 m sensing range. FPV: 1/2.7-inch 5 MP CMOS, 1080p30 H.265. GNSS supports PPP-AR positioning.",
+                "sources": [
+                  "https://www.xa.com/en/p150max",
+                  "https://xa.com/en/p150max/p150maxspecs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150max-platform",
+                "configuration": "P150 Max / RevoSpray 5 manufacturer specification. CPU/RAM unpublished. Single-battery operation has lower payload limits than the full configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Motor and battery systems",
+                "details": "Four motors rated 4,850 W each; 1,600 mm props. B141050 / M1PPA141050AH LiPo pack: 52.5 V, 20 Ah, 1,050 Wh per pack.",
+                "sources": [
+                  "https://xa.com/en/p150max/p150maxspecs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150max-platform",
+                "configuration": "P150 Max / RevoSpray 5 manufacturer specification. CPU/RAM unpublished. Single-battery operation has lower payload limits than the full configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Task modules and limits",
+                "details": "80 L RevoSpray 5; 115 L RevoCast 5; 80 kg maximum payload. Single-battery mode limits liquid to 50 L and granular payload to 40 kg. Optional four-nozzle upgrade is separate from the standard dual-nozzle system.",
+                "sources": [
+                  "https://www.xa.com/en/p150max",
+                  "https://xa.com/en/p150max/p150maxspecs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150max-platform",
+                "configuration": "P150 Max / RevoSpray 5 manufacturer specification. CPU/RAM unpublished. Single-battery operation has lower payload limits than the full configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Flight and mapping",
+                "details": "Autonomous flight, onboard terrain mapping and XAG One task management; XRTK7 supplies optional local RTK support.",
+                "sources": [
+                  "https://www.xa.com/en/p150max"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p150max-platform",
+                "configuration": "P150 Max / RevoSpray 5 manufacturer specification. CPU/RAM unpublished. Single-battery operation has lower payload limits than the full configuration.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -142857,13 +143454,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -142899,13 +143490,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "xag-p60-platform",
+            "configuration": "P60 / RevoSpray 4 manufacturer specification. Quick-release configurations have different masses; CPU/RAM and wireless module SKUs unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "SuperX 5 Pro",
+                "details": "SuperX 5 Pro flight-control system.",
+                "sources": [
+                  "https://www.xa.com/en/p60"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p60-platform",
+                "configuration": "P60 / RevoSpray 4 manufacturer specification. Quick-release configurations have different masses; CPU/RAM and wireless module SKUs unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -142914,28 +143524,95 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control equipment",
+                "details": "ACS4: 2.400–2.4835 GHz. SRC4: 2.400–2.4835 and 5.725–5.850 GHz; DL1 is an optional data-link unit. Control-stick pairing uses Bluetooth.",
+                "sources": [
+                  "https://www.xa.com/en/p60",
+                  "https://www.xa.com/en/p60/p60specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p60-platform",
+                "configuration": "P60 / RevoSpray 4 manufacturer specification. Quick-release configurations have different masses; CPU/RAM and wireless module SKUs unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Sensing stack",
+                "details": "RD2488 imaging radar and TR24S100_1 terrain radar operate at 24 GHz. Forward/downward 2 MP CMOS FPV supports 1080p30 H.264/H.265. Optional RealTerra 3 uses a 12 MP mechanical shutter.",
+                "sources": [
+                  "https://www.xa.com/en/p60/p60specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p60-platform",
+                "configuration": "P60 / RevoSpray 4 manufacturer specification. Quick-release configurations have different masses; CPU/RAM and wireless module SKUs unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Propulsion and battery",
+                "details": "A30 motors rated 2,200 W each; XESC-F180 ESCs; 1,232 mm props. B13970S / M1PPA13970BH LiPo battery: 48.75 V, 20 Ah per pack.",
+                "sources": [
+                  "https://www.xa.com/en/p60",
+                  "https://www.xa.com/en/p60/p60specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p60-platform",
+                "configuration": "P60 / RevoSpray 4 manufacturer specification. Quick-release configurations have different masses; CPU/RAM and wireless module SKUs unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Payload modules",
+                "details": "RevoSpray 4: 30 L / 30 kg, 30 L/min maximum. RevoCast 4: 45 L container with 25 kg payload. The spreading limit is not 30 kg.",
+                "sources": [
+                  "https://www.xa.com/en/p60/p60specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p60-platform",
+                "configuration": "P60 / RevoSpray 4 manufacturer specification. Quick-release configurations have different masses; CPU/RAM and wireless module SKUs unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomous operations",
+                "details": "XAG One mission control; XRTK6 Pro supports local RTK without a CORS connection.",
+                "sources": [
+                  "https://www.xa.com/en/p60"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xag-p60-platform",
+                "configuration": "P60 / RevoSpray 4 manufacturer specification. Quick-release configurations have different masses; CPU/RAM and wireless module SKUs unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -142967,13 +143644,7 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -143780,8 +144451,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "xocean-survey-fleet",
+            "configuration": "Fleet-level manufacturer technology reference, not a specific hull’s bill of materials. Individual configurations and payloads differ.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -143795,8 +144472,21 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Satellite operations",
+                "details": "Onshore pilots and analysts connect to survey vessels over satellite links.",
+                "sources": [
+                  "https://xocean.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xocean-survey-fleet",
+                "configuration": "Fleet-level manufacturer technology reference, not a specific hull’s bill of materials. Individual configurations and payloads differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
@@ -143805,13 +144495,39 @@
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Hybrid system",
+                "details": "Manufacturer lists hybrid power; model-specific batteries and generators require the individual vessel specification.",
+                "sources": [
+                  "https://xocean.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xocean-survey-fleet",
+                "configuration": "Fleet-level manufacturer technology reference, not a specific hull’s bill of materials. Individual configurations and payloads differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Survey payload options",
+                "details": "Available data systems include multibeam sonar, sub-bottom profiler, side-scan sonar, magnetometer and USBL. This is not a claim that every hull carries every payload.",
+                "sources": [
+                  "https://xocean.com/technology/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xocean-survey-fleet",
+                "configuration": "Fleet-level manufacturer technology reference, not a specific hull’s bill of materials. Individual configurations and payloads differ.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -143832,10 +144548,7 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
           "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -143876,13 +144589,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "xpeng-iron-sept2026",
+            "configuration": "Manufacturer announcement dated September 8, 2026. Earlier IRON prototypes have different joint counts; their battery or sensor details are not carried into this profile. RAM, radios and battery capacity undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Three Turing AI chips",
+                "details": "Three proprietary Turing AI chips, rated up to 2,250 TOPS effective compute in this release.",
+                "sources": [
+                  "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xpeng-iron-sept2026",
+                "configuration": "Manufacturer announcement dated September 8, 2026. Earlier IRON prototypes have different joint counts; their battery or sensor details are not carried into this profile. RAM, radios and battery capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -143906,13 +144638,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Humanoid body",
+                "details": "76 body degrees of freedom and 21 in each hand; enclosed flexible lattice structure.",
+                "sources": [
+                  "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xpeng-iron-sept2026",
+                "configuration": "Manufacturer announcement dated September 8, 2026. Earlier IRON prototypes have different joint counts; their battery or sensor details are not carried into this profile. RAM, radios and battery capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Onboard Physical AI",
+                "details": "Foundation-model inference deployed locally for autonomous tasks; no inference that a cloud service is required for every motion.",
+                "sources": [
+                  "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "xpeng-iron-sept2026",
+                "configuration": "Manufacturer announcement dated September 8, 2026. Earlier IRON prototypes have different joint counts; their battery or sensor details are not carried into this profile. RAM, radios and battery capacity undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -143926,13 +144684,10 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -144168,13 +144923,49 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "yandex-rover-r3-2021",
+            "configuration": "Primary account by Yandex’s delivery-robot hardware developer, December 2021. CPU/RAM, radio SKU and battery energy capacity unspecified for R3.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "yandex-rover-r4-2025",
+            "configuration": "October 23, 2025 manufacturer announcement of fourth-generation robots. No carryover of R3 sensor counts or controller hardware; CPU model, RAM, modem and battery capacity unpublished.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Control architecture",
+                "details": "Carrier board with onboard router; separate platform, motor and body controllers.",
+                "sources": [
+                  "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r3-2021",
+                "configuration": "Primary account by Yandex’s delivery-robot hardware developer, December 2021. CPU/RAM, radio SKU and battery energy capacity unspecified for R3.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "compute",
+                "component": "Revised compute unit",
+                "details": "Manufacturer reports a more powerful computing unit without naming its processor.",
+                "sources": [
+                  "https://yandex.ru/company/news/23-10-2025-02"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r4-2025",
+                "configuration": "October 23, 2025 manufacturer announcement of fourth-generation robots. No carryover of R3 sensor counts or controller hardware; CPU model, RAM, modem and battery capacity unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -144188,23 +144979,123 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "R3 sensor array",
+                "details": "One 64-beam LiDAR, two radars, five cameras, accelerometer, GNSS and nine ultrasonic sensors.",
+                "sources": [
+                  "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r3-2021",
+                "configuration": "Primary account by Yandex’s delivery-robot hardware developer, December 2021. CPU/RAM, radio SKU and battery energy capacity unspecified for R3.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Revised LiDAR",
+                "details": "New LiDAR, with no published model or channel count in this release.",
+                "sources": [
+                  "https://yandex.ru/company/news/23-10-2025-02"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r4-2025",
+                "configuration": "October 23, 2025 manufacturer announcement of fourth-generation robots. No carryover of R3 sensor counts or controller hardware; CPU model, RAM, modem and battery capacity unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Drive and battery",
+                "details": "Six powered wheels; hot-swappable main battery with fixed backup. Stated eight-hour operation.",
+                "sources": [
+                  "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r3-2021",
+                "configuration": "Primary account by Yandex’s delivery-robot hardware developer, December 2021. CPU/RAM, radio SKU and battery energy capacity unspecified for R3.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Replaceable battery",
+                "details": "Quick-change battery and stated travel up to 70 km per charge.",
+                "sources": [
+                  "https://yandex.ru/company/news/23-10-2025-02"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r4-2025",
+                "configuration": "October 23, 2025 manufacturer announcement of fourth-generation robots. No carryover of R3 sensor counts or controller hardware; CPU model, RAM, modem and battery capacity unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cargo and chassis",
+                "details": "60 L, 20 kg cargo capacity; leaf-spring suspension and sealed electronics.",
+                "sources": [
+                  "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r3-2021",
+                "configuration": "Primary account by Yandex’s delivery-robot hardware developer, December 2021. CPU/RAM, radio SKU and battery energy capacity unspecified for R3.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Cargo and suspension",
+                "details": "Revised suspension and a cargo compartment divisible into two sections.",
+                "sources": [
+                  "https://yandex.ru/company/news/23-10-2025-02"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r4-2025",
+                "configuration": "October 23, 2025 manufacturer announcement of fourth-generation robots. No carryover of R3 sensor counts or controller hardware; CPU model, RAM, modem and battery capacity unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy",
+                "details": "Onboard localization, route planning and obstacle recognition.",
+                "sources": [
+                  "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r3-2021",
+                "configuration": "Primary account by Yandex’s delivery-robot hardware developer, December 2021. CPU/RAM, radio SKU and battery energy capacity unspecified for R3.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Delivery operation",
+                "details": "Autonomous delivery platform with new-generation service rollout announced for November 2025.",
+                "sources": [
+                  "https://yandex.ru/company/news/23-10-2025-02"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "yandex-rover-r4-2025",
+                "configuration": "October 23, 2025 manufacturer announcement of fourth-generation robots. No carryover of R3 sensor counts or controller hardware; CPU model, RAM, modem and battery capacity unpublished.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -144218,13 +145109,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -301945,6 +302831,766 @@
             ]
           }
         ]
+      },
+      {
+        "id": "xag-p100-platform",
+        "manufacturer": "XAG",
+        "models": [
+          "P100"
+        ],
+        "configuration": "Original P100 specifications, distinct from P100 Pro. Controller silicon, RAM and radio module SKU unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "SuperX 4 Pro",
+            "details": "SuperX 4 Pro intelligent flight-control system; underlying CPU unspecified.",
+            "sources": [
+              "https://www.xa.com/en/p100"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and camera",
+            "details": "RTK GNSS positioning; 1/2.9-inch CMOS PSL camera with 3.2 mm lens, 1080p/720p at 30 fps and H.264 output.",
+            "sources": [
+              "https://www.xa.com/en/p100/p100specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Motors and batteries",
+            "details": "A45 motors rated 4,000 W each; VC13200 ESCs and 47 × 18-inch props. B13960S 13S LiPo packs: 48.1 V, 20 Ah, 962 Wh each. Manufacturer endurance tests specify two packs.",
+            "sources": [
+              "https://www.xa.com/en/p100/p100specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "ACS2G control link",
+            "details": "ACS2G controller operates at 2.4000–2.4835 GHz under the listed SRRC configuration.",
+            "sources": [
+              "https://www.xa.com/en/p100/p100specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload modules",
+            "details": "RevoSpray 2: 40 L tank and two peristaltic pumps, 12 L/min total. RevoCast 2: 60 L container and 40 kg payload.",
+            "sources": [
+              "https://www.xa.com/en/p100/p100specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "XAG One",
+            "details": "Autonomous task planning and field-data sharing; handheld manual control also supported.",
+            "sources": [
+              "https://www.xa.com/en/p100"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "xag-p100pro-platform",
+        "manufacturer": "XAG",
+        "models": [
+          "P100 Pro"
+        ],
+        "configuration": "P100 Pro manufacturer specification. No controller CPU/RAM identification; do not inherit P100 or P150 electronics.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Radar and imaging",
+            "details": "RD24912 MIMO imaging radar and TR24S100 terrain radar both operate at 24 GHz. PSL camera: 1/2.9-inch CMOS, 1080p30 H.264. Optional RealTerra 2 mapping module: 12 MP mechanical-shutter camera.",
+            "sources": [
+              "https://www.xa.com/en/p100pro/p100prospecs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Powertrain",
+            "details": "A50 motors rated 4,100 W each, VC13200 ESCs and 55 × 15-inch props. B13960S 13S LiPo battery: 48.1 V, 20 Ah, 962 Wh per pack.",
+            "sources": [
+              "https://www.xa.com/en/p100pro/p100prospecs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Control equipment",
+            "details": "ARC3 Pro supports 2.4/5.8 GHz; ACS2G lists 2.4000–2.4835 GHz. Regional configurations differ; radar is not a communications identifier.",
+            "sources": [
+              "https://www.xa.com/en/p100pro/p100prospecs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Application modules",
+            "details": "50 L RevoSpray 3 with dual pumps, 22 L/min maximum; 80 L RevoCast 3 container, 50 kg payload and 150 kg/min maximum.",
+            "sources": [
+              "https://www.xa.com/en/p100pro/p100prospecs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Task navigation",
+            "details": "Autonomous application routes, RTK-based inertial navigation and virtual RTK support.",
+            "sources": [
+              "https://www.xa.com/en/p100pro"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "xag-p150-platform",
+        "manufacturer": "XAG",
+        "models": [
+          "P150"
+        ],
+        "configuration": "P150 / RevoSpray 4 specification; separate from P150 Max. CPU silicon, RAM and modem part numbers undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "SuperX 5 Pro",
+            "details": "SuperX 5 Pro intelligent control system.",
+            "sources": [
+              "https://www.xa.com/en/p150"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Radar and FPV",
+            "details": "RD2488 imaging radar and TR24S100_24 terrain radar: 24 GHz. Forward/downward FPV: 1/2.8-inch 2 MP CMOS, 1080p30 H.264/H.265. Optional RealTerra 3: 12 MP mechanical-shutter mapping camera.",
+            "sources": [
+              "https://www.xa.com/en/p150/p150specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric propulsion",
+            "details": "A55 motors rated 4,700 W each, XESC-F360 ESCs and 1,530 mm props. M1PPA13970BH LiPo battery: 48.75 V, 20 Ah per pack; maximum charge current 100 A.",
+            "sources": [
+              "https://www.xa.com/en/p150/p150specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Control links",
+            "details": "ACS4 M3ACS4A: 2.4000–2.4835 GHz; SRC4 and DL1 also support regional 5.8 GHz operation. Bluetooth Quick Link belongs to the control-stick workflow.",
+            "sources": [
+              "https://www.xa.com/en/p150",
+              "https://www.xa.com/en/p150/p150specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload systems",
+            "details": "RevoSpray 4: 60 L rated / 70 L maximum tank, 30 L/min dual-pump flow. RevoCast 4: 115 L container, 70 kg payload.",
+            "sources": [
+              "https://www.xa.com/en/p150/p150specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "XAG One 6.0",
+            "details": "Field planning, variable-rate application, task coordination and map sharing.",
+            "sources": [
+              "https://www.xa.com/en/p150"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "xag-p150max-platform",
+        "manufacturer": "XAG",
+        "models": [
+          "P150 Max"
+        ],
+        "configuration": "P150 Max / RevoSpray 5 manufacturer specification. CPU/RAM unpublished. Single-battery operation has lower payload limits than the full configuration.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "SuperX 5 Ultra",
+            "details": "SuperX 5 Ultra control system; processor part numbers unspecified.",
+            "sources": [
+              "https://www.xa.com/en/p150max"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Radar, FPV and positioning",
+            "details": "RD2488_25 24 GHz imaging radar, 1.5–100 m sensing range. FPV: 1/2.7-inch 5 MP CMOS, 1080p30 H.265. GNSS supports PPP-AR positioning.",
+            "sources": [
+              "https://www.xa.com/en/p150max",
+              "https://xa.com/en/p150max/p150maxspecs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Motor and battery systems",
+            "details": "Four motors rated 4,850 W each; 1,600 mm props. B141050 / M1PPA141050AH LiPo pack: 52.5 V, 20 Ah, 1,050 Wh per pack.",
+            "sources": [
+              "https://xa.com/en/p150max/p150maxspecs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "XLink and controllers",
+            "details": "SRC5 XLink HD video/control; ACS4/SRC5 specifications list 2.400–2.4835 and 5.725–5.850 GHz, subject to regional configuration.",
+            "sources": [
+              "https://www.xa.com/en/p150max",
+              "https://xa.com/en/p150max/p150maxspecs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Task modules and limits",
+            "details": "80 L RevoSpray 5; 115 L RevoCast 5; 80 kg maximum payload. Single-battery mode limits liquid to 50 L and granular payload to 40 kg. Optional four-nozzle upgrade is separate from the standard dual-nozzle system.",
+            "sources": [
+              "https://www.xa.com/en/p150max",
+              "https://xa.com/en/p150max/p150maxspecs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Flight and mapping",
+            "details": "Autonomous flight, onboard terrain mapping and XAG One task management; XRTK7 supplies optional local RTK support.",
+            "sources": [
+              "https://www.xa.com/en/p150max"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "xag-p60-platform",
+        "manufacturer": "XAG",
+        "models": [
+          "P60"
+        ],
+        "configuration": "P60 / RevoSpray 4 manufacturer specification. Quick-release configurations have different masses; CPU/RAM and wireless module SKUs unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "SuperX 5 Pro",
+            "details": "SuperX 5 Pro flight-control system.",
+            "sources": [
+              "https://www.xa.com/en/p60"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Sensing stack",
+            "details": "RD2488 imaging radar and TR24S100_1 terrain radar operate at 24 GHz. Forward/downward 2 MP CMOS FPV supports 1080p30 H.264/H.265. Optional RealTerra 3 uses a 12 MP mechanical shutter.",
+            "sources": [
+              "https://www.xa.com/en/p60/p60specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Propulsion and battery",
+            "details": "A30 motors rated 2,200 W each; XESC-F180 ESCs; 1,232 mm props. B13970S / M1PPA13970BH LiPo battery: 48.75 V, 20 Ah per pack.",
+            "sources": [
+              "https://www.xa.com/en/p60",
+              "https://www.xa.com/en/p60/p60specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Control equipment",
+            "details": "ACS4: 2.400–2.4835 GHz. SRC4: 2.400–2.4835 and 5.725–5.850 GHz; DL1 is an optional data-link unit. Control-stick pairing uses Bluetooth.",
+            "sources": [
+              "https://www.xa.com/en/p60",
+              "https://www.xa.com/en/p60/p60specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Payload modules",
+            "details": "RevoSpray 4: 30 L / 30 kg, 30 L/min maximum. RevoCast 4: 45 L container with 25 kg payload. The spreading limit is not 30 kg.",
+            "sources": [
+              "https://www.xa.com/en/p60/p60specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomous operations",
+            "details": "XAG One mission control; XRTK6 Pro supports local RTK without a CORS connection.",
+            "sources": [
+              "https://www.xa.com/en/p60"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "xpeng-iron-sept2026",
+        "manufacturer": "XPeng Robotics",
+        "models": [
+          "IRON (September 2026 production-line configuration)",
+          "XPeng IRON"
+        ],
+        "configuration": "Manufacturer announcement dated September 8, 2026. Earlier IRON prototypes have different joint counts; their battery or sensor details are not carried into this profile. RAM, radios and battery capacity undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Three Turing AI chips",
+            "details": "Three proprietary Turing AI chips, rated up to 2,250 TOPS effective compute in this release.",
+            "sources": [
+              "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Humanoid body",
+            "details": "76 body degrees of freedom and 21 in each hand; enclosed flexible lattice structure.",
+            "sources": [
+              "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Onboard Physical AI",
+            "details": "Foundation-model inference deployed locally for autonomous tasks; no inference that a cloud service is required for every motion.",
+            "sources": [
+              "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "wirobotics-allex-upperbody",
+        "manufacturer": "WIRobotics",
+        "models": [
+          "ALLEX"
+        ],
+        "configuration": "Current manufacturer specification describes an upper-body robot without a lower body. CPU, RAM, power source and radio protocol are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Hand and actuation",
+            "details": "Hand/arm specification lists 15 DoF including fingers and wrist; this is not a total-body joint count. Low-friction actuators and a gravity-compensation waist; hand about 700 g and below-shoulder assembly about 5 kg.",
+            "sources": [
+              "https://corp.wirobotics.com/en/product/allex"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Force interaction",
+            "details": "Manufacturer describes detecting roughly 100 gf forces without dedicated force sensors. No particular tactile-sensor chip is established.",
+            "sources": [
+              "https://corp.wirobotics.com/en/product/allex"
+            ]
+          },
+          {
+            "section": "other",
+            "component": "Manipulation specification",
+            "details": "Fingertip repeatability ≤0.5 mm, maximum fingertip force 40 N, one-hand handling above 3 kg and hook grip above 30 kg.",
+            "sources": [
+              "https://corp.wirobotics.com/en/product/allex"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tiangong-lite10-manual",
+        "manufacturer": "X-Humanoid",
+        "models": [
+          "Tiangong Lite 1.0",
+          "Tiangong"
+        ],
+        "configuration": "Manufacturer Lite 1.0 manual, printed pages 11–13. Base hardware and optional expansion modules are distinguished. Exact Intel CPU SKU is not stated.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Intel x86 controller",
+            "details": "10-core / 12-thread Intel x86 CPU, up to 4.7 GHz. Two AGX Orin 64 modules are optional expansion hardware, not part of every base robot.",
+            "sources": [
+              "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Base controller storage",
+            "details": "16 GB RAM and 256 GB SSD.",
+            "sources": [
+              "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Base sensors",
+            "details": "Two RGB-D cameras, in head and torso, plus a high-precision IMU. Extra cameras, wrist force sensors and microphone array are optional.",
+            "sources": [
+              "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless interfaces",
+            "details": "Wi-Fi 6 and Bluetooth; chipsets and antenna configurations undisclosed.",
+            "sources": [
+              "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery",
+            "details": "48 V, 15 Ah ternary-lithium pack; stated two-hour walking or four-hour standing endurance.",
+            "sources": [
+              "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Body and buses",
+            "details": "20 integrated joints: four per arm and six per leg. Ethernet and internal CAN/EtherCAT at 1 kHz.",
+            "sources": [
+              "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operating environment",
+            "details": "Ubuntu 22.04.4 LTS and ROS 1.",
+            "sources": [
+              "https://x-humanoid.com/download/%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tiangong30-current",
+        "manufacturer": "X-Humanoid",
+        "models": [
+          "Tiangong 3.0",
+          "Tiangong"
+        ],
+        "configuration": "Current manufacturer parameter graphic; distinct from Lite 1.0. Processor SKU and RAM are not identified in this graphic; no chip model is inferred from TOPS.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Main control and AI modules",
+            "details": "4.8 GHz main controller and a stated 2,070 TOPS compute module.",
+            "sources": [
+              "https://www.x-humanoid.com/detail/jstg.html",
+              "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Depth cameras, LiDAR and high-precision IMU. Outdoor navigation backpack and OCC surround perception are future expansions in this specification.",
+            "sources": [
+              "https://www.x-humanoid.com/detail/jstg.html",
+              "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "External communication",
+            "details": "Wi-Fi 6E, Bluetooth and 5G are listed; modem models unspecified.",
+            "sources": [
+              "https://www.x-humanoid.com/detail/jstg.html",
+              "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hot-swappable batteries",
+            "details": "15 Ah plus 3 Ah battery arrangement; voltage and energy capacity undisclosed.",
+            "sources": [
+              "https://www.x-humanoid.com/detail/jstg.html",
+              "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Joints and internal buses",
+            "details": "31 body DoF, configurable dexterous hands, maximum joint torque 400 Nm; CAN FD and EtherCAT. Height 170 cm and mass 64.5 kg.",
+            "sources": [
+              "https://www.x-humanoid.com/detail/jstg.html",
+              "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Communication layer",
+            "details": "Proprietary high-speed middleware; voice interaction and multimodal lip-motion detection are listed.",
+            "sources": [
+              "https://www.x-humanoid.com/detail/jstg.html",
+              "https://www.x-humanoid.com/oss/images/bg/bt/1.png"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "westwell-qtruck-current",
+        "manufacturer": "Westwell",
+        "models": [
+          "Q-Truck (current platform)",
+          "Q-Truck"
+        ],
+        "configuration": "Current Westwell cabless container-transport platform. CPU/RAM, wireless modem and battery energy capacity are unpublished here. Sensor model history is separately identified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Perception and safety",
+            "details": "LiDAR with stated 200 m detection and stereo cameras with stated 80 m detection; contact collision beams and four emergency-stop buttons.",
+            "sources": [
+              "https://en.westwell-lab.com/products/qomolo/Q-Truck"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Redundant power",
+            "details": "Battery-electric vehicle with battery swapping; dual power supplies and low-voltage battery health monitoring.",
+            "sources": [
+              "https://en.westwell-lab.com/products/qomolo/Q-Truck"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle safety",
+            "details": "Dual-source electrohydraulic steering pumps and complementary electronic braking/parking-brake redundancy.",
+            "sources": [
+              "https://en.westwell-lab.com/products/qomolo/Q-Truck"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "WellDrive",
+            "details": "Onboard perception, localization, planning and vehicle control.",
+            "sources": [
+              "https://en.westwell-lab.com/products/qomolo/Q-Truck"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "westwell-qtruck-hesai2024",
+        "manufacturer": "Westwell",
+        "models": [
+          "Q-Truck (Hesai July 2024 sensor configuration)",
+          "Q-Truck"
+        ],
+        "configuration": "Hesai’s July 29, 2024 supplier release; model-specific sensor evidence, not a universal bill of materials for every Q-Truck revision.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Hesai XT32 LiDAR",
+            "details": "Supplier explicitly identifies XT32 mid-range LiDAR on Q-Trucks. Vehicle quantities and complete camera/radar inventory are not specified.",
+            "sources": [
+              "https://www.prnewswire.com/news-releases/hesai-and-westwell-partner-to-accelerate-global-expansion-in-autonomous-driving-for-logistics-302208431.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "xocean-survey-fleet",
+        "manufacturer": "XOcean",
+        "models": [
+          "XOcean USV"
+        ],
+        "configuration": "Fleet-level manufacturer technology reference, not a specific hull’s bill of materials. Individual configurations and payloads differ.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Satellite operations",
+            "details": "Onshore pilots and analysts connect to survey vessels over satellite links.",
+            "sources": [
+              "https://xocean.com/technology/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hybrid system",
+            "details": "Manufacturer lists hybrid power; model-specific batteries and generators require the individual vessel specification.",
+            "sources": [
+              "https://xocean.com/technology/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Survey payload options",
+            "details": "Available data systems include multibeam sonar, sub-bottom profiler, side-scan sonar, magnetometer and USBL. This is not a claim that every hull carries every payload.",
+            "sources": [
+              "https://xocean.com/technology/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "xocean-xo450-imo2024",
+        "manufacturer": "XOcean",
+        "models": [
+          "XO-450 (2024 IMO engineering configuration)"
+        ],
+        "configuration": "XOCEAN engineering presentation to the 2024 IMO–ROK symposium, slide 3. CPU/RAM, battery capacity and radio SKUs undisclosed. This named configuration is not applied to every generic USV.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Control module",
+            "details": "PLC, industrial PC and autopilot.",
+            "sources": [
+              "https://wwwcdn.imo.org/localresources/en/About/Events/Documents/2024%20IMO-ROK%20MASS%20Symposium%20presentations/2-4.%20Remotely%20operated%20survey%20fleet%20Experience%20from%20the%20first%201%2C000%20missions%20-%20Shepard%20Smith%28XOCEAN%29.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and survey",
+            "details": "Cameras, X-band radar and weather station; illustrated survey systems include multibeam/sub-bottom sonar, side-scan towfish, magnetometer, sound-velocity profiler and ADCP.",
+            "sources": [
+              "https://wwwcdn.imo.org/localresources/en/About/Events/Documents/2024%20IMO-ROK%20MASS%20Symposium%20presentations/2-4.%20Remotely%20operated%20survey%20fleet%20Experience%20from%20the%20first%201%2C000%20missions%20-%20Shepard%20Smith%28XOCEAN%29.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Communication",
+            "details": "Dual satellite transceivers, VHF radio and Class B AIS. No unique vessel MMSI is supplied by this diagram.",
+            "sources": [
+              "https://wwwcdn.imo.org/localresources/en/About/Events/Documents/2024%20IMO-ROK%20MASS%20Symposium%20presentations/2-4.%20Remotely%20operated%20survey%20fleet%20Experience%20from%20the%20first%201%2C000%20missions%20-%20Shepard%20Smith%28XOCEAN%29.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Hybrid propulsion",
+            "details": "Lithium-ion battery, charge controller and microgenerator; twin electric propulsion thrusters and bow thrusters.",
+            "sources": [
+              "https://wwwcdn.imo.org/localresources/en/About/Events/Documents/2024%20IMO-ROK%20MASS%20Symposium%20presentations/2-4.%20Remotely%20operated%20survey%20fleet%20Experience%20from%20the%20first%201%2C000%20missions%20-%20Shepard%20Smith%28XOCEAN%29.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Hull and payload bays",
+            "details": "Wave-piercing axe-bow catamaran with sonar post and sensor bay.",
+            "sources": [
+              "https://wwwcdn.imo.org/localresources/en/About/Events/Documents/2024%20IMO-ROK%20MASS%20Symposium%20presentations/2-4.%20Remotely%20operated%20survey%20fleet%20Experience%20from%20the%20first%201%2C000%20missions%20-%20Shepard%20Smith%28XOCEAN%29.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Supervised autonomy",
+            "details": "Pilot-supervised route following with heartbeat and collision/grounding safety behavior.",
+            "sources": [
+              "https://wwwcdn.imo.org/localresources/en/About/Events/Documents/2024%20IMO-ROK%20MASS%20Symposium%20presentations/2-4.%20Remotely%20operated%20survey%20fleet%20Experience%20from%20the%20first%201%2C000%20missions%20-%20Shepard%20Smith%28XOCEAN%29.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yandex-rover-r3-2021",
+        "manufacturer": "Yandex",
+        "models": [
+          "Yandex Rover R3 (December 2021)",
+          "Yandex Rover"
+        ],
+        "configuration": "Primary account by Yandex’s delivery-robot hardware developer, December 2021. CPU/RAM, radio SKU and battery energy capacity unspecified for R3.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Control architecture",
+            "details": "Carrier board with onboard router; separate platform, motor and body controllers.",
+            "sources": [
+              "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "R3 sensor array",
+            "details": "One 64-beam LiDAR, two radars, five cameras, accelerometer, GNSS and nine ultrasonic sensors.",
+            "sources": [
+              "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Drive and battery",
+            "details": "Six powered wheels; hot-swappable main battery with fixed backup. Stated eight-hour operation.",
+            "sources": [
+              "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cargo and chassis",
+            "details": "60 L, 20 kg cargo capacity; leaf-spring suspension and sealed electronics.",
+            "sources": [
+              "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy",
+            "details": "Onboard localization, route planning and obstacle recognition.",
+            "sources": [
+              "https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yandex-rover-r4-2025",
+        "manufacturer": "Yandex",
+        "models": [
+          "Yandex Rover R4 (October 2025)",
+          "Yandex Rover"
+        ],
+        "configuration": "October 23, 2025 manufacturer announcement of fourth-generation robots. No carryover of R3 sensor counts or controller hardware; CPU model, RAM, modem and battery capacity unpublished.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Revised compute unit",
+            "details": "Manufacturer reports a more powerful computing unit without naming its processor.",
+            "sources": [
+              "https://yandex.ru/company/news/23-10-2025-02"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Revised LiDAR",
+            "details": "New LiDAR, with no published model or channel count in this release.",
+            "sources": [
+              "https://yandex.ru/company/news/23-10-2025-02"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Replaceable battery",
+            "details": "Quick-change battery and stated travel up to 70 km per charge.",
+            "sources": [
+              "https://yandex.ru/company/news/23-10-2025-02"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cargo and suspension",
+            "details": "Revised suspension and a cargo compartment divisible into two sections.",
+            "sources": [
+              "https://yandex.ru/company/news/23-10-2025-02"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Delivery operation",
+            "details": "Autonomous delivery platform with new-generation service rollout announced for November 2025.",
+            "sources": [
+              "https://yandex.ru/company/news/23-10-2025-02"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -301961,8 +303607,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 520,
-    "devices_with_system_profiles": 451,
-    "devices_with_documented_compute": 212
+    "system_profiles": 535,
+    "devices_with_system_profiles": 462,
+    "devices_with_documented_compute": 219
   }
 }
