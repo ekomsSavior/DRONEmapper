@@ -16883,6 +16883,847 @@
           ]
         }
       ]
+    },
+    {
+      "id": "dax-helium-assessment",
+      "manufacturer": "Daxbot",
+      "models": [
+        "Helium Class Assessment Robot",
+        "Dax ADA"
+      ],
+      "configuration": "Current Helium assessment configuration used as a reference for the generic Dax ADA record. Earlier Dax revisions differ. Exact Jetson module, RAM, storage, battery capacity and radio-module SKUs are not disclosed here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Generation-dependent edge computer",
+          "details": "NVIDIA Jetson Orin for Mk III, with Xavier also listed for the platform. This does not identify every generation as Orin NX.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-assessment-robots/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Measurement instruments",
+          "details": "CTi TILT-57A dynamic inclinometer and three synchronized Keyence IL-300 lasers measure sidewalk slopes and defects.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-assessment-robots/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Localization and vision",
+          "details": "RTK GPS plus tread-based odometry; stereo vision supports 3D mesh reconstruction.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-assessment-robots/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Connectivity",
+          "details": "5G, LTE and Wi-Fi; modem models and frequency/channel assignments unspecified.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-assessment-robots/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Tracked mobile platform",
+          "details": "50 kg; 6 km/h cruise; advertised 8–12 hours per charge with wireless charging through mobile Dax Hubs.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-assessment-robots/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Assessment outputs",
+          "details": "ArcGIS-compatible outputs combine georeferenced defects with stereo-derived 3D geometry.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-assessment-robots/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dax-aib-mn32-reference",
+      "manufacturer": "Daxbot",
+      "models": [
+        "Dax (AIB-MN32 configuration)"
+      ],
+      "configuration": "Aetina’s 2024 Dax case-study configuration, separate from other Helium revisions. The head computer is identified; exact robot battery, radio chips and storage as installed are not established.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Head computer",
+          "details": "Aetina AIB-MN32 platform with NVIDIA Jetson Orin NX, advertised up to 70 TOPS in this configuration.",
+          "sources": [
+            "https://www.aetina.com/about-news-detail.php?i=1150"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Module memory",
+          "details": "Jetson Orin NX 8 GB. The board listing includes a 128 GB NVMe drive; the case study does not independently establish the robot’s installed drive.",
+          "sources": [
+            "https://www.aetina.com/about-news-detail.php?i=1150"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Perception and assessment",
+          "details": "Stereo cameras with IR filters/floodlight, stereo microphones, RTK GPS, laser measurement and an inclinometer; component SKUs unspecified in this case study.",
+          "sources": [
+            "https://www.rosch-computer.de/cfile.jsp?aid=3460"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Network connection",
+          "details": "LTE and Wi-Fi support dispatch, notifications and app interactions. No unique over-the-air identifier is established.",
+          "sources": [
+            "https://www.rosch-computer.de/cfile.jsp?aid=3460"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Audio and expansion",
+          "details": "Customized audio board and speaker; AIB-MN32 reference lists two GbE ports and M.2 expansion. External accessibility on the robot is not documented.",
+          "sources": [
+            "https://www.aetina.com/about-news-detail.php?i=1150",
+            "https://www.rosch-computer.de/cfile.jsp?aid=3460"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Robot software",
+          "details": "DaxOS integrates vision and language tasks; case study names CUDA, Argus NvRaw and VPI. DaxOS software “chips” are not a count of physical processors.",
+          "sources": [
+            "https://www.aetina.com/about-news-detail.php?i=1150",
+            "https://www.rosch-computer.de/cfile.jsp?aid=3460"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dax-helium-security",
+      "manufacturer": "Daxbot",
+      "models": [
+        "Helium Class Security Robot"
+      ],
+      "configuration": "Security-patrol Helium configuration, distinct from the ADA measurement robot. Exact Jetson SKU, RAM, storage, battery capacity and radio module are unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Edge computer",
+          "details": "NVIDIA Jetson Orin (Mk III) / Xavier, depending on revision.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-security-robots/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Surveillance hardware",
+          "details": "Two Sony IMX678 camera modules, IR LED array and controlled IR-cut filter; electret-condenser microphones and two-way audio.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-security-robots/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Connectivity",
+          "details": "5G, LTE and Wi-Fi; no band or device-specific broadcast pattern published.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-security-robots/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mobility and charging",
+          "details": "50 kg tracked robot, 6 km/h cruise and advertised 8–10 hours per charge; wireless charging at Dax Huts.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-security-robots/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Lighting and interaction",
+          "details": "700-lumen spotlight and audio output support remote interaction.",
+          "sources": [
+            "https://daxbot.com/technology/helium-class-security-robots/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deltaquad-pro-v2",
+      "manufacturer": "DeltaQuad",
+      "models": [
+        "DeltaQuad Pro V2",
+        "DeltaQuad Pro"
+      ],
+      "configuration": "V2 operations-manual configuration used as a qualified reference for generic Pro records; not Evo or original V1 hardware. Flight-controller and companion-computer processor SKUs, RAM and radio modules remain unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight and companion computers",
+          "details": "Flight controller plus a secondary onboard computer serving payload integration. Neither processor is named.",
+          "sources": [
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/setup/integrating-payloads"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Flight logs",
+          "details": "Flight controller records logs to an SD card; capacity is unspecified.",
+          "sources": [
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/maintenance/flight-logs"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Telemetry options",
+          "details": "Radio telemetry or optional USB 4G dongle in the aircraft nose. MAVLink can traverse the configured ZeroTier VPN; ground-station hotspot instructions do not establish an aircraft Wi-Fi radio.",
+          "sources": [
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/setup/telemetry-and-ground-control",
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/setup/integrating-payloads"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "Compass, gyroscope and accelerometer calibration; GPS connection. ADS-B receiver and ruggedized GPS are optional wiring configurations.",
+          "sources": [
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/maintenance/sensor-calibration",
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/maintenance/wiring-diagram"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "VTOL power system",
+          "details": "Four lift motors and a pusher motor; 4S 23 Ah LiPo, 6.2 kg MTOW and 1.2 kg maximum payload. Auxiliary-battery endurance figures describe a different payload configuration.",
+          "sources": [
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/maintenance/wiring-diagram",
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/vehicle-specifications"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Flight-controller connections",
+          "details": "SBUS radio input, PWM motors/wing servos and telemetry UARTs; optional camera triggers or payload-release mechanism. Connections depend on fitted options.",
+          "sources": [
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/maintenance/wiring-diagram"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Flight stack",
+          "details": "PX4-based vehicle firmware and QGroundControl mission/maintenance interface.",
+          "sources": [
+            "https://docs.deltaquad.com/deltaquad-pro-operations-manual-v2/maintenance/firmware-upgrade"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "draganfly-commander2-2021",
+      "manufacturer": "Draganfly Innovations",
+      "models": [
+        "Commander 2",
+        "Commander2"
+      ],
+      "configuration": "August 2021 Commander2 specification, not the original Commander or Commander 3 XL. CPU, RAM, storage, radio module/band and battery capacity are not supplied.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Flight controller",
+          "details": "Manufacturer describes a new North American-sourced flight controller without naming its processor.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2021/08/Draganflyer-Commander2-08.04.21.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Command and video",
+          "details": "Encrypted radio communications and real-time video for compatible payloads; air protocol and frequency unspecified.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2021/08/Draganflyer-Commander2-08.04.21.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Optional navigation and payloads",
+          "details": "Optional PPK/RTK GPS and base station. Interchangeable payload choices include FLIR Duo Pro R 640, MicaSense RedEdge MX with DLS2, 24 MP RGB and 10× zoom cameras; these are alternatives.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2021/08/Draganflyer-Commander2-08.04.21.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Dual-battery aircraft",
+          "details": "Dual-battery system; 2.75 kg with batteries, 3.75 kg MTOW and 1 kg payload. Typical flight time is 30 minutes with payload.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2021/08/Draganflyer-Commander2-08.04.21.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Payload mounting",
+          "details": "Quickly interchangeable gimballed camera packages; customized sensor integration offered separately.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2021/08/Draganflyer-Commander2-08.04.21.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Mission control",
+          "details": "MAVLink-based mission planning supports automatic, semi-automatic and manual operation.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2021/08/Draganflyer-Commander2-08.04.21.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "draganfly-commander3xl-electric",
+      "manufacturer": "Draganfly Innovations",
+      "models": [
+        "Commander 3 XL",
+        "Commander3 XL",
+        "Commander 3XL"
+      ],
+      "configuration": "Battery-electric Commander 3 XL: current controller/radio options plus a separately dated 2022 physical specification. Not the Hybrid. Exact Cube variant, CPU, RAM and battery energy are unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Autopilot",
+          "details": "Cube autopilot with triple-redundant IMU; the product page does not name a Cube color/version or processor SKU.",
+          "sources": [
+            "https://draganfly.com/commander-3-xl/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Selectable radio packages",
+          "details": "Microhard PDDL, Herelink Blue, Doodle Labs Helix or DTC BluSDR. These are alternative configurations, not four simultaneously installed radios; exact frequency SKUs need configuration records.",
+          "sources": [
+            "https://draganfly.com/commander-3-xl/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and payload options",
+          "details": "Triple IMU; optional Gremsy VIO payload combines 4K zoom, 640×512 radiometric thermal imaging and a 2,400 m laser rangefinder.",
+          "sources": [
+            "https://draganfly.com/commander-3-xl/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric airframe",
+          "details": "2022 sheet specifies 55 lb MTOW, 29 lb including batteries, 22 lb payload and up to 50 minutes flight. Endurance depends on payload and conditions.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2022/12/Draganfly-Commander-3-XL-Specs-Sheet-n.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular hardware",
+          "details": "Quick-detach arms, retractable landing gear and universal payload mounting support interchangeable camera and delivery equipment.",
+          "sources": [
+            "https://draganfly.com/commander-3-xl/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "draganfly-commander3xl-hybrid-2023",
+      "manufacturer": "Draganfly Innovations",
+      "models": [
+        "Commander 3 XL Hybrid",
+        "Commander 3XL Hybrid"
+      ],
+      "configuration": "September 2023 target specification, explicitly subject to change. No controller, compute, memory, radio or sensor BOM is established; battery-electric Commander 3 XL components are not inherited.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Hybrid generator",
+          "details": "Pegasus-powered Draganfuel Ignite 70 cc two-stroke, fuel-injected and liquid-cooled engine-generator; 4 kW maximum, 2–3.5 kW ideal output, 24–50 V.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2023/09/Commander-3-XL-Hybrid-Specs-PDF.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Airframe limits",
+          "details": "25 kg MTOW, 4 kg maximum payload; advertised target endurance up to three hours. Generator base mass is 3.5 kg, not total aircraft mass.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2023/09/Commander-3-XL-Hybrid-Specs-PDF.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Generator control",
+          "details": "Automatic throttle and self-starting engine with capacitive-discharge ignition. The sheet does not identify an external control bus.",
+          "sources": [
+            "https://draganfly.com/wp-content/uploads/2023/09/Commander-3-XL-Hybrid-Specs-PDF.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "donecle-iris-family",
+      "manufacturer": "Donecle",
+      "models": [
+        "Iris"
+      ],
+      "configuration": "Iris family architecture, not one universal payload. CPU, RAM, storage, radio hardware and propulsion/battery specifications are unpublished in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "GPS-independent positioning",
+          "details": "Onboard laser positioning, obstacle detection and automatically controlled camera gimbal; external positioning beacons are not required.",
+          "sources": [
+            "https://www.donecle.com/solution/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator interface",
+          "details": "Tablet starts the automated inspection flight; sensor payload differs by Iris variant.",
+          "sources": [
+            "https://www.donecle.com/solution/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Inspection data flow",
+          "details": "Captured imagery passes to analysis software and maintenance reports; Donecle cloud stores inspection history and supports team access.",
+          "sources": [
+            "https://www.donecle.com/solution/"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Variant boundary",
+          "details": "Iris GVI performs visual inspection; Iris dentCHECK uses a separate 3D measurement payload. Neither payload is assigned to every Iris.",
+          "sources": [
+            "https://www.donecle.com/products/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "donecle-iris-gvi",
+      "manufacturer": "Donecle",
+      "models": [
+        "Iris GVI"
+      ],
+      "configuration": "GVI visual-inspection configuration. Processor, memory, battery and radio-module details remain unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Imaging payload",
+          "details": "24 MP camera, advertised 16 pixels/mm² inspection resolution; image-sensor manufacturer/model unspecified.",
+          "sources": [
+            "https://www.donecle.com/products/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning",
+          "details": "Iris laser-based localization operates without GPS or external beacons, with obstacle detection and automatic gimbal control.",
+          "sources": [
+            "https://www.donecle.com/solution/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Inspection control",
+          "details": "Tablet-based mission launch; image analysis and report review remain separate workflow stages.",
+          "sources": [
+            "https://www.donecle.com/solution/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Maintenance records",
+          "details": "Inspection results enter Donecle’s analysis/reporting and cloud history platform.",
+          "sources": [
+            "https://www.donecle.com/solution/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "donecle-iris-dentcheck",
+      "manufacturer": "Donecle",
+      "models": [
+        "Iris dentCHECK"
+      ],
+      "configuration": "3D dent-measurement configuration, separate from GVI. CPU, memory, radio and power-system details remain unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "3D measurement payload",
+          "details": "8tree dentCHECK sensor measures surface dents and buckles; advertised depth accuracy 0.1 mm. This is not the GVI camera specification.",
+          "sources": [
+            "https://www.donecle.com/products/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Flight positioning",
+          "details": "Iris laser localization and obstacle detection support automated scanning around the inspected structure.",
+          "sources": [
+            "https://www.donecle.com/solution/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Dent mapping",
+          "details": "Measurements support digitized dent maps and reports for specified aircraft surfaces; supported airframes and operational approval depend on configuration.",
+          "sources": [
+            "https://www.donecle.com/products/",
+            "https://www.donecle.com/solution/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conjet-557-mpa",
+      "manufacturer": "Conjet",
+      "models": [
+        "Robot 557 MPA",
+        "Robot 557"
+      ],
+      "configuration": "557 MPA reference for the generic Robot 557 record; other 557 variants can differ. Automated concrete removal does not establish autonomous road navigation. CPU, memory and radio-chip identifiers are unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Machine control",
+          "details": "ConjetONE control system, configurable through radio handset or onboard display; controller CPU unspecified.",
+          "sources": [
+            "https://www.conjet.com/product/hydrodemolition-robot-557-mpa/"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Control and pump links",
+          "details": "Remote radio control; an optional wireless kit links robot and pump controls. Frequencies and protocols are not published.",
+          "sources": [
+            "https://www.conjet.com/product/hydrodemolition-robot-557-mpa/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Power options",
+          "details": "18.7 kW diesel or three-phase electric supply: 380–480 V AC/32 A, alternatively 200 V AC/63 A, 50–60 Hz.",
+          "sources": [
+            "https://www.conjet.com/product/hydrodemolition-robot-557-mpa/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Tracked chassis",
+          "details": "2,740 kg; tracks extend from 1,200 to 1,900 mm and main body slides 400 mm for stability. Multipurpose arm reaches 5.05 m vertically.",
+          "sources": [
+            "https://www.conjet.com/product/hydrodemolition-robot-557-mpa/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tooling and integration",
+          "details": "Hydrodemolition tool kits and high-pressure pumps; prepared for Conjet Connect, which is not proof that every robot has a connected subscription.",
+          "sources": [
+            "https://www.conjet.com/product/hydrodemolition-robot-557-mpa/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bedrock-gen2-auv",
+      "manufacturer": "Bedrock Ocean",
+      "models": [
+        "Bedrock AUV Gen2",
+        "Bedrock AUV"
+      ],
+      "configuration": "Second-generation survey AUV, using the 2024 manufacturer sheet and a direct CTO interview. Exact processor-board revision, memory, storage and radio modules remain unspecified; payload configurations differ.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Edge processing",
+          "details": "CEO/CTO Charles Chiau identifies NVIDIA Jetson TX2 as the primary GPU solution in the interviewed vehicle configuration.",
+          "sources": [
+            "https://www.uncrewed-systems.com/bedrock-ocean-uav/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation",
+          "details": "Exail Phins 9 Compact INS, Nortek DVL500/DVL1000 Compact listed options, and u-blox ZED-F9P-02B L1/L2 GNSS.",
+          "sources": [
+            "https://www.bedrockocean.com/s/BRXCommercialAUVFleetSpecification.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Environmental and forward sensors",
+          "details": "NORBIT FLS-42 forward sonar; AML pressure and sound-velocity/temperature sensors. SonTek Castaway CTD is deployed from the support vessel, not onboard.",
+          "sources": [
+            "https://www.bedrockocean.com/s/BRXCommercialAUVFleetSpecification.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Alternative survey payloads",
+          "details": "Configuration 1: NORBIT MBES-42, Starfish 454 and OFG magnetometer. Configuration 2: NORBIT SBP-42, Starfish 992 and OFG magnetometer. Sonar frequencies describe acoustic signals, not radio bands.",
+          "sources": [
+            "https://www.bedrockocean.com/s/BRXCommercialAUVFleetSpecification.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Communications and recovery",
+          "details": "Iridium, Wi-Fi, ISM radios and acoustic communications; independent acoustic recovery tracker. Exact radio bands unspecified.",
+          "sources": [
+            "https://www.bedrockocean.com/s/BRXCommercialAUVFleetSpecification.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Energy and hull",
+          "details": "Swappable 3 kWh lithium-ion battery; 2.4 m, 60 kg, 300 m depth rating and 3-knot survey speed.",
+          "sources": [
+            "https://www.bedrockocean.com/s/BRXCommercialAUVFleetSpecification.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operations and data",
+          "details": "Onboard quality-control processing, Trident operational control and Mosaic survey-data platform; these cloud products do not imply a public live location feed.",
+          "sources": [
+            "https://www.bedrockocean.com/technology"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acsl-pf4-multiuse-2026",
+      "manufacturer": "ACSL",
+      "models": [
+        "PF4"
+      ],
+      "configuration": "February 2026 long-range multi-use PF4 specification. This is not PF4-CAT3. CPU, RAM, storage, modem SKU and battery voltage/chemistry are not disclosed in this release.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Command links",
+          "details": "2.4 GHz link advertised to 4 km unobstructed, or LTE within coverage; multi-SIM is optional.",
+          "sources": [
+            "https://www.acsl.co.jp/admin/wp-content/uploads/2026/02/20260216_JP-Toyooka-demonstoration_final.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning and payload options",
+          "details": "GPS plus QZSS, CLAS-compatible. Optional mission payloads include YellowScan Ultra 3+ LiDAR, VIO infrared/visible camera and CX-GB200 gimbal camera.",
+          "sources": [
+            "https://www.acsl.co.jp/admin/wp-content/uploads/2026/02/20260216_JP-Toyooka-demonstoration_final.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Four battery packs",
+          "details": "Four 20,000 mAh batteries; 12.1 kg airframe and 19.4 kg with batteries in logistics configuration. Maximum payload 5.5 kg; advertised endurance 70 minutes empty or 50 minutes loaded.",
+          "sources": [
+            "https://www.acsl.co.jp/admin/wp-content/uploads/2026/02/20260216_JP-Toyooka-demonstoration_final.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Modular configuration",
+          "details": "User-exchangeable payloads, hot-swap capability and remote controller. Electrical connector details are not given.",
+          "sources": [
+            "https://www.acsl.co.jp/admin/wp-content/uploads/2026/02/20260216_JP-Toyooka-demonstoration_final.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acsl-pf4-cat3-2024",
+      "manufacturer": "ACSL",
+      "models": [
+        "PF4-CAT3"
+      ],
+      "configuration": "June 2024 logistics-aircraft development/type-certificate application specification, formerly JP2. An application is not a granted certificate. CPU, memory, radio, navigation sensors and battery remain undisclosed; PF4 multi-use specifications are not substituted.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Airframe envelope",
+          "details": "Approximately 2.3 × 2.5 × 0.6 m, 24.9 kg MTOW and 5 kg payload; development reference range approximately 35 km.",
+          "sources": [
+            "https://www.acsl.co.jp/admin/wp-content/uploads/2024/06/20240628_PF4-CAT3%E5%9E%8B%E5%BC%8F%E8%AA%8D%E8%A8%BC%E7%94%B3%E8%AB%8B_EN_fix.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cargo mechanism",
+          "details": "Cargo enters through the top of the aircraft and detaches from the bottom.",
+          "sources": [
+            "https://www.acsl.co.jp/admin/wp-content/uploads/2024/06/20240628_PF4-CAT3%E5%9E%8B%E5%BC%8F%E8%AA%8D%E8%A8%BC%E7%94%B3%E8%AB%8B_EN_fix.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat-minestar-command-2013",
+      "manufacturer": "Caterpillar Mining",
+      "models": [
+        "Cat MineStar Command for Hauling"
+      ],
+      "configuration": "Historical 2013 Command architecture reference. Later kits and jurisdictions differ. CPU, RAM and radio-chip SKUs are undisclosed; these frequencies are not universal identifiers for all Cat machines.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception and localization",
+          "details": "Dual GNSS receivers, object-detection sensors, machine-health and tire/payload monitoring. Specification lists 76.5 GHz radar and 64-beam rotating LiDAR.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/C10338825"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Operational and stop links",
+          "details": "Wireless exchange with MineStar and nearby machines; separately documented A-stop transmitter at 919 MHz. The latter is a historical configuration-specific frequency.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/C10338825"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Low-voltage electronics",
+          "details": "Display and onboard A-stop receiver accept 9–32 V DC; radar is rated 12 V, 1 A. These are electronics ratings, not vehicle propulsion power.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/C10338825"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Display and navigation wiring",
+          "details": "6.5-inch 640×480 touch display with four NTSC video inputs; GNSS receiver uses a 12-pin Deutsch connector and TNC antenna connection.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/C10338825"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Site operation",
+          "details": "MineStar coordinates mapped autonomous operating areas, fleet assignments and diagnostics.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/C10338825"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat-793f-command-reference",
+      "manufacturer": "Caterpillar",
+      "models": [
+        "Cat 793F Command for Hauling"
+      ],
+      "configuration": "793F host truck with Command compatibility. Host powertrain and historical Command architecture are separately sourced; sensor/radio revisions on any deployed truck require its configuration records. CPU and memory unpublished.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Host powertrain",
+          "details": "Cat C175-16 diesel, rated 1,976 kW gross in this brochure, driving a six-speed mechanical powershift transmission; this is not the newer unsuffixed 793.",
+          "sources": [
+            "https://assets.zeppelin-cat.de/793_F_Broschuere_51ce95a68e.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle data",
+          "details": "VIMS monitoring and service data interface support diagnostics; exact autonomous-kit connectors are unspecified.",
+          "sources": [
+            "https://assets.zeppelin-cat.de/793_F_Broschuere_51ce95a68e.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomous kit",
+          "details": "Caterpillar explicitly lists the 793F among models supporting Command for hauling retrofit kits.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/CM20240920-9a384-ac09a"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Historical Command reference",
+          "details": "2013 architecture uses dual GNSS and obstacle sensors. This does not establish the sensor SKU installed on a later 793F.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/C10338825"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat-789d-autonomous-host",
+      "manufacturer": "Caterpillar",
+      "models": [
+        "789D AHS"
+      ],
+      "configuration": "789D mining-truck host and documented Command retrofit compatibility, not the separate autonomous water-truck equipment package. Exact autonomous CPU, sensors, modem and memory are unpublished here.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Engine alternatives",
+          "details": "3516C-HD diesel rated 1,566 kW gross, or optional 3516B EUI rated 1,417 kW. Engines are alternatives rather than interchangeable specifications.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/CM20200724-32ba7-9d2ab"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mechanical drivetrain",
+          "details": "Six forward powershift gears with mechanical final drives; payload and gross-weight limits depend on body/tire configuration.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/CM20200724-32ba7-9d2ab"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Machine diagnostics",
+          "details": "VIMS machine monitoring and service connections; controller silicon not named.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/CM20200724-32ba7-9d2ab"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy integration",
+          "details": "Caterpillar lists 789D among trucks supporting Command for hauling retrofit kits. This establishes platform compatibility, not a universal sensor or radio BOM.",
+          "sources": [
+            "https://s7d2.scene7.com/is/content/Caterpillar/CM20240920-9a384-ac09a"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -607,6 +607,45 @@ test('industrial and vehicle profiles preserve revisions, quantities and uncerta
  assert.equal(system('AES Corporation','Maximo').sections.radios.status,'not-established');
 });
 
+test('inspection, survey and heavy-equipment evidence stays configuration-specific',()=>{
+ const dax=system('Daxbot','Dax ADA');
+ assert.match(text(dax.sections.sensors),/TILT-57A/);
+ assert.match(text(dax.sections.sensors),/IL-300/);
+ assert.equal(dax.sections.memory.status,'not-established');
+ const head=system('Daxbot','Dax (AIB-MN32 configuration)');
+ assert.match(text(head.sections.compute),/Jetson Orin NX/);
+ assert.match(text(head.sections.memory),/8 GB/);
+ assert.match(text(system('Daxbot','Helium Class Security Robot').sections.sensors),/IMX678/);
+ assert.doesNotMatch(text(dax.sections.sensors.facts.map(f=>f.details)),/IMX678/);
+ const pro=system('DeltaQuad','DeltaQuad Pro');
+ assert.match(text(pro.sections.power),/4S 23 Ah/);
+ assert.doesNotMatch(text(pro.sections.compute.facts.map(f=>f.details)),/Pixhawk|Dropix/);
+ assert.equal(profileIds(system('DeltaQuad','Evo')).includes('deltaquad-pro-v2'),false);
+ const electric=system('Draganfly Innovations','Commander3 XL');
+ const hybrid=system('Draganfly Innovations','Commander 3 XL Hybrid');
+ assert.match(text(electric.sections.radios),/alternative configurations/);
+ assert.doesNotMatch(text(electric.sections.compute.facts.map(f=>f.details)),/STM32|Orange/);
+ assert.match(text(hybrid.sections.power),/70 cc.*4 kW/);
+ assert.equal(hybrid.sections.compute.status,'not-established');
+ assert.doesNotMatch(text(hybrid.sections.power),/10 kg/);
+ assert.equal(profileIds(system('Draganfly Innovations','Commander')).length,0);
+ const gvi=system('Donecle','Iris GVI'),dent=system('Donecle','Iris dentCHECK');
+ assert.match(text(gvi.sections.sensors),/24 MP/);
+ assert.doesNotMatch(text(gvi.sections.sensors.facts.map(f=>f.details)),/8tree/);
+ assert.match(text(dent.sections.sensors),/8tree/);
+ assert.match(text(system('Bedrock Ocean','Bedrock AUV').sections.sensors),/support vessel, not onboard/);
+ assert.match(text(system('Bedrock Ocean','Bedrock AUV').sections.sensors),/acoustic signals, not radio/);
+ assert.match(text(system('ACSL','PF4').sections.power),/Four 20,000/);
+ assert.equal(system('ACSL','PF4-CAT3').sections.radios.status,'not-established');
+ assert.doesNotMatch(text(system('ACSL','PF4-CAT3').sections.power),/70 minutes|5.5 kg/);
+ assert.match(text(system('Caterpillar','789D AHS').sections.power),/3516C-HD/);
+ assert.doesNotMatch(text(system('Caterpillar','789D AHS').sections.power),/C175/);
+ assert.match(text(system('Caterpillar','Cat 793F Command for Hauling').sections.power),/C175-16/);
+ assert.equal(profileIds(system('Caterpillar','793')).length,0);
+ assert.match(text(system('Caterpillar Mining','Cat MineStar Command for Hauling').sections.radios),/919 MHz.*historical/);
+ assert.equal(profileIds(system('Conjet','Robot 557H')).length,0);
+});
+
 test('marine, agricultural and humanoid configurations retain their hardware boundaries',()=>{
  const a4=system('AeiROBOT','Alice 4'),m1=system('AeiROBOT','ALICE M1'),a5=system('AeiROBOT','ALICE 5');
  assert.match(text(a4.sections.compute),/i7-1370PE/);
