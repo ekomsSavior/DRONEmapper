@@ -13,6 +13,7 @@ MAKER_ALIASES={
 
 # Explicit firmware/model associations, not substring or manufacturer-wide rules.
 ROBOT_MODELS={
+    ('turtlebot','turtlebot 4'):['turtlebot4-setup-wifi-name'],
     ('xiaomi','cyberdog'):['cyberdog-ble-v1'],
     ('unitree robotics','go1'):['unitree-go1-wifi-name'],
     ('petoi','bittle'):['petoi-bittle-ap-name','petoi-bittle-ble-name'],

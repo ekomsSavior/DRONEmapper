@@ -28,7 +28,7 @@ test('generated catalogs stay identical across Android, desktop and web',()=>{
  for(const rule of canonical.rules.filter(r=>r.transport==='wifi'))assert.ok(bundle.includes(rule.id),'Rebuild the browser account/upload bundle: '+rule.id);
 });
 test('strict Wi-Fi names reject generic devices, shortened names and injected lines',()=>{
- for(const [name,id] of [['Unitree_Go1ABC123','unitree-go1-wifi-name'],['Bittle-AP','petoi-bittle-ap-name'],['RMS1-ABC123','robomaster-s1-wifi-name'],['RMEP-12AB34','robomaster-ep-wifi-name']]){
+ for(const [name,id] of [['Unitree_Go1ABC123','unitree-go1-wifi-name'],['Bittle-AP','petoi-bittle-ap-name'],['RMS1-ABC123','robomaster-s1-wifi-name'],['RMEP-12AB34','robomaster-ep-wifi-name'],['Turtlebot4','turtlebot4-setup-wifi-name']]){
   assert.equal(robotWifiSignature(name),id);
   for(const bad of [name+'\n',name+'\r',name+'x',' '+name,'x'+name])assert.equal(robotWifiSignature(bad),null);
  }

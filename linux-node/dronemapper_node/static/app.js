@@ -144,6 +144,7 @@ function networkDevices() {
   const refs=$('device-references');
   if (!refs.childElementCount && state.device_references) {
     refs.append(make('p','Hardware and service references; these are not received detections.'));
+    addRadioReferences(refs);
     const andurilList=make('details');
     andurilList.append(make('summary','Anduril & Warhound references'),make('p',state.device_references.notice));
     for (const model of state.device_references.models) {
@@ -295,3 +296,27 @@ $('dji-report').onchange=async()=>{
 };
 await capabilities();await refresh();
 setInterval(()=>{if(!busy)refresh();},2000);
+
+function addRadioReferences(host){
+ const panel=make('details');panel.append(make('summary','Model radio references'));host.append(panel);
+ panel.addEventListener('toggle',async()=>{
+  if(!panel.open||panel.dataset.loaded)return;panel.dataset.loaded='true';
+  const body=make('div','Loading bundled references…');panel.append(body);
+  try{
+   const response=await fetch('/radio-references.json');if(!response.ok)throw Error();
+   const data=await response.json();body.replaceChildren();
+   const search=make('input');search.type='search';search.placeholder='Search manufacturer or model';search.setAttribute('aria-label','Search radio references');
+   const select=make('select');select.setAttribute('aria-label','Model radio configuration');
+   const detail=make('div');body.append(search,select,detail);
+   function show(){detail.replaceChildren();const p=data.profiles.find(p=>p.id===select.value);if(!p)return;
+    detail.append(make('p',p.configuration));
+    for(const f of p.facts){detail.append(make('p',f.component+': '+f.details));for(const url of f.sources)detail.append(referenceLink('Source ↗',url),make('span',' '));}
+    detail.append(make('p',data.notice));
+   }
+   function filter(){select.replaceChildren();const q=search.value.trim().toLowerCase();
+    for(const p of data.profiles.filter(p=>[p.manufacturer,...p.models].join(' ').toLowerCase().includes(q))){const option=make('option',p.manufacturer+' · '+p.models[0]+' · '+p.id);option.value=p.id;select.append(option);}show();
+   }
+   search.oninput=filter;select.onchange=show;filter();
+  }catch{body.textContent='Reference data unavailable. Close and reopen to retry.';delete panel.dataset.loaded;}
+ });
+}

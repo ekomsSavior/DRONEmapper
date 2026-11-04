@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "2026-11-03",
+  "release": "2026-11-04",
   "encoding": "UTF-8",
   "line_endings": "CRLF",
   "delimiter": ",",
@@ -42,9 +42,9 @@
     {
       "file": "rf-channels.csv",
       "url": "/downloads/data/rf-channels.csv",
-      "rows": 148,
-      "bytes": 70895,
-      "sha256": "10d551feb687fd002a806bd11f185a3ccdcb11d97a235eda86e63f7c8a6bdc5e",
+      "rows": 195,
+      "bytes": 95786,
+      "sha256": "b5b1129f582d46fbe74d7ff833765aa39e451c12611a982f0ff55c1994a2c32d",
       "columns": [
         "id",
         "band",
@@ -63,28 +63,29 @@
         "source",
         "reviewed_on",
         "notes",
-        "channel_spacing_mhz"
+        "channel_spacing_mhz",
+        "system_profile_ids"
       ]
     },
     {
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
       "rows": 925,
-      "bytes": 14838927,
-      "sha256": "9182743d1ebed02d6ba9c47bf1e23b963183ca3f97607b7e1327ce010afe449c",
+      "bytes": 15442230,
+      "sha256": "6d7e5f1b7edb9cbf1477ad00e4cb85a5efb164a7ebbefbc11176ef8e40c0a873",
       "collections": {
         "devices": 925,
         "radio_allocations": 182,
         "remote_id_rules": 3738,
-        "rf_channels": 148,
+        "rf_channels": 195,
         "vendor_flows": 440,
         "equipment_product_relationships": 7,
         "cloud_services": 457,
-        "robot_signatures": 8,
+        "robot_signatures": 9,
         "fcc_equipment": 20,
         "devices_with_mac_allocations": 236,
-        "devices_with_rf_information": 119,
-        "devices_with_scanner_signatures": 11,
+        "devices_with_rf_information": 524,
+        "devices_with_scanner_signatures": 12,
         "system_profiles": 926,
         "devices_with_system_profiles": 838,
         "devices_with_documented_compute": 412
@@ -106,7 +107,7 @@
     },
     {
       "path": "integration/rf-channels.json",
-      "sha256": "05c396baef47369b47afe7e720b37fc84b6eeee30030518f3bbda8dc2d012ef0"
+      "sha256": "6580b2f3110a8684d8bf2f7aeb8283bc912f7d4ca79d3c03f030da2ceddfd083"
     },
     {
       "path": "integration/fcc-references.json",
@@ -118,7 +119,7 @@
     },
     {
       "path": "integration/robot-signatures.json",
-      "sha256": "2ccd3b1539ddd9727a3e59ab7957593c7e758b56d83c8837a090ba26e10f0733"
+      "sha256": "591b36204e2ae55c4e6f75a849bea9c7dab6142b1c253ec7e7e422dbc348f31b"
     },
     {
       "path": "integration/aircraft-references.json",
@@ -146,11 +147,11 @@
     },
     {
       "path": "scripts/export_developer_data.py",
-      "sha256": "405327230121411339714f4dc79d681cc323efb822d36c4b5d260192b0ea1cf0"
+      "sha256": "4676c6d82b8f60f44c055b87af0654e7b2835a40dab10a10dc6db247bcee923f"
     },
     {
       "path": "scripts/device_radio_export.py",
-      "sha256": "bc119debcf0fb8c92edecb67c93b6b47b69ddd6f947eb99b0628662362cc0475"
+      "sha256": "63c08fe0c27fb0077ac099fc2a15622cdbe7202573bc7b7b64864d613a10d0c6"
     },
     {
       "path": "integration/device-systems.json",
@@ -158,7 +159,15 @@
     },
     {
       "path": "public/device-system-model.mjs",
-      "sha256": "0044011fc0e3a37990cf6b06a047662b21aa7b8d33c3cc506fd6eaa692de3afe"
+      "sha256": "bd15f02ef4776cfc393997ea7b6c48acdf4218dc7e64715aeeacb954ab91aa1e"
+    },
+    {
+      "path": "public/device-profile-match.mjs",
+      "sha256": "b8b11c3602eaa04ab1630c93a6efe2ec6c01be2559d00fcb77c2e46677e2001a"
+    },
+    {
+      "path": "scripts/sync-radio-references.py",
+      "sha256": "18d0c3a0b9906fcf7628c014001e22597768218816494df692f4d4160cd9d43e"
     },
     {
       "path": "public/device-system-data.mjs",
@@ -166,7 +175,7 @@
     },
     {
       "path": "scripts/enrich_device_systems.mjs",
-      "sha256": "12791a545eafe8dc053277957eb855c04695612291612df768f05c463fdc8979"
+      "sha256": "124f3bb3b1297df8c673cccf32cb690ceda14818ada2a328bbff20a90bdc3936"
     },
     {
       "path": "scripts/sync-device-systems.py",

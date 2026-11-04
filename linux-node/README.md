@@ -4,7 +4,7 @@ Turn a Windows, macOS or Linux computer into a scanner node with a local radar, 
 
 ## Start
 
-[Download Desktop 0.7.1 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.7.2 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
 
 **Windows:** install [Python 3.10+](https://www.python.org/downloads/windows/), extract the source, then double-click `Start-DRONEmapper.cmd` in this folder.
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-01",
+  "reviewed_on": "2026-11-04",
   "rules": [
     {
       "id": "cyberdog-ble-v1",
@@ -102,6 +102,18 @@
         "https://dl.djicdn.com/downloads/ROBOMASTER_EP/20220429UM/RoboMaster_EP_User_Manual_v1.2_EN_1.pdf"
       ],
       "scope": "Manufacturer-documented direct Wi-Fi naming pattern. Router mode, renamed access points and other models are not covered.",
+      "validation": "published-pattern; physical reception not tested"
+    },
+    {
+      "id": "turtlebot4-setup-wifi-name",
+      "transport": "wifi",
+      "family": "ground-robot",
+      "label": "Possible ground robot · TurtleBot 4 setup Wi-Fi",
+      "name_pattern": "Turtlebot4",
+      "sources": [
+        "https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html"
+      ],
+      "scope": "Exact default setup access-point name documented for TurtleBot 4 at first boot (5 GHz). Client mode or renamed networks do not match. Another access point or a standalone Pi image can use the same name; robot identity and location are unconfirmed.",
       "validation": "published-pattern; physical reception not tested"
     }
   ]

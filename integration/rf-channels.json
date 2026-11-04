@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-02",
+  "reviewed_on": "2026-11-04",
   "channels": [
     {
       "id": "fpv-a-1",
@@ -20,7 +20,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-a-2",
@@ -40,7 +41,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-a-3",
@@ -60,7 +62,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-a-4",
@@ -80,7 +83,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-a-5",
@@ -100,7 +104,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-a-6",
@@ -120,7 +125,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-a-7",
@@ -140,7 +146,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-a-8",
@@ -160,7 +167,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-b-1",
@@ -180,7 +188,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-b-2",
@@ -200,7 +209,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-b-3",
@@ -220,7 +230,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-b-4",
@@ -240,7 +251,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-b-5",
@@ -260,7 +272,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-b-6",
@@ -280,7 +293,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-b-7",
@@ -300,7 +314,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-b-8",
@@ -320,7 +335,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-e-1",
@@ -340,7 +356,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-e-2",
@@ -360,7 +377,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-e-3",
@@ -380,7 +398,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-e-4",
@@ -400,7 +419,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-e-5",
@@ -420,7 +440,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-e-6",
@@ -440,7 +461,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-e-7",
@@ -460,7 +482,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-e-8",
@@ -480,7 +503,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-f-1",
@@ -500,7 +524,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-f-2",
@@ -520,7 +545,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-f-3",
@@ -540,7 +566,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-f-4",
@@ -560,7 +587,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-f-5",
@@ -580,7 +608,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-f-6",
@@ -600,7 +629,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-f-7",
@@ -620,7 +650,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-f-8",
@@ -640,7 +671,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-r-1",
@@ -660,7 +692,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-r-2",
@@ -680,7 +713,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-r-3",
@@ -700,7 +734,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-r-4",
@@ -720,7 +755,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-r-5",
@@ -740,7 +776,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-r-6",
@@ -760,7 +797,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-r-7",
@@ -780,7 +818,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "fpv-r-8",
@@ -800,7 +839,8 @@
       "source": "https://betaflight.com/docs/wiki/guides/current/VTX",
       "reviewed_on": "2026-11-02",
       "notes": "Common VTX table; bandwidth and permitted channels depend on hardware and region. Not a drone-identity decoder.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-37",
@@ -820,7 +860,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Primary advertising channel.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-38",
@@ -840,7 +881,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Primary advertising channel.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-39",
@@ -860,7 +902,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Primary advertising channel.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-0",
@@ -880,7 +923,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-1",
@@ -900,7 +944,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-2",
@@ -920,7 +965,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-3",
@@ -940,7 +986,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-4",
@@ -960,7 +1007,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-5",
@@ -980,7 +1028,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-6",
@@ -1000,7 +1049,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-7",
@@ -1020,7 +1070,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-8",
@@ -1040,7 +1091,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-9",
@@ -1060,7 +1112,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-10",
@@ -1080,7 +1133,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-11",
@@ -1100,7 +1154,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-12",
@@ -1120,7 +1175,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-13",
@@ -1140,7 +1196,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-14",
@@ -1160,7 +1217,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-15",
@@ -1180,7 +1238,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-16",
@@ -1200,7 +1259,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-17",
@@ -1220,7 +1280,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-18",
@@ -1240,7 +1301,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-19",
@@ -1260,7 +1322,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-20",
@@ -1280,7 +1343,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-21",
@@ -1300,7 +1364,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-22",
@@ -1320,7 +1385,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-23",
@@ -1340,7 +1406,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-24",
@@ -1360,7 +1427,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-25",
@@ -1380,7 +1448,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-26",
@@ -1400,7 +1469,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-27",
@@ -1420,7 +1490,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-28",
@@ -1440,7 +1511,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-29",
@@ -1460,7 +1532,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-30",
@@ -1480,7 +1553,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-31",
@@ -1500,7 +1574,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-32",
@@ -1520,7 +1595,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-33",
@@ -1540,7 +1616,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-34",
@@ -1560,7 +1637,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-35",
@@ -1580,7 +1658,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "ble-36",
@@ -1600,7 +1679,8 @@
       "source": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core_v6.3/out/en/low-energy-controller/radio-physical-layer-specification.html",
       "reviewed_on": "2026-11-02",
       "notes": "Data / secondary-advertising channel; extended advertising is handled by the Bluetooth controller.",
-      "channel_spacing_mhz": 2
+      "channel_spacing_mhz": 2,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-1",
@@ -1620,7 +1700,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-2",
@@ -1640,7 +1721,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-3",
@@ -1660,7 +1742,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-4",
@@ -1680,7 +1763,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-5",
@@ -1700,7 +1784,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-6",
@@ -1720,7 +1805,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-7",
@@ -1740,7 +1826,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-8",
@@ -1760,7 +1847,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-9",
@@ -1780,7 +1868,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-10",
@@ -1800,7 +1889,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-11",
@@ -1820,7 +1910,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-12",
@@ -1840,7 +1931,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-13",
@@ -1860,7 +1952,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-14",
@@ -1880,7 +1973,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-36",
@@ -1900,7 +1994,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-40",
@@ -1920,7 +2015,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-44",
@@ -1940,7 +2036,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-48",
@@ -1960,7 +2057,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-52",
@@ -1980,7 +2078,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-56",
@@ -2000,7 +2099,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-60",
@@ -2020,7 +2120,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-64",
@@ -2040,7 +2141,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-100",
@@ -2060,7 +2162,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-104",
@@ -2080,7 +2183,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-108",
@@ -2100,7 +2204,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-112",
@@ -2120,7 +2225,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-116",
@@ -2140,7 +2246,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-120",
@@ -2160,7 +2267,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-124",
@@ -2180,7 +2288,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-128",
@@ -2200,7 +2309,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-132",
@@ -2220,7 +2330,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-136",
@@ -2240,7 +2351,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-140",
@@ -2260,7 +2372,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-144",
@@ -2280,7 +2393,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-149",
@@ -2300,7 +2414,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-153",
@@ -2320,7 +2435,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-157",
@@ -2340,7 +2456,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-161",
@@ -2360,7 +2477,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "wifi-165",
@@ -2380,7 +2498,8 @@
       "source": "https://github.com/torvalds/linux/blob/master/net/wireless/util.c",
       "reviewed_on": "2026-11-02",
       "notes": "Channel-center reference; actual supported channels, bandwidth and regulatory restrictions come from the local adapter/driver. Not all channels carry Remote ID.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "dji-droneid-2399-5",
@@ -2400,7 +2519,8 @@
       "source": "https://github.com/proto17/dji_droneid",
       "reviewed_on": "2026-11-02",
       "notes": "Published research centers; not all DJI models or operating modes. Approximately 10 MHz occupied signal; the decoder requires wider capture.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "dji-droneid-2414-5",
@@ -2420,7 +2540,8 @@
       "source": "https://github.com/proto17/dji_droneid",
       "reviewed_on": "2026-11-02",
       "notes": "Published research centers; not all DJI models or operating modes. Approximately 10 MHz occupied signal; the decoder requires wider capture.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "dji-droneid-2429-5",
@@ -2440,7 +2561,8 @@
       "source": "https://github.com/proto17/dji_droneid",
       "reviewed_on": "2026-11-02",
       "notes": "Published research centers; not all DJI models or operating modes. Approximately 10 MHz occupied signal; the decoder requires wider capture.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "dji-droneid-2444-5",
@@ -2460,7 +2582,8 @@
       "source": "https://github.com/proto17/dji_droneid",
       "reviewed_on": "2026-11-02",
       "notes": "Published research centers; not all DJI models or operating modes. Approximately 10 MHz occupied signal; the decoder requires wider capture.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "dji-droneid-2459-5",
@@ -2480,7 +2603,8 @@
       "source": "https://github.com/proto17/dji_droneid",
       "reviewed_on": "2026-11-02",
       "notes": "Published research centers; not all DJI models or operating modes. Approximately 10 MHz occupied signal; the decoder requires wider capture.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "dji-droneid-5756-5",
@@ -2500,7 +2624,8 @@
       "source": "https://github.com/proto17/dji_droneid",
       "reviewed_on": "2026-11-02",
       "notes": "Published research centers; not all DJI models or operating modes. Approximately 10 MHz occupied signal; the decoder requires wider capture.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "dji-droneid-5776-5",
@@ -2520,7 +2645,8 @@
       "source": "https://github.com/proto17/dji_droneid",
       "reviewed_on": "2026-11-02",
       "notes": "Published research centers; not all DJI models or operating modes. Approximately 10 MHz occupied signal; the decoder requires wider capture.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "dji-droneid-5796-5",
@@ -2540,7 +2666,8 @@
       "source": "https://github.com/proto17/dji_droneid",
       "reviewed_on": "2026-11-02",
       "notes": "Published research centers; not all DJI models or operating modes. Approximately 10 MHz occupied signal; the decoder requires wider capture.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "adsb-1090",
@@ -2560,7 +2687,8 @@
       "source": "https://github.com/wiedehopf/readsb",
       "reviewed_on": "2026-11-02",
       "notes": "Desktop live decoder. Ordinary aircraft stay separate from drone reports.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "uat-978",
@@ -2580,7 +2708,8 @@
       "source": "https://www.faa.gov/air_traffic/technology/adsb/faq",
       "reviewed_on": "2026-11-02",
       "notes": "UAT is not implemented by the bundled 1090 MHz readsb integration.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "spectrum-433",
@@ -2600,7 +2729,8 @@
       "source": "https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/dronemapper_node/storage.py",
       "reviewed_on": "2026-11-02",
       "notes": "Actual DRONEmapper sweep window; not an allocation boundary or identity classifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "spectrum-868",
@@ -2620,7 +2750,8 @@
       "source": "https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/dronemapper_node/storage.py",
       "reviewed_on": "2026-11-02",
       "notes": "Actual DRONEmapper sweep window; not an allocation boundary or identity classifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "spectrum-915",
@@ -2640,7 +2771,8 @@
       "source": "https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/dronemapper_node/storage.py",
       "reviewed_on": "2026-11-02",
       "notes": "Actual DRONEmapper sweep window; not an allocation boundary or identity classifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "spectrum-2400",
@@ -2660,7 +2792,8 @@
       "source": "https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/dronemapper_node/storage.py",
       "reviewed_on": "2026-11-02",
       "notes": "Actual DRONEmapper sweep window; not an allocation boundary or identity classifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "spectrum-5800",
@@ -2680,7 +2813,8 @@
       "source": "https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/dronemapper_node/storage.py",
       "reviewed_on": "2026-11-02",
       "notes": "Actual DRONEmapper sweep window; not an allocation boundary or identity classifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "spectrum-5900",
@@ -2700,7 +2834,8 @@
       "source": "https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/dronemapper_node/storage.py",
       "reviewed_on": "2026-11-02",
       "notes": "Actual DRONEmapper sweep window; not an allocation boundary or identity classifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "spectrum-1090",
@@ -2720,7 +2855,8 @@
       "source": "https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/dronemapper_node/storage.py",
       "reviewed_on": "2026-11-02",
       "notes": "Actual DRONEmapper sweep window; not an allocation boundary or identity classifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "spectrum-ais",
@@ -2740,7 +2876,8 @@
       "source": "https://github.com/ekomsSavior/DRONEmapper/blob/main/linux-node/dronemapper_node/storage.py",
       "reviewed_on": "2026-11-02",
       "notes": "Actual DRONEmapper sweep window; not an allocation boundary or identity classifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "elrs-868",
@@ -2760,7 +2897,8 @@
       "source": "https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lib/FHSS/FHSS.cpp",
       "reviewed_on": "2026-11-02",
       "notes": "Published hopping-channel endpoint span, reviewed 2026-11-02. Firmware and regulatory domain dependent. Not a continuous occupied bandwidth or a drone identifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "elrs-915",
@@ -2780,7 +2918,8 @@
       "source": "https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lib/FHSS/FHSS.cpp",
       "reviewed_on": "2026-11-02",
       "notes": "Published hopping-channel endpoint span, reviewed 2026-11-02. Firmware and regulatory domain dependent. Not a continuous occupied bandwidth or a drone identifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "elrs-2400",
@@ -2800,7 +2939,8 @@
       "source": "https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lib/FHSS/FHSS.cpp",
       "reviewed_on": "2026-11-02",
       "notes": "Published hopping-channel endpoint span, reviewed 2026-11-02. Firmware and regulatory domain dependent. Not a continuous occupied bandwidth or a drone identifier.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "cv2x-us",
@@ -2820,7 +2960,8 @@
       "source": "https://www.govinfo.gov/content/pkg/FR-2024-04-09/pdf/FR-2024-04-09.pdf",
       "reviewed_on": "2026-11-02",
       "notes": "US ITS allocation; range endpoints are not channel centers. Presence does not establish autonomy.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "automotive-radar",
@@ -2840,7 +2981,8 @@
       "source": "https://www.govinfo.gov/content/pkg/FR-2024-04-09/pdf/FR-2024-04-09.pdf",
       "reviewed_on": "2026-11-02",
       "notes": "Shared by ordinary and automated vehicles. No model or autonomy inference.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "uwb",
@@ -2860,7 +3002,8 @@
       "source": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15/subpart-F",
       "reviewed_on": "2026-11-02",
       "notes": "Broad UWB reference; not a single 6.5 GHz carrier or a universal bandwidth.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "gps-l1",
@@ -2880,7 +3023,8 @@
       "source": "https://www.navcen.uscg.gov/sites/default/files/pdf/gps/sigspec/2008-SPS-performance-standard.pdf",
       "reviewed_on": "2026-11-02",
       "notes": "Satellite-origin navigation signal. A nearby vehicle receiving GPS does not emit this as its identity.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "gps-l2",
@@ -2900,7 +3044,8 @@
       "source": "https://www.navcen.uscg.gov/sites/default/files/pdf/gps/sigspec/2008-SPS-performance-standard.pdf",
       "reviewed_on": "2026-11-02",
       "notes": "Satellite-origin navigation signal. A nearby vehicle receiving GPS does not emit this as its identity.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "gps-l5",
@@ -2920,7 +3065,8 @@
       "source": "https://www.navcen.uscg.gov/sites/default/files/pdf/gps/sigspec/2008-SPS-performance-standard.pdf",
       "reviewed_on": "2026-11-02",
       "notes": "Satellite-origin navigation signal. A nearby vehicle receiving GPS does not emit this as its identity.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "ais1",
@@ -2940,7 +3086,8 @@
       "source": "https://navcen.uscg.gov/international-vhf-marine-radio-channels-freq",
       "reviewed_on": "2026-11-02",
       "notes": "No AIS RF decoder bundled. AIS does not establish unmanned vessel status.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
     },
     {
       "id": "ais2",
@@ -2960,7 +3107,995 @@
       "source": "https://navcen.uscg.gov/international-vhf-marine-radio-channels-freq",
       "reviewed_on": "2026-11-02",
       "notes": "No AIS RF decoder bundled. AIS does not establish unmanned vessel status.",
-      "channel_spacing_mhz": null
+      "channel_spacing_mhz": null,
+      "system_profile_ids": ""
+    },
+    {
+      "id": "model-dji-mini4pro-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI DJI Mini 4 Pro · DJI O4 and Wi-Fi 5",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mini-4-pro/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mini4pro"
+    },
+    {
+      "id": "model-dji-mini4pro-5170-5250",
+      "band": "Published model radio",
+      "system": "DJI DJI Mini 4 Pro · DJI O4 and Wi-Fi 5",
+      "frequency_mhz": null,
+      "range_start_mhz": 5170,
+      "range_end_mhz": 5250,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mini-4-pro/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mini4pro"
+    },
+    {
+      "id": "model-dji-mini4pro-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI DJI Mini 4 Pro · DJI O4 and Wi-Fi 5",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mini-4-pro/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mini4pro"
+    },
+    {
+      "id": "model-dji-air-3-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI Air 3 · O4 aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/air-3/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-air-3"
+    },
+    {
+      "id": "model-dji-air-3-5170-5250",
+      "band": "Published model radio",
+      "system": "DJI Air 3 · O4 aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5170,
+      "range_end_mhz": 5250,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/air-3/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-air-3"
+    },
+    {
+      "id": "model-dji-air-3-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI Air 3 · O4 aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/air-3/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-air-3"
+    },
+    {
+      "id": "model-dji-air-3s-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI Air 3S · O4 aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/air-3s/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-air-3s"
+    },
+    {
+      "id": "model-dji-air-3s-5170-5250",
+      "band": "Published model radio",
+      "system": "DJI Air 3S · O4 aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5170,
+      "range_end_mhz": 5250,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/air-3s/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-air-3s"
+    },
+    {
+      "id": "model-dji-air-3s-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI Air 3S · O4 aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/air-3s/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-air-3s"
+    },
+    {
+      "id": "model-dji-avata-2-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI Avata 2 · O4 aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/avata-2/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-avata-2"
+    },
+    {
+      "id": "model-dji-avata-2-5170-5250",
+      "band": "Published model radio",
+      "system": "DJI Avata 2 · O4 aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5170,
+      "range_end_mhz": 5250,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/avata-2/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-avata-2"
+    },
+    {
+      "id": "model-dji-avata-2-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI Avata 2 · O4 aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/avata-2/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-avata-2"
+    },
+    {
+      "id": "model-dji-mini5pro-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI Mini 5 Pro · O4+",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mini5pro"
+    },
+    {
+      "id": "model-dji-mini5pro-5170-5250",
+      "band": "Published model radio",
+      "system": "DJI Mini 5 Pro · O4+",
+      "frequency_mhz": null,
+      "range_start_mhz": 5170,
+      "range_end_mhz": 5250,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mini5pro"
+    },
+    {
+      "id": "model-dji-mini5pro-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI Mini 5 Pro · O4+",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/uk/mini-5-pro/specs?set_region=GB&site=brandsite",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mini5pro"
+    },
+    {
+      "id": "model-dji-robomaster-ep-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI RoboMaster EP · Wi-Fi",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/robomaster-ep/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-robomaster-ep"
+    },
+    {
+      "id": "model-dji-robomaster-ep-5170-5250",
+      "band": "Published model radio",
+      "system": "DJI RoboMaster EP · Wi-Fi",
+      "frequency_mhz": null,
+      "range_start_mhz": 5170,
+      "range_end_mhz": 5250,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/robomaster-ep/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-robomaster-ep"
+    },
+    {
+      "id": "model-dji-robomaster-ep-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI RoboMaster EP · Wi-Fi",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/robomaster-ep/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-robomaster-ep"
+    },
+    {
+      "id": "model-dji-mini-3-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI Mini 3 · O2 link",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mini-3/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mini-3"
+    },
+    {
+      "id": "model-dji-mini-3-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI Mini 3 · O2 link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mini-3/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mini-3"
+    },
+    {
+      "id": "model-dji-mavic-3-classic-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI Mavic 3 Classic · O3+ and Wi-Fi transfer",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mavic-3-classic/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mavic-3-classic"
+    },
+    {
+      "id": "model-dji-mavic-3-classic-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI Mavic 3 Classic · O3+ and Wi-Fi transfer",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mavic-3-classic/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mavic-3-classic"
+    },
+    {
+      "id": "model-dji-mavic-3-pro-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI Mavic 3 Pro · O3+ aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mavic-3-pro/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mavic-3-pro"
+    },
+    {
+      "id": "model-dji-mavic-3-pro-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI Mavic 3 Pro · O3+ aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mavic-3-pro/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mavic-3-pro"
+    },
+    {
+      "id": "model-dji-mavic-3-pro-cine-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI Mavic 3 Pro Cine · O3+ aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mavic-3-pro/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mavic-3-pro-cine"
+    },
+    {
+      "id": "model-dji-mavic-3-pro-cine-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI Mavic 3 Pro Cine · O3+ aircraft link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/mavic-3-pro/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-mavic-3-pro-cine"
+    },
+    {
+      "id": "model-dji-m300rtk-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI M300 RTK · Control link",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/support/product/matrice-300",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-m300rtk"
+    },
+    {
+      "id": "model-dji-m300rtk-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI M300 RTK · Control link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.dji.com/support/product/matrice-300",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-m300rtk"
+    },
+    {
+      "id": "model-dji-m30-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI M30 · O3 Enterprise",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://enterprise.dji.com/matrice-30/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-m30"
+    },
+    {
+      "id": "model-dji-m30-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI M30 · O3 Enterprise",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://enterprise.dji.com/matrice-30/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-m30"
+    },
+    {
+      "id": "model-dji-m30t-2400-2483p5",
+      "band": "Published model radio",
+      "system": "DJI M30T · O3 Enterprise",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://enterprise.dji.com/matrice-30/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-m30t"
+    },
+    {
+      "id": "model-dji-m30t-5725-5850",
+      "band": "Published model radio",
+      "system": "DJI M30T · O3 Enterprise",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://enterprise.dji.com/matrice-30/specs",
+      "reviewed_on": "2026-11-04",
+      "notes": "Model and regional configuration apply; this band is reference data, not a received observation.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "dji-m30t"
+    },
+    {
+      "id": "model-skydio-2-plus-5180-5240",
+      "band": "Published model radio",
+      "system": "Skydio Skydio 2+ · Wi-Fi / Skydio Link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5180,
+      "range_end_mhz": 5240,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://support.skydio.com/hc/article_attachments/15085615535387",
+      "reviewed_on": "2026-11-04",
+      "notes": "Wi-Fi widths 20/40/80 MHz; Skydio Link 5/10 MHz. Platform specification; hardware revision and region matter.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "skydio-2-plus"
+    },
+    {
+      "id": "model-skydio-2-plus-5725-5850",
+      "band": "Published model radio",
+      "system": "Skydio Skydio 2+ · Wi-Fi / Skydio Link",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://support.skydio.com/hc/article_attachments/15085615535387",
+      "reviewed_on": "2026-11-04",
+      "notes": "Wi-Fi widths 20/40/80 MHz; Skydio Link 5/10 MHz. Platform specification; hardware revision and region matter.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "skydio-2-plus"
+    },
+    {
+      "id": "model-skydio-beacon-manual2022-5150-5250",
+      "band": "Published model radio",
+      "system": "Skydio Skydio Beacon · Manual radio specification",
+      "frequency_mhz": null,
+      "range_start_mhz": 5150,
+      "range_end_mhz": 5250,
+      "bandwidth_mhz": 20,
+      "bandwidth_basis": "manual channel width",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://support.skydio.com/hc/article_attachments/5592430339867",
+      "reviewed_on": "2026-11-04",
+      "notes": "Original Beacon manual v19 specification only; not Beacon+. Regulatory coverage can differ.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "skydio-beacon-manual2022"
+    },
+    {
+      "id": "model-skydio-beacon-manual2022-5725-5850",
+      "band": "Published model radio",
+      "system": "Skydio Skydio Beacon · Manual radio specification",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": 20,
+      "bandwidth_basis": "manual channel width",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://support.skydio.com/hc/article_attachments/5592430339867",
+      "reviewed_on": "2026-11-04",
+      "notes": "Original Beacon manual v19 specification only; not Beacon+. Regulatory coverage can differ.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "skydio-beacon-manual2022"
+    },
+    {
+      "id": "model-skydio-beacon-plus-store-2400-2483",
+      "band": "Published model radio",
+      "system": "Skydio Skydio Beacon+ · Store radio specification",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://shop.skydio.com/collections/essential-accessories/products/skydio-2-plus-beacon",
+      "reviewed_on": "2026-11-04",
+      "notes": "Beacon+ store specification: Wi-Fi widths 20/40/80 MHz, Link 5/10 MHz. Older combined manual differs; retain revision boundaries.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "skydio-beacon-plus-store"
+    },
+    {
+      "id": "model-skydio-beacon-plus-store-5180-5240",
+      "band": "Published model radio",
+      "system": "Skydio Skydio Beacon+ · Store radio specification",
+      "frequency_mhz": null,
+      "range_start_mhz": 5180,
+      "range_end_mhz": 5240,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://shop.skydio.com/collections/essential-accessories/products/skydio-2-plus-beacon",
+      "reviewed_on": "2026-11-04",
+      "notes": "Beacon+ store specification: Wi-Fi widths 20/40/80 MHz, Link 5/10 MHz. Older combined manual differs; retain revision boundaries.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "skydio-beacon-plus-store"
+    },
+    {
+      "id": "model-skydio-beacon-plus-store-5725-5850",
+      "band": "Published model radio",
+      "system": "Skydio Skydio Beacon+ · Store radio specification",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://shop.skydio.com/collections/essential-accessories/products/skydio-2-plus-beacon",
+      "reviewed_on": "2026-11-04",
+      "notes": "Beacon+ store specification: Wi-Fi widths 20/40/80 MHz, Link 5/10 MHz. Older combined manual differs; retain revision boundaries.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "skydio-beacon-plus-store"
+    },
+    {
+      "id": "model-parrot-anafi-ukr-gov-8501-863-870",
+      "band": "Published model radio",
+      "system": "Parrot ANAFI UKR GOV · GOV links",
+      "frequency_mhz": null,
+      "range_start_mhz": 863,
+      "range_end_mhz": 870,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF / RTL-SDR spectrum; no identity decoder",
+      "source": "https://www.parrot.com/assets/s3fs-public/document/ANAFI%20UKR%20GOV%20user%20guide.pdf",
+      "reviewed_on": "2026-11-04",
+      "notes": "GOV v8.5.0.1 backup LoRa, EU configuration only. Does not identify a drone or decode its link.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "parrot-anafi-ukr-gov-8501"
+    },
+    {
+      "id": "model-parrot-anafi-ukr-gov-8501-902-928",
+      "band": "Published model radio",
+      "system": "Parrot ANAFI UKR GOV · GOV links",
+      "frequency_mhz": null,
+      "range_start_mhz": 902,
+      "range_end_mhz": 928,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF / RTL-SDR spectrum; no identity decoder",
+      "source": "https://www.parrot.com/assets/s3fs-public/document/ANAFI%20UKR%20GOV%20user%20guide.pdf",
+      "reviewed_on": "2026-11-04",
+      "notes": "GOV v8.5.0.1 backup LoRa, US configuration only. Not applicable to every ANAFI UKR variant.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "parrot-anafi-ukr-gov-8501"
+    },
+    {
+      "id": "model-autel-evo-ii-pro-v3-902-928",
+      "band": "Published model radio",
+      "system": "Autel Robotics EVO II Pro V3 · SkyLink 2.0 and regional bands",
+      "frequency_mhz": null,
+      "range_start_mhz": 902,
+      "range_end_mhz": 928,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF / RTL-SDR spectrum; no identity decoder",
+      "source": "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+      "reviewed_on": "2026-11-04",
+      "notes": "V3 aircraft table: 902–928 FCC/ISED; 5150–5250 FCC. SRRC limits 2.4/5.8 upper edges to 2476/5829 MHz. Region and firmware determine availability.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "autel-evo-ii-pro-v3"
+    },
+    {
+      "id": "model-autel-evo-ii-pro-v3-2400-2483p5",
+      "band": "Published model radio",
+      "system": "Autel Robotics EVO II Pro V3 · SkyLink 2.0 and regional bands",
+      "frequency_mhz": null,
+      "range_start_mhz": 2400,
+      "range_end_mhz": 2483.5,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+      "reviewed_on": "2026-11-04",
+      "notes": "V3 aircraft table: 902–928 FCC/ISED; 5150–5250 FCC. SRRC limits 2.4/5.8 upper edges to 2476/5829 MHz. Region and firmware determine availability.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "autel-evo-ii-pro-v3"
+    },
+    {
+      "id": "model-autel-evo-ii-pro-v3-5150-5250",
+      "band": "Published model radio",
+      "system": "Autel Robotics EVO II Pro V3 · SkyLink 2.0 and regional bands",
+      "frequency_mhz": null,
+      "range_start_mhz": 5150,
+      "range_end_mhz": 5250,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+      "reviewed_on": "2026-11-04",
+      "notes": "V3 aircraft table: 902–928 FCC/ISED; 5150–5250 FCC. SRRC limits 2.4/5.8 upper edges to 2476/5829 MHz. Region and firmware determine availability.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "autel-evo-ii-pro-v3"
+    },
+    {
+      "id": "model-autel-evo-ii-pro-v3-5725-5850",
+      "band": "Published model radio",
+      "system": "Autel Robotics EVO II Pro V3 · SkyLink 2.0 and regional bands",
+      "frequency_mhz": null,
+      "range_start_mhz": 5725,
+      "range_end_mhz": 5850,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "published-frequency-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://shop.autelrobotics.com/pages/evo-ii-pro-v3-specifications-aircraft",
+      "reviewed_on": "2026-11-04",
+      "notes": "V3 aircraft table: 902–928 FCC/ISED; 5150–5250 FCC. SRRC limits 2.4/5.8 upper edges to 2476/5829 MHz. Region and firmware determine availability.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "autel-evo-ii-pro-v3"
+    },
+    {
+      "id": "model-parrot-anafi-ai-2412-2462",
+      "band": "Published model radio",
+      "system": "Parrot ANAFI Ai · Wi-Fi and LTE",
+      "frequency_mhz": null,
+      "range_start_mhz": 2412,
+      "range_end_mhz": 2462,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "channel-center-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.parrot.com/en/drones/anafi-ai/technical-documentation/connectivity",
+      "reviewed_on": "2026-11-04",
+      "notes": "EU/US published Wi-Fi channel centers, not occupied band edges. Adaptive 10 MHz mode is documented; no universal channel width assumed.",
+      "channel_spacing_mhz": 5,
+      "system_profile_ids": "parrot-anafi-ai"
+    },
+    {
+      "id": "model-parrot-anafi-ai-5745-5825",
+      "band": "Published model radio",
+      "system": "Parrot ANAFI Ai · Wi-Fi and LTE",
+      "frequency_mhz": null,
+      "range_start_mhz": 5745,
+      "range_end_mhz": 5825,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified; see model reference",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled model-specific identity decoder",
+      "observation_kind": "channel-center-range",
+      "identity_scope": "Shared radio spectrum; no device identity from frequency alone",
+      "receiver": "HackRF spectrum; compatible Wi-Fi receiver only for Wi-Fi frames",
+      "source": "https://www.parrot.com/en/drones/anafi-ai/technical-documentation/connectivity",
+      "reviewed_on": "2026-11-04",
+      "notes": "EU/US published Wi-Fi channel centers, not occupied band edges. Adaptive 10 MHz mode is documented; no universal channel width assumed.",
+      "channel_spacing_mhz": 20,
+      "system_profile_ids": "parrot-anafi-ai"
     }
   ]
 }

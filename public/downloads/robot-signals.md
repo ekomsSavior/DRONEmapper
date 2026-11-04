@@ -1,6 +1,6 @@
 # Robot dogs and ground robots
 
-Church of Malware / saviorSEC · Android 0.9.0 · Desktop 0.7.1
+Church of Malware / saviorSEC · Android 0.9.1 · Desktop 0.7.2
 
 This release adds eight documented Wi-Fi/Bluetooth patterns to the scanner. Matches
 appear as **possible robot dogs** or **possible ground robots** in the live list
@@ -9,7 +9,7 @@ or copied, and a controller can be separate from its robot.
 
 ## Start a field test
 
-1. Update the Android APK over the existing app, or install Desktop 0.7.1. Keep your
+1. Update the Android APK over the existing app, or install Desktop 0.7.2. Keep your
    existing account and settings. Start listening.
 2. For Wi-Fi, enable the phone's Wi-Fi and location permissions, or select a
    dedicated desktop adapter in monitor mode. Android's built-in scans are scheduled
@@ -139,3 +139,9 @@ Manufacturer-documented direct Wi-Fi naming pattern. Router mode, renamed access
 Manufacturer-documented direct Wi-Fi naming pattern. Router mode, renamed access points and other models are not covered.
 
 - [Manufacturer documentation / source 1](https://dl.djicdn.com/downloads/ROBOMASTER_EP/20220429UM/RoboMaster_EP_User_Manual_v1.2_EN_1.pdf)
+
+## November 4 radio update
+
+Android 0.9.1 and Desktop 0.7.2 recognize the exact `Turtlebot4` setup Wi-Fi name as a possible ground robot. The manufacturer documents this 5 GHz access point on first boot. Renamed/client networks do not match, and another access point or standalone Raspberry Pi image can use the same name. This is a candidate, not confirmed identity or a robot coordinate. [Setup documentation](https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html).
+
+Both scanners include searchable, offline model radio references under Device reference. These references retain configuration and source links; they do not add proprietary link decoders. The live map shows published model radio details separately from received measurements. No physical TurtleBot reception test has been performed.

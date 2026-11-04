@@ -200,3 +200,9 @@ Bluetooth SIG, Linux wireless, Betaflight, ExpressLRS, proto17/dji_droneid,
 readsb, FAA, USCG and regulatory publications in each row. Product and network
 references link their respective manufacturer or project documentation.
 Retain source links, review dates, evidence scope and this attribution when sharing.
+
+### Model radio enrichment — 2026-11-04
+
+The RF table now has 195 entries, including 47 model-specific frequency ranges from reviewed manuals. `system_profile_ids` is a semicolon-separated list of exact hardware profile IDs; it is empty on protocol-wide rows. `channel-center-range` denotes channel centers and spacing, not occupied band edges. Region, accessory and hardware revision restrictions remain in the notes and linked profile.
+
+The global JSON now includes `system-radio-reference` and `model-frequency-reference` records under each matching device’s `rf_information`, with evidence and configuration boundaries. The OUI and RID lists remain restricted to verified allocations; hardware research does not create new MAC assignments or serial ranges.

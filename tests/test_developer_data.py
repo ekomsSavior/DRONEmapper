@@ -134,6 +134,27 @@ class DeveloperDataTests(unittest.TestCase):
         zipline=equipment['2BML6P2EV1-0']['system_breakdown']
         self.assertIn('Bluetooth and 5 GHz are disabled',json.dumps(zipline['sections']['radios']))
 
+    def test_system_radio_facts_and_frequency_rows_join_only_exact_profiles(self):
+        devices=self.global_data['devices']
+        mini=next(d for d in devices if d['maker']=='DJI' and d['name']=='DJI Mini 4 Pro')
+        bands=next(r for r in mini['rf_information'] if r['kind']=='model-frequency-reference')['channels']
+        self.assertEqual({b['system_profile_ids'] for b in bands},{'dji-mini4pro'})
+        self.assertEqual([(b['range_start_mhz'],b['range_end_mhz']) for b in bands],[(2400,2483.5),(5170,5250),(5725,5850)])
+        self.assertTrue(any(r.get('profile_id')=='dji-mini4pro' for r in mini['rf_information']))
+        self.assertEqual(mini['scanner_signatures'],[])
+        rows={r['id']:r for r in self.global_data['rf_channels']}
+        for lo,hi,spacing in [(2412,2462,5),(5745,5825,20)]:
+            r=rows[f'model-parrot-anafi-ai-{lo}-{hi}']
+            self.assertEqual(r['observation_kind'],'channel-center-range')
+            self.assertEqual(r['channel_spacing_mhz'],spacing)
+            self.assertIsNone(r['bandwidth_mhz'])
+        for d in devices:
+            ids={c['id'] for c in d['system_breakdown']['configurations']}
+            for r in d['rf_information']:
+                if r['kind']=='system-radio-reference':self.assertIn(r['profile_id'],ids)
+                if r['kind']=='model-frequency-reference':
+                    for b in r['channels']:self.assertTrue(ids.intersection(b['system_profile_ids'].split(';')))
+
     def test_csv_is_reversible_and_not_spreadsheet_executable(self):
         cases=['=1+1','  =1+1','+cmd','-cmd','@SUM(1)',"'literal",'\tformula','line,quote"\nnext']
         rows=list(csv.DictReader(io.StringIO(export.csv_bytes(['text'],[{'text':s} for s in cases]).decode())))

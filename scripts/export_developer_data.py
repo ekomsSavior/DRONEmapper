@@ -76,7 +76,9 @@ def rid_rows():
 def rf_rows():
     rows=json.loads((ROOT/'integration/rf-channels.json').read_text())['channels']
     seen=set()
+    profile_ids={p['id'] for p in json.loads((ROOT/'integration/device-systems.json').read_text())['profiles']}
     for r in rows:
+        if any(pid and pid not in profile_ids for pid in r.get('system_profile_ids','').split(';')):raise ValueError('Unknown RF system profile')
         if r['id'] in seen:raise ValueError('Duplicate RF entry')
         seen.add(r['id'])
         if not r['source'].startswith('https://'):raise ValueError('RF source URL required')
@@ -86,6 +88,9 @@ def rf_rows():
         elif not isinstance(center,(int,float)) or center<=0 or lo is not None or hi is not None:
             raise ValueError('Do not conflate frequency centers and band edges')
     return sorted(rows,key=lambda r:r['id'])
+
+def catalog_release():
+    return max(json.loads((ROOT/path).read_text())['reviewed_on'] for path in ('integration/device-oui.json','integration/device-systems.json','integration/rf-channels.json','integration/robot-signatures.json'))
 
 def artifacts():
     collections=[('oui-global.csv',oui_rows()),('rid-prefixes.csv',rid_rows()),('rf-channels.csv',rf_rows())]
@@ -98,8 +103,8 @@ def artifacts():
     data=(json.dumps(global_data,ensure_ascii=False,indent=2)+'\n').encode()
     outputs['devices-global.json']=data
     entries.append(dict(file='devices-global.json',url='/downloads/data/devices-global.json',rows=len(global_data['devices']),bytes=len(data),sha256=sha(data),collections=global_data['counts']))
-    inputs=['integration/device-oui.json','worker/rid-catalog.mjs','integration/security-device-references.json','integration/rf-channels.json','integration/fcc-references.json','integration/robot-platforms.json','integration/robot-signatures.json','integration/aircraft-references.json','integration/drone-platforms.json','integration/cloud-surfaces.json','public/device-inventory.json','docs/device-links.json','scripts/export_device_catalog.mjs','scripts/export_developer_data.py','scripts/device_radio_export.py','integration/device-systems.json','public/device-system-model.mjs','public/device-system-data.mjs','scripts/enrich_device_systems.mjs','scripts/sync-device-systems.py']
-    manifest=dict(schema_version=SCHEMA_VERSION,release=scoped_oui()['reviewed_on'],encoding='UTF-8',line_endings='CRLF',delimiter=',',scope='Drone, autonomous-vehicle, robot and associated equipment research. MAC allocations are restricted to explicitly reviewed relevant manufacturers.',datasets=entries,inputs=[dict(path=p,sha256=sha((ROOT/p).read_bytes())) for p in inputs],upstream_rights='See README.md and upstream sources; no blanket relicensing of third-party material.')
+    inputs=['integration/device-oui.json','worker/rid-catalog.mjs','integration/security-device-references.json','integration/rf-channels.json','integration/fcc-references.json','integration/robot-platforms.json','integration/robot-signatures.json','integration/aircraft-references.json','integration/drone-platforms.json','integration/cloud-surfaces.json','public/device-inventory.json','docs/device-links.json','scripts/export_device_catalog.mjs','scripts/export_developer_data.py','scripts/device_radio_export.py','integration/device-systems.json','public/device-system-model.mjs','public/device-profile-match.mjs','scripts/sync-radio-references.py','public/device-system-data.mjs','scripts/enrich_device_systems.mjs','scripts/sync-device-systems.py']
+    manifest=dict(schema_version=SCHEMA_VERSION,release=catalog_release(),encoding='UTF-8',line_endings='CRLF',delimiter=',',scope='Drone, autonomous-vehicle, robot and associated equipment research. MAC allocations are restricted to explicitly reviewed relevant manufacturers.',datasets=entries,inputs=[dict(path=p,sha256=sha((ROOT/p).read_bytes())) for p in inputs],upstream_rights='See README.md and upstream sources; no blanket relicensing of third-party material.')
     outputs['manifest.json']=(json.dumps(manifest,indent=2)+'\n').encode()
     outputs['SHA256SUMS.txt']=''.join(sha(data)+'  '+name+'\n' for name,data in sorted(outputs.items())).encode()
     return outputs
@@ -132,7 +137,7 @@ def global_devices(collections):
     rows.sort(key=lambda r:(r['maker'].casefold(),r['name'].casefold(),r['catalog_id']))
     if len({r['catalog_id'] for r in rows})!=len(rows):raise ValueError('Duplicate global catalog identities')
     oui=[{**r,'evidence_scope':'manufacturer-only'} for r in scoped_oui()['allocations']]
-    result=dict(schema_version=1,release=scoped_oui()['reviewed_on'],scope='Complete snapshot of the included DRONEmapper catalogs and contributed equipment index. Not an exhaustive inventory of all products worldwide; evidence status is field-specific.',map_inventory_generated_at=website['map_inventory_generated_at'],devices=rows,
+    result=dict(schema_version=1,release=catalog_release(),scope='Complete snapshot of the included DRONEmapper catalogs and contributed equipment index. Not an exhaustive inventory of all products worldwide; evidence status is field-specific.',map_inventory_generated_at=website['map_inventory_generated_at'],devices=rows,
         radio_allocations=oui,radio_allocation_provenance={k:v for k,v in scoped_oui().items() if k!='allocations'},
         remote_id_rules=rid,rf_channels=collections[2][1],robot_signatures=read('integration/robot-signatures.json'),
         cloud_services=read('integration/cloud-surfaces.json'),vendor_flows=website['flows'],

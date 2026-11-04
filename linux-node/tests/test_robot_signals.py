@@ -69,7 +69,7 @@ class RobotTests(unittest.TestCase):
 
     def test_wifi_and_petoi_patterns_are_strict(self):
         from dronemapper_node.protocol import camera_signature
-        for name in ('Unitree_Go1ABC123','Bittle-AP','RMS1-ABC123','RMEP-12AB34'):
+        for name in ('Unitree_Go1ABC123','Bittle-AP','RMS1-ABC123','RMEP-12AB34','Turtlebot4'):
             self.assertIsNotNone(wifi_robot_signature(name))
             self.assertEqual(camera_signature(name),wifi_robot_signature(name))
             for bad in (name+'\n',name+'x',' '+name):self.assertIsNone(wifi_robot_signature(bad))
