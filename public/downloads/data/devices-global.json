@@ -36227,8 +36227,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-agras-t10-reference",
+            "configuration": "Published T10 specification. Flight-computer silicon and onboard memory are unspecified. Ground-controller resources are explicitly separated from aircraft hardware.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -36237,28 +36243,117 @@
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Ground controller only",
+                "details": "RM500-ENT has 4 GB LPDDR4 and 32 GB storage, with microSD support up to 128 GB. These are not aircraft RAM/storage.",
+                "sources": [
+                  "https://ag.dji.com/t10/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t10-reference",
+                "configuration": "Published T10 specification. Flight-computer silicon and onboard memory are unspecified. Ground-controller resources are explicitly separated from aircraft hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control link",
+                "details": "OcuSync 2.0: 2.4000–2.4835 and 5.725–5.850 GHz, subject to regional configuration.",
+                "sources": [
+                  "https://ag.dji.com/t10/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t10-reference",
+                "configuration": "Published T10 specification. Flight-computer silicon and onboard memory are unspecified. Ground-controller resources are explicitly separated from aircraft hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Radar and video",
+                "details": "RD2424R omnidirectional radar and RD2414U upward radar operate at 24.05–24.25 GHz. Front/rear FPV cameras provide 1280×720 video at 15–30 fps.",
+                "sources": [
+                  "https://ag.dji.com/t10/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t10-reference",
+                "configuration": "Published T10 specification. Flight-computer silicon and onboard memory are unspecified. Ground-controller resources are explicitly separated from aircraft hardware.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Positioning",
+                "details": "GNSS plus RTK using GPS, GLONASS, BeiDou and Galileo signals in the published RTK configuration.",
+                "sources": [
+                  "https://www.dji.com/support/product/t10"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t10-reference",
+                "configuration": "Published T10 specification. Flight-computer silicon and onboard memory are unspecified. Ground-controller resources are explicitly separated from aircraft hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and propulsion",
+                "details": "BAX501-9500mAh-51.8V flight pack; 9.5 Ah, 51.8 V. 84 KV motors with 100×10 mm stators and 33×9-inch propellers.",
+                "sources": [
+                  "https://ag.dji.com/t10/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t10-reference",
+                "configuration": "Published T10 specification. Flight-computer silicon and onboard memory are unspecified. Ground-controller resources are explicitly separated from aircraft hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Spray assembly",
+                "details": "Eight-litre tank; four nozzles, with XR11001VS listed as standard.",
+                "sources": [
+                  "https://ag.dji.com/t10/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t10-reference",
+                "configuration": "Published T10 specification. Flight-computer silicon and onboard memory are unspecified. Ground-controller resources are explicitly separated from aircraft hardware.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Ground controller",
+                "details": "RM500-ENT: 5.5-inch 1080p display and HDMI 1.4; Wi-Fi a/g/n/ac and Bluetooth 4.2.",
+                "sources": [
+                  "https://ag.dji.com/t10/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t10-reference",
+                "configuration": "Published T10 specification. Flight-computer silicon and onboard memory are unspecified. Ground-controller resources are explicitly separated from aircraft hardware.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -36296,11 +36391,6 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -37067,8 +37157,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-agras-t25p-reference",
+            "configuration": "T25P specification and April 2026 English manual. No exact onboard processor, RAM or storage is published; T25 components are not automatically assigned to T25P.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -37082,28 +37178,118 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Aircraft communications",
+                "details": "OcuSync image-transmission antennas. Optional Enhanced Transmission combines that link with 4G using a separately installed cellular dongle/SIM; availability depends on service and region.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t60_t25p/20260409/T25P_User_Manual_v1.0_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t25p-reference",
+                "configuration": "T25P specification and April 2026 English manual. No exact onboard processor, RAM or storage is published; T25 components are not automatically assigned to T25P.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Obstacle sensing",
+                "details": "Front/rear phased-array radars at 24.05–24.25 GHz plus a three-camera vision system.",
+                "sources": [
+                  "https://ag.dji.com/t25p/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t25p-reference",
+                "configuration": "T25P specification and April 2026 English manual. No exact onboard processor, RAM or storage is published; T25 components are not automatically assigned to T25P.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation and operator view",
+                "details": "Onboard D-RTK antennas, FPV camera and spotlight are identified in the aircraft diagram.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t60_t25p/20260409/T25P_User_Manual_v1.0_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t25p-reference",
+                "configuration": "T25P specification and April 2026 English manual. No exact onboard processor, RAM or storage is published; T25 components are not automatically assigned to T25P.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight power",
+                "details": "DB800 battery: 15.5 Ah, 52.22 V. Four 50-inch propellers, 59 KV motors with 100×28 mm stators and electronic speed controllers.",
+                "sources": [
+                  "https://ag.dji.com/t25p/specs",
+                  "https://dl.djicdn.com/downloads/t60_t25p/20260409/T25P_User_Manual_v1.0_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t25p-reference",
+                "configuration": "T25P specification and April 2026 English manual. No exact onboard processor, RAM or storage is published; T25 components are not automatically assigned to T25P.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Application hardware",
+                "details": "20 L spray tank, two LX07550SX sprinklers and two magnetic-drive impeller pumps; optional four-sprinkler setup. Spreading System 4.0 uses a 30 L tank and centrifugal disc.",
+                "sources": [
+                  "https://ag.dji.com/t25p/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t25p-reference",
+                "configuration": "T25P specification and April 2026 English manual. No exact onboard processor, RAM or storage is published; T25 components are not automatically assigned to T25P.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Ground equipment",
+                "details": "TKPL 2 controller with seven-inch 1920×1200 touchscreen and USB-C charging. D6000i is a ground charging generator, not an onboard engine.",
+                "sources": [
+                  "https://ag.dji.com/t25p/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t25p-reference",
+                "configuration": "T25P specification and April 2026 English manual. No exact onboard processor, RAM or storage is published; T25 components are not automatically assigned to T25P.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operation and servicing",
+                "details": "DJI Agras provides mission/control functions; DJI Assistant 2 supports firmware servicing.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/t60_t25p/20260409/T25P_User_Manual_v1.0_en.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-agras-t25p-reference",
+                "configuration": "T25P specification and April 2026 English manual. No exact onboard processor, RAM or storage is published; T25 components are not automatically assigned to T25P.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -37136,12 +37322,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -41017,8 +41198,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dji-flycart100-reference",
+            "configuration": "Current FlyCart 100 specification and English v1.0 manual. CPU, RAM and aircraft storage remain unspecified. Ground charging equipment is not onboard hybrid propulsion.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -41032,28 +41219,118 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "O4 link",
+                "details": "2.400–2.4835 and 5.725–5.850 GHz; four antennas with 2T4R. 4G Enhanced Transmission is also listed; 1080p/30 fps live view.",
+                "sources": [
+                  "https://www.dji.com/flycart-100/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart100-reference",
+                "configuration": "Current FlyCart 100 specification and English v1.0 manual. CPU, RAM and aircraft storage remain unspecified. Ground charging equipment is not onboard hybrid propulsion.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and perception",
+                "details": "D-RTK antennas, LiDAR, front/downward radars, vision system and FPV camera. Exact sensor chips and radar frequency are not established.",
+                "sources": [
+                  "https://dl.djicdn.com/downloads/DJI_FlyCart_100/20251127/DJI_FlyCart_100_User_Manual_v1.0_en_i.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart100-reference",
+                "configuration": "Current FlyCart 100 specification and English v1.0 manual. CPU, RAM and aircraft storage remain unspecified. Ground charging equipment is not onboard hybrid propulsion.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric propulsion",
+                "details": "Four arms with coaxial motor pairs; 62-inch propellers and 60 KV motors. Dual batteries supported; single-battery mode is for emergencies.",
+                "sources": [
+                  "https://www.dji.com/flycart-100/specs",
+                  "https://dl.djicdn.com/downloads/DJI_FlyCart_100/20251127/DJI_FlyCart_100_User_Manual_v1.0_en_i.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart100-reference",
+                "configuration": "Current FlyCart 100 specification and English v1.0 manual. CPU, RAM and aircraft storage remain unspecified. Ground charging equipment is not onboard hybrid propulsion.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery alternatives",
+                "details": "DB2160 or DB2212: each rated 41 Ah at 52 V. The two models are alternatives, not an instruction to mix them.",
+                "sources": [
+                  "https://www.dji.com/flycart-100/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart100-reference",
+                "configuration": "Current FlyCart 100 specification and English v1.0 manual. CPU, RAM and aircraft storage remain unspecified. Ground charging equipment is not onboard hybrid propulsion.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Cargo mechanisms",
+                "details": "A2EWH-100A flagship winch with up to 30 m cable, or A2EDL-100A dual-battery lifting system with 10 m cable. These are alternative cargo configurations.",
+                "sources": [
+                  "https://www.dji.com/flycart-100/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart100-reference",
+                "configuration": "Current FlyCart 100 specification and English v1.0 manual. CPU, RAM and aircraft storage remain unspecified. Ground charging equipment is not onboard hybrid propulsion.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Ground control and expansion",
+                "details": "TKPL2 controller with seven-inch display; Eport-Lite expansion requires the separately supplied PSDK cable combo.",
+                "sources": [
+                  "https://www.dji.com/flycart-100/specs"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart100-reference",
+                "configuration": "Current FlyCart 100 specification and English v1.0 manual. CPU, RAM and aircraft storage remain unspecified. Ground charging equipment is not onboard hybrid propulsion.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground software",
+                "details": "DJI Delivery controls delivery missions.",
+                "sources": [
+                  "https://www.dji.com/support/product/flycart-100"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dji-flycart100-reference",
+                "configuration": "Current FlyCart 100 specification and English v1.0 manual. CPU, RAM and aircraft storage remain unspecified. Ground charging equipment is not onboard hybrid propulsion.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -41086,12 +41363,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -56859,13 +57131,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "easymile-ez10-published-reference",
+            "configuration": "Manufacturer EZ10 brochure and supplier-disclosed computing reference. Generations vary; CPU/GPU SKU, installed RAM, disk capacity and sensor part numbers are not established. Research-modified EZ10 vehicles do not define the stock vehicle.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Autonomy computer supplier",
+                "details": "7Starlake identifies its GPGPU computer work for EZ10. The surrounding CPT330B catalog specifications do not establish the exact installed EZ10 computer configuration.",
+                "sources": [
+                  "https://7starlake.com/products/transport/ugv-vehicle/cpt330b-4r"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "easymile-ez10-published-reference",
+                "configuration": "Manufacturer EZ10 brochure and supplier-disclosed computing reference. Generations vary; CPU/GPU SKU, installed RAM, disk capacity and sensor part numbers are not established. Research-modified EZ10 vehicles do not define the stock vehicle.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -56874,28 +57165,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Published connectivity",
+                "details": "GSM/EDGE/UMTS/LTE modem; V2X module is optional. No modem SKU, channel list or unique broadcast identifier is published.",
+                "sources": [
+                  "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "easymile-ez10-published-reference",
+                "configuration": "Manufacturer EZ10 brochure and supplier-disclosed computing reference. Generations vary; CPU/GPU SKU, installed RAM, disk capacity and sensor part numbers are not established. Research-modified EZ10 vehicles do not define the stock vehicle.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and safety",
+                "details": "LiDAR, radar, stereo cameras, wheel odometry, IMU and GPS; redundant braking systems.",
+                "sources": [
+                  "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "easymile-ez10-published-reference",
+                "configuration": "Manufacturer EZ10 brochure and supplier-disclosed computing reference. Generations vary; CPU/GPU SKU, installed RAM, disk capacity and sensor part numbers are not established. Research-modified EZ10 vehicles do not define the stock vehicle.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric chassis",
+                "details": "LiFePO4 traction batteries; brochure mass specification uses four packs. Four-wheel steering; wireless charging optional. Battery capacity is not given in this source.",
+                "sources": [
+                  "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "easymile-ez10-published-reference",
+                "configuration": "Manufacturer EZ10 brochure and supplier-disclosed computing reference. Generations vary; CPU/GPU SKU, installed RAM, disk capacity and sensor part numbers are not established. Research-modified EZ10 vehicles do not define the stock vehicle.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Passenger hardware",
+                "details": "Automated access ramp, 29-inch interior display, passenger USB charging and communications with the supervision centre.",
+                "sources": [
+                  "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "easymile-ez10-published-reference",
+                "configuration": "Manufacturer EZ10 brochure and supplier-disclosed computing reference. Generations vary; CPU/GPU SKU, installed RAM, disk capacity and sensor part numbers are not established. Research-modified EZ10 vehicles do not define the stock vehicle.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet operations",
+                "details": "EZMaestro manages/supervises the fleet for scheduled routes or on-demand operation.",
+                "sources": [
+                  "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "easymile-ez10-published-reference",
+                "configuration": "Manufacturer EZ10 brochure and supplier-disclosed computing reference. Generations vary; CPU/GPU SKU, installed RAM, disk capacity and sensor part numbers are not established. Research-modified EZ10 vehicles do not define the stock vehicle.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -56909,13 +57265,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -57501,13 +57851,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ehang-eh216s-system-reference",
+            "configuration": "Current EH216-S public system architecture. Exact flight-controller processors, RAM/storage, sensor SKUs, battery capacity and communications bands are not disclosed; specifications of EH216F/L are not inherited.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Redundant flight control",
+                "details": "Multiple flight-control systems use voting and redundant sensors; exact controller count and semiconductor parts are unspecified.",
+                "sources": [
+                  "https://www.ehang.com/ehang216s/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ehang-eh216s-system-reference",
+                "configuration": "Current EH216-S public system architecture. Exact flight-controller processors, RAM/storage, sensor SKUs, battery capacity and communications bands are not disclosed; specifications of EH216F/L are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -57516,18 +57885,57 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Ground communications",
+                "details": "Encrypted aircraft-to-ground communications with individual aircraft keys. The page does not identify a publicly decodable telemetry format.",
+                "sources": [
+                  "https://www.ehang.com/ehang216s/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ehang-eh216s-system-reference",
+                "configuration": "Current EH216-S public system architecture. Exact flight-controller processors, RAM/storage, sensor SKUs, battery capacity and communications bands are not disclosed; specifications of EH216F/L are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation and monitoring",
+                "details": "GNSS positioning supports preset routes; onboard health monitoring informs fail-safe decisions.",
+                "sources": [
+                  "https://www.ehang.com/ehang216s/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ehang-eh216s-system-reference",
+                "configuration": "Current EH216-S public system architecture. Exact flight-controller processors, RAM/storage, sensor SKUs, battery capacity and communications bands are not disclosed; specifications of EH216F/L are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Electric airframe",
+                "details": "Coaxial dual-rotor propulsion layout with electric motors, battery management and carbon-fibre structure; 620 kg published maximum takeoff weight.",
+                "sources": [
+                  "https://www.ehang.com/ehang216s/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ehang-eh216s-system-reference",
+                "configuration": "Current EH216-S public system architecture. Exact flight-controller processors, RAM/storage, sensor SKUs, battery capacity and communications bands are not disclosed; specifications of EH216F/L are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
@@ -57536,8 +57944,21 @@
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Operations architecture",
+                "details": "Command-and-control system exchanges data with aircraft and ground stations for dispatch, monitoring and fleet management.",
+                "sources": [
+                  "https://www.ehang.com/ehang216s/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ehang-eh216s-system-reference",
+                "configuration": "Current EH216-S public system architecture. Exact flight-controller processors, RAM/storage, sensor SKUs, battery capacity and communications bands are not disclosed; specifications of EH216F/L are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -57551,13 +57972,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
           "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -64916,43 +65332,152 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "galbot-g1-guide-v2",
+            "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Main compute",
+                "details": "NVIDIA AGX Orin, rated 275 TOPS.",
+                "sources": [
+                  "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galbot-g1-guide-v2",
+                "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Module memory",
+                "details": "64 GB; storage capacity unspecified.",
+                "sources": [
+                  "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galbot-g1-guide-v2",
+                "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Wireless links",
+                "details": "2.4/5 GHz Wi-Fi and Bluetooth 5.2; shared standards do not identify a particular robot.",
+                "sources": [
+                  "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galbot-g1-guide-v2",
+                "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Vision and inertial sensors",
+                "details": "One head stereo camera; four torso RGB cameras and two torso IMUs; two wrist depth cameras and two six-axis wrist force sensors.",
+                "sources": [
+                  "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galbot-g1-guide-v2",
+                "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Chassis and audio",
+                "details": "One 3D LiDAR, eight ultrasonic sensors and one chassis IMU; two four-microphone arrays.",
+                "sources": [
+                  "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galbot-g1-guide-v2",
+                "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and mobility",
+                "details": "48 V / 30 Ah battery; 54.6 V / 10 A charging. Four-wheel omnidirectional base; advertised eight-hour runtime under laboratory conditions.",
+                "sources": [
+                  "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galbot-g1-guide-v2",
+                "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Manipulation and expansion",
+                "details": "Two seven-axis arms, two-axis neck, three-axis waist and two leg axes; 5 kg per arm. Two USB 3.0 ports, HDMI and 5.5-inch touchscreen; wireless charging dock optional.",
+                "sources": [
+                  "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galbot-g1-guide-v2",
+                "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Developer interface",
+                "details": "Galbot SDK 1.10.0 documents Python and C++ APIs; exact onboard OS revision is not established here.",
+                "sources": [
+                  "https://developer.galbot.com/docs/SDK/1.10.0/g1/en/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "galbot-g1-guide-v2",
+                "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -64966,13 +65491,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -65112,13 +65630,33 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "gatik-box-truck-june2026",
+            "configuration": "June 2026 FTR/FVR generation-3 reference for generic box-truck records. Exact per-vehicle computer, radio and sensor SKUs require configuration confirmation; this profile is not assigned to unidentified models.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Deployed compute versus roadmap",
+                "details": "NVIDIA identifies DRIVE AGX Orin in Gatik’s deployed fleet. Gatik’s March 2025 DRIVE AGX Thor announcement concerns its next-generation program; Thor is not assumed installed on every truck.",
+                "sources": [
+                  "https://www.linkedin.com/posts/nvidia-drive_congratulationsto-thegatik-team-andgautam-activity-7422681651815628800-ko28",
+                  "https://archive.gatik.ai/news/press-releases/gatik-collaboration-with-nvidia/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gatik-box-truck-june2026",
+                "configuration": "June 2026 FTR/FVR generation-3 reference for generic box-truck records. Exact per-vehicle computer, radio and sensor SKUs require configuration confirmation; this profile is not assigned to unidentified models.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -65127,28 +65665,94 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Remote-supervision link",
+                "details": "Antennas provide positioning and two-way communication with Gatik infrastructure and remote supervisors. Protocols, bands and modem SKUs are unspecified.",
+                "sources": [
+                  "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gatik-box-truck-june2026",
+                "configuration": "June 2026 FTR/FVR generation-3 reference for generic box-truck records. Exact per-vehicle computer, radio and sensor SKUs require configuration confirmation; this profile is not assigned to unidentified models.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception layout",
+                "details": "Cab-roof LiDAR, cameras and radar; side pods with LiDAR/cameras and rear camera/radar. The June guide does not provide a full sensor count or chip models.",
+                "sources": [
+                  "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gatik-box-truck-june2026",
+                "configuration": "June 2026 FTR/FVR generation-3 reference for generic box-truck records. Exact per-vehicle computer, radio and sensor SKUs require configuration confirmation; this profile is not assigned to unidentified models.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Vehicle platform",
+                "details": "June guide identifies diesel-powered Isuzu FTR Class 6 and FVR Class 7 trucks, with low-voltage batteries and supplemental power-distribution units; engine SKU unspecified.",
+                "sources": [
+                  "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gatik-box-truck-june2026",
+                "configuration": "June 2026 FTR/FVR generation-3 reference for generic box-truck records. Exact per-vehicle computer, radio and sensor SKUs require configuration confirmation; this profile is not assigned to unidentified models.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Vehicle configurations",
+                "details": "20-, 26- or 30-foot cargo boxes; exterior sensor pods and automated-driving status indicators.",
+                "sources": [
+                  "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gatik-box-truck-june2026",
+                "configuration": "June 2026 FTR/FVR generation-3 reference for generic box-truck records. Exact per-vehicle computer, radio and sensor SKUs require configuration confirmation; this profile is not assigned to unidentified models.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Autonomy and oversight",
+                "details": "Gatik Driver handles driving; alert-based remote supervision supplies high-level decisions in unusual situations.",
+                "sources": [
+                  "https://archive.gatik.ai/news/press-releases/gatik-partners-with-nvidia-for-the-halos-program-as-it-scales-driverless-freight-operations-across-north-america/",
+                  "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gatik-box-truck-june2026",
+                "configuration": "June 2026 FTR/FVR generation-3 reference for generic box-truck records. Exact per-vehicle computer, radio and sensor SKUs require configuration confirmation; this profile is not assigned to unidentified models.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -65162,13 +65766,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -75623,43 +76221,194 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hylio-ag272-v52",
+            "configuration": "2025 v5.2 metric specification. Its 14S power system differs from the older 12S wording still present in the FAQ. Exact flight-computer silicon, installed RAM/storage and radar frequency are not established by this model sheet.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "hylio-ag272-2024-configurable-components",
+            "configuration": "April 29, 2024 manufacturer component sheet describes an available configuration for its models, not the components in every commercial aircraft. Included as a qualified AG-272 option; actual installed configuration must be checked.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Specified flight controller",
+                "details": "SpektreWorks Blue Cube H7 with Hylio flight-control firmware; the document does not name the microcontroller die.",
+                "sources": [
+                  "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-2024-configurable-components",
+                "configuration": "April 29, 2024 manufacturer component sheet describes an available configuration for its models, not the components in every commercial aircraft. Included as a qualified AG-272 option; actual installed configuration must be checked.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "memory",
+                "component": "Local logging",
+                "details": "MicroSD log storage; card capacity and RAM unspecified.",
+                "sources": [
+                  "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-2024-configurable-components",
+                "configuration": "April 29, 2024 manufacturer component sheet describes an available configuration for its models, not the components in every commercial aircraft. Included as a qualified AG-272 option; actual installed configuration must be checked.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "GroundLink configuration",
+                "details": "Model sheet lists 2400–2480 MHz and cellular-assisted communication where available. HereLink-equipped aircraft use a different ground-control configuration.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbd2678c6d2cb4c7d4a9b_4e77e0454fa5a99d5debd9c90ff1d068_AG-272%20Spec%20Sheet%20Metric%205.2.pdf",
+                  "https://shop.hyl.io/products/ag272-spare-parts-package"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-v52",
+                "configuration": "2025 v5.2 metric specification. Its 14S power system differs from the older 12S wording still present in the FAQ. Exact flight-computer silicon, installed RAM/storage and radar frequency are not established by this model sheet.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Specified telemetry radio",
+                "details": "Microhard pMLTE 2.4 GHz MIMO module; optional video uses the same radio family.",
+                "sources": [
+                  "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-2024-configurable-components",
+                "configuration": "April 29, 2024 manufacturer component sheet describes an available configuration for its models, not the components in every commercial aircraft. Included as a qualified AG-272 option; actual installed configuration must be checked.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Version-dependent navigation and radar",
+                "details": "Hylio’s parts catalog lists AG272 Here4 sealed GPS assemblies and a gimbal-radar dome board for aircraft fitted with that dome. It does not establish that every AG-272 has these revisions.",
+                "sources": [
+                  "https://shop.hyl.io/collections/ag-spare-parts?page=32"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-v52",
+                "configuration": "2025 v5.2 metric specification. Its 14S power system differs from the older 12S wording still present in the FAQ. Exact flight-computer silicon, installed RAM/storage and radar frequency are not established by this model sheet.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Optional camera package",
+                "details": "Sony A6100 with Sigma 30 mm f/1.4 DC DN Contemporary lens and optional Gremsy S1V3 gimbal.",
+                "sources": [
+                  "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-2024-configurable-components",
+                "configuration": "April 29, 2024 manufacturer component sheet describes an available configuration for its models, not the components in every commercial aircraft. Included as a qualified AG-272 option; actual installed configuration must be checked.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight batteries and propulsion",
+                "details": "Octocopter, 95 KV motors and 104×34 cm folding propellers; two 14S 42 Ah / 51.8 V LiPo packs, 13.5 kg each.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbd2678c6d2cb4c7d4a9b_4e77e0454fa5a99d5debd9c90ff1d068_AG-272%20Spec%20Sheet%20Metric%205.2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-v52",
+                "configuration": "2025 v5.2 metric specification. Its 14S power system differs from the older 12S wording still present in the FAQ. Exact flight-computer silicon, installed RAM/storage and radar frequency are not established by this model sheet.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Spray and spreader systems",
+                "details": "68 L tank, two 448 kPa diaphragm pumps, TeeJet-compatible tips; optional rotary atomizers. Alternative granular spreader uses a three-channel aperture.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbd2678c6d2cb4c7d4a9b_4e77e0454fa5a99d5debd9c90ff1d068_AG-272%20Spec%20Sheet%20Metric%205.2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-v52",
+                "configuration": "2025 v5.2 metric specification. Its 14S power system differs from the older 12S wording still present in the FAQ. Exact flight-computer silicon, installed RAM/storage and radar frequency are not established by this model sheet.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Ground station",
+                "details": "GroundLink with 13th-generation Intel Core i5 is listed as a ground-control option; customers may instead supply a Windows 10/11 computer. That Intel processor is not the airborne controller.",
+                "sources": [
+                  "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-2024-configurable-components",
+                "configuration": "April 29, 2024 manufacturer component sheet describes an available configuration for its models, not the components in every commercial aircraft. Included as a qualified AG-272 option; actual installed configuration must be checked.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Ground mission control",
+                "details": "AgroSol GCS on the Windows 11 GroundLink controller; autonomous and manual flight modes and coordinated operation of up to three aircraft.",
+                "sources": [
+                  "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbd2678c6d2cb4c7d4a9b_4e77e0454fa5a99d5debd9c90ff1d068_AG-272%20Spec%20Sheet%20Metric%205.2.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-v52",
+                "configuration": "2025 v5.2 metric specification. Its 14S power system differs from the older 12S wording still present in the FAQ. Exact flight-computer silicon, installed RAM/storage and radar frequency are not established by this model sheet.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Mission software",
+                "details": "AgroSol GCS; components may be substituted by customer request.",
+                "sources": [
+                  "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hylio-ag272-2024-configurable-components",
+                "configuration": "April 29, 2024 manufacturer component sheet describes an available configuration for its models, not the components in every commercial aircraft. Included as a qualified AG-272 option; actual installed configuration must be checked.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -75673,13 +76422,6 @@
           }
         },
         "missing_sections": [
-          "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -282915,6 +283657,701 @@
             ]
           }
         ]
+      },
+      {
+        "id": "galbot-g1-guide-v2",
+        "manufacturer": "Galbot",
+        "models": [
+          "Galbot G1",
+          "G1"
+        ],
+        "configuration": "G1 Quick Start Guide V2.0 in developer documentation 2.2.4. Component vendors beyond the compute module, installed storage and unique radio identifiers are not disclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Main compute",
+            "details": "NVIDIA AGX Orin, rated 275 TOPS.",
+            "sources": [
+              "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Module memory",
+            "details": "64 GB; storage capacity unspecified.",
+            "sources": [
+              "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless links",
+            "details": "2.4/5 GHz Wi-Fi and Bluetooth 5.2; shared standards do not identify a particular robot.",
+            "sources": [
+              "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Vision and inertial sensors",
+            "details": "One head stereo camera; four torso RGB cameras and two torso IMUs; two wrist depth cameras and two six-axis wrist force sensors.",
+            "sources": [
+              "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Chassis and audio",
+            "details": "One 3D LiDAR, eight ultrasonic sensors and one chassis IMU; two four-microphone arrays.",
+            "sources": [
+              "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and mobility",
+            "details": "48 V / 30 Ah battery; 54.6 V / 10 A charging. Four-wheel omnidirectional base; advertised eight-hour runtime under laboratory conditions.",
+            "sources": [
+              "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Manipulation and expansion",
+            "details": "Two seven-axis arms, two-axis neck, three-axis waist and two leg axes; 5 kg per arm. Two USB 3.0 ports, HDMI and 5.5-inch touchscreen; wireless charging dock optional.",
+            "sources": [
+              "https://developer.galbot.com/docs/g1/2.2.4/en/g1/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Developer interface",
+            "details": "Galbot SDK 1.10.0 documents Python and C++ APIs; exact onboard OS revision is not established here.",
+            "sources": [
+              "https://developer.galbot.com/docs/SDK/1.10.0/g1/en/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "galbot-s1-guide-v2",
+        "manufacturer": "Galbot",
+        "models": [
+          "Galbot S1",
+          "S1"
+        ],
+        "configuration": "S1 developer guide 2.0.0, separate from G1. No camera/LiDAR SKUs, storage capacity or unique wireless signature are established.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Main compute",
+            "details": "NVIDIA AGX Orin, rated 275 TOPS.",
+            "sources": [
+              "https://developer.galbot.com/docs/s1/2.0.0/en/s1/"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Module memory",
+            "details": "64 GB; storage unspecified.",
+            "sources": [
+              "https://developer.galbot.com/docs/s1/2.0.0/en/s1/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless links",
+            "details": "2.4/5 GHz Wi-Fi and Bluetooth 5.2; wireless remote controller and emergency-stop accessory are listed.",
+            "sources": [
+              "https://developer.galbot.com/docs/s1/2.0.0/en/s1/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "Head stereo camera and 3D LiDAR; two wrist depth cameras; one chassis LiDAR and safety edge; one additional column LiDAR.",
+            "sources": [
+              "https://developer.galbot.com/docs/s1/2.0.0/en/s1/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and mobile base",
+            "details": "Two hot-swappable 48 V / 30 Ah packs; two-hour charging per pack. Four-wheel omnidirectional base, 1.5 m/s maximum; advertised eight-hour laboratory runtime.",
+            "sources": [
+              "https://developer.galbot.com/docs/s1/2.0.0/en/s1/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Arms and expansion",
+            "details": "Two seven-axis arms, two-axis neck and one lift axis; 15 kg payload per arm. Two USB 3.0 ports, Ethernet and seven-inch touchscreen.",
+            "sources": [
+              "https://developer.galbot.com/docs/s1/2.0.0/en/s1/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-agras-t10-reference",
+        "manufacturer": "DJI",
+        "models": [
+          "Agras T10",
+          "AGRAS T10"
+        ],
+        "configuration": "Published T10 specification. Flight-computer silicon and onboard memory are unspecified. Ground-controller resources are explicitly separated from aircraft hardware.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Control link",
+            "details": "OcuSync 2.0: 2.4000–2.4835 and 5.725–5.850 GHz, subject to regional configuration.",
+            "sources": [
+              "https://ag.dji.com/t10/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Radar and video",
+            "details": "RD2424R omnidirectional radar and RD2414U upward radar operate at 24.05–24.25 GHz. Front/rear FPV cameras provide 1280×720 video at 15–30 fps.",
+            "sources": [
+              "https://ag.dji.com/t10/specs"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and propulsion",
+            "details": "BAX501-9500mAh-51.8V flight pack; 9.5 Ah, 51.8 V. 84 KV motors with 100×10 mm stators and 33×9-inch propellers.",
+            "sources": [
+              "https://ag.dji.com/t10/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spray assembly",
+            "details": "Eight-litre tank; four nozzles, with XR11001VS listed as standard.",
+            "sources": [
+              "https://ag.dji.com/t10/specs"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Ground controller only",
+            "details": "RM500-ENT has 4 GB LPDDR4 and 32 GB storage, with microSD support up to 128 GB. These are not aircraft RAM/storage.",
+            "sources": [
+              "https://ag.dji.com/t10/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Ground controller",
+            "details": "RM500-ENT: 5.5-inch 1080p display and HDMI 1.4; Wi-Fi a/g/n/ac and Bluetooth 4.2.",
+            "sources": [
+              "https://ag.dji.com/t10/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Positioning",
+            "details": "GNSS plus RTK using GPS, GLONASS, BeiDou and Galileo signals in the published RTK configuration.",
+            "sources": [
+              "https://www.dji.com/support/product/t10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-agras-t25p-reference",
+        "manufacturer": "DJI",
+        "models": [
+          "Agras T25P",
+          "AGRAS T25P"
+        ],
+        "configuration": "T25P specification and April 2026 English manual. No exact onboard processor, RAM or storage is published; T25 components are not automatically assigned to T25P.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Obstacle sensing",
+            "details": "Front/rear phased-array radars at 24.05–24.25 GHz plus a three-camera vision system.",
+            "sources": [
+              "https://ag.dji.com/t25p/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and operator view",
+            "details": "Onboard D-RTK antennas, FPV camera and spotlight are identified in the aircraft diagram.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t60_t25p/20260409/T25P_User_Manual_v1.0_en.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight power",
+            "details": "DB800 battery: 15.5 Ah, 52.22 V. Four 50-inch propellers, 59 KV motors with 100×28 mm stators and electronic speed controllers.",
+            "sources": [
+              "https://ag.dji.com/t25p/specs",
+              "https://dl.djicdn.com/downloads/t60_t25p/20260409/T25P_User_Manual_v1.0_en.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Application hardware",
+            "details": "20 L spray tank, two LX07550SX sprinklers and two magnetic-drive impeller pumps; optional four-sprinkler setup. Spreading System 4.0 uses a 30 L tank and centrifugal disc.",
+            "sources": [
+              "https://ag.dji.com/t25p/specs"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft communications",
+            "details": "OcuSync image-transmission antennas. Optional Enhanced Transmission combines that link with 4G using a separately installed cellular dongle/SIM; availability depends on service and region.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t60_t25p/20260409/T25P_User_Manual_v1.0_en.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Ground equipment",
+            "details": "TKPL 2 controller with seven-inch 1920×1200 touchscreen and USB-C charging. D6000i is a ground charging generator, not an onboard engine.",
+            "sources": [
+              "https://ag.dji.com/t25p/specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operation and servicing",
+            "details": "DJI Agras provides mission/control functions; DJI Assistant 2 supports firmware servicing.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/t60_t25p/20260409/T25P_User_Manual_v1.0_en.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dji-flycart100-reference",
+        "manufacturer": "DJI",
+        "models": [
+          "FlyCart 100",
+          "DJI FlyCart 100"
+        ],
+        "configuration": "Current FlyCart 100 specification and English v1.0 manual. CPU, RAM and aircraft storage remain unspecified. Ground charging equipment is not onboard hybrid propulsion.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Electric propulsion",
+            "details": "Four arms with coaxial motor pairs; 62-inch propellers and 60 KV motors. Dual batteries supported; single-battery mode is for emergencies.",
+            "sources": [
+              "https://www.dji.com/flycart-100/specs",
+              "https://dl.djicdn.com/downloads/DJI_FlyCart_100/20251127/DJI_FlyCart_100_User_Manual_v1.0_en_i.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery alternatives",
+            "details": "DB2160 or DB2212: each rated 41 Ah at 52 V. The two models are alternatives, not an instruction to mix them.",
+            "sources": [
+              "https://www.dji.com/flycart-100/specs"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and perception",
+            "details": "D-RTK antennas, LiDAR, front/downward radars, vision system and FPV camera. Exact sensor chips and radar frequency are not established.",
+            "sources": [
+              "https://dl.djicdn.com/downloads/DJI_FlyCart_100/20251127/DJI_FlyCart_100_User_Manual_v1.0_en_i.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "O4 link",
+            "details": "2.400–2.4835 and 5.725–5.850 GHz; four antennas with 2T4R. 4G Enhanced Transmission is also listed; 1080p/30 fps live view.",
+            "sources": [
+              "https://www.dji.com/flycart-100/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Cargo mechanisms",
+            "details": "A2EWH-100A flagship winch with up to 30 m cable, or A2EDL-100A dual-battery lifting system with 10 m cable. These are alternative cargo configurations.",
+            "sources": [
+              "https://www.dji.com/flycart-100/specs"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Ground control and expansion",
+            "details": "TKPL2 controller with seven-inch display; Eport-Lite expansion requires the separately supplied PSDK cable combo.",
+            "sources": [
+              "https://www.dji.com/flycart-100/specs"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground software",
+            "details": "DJI Delivery controls delivery missions.",
+            "sources": [
+              "https://www.dji.com/support/product/flycart-100"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "easymile-ez10-published-reference",
+        "manufacturer": "EasyMile",
+        "models": [
+          "EZ10"
+        ],
+        "configuration": "Manufacturer EZ10 brochure and supplier-disclosed computing reference. Generations vary; CPU/GPU SKU, installed RAM, disk capacity and sensor part numbers are not established. Research-modified EZ10 vehicles do not define the stock vehicle.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Autonomy computer supplier",
+            "details": "7Starlake identifies its GPGPU computer work for EZ10. The surrounding CPT330B catalog specifications do not establish the exact installed EZ10 computer configuration.",
+            "sources": [
+              "https://7starlake.com/products/transport/ugv-vehicle/cpt330b-4r"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and safety",
+            "details": "LiDAR, radar, stereo cameras, wheel odometry, IMU and GPS; redundant braking systems.",
+            "sources": [
+              "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Published connectivity",
+            "details": "GSM/EDGE/UMTS/LTE modem; V2X module is optional. No modem SKU, channel list or unique broadcast identifier is published.",
+            "sources": [
+              "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric chassis",
+            "details": "LiFePO4 traction batteries; brochure mass specification uses four packs. Four-wheel steering; wireless charging optional. Battery capacity is not given in this source.",
+            "sources": [
+              "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Passenger hardware",
+            "details": "Automated access ramp, 29-inch interior display, passenger USB charging and communications with the supervision centre.",
+            "sources": [
+              "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet operations",
+            "details": "EZMaestro manages/supervises the fleet for scheduled routes or on-demand operation.",
+            "sources": [
+              "https://www.am-today.com/www.am-today.com/w/pdf/fiche-technique-ez10.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gatik-box-truck-june2026",
+        "manufacturer": "Gatik",
+        "models": [
+          "Gatik Autonomous Box Truck (June 2026 FTR/FVR reference)",
+          "Gatik Autonomous Box Truck"
+        ],
+        "configuration": "June 2026 FTR/FVR generation-3 reference for generic box-truck records. Exact per-vehicle computer, radio and sensor SKUs require configuration confirmation; this profile is not assigned to unidentified models.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Deployed compute versus roadmap",
+            "details": "NVIDIA identifies DRIVE AGX Orin in Gatik’s deployed fleet. Gatik’s March 2025 DRIVE AGX Thor announcement concerns its next-generation program; Thor is not assumed installed on every truck.",
+            "sources": [
+              "https://www.linkedin.com/posts/nvidia-drive_congratulationsto-thegatik-team-andgautam-activity-7422681651815628800-ko28",
+              "https://archive.gatik.ai/news/press-releases/gatik-collaboration-with-nvidia/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception layout",
+            "details": "Cab-roof LiDAR, cameras and radar; side pods with LiDAR/cameras and rear camera/radar. The June guide does not provide a full sensor count or chip models.",
+            "sources": [
+              "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Remote-supervision link",
+            "details": "Antennas provide positioning and two-way communication with Gatik infrastructure and remote supervisors. Protocols, bands and modem SKUs are unspecified.",
+            "sources": [
+              "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Vehicle platform",
+            "details": "June guide identifies diesel-powered Isuzu FTR Class 6 and FVR Class 7 trucks, with low-voltage batteries and supplemental power-distribution units; engine SKU unspecified.",
+            "sources": [
+              "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Vehicle configurations",
+            "details": "20-, 26- or 30-foot cargo boxes; exterior sensor pods and automated-driving status indicators.",
+            "sources": [
+              "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Autonomy and oversight",
+            "details": "Gatik Driver handles driving; alert-based remote supervision supplies high-level decisions in unusual situations.",
+            "sources": [
+              "https://archive.gatik.ai/news/press-releases/gatik-partners-with-nvidia-for-the-halos-program-as-it-scales-driverless-freight-operations-across-north-america/",
+              "https://archive.gatik.ai/wp-content/uploads/Gatik_FRIP_June_Final.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hylio-ag272-v52",
+        "manufacturer": "Hylio",
+        "models": [
+          "AG-272",
+          "AG272"
+        ],
+        "configuration": "2025 v5.2 metric specification. Its 14S power system differs from the older 12S wording still present in the FAQ. Exact flight-computer silicon, installed RAM/storage and radar frequency are not established by this model sheet.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "power",
+            "component": "Flight batteries and propulsion",
+            "details": "Octocopter, 95 KV motors and 104×34 cm folding propellers; two 14S 42 Ah / 51.8 V LiPo packs, 13.5 kg each.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbd2678c6d2cb4c7d4a9b_4e77e0454fa5a99d5debd9c90ff1d068_AG-272%20Spec%20Sheet%20Metric%205.2.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Spray and spreader systems",
+            "details": "68 L tank, two 448 kPa diaphragm pumps, TeeJet-compatible tips; optional rotary atomizers. Alternative granular spreader uses a three-channel aperture.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbd2678c6d2cb4c7d4a9b_4e77e0454fa5a99d5debd9c90ff1d068_AG-272%20Spec%20Sheet%20Metric%205.2.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "GroundLink configuration",
+            "details": "Model sheet lists 2400–2480 MHz and cellular-assisted communication where available. HereLink-equipped aircraft use a different ground-control configuration.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbd2678c6d2cb4c7d4a9b_4e77e0454fa5a99d5debd9c90ff1d068_AG-272%20Spec%20Sheet%20Metric%205.2.pdf",
+              "https://shop.hyl.io/products/ag272-spare-parts-package"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Version-dependent navigation and radar",
+            "details": "Hylio’s parts catalog lists AG272 Here4 sealed GPS assemblies and a gimbal-radar dome board for aircraft fitted with that dome. It does not establish that every AG-272 has these revisions.",
+            "sources": [
+              "https://shop.hyl.io/collections/ag-spare-parts?page=32"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Ground mission control",
+            "details": "AgroSol GCS on the Windows 11 GroundLink controller; autonomous and manual flight modes and coordinated operation of up to three aircraft.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbd2678c6d2cb4c7d4a9b_4e77e0454fa5a99d5debd9c90ff1d068_AG-272%20Spec%20Sheet%20Metric%205.2.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hylio-ag272-2024-configurable-components",
+        "manufacturer": "Hylio",
+        "models": [
+          "AG-272 specified-component option (April 2024)",
+          "AG-272"
+        ],
+        "configuration": "April 29, 2024 manufacturer component sheet describes an available configuration for its models, not the components in every commercial aircraft. Included as a qualified AG-272 option; actual installed configuration must be checked.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Specified flight controller",
+            "details": "SpektreWorks Blue Cube H7 with Hylio flight-control firmware; the document does not name the microcontroller die.",
+            "sources": [
+              "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Local logging",
+            "details": "MicroSD log storage; card capacity and RAM unspecified.",
+            "sources": [
+              "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Specified telemetry radio",
+            "details": "Microhard pMLTE 2.4 GHz MIMO module; optional video uses the same radio family.",
+            "sources": [
+              "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Optional camera package",
+            "details": "Sony A6100 with Sigma 30 mm f/1.4 DC DN Contemporary lens and optional Gremsy S1V3 gimbal.",
+            "sources": [
+              "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Ground station",
+            "details": "GroundLink with 13th-generation Intel Core i5 is listed as a ground-control option; customers may instead supply a Windows 10/11 computer. That Intel processor is not the airborne controller.",
+            "sources": [
+              "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mission software",
+            "details": "AgroSol GCS; components may be substituted by customer request.",
+            "sources": [
+              "https://assets-global.website-files.com/5d3b17e74e1172272cd74eed/662fbe3e3df0b23be550ea10_HYLIO%2C%20INC.%20UAS%20Sections%20848%20%26%20889%20NDAA%20Compliance%20Component%20Specification%20Sheet%20-%202024.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hylio-groundlink-v52",
+        "manufacturer": "Hylio",
+        "models": [
+          "GroundLink (v5.2 specification)",
+          "GroundLink"
+        ],
+        "configuration": "Separate ground-controller hardware, not an aircraft configuration. v5.2 US specification; RF availability and cellular service vary by region.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Ground computer",
+            "details": "Intel Core i5-1335UE, ten cores/twelve threads, with Iris Xe graphics.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbe2478c6d2cb4c7e2111_9ec483a58cadaa940c6313c48939dece_GroundLink%20Spec%20Sheet%20US%20Customary%20Units%205.2.pdf"
+            ]
+          },
+          {
+            "section": "memory",
+            "component": "Installed resources",
+            "details": "16 GB DDR5-5600 and 512 GB M.2 PCIe NVMe SSD.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbe2478c6d2cb4c7e2111_9ec483a58cadaa940c6313c48939dece_GroundLink%20Spec%20Sheet%20US%20Customary%20Units%205.2.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Local networking",
+            "details": "Intel AX210 Wi-Fi 6E, 2×2 802.11ax; Bluetooth 5.3.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbe2478c6d2cb4c7e2111_9ec483a58cadaa940c6313c48939dece_GroundLink%20Spec%20Sheet%20US%20Customary%20Units%205.2.pdf"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Aircraft and cellular links",
+            "details": "UAS link: 2402–2482 MHz, 4/8 MHz channels and AES-256. Listed LTE bands 2/4/13; WCDMA 1/2/4/8; GSM 2/3/5/8.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbe2478c6d2cb4c7e2111_9ec483a58cadaa940c6313c48939dece_GroundLink%20Spec%20Sheet%20US%20Customary%20Units%205.2.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Controller battery",
+            "details": "Integrated 14.4 V / 10 Ah lithium-ion battery, 144 Wh; 19 V / 150 W external charger.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbe2478c6d2cb4c7e2111_9ec483a58cadaa940c6313c48939dece_GroundLink%20Spec%20Sheet%20US%20Customary%20Units%205.2.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator hardware",
+            "details": "13.3-inch 1080p touchscreen, two two-axis and two single-axis joysticks; USB4/Thunderbolt 4 with DisplayPort output.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbe2478c6d2cb4c7e2111_9ec483a58cadaa940c6313c48939dece_GroundLink%20Spec%20Sheet%20US%20Customary%20Units%205.2.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operating system",
+            "details": "Windows 11 Home; these specifications concern the handheld ground station.",
+            "sources": [
+              "https://cdn.prod.website-files.com/5d3b17e74e1172272cd74eed/680bbe2478c6d2cb4c7e2111_9ec483a58cadaa940c6313c48939dece_GroundLink%20Spec%20Sheet%20US%20Customary%20Units%205.2.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ehang-eh216s-system-reference",
+        "manufacturer": "EHang",
+        "models": [
+          "EH216-S"
+        ],
+        "configuration": "Current EH216-S public system architecture. Exact flight-controller processors, RAM/storage, sensor SKUs, battery capacity and communications bands are not disclosed; specifications of EH216F/L are not inherited.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Redundant flight control",
+            "details": "Multiple flight-control systems use voting and redundant sensors; exact controller count and semiconductor parts are unspecified.",
+            "sources": [
+              "https://www.ehang.com/ehang216s/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and monitoring",
+            "details": "GNSS positioning supports preset routes; onboard health monitoring informs fail-safe decisions.",
+            "sources": [
+              "https://www.ehang.com/ehang216s/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electric airframe",
+            "details": "Coaxial dual-rotor propulsion layout with electric motors, battery management and carbon-fibre structure; 620 kg published maximum takeoff weight.",
+            "sources": [
+              "https://www.ehang.com/ehang216s/"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Ground communications",
+            "details": "Encrypted aircraft-to-ground communications with individual aircraft keys. The page does not identify a publicly decodable telemetry format.",
+            "sources": [
+              "https://www.ehang.com/ehang216s/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Operations architecture",
+            "details": "Command-and-control system exchanges data with aircraft and ground stations for dispatch, monitoring and fleet management.",
+            "sources": [
+              "https://www.ehang.com/ehang216s/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -282931,8 +284368,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 344,
-    "devices_with_system_profiles": 319,
-    "devices_with_documented_compute": 153
+    "system_profiles": 355,
+    "devices_with_system_profiles": 327,
+    "devices_with_documented_compute": 158
   }
 }
