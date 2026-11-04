@@ -33527,6 +33527,430 @@
           ]
         }
       ]
+    },
+    {
+      "id": "sam100-founder2018",
+      "manufacturer": "Construction Robotics",
+      "models": [
+        "SAM100"
+      ],
+      "configuration": "June 2018 original interview with CEO/cofounder Scott Peters. Describes the scaffold-mounted masonry system, not a freestanding mobile robot. Processor, memory, radio, motor and generator models are not given.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Laser positioning",
+          "details": "A laser climbs a story pole and finds markers; its measurements correct the brick-placement position.",
+          "sources": [
+            "https://www.asme.org/topics-resources/content/safety-efficiency-brick-by-brick"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "On-platform supply",
+          "details": "Self-contained unit carries a generator and electrical cabinet; output ratings are not disclosed.",
+          "sources": [
+            "https://www.asme.org/topics-resources/content/safety-efficiency-brick-by-brick"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Material handling and motion",
+          "details": "Motorized carriage runs on tracks attached to mast-climbing scaffolding. A conveyor and manual chutes feed bricks to a gripper; mortar mixing and dispensing accompany placement.",
+          "sources": [
+            "https://www.asme.org/topics-resources/content/safety-efficiency-brick-by-brick"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Placement workflow",
+          "details": "Software requests special bricks through designated chutes; the described configuration favors long, straight walls.",
+          "sources": [
+            "https://www.asme.org/topics-resources/content/safety-efficiency-brick-by-brick"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swarmbot-uniform-goldacres2021",
+      "manufacturer": "SwarmFarm Robotics",
+      "models": [
+        "SwarmBot Uniform / Goldacres (2021 installation)",
+        "SwarmBot"
+      ],
+      "configuration": "March 2021 installation commissioned by Goldacres. Attachment controller and cameras belong to the trailing sprayer, not every SwarmBot. Main autonomy CPU, RAM, GNSS receiver and RF hardware undisclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Sprayer controller",
+          "details": "Goldacres attachment uses a Raven controller and Raven Control Module (RCM); this does not identify the vehicle autonomy processor.",
+          "sources": [
+            "https://www.goldacres.com.au/about/news/2021/03/autonomous-spraying-technology"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Attachment vision",
+          "details": "Six Weedetect cameras, spaced three metres apart, support green-on-green or green-on-brown detection.",
+          "sources": [
+            "https://www.goldacres.com.au/about/news/2021/03/autonomous-spraying-technology"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Vehicle drive",
+          "details": "Four-cylinder Hatz diesel rated 83 hp; hydraulic drive with articulated steering and speed limited to 10 km/h.",
+          "sources": [
+            "https://www.goldacres.com.au/about/news/2021/03/autonomous-spraying-technology"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Prairie Special attachment",
+          "details": "Custom 2,500 L trailing sprayer with an 18 m boom and 16 controlled sections; spot or blanket spraying.",
+          "sources": [
+            "https://www.goldacres.com.au/about/news/2021/03/autonomous-spraying-technology"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swarmbot-pinto2025",
+      "manufacturer": "SwarmFarm Robotics",
+      "models": [
+        "SwarmBot / Robot Ready Pinto (2025)",
+        "SwarmBot"
+      ],
+      "configuration": "January 2025 Croplands integration, separate from the 2021 Goldacres installation and later Series 2 options. Processor, memory, radio and power components not established by this source.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Robot and implement",
+          "details": "Articulated carrier on 3 m wheel centres tows a suspended-gooseneck Pinto with 3,000 L tank and 18 m or 24 m boom.",
+          "sources": [
+            "https://croplands.com/au/general/robot-ready-pinto-integrates-with-swarmfarm-autonomous-swarmbot/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Optical spot spraying",
+          "details": "WEED-IT optical weed detection controls targeted spraying on this attachment.",
+          "sources": [
+            "https://croplands.com/au/general/robot-ready-pinto-integrates-with-swarmfarm-autonomous-swarmbot/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swarmbot-pinto-series2-2026",
+      "manufacturer": "SwarmFarm Robotics",
+      "models": [
+        "SwarmBot / Robot Ready Pinto Series 2 (2026)",
+        "SwarmBot"
+      ],
+      "configuration": "August 2026 supplier announcement. AutoFill and six-wheel drive are options, not equipment on every SwarmBot. Main CPU, RAM, radio and engine variant are not identified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Pinto revision and refilling",
+          "details": "Pinto 3,000 L sprayer; optional AutoFill hopper connects to a farm filling station for automatic refilling.",
+          "sources": [
+            "https://croplands.com/au/weed-it/robot-ready-pinto-series-2/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Optional traction configuration",
+          "details": "Six-wheel drive is an optional configuration for challenging terrain.",
+          "sources": [
+            "https://croplands.com/au/weed-it/robot-ready-pinto-series-2/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Optical implement",
+          "details": "WEED-IT spot-spraying sensing on the autonomous SwarmFarm platform.",
+          "sources": [
+            "https://croplands.com/au/weed-it/robot-ready-pinto-series-2/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verkada-cm42-datasheet",
+      "manufacturer": "Verkada",
+      "models": [
+        "CM42 Mini Dome Camera",
+        "CM42"
+      ],
+      "configuration": "Manufacturer CM42 specification. Fixed camera already represented in the catalog; not a robot. Storage is SKU-dependent. RAM and any onboard radio are not established; the separate gateway does not prove camera Wi-Fi.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Video processor",
+          "details": "Ambarella CV25S88.",
+          "sources": [
+            "https://www.verkada.com/security-cameras/mini/cm42/"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Local recording",
+          "details": "microSD/SDXC configurations from 256 GB to 2 TB; RAM not listed.",
+          "sources": [
+            "https://www.verkada.com/security-cameras/mini/cm42/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Optics and audio",
+          "details": "5 MP 1/2.8-inch progressive CMOS, fixed 2.8 mm f/1.6 lens, IR-cut filter, infrared illumination and built-in microphone.",
+          "sources": [
+            "https://www.verkada.com/security-cameras/mini/cm42/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "PoE input",
+          "details": "IEEE 802.3af Type 1; 37–57 V. Published draw: 6.1 W with IR, 3.2 W without.",
+          "sources": [
+            "https://www.verkada.com/security-cameras/mini/cm42/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Wired network",
+          "details": "RJ45 10/100/1000 Ethernet and PoE. RTSP 1.0 supports two concurrent streams with audio.",
+          "sources": [
+            "https://www.verkada.com/security-cameras/mini/cm42/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Recording and analytics",
+          "details": "H.264/H.265 recording, adaptive quality and configurable cloud backup; people/vehicle search, motion alerts and privacy regions.",
+          "sources": [
+            "https://www.verkada.com/security-cameras/mini/cm42/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verkada-gw31e-datasheet",
+      "manufacturer": "Verkada",
+      "models": [
+        "GW31-E Outdoor Wi-Fi Gateway",
+        "GW31-E"
+      ],
+      "configuration": "Outdoor Wi-Fi gateway specification. Distinct from GC31-E cellular gateway. CPU, memory, RF chipset and Bluetooth version are not disclosed. Directional antenna and power accessories are separate options.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Wi-Fi and setup radio",
+          "details": "802.11a/b/g/n/ac/ax; single radio selects 2.4 or 5 GHz. 2×2 DL MU-MIMO, two external N-type omnidirectional antennas, AP/client modes. Bluetooth supports iOS Command setup.",
+          "sources": [
+            "https://www.verkada.com/uk/connectivity/gw31-e/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Network and management",
+          "details": "Three Gigabit RJ45 ports: two LAN and one configurable WAN/LAN. Local management page uses Ethernet; Command management requires WAN.",
+          "sources": [
+            "https://www.verkada.com/uk/connectivity/gw31-e/"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Input options and PoE outputs",
+          "details": "54 V barrel input, 12–36 V terminal block, or 90 W 802.3bt Type 4 PoE input. Two PoE++ outputs share a 60 W budget. Gateway alone draws 9 W above −25°C or 19 W below.",
+          "sources": [
+            "https://www.verkada.com/uk/connectivity/gw31-e/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Access and recovery",
+          "details": "WPA2/3 PSK and Enterprise username/password authentication; Command monitoring and remote power cycling. Perpetual PoE keeps downstream devices powered during gateway restart.",
+          "sources": [
+            "https://www.verkada.com/uk/connectivity/gw31-e/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exail-drix-h8-reference",
+      "manufacturer": "Exail",
+      "models": [
+        "DriX H-8",
+        "DriX"
+      ],
+      "configuration": "H-8 configuration shown under the broader DriX family entry. H-9 and O-16 specifications must not inherit these dimensions or engine ratings. Source revisions report 37.5 hp in the diagram and 38 hp on the product page. CPU, RAM and storage unspecified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Supervision links",
+          "details": "Published LOS links: Wi-Fi and broadband radio. OTH links: 4G and Iridium Certus, with traffic management.",
+          "sources": [
+            "https://www.exail.com/media-file/7629/exail-datasheet-drix-h-8.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and avoidance",
+          "details": "Video/IR cameras, lidar and radar feed obstacle avoidance; GNSS and Phins C7 INS support H-8 docking. Quadrans AHRS belongs to the separate deployment system.",
+          "sources": [
+            "https://www.exail.com/product/drix-h8-medium-range-usv"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Diesel propulsion and payload supply",
+          "details": "250 L fuel tank; approximately 38 hp diesel turns a shaft and fixed-pitch propeller. Datasheet lists 750 W for payloads.",
+          "sources": [
+            "https://www.exail.com/product/drix-h8-medium-range-usv",
+            "https://www.exail.com/media-file/7629/exail-datasheet-drix-h-8.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Mission payload integration",
+          "details": "Replaceable submerged gondola accepts mission-selected sonar, inertial or acoustic-positioning instruments; listed payloads are options, not all installed.",
+          "sources": [
+            "https://www.exail.com/product/drix-h8-medium-range-usv"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "CortiX supervision",
+          "details": "CortiX autonomy, web mission planning and third-party APIs; datasheet describes ROS-driven architecture and cloud or edge deployment.",
+          "sources": [
+            "https://www.exail.com/media-file/7629/exail-datasheet-drix-h-8.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "icon-vulcan2021-reference",
+      "manufacturer": "ICON",
+      "models": [
+        "Vulcan (2021 construction system)",
+        "Vulcan"
+      ],
+      "configuration": "May 2021 manufacturer release for the House Zero generation. Not the lighter 2019/2020 printer or newer Titan. Processor, memory, sensor parts, networking and electrical requirements are not disclosed.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "interfaces",
+          "component": "Construction mechanism",
+          "details": "9,500 lb gantry-format construction printer extrudes layered wall material; published build capacity reaches 3,000 square feet.",
+          "sources": [
+            "https://www.iconbuild.com/newsroom/icon-unveils-its-next-gen-3d-printer-and-introduces-house-zero-designed-by-lake-flato-architects"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operator controls",
+          "details": "Automated control system operated through an ICON-developed mobile-device application.",
+          "sources": [
+            "https://www.iconbuild.com/newsroom/icon-unveils-its-next-gen-3d-printer-and-introduces-house-zero-designed-by-lake-flato-architects"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dexai-alfred-founder2020",
+      "manufacturer": "Dexai Robotics",
+      "models": [
+        "Dexai Alfred",
+        "Alfred"
+      ],
+      "configuration": "June 2020 first-hand interview with cofounders David Johnson and Anthony Tayoun. Describes the then-current platform. Processor, arm manufacturer, RAM, storage capacity, RF and electrical supply not specified.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Wrist-mounted vision",
+          "details": "A camera at the wrist identifies ingredients and observes the receiving bowl for quality checks.",
+          "sources": [
+            "https://www.hbs.edu/managing-the-future-of-work/podcast/dexai-machine-learning-in-the-kitchen"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Recorded operations",
+          "details": "Preparation video is retained for quality control and learning; storage location and capacity are not established.",
+          "sources": [
+            "https://www.hbs.edu/managing-the-future-of-work/podcast/dexai-machine-learning-in-the-kitchen"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Tools and order input",
+          "details": "Countertop arm switches ordinary kitchen utensils and accepts ingredient/portion orders from the point-of-sale system.",
+          "sources": [
+            "https://www.hbs.edu/managing-the-future-of-work/podcast/dexai-machine-learning-in-the-kitchen"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Adaptive preparation",
+          "details": "Vision and path planning guide manipulation of variable ingredients. Learning is shared across the fleet; conversational voice control was not available in this interview.",
+          "sources": [
+            "https://www.hbs.edu/managing-the-future-of-work/podcast/dexai-machine-learning-in-the-kitchen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diodon-hp30mk2-reference",
+      "manufacturer": "DIODON Drone Technology",
+      "models": [
+        "HP30 Mk2"
+      ],
+      "configuration": "Manufacturer HP30 Mk2 reference. This does not establish that the imported DP3 name is an alias. CPU, memory, RF frequency, battery capacity and sensor SKUs remain unpublished in these sources.",
+      "reviewed_on": "2026-11-03",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Payload",
+          "details": "Electro-optical and infrared imaging for day/night observation; exact camera modules not listed.",
+          "sources": [
+            "https://www.diodon-drone.com/wp-content/uploads/2026/05/DIODON-HP30-Mk2-Brochure-English.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Ground control and integration",
+          "details": "Separate waterproof GCS Mk.2 offers a glove-compatible interface; manufacturer describes C2/CMS interfaces and integration with surface vehicles.",
+          "sources": [
+            "https://www.diodon-drone.com/drones/",
+            "https://www.diodon-drone.com/wp-content/uploads/2026/05/DIODON-HP30-Mk2-Brochure-English.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Water recovery",
+          "details": "Automatic self-righting supports recovery from an inverted position on the water.",
+          "sources": [
+            "https://www.diodon-drone.com/drones/"
+          ]
+        },
+        {
+          "section": "other",
+          "component": "Airframe",
+          "details": "Inflatable, buoyant maritime aircraft; manufacturer lists IP67-equivalent protection and takeoff mass below 2 kg.",
+          "sources": [
+            "https://www.diodon-drone.com/drones/"
+          ]
+        }
+      ]
     }
   ]
 }

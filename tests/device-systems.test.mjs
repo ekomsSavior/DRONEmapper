@@ -1653,3 +1653,48 @@ test('batch 52 separates demonstrated hands and historical kiosks from current s
  assert.match(text(dot.sections.compute),/redundant, fail-safe/);
  assert.equal(dot.sections.radios.status,'not-established');
 });
+
+test('batch 53 keeps attachments, gateway radios and vehicle generations distinct',()=>{
+ const sam=system('Construction Robotics','SAM100');
+ assert.match(text(sam.sections.power),/generator and electrical cabinet/);
+ assert.equal(sam.sections.compute.status,'not-established');
+ const swarm=system('SwarmFarm Robotics','SwarmBot');
+ assert.equal(profileIds(swarm).length,3);
+ const old=system('SwarmFarm Robotics','SwarmBot Uniform / Goldacres (2021 installation)');
+ assert.match(text(old.sections.compute),/does not identify the vehicle autonomy processor/);
+ assert.doesNotMatch(text(old.sections.interfaces.facts.map(f=>f.details)),/AutoFill|3,000/);
+ const latest=system('SwarmFarm Robotics','SwarmBot / Robot Ready Pinto Series 2 (2026)');
+ assert.match(text(latest.sections.power),/optional/);
+ assert.equal(latest.sections.compute.status,'not-established');
+ const cam=system('Verkada','CM42 Mini Dome Camera');
+ assert.match(text(cam.sections.compute),/Ambarella CV25S88/);
+ assert.equal(cam.sections.radios.status,'reference-only');
+ assert.match(text(cam.sections.radios),/Ethernet \/ PoE/);
+ assert.doesNotMatch(text(cam.sections.radios.facts.map(f=>f.details)),/Wi-Fi|Bluetooth/);
+ const gw=system('Verkada','GW31-E Outdoor Wi-Fi Gateway');
+ assert.match(text(gw.sections.radios),/single radio selects 2.4 or 5 GHz/);
+ assert.equal(gw.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Verkada','GC31-E')).length,0);
+ const h8=system('Exail','DriX H-8');
+ assert.deepEqual(profileIds(h8),profileIds(system('Exail','DriX')));
+ assert.match(text(h8.sections.sensors),/Quadrans AHRS belongs to the separate deployment system/);
+ assert.equal(profileIds(system('Exail','DriX H-9')).length,0);
+ assert.equal(profileIds(system('Exail','DriX O-16')).length,0);
+});
+
+test('batch 53 does not invent a DP3 alias or undocumented arm and controller parts',()=>{
+ assert.equal(profileIds(system('DIODON Drone Technology','DP3')).length,0);
+ const hp=system('DIODON Drone Technology','HP30 Mk2');
+ assert.match(text(hp.sections.sensors),/Electro-optical and infrared/);
+ assert.equal(hp.sections.radios.status,'not-established');
+ assert.equal(hp.sections.compute.status,'not-established');
+ const alf=system('Dexai Robotics','Dexai Alfred');
+ assert.match(text(alf.sections.sensors),/wrist/);
+ assert.equal(alf.sections.compute.status,'not-established');
+ assert.match(text(alf.sections.memory),/storage location and capacity are not established/);
+ const vulcan=system('ICON','Vulcan');
+ assert.match(text(vulcan.configurations),/May 2021/);
+ assert.equal(vulcan.sections.power.status,'not-established');
+ assert.equal(profileIds(system('ICON','Titan')).length,0);
+ assert.equal(profileIds(system('Verkada','CM42',{kind:'regulatory-equipment'})).length,0);
+});
