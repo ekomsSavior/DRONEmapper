@@ -9,6 +9,50 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 58 keeps warehouse and restaurant hardware revisions separate',()=>{
+ const oem=system('Zebra Technologies','Fetch100 OEM Base');
+ const research=system('Zebra Technologies','Fetch100 Research');
+ assert.match(text(oem.sections.compute),/i7-9700E/);
+ assert.match(text(oem.sections.memory),/32 GB.*256 GB/);
+ assert.match(text(oem.sections.sensors),/D435/);
+ assert.doesNotMatch(text(research.sections.sensors),/D435/);
+ assert.match(text(research.sections.software),/Ubuntu Linux LTS/);
+ assert.equal(profileIds(system('Zebra Technologies','Fetch AMR line')).length,2);
+ assert.equal(profileIds(system('Zebra Technologies','Fetch1500')).length,0);
+ const t5=system('KEENON Robotics','DINERBOT T5');
+ assert.match(text(t5.sections.power),/48 V \/ 15 Ah/);
+ assert.match(text(t5.sections.radios),/2412–2462 MHz/);
+ assert.match(text(t5.sections.software),/PEANUT/);
+ assert.equal(t5.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('KEENON Robotics','T5 Pro')).length,0);
+ assert.equal(profileIds(system('KEENON Robotics','DINERBOT T5',{kind:'regulatory-equipment'})).length,0);
+});
+
+test('batch 58 separates farm configurations, simulation and announced delivery controllers',()=>{
+ const coco=system('Coco Robotics','Coco 2');
+ assert.match(text(coco.sections.compute),/Jetson Orin NX/);
+ assert.equal(coco.sections.memory.status,'not-established');
+ assert.match(text(coco.sections.software),/not all claimed as onboard/);
+ assert.equal(profileIds(system('Coco Robotics','Coco 1')).length,0);
+ const scout=system('Solinftec','Solix Scout (2022)');
+ assert.doesNotMatch(text(scout.sections.interfaces),/nozzle|tank/i);
+ const early=system('Solinftec','Solix Sprayer (2023)');
+ const latest=system('Solinftec','Solix Sprayer (2026 US)');
+ assert.doesNotMatch(text(early.sections.interfaces.facts),/56-gallon/);
+ assert.match(text(latest.sections.interfaces),/56-gallon/);
+ assert.equal(profileIds(system('Solinftec','Solix XT')).length,0);
+ const jd=system('JD Logistics','JD Autonomous Delivery Robot');
+ assert.equal(jd.configurations.length,2);
+ assert.match(text(jd.configurations),/Planned integration/);
+ assert.equal(system('JD Logistics','JD indoor delivery robot (2022)').sections.compute.status,'not-established');
+ assert.match(text(system('KargoBot','KargoBot Autonomous Truck').configurations),/planned for 2027/);
+ const taurus=system('Inceptio Technology','Taurus ADCU (2026)');
+ assert.match(text(taurus.sections.compute),/Journey 6M/);
+ assert.doesNotMatch(text(taurus.sections.compute.facts.map(f=>f.details)),/NXP|CV2|Journey 5/);
+ assert.match(text(system('Inceptio Technology','Xuanyuan / ADCU Gen 2 (Journey 5)').sections.compute),/eight-core NXP/);
+ assert.equal(system('Meituan','MagicBag20 (2021)').sections.compute.status,'not-established');
+});
+
 test('truck profiles preserve generations and require exact cross-maker model bindings',()=>{
  const driver=system('Kodiak AI','Kodiak Driver');
  assert.equal(driver.configurations.length,2);
@@ -463,7 +507,8 @@ test('ground and underwater profiles preserve optional components and generation
  assert.equal(system('Dobot','DOBOT Magician').sections.identification.facts.some(f=>f.pattern),false);
  assert.equal(profileIds(system('Dobot','Magician E6')).length,0);
  assert.match(system('Fetch Robotics','Fetch AMR').configurations[0].configuration,/Research Edition/);
- assert.equal(profileIds(system('Zebra Technologies','Fetch AMR line')).length,0);
+ assert.equal(profileIds(system('Zebra Technologies','Fetch AMR line')).length,2);
+ assert.notDeepEqual(profileIds(system('Zebra Technologies','Fetch AMR line')),profileIds(system('Fetch Robotics','Fetch AMR')));
  assert.equal(profileIds(system('Emesent','Hovermap')).length,2);
  assert.doesNotMatch(text(system('Emesent','Hovermap ST').sections.sensors),/Hesai XT32M2X/);
  assert.match(text(system('Emesent','Hovermap ST-X').sections.sensors),/Hesai XT32M2X/);

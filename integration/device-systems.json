@@ -35787,6 +35787,14 @@
           "sources": [
             "https://en.inceptio.ai/technology/"
           ]
+        },
+        {
+          "section": "compute",
+          "component": "Manufacturer architecture retrospective",
+          "details": "Inceptio’s December 2025 technical retrospective identifies a first-generation mixture of Journey 3 and CV2 accelerators; counts and remaining controller components are not specified.",
+          "sources": [
+            "https://www.inceptio.ai/news/99026.html"
+          ]
         }
       ]
     },
@@ -35830,6 +35838,14 @@
           "details": "Published stack covers multi-view perception, ARC 2.0 planning/control and FEAD 2.0 fuel optimization. Software version installed on an individual truck is not established.",
           "sources": [
             "https://en.inceptio.ai/technology/"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "Manufacturer architecture retrospective",
+          "details": "The December 2025 retrospective names Lyra as the second-generation controller and identifies an additional eight-core NXP processor alongside the two Journey 5 chips; exact NXP SKU is not given.",
+          "sources": [
+            "https://www.inceptio.ai/news/99026.html"
           ]
         }
       ]
@@ -36156,6 +36172,673 @@
           "details": "CAFC coordinates a lead truck and autonomous followers through vehicle-road-cloud collaboration and V2X; no band or packet signature is established.",
           "sources": [
             "https://www.linkedin.com/posts/trunk-autonomous-truck_trunkcafc-autonomousplatooning-highwayfreight-activity-7462146518385348609-iELt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zebra-fetch100-oem-base-2023",
+      "manufacturer": "Zebra Technologies",
+      "models": [
+        "Fetch100 OEM Base (2023)",
+        "Fetch100 OEM Base",
+        "Fetch AMR line"
+      ],
+      "configuration": "2023-08-23 manufacturer brochure. One documented Fetch-family configuration; not a universal specification for every Fetch AMR. OEM and Research bases remain separate.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Main processor",
+          "details": "Intel Core i7-9700E.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-oem-base-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "RAM and storage",
+          "details": "32 GB RAM and 256 GB SSD.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-oem-base-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless module",
+          "details": "Intel AX200; brochure lists 802.11ax Wi-Fi and Bluetooth 5.1. A shared Intel module is not a model-specific broadcast identifier.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-oem-base-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Laser scanner",
+          "details": "SICK TiM 571: 25 m range and 220° field of view.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-oem-base-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and charging",
+          "details": "Deka 8G22NF sealed lead-acid battery; nominal nine-hour runtime. Autonomous docking, approximately three hours to 90% charge.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-oem-base-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Service and payload connections",
+          "details": "DisplayPort, two USB 3.0 ports, Ethernet and four 10 W speaker channels; 73 mounting points. Rated payload 100 kg, speed up to 1.75 m/s.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-oem-base-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Depth cameras",
+          "details": "Two Intel RealSense D435 cameras.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-oem-base-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Accessory panels",
+          "details": "AUX1: 360 W, RS-485, runstop and USB. AUX2: 180 W, RS-485 and Ethernet; not connected to runstop.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-oem-base-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Fleet and integration software",
+          "details": "Zebra Symmetry, REST API and PartnerAPI.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-oem-base-brochure-en-us.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zebra-fetch100-research-2023",
+      "manufacturer": "Zebra Technologies",
+      "models": [
+        "Fetch100 Research (2023)",
+        "Fetch100 Research",
+        "Fetch AMR line"
+      ],
+      "configuration": "2023-08-21 manufacturer brochure. One documented Fetch-family configuration; not a universal specification for every Fetch AMR. OEM and Research bases remain separate.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Main processor",
+          "details": "Intel Core i7-9700E.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-research-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "RAM and storage",
+          "details": "32 GB RAM and 256 GB SSD.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-research-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless module",
+          "details": "Intel AX200; brochure lists 802.11ax Wi-Fi and Bluetooth 5.1. A shared Intel module is not a model-specific broadcast identifier.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-research-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Laser scanner",
+          "details": "SICK TiM 571: 25 m range and 220° field of view.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-research-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and charging",
+          "details": "Deka 8G22NF sealed lead-acid battery; nominal nine-hour runtime. Autonomous docking, approximately three hours to 90% charge.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-research-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Service and payload connections",
+          "details": "DisplayPort, two USB 3.0 ports, Ethernet and four 10 W speaker channels; 73 mounting points. Rated payload 100 kg, speed up to 1.75 m/s.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-research-brochure-en-us.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Research stack",
+          "details": "Ubuntu Linux LTS, ROS, ROS Navigation, joystick teleoperation and calibration applications.",
+          "sources": [
+            "https://devc-aurora.zebra.com/content/dam/zebra_dam/en/brochure/portfolio/fetch100-research-brochure-en-us.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coco2-2026",
+      "manufacturer": "Coco Robotics",
+      "models": [
+        "Coco 2",
+        "Coco Bot"
+      ],
+      "configuration": "Coco 2 launched February 2026. These components do not describe the earlier human-guided Coco generation. Orin NX memory SKU, storage, radio module, sensor part numbers and battery capacity are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Onboard computer",
+          "details": "NVIDIA Jetson Orin NX performs perception and driving computation locally.",
+          "sources": [
+            "https://www.cocodelivery.com/blog/coco-robotics-launches-next-gen-autonomous-robots-for-urban-deliveries"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Development infrastructure",
+          "details": "Omniverse, Isaac Sim, Isaac Lab and Cosmos support simulation and training; these are not all claimed as onboard runtime components.",
+          "sources": [
+            "https://www.cocodelivery.com/blog/coco-robotics-launches-next-gen-autonomous-robots-for-urban-deliveries"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation suite",
+          "details": "Cameras, solid-state LiDAR and GPS; individual sensor models are not identified.",
+          "sources": [
+            "https://www.cocodelivery.com/coco2"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and mobility",
+          "details": "Swappable battery and tires; published range 32 km, speed 21 km/h and maximum grade 30%.",
+          "sources": [
+            "https://www.cocodelivery.com/coco2"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operations interface",
+          "details": "Pilot Terminal provides navigation context, obstruction alerts and map annotation for human assistance.",
+          "sources": [
+            "https://www.cocodelivery.com/coco2"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Driving stack",
+          "details": "End-to-end neural networks, precision mapping and human oversight.",
+          "sources": [
+            "https://www.cocodelivery.com/coco2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solix-scout-2022",
+      "manufacturer": "Solinftec",
+      "models": [
+        "Solix Scout (2022)",
+        "Solinftec Solix Ag Robotics"
+      ],
+      "configuration": "2022 monitoring robot described on page 35 of the manufacturer’s 2021 sustainability report. Not the later Sprayer or XT. CPU, memory, radio modules and numerical battery capacity are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Crop observation",
+          "details": "Cameras and sensors collect crop, pest, disease and weed observations for automated image analysis.",
+          "sources": [
+            "https://www.solinftec.com/wp-content/uploads/2022/08/Relatorio_Solinftec_2021_Final.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Solar platform",
+          "details": "Solar-powered chassis measuring 2.5×2 m; manufacturer describes operation for up to three days with low solar input.",
+          "sources": [
+            "https://www.solinftec.com/wp-content/uploads/2022/08/Relatorio_Solinftec_2021_Final.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "ALICE coordination",
+          "details": "ALICE schedules tasks, interprets observations and selects movement timing and routes.",
+          "sources": [
+            "https://www.solinftec.com/wp-content/uploads/2022/08/Relatorio_Solinftec_2021_Final.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solix-sprayer-2023",
+      "manufacturer": "Solinftec",
+      "models": [
+        "Solix Sprayer (2023)",
+        "Solinftec Solix Sprayer"
+      ],
+      "configuration": "Sprayer configuration described after the 2023 US season. CPU, RAM, radio modules, camera models and battery capacity are not published here. Later boom and tank specifications are kept in their own configuration.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Solar drive and spraying",
+          "details": "Four solar panels supply the propulsion and spray systems.",
+          "sources": [
+            "https://www.solinftec.com/en-us/robotics-in-agriculture-solinftec-solix-revolutionizes-crop-manament-in-the-american-corn-belt/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Application equipment",
+          "details": "Low-speed spray booms support targeted herbicide application; source describes usual 20-inch nozzle spacing.",
+          "sources": [
+            "https://www.solinftec.com/en-us/robotics-in-agriculture-solinftec-solix-revolutionizes-crop-manament-in-the-american-corn-belt/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Agronomic data and scheduling",
+          "details": "ALICE supports spray-window recommendations and reports crop populations, weeds, insects, treatment maps and input usage.",
+          "sources": [
+            "https://www.solinftec.com/en-us/robotics-in-agriculture-solinftec-solix-revolutionizes-crop-manament-in-the-american-corn-belt/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solix-sprayer-2026-us",
+      "manufacturer": "Solinftec",
+      "models": [
+        "Solix Sprayer (2026 US)",
+        "Solinftec Solix Sprayer"
+      ],
+      "configuration": "May 2026 interview with Solinftec’s US commercial manager. Configuration-specific firsthand description; not the diesel-generator XT configuration. Processor, RAM/storage, radio and battery Wh remain undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Weed vision",
+          "details": "Eight cameras identify weeds along the 40-foot boom; each camera controls three independent nozzles.",
+          "sources": [
+            "https://www.ilcorn.org/meet-the-robot-changing-how-illinois-farmers-fight-weeds"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Energy storage",
+          "details": "Solar panels charge a lithium-ion battery during operation.",
+          "sources": [
+            "https://www.ilcorn.org/meet-the-robot-changing-how-illinois-farmers-fight-weeds"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Spray system",
+          "details": "56-gallon dual-tank system supplies the independently controlled nozzles.",
+          "sources": [
+            "https://www.ilcorn.org/meet-the-robot-changing-how-illinois-farmers-fight-weeds"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Onboard classification",
+          "details": "ALICE AI performs crop/weed classification in real time.",
+          "sources": [
+            "https://www.ilcorn.org/meet-the-robot-changing-how-illinois-farmers-fight-weeds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keenon-t5-fcc-2021",
+      "manufacturer": "KEENON Robotics",
+      "models": [
+        "T5 (2021 FCC manual)",
+        "DINERBOT T5",
+        "Diners"
+      ],
+      "configuration": "T5 manual filed under FCC ID 2AZLQ-T5 in 2021. This 55 kg / 48 V 15 Ah configuration differs from later 12 Ah brochures. CPU, RAM, storage and radio chipset are not identified.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Navigation and contact detection",
+          "details": "Stereo vision, laser radar, image module and collision edge; two driven wheels and four supporting wheels.",
+          "sources": [
+            "https://fccid.io/2AZLQ-T5/User-Manual/user-manual-5605981.pdf"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wi-Fi interface",
+          "details": "Manual specifies 2.4 GHz Wi-Fi at 2412–2462 MHz. Band support is not a unique robot signature.",
+          "sources": [
+            "https://fccid.io/2AZLQ-T5/User-Manual/user-manual-5605981.pdf"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and input",
+          "details": "48 V / 15 Ah battery; listed rated power 40 W. Automatic or manual charging with 100–240 V AC charger input.",
+          "sources": [
+            "https://fccid.io/2AZLQ-T5/User-Manual/user-manual-5605981.pdf"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Human and delivery interfaces",
+          "details": "Touch display, speaker, emergency stop and four trays; manual rates 15 kg per layer and maximum travel speed 1.2 m/s.",
+          "sources": [
+            "https://fccid.io/2AZLQ-T5/User-Manual/user-manual-5605981.pdf"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "User application",
+          "details": "Android desktop starts the PEANUT application, which manages routes, delivery and charging schedules.",
+          "sources": [
+            "https://fccid.io/2AZLQ-T5/User-Manual/user-manual-5605981.pdf"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "Regulatory reference",
+          "details": "FCC filing 2AZLQ-T5 identifies this T5 configuration; it is not a MAC address.",
+          "sources": [
+            "https://fccid.io/2AZLQ-T5/User-Manual/user-manual-5605981.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meituan-magicbag20-2021",
+      "manufacturer": "Meituan",
+      "models": [
+        "MagicBag20 (2021)",
+        "Meituan Autonomous Delivery Vehicle"
+      ],
+      "configuration": "December 2021 supplier-confirmed MagicBag20 hardware. Exact Pandar/XT model numbers, main processor, memory, radio modules and battery specifications are not supplied. No later-generation sensor assignment is inferred.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "LiDAR families",
+          "details": "Hesai Pandar-series long-range and XT-series medium-range LiDAR provide complementary 360° coverage.",
+          "sources": [
+            "https://www.hesaitech.com/hesai-partners-with-meituan-for-autonomous-delivery/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meituan-delivery-2023-specification",
+      "manufacturer": "Meituan",
+      "models": [
+        "Meituan delivery vehicle (2023 specification)",
+        "Meituan Autonomous Delivery Vehicle"
+      ],
+      "configuration": "Manufacturer’s 2023-era delivery-vehicle description; hardware revision unnamed. Kept separate from the 2021 MagicBag20 supplier BOM. CPU, memory, radio and battery capacity are undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Perception",
+          "details": "Vision and laser sensing; manufacturer claims 360° coverage within 150 m.",
+          "sources": [
+            "https://www.linkedin.com/posts/meituan_beijing-shenzhen-autonomousvehicles-activity-7145637170626650112-Jkyz"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electric mobility",
+          "details": "Published maximum speed 45 km/h and battery range 120 km; test conditions are not provided.",
+          "sources": [
+            "https://www.linkedin.com/posts/meituan_beijing-shenzhen-autonomousvehicles-activity-7145637170626650112-Jkyz"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Cargo system",
+          "details": "Published maximum payload 150 kg and cargo volume 540 L.",
+          "sources": [
+            "https://www.linkedin.com/posts/meituan_beijing-shenzhen-autonomousvehicles-activity-7145637170626650112-Jkyz"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy stack",
+          "details": "In-house L4 software/hardware architecture uses high-precision map localization and route planning.",
+          "sources": [
+            "https://www.linkedin.com/posts/meituan_beijing-shenzhen-autonomousvehicles-activity-7145637170626650112-Jkyz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jd-indoor-delivery-2022",
+      "manufacturer": "JD Logistics",
+      "models": [
+        "JD indoor delivery robot (2022)",
+        "JD Autonomous Delivery Robot"
+      ],
+      "configuration": "April 2022 indoor delivery configuration. Not the outdoor sixth-generation Plus. CPU, memory, battery, radio modules and sensor part numbers are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "sensors",
+          "component": "Building navigation",
+          "details": "LiDAR, ultrasonic sensing and a depth camera detect obstacles and support localization.",
+          "sources": [
+            "https://jdcorporateblog.com/jd-logistics-develops-indoor-robot-for-last-100-meter-delivery/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Building and customer integration",
+          "details": "IoT integration coordinates elevators and access control. Recipients receive a retrieval password by message/call; this does not establish an onboard cellular modem.",
+          "sources": [
+            "https://jdcorporateblog.com/jd-logistics-develops-indoor-robot-for-last-100-meter-delivery/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Navigation",
+          "details": "JD-developed localization and route planning navigate between floors and delivery destinations.",
+          "sources": [
+            "https://jdcorporateblog.com/jd-logistics-develops-indoor-robot-for-last-100-meter-delivery/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jd-sixth-gen-plus-journey6p-announcement",
+      "manufacturer": "JD Logistics",
+      "models": [
+        "JD sixth-generation Plus (Journey 6P design win)",
+        "JD Autonomous Delivery Robot"
+      ],
+      "configuration": "September 2026 supplier design-win announcement for the L4 Lone Wolf sixth-generation Plus vehicle. Planned integration, not proof every already-deployed JD vehicle uses this chip. RAM, storage, radios, battery and sensor BOM are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Selected automotive processor",
+          "details": "Horizon Journey 6P; supplier rates one chip at 560 TOPS using the Nash BPU architecture.",
+          "sources": [
+            "https://www.horizon.auto/news/press/475"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Perception and planning support",
+          "details": "The announced platform supports Transformer and BEV inference with multimodal sensor fusion.",
+          "sources": [
+            "https://www.horizon.auto/news/press/475"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uisee-th10-modex-2026",
+      "manufacturer": "UISEE",
+      "models": [
+        "TH10 (MODEX 2026)",
+        "UISEE TH10 Tow Tractor"
+      ],
+      "configuration": "April 2026 exhibition configuration and associated U-Drive architecture. CPU, memory, radio modules, sensor SKUs, battery capacity and tow rating are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "power",
+          "component": "Electric tractor",
+          "details": "Electric chassis with published width of 1,355 mm; battery voltage and energy are not specified.",
+          "sources": [
+            "https://global.uisee.com/en/about-us/news/231"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Trailer automation",
+          "details": "Demonstrated automatic trailer uncoupling for factory logistics.",
+          "sources": [
+            "https://global.uisee.com/en/about-us/news/231"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Driving platform",
+          "details": "Fifth-generation U-Drive / AI Driver software provides vehicle adaptation and redundant safety architecture.",
+          "sources": [
+            "https://global.uisee.com/en/about-us/news/231"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Operations services",
+          "details": "Cloud dispatch and remote support complement vehicle perception, localization and planning. No transport protocol or radio band is established.",
+          "sources": [
+            "https://global.uisee.com/en/technology"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kargobot-space-2025-announcement",
+      "manufacturer": "KargoBot",
+      "models": [
+        "KargoBot Space (2025 announcement)",
+        "KargoBot Autonomous Truck"
+      ],
+      "configuration": "Shanghai 2025 manufacturer announcement; production was planned for 2027. A design reference, not a confirmed deployed-fleet BOM. Chip count, RAM, storage, radio modules and battery ratings are not disclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Selected compute platform",
+          "details": "Horizon Journey 6P collaboration announced for Space and other L4 trucks; no dual-chip installation is established by this source.",
+          "sources": [
+            "https://www.linkedin.com/posts/kargobot_kargobot-launches-all-purpose-transport-robot-activity-7327630755117830144-0nnn"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Selected LiDAR",
+          "details": "Hesai AT1440 named for the planned integration.",
+          "sources": [
+            "https://www.linkedin.com/posts/kargobot_kargobot-launches-all-purpose-transport-robot-activity-7327630755117830144-0nnn"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery architecture",
+          "details": "Multiple battery configurations supported; CATL Qiji battery-swap network partnership announced.",
+          "sources": [
+            "https://www.linkedin.com/posts/kargobot_kargobot-launches-all-purpose-transport-robot-activity-7327630755117830144-0nnn"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Vehicle platform",
+          "details": "Cabless chassis, customizable wheelbase and interchangeable cargo bodies for several freight types.",
+          "sources": [
+            "https://www.linkedin.com/posts/kargobot_kargobot-launches-all-purpose-transport-robot-activity-7327630755117830144-0nnn"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Autonomy",
+          "details": "KargoBot Neutron uses end-to-end neural-network and reinforcement-learning methods.",
+          "sources": [
+            "https://www.linkedin.com/posts/kargobot_kargobot-launches-all-purpose-transport-robot-activity-7327630755117830144-0nnn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inceptio-taurus-journey6m-2026",
+      "manufacturer": "Inceptio Technology",
+      "models": [
+        "Taurus ADCU (2026)",
+        "Inceptio Xuanyuan-Equipped Heavy Truck"
+      ],
+      "configuration": "June 2026 mass-production announcement for Taurus. Separate from Journey 3 and dual-Journey 5 predecessors. Installed RAM/storage capacity, modem, sensor part numbers and input voltage remain undisclosed.",
+      "reviewed_on": "2026-11-04",
+      "facts": [
+        {
+          "section": "compute",
+          "component": "Integrated controller",
+          "details": "Single Horizon Journey 6M combines CPU, BPU and MCU; platform rated 137K DMIPS and 128 TOPS.",
+          "sources": [
+            "https://en.inceptio.ai/news/99040.html"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Positioning",
+          "details": "Integrated high-precision GNSS/INS module; supplier and module SKU are not given.",
+          "sources": [
+            "https://en.inceptio.ai/news/99040.html"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Thermal design",
+          "details": "Air-cooled controller designed for prolonged operation at ambient temperatures up to 85°C; actual electrical draw is not supplied.",
+          "sources": [
+            "https://en.inceptio.ai/news/99040.html"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Control and safety",
+          "details": "Transformer perception supports Truck Navigate-on-Autopilot. Manufacturer states ASIL-B functional safety and ISO 21434 cybersecurity certification.",
+          "sources": [
+            "https://en.inceptio.ai/news/99040.html"
+          ]
+        },
+        {
+          "section": "memory",
+          "component": "Data management",
+          "details": "Storage and transmission management handles weak network coverage; capacity and storage technology are not identified.",
+          "sources": [
+            "https://en.inceptio.ai/news/99040.html"
           ]
         }
       ]
