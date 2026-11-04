@@ -9,6 +9,38 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 87 separates robot families, dated demonstrations and unnamed components',()=>{
+ const alpha=system('Alphadroid','Alpha AMR');
+ assert.match(text(alpha.sections.compute),/Intel Core i7/);
+ assert.match(text(alpha.configurations),/does not identify the model at each historical deployment/);
+ assert.equal(alpha.sections.memory.status,'not-established');
+ assert.equal(alpha.sections.radios.status,'not-established');
+ assert.equal(profileIds(system('Alphadroid','Alpha Signature')).includes('alphadroid-alpha-smart-current'),false);
+ const flo=system('Flo Mobility','Flo Mobility Autonomous Material Handler');
+ assert.match(text(flo.sections.power),/BLDC/);
+ assert.match(text(flo.sections.sensors),/32-beam/);
+ assert.doesNotMatch(text(flo.sections.compute.facts.map(f=>f.details)),/Jetson|STM32|ESP32/);
+ assert.equal(flo.sections.radios.status,'not-established');
+ const gritt=system('Gritt','Gritt Construction AI System');
+ assert.match(text(gritt.sections.interfaces),/existing construction vehicles/);
+ assert.equal(gritt.sections.compute.status,'not-established');
+ assert.equal(gritt.sections.power.status,'not-established');
+ const home=system('LG Electronics','CLOi HomeBot');
+ assert.deepEqual(profileIds(home),['lg-cloi-home-2018']);
+ assert.equal(home.sections.compute.status,'not-established');
+ assert.equal(home.sections.power.status,'not-established');
+ const cloid=system('LG Electronics','CLOiD — CES 2026 configuration');
+ assert.deepEqual(profileIds(cloid),['lg-cloid-ces-2026']);
+ assert.match(text(cloid.sections.power),/seven-degree-of-freedom/);
+ assert.doesNotMatch(text(cloid.sections.compute.facts.map(f=>f.details)),/DQ-C2|Alpha 11|Snapdragon/);
+ assert.equal(profileIds(system('LG Electronics','HOM-BOT')).length,0);
+ const move=system('MoveEz','MoveEz Robotaxi');
+ assert.match(text(move.sections.sensors),/camera, lidar and radar/);
+ assert.match(text(move.sections.interfaces),/does not establish a deployed fully driverless service/);
+ assert.equal(move.sections.compute.status,'not-established');
+ assert.equal(profileIds(system('Alphadroid','Alpha Smart',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 86 keeps regional radios, demonstration equipment and prototype parts scoped',()=>{
  const gov=system('PARROT','PARROT ANAFI UKR GOV');
  assert.match(text(gov.sections.compute),/QRB5165/);

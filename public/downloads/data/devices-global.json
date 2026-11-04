@@ -6557,13 +6557,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "alphadroid-alpha-smart-current",
+            "configuration": "Current Alpha Smart enclosed delivery configuration, used as a named reference for the broad Alpha AMR catalog entry. This does not identify the model at each historical deployment. CPU generation, RAM, radio chip, RF bands and battery capacity are not specified. Other Alpha models remain separate.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Onboard processor",
+                "details": "Intel Core i7; the manufacturer does not give the processor SKU or generation.",
+                "sources": [
+                  "https://www.alphadroid.io/product/alpha-smart"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "alphadroid-alpha-smart-current",
+                "configuration": "Current Alpha Smart enclosed delivery configuration, used as a named reference for the broad Alpha AMR catalog entry. This does not identify the model at each historical deployment. CPU generation, RAM, radio chip, RF bands and battery capacity are not specified. Other Alpha models remain separate.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -6577,18 +6596,69 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation sensors",
+                "details": "Two depth cameras, two ultrasonic sensors, lidar and a fisheye camera. Sensor manufacturers and part numbers are unspecified.",
+                "sources": [
+                  "https://www.alphadroid.io/product/alpha-smart"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "alphadroid-alpha-smart-current",
+                "configuration": "Current Alpha Smart enclosed delivery configuration, used as a named reference for the broad Alpha AMR catalog entry. This does not identify the model at each historical deployment. CPU generation, RAM, radio chip, RF bands and battery capacity are not specified. Other Alpha models remain separate.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Charging and runtime",
+                "details": "Automatic docking with a stated runtime exceeding seven hours; no battery voltage or chemistry is provided.",
+                "sources": [
+                  "https://www.alphadroid.io/product/alpha-smart"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "alphadroid-alpha-smart-current",
+                "configuration": "Current Alpha Smart enclosed delivery configuration, used as a named reference for the broad Alpha AMR catalog entry. This does not identify the model at each historical deployment. CPU generation, RAM, radio chip, RF bands and battery capacity are not specified. Other Alpha models remain separate.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Delivery compartments and lift integration",
+                "details": "Four enclosed compartments, configurable as two, three or four, with OTP/PIN access; lift integration is supported. Payload is rated 60 kg.",
+                "sources": [
+                  "https://www.alphadroid.io/product/alpha-smart"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "alphadroid-alpha-smart-current",
+                "configuration": "Current Alpha Smart enclosed delivery configuration, used as a named reference for the broad Alpha AMR catalog entry. This does not identify the model at each historical deployment. CPU generation, RAM, radio chip, RF bands and battery capacity are not specified. Other Alpha models remain separate.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "interfaces",
+                "component": "User interface",
+                "details": "Manufacturer describes a 10.1-inch touchscreen.",
+                "sources": [
+                  "https://www.linkedin.com/posts/alphadroid_alphasmart-ird-alphadroid-activity-7399069134497476608-JGxB"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "alphadroid-alpha-smart-current",
+                "configuration": "Current Alpha Smart enclosed delivery configuration, used as a named reference for the broad Alpha AMR catalog entry. This does not identify the model at each historical deployment. CPU generation, RAM, radio chip, RF bands and battery capacity are not specified. Other Alpha models remain separate.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -6607,12 +6677,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
           "software",
           "identification"
         ],
@@ -70611,13 +70677,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "flo-material-mover-2026",
+            "configuration": "Current manufacturer material-mover reference for the broad Autonomous Material Handler record. Earlier camera-only configurations and company-wide development hardware are not assigned to this version. CPU SKU, RAM, radio bands and battery capacity are undisclosed. Load figures differ within the product page: 500 kg headline versus 500–1,000 kg table.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Local autonomy computing",
+                "details": "Manufacturer identifies onboard edge AI, without naming its processor or compute module.",
+                "sources": [
+                  "https://flomobility.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flo-material-mover-2026",
+                "configuration": "Current manufacturer material-mover reference for the broad Autonomous Material Handler record. Earlier camera-only configurations and company-wide development hardware are not assigned to this version. CPU SKU, RAM, radio bands and battery capacity are undisclosed. Load figures differ within the product page: 500 kg headline versus 500–1,000 kg table.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -70631,23 +70716,76 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception and positioning",
+                "details": "Current product page specifies lidar/camera fusion. The manufacturer homepage lists GPS and a 32-beam, 360-degree lidar with a stated 200 m range; sensor model is unnamed.",
+                "sources": [
+                  "https://flomobility.com/offerings/material-movement",
+                  "https://flomobility.com/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flo-material-mover-2026",
+                "configuration": "Current manufacturer material-mover reference for the broad Autonomous Material Handler record. Earlier camera-only configurations and company-wide development hardware are not assigned to this version. CPU SKU, RAM, radio bands and battery capacity are undisclosed. Load figures differ within the product page: 500 kg headline versus 500–1,000 kg table.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Drive and batteries",
+                "details": "Four-wheel BLDC electric drivetrain with swappable batteries; manufacturer states 12-hour runtime.",
+                "sources": [
+                  "https://flomobility.com/offerings/material-movement"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flo-material-mover-2026",
+                "configuration": "Current manufacturer material-mover reference for the broad Autonomous Material Handler record. Earlier camera-only configurations and company-wide development hardware are not assigned to this version. CPU SKU, RAM, radio bands and battery capacity are undisclosed. Load figures differ within the product page: 500 kg headline versus 500–1,000 kg table.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Load handling",
+                "details": "Hydraulic tipper for unloading; autonomous and remote-controlled operating modes.",
+                "sources": [
+                  "https://flomobility.com/offerings/material-movement"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flo-material-mover-2026",
+                "configuration": "Current manufacturer material-mover reference for the broad Autonomous Material Handler record. Earlier camera-only configurations and company-wide development hardware are not assigned to this version. CPU SKU, RAM, radio bands and battery capacity are undisclosed. Load figures differ within the product page: 500 kg headline versus 500–1,000 kg table.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet Control",
+                "details": "Cloud dashboard provides task assignment, telemetry, sensor views and remote teleoperation. Manufacturer lists AWS multi-region hosting; transport protocols and robot modem are not specified.",
+                "sources": [
+                  "https://flomobility.com/offerings/fleet-control"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "flo-material-mover-2026",
+                "configuration": "Current manufacturer material-mover reference for the broad Autonomous Material Handler record. Earlier camera-only configurations and company-wide development hardware are not assigned to this version. CPU SKU, RAM, radio bands and battery capacity are undisclosed. Load figures differ within the product page: 500 kg headline versus 500–1,000 kg table.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -70661,13 +70799,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -84173,8 +84306,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "gritt-construction-2026",
+            "configuration": "Manufacturer CTO technical description, September 2026, and current solar product page. This is an industrial-arm retrofit platform with varying host vehicles, not a single universal robot BOM. CPU, RAM, exact arm, camera, radio and power-system parts are unpublished.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -84193,8 +84332,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Visual perception",
+                "details": "Vision-based processing localizes objects through segmentation and six-degree-of-freedom pose estimation; camera models and sensor count are not disclosed.",
+                "sources": [
+                  "https://www.gritt.ai/news/how-gritt-works-practical-intelligence"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gritt-construction-2026",
+                "configuration": "Manufacturer CTO technical description, September 2026, and current solar product page. This is an industrial-arm retrofit platform with varying host vehicles, not a single universal robot BOM. CPU, RAM, exact arm, camera, radio and power-system parts are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -84203,13 +84355,52 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Arm and host machine",
+                "details": "Commercial industrial robot arms attach to existing construction vehicles. The solar implementation automates panel pick-and-place on compatible trackers.",
+                "sources": [
+                  "https://www.gritt.ai/news/how-gritt-works-practical-intelligence",
+                  "https://www.gritt.ai/solar"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gritt-construction-2026",
+                "configuration": "Manufacturer CTO technical description, September 2026, and current solar product page. This is an industrial-arm retrofit platform with varying host vehicles, not a single universal robot BOM. CPU, RAM, exact arm, camera, radio and power-system parts are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Gritt Foundation Model",
+                "details": "GFM supplies representations for task-specific policies and perception. An observation layer checks proposed actions, with takeover and recovery mechanisms.",
+                "sources": [
+                  "https://www.gritt.ai/news/how-gritt-works-practical-intelligence"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gritt-construction-2026",
+                "configuration": "Manufacturer CTO technical description, September 2026, and current solar product page. This is an industrial-arm retrofit platform with varying host vehicles, not a single universal robot BOM. CPU, RAM, exact arm, camera, radio and power-system parts are unpublished.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "Training and validation pipeline",
+                "details": "Images and videos feed scene reconstruction and simulation; models are validated in shadow mode before active use. Training infrastructure is not an onboard processor specification.",
+                "sources": [
+                  "https://www.gritt.ai/news/how-gritt-works-practical-intelligence"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "gritt-construction-2026",
+                "configuration": "Manufacturer CTO technical description, September 2026, and current solar product page. This is an industrial-arm retrofit platform with varying host vehicles, not a single universal robot BOM. CPU, RAM, exact arm, camera, radio and power-system parts are unpublished.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -84226,10 +84417,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -98786,8 +98974,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "lg-cloi-home-2018",
+            "configuration": "2018 CLOi Home assistant, explicitly identified as HomeBot in LG’s IFA image caption. This is not a HOM-BOT vacuum, ServeBot or the dual-arm 2026 CLOiD. Processor, RAM, power specification and radio hardware are not disclosed in these sources.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -98816,13 +99010,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Voice and appliance integration",
+                "details": "The IFA demonstration uses spoken requests to read appliance information and control compatible LG ThinQ appliances. The underlying radio and network protocol are unspecified.",
+                "sources": [
+                  "https://www.lg.com/lv/lg-experience/tech-hub/jusu-galvena-rokasgramata-par-lg-cloi-robotiem"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "lg-cloi-home-2018",
+                "configuration": "2018 CLOi Home assistant, explicitly identified as HomeBot in LG’s IFA image caption. This is not a HOM-BOT vacuum, ServeBot or the dual-arm 2026 CLOiD. Processor, RAM, power specification and radio hardware are not disclosed in these sources.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Dated assistant integrations",
+                "details": "IFA material describes Alexa/Google Assistant compatibility. The separate October KES demonstration identifies Naver Clova; these are dated demonstrations, not proof every unit has all three integrations.",
+                "sources": [
+                  "https://www.lg.com/lv/lg-experience/tech-hub/jusu-galvena-rokasgramata-par-lg-cloi-robotiem",
+                  "https://www.lg.co.kr/media/release/10006"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "lg-cloi-home-2018",
+                "configuration": "2018 CLOi Home assistant, explicitly identified as HomeBot in LG’s IFA image caption. This is not a HOM-BOT vacuum, ServeBot or the dual-arm 2026 CLOiD. Processor, RAM, power specification and radio hardware are not disclosed in these sources.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -98841,8 +99062,6 @@
           "radios",
           "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -105429,8 +105648,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "moveez-robotaxi-platform",
+            "configuration": "Public platform description, not a chassis-specific bill of materials. The manufacturer’s September 2025 release describes plans for US pilots with safety drivers. Processor, RAM, sensor part numbers, communications hardware and vehicle powertrain are not identified.",
+            "reviewed_on": "2026-11-04"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -105449,8 +105674,21 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Multi-sensor perception",
+                "details": "Company co-founder describes camera, lidar and radar fusion for all-weather driving. No sensor brand, quantity or radar frequency is supplied.",
+                "sources": [
+                  "https://www.linkedin.com/posts/ericweichiahung_last-week-a-notable-bill-s1677-advanced-activity-7481535847511519232-EXcQ"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "moveez-robotaxi-platform",
+                "configuration": "Public platform description, not a chassis-specific bill of materials. The manufacturer’s September 2025 release describes plans for US pilots with safety drivers. Processor, RAM, sensor part numbers, communications hardware and vehicle powertrain are not identified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -105459,13 +105697,39 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Pilot supervision",
+                "details": "Initial US service plan includes an onboard safety driver. The announcement does not establish a deployed fully driverless service.",
+                "sources": [
+                  "https://moveez-inc.com/en/2025/09/page404/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "moveez-robotaxi-platform",
+                "configuration": "Public platform description, not a chassis-specific bill of materials. The manufacturer’s September 2025 release describes plans for US pilots with safety drivers. Processor, RAM, sensor part numbers, communications hardware and vehicle powertrain are not identified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Mapless driving stack",
+                "details": "Manufacturer describes navigation that reduces reliance on expensive high-definition 3D maps; this is not evidence that the vehicle has no maps or localization sensors.",
+                "sources": [
+                  "https://moveez-inc.com/en/2025/09/page404/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "moveez-robotaxi-platform",
+                "configuration": "Public platform description, not a chassis-specific bill of materials. The manufacturer’s September 2025 release describes plans for US pilots with safety drivers. Processor, RAM, sensor part numbers, communications hardware and vehicle powertrain are not identified.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -105482,10 +105746,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
           "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -352061,6 +352322,284 @@
             ]
           }
         ]
+      },
+      {
+        "id": "alphadroid-alpha-smart-current",
+        "manufacturer": "Alphadroid",
+        "models": [
+          "Alpha Smart"
+        ],
+        "configuration": "Current Alpha Smart enclosed delivery configuration, used as a named reference for the broad Alpha AMR catalog entry. This does not identify the model at each historical deployment. CPU generation, RAM, radio chip, RF bands and battery capacity are not specified. Other Alpha models remain separate.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Onboard processor",
+            "details": "Intel Core i7; the manufacturer does not give the processor SKU or generation.",
+            "sources": [
+              "https://www.alphadroid.io/product/alpha-smart"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation sensors",
+            "details": "Two depth cameras, two ultrasonic sensors, lidar and a fisheye camera. Sensor manufacturers and part numbers are unspecified.",
+            "sources": [
+              "https://www.alphadroid.io/product/alpha-smart"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Charging and runtime",
+            "details": "Automatic docking with a stated runtime exceeding seven hours; no battery voltage or chemistry is provided.",
+            "sources": [
+              "https://www.alphadroid.io/product/alpha-smart"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Delivery compartments and lift integration",
+            "details": "Four enclosed compartments, configurable as two, three or four, with OTP/PIN access; lift integration is supported. Payload is rated 60 kg.",
+            "sources": [
+              "https://www.alphadroid.io/product/alpha-smart"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "User interface",
+            "details": "Manufacturer describes a 10.1-inch touchscreen.",
+            "sources": [
+              "https://www.linkedin.com/posts/alphadroid_alphasmart-ird-alphadroid-activity-7399069134497476608-JGxB"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Alphadroid",
+            "models": [
+              "Alpha AMR"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "flo-material-mover-2026",
+        "manufacturer": "Flo Mobility",
+        "models": [
+          "Material Mover — current specification"
+        ],
+        "configuration": "Current manufacturer material-mover reference for the broad Autonomous Material Handler record. Earlier camera-only configurations and company-wide development hardware are not assigned to this version. CPU SKU, RAM, radio bands and battery capacity are undisclosed. Load figures differ within the product page: 500 kg headline versus 500–1,000 kg table.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Local autonomy computing",
+            "details": "Manufacturer identifies onboard edge AI, without naming its processor or compute module.",
+            "sources": [
+              "https://flomobility.com/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception and positioning",
+            "details": "Current product page specifies lidar/camera fusion. The manufacturer homepage lists GPS and a 32-beam, 360-degree lidar with a stated 200 m range; sensor model is unnamed.",
+            "sources": [
+              "https://flomobility.com/offerings/material-movement",
+              "https://flomobility.com/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Drive and batteries",
+            "details": "Four-wheel BLDC electric drivetrain with swappable batteries; manufacturer states 12-hour runtime.",
+            "sources": [
+              "https://flomobility.com/offerings/material-movement"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Load handling",
+            "details": "Hydraulic tipper for unloading; autonomous and remote-controlled operating modes.",
+            "sources": [
+              "https://flomobility.com/offerings/material-movement"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet Control",
+            "details": "Cloud dashboard provides task assignment, telemetry, sensor views and remote teleoperation. Manufacturer lists AWS multi-region hosting; transport protocols and robot modem are not specified.",
+            "sources": [
+              "https://flomobility.com/offerings/fleet-control"
+            ]
+          }
+        ],
+        "record_bindings": [
+          {
+            "manufacturer": "Flo Mobility",
+            "models": [
+              "Flo Mobility Autonomous Material Handler"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gritt-construction-2026",
+        "manufacturer": "Gritt",
+        "models": [
+          "Gritt Construction AI System"
+        ],
+        "configuration": "Manufacturer CTO technical description, September 2026, and current solar product page. This is an industrial-arm retrofit platform with varying host vehicles, not a single universal robot BOM. CPU, RAM, exact arm, camera, radio and power-system parts are unpublished.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Arm and host machine",
+            "details": "Commercial industrial robot arms attach to existing construction vehicles. The solar implementation automates panel pick-and-place on compatible trackers.",
+            "sources": [
+              "https://www.gritt.ai/news/how-gritt-works-practical-intelligence",
+              "https://www.gritt.ai/solar"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Visual perception",
+            "details": "Vision-based processing localizes objects through segmentation and six-degree-of-freedom pose estimation; camera models and sensor count are not disclosed.",
+            "sources": [
+              "https://www.gritt.ai/news/how-gritt-works-practical-intelligence"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Gritt Foundation Model",
+            "details": "GFM supplies representations for task-specific policies and perception. An observation layer checks proposed actions, with takeover and recovery mechanisms.",
+            "sources": [
+              "https://www.gritt.ai/news/how-gritt-works-practical-intelligence"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Training and validation pipeline",
+            "details": "Images and videos feed scene reconstruction and simulation; models are validated in shadow mode before active use. Training infrastructure is not an onboard processor specification.",
+            "sources": [
+              "https://www.gritt.ai/news/how-gritt-works-practical-intelligence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lg-cloi-home-2018",
+        "manufacturer": "LG Electronics",
+        "models": [
+          "CLOi Home",
+          "CLOi HomeBot"
+        ],
+        "configuration": "2018 CLOi Home assistant, explicitly identified as HomeBot in LG’s IFA image caption. This is not a HOM-BOT vacuum, ServeBot or the dual-arm 2026 CLOiD. Processor, RAM, power specification and radio hardware are not disclosed in these sources.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "interfaces",
+            "component": "Voice and appliance integration",
+            "details": "The IFA demonstration uses spoken requests to read appliance information and control compatible LG ThinQ appliances. The underlying radio and network protocol are unspecified.",
+            "sources": [
+              "https://www.lg.com/lv/lg-experience/tech-hub/jusu-galvena-rokasgramata-par-lg-cloi-robotiem"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Dated assistant integrations",
+            "details": "IFA material describes Alexa/Google Assistant compatibility. The separate October KES demonstration identifies Naver Clova; these are dated demonstrations, not proof every unit has all three integrations.",
+            "sources": [
+              "https://www.lg.com/lv/lg-experience/tech-hub/jusu-galvena-rokasgramata-par-lg-cloi-robotiem",
+              "https://www.lg.co.kr/media/release/10006"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lg-cloid-ces-2026",
+        "manufacturer": "LG Electronics",
+        "models": [
+          "CLOiD — CES 2026 configuration"
+        ],
+        "configuration": "January 2026 manufacturer demonstration. Separate from the 2018 CLOi Home/HomeBot record. Main chipset model, RAM, radio, battery capacity and joint part numbers are undisclosed. The AXIUM actuator brand was announced alongside it; this does not identify an installed actuator.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Head computing unit",
+            "details": "The head contains the main computing chipset; LG does not identify its manufacturer or SKU.",
+            "sources": [
+              "https://lgusnewsroom.com/press-release/lg-electronics-presents-lg-cloid-home-robot-to-demonstrate-zero-labor-home-at-ces-2026/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception assembly",
+            "details": "Head-mounted cameras and additional unspecified sensors support environmental perception and interaction.",
+            "sources": [
+              "https://lgusnewsroom.com/press-release/lg-electronics-presents-lg-cloid-home-robot-to-demonstrate-zero-labor-home-at-ces-2026/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobile manipulation",
+            "details": "Wheeled autonomous base, tilting torso, two seven-degree-of-freedom arms and five independently actuated fingers per hand. Motor and battery specifications are not published.",
+            "sources": [
+              "https://lgusnewsroom.com/press-release/lg-electronics-presents-lg-cloid-home-robot-to-demonstrate-zero-labor-home-at-ces-2026/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Interaction hardware",
+            "details": "Head display and speaker, with voice-based interaction.",
+            "sources": [
+              "https://lgusnewsroom.com/press-release/lg-electronics-presents-lg-cloid-home-robot-to-demonstrate-zero-labor-home-at-ces-2026/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Physical AI and home integration",
+            "details": "VLM interprets visual information; VLA maps visual/verbal input to actions. Integrates with ThinQ and ThinQ ON.",
+            "sources": [
+              "https://lgusnewsroom.com/press-release/lg-electronics-presents-lg-cloid-home-robot-to-demonstrate-zero-labor-home-at-ces-2026/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "moveez-robotaxi-platform",
+        "manufacturer": "MoveEz",
+        "models": [
+          "MoveEz Robotaxi"
+        ],
+        "configuration": "Public platform description, not a chassis-specific bill of materials. The manufacturer’s September 2025 release describes plans for US pilots with safety drivers. Processor, RAM, sensor part numbers, communications hardware and vehicle powertrain are not identified.",
+        "reviewed_on": "2026-11-04",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Multi-sensor perception",
+            "details": "Company co-founder describes camera, lidar and radar fusion for all-weather driving. No sensor brand, quantity or radar frequency is supplied.",
+            "sources": [
+              "https://www.linkedin.com/posts/ericweichiahung_last-week-a-notable-bill-s1677-advanced-activity-7481535847511519232-EXcQ"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Mapless driving stack",
+            "details": "Manufacturer describes navigation that reduces reliance on expensive high-definition 3D maps; this is not evidence that the vehicle has no maps or localization sensors.",
+            "sources": [
+              "https://moveez-inc.com/en/2025/09/page404/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Pilot supervision",
+            "details": "Initial US service plan includes an onboard safety driver. The announcement does not establish a deployed fully driverless service.",
+            "sources": [
+              "https://moveez-inc.com/en/2025/09/page404/"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -352077,8 +352616,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 920,
-    "devices_with_system_profiles": 833,
-    "devices_with_documented_compute": 404
+    "system_profiles": 926,
+    "devices_with_system_profiles": 838,
+    "devices_with_documented_compute": 406
   }
 }
