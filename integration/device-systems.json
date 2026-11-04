@@ -1207,8 +1207,8 @@
       "models": [
         "ANYmal D"
       ],
-      "configuration": "Generation D specification; no processor inference from other ANYmal revisions.",
-      "reviewed_on": "2026-11-03",
+      "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+      "reviewed_on": "2026-11-04",
       "facts": [
         {
           "section": "power",
@@ -1224,6 +1224,46 @@
           "details": "Published autonomous navigation, docking and inspection-data integration through ANYmal API.",
           "sources": [
             "https://www.anybotics.com/ANYbotics_Specs_US.pdf"
+          ]
+        },
+        {
+          "section": "compute",
+          "component": "RealSense Vision Processor D4",
+          "details": "Dedicated stereo-depth processing in the documented camera subsystem. This identifies the vision processor, not the robot's main autonomy or motion-control CPU.",
+          "sources": [
+            "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Six RealSense D435 depth cameras",
+          "details": "The supplier describes six modules providing terrain elevation mapping, obstacle perception and docking assistance for the ANYmal D platform.",
+          "sources": [
+            "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Inspection payload: visual, thermal and acoustic sensors",
+          "details": "The case study describes these measurements in the pan-tilt inspection unit. Keep inspection-payload equipment separate from the navigation cameras; individual payload sensor part numbers are not given.",
+          "sources": [
+            "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "USB depth and infrared data",
+          "details": "The vision-processor/depth-module subsystem provides depth and high-definition infrared output over USB. This internal data path does not establish an externally accessible service.",
+          "sources": [
+            "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "ROS and RealSense SDK integration",
+          "details": "The engineering team describes ROS and the RealSense SDK for the perception stack. The case study does not identify ROS distribution or SDK version.",
+          "sources": [
+            "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
           ]
         }
       ]

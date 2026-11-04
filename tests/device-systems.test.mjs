@@ -9,6 +9,23 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('batch 92 scopes ANYmal D camera compute separately from host and other generations',()=>{
+ const d=system('ANYbotics','ANYmal D');
+ assert.match(text(d.sections.compute),/Vision Processor D4/);
+ assert.match(text(d.sections.compute),/not the robot's main autonomy or motion-control CPU/);
+ assert.match(text(d.sections.sensors),/Six RealSense D435/);
+ assert.match(text(d.sections.sensors),/inspection-payload equipment separate/);
+ assert.match(text(d.sections.interfaces),/USB/);
+ assert.match(text(d.sections.software),/ROS and RealSense SDK/);
+ assert.equal(d.sections.memory.status,'not-established');
+ assert.equal(d.sections.radios.status,'not-established');
+ for(const model of ['ANYmal C','ANYmal X','ANYmal']) {
+  assert.equal(profileIds(system('ANYbotics',model)).includes('anymal-d'),false);
+ }
+ assert.equal(profileIds(system('Other vendor','ANYmal D')).includes('anymal-d'),false);
+ assert.equal(profileIds(system('ANYbotics','ANYmal D',{kind:'regulatory-equipment'})).length,0);
+});
+
 test('batch 90 keeps historical Chuck TX1 and TX2 configurations distinct',()=>{
  const chuck=system('6 River Systems','Chuck');
  assert.match(text(chuck.sections.compute),/initial Jetson TX1.*drop-in move to Jetson TX2/);

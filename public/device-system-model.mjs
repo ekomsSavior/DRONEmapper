@@ -1,7 +1,7 @@
-import {deviceSystems} from './device-system-data.mjs?v=20261104-b90';
+import {deviceSystems} from './device-system-data.mjs?v=20261104-b92';
 import {libraryModels} from './device-library-model.mjs';
 import {macAllocationsFor,formatMacPrefix} from './device-mac-model.mjs';
-import {robotSignatures} from './robot-signatures.mjs?v=20261104-b90';
+import {robotSignatures} from './robot-signatures.mjs?v=20261104-b92';
 
 import {profileMatches,matches,makerOf,fccKey} from './device-profile-match.mjs';
 const norm=value=>String(value||'').trim().replace(/\s+/g,' ').toLowerCase();

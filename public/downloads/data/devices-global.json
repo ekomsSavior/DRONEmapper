@@ -22750,15 +22750,28 @@
         "configurations": [
           {
             "id": "anymal-d",
-            "configuration": "Generation D specification; no processor inference from other ANYmal revisions.",
-            "reviewed_on": "2026-11-03"
+            "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+            "reviewed_on": "2026-11-04"
           }
         ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "RealSense Vision Processor D4",
+                "details": "Dedicated stereo-depth processing in the documented camera subsystem. This identifies the vision processor, not the robot's main autonomy or motion-control CPU.",
+                "sources": [
+                  "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-d",
+                "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -22772,8 +22785,33 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Six RealSense D435 depth cameras",
+                "details": "The supplier describes six modules providing terrain elevation mapping, obstacle perception and docking assistance for the ANYmal D platform.",
+                "sources": [
+                  "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-d",
+                "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "sensors",
+                "component": "Inspection payload: visual, thermal and acoustic sensors",
+                "details": "The case study describes these measurements in the pan-tilt inspection unit. Keep inspection-payload equipment separate from the navigation cameras; individual payload sensor part numbers are not given.",
+                "sources": [
+                  "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-d",
+                "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -22788,15 +22826,28 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "anymal-d",
-                "configuration": "Generation D specification; no processor inference from other ANYmal revisions.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "USB depth and infrared data",
+                "details": "The vision-processor/depth-module subsystem provides depth and high-definition infrared output over USB. This internal data path does not establish an externally accessible service.",
+                "sources": [
+                  "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-d",
+                "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+                "reviewed_on": "2026-11-04"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
@@ -22811,8 +22862,20 @@
                 ],
                 "evidence": "reviewed-primary-source",
                 "profile_id": "anymal-d",
-                "configuration": "Generation D specification; no processor inference from other ANYmal revisions.",
-                "reviewed_on": "2026-11-03"
+                "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+                "reviewed_on": "2026-11-04"
+              },
+              {
+                "section": "software",
+                "component": "ROS and RealSense SDK integration",
+                "details": "The engineering team describes ROS and the RealSense SDK for the perception stack. The case study does not identify ROS distribution or SDK version.",
+                "sources": [
+                  "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "anymal-d",
+                "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+                "reviewed_on": "2026-11-04"
               }
             ]
           },
@@ -22828,11 +22891,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "interfaces",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -388428,8 +388488,8 @@
         "models": [
           "ANYmal D"
         ],
-        "configuration": "Generation D specification; no processor inference from other ANYmal revisions.",
-        "reviewed_on": "2026-11-03",
+        "configuration": "Generation D: April 2024 manufacturer specification and RealSense supplier case study explicitly naming ANYmal D. Vision-processing components are separate from the undisclosed host CPU and memory; no inference from other ANYmal revisions.",
+        "reviewed_on": "2026-11-04",
         "facts": [
           {
             "section": "power",
@@ -388445,6 +388505,46 @@
             "details": "Published autonomous navigation, docking and inspection-data integration through ANYmal API.",
             "sources": [
               "https://www.anybotics.com/ANYbotics_Specs_US.pdf"
+            ]
+          },
+          {
+            "section": "compute",
+            "component": "RealSense Vision Processor D4",
+            "details": "Dedicated stereo-depth processing in the documented camera subsystem. This identifies the vision processor, not the robot's main autonomy or motion-control CPU.",
+            "sources": [
+              "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Six RealSense D435 depth cameras",
+            "details": "The supplier describes six modules providing terrain elevation mapping, obstacle perception and docking assistance for the ANYmal D platform.",
+            "sources": [
+              "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Inspection payload: visual, thermal and acoustic sensors",
+            "details": "The case study describes these measurements in the pan-tilt inspection unit. Keep inspection-payload equipment separate from the navigation cameras; individual payload sensor part numbers are not given.",
+            "sources": [
+              "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "USB depth and infrared data",
+            "details": "The vision-processor/depth-module subsystem provides depth and high-definition infrared output over USB. This internal data path does not establish an externally accessible service.",
+            "sources": [
+              "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "ROS and RealSense SDK integration",
+            "details": "The engineering team describes ROS and the RealSense SDK for the perception stack. The case study does not identify ROS distribution or SDK version.",
+            "sources": [
+              "https://www.realsenseai.com/cn/case-studies-cn/realsense-helps-autonomous-mobile-robots-map-facilities-avoid-obstacles-climb-stairs-and-navigate-to-dynamic-docking-stations-2/"
             ]
           }
         ]
@@ -435386,6 +435486,6 @@
     "devices_with_scanner_signatures": 12,
     "system_profiles": 926,
     "devices_with_system_profiles": 1237,
-    "devices_with_documented_compute": 599
+    "devices_with_documented_compute": 600
   }
 }
