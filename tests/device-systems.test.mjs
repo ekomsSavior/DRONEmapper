@@ -9,6 +9,31 @@ const system=(maker,name,extra={})=>systemBreakdown({maker,name,...extra});
 const text=s=>JSON.stringify(s);
 const profileIds=s=>s.configurations.map(p=>p.id);
 
+test('humanoid family records retain variant and demonstration boundaries',()=>{
+ const d9=system('Pudu Robotics','PUDU D9');
+ assert.match(text(d9.sections.compute),/275 TOPS/);
+ assert.doesNotMatch(d9.sections.compute.facts.map(f=>f.details).join(' '),/Orin|Jetson/);
+ assert.equal(profileIds(system('Pudu Robotics','D9 2.0')).length,0);
+ const k2=system('Kepler Robotics','K2 Bumblebee');
+ assert.match(text(k2.configurations),/52-DOF biped/);
+ assert.equal(profileIds(system('Kepler Robotics','K2 wheeled')).length,0);
+ assert.match(text(system('UBTech Robotics','Walker S1').sections.software),/ROSA 2.0/);
+ assert.equal(system('UBTech Robotics','Walker S1').sections.compute.status,'not-established');
+ const r=system('Oversonic Robotics','RoBee R'),m=system('Oversonic Robotics','RoBee M'),f=system('Oversonic Robotics','RoBee F');
+ assert.equal(profileIds(system('Oversonic Robotics','RoBee')).length,4);
+ for(const variant of [r,m,f])assert.equal(variant.sections.compute.status,'not-established');
+ assert.match(text(system('Oversonic Robotics','RoBee CES 2026 demonstrator').sections.compute),/Core Ultra Series 3/);
+ assert.match(text(r.sections.power),/Two lithium-ion/);
+ assert.match(text(m.sections.power),/One exchangeable/);
+ assert.match(text(f.sections.power),/Six batteries/);
+ assert.doesNotMatch(text(m.sections.power),/eight hours|supercapacitor/);
+ const cards=includeReviewedSystemModels(libraryModels());
+ assert.deepEqual(profileIds(systemBreakdown(cards.find(x=>x.maker==='Oversonic Robotics'&&x.name==='RoBee R'))),['oversonic-robee-r-oct2026']);
+ assert.equal(profileIds(system('Dexory','Warehouse Scanning Robot 2026')).length,0);
+ assert.equal(profileIds(system('Aethon','TUG T4')).length,0);
+ assert.equal(system('Hilti','Jaibot').sections.compute.status,'not-established');
+});
+
 test('marine and research configurations do not leak components across sibling vessels',()=>{
  const otter=system('Maritime Robotics','Otter'), mariner=system('Maritime Robotics','Mariner X');
  assert.match(text(otter.sections.compute),/Raspberry Pi 4/);
@@ -244,7 +269,8 @@ test('new robot profiles distinguish generations, optional radios and connector 
  const s2=system('UBTech Robotics','Walker S2');
  assert.match(text(s2.sections.compute),/x86 computer plus NVIDIA Jetson Orin/);
  assert.doesNotMatch(text(s2.sections.compute),/1185G7|64 GB|275 TOPS/);
- assert.equal(profileIds(system('UBTech Robotics','Walker S1')).length,0);
+ assert.deepEqual(profileIds(system('UBTech Robotics','Walker S1')),['ubtech-walker-s1']);
+ assert.doesNotMatch(text(system('UBTech Robotics','Walker S1').sections.compute),/Jetson Orin|x86 computer/);
 });
 
 test('humanoid variant tables do not transfer enhanced hardware into base models',()=>{

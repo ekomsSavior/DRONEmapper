@@ -2826,8 +2826,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "aethon-tug-t3-2016",
+            "configuration": "Aethon-authored 2016 T3 datasheet, specification 293130, mirrored by its distributor. Not every TUG generation. CPU, RAM, storage, radio module and battery voltage/capacity unspecified.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -2841,28 +2847,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Control links",
+                "details": "Wi-Fi or 900 MHz option; no exact protocol, channel or unique signature given.",
+                "sources": [
+                  "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aethon-tug-t3-2016",
+                "configuration": "Aethon-authored 2016 T3 datasheet, specification 293130, mirrored by its distributor. Not every TUG generation. CPU, RAM, storage, radio module and battery voltage/capacity unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Navigation",
+                "details": "Multiple LiDAR, sonar and infrared sensors; indoor-map localization without added navigation markers.",
+                "sources": [
+                  "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aethon-tug-t3-2016",
+                "configuration": "Aethon-authored 2016 T3 datasheet, specification 293130, mirrored by its distributor. Not every TUG generation. CPU, RAM, storage, radio module and battery voltage/capacity unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Energy and motion",
+                "details": "Valve-regulated lead-acid batteries; ten-hour advertised operation with intermittent charging. Automatic docking/charging and omnidirectional four-wheel drive; 453 kg maximum carrying capacity.",
+                "sources": [
+                  "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aethon-tug-t3-2016",
+                "configuration": "Aethon-authored 2016 T3 datasheet, specification 293130, mirrored by its distributor. Not every TUG generation. CPU, RAM, storage, radio module and battery voltage/capacity unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Dispatch and handling",
+                "details": "Automatic cart pickup/drop-off; touchscreen, handheld, scheduled, multi-stop and manufacturing-system dispatch options.",
+                "sources": [
+                  "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aethon-tug-t3-2016",
+                "configuration": "Aethon-authored 2016 T3 datasheet, specification 293130, mirrored by its distributor. Not every TUG generation. CPU, RAM, storage, radio module and battery voltage/capacity unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Fleet support architecture",
+                "details": "Local hosting or remote Aethon Command Center over an encrypted VPN; onboard operating system not specified.",
+                "sources": [
+                  "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "aethon-tug-t3-2016",
+                "configuration": "Aethon-authored 2016 T3 datasheet, specification 293130, mirrored by its distributor. Not every TUG generation. CPU, RAM, storage, radio module and battery voltage/capacity unspecified.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -2878,11 +2949,6 @@
         "missing_sections": [
           "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -31672,13 +31738,33 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "dexory-tower-2024",
+            "configuration": "February/March 2024 engineering articles describe the 12 m telescoping-tower generation, not the redesigned 2026 platform. Processor SKUs, memory, battery chemistry/capacity and radio hardware undisclosed.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Distributed onboard computers",
+                "details": "Central base computer plus separate computers on each scanning rail process images locally. Sensor timestamps are synchronized centrally; Ethernet links the rail computers to the base.",
+                "sources": [
+                  "https://www.dexory.com/insights/how-dexorys-inventory-management-robots-work",
+                  "https://www.dexory.com/insights/revolutionising-warehouse-data-with-ai-enabled-autonomous-mobile-robots"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexory-tower-2024",
+                "configuration": "February/March 2024 engineering articles describe the 12 m telescoping-tower generation, not the redesigned 2026 platform. Processor SKUs, memory, battery chemistry/capacity and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -31687,28 +31773,93 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Warehouse uplink",
+                "details": "Wi-Fi connectivity sends filtered results to the cloud; robot processing accommodates intermittent connectivity. Wi-Fi standard and module unspecified.",
+                "sources": [
+                  "https://www.dexory.com/insights/revolutionising-warehouse-data-with-ai-enabled-autonomous-mobile-robots"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexory-tower-2024",
+                "configuration": "February/March 2024 engineering articles describe the 12 m telescoping-tower generation, not the redesigned 2026 platform. Processor SKUs, memory, battery chemistry/capacity and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Tower and base",
+                "details": "Tower: 17 cameras, 17 lights and two LiDAR units. Base: four LiDAR units, two cameras and further perception sensors. Sensor models unspecified.",
+                "sources": [
+                  "https://www.dexory.com/insights/how-dexorys-inventory-management-robots-work"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexory-tower-2024",
+                "configuration": "February/March 2024 engineering articles describe the 12 m telescoping-tower generation, not the redesigned 2026 platform. Processor SKUs, memory, battery chemistry/capacity and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Drive and batteries",
+                "details": "Multiple rechargeable batteries provide approximately 4–5 scanning hours; under-three-hour recharge and automatic dock return. Six-wheel base uses two central driven wheels and front/rear wheel pairs on pivoting arms.",
+                "sources": [
+                  "https://www.dexory.com/insights/how-dexorys-inventory-management-robots-work"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexory-tower-2024",
+                "configuration": "February/March 2024 engineering articles describe the 12 m telescoping-tower generation, not the redesigned 2026 platform. Processor SKUs, memory, battery chemistry/capacity and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Tower mechanics",
+                "details": "Six linked telescoping sections, 3 m collapsed/12 m extended, with camera coverage of racks up to 14 m. Rope/pulley winch lifts rails; Ethernet harnesses run in drag chains.",
+                "sources": [
+                  "https://www.dexory.com/insights/how-dexorys-inventory-management-robots-work"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexory-tower-2024",
+                "configuration": "February/March 2024 engineering articles describe the 12 m telescoping-tower generation, not the redesigned 2026 platform. Processor SKUs, memory, battery chemistry/capacity and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Local-to-cloud data path",
+                "details": "Camera/LiDAR localization, barcode and volume processing happen onboard before reduced datasets feed DexoryView digital twins; remote software updates supported.",
+                "sources": [
+                  "https://www.dexory.com/insights/revolutionising-warehouse-data-with-ai-enabled-autonomous-mobile-robots"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "dexory-tower-2024",
+                "configuration": "February/March 2024 engineering articles describe the 12 m telescoping-tower generation, not the redesigned 2026 platform. Processor SKUs, memory, battery chemistry/capacity and radio hardware undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -31722,13 +31873,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -69592,8 +69737,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "hilti-jaibot-fieldstudy",
+            "configuration": "2022 Stanford field-study configuration plus Hilti’s public workflow description. Drill/extractor revisions can vary. Onboard processor, RAM, storage, battery capacity and radio modules undisclosed; PLC 400 is an external tablet.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -69607,28 +69758,95 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi and Bluetooth recorded in the field study; radio chips, versions and broadcast identifiers are not specified.",
+                "sources": [
+                  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hilti-jaibot-fieldstudy",
+                "configuration": "2022 Stanford field-study configuration plus Hilti’s public workflow description. Drill/extractor revisions can vary. Onboard processor, RAM, storage, battery capacity and radio modules undisclosed; PLC 400 is an external tablet.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Positioning and perception",
+                "details": "Study records tilt sensors, stereo 3D vision and speed controls; external Hilti PLT 300 total station supplies site positioning.",
+                "sources": [
+                  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/",
+                  "https://www.hilti.com/content/hilti/W1/US/en/business/business/trends/jaibot.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hilti-jaibot-fieldstudy",
+                "configuration": "2022 Stanford field-study configuration plus Hilti’s public workflow description. Drill/extractor revisions can vary. Onboard processor, RAM, storage, battery capacity and radio modules undisclosed; PLC 400 is an external tablet.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Mobile drilling base",
+                "details": "Battery-powered tracked carriage with vertical lift. Hilti advertises up to eight hours between charges; battery chemistry and electrical capacity are not given here.",
+                "sources": [
+                  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/",
+                  "https://www.hilti.com/content/hilti/W1/US/en/business/business/trends/jaibot.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hilti-jaibot-fieldstudy",
+                "configuration": "2022 Stanford field-study configuration plus Hilti’s public workflow description. Drill/extractor revisions can vary. Onboard processor, RAM, storage, battery capacity and radio modules undisclosed; PLC 400 is an external tablet.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Working tools and controls",
+                "details": "Study configuration uses Hilti TE-6A drill and VC-75 dust extractor, external PLC 400 tablet and joystick controller. Operator moves it between drilling zones.",
+                "sources": [
+                  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hilti-jaibot-fieldstudy",
+                "configuration": "2022 Stanford field-study configuration plus Hilti’s public workflow description. Drill/extractor revisions can vary. Onboard processor, RAM, storage, battery capacity and radio modules undisclosed; PLC 400 is an external tablet.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "BIM-to-robot workflow",
+                "details": "AutoCAD/Revit plans pass through Hilti Cloud to the PLC 400; total-station registration guides automatic drilling within the work area. Progress synchronizes back to the project system.",
+                "sources": [
+                  "https://www.hilti.com/content/hilti/W1/US/en/business/business/trends/jaibot.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "hilti-jaibot-fieldstudy",
+                "configuration": "2022 Stanford field-study configuration plus Hilti’s public workflow description. Drill/extractor revisions can vary. Onboard processor, RAM, storage, battery capacity and radio modules undisclosed; PLC 400 is an external tablet.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -69654,12 +69872,7 @@
         },
         "missing_sections": [
           "compute",
-          "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "memory"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -74311,13 +74524,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "kepler-k2-april2025",
+            "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Processing platform",
+                "details": "100 TOPS advertised; the presentation does not establish a particular NVIDIA or Intel component.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -74331,23 +74563,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Multimodal feedback",
+                "details": "Infrared binocular 3D camera, four-microphone far-field array and stereo speakers. More than 80 sensors include force/torque, dual position encoders, speed and attitude; four six-axis force sensors.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Actuation and endurance",
+                "details": "14 planetary roller-screw and 14 rotary actuators; 175 cm, 75 kg. Manufacturer claims eight-hour operation after one-hour charging; test conditions and battery chemistry unspecified.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Dexterous manipulation",
+                "details": "Two 11-DOF hands using 12 coreless motors in total; wrist force sensing and 25 tactile points per finger described. Presentation lists 25–30 kg dual-arm carrying and 15 kg single-hand load.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "KeplerBrain and Nebula",
+                "details": "Layered perception/decision/control with vision, voice and touch fusion. Nebula embodied software supports modular programming, simulation, multi-robot coordination, debugging and OTA updates.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -74361,13 +74645,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -74409,13 +74688,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "kepler-k2-april2025",
+            "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Processing platform",
+                "details": "100 TOPS advertised; the presentation does not establish a particular NVIDIA or Intel component.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -74429,23 +74727,75 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Multimodal feedback",
+                "details": "Infrared binocular 3D camera, four-microphone far-field array and stereo speakers. More than 80 sensors include force/torque, dual position encoders, speed and attitude; four six-axis force sensors.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Actuation and endurance",
+                "details": "14 planetary roller-screw and 14 rotary actuators; 175 cm, 75 kg. Manufacturer claims eight-hour operation after one-hour charging; test conditions and battery chemistry unspecified.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Dexterous manipulation",
+                "details": "Two 11-DOF hands using 12 coreless motors in total; wrist force sensing and 25 tactile points per finger described. Presentation lists 25–30 kg dual-arm carrying and 15 kg single-hand load.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "KeplerBrain and Nebula",
+                "details": "Layered perception/decision/control with vision, voice and touch fusion. Nebula embodied software supports modular programming, simulation, multi-robot coordination, debugging and OTA updates.",
+                "sources": [
+                  "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "kepler-k2-april2025",
+                "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -74459,13 +74809,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -87007,13 +87352,47 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "oversonic-robee-r-oct2026",
+            "configuration": "RoBee Series R October 2026 datasheet. CPU, RAM, storage and modem SKU unspecified. Datasheet says contact charging; web page says inductive, so configuration must be confirmed. CES processor demo is a separate profile.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "oversonic-robee-m-oct2026",
+            "configuration": "RoBee Series M October 2026 medical-application datasheet. CPU, RAM, storage, battery capacity and modem SKU unspecified; not the Series R or F hardware.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "oversonic-robee-f-oct2025",
+            "configuration": "RoBee Series F October 2025 manufacturer datasheet. Distinct intralogistics platform; processor, RAM, storage, battery capacity and radio module are undisclosed.",
+            "reviewed_on": "2026-11-03"
+          },
+          {
+            "id": "oversonic-robee-ces2026-compute",
+            "configuration": "Intel CES January 2026 demonstration only; not proof that all RoBee R/M/F units contain this processor. Exact SKU, memory and storage are not given.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "CES onboard inference",
+                "details": "Intel Core Ultra Series 3 edge processor family identified by Intel for the showcased RoBee. Exact chip SKU undisclosed.",
+                "sources": [
+                  "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/postcard-from-ces-2026-robee-steals-the-spotlight-with-intel-core-ultra-series-3-edge-processors.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-ces2026-compute",
+                "configuration": "Intel CES January 2026 demonstration only; not proof that all RoBee R/M/F units contain this processor. Exact SKU, memory and storage are not given.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -87022,28 +87401,226 @@
           },
           "radios": {
             "title": "Radios & data links",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi 6; 5G-ready is an option/capability statement, not proof of an installed cellular modem.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-r-oct2026",
+                "configuration": "RoBee Series R October 2026 datasheet. CPU, RAM, storage and modem SKU unspecified. Datasheet says contact charging; web page says inductive, so configuration must be confirmed. CES processor demo is a separate profile.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi 6 and 5G-ready capability; no module or network identifier published.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-m-oct2026",
+                "configuration": "RoBee Series M October 2026 medical-application datasheet. CPU, RAM, storage, battery capacity and modem SKU unspecified; not the Series R or F hardware.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "radios",
+                "component": "Connectivity",
+                "details": "Wi-Fi 6; advertised 5G-ready capability does not establish an active cellular installation.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-f-oct2025",
+                "configuration": "RoBee Series F October 2025 manufacturer datasheet. Distinct intralogistics platform; processor, RAM, storage, battery capacity and radio module are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception",
+                "details": "3D laser/LiDAR, depth cameras, force feedback and safety obstacle detection. Thermal camera available on request; cardioid microphone and 60 W speakers.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-r-oct2026",
+                "configuration": "RoBee Series R October 2026 datasheet. CPU, RAM, storage and modem SKU unspecified. Datasheet says contact charging; web page says inductive, so configuration must be confirmed. CES processor demo is a separate profile.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Perception and interaction",
+                "details": "3D laser/LiDAR, depth cameras, force feedback, cardioid microphone, 60 W speakers and touch display.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-m-oct2026",
+                "configuration": "RoBee Series M October 2026 medical-application datasheet. CPU, RAM, storage, battery capacity and modem SKU unspecified; not the Series R or F hardware.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "sensors",
+                "component": "Perception and feedback",
+                "details": "Eight cameras including depth and wrist-mounted vision, LiDAR, encoders and force feedback; cardioid microphone and 60 W speakers.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-f-oct2025",
+                "configuration": "RoBee Series F October 2025 manufacturer datasheet. Distinct intralogistics platform; processor, RAM, storage, battery capacity and radio module are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Power and base",
+                "details": "Two lithium-ion batteries with quick exchange; up to eight hours typical use. Datasheet specifies contact recharge and 230 V AC supply. Omnidirectional base reaches 1.2 m/s.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf",
+                  "https://www.oversonicrobotics.com/robee-r/"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-r-oct2026",
+                "configuration": "RoBee Series R October 2026 datasheet. CPU, RAM, storage and modem SKU unspecified. Datasheet says contact charging; web page says inductive, so configuration must be confirmed. CES processor demo is a separate profile.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Battery and mobility",
+                "details": "One exchangeable lithium-ion battery, up to four hours typical use; 230 V AC supply. Eight 100 mm mecanum wheels, 1.2 m/s; six degrees of freedom per articulated leg.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-m-oct2026",
+                "configuration": "RoBee Series M October 2026 medical-application datasheet. CPU, RAM, storage, battery capacity and modem SKU unspecified; not the Series R or F hardware.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "power",
+                "component": "Electrical and mobile base",
+                "details": "Six batteries; manufacturer lists lithium-ion plus graphene supercapacitor energy storage. Up to eight hours typical operation, 230 V AC supply; omnidirectional base, maximum 0.6 m/s.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-f-oct2025",
+                "configuration": "RoBee Series F October 2025 manufacturer datasheet. Distinct intralogistics platform; processor, RAM, storage, battery capacity and radio module are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Manipulation and operator tools",
+                "details": "95 cm arm reach; 7.5 kg per arm/15 kg combined. Mechanical/vacuum grippers or humanoid hands. Teach pendant and Oculus Rift remote-guidance options.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-r-oct2026",
+                "configuration": "RoBee Series R October 2026 datasheet. CPU, RAM, storage and modem SKU unspecified. Datasheet says contact charging; web page says inductive, so configuration must be confirmed. CES processor demo is a separate profile.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Arms and body",
+                "details": "180 cm/150 kg; 70 cm reach, six axes per arm and 5 kg per-arm/10 kg combined load. Grippers, vacuum tools and humanoid hands are configuration choices.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-m-oct2026",
+                "configuration": "RoBee Series M October 2026 medical-application datasheet. CPU, RAM, storage, battery capacity and modem SKU unspecified; not the Series R or F hardware.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "interfaces",
+                "component": "Manipulation and carrier",
+                "details": "Seven-axis arms on vertically moving, rotating pneumatic support; 120 cm reach, 10 kg per arm/20 kg combined. Rear module carries up to 500 kg; complete robot weighs 850 kg.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-f-oct2025",
+                "configuration": "RoBee Series F October 2025 manufacturer datasheet. Distinct intralogistics platform; processor, RAM, storage, battery capacity and radio module are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "BeeOS",
+                "details": "Perception, reasoning, interaction and navigation modules; graph-based mission authoring and fleet management. ERP/MES integration and telemetry are documented.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-r-oct2026",
+                "configuration": "RoBee Series R October 2026 datasheet. CPU, RAM, storage and modem SKU unspecified. Datasheet says contact charging; web page says inductive, so configuration must be confirmed. CES processor demo is a separate profile.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "BeeOS",
+                "details": "Multimodal mission and navigation software, fleet management, graph-based workflows and clinical-system integration. Remote guidance via pendant/Oculus Rift.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-m-oct2026",
+                "configuration": "RoBee Series M October 2026 medical-application datasheet. CPU, RAM, storage, battery capacity and modem SKU unspecified; not the Series R or F hardware.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Industrial integration",
+                "details": "MES/WMS/industrial-IoT connections, cloud fleet monitoring, autonomous route planning and front touchscreen/voicebot interface.",
+                "sources": [
+                  "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-f-oct2025",
+                "configuration": "RoBee Series F October 2025 manufacturer datasheet. Distinct intralogistics platform; processor, RAM, storage, battery capacity and radio module are undisclosed.",
+                "reviewed_on": "2026-11-03"
+              },
+              {
+                "section": "software",
+                "component": "Local processing scope",
+                "details": "Demonstrated speech recognition/generation, reasoning and selected vision tasks run onboard. This demo claim does not mean every RoBee product lacks cloud services.",
+                "sources": [
+                  "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/postcard-from-ces-2026-robee-steals-the-spotlight-with-intel-core-ultra-series-3-edge-processors.html"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "oversonic-robee-ces2026-compute",
+                "configuration": "Intel CES January 2026 demonstration only; not proof that all RoBee R/M/F units contain this processor. Exact SKU, memory and storage are not given.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -87057,13 +87634,7 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
-          "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -93390,13 +93961,32 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "research-needed",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "pudu-d9-first-generation",
+            "configuration": "D9 product-page specification and December 2024 launch configuration, not D9 2.0. CPU/GPU SKU, RAM, storage, radio and operating system are undisclosed. TOPS alone does not identify a chip.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "compute",
+                "component": "Published processing capacity",
+                "details": "275 TOPS; processor model and numeric precision are not specified.",
+                "sources": [
+                  "https://www.pudurobotics.com/en/products/d9"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pudu-d9-first-generation",
+                "configuration": "D9 product-page specification and December 2024 launch configuration, not D9 2.0. CPU/GPU SKU, RAM, storage, radio and operating system are undisclosed. TOPS alone does not identify a chip.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "memory": {
             "title": "Memory & storage",
@@ -93410,23 +94000,76 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Perception and hands",
+                "details": "RGB and RGB-D cameras, IMU and tactile sensors. Each DH11 hand has 12 tactile regions and 1,018 sensing pixels; camera and IMU part numbers undisclosed.",
+                "sources": [
+                  "https://www.pudurobotics.com/en/products/d9"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pudu-d9-first-generation",
+                "configuration": "D9 product-page specification and December 2024 launch configuration, not D9 2.0. CPU/GPU SKU, RAM, storage, radio and operating system are undisclosed. TOPS alone does not identify a chip.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and actuators",
+                "details": "15 Ah / 0.72 kWh battery. Published body: 170 cm, 65 kg, 42 degrees of freedom and 352 Nm maximum joint torque.",
+                "sources": [
+                  "https://www.pudurobotics.com/en/products/d9"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pudu-d9-first-generation",
+                "configuration": "D9 product-page specification and December 2024 launch configuration, not D9 2.0. CPU/GPU SKU, RAM, storage, radio and operating system are undisclosed. TOPS alone does not identify a chip.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Manipulation and audio",
+                "details": "Seven axes per arm, six per leg; DH11 hand has six active and five passive degrees of freedom. Stereo speaker. Body payload is 20 kg in tests, 10 kg per arm; the separate 40 kg hand lifting rating is not a whole-robot carrying capacity.",
+                "sources": [
+                  "https://www.pudurobotics.com/en/products/d9"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pudu-d9-first-generation",
+                "configuration": "D9 product-page specification and December 2024 launch configuration, not D9 2.0. CPU/GPU SKU, RAM, storage, radio and operating system are undisclosed. TOPS alone does not identify a chip.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "Perception and control stack",
+                "details": "Visual-semantic mapping/navigation and reinforcement-learning motion/task control described in the 2024 launch. Manufacturer distinguishes demonstrations from contracted shipping features.",
+                "sources": [
+                  "https://www.pudurobotics.com/about/news/6763cce40767a20044b4a69a",
+                  "https://www.pudurobotics.com/en/products/d9"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "pudu-d9-first-generation",
+                "configuration": "D9 product-page specification and December 2024 launch configuration, not D9 2.0. CPU/GPU SKU, RAM, storage, radio and operating system are undisclosed. TOPS alone does not identify a chip.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -93440,13 +94083,8 @@
           }
         },
         "missing_sections": [
-          "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software",
           "identification"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
@@ -110453,8 +111091,14 @@
         "schema_version": 1,
         "record_scope": "device-or-configuration",
         "complete_bill_of_materials": false,
-        "status": "reference-only",
-        "configurations": [],
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ubtech-walker-s1",
+            "configuration": "Walker S1 manufacturer diagram and product page. CPU, RAM, storage, radio module and battery specification are not published here. Walker S2 and original Walker processors are not inherited.",
+            "reviewed_on": "2026-11-03"
+          }
+        ],
         "sections": {
           "compute": {
             "title": "Processors & controllers",
@@ -110473,8 +111117,22 @@
           },
           "sensors": {
             "title": "Sensors & navigation",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Integrated head and hands",
+                "details": "Panoramic fisheye cameras and stereoscopic vision in the head; six tactile sensor arrays for pressure sensing in the dexterous-hand system.",
+                "sources": [
+                  "https://www.ubtrobot.com/en/humanoid/products/walker-s1/",
+                  "https://owebsite-cdn.ubtrobot.com/resources/image/2024/10/14/601089298387013.png"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ubtech-walker-s1",
+                "configuration": "Walker S1 manufacturer diagram and product page. CPU, RAM, storage, radio module and battery specification are not published here. Walker S2 and original Walker processors are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "power": {
             "title": "Power & mobility",
@@ -110483,13 +111141,40 @@
           },
           "interfaces": {
             "title": "Ports & expansion",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Body and joint drives",
+                "details": "172 cm, 76 kg and 15 kg published load. Self-developed integrated rotary joints with 250 Nm peak torque; load is not identified as per-arm in this diagram.",
+                "sources": [
+                  "https://owebsite-cdn.ubtrobot.com/resources/image/2024/10/14/601089298387013.png"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ubtech-walker-s1",
+                "configuration": "Walker S1 manufacturer diagram and product page. CPU, RAM, storage, radio module and battery specification are not published here. Walker S2 and original Walker processors are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "software": {
             "title": "Software & control",
-            "status": "not-established",
-            "facts": []
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "ROSA and motion planning",
+                "details": "ROSA 2.0 robotic application framework, semantic VSLAM, language-model task planning and learned whole-body motion control. Supports coordinated manufacturing workflows with AMRs/AGVs.",
+                "sources": [
+                  "https://www.ubtrobot.com/en/humanoid/products/walker-s1/",
+                  "https://owebsite-cdn.ubtrobot.com/resources/image/2024/10/14/601089298387013.png"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ubtech-walker-s1",
+                "configuration": "Walker S1 manufacturer diagram and product page. CPU, RAM, storage, radio module and battery specification are not published here. Walker S2 and original Walker processors are not inherited.",
+                "reviewed_on": "2026-11-03"
+              }
+            ]
           },
           "identification": {
             "title": "Identification & scanning",
@@ -110516,10 +111201,7 @@
           "compute",
           "memory",
           "radios",
-          "sensors",
-          "power",
-          "interfaces",
-          "software"
+          "power"
         ],
         "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
       }
@@ -273110,6 +273792,498 @@
             ]
           }
         ]
+      },
+      {
+        "id": "pudu-d9-first-generation",
+        "manufacturer": "Pudu Robotics",
+        "models": [
+          "PUDU D9"
+        ],
+        "configuration": "D9 product-page specification and December 2024 launch configuration, not D9 2.0. CPU/GPU SKU, RAM, storage, radio and operating system are undisclosed. TOPS alone does not identify a chip.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Published processing capacity",
+            "details": "275 TOPS; processor model and numeric precision are not specified.",
+            "sources": [
+              "https://www.pudurobotics.com/en/products/d9"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception and hands",
+            "details": "RGB and RGB-D cameras, IMU and tactile sensors. Each DH11 hand has 12 tactile regions and 1,018 sensing pixels; camera and IMU part numbers undisclosed.",
+            "sources": [
+              "https://www.pudurobotics.com/en/products/d9"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and actuators",
+            "details": "15 Ah / 0.72 kWh battery. Published body: 170 cm, 65 kg, 42 degrees of freedom and 352 Nm maximum joint torque.",
+            "sources": [
+              "https://www.pudurobotics.com/en/products/d9"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Manipulation and audio",
+            "details": "Seven axes per arm, six per leg; DH11 hand has six active and five passive degrees of freedom. Stereo speaker. Body payload is 20 kg in tests, 10 kg per arm; the separate 40 kg hand lifting rating is not a whole-robot carrying capacity.",
+            "sources": [
+              "https://www.pudurobotics.com/en/products/d9"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Perception and control stack",
+            "details": "Visual-semantic mapping/navigation and reinforcement-learning motion/task control described in the 2024 launch. Manufacturer distinguishes demonstrations from contracted shipping features.",
+            "sources": [
+              "https://www.pudurobotics.com/about/news/6763cce40767a20044b4a69a",
+              "https://www.pudurobotics.com/en/products/d9"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kepler-k2-april2025",
+        "manufacturer": "Kepler Robotics",
+        "models": [
+          "Kepler Forerunner K2",
+          "K2 Bumblebee"
+        ],
+        "configuration": "Kepler April 2025 manufacturer presentation: 52-DOF biped configuration. Not the 30-DOF basic or wheeled variant. CPU/GPU SKU, RAM, storage, radio and battery capacity are not named.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Processing platform",
+            "details": "100 TOPS advertised; the presentation does not establish a particular NVIDIA or Intel component.",
+            "sources": [
+              "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Multimodal feedback",
+            "details": "Infrared binocular 3D camera, four-microphone far-field array and stereo speakers. More than 80 sensors include force/torque, dual position encoders, speed and attitude; four six-axis force sensors.",
+            "sources": [
+              "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Actuation and endurance",
+            "details": "14 planetary roller-screw and 14 rotary actuators; 175 cm, 75 kg. Manufacturer claims eight-hour operation after one-hour charging; test conditions and battery chemistry unspecified.",
+            "sources": [
+              "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Dexterous manipulation",
+            "details": "Two 11-DOF hands using 12 coreless motors in total; wrist force sensing and 25 tactile points per finger described. Presentation lists 25–30 kg dual-arm carrying and 15 kg single-hand load.",
+            "sources": [
+              "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "KeplerBrain and Nebula",
+            "details": "Layered perception/decision/control with vision, voice and touch fusion. Nebula embodied software supports modular programming, simulation, multi-robot coordination, debugging and OTA updates.",
+            "sources": [
+              "https://www.worldrobotconference.com/profile/robot/download/2025/07/28/20250728223401000111_20250728223401A051.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ubtech-walker-s1",
+        "manufacturer": "UBTech Robotics",
+        "models": [
+          "Walker S1"
+        ],
+        "configuration": "Walker S1 manufacturer diagram and product page. CPU, RAM, storage, radio module and battery specification are not published here. Walker S2 and original Walker processors are not inherited.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Integrated head and hands",
+            "details": "Panoramic fisheye cameras and stereoscopic vision in the head; six tactile sensor arrays for pressure sensing in the dexterous-hand system.",
+            "sources": [
+              "https://www.ubtrobot.com/en/humanoid/products/walker-s1/",
+              "https://owebsite-cdn.ubtrobot.com/resources/image/2024/10/14/601089298387013.png"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Body and joint drives",
+            "details": "172 cm, 76 kg and 15 kg published load. Self-developed integrated rotary joints with 250 Nm peak torque; load is not identified as per-arm in this diagram.",
+            "sources": [
+              "https://owebsite-cdn.ubtrobot.com/resources/image/2024/10/14/601089298387013.png"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "ROSA and motion planning",
+            "details": "ROSA 2.0 robotic application framework, semantic VSLAM, language-model task planning and learned whole-body motion control. Supports coordinated manufacturing workflows with AMRs/AGVs.",
+            "sources": [
+              "https://www.ubtrobot.com/en/humanoid/products/walker-s1/",
+              "https://owebsite-cdn.ubtrobot.com/resources/image/2024/10/14/601089298387013.png"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "oversonic-robee-r-oct2026",
+        "manufacturer": "Oversonic Robotics",
+        "models": [
+          "RoBee R",
+          "RoBee"
+        ],
+        "configuration": "RoBee Series R October 2026 datasheet. CPU, RAM, storage and modem SKU unspecified. Datasheet says contact charging; web page says inductive, so configuration must be confirmed. CES processor demo is a separate profile.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi 6; 5G-ready is an option/capability statement, not proof of an installed cellular modem.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception",
+            "details": "3D laser/LiDAR, depth cameras, force feedback and safety obstacle detection. Thermal camera available on request; cardioid microphone and 60 W speakers.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Power and base",
+            "details": "Two lithium-ion batteries with quick exchange; up to eight hours typical use. Datasheet specifies contact recharge and 230 V AC supply. Omnidirectional base reaches 1.2 m/s.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf",
+              "https://www.oversonicrobotics.com/robee-r/"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Manipulation and operator tools",
+            "details": "95 cm arm reach; 7.5 kg per arm/15 kg combined. Mechanical/vacuum grippers or humanoid hands. Teach pendant and Oculus Rift remote-guidance options.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "BeeOS",
+            "details": "Perception, reasoning, interaction and navigation modules; graph-based mission authoring and fleet management. ERP/MES integration and telemetry are documented.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-R-2026-eng.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "oversonic-robee-m-oct2026",
+        "manufacturer": "Oversonic Robotics",
+        "models": [
+          "RoBee M",
+          "RoBee"
+        ],
+        "configuration": "RoBee Series M October 2026 medical-application datasheet. CPU, RAM, storage, battery capacity and modem SKU unspecified; not the Series R or F hardware.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi 6 and 5G-ready capability; no module or network identifier published.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception and interaction",
+            "details": "3D laser/LiDAR, depth cameras, force feedback, cardioid microphone, 60 W speakers and touch display.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and mobility",
+            "details": "One exchangeable lithium-ion battery, up to four hours typical use; 230 V AC supply. Eight 100 mm mecanum wheels, 1.2 m/s; six degrees of freedom per articulated leg.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Arms and body",
+            "details": "180 cm/150 kg; 70 cm reach, six axes per arm and 5 kg per-arm/10 kg combined load. Grippers, vacuum tools and humanoid hands are configuration choices.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "BeeOS",
+            "details": "Multimodal mission and navigation software, fleet management, graph-based workflows and clinical-system integration. Remote guidance via pendant/Oculus Rift.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-M-2026-eng.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "oversonic-robee-f-oct2025",
+        "manufacturer": "Oversonic Robotics",
+        "models": [
+          "RoBee F",
+          "RoBee"
+        ],
+        "configuration": "RoBee Series F October 2025 manufacturer datasheet. Distinct intralogistics platform; processor, RAM, storage, battery capacity and radio module are undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi 6; advertised 5G-ready capability does not establish an active cellular installation.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Perception and feedback",
+            "details": "Eight cameras including depth and wrist-mounted vision, LiDAR, encoders and force feedback; cardioid microphone and 60 W speakers.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electrical and mobile base",
+            "details": "Six batteries; manufacturer lists lithium-ion plus graphene supercapacitor energy storage. Up to eight hours typical operation, 230 V AC supply; omnidirectional base, maximum 0.6 m/s.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Manipulation and carrier",
+            "details": "Seven-axis arms on vertically moving, rotating pneumatic support; 120 cm reach, 10 kg per arm/20 kg combined. Rear module carries up to 500 kg; complete robot weighs 850 kg.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Industrial integration",
+            "details": "MES/WMS/industrial-IoT connections, cloud fleet monitoring, autonomous route planning and front touchscreen/voicebot interface.",
+            "sources": [
+              "https://www.oversonicrobotics.com/download/Oversonic_Robee-F-2025-eng.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "oversonic-robee-ces2026-compute",
+        "manufacturer": "Oversonic Robotics",
+        "models": [
+          "RoBee CES 2026 demonstrator",
+          "RoBee"
+        ],
+        "configuration": "Intel CES January 2026 demonstration only; not proof that all RoBee R/M/F units contain this processor. Exact SKU, memory and storage are not given.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "CES onboard inference",
+            "details": "Intel Core Ultra Series 3 edge processor family identified by Intel for the showcased RoBee. Exact chip SKU undisclosed.",
+            "sources": [
+              "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/postcard-from-ces-2026-robee-steals-the-spotlight-with-intel-core-ultra-series-3-edge-processors.html"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Local processing scope",
+            "details": "Demonstrated speech recognition/generation, reasoning and selected vision tasks run onboard. This demo claim does not mean every RoBee product lacks cloud services.",
+            "sources": [
+              "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/postcard-from-ces-2026-robee-steals-the-spotlight-with-intel-core-ultra-series-3-edge-processors.html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dexory-tower-2024",
+        "manufacturer": "Dexory",
+        "models": [
+          "Warehouse Scanning Robot",
+          "Warehouse Scanning Robot 2024"
+        ],
+        "configuration": "February/March 2024 engineering articles describe the 12 m telescoping-tower generation, not the redesigned 2026 platform. Processor SKUs, memory, battery chemistry/capacity and radio hardware undisclosed.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "compute",
+            "component": "Distributed onboard computers",
+            "details": "Central base computer plus separate computers on each scanning rail process images locally. Sensor timestamps are synchronized centrally; Ethernet links the rail computers to the base.",
+            "sources": [
+              "https://www.dexory.com/insights/how-dexorys-inventory-management-robots-work",
+              "https://www.dexory.com/insights/revolutionising-warehouse-data-with-ai-enabled-autonomous-mobile-robots"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Tower and base",
+            "details": "Tower: 17 cameras, 17 lights and two LiDAR units. Base: four LiDAR units, two cameras and further perception sensors. Sensor models unspecified.",
+            "sources": [
+              "https://www.dexory.com/insights/how-dexorys-inventory-management-robots-work"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Drive and batteries",
+            "details": "Multiple rechargeable batteries provide approximately 4–5 scanning hours; under-three-hour recharge and automatic dock return. Six-wheel base uses two central driven wheels and front/rear wheel pairs on pivoting arms.",
+            "sources": [
+              "https://www.dexory.com/insights/how-dexorys-inventory-management-robots-work"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Tower mechanics",
+            "details": "Six linked telescoping sections, 3 m collapsed/12 m extended, with camera coverage of racks up to 14 m. Rope/pulley winch lifts rails; Ethernet harnesses run in drag chains.",
+            "sources": [
+              "https://www.dexory.com/insights/how-dexorys-inventory-management-robots-work"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Warehouse uplink",
+            "details": "Wi-Fi connectivity sends filtered results to the cloud; robot processing accommodates intermittent connectivity. Wi-Fi standard and module unspecified.",
+            "sources": [
+              "https://www.dexory.com/insights/revolutionising-warehouse-data-with-ai-enabled-autonomous-mobile-robots"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Local-to-cloud data path",
+            "details": "Camera/LiDAR localization, barcode and volume processing happen onboard before reduced datasets feed DexoryView digital twins; remote software updates supported.",
+            "sources": [
+              "https://www.dexory.com/insights/revolutionising-warehouse-data-with-ai-enabled-autonomous-mobile-robots"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aethon-tug-t3-2016",
+        "manufacturer": "Aethon",
+        "models": [
+          "TUG T3",
+          "TUG"
+        ],
+        "configuration": "Aethon-authored 2016 T3 datasheet, specification 293130, mirrored by its distributor. Not every TUG generation. CPU, RAM, storage, radio module and battery voltage/capacity unspecified.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Control links",
+            "details": "Wi-Fi or 900 MHz option; no exact protocol, channel or unique signature given.",
+            "sources": [
+              "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation",
+            "details": "Multiple LiDAR, sonar and infrared sensors; indoor-map localization without added navigation markers.",
+            "sources": [
+              "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Energy and motion",
+            "details": "Valve-regulated lead-acid batteries; ten-hour advertised operation with intermittent charging. Automatic docking/charging and omnidirectional four-wheel drive; 453 kg maximum carrying capacity.",
+            "sources": [
+              "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Dispatch and handling",
+            "details": "Automatic cart pickup/drop-off; touchscreen, handheld, scheduled, multi-stop and manufacturing-system dispatch options.",
+            "sources": [
+              "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Fleet support architecture",
+            "details": "Local hosting or remote Aethon Command Center over an encrypted VPN; onboard operating system not specified.",
+            "sources": [
+              "https://www.fma-smt.com/sites/default/files/2019-06/Machine%20Specifications%20T3_Datasheet.pdf"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hilti-jaibot-fieldstudy",
+        "manufacturer": "Hilti",
+        "models": [
+          "Jaibot"
+        ],
+        "configuration": "2022 Stanford field-study configuration plus Hilti’s public workflow description. Drill/extractor revisions can vary. Onboard processor, RAM, storage, battery capacity and radio modules undisclosed; PLC 400 is an external tablet.",
+        "reviewed_on": "2026-11-03",
+        "facts": [
+          {
+            "section": "sensors",
+            "component": "Positioning and perception",
+            "details": "Study records tilt sensors, stereo 3D vision and speed controls; external Hilti PLT 300 total station supplies site positioning.",
+            "sources": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/",
+              "https://www.hilti.com/content/hilti/W1/US/en/business/business/trends/jaibot.html"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Connectivity",
+            "details": "Wi-Fi and Bluetooth recorded in the field study; radio chips, versions and broadcast identifiers are not specified.",
+            "sources": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mobile drilling base",
+            "details": "Battery-powered tracked carriage with vertical lift. Hilti advertises up to eight hours between charges; battery chemistry and electrical capacity are not given here.",
+            "sources": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/",
+              "https://www.hilti.com/content/hilti/W1/US/en/business/business/trends/jaibot.html"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Working tools and controls",
+            "details": "Study configuration uses Hilti TE-6A drill and VC-75 dust extractor, external PLC 400 tablet and joystick controller. Operator moves it between drilling zones.",
+            "sources": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244236/"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "BIM-to-robot workflow",
+            "details": "AutoCAD/Revit plans pass through Hilti Cloud to the PLC 400; total-station registration guides automatic drilling within the work area. Progress synchronizes back to the project system.",
+            "sources": [
+              "https://www.hilti.com/content/hilti/W1/US/en/business/business/trends/jaibot.html"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -273126,8 +274300,8 @@
     "devices_with_mac_allocations": 236,
     "devices_with_rf_information": 119,
     "devices_with_scanner_signatures": 11,
-    "system_profiles": 250,
-    "devices_with_system_profiles": 245,
-    "devices_with_documented_compute": 115
+    "system_profiles": 260,
+    "devices_with_system_profiles": 253,
+    "devices_with_documented_compute": 120
   }
 }
