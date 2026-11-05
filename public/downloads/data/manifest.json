@@ -68,6 +68,17 @@
       ]
     },
     {
+      "file": "drone-oui.csv",
+      "url": "/downloads/data/drone-oui.csv",
+      "rows": 72,
+      "bytes": 2476,
+      "sha256": "ae0ccce237fe00a3c22f946a5e28976147f582636c915ee06eebce964e94a82e",
+      "columns": [
+        "device",
+        "oui"
+      ]
+    },
+    {
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
       "rows": 1324,
@@ -147,7 +158,7 @@
     },
     {
       "path": "scripts/export_developer_data.py",
-      "sha256": "4676c6d82b8f60f44c055b87af0654e7b2835a40dab10a10dc6db247bcee923f"
+      "sha256": "4e4fd5181cfcf57bf1bf27509d6bb0f4d97a8d6469f3c439c9806e9efbdbb19f"
     },
     {
       "path": "scripts/device_radio_export.py",
@@ -180,6 +191,10 @@
     {
       "path": "scripts/sync-device-systems.py",
       "sha256": "f3396f119e64ec60bc48a94b9423a204b04d1edb9e5c964274c83ac4f2461fb8"
+    },
+    {
+      "path": "integration/drone-oui-subset.json",
+      "sha256": "a1727679210c3d1124854a89b4cec4edebc6fe92566d96601d4f230bafcb8e50"
     }
   ],
   "upstream_rights": "See README.md and upstream sources; no blanket relicensing of third-party material."

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "scope": "Drone-related manufacturer allocations, including drone radio equipment. These can also occur on controllers or other products from the same company; they are not model-specific detection signatures.",
+  "manufacturers": [
+    "ACSL", "AeroVironment", "Anduril Industries", "Autel Robotics", "DJI",
+    "Elbit Systems", "FIMI", "Flirtey", "Flock Safety", "Fortem Technologies",
+    "Freefly Systems", "Insitu", "Inspired Flight", "Israel Aerospace Industries",
+    "Lily Robotics", "Northrop Grumman", "Parrot", "Quantum Systems", "Rafael",
+    "Shield AI", "SIYI", "Skydio", "Teal Drones", "Teledyne FLIR", "Verity",
+    "XAG", "Yuneec", "Zero Zero Robotics", "Zipline"
+  ]
+}

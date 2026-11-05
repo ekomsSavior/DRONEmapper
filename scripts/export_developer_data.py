@@ -94,6 +94,12 @@ def catalog_release():
 
 def artifacts():
     collections=[('oui-global.csv',oui_rows()),('rid-prefixes.csv',rid_rows()),('rf-channels.csv',rf_rows())]
+    selection=json.loads((ROOT/'integration/drone-oui-subset.json').read_text())
+    selected={name+' devices' for name in selection['manufacturers']}
+    drone_rows=[row for row in collections[0][1] if row['device'] in selected]
+    if {row['device'] for row in drone_rows}!=selected:
+        raise ValueError('Drone OUI selection contains an unknown manufacturer')
+    collections.append(('drone-oui.csv',drone_rows))
     outputs={}
     entries=[]
     for name,rows in collections:
@@ -104,6 +110,7 @@ def artifacts():
     outputs['devices-global.json']=data
     entries.append(dict(file='devices-global.json',url='/downloads/data/devices-global.json',rows=len(global_data['devices']),bytes=len(data),sha256=sha(data),collections=global_data['counts']))
     inputs=['integration/device-oui.json','worker/rid-catalog.mjs','integration/security-device-references.json','integration/rf-channels.json','integration/fcc-references.json','integration/robot-platforms.json','integration/robot-signatures.json','integration/aircraft-references.json','integration/drone-platforms.json','integration/cloud-surfaces.json','public/device-inventory.json','docs/device-links.json','scripts/export_device_catalog.mjs','scripts/export_developer_data.py','scripts/device_radio_export.py','integration/device-systems.json','public/device-system-model.mjs','public/device-profile-match.mjs','scripts/sync-radio-references.py','public/device-system-data.mjs','scripts/enrich_device_systems.mjs','scripts/sync-device-systems.py']
+    inputs.append('integration/drone-oui-subset.json')
     manifest=dict(schema_version=SCHEMA_VERSION,release=catalog_release(),encoding='UTF-8',line_endings='CRLF',delimiter=',',scope='Drone, autonomous-vehicle, robot and associated equipment research. MAC allocations are restricted to explicitly reviewed relevant manufacturers.',datasets=entries,inputs=[dict(path=p,sha256=sha((ROOT/p).read_bytes())) for p in inputs],upstream_rights='See README.md and upstream sources; no blanket relicensing of third-party material.')
     outputs['manifest.json']=(json.dumps(manifest,indent=2)+'\n').encode()
     outputs['SHA256SUMS.txt']=''.join(sha(data)+'  '+name+'\n' for name,data in sorted(outputs.items())).encode()

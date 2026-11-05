@@ -1,6 +1,7 @@
 export const DATASETS = Object.freeze({
  'devices-global.json': {title:'Global device JSON',description:'The combined device corpus, including equipment records, radio references, robot patterns, Remote ID rules and documented vendor connections.',format:'json'},
  'oui-global.csv': {title:'Device + OUI CSV',description:'A simple device-and-OUI list for drone, autonomous-vehicle, robot and related equipment manufacturers. Allocations identify a manufacturer, not a specific model.',format:'csv'},
+ 'drone-oui.csv': {title:'Drone + OUI CSV',description:'The drone-related subset of our full Device + OUI list, including drone radio equipment. Manufacturer allocations may also occur on controllers or other products; they do not establish a drone model.',format:'csv'},
  'rid-prefixes.csv': {title:'Remote ID rules CSV',description:'Reviewed manufacturer and model allocations with exact serial ranges and source evidence.',format:'csv'},
  'rf-channels.csv': {title:'Radio channels CSV',description:'Frequency centers, bands, receiver requirements and supported decoder coverage, with sources.',format:'csv'},
 });

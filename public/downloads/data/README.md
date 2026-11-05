@@ -18,6 +18,7 @@ the manifest. No account or token is needed to download them.
 | --- | --- | --- |
 | `devices-global.json` | Combined models/programs, regulatory equipment, MAC allocations, RID rules, RF references, robot patterns, cloud services, documented vendor flows, product associations and source links | Research databases and cross-referenced tools |
 | `oui-global.csv` | Simple `device,oui` list for selected drone, autonomous-vehicle, robot and related equipment manufacturers | Relevant manufacturer allocations; not model identification |
+| `drone-oui.csv` | Drone-related subset of `oui-global.csv`, with the same `device,oui` columns and exact prefix lengths | Drone manufacturer and radio-equipment research; not drone-only identification |
 | `rid-prefixes.csv` | Every reviewed bounded rule from the scanner's RID catalog | Model candidates for a valid full CTA-2063 serial |
 | `rf-channels.csv` | Reviewed frequency centers, channel spans and DRONEmapper spectrum profiles | Receiver planning and understanding decoder coverage |
 
@@ -101,6 +102,12 @@ for device in catalog['devices']:
 ```
 
 ## MAC allocations CSV
+
+`drone-oui.csv` filters the full `oui-global.csv` through the manufacturer list in
+`integration/drone-oui-subset.json`. It retains every selected prefix unchanged,
+including /28 and /36 masks. Mixed-product manufacturers and drone radio equipment
+are included; the allocation alone does not distinguish a drone from a controller
+or another product. Both files open in the searchable preview before download.
 
 Two columns: `device` and `oui`. The device label names the manufacturer family;
 it does not assert a particular model. This list includes reviewed drone,
