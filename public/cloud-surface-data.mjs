@@ -1,7 +1,7 @@
-// Reviewed public service documentation.
+// Generated from integration/cloud-surfaces.json.
 export const cloudSurfaces = {
   "schema_version": 1,
-  "reviewed_on": "2026-11-02",
+  "reviewed_on": "2026-11-11",
   "scope": "Public documentation; not live observations",
   "services": [
     {
@@ -23037,6 +23037,160 @@ export const cloudSurfaces = {
           "direction": "forward",
           "source": "https://www.microdrones.com/en/content/drone-lidar-data-processing-made-easy-mdinfinity/",
           "boundary": "Authorized software user with access to the recorded dataset."
+        }
+      ]
+    },
+    {
+      "id": "ring-robotics",
+      "vendor": "Ring",
+      "name": "Ring Robotics · AI Pilot / app / event response",
+      "category": "Drones and ground robots",
+      "hosting": "Device and cloud",
+      "path": [
+        "Ring Drone Cam / Rover Cam",
+        "AI Pilot · sensors and cloud processing",
+        "Ring app / authorized account",
+        "Ring cameras / sensors / alarms"
+      ],
+      "protocols": [
+        "Vendor-documented workflow; wire protocols undisclosed"
+      ],
+      "data": "Mapping, patrol commands, sensor-triggered response and video. Product announcement, not a public telemetry feed.",
+      "access": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features.",
+      "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+      "gap": "No public robot telemetry API or verified mapping from CT hostnames to these products. Both new models document 2.4/5 GHz Wi-Fi; chipset and model-specific MAC prefixes remain unconfirmed.",
+      "evidence": "Manufacturer announcement · 2026-11-10",
+      "connector": "Research reference — no live Ring connector enabled",
+      "reviewed_on": "2026-11-11",
+      "useful": "Compare the two announced products with historical BHAZU001; collect owner-authorized model-specific evidence before proposing scanner rules.",
+      "related": [
+        {
+          "name": "Drone Cam specifications",
+          "url": "https://ring.com/products/drone-cam"
+        },
+        {
+          "name": "Drone hardware and dock identifiers",
+          "url": "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+        },
+        {
+          "name": "Rover Cam specifications",
+          "url": "https://ring.com/products/rover-cam"
+        },
+        {
+          "name": "Contributed Ring hostname research",
+          "url": "https://dronemapper.churchofmalware.org/downloads/ring-cloud-observations.json"
+        },
+        {
+          "name": "Reviewed update and collection gaps",
+          "url": "https://dronemapper.churchofmalware.org/downloads/ring-research.json"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Published AI Pilot workflow",
+          "data": "Camera/sensor input supports cloud-assisted navigation; wire protocol and hostname mapping undisclosed.",
+          "direction": "both",
+          "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+          "boundary": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features."
+        },
+        {
+          "from_index": 2,
+          "to_index": 0,
+          "label": "Owner control and video",
+          "data": "App control and viewing workflow; intermediaries not enumerated.",
+          "direction": "both",
+          "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+          "boundary": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features."
+        },
+        {
+          "from_index": 3,
+          "to_index": 0,
+          "label": "Configured event response",
+          "data": "Connected Ring events trigger preset patrol points; backend routing not published.",
+          "direction": "forward",
+          "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+          "boundary": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features."
+        }
+      ]
+    },
+    {
+      "id": "ring-take",
+      "vendor": "Ring",
+      "name": "Ring TAKE · video and key-management boundaries",
+      "category": "Vendor cloud platform",
+      "hosting": "Ring cloud / AWS Nitro Enclaves",
+      "path": [
+        "Supported Ring camera / encryption ingress",
+        "Encrypted video storage",
+        "Ring feature-processing service",
+        "CMMS · AWS Nitro Enclaves",
+        "Enrolled Ring app / Shared Users"
+      ],
+      "protocols": [
+        "MLS encryption groups",
+        "TAKE / optional E2EE"
+      ],
+      "data": "Encrypted video and temporary content keys. TAKE retains cloud key access for 24 hours; E2EE removes the cloud member.",
+      "access": "Account, enrolled devices and per-camera encryption settings; feature-dependent authorization.",
+      "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+      "gap": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified.",
+      "evidence": "Manufacturer technical white paper · 2026-08-26, sections 3–4",
+      "connector": "Research reference — no customer video or key access",
+      "reviewed_on": "2026-11-11",
+      "useful": "Trace storage, processing and key-management boundaries separately from radio identity.",
+      "related": [
+        {
+          "name": "Ring encryption announcement",
+          "url": "https://www.aboutamazon.com/news/devices/ring-take-encryption"
+        }
+      ],
+      "links": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Encrypted recordings",
+          "data": "Encryption occurs on capable cameras or at cloud ingress for older hardware.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Enabled feature processing",
+          "data": "Stored video can be processed for enabled features under TAKE.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
+        },
+        {
+          "from_index": 3,
+          "to_index": 2,
+          "label": "Scoped content keys",
+          "data": "CMMS supplies authorized feature services with temporary keys; root material stays enclave-bound.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
+        },
+        {
+          "from_index": 1,
+          "to_index": 4,
+          "label": "Playback",
+          "data": "Authorized enrolled clients receive encrypted recordings.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
+        },
+        {
+          "from_index": 4,
+          "to_index": 2,
+          "label": "User-triggered processing",
+          "data": "App can supply keys for older content; processing keys are discarded afterward.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
         }
       ]
     }

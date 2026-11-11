@@ -1,4 +1,4 @@
-import {deviceReferences} from './security-device-data.mjs';
+import {deviceReferences} from './security-device-data.mjs?v=20261111-ring';
 export {deviceReferences};
 const normalize = value => typeof value === 'string' ? value.trim().replace(/\s+/g,' ').toLowerCase() : '';
 // Exact maker, model and device-kind context. No RF identity or operator inference.

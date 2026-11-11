@@ -1,4 +1,4 @@
-import {deviceMacData} from './device-mac-data.mjs';
+import {deviceMacData} from './device-mac-data.mjs?v=20261111-ring';
 const norm=value=>String(value||'').trim().replace(/\s+/g,' ').toLowerCase();
 const aliases=new Map(Object.entries(deviceMacData.manufacturer_aliases||{}).map(([alias,maker])=>[norm(alias),norm(maker)]));
 const allocations=new Map();

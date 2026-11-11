@@ -1,5 +1,5 @@
 import {vendorFlow} from './vendor-flow-model.mjs?v=20261101-robots';
-import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261101-robots';
+import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261111-ring';
 import {buildGalaxy} from './galaxy-model.mjs?v=20261101-robots';
 const {nodes,edges}=buildGalaxy(),byId=new Map(nodes.map(n=>[n.id,n]));
 const $=id=>document.getElementById(id),svg=$('universe'),space=$('space'),NS='http://www.w3.org/2000/svg';

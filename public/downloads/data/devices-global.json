@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "2026-11-04",
+  "release": "2026-11-11",
   "scope": "Complete snapshot of the included DRONEmapper catalogs and contributed equipment index. Not an exhaustive inventory of all products worldwide; evidence status is field-specific.",
   "map_inventory_generated_at": 1792968739.267,
   "devices": [
@@ -182813,6 +182813,1526 @@
       }
     },
     {
+      "id": "fcc-2aeupbhazu001",
+      "fcc_id": "2AEUPBHAZU001",
+      "product": "Always Home Cam",
+      "maker": "Ring",
+      "vendor_id": "ring",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/us-drones.json",
+      "evidence_status": "published FCC grant reproduction reviewed; historical BHAZU001 only",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "lookup_url": "https://fccid.io/2AEUPBHAZU001",
+      "frequencies_mhz": [
+        [
+          2402,
+          2480
+        ],
+        [
+          2412,
+          2462
+        ],
+        [
+          5180,
+          5240
+        ],
+        [
+          5260,
+          5320
+        ],
+        [
+          5500,
+          5720
+        ],
+        [
+          5745,
+          5825
+        ]
+      ],
+      "latest_action": "2021-09-28",
+      "original_grant": "2021-09-28",
+      "application_date": "2021-09-23",
+      "application_purpose": "Original Equipment",
+      "scanner_signature": false,
+      "scope": "Not the 2026 Drone Cam; no successor component assignment.",
+      "catalog_id": "equipment-2AEUPBHAZU001",
+      "name": "Always Home Cam",
+      "category": "radio-equipment",
+      "catalog_evidence": "published FCC grant reproduction reviewed; historical BHAZU001 only",
+      "mac_allocations": [],
+      "rf_information": [
+        {
+          "kind": "model-communications-reference",
+          "model": "Ring Always Home Cam",
+          "communications": "BHAZU001 grant: Bluetooth BR/LE and 2.4/5 GHz WLAN. Frequencies apply only to this certified equipment.",
+          "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+          "sources": [
+            "https://fccid.io/2AEUPBHAZU001"
+          ],
+          "catalog": "security-device-references",
+          "scope": "Referenced model or explicitly listed alias only; not a received observation"
+        },
+        {
+          "kind": "regulatory-equipment-reference",
+          "fcc_id": "2AEUPBHAZU001",
+          "frequencies_mhz": [
+            [
+              2402,
+              2480
+            ],
+            [
+              2412,
+              2462
+            ],
+            [
+              5180,
+              5240
+            ],
+            [
+              5260,
+              5320
+            ],
+            [
+              5500,
+              5720
+            ],
+            [
+              5745,
+              5825
+            ]
+          ],
+          "evidence_status": "published FCC grant reproduction reviewed; historical BHAZU001 only",
+          "source": "https://fccid.io/2AEUPBHAZU001",
+          "scope": "This FCC equipment record only; not all vehicles from the associated vendor"
+        }
+      ],
+      "scanner_signatures": [],
+      "system_breakdown": {
+        "schema_version": 1,
+        "record_scope": "regulatory-equipment",
+        "complete_bill_of_materials": false,
+        "status": "reference-only",
+        "configurations": [],
+        "sections": {
+          "compute": {
+            "title": "Processors & controllers",
+            "status": "not-established",
+            "facts": []
+          },
+          "memory": {
+            "title": "Memory & storage",
+            "status": "not-established",
+            "facts": []
+          },
+          "radios": {
+            "title": "Radios & data links",
+            "status": "reference-only",
+            "facts": [
+              {
+                "component": "FCC equipment reference 2AEUPBHAZU001",
+                "details": "[[2402,2480],[2412,2462],[5180,5240],[5260,5320],[5500,5720],[5745,5825]] MHz",
+                "sources": [
+                  "https://fccid.io/2AEUPBHAZU001"
+                ],
+                "evidence": "published FCC grant reproduction reviewed; historical BHAZU001 only",
+                "configuration": "This equipment record only; not a component assignment to every vehicle from the associated vendor."
+              }
+            ]
+          },
+          "sensors": {
+            "title": "Sensors & navigation",
+            "status": "not-established",
+            "facts": []
+          },
+          "power": {
+            "title": "Power & mobility",
+            "status": "not-established",
+            "facts": []
+          },
+          "interfaces": {
+            "title": "Ports & expansion",
+            "status": "not-established",
+            "facts": []
+          },
+          "software": {
+            "title": "Software & control",
+            "status": "not-established",
+            "facts": []
+          },
+          "identification": {
+            "title": "Identification & scanning",
+            "status": "not-established",
+            "facts": []
+          },
+          "other": {
+            "title": "Other published specifications",
+            "status": "not-established",
+            "facts": []
+          }
+        },
+        "missing_sections": [
+          "compute",
+          "memory",
+          "sensors",
+          "power",
+          "interfaces",
+          "software",
+          "identification"
+        ],
+        "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
+      }
+    },
+    {
+      "vendor": "ring",
+      "group": "ring",
+      "manufacturer_aliases": [
+        "Ring",
+        "Ring LLC",
+        "Ring Robotics"
+      ],
+      "manufacturer_url": "https://ring.com/",
+      "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+      "id": "ring-always-home-cam",
+      "model": "Always Home Cam",
+      "aliases": [
+        "Always Home Cam",
+        "Ring Always Home Cam",
+        "BHAZU001"
+      ],
+      "name": "Ring Always Home Cam",
+      "kinds": [
+        "drone"
+      ],
+      "category": "Indoor drone · historical model",
+      "url": "https://fccid.io/2AEUPBHAZU001",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "sources": [
+        "https://fccid.io/2AEUPBHAZU001"
+      ],
+      "description": "Historical BHAZU001 equipment; FCC grant dated 2021-09-28. Separate from the 2026 Drone Cam.",
+      "connection": "BHAZU001 grant: Bluetooth BR/LE and 2.4/5 GHz WLAN. Frequencies apply only to this certified equipment.",
+      "maker": "Ring",
+      "records": 0,
+      "record_types": {},
+      "operators": [],
+      "reference": true,
+      "links": {
+        "product": "https://fccid.io/2AEUPBHAZU001",
+        "manufacturer": "https://ring.com/",
+        "library": "/devices?vendor=Ring&model=Ring%20Always%20Home%20Cam",
+        "cloud": "/cloud-surface?vendor=Ring",
+        "galaxy": "/galaxy?vendor=Ring"
+      },
+      "catalog_evidence": "curated-reference",
+      "cloud_service_ids": [
+        "ring-robotics",
+        "ring-take"
+      ],
+      "cloud_association_scope": "Vendor-level documentation; not proof this model uses every vendor service.",
+      "catalog_id": "device-790afc4833873f9f24260002",
+      "kind": "catalog-device-or-program",
+      "remote_id_rule_ids": [],
+      "mac_allocations": [
+        {
+          "device": "Ring devices",
+          "prefix": "00B463",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "187F88",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "242BD6",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "343EA4",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "50E467",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "54E019",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "5C475E",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "649A63",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "90486C",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "9C7613",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "AC9FC3",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "C4DBAD",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "CC3BFB",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        }
+      ],
+      "rf_information": [
+        {
+          "kind": "model-communications-reference",
+          "model": "Ring Always Home Cam",
+          "communications": "BHAZU001 grant: Bluetooth BR/LE and 2.4/5 GHz WLAN. Frequencies apply only to this certified equipment.",
+          "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+          "sources": [
+            "https://fccid.io/2AEUPBHAZU001"
+          ],
+          "catalog": "security-device-references",
+          "scope": "Referenced model or explicitly listed alias only; not a received observation"
+        },
+        {
+          "kind": "system-radio-reference",
+          "section": "radios",
+          "component": "Bluetooth BR and LE",
+          "details": "BHAZU001: 2402–2480 MHz; grant-listed conducted maxima 0.0195 W (BR) and 0.0073 W (LE).",
+          "sources": [
+            "https://fccid.io/2AEUPBHAZU001"
+          ],
+          "evidence": "reviewed-primary-source",
+          "profile_id": "ring-always-home-cam-bhazu001-2021",
+          "configuration": "Historical BHAZU001 FCC grant reproduction. No transfer of its bands, power limits or components to Drone Cam (2026), Rover Cam or other Ring devices.",
+          "reviewed_on": "2026-11-11",
+          "scope": "Published configuration only; not a received observation or a unique scanner signature"
+        },
+        {
+          "kind": "system-radio-reference",
+          "section": "radios",
+          "component": "WLAN",
+          "details": "BHAZU001: 2412–2462, 5180–5240, 5260–5320, 5500–5720 and 5745–5825 MHz channel ranges. Detailed per-band limits are in the RF catalog.",
+          "sources": [
+            "https://fccid.io/2AEUPBHAZU001"
+          ],
+          "evidence": "reviewed-primary-source",
+          "profile_id": "ring-always-home-cam-bhazu001-2021",
+          "configuration": "Historical BHAZU001 FCC grant reproduction. No transfer of its bands, power limits or components to Drone Cam (2026), Rover Cam or other Ring devices.",
+          "reviewed_on": "2026-11-11",
+          "scope": "Published configuration only; not a received observation or a unique scanner signature"
+        },
+        {
+          "kind": "model-frequency-reference",
+          "channels": [
+            {
+              "id": "model-ring-bhazu001-bt-br",
+              "band": "Ring BHAZU001 · Bluetooth BR",
+              "system": "Ring Always Home Cam · Bluetooth BR",
+              "frequency_mhz": null,
+              "range_start_mhz": 2402,
+              "range_end_mhz": 2480,
+              "bandwidth_mhz": null,
+              "bandwidth_basis": "unspecified",
+              "channel": "",
+              "decoder": "none",
+              "decoder_scope": "No bundled Ring model-identity decoder",
+              "observation_kind": "channel-center-range",
+              "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+              "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+              "source": "https://fccid.io/2AEUPBHAZU001",
+              "reviewed_on": "2026-11-11",
+              "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.0195 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+              "channel_spacing_mhz": null,
+              "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+            },
+            {
+              "id": "model-ring-bhazu001-ble",
+              "band": "Ring BHAZU001 · Bluetooth LE",
+              "system": "Ring Always Home Cam · Bluetooth LE",
+              "frequency_mhz": null,
+              "range_start_mhz": 2402,
+              "range_end_mhz": 2480,
+              "bandwidth_mhz": null,
+              "bandwidth_basis": "unspecified",
+              "channel": "",
+              "decoder": "none",
+              "decoder_scope": "No bundled Ring model-identity decoder",
+              "observation_kind": "channel-center-range",
+              "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+              "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+              "source": "https://fccid.io/2AEUPBHAZU001",
+              "reviewed_on": "2026-11-11",
+              "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.0073 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+              "channel_spacing_mhz": null,
+              "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+            },
+            {
+              "id": "model-ring-bhazu001-wifi-24",
+              "band": "Ring BHAZU001 · Wi-Fi 2.4 GHz",
+              "system": "Ring Always Home Cam · Wi-Fi 2.4 GHz",
+              "frequency_mhz": null,
+              "range_start_mhz": 2412,
+              "range_end_mhz": 2462,
+              "bandwidth_mhz": null,
+              "bandwidth_basis": "unspecified",
+              "channel": "",
+              "decoder": "none",
+              "decoder_scope": "No bundled Ring model-identity decoder",
+              "observation_kind": "channel-center-range",
+              "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+              "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+              "source": "https://fccid.io/2AEUPBHAZU001",
+              "reviewed_on": "2026-11-11",
+              "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.6353 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+              "channel_spacing_mhz": null,
+              "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+            },
+            {
+              "id": "model-ring-bhazu001-wifi-u1",
+              "band": "Ring BHAZU001 · Wi-Fi U-NII-1",
+              "system": "Ring Always Home Cam · Wi-Fi U-NII-1",
+              "frequency_mhz": null,
+              "range_start_mhz": 5180,
+              "range_end_mhz": 5240,
+              "bandwidth_mhz": null,
+              "bandwidth_basis": "unspecified",
+              "channel": "",
+              "decoder": "none",
+              "decoder_scope": "No bundled Ring model-identity decoder",
+              "observation_kind": "channel-center-range",
+              "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+              "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+              "source": "https://fccid.io/2AEUPBHAZU001",
+              "reviewed_on": "2026-11-11",
+              "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.1355 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+              "channel_spacing_mhz": null,
+              "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+            },
+            {
+              "id": "model-ring-bhazu001-wifi-u2a",
+              "band": "Ring BHAZU001 · Wi-Fi U-NII-2A",
+              "system": "Ring Always Home Cam · Wi-Fi U-NII-2A",
+              "frequency_mhz": null,
+              "range_start_mhz": 5260,
+              "range_end_mhz": 5320,
+              "bandwidth_mhz": null,
+              "bandwidth_basis": "unspecified",
+              "channel": "",
+              "decoder": "none",
+              "decoder_scope": "No bundled Ring model-identity decoder",
+              "observation_kind": "channel-center-range",
+              "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+              "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+              "source": "https://fccid.io/2AEUPBHAZU001",
+              "reviewed_on": "2026-11-11",
+              "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.1047 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+              "channel_spacing_mhz": null,
+              "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+            },
+            {
+              "id": "model-ring-bhazu001-wifi-u2c",
+              "band": "Ring BHAZU001 · Wi-Fi U-NII-2C",
+              "system": "Ring Always Home Cam · Wi-Fi U-NII-2C",
+              "frequency_mhz": null,
+              "range_start_mhz": 5500,
+              "range_end_mhz": 5720,
+              "bandwidth_mhz": null,
+              "bandwidth_basis": "unspecified",
+              "channel": "",
+              "decoder": "none",
+              "decoder_scope": "No bundled Ring model-identity decoder",
+              "observation_kind": "channel-center-range",
+              "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+              "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+              "source": "https://fccid.io/2AEUPBHAZU001",
+              "reviewed_on": "2026-11-11",
+              "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.0885 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+              "channel_spacing_mhz": null,
+              "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+            },
+            {
+              "id": "model-ring-bhazu001-wifi-u3",
+              "band": "Ring BHAZU001 · Wi-Fi U-NII-3",
+              "system": "Ring Always Home Cam · Wi-Fi U-NII-3",
+              "frequency_mhz": null,
+              "range_start_mhz": 5745,
+              "range_end_mhz": 5825,
+              "bandwidth_mhz": null,
+              "bandwidth_basis": "unspecified",
+              "channel": "",
+              "decoder": "none",
+              "decoder_scope": "No bundled Ring model-identity decoder",
+              "observation_kind": "channel-center-range",
+              "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+              "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+              "source": "https://fccid.io/2AEUPBHAZU001",
+              "reviewed_on": "2026-11-11",
+              "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.1291 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+              "channel_spacing_mhz": null,
+              "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+            }
+          ],
+          "scope": "Exact reviewed system profile; regional and hardware configuration constraints apply"
+        }
+      ],
+      "scanner_signatures": [],
+      "system_breakdown": {
+        "schema_version": 1,
+        "record_scope": "device-or-configuration",
+        "complete_bill_of_materials": false,
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ring-always-home-cam-bhazu001-2021",
+            "configuration": "Historical BHAZU001 FCC grant reproduction. No transfer of its bands, power limits or components to Drone Cam (2026), Rover Cam or other Ring devices.",
+            "reviewed_on": "2026-11-11"
+          }
+        ],
+        "sections": {
+          "compute": {
+            "title": "Processors & controllers",
+            "status": "not-established",
+            "facts": []
+          },
+          "memory": {
+            "title": "Memory & storage",
+            "status": "not-established",
+            "facts": []
+          },
+          "radios": {
+            "title": "Radios & data links",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Bluetooth BR and LE",
+                "details": "BHAZU001: 2402–2480 MHz; grant-listed conducted maxima 0.0195 W (BR) and 0.0073 W (LE).",
+                "sources": [
+                  "https://fccid.io/2AEUPBHAZU001"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-always-home-cam-bhazu001-2021",
+                "configuration": "Historical BHAZU001 FCC grant reproduction. No transfer of its bands, power limits or components to Drone Cam (2026), Rover Cam or other Ring devices.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "section": "radios",
+                "component": "WLAN",
+                "details": "BHAZU001: 2412–2462, 5180–5240, 5260–5320, 5500–5720 and 5745–5825 MHz channel ranges. Detailed per-band limits are in the RF catalog.",
+                "sources": [
+                  "https://fccid.io/2AEUPBHAZU001"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-always-home-cam-bhazu001-2021",
+                "configuration": "Historical BHAZU001 FCC grant reproduction. No transfer of its bands, power limits or components to Drone Cam (2026), Rover Cam or other Ring devices.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "component": "Published model communications",
+                "details": "BHAZU001 grant: Bluetooth BR/LE and 2.4/5 GHz WLAN. Frequencies apply only to this certified equipment.",
+                "sources": [
+                  "https://fccid.io/2AEUPBHAZU001"
+                ],
+                "evidence": "existing-catalog-reference"
+              }
+            ]
+          },
+          "sensors": {
+            "title": "Sensors & navigation",
+            "status": "not-established",
+            "facts": []
+          },
+          "power": {
+            "title": "Power & mobility",
+            "status": "not-established",
+            "facts": []
+          },
+          "interfaces": {
+            "title": "Ports & expansion",
+            "status": "not-established",
+            "facts": []
+          },
+          "software": {
+            "title": "Software & control",
+            "status": "not-established",
+            "facts": []
+          },
+          "identification": {
+            "title": "Identification & scanning",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "FCC equipment identity",
+                "details": "2AEUPBHAZU001; grant 2021-09-28. Application date 2021-09-23 is not the grant date.",
+                "sources": [
+                  "https://fccid.io/2AEUPBHAZU001"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-always-home-cam-bhazu001-2021",
+                "configuration": "Historical BHAZU001 FCC grant reproduction. No transfer of its bands, power limits or components to Drone Cam (2026), Rover Cam or other Ring devices.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "component": "Manufacturer MAC allocations",
+                "details": "00:B4:63 · 18:7F:88 · 24:2B:D6 · 34:3E:A4 · 50:E4:67 · 54:E0:19 · 5C:47:5E · 64:9A:63 · 90:48:6C · 9C:76:13 · AC:9F:C3 · C4:DB:AD · CC:3B:FB",
+                "configuration": "Manufacturer registrant only; use on this model is not established.",
+                "sources": [
+                  "https://standards-oui.ieee.org/oui/oui.csv"
+                ],
+                "evidence": "manufacturer-only"
+              }
+            ]
+          },
+          "other": {
+            "title": "Other published specifications",
+            "status": "not-established",
+            "facts": []
+          }
+        },
+        "missing_sections": [
+          "compute",
+          "memory",
+          "sensors",
+          "power",
+          "interfaces",
+          "software"
+        ],
+        "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
+      }
+    },
+    {
+      "vendor": "ring",
+      "group": "ring",
+      "manufacturer_aliases": [
+        "Ring",
+        "Ring LLC",
+        "Ring Robotics"
+      ],
+      "manufacturer_url": "https://ring.com/",
+      "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+      "id": "ring-drone-cam",
+      "model": "Drone Cam",
+      "aliases": [
+        "Drone Cam",
+        "Ring Drone Cam",
+        "5CFYB9"
+      ],
+      "name": "Ring Drone Cam",
+      "kinds": [
+        "drone"
+      ],
+      "category": "Indoor drone",
+      "url": "https://ring.com/products/drone-cam",
+      "source": "https://ring.com/products/drone-cam",
+      "sources": [
+        "https://ring.com/products/drone-cam",
+        "https://ring.com/support/products/cameras/ring-drone-cam?page=1",
+        "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam",
+        "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+      ],
+      "description": "Announced 2026-11-10; US shipping planned 2027-01-27 at $249.99, subject to FCC authorization. Indoor flying security camera.",
+      "connection": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and cloud-assisted AI Pilot. Radio chipset and model-specific MAC prefix unconfirmed.",
+      "maker": "Ring",
+      "records": 0,
+      "record_types": {},
+      "operators": [],
+      "reference": true,
+      "links": {
+        "product": "https://ring.com/products/drone-cam",
+        "manufacturer": "https://ring.com/",
+        "library": "/devices?vendor=Ring&model=Ring%20Drone%20Cam",
+        "cloud": "/cloud-surface?vendor=Ring",
+        "galaxy": "/galaxy?vendor=Ring"
+      },
+      "catalog_evidence": "curated-reference",
+      "cloud_service_ids": [
+        "ring-robotics",
+        "ring-take"
+      ],
+      "cloud_association_scope": "Vendor-level documentation; not proof this model uses every vendor service.",
+      "catalog_id": "device-71c0a99736757cc612f8ee4b",
+      "kind": "catalog-device-or-program",
+      "remote_id_rule_ids": [],
+      "mac_allocations": [
+        {
+          "device": "Ring devices",
+          "prefix": "00B463",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "187F88",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "242BD6",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "343EA4",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "50E467",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "54E019",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "5C475E",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "649A63",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "90486C",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "9C7613",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "AC9FC3",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "C4DBAD",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "CC3BFB",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        }
+      ],
+      "rf_information": [
+        {
+          "kind": "model-communications-reference",
+          "model": "Ring Drone Cam",
+          "communications": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and cloud-assisted AI Pilot. Radio chipset and model-specific MAC prefix unconfirmed.",
+          "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+          "sources": [
+            "https://ring.com/products/drone-cam",
+            "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam",
+            "https://ring.com/support/products/cameras/ring-drone-cam?page=1",
+            "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+          ],
+          "catalog": "security-device-references",
+          "scope": "Referenced model or explicitly listed alias only; not a received observation"
+        },
+        {
+          "kind": "system-radio-reference",
+          "section": "radios",
+          "component": "Dual-band Wi-Fi",
+          "details": "2.4 and 5 GHz Wi-Fi. Channel limits, transmit power, radio chipset and antennas are not specified on the product page.",
+          "sources": [
+            "https://ring.com/products/drone-cam"
+          ],
+          "evidence": "reviewed-primary-source",
+          "profile_id": "ring-drone-cam-2026",
+          "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+          "reviewed_on": "2026-11-11",
+          "scope": "Published configuration only; not a received observation or a unique scanner signature"
+        },
+        {
+          "kind": "system-radio-reference",
+          "section": "radios",
+          "component": "Wireless security",
+          "details": "Support page lists 802.11b/g/n and WPA2/WPA3; no inference of additional PHY modes.",
+          "sources": [
+            "https://ring.com/support/products/cameras/ring-drone-cam?page=1"
+          ],
+          "evidence": "reviewed-primary-source",
+          "profile_id": "ring-drone-cam-2026",
+          "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+          "reviewed_on": "2026-11-11",
+          "scope": "Published configuration only; not a received observation or a unique scanner signature"
+        }
+      ],
+      "scanner_signatures": [],
+      "system_breakdown": {
+        "schema_version": 1,
+        "record_scope": "device-or-configuration",
+        "complete_bill_of_materials": false,
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ring-drone-cam-2026",
+            "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+            "reviewed_on": "2026-11-11"
+          }
+        ],
+        "sections": {
+          "compute": {
+            "title": "Processors & controllers",
+            "status": "not-established",
+            "facts": []
+          },
+          "memory": {
+            "title": "Memory & storage",
+            "status": "not-established",
+            "facts": []
+          },
+          "radios": {
+            "title": "Radios & data links",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Dual-band Wi-Fi",
+                "details": "2.4 and 5 GHz Wi-Fi. Channel limits, transmit power, radio chipset and antennas are not specified on the product page.",
+                "sources": [
+                  "https://ring.com/products/drone-cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "section": "radios",
+                "component": "Wireless security",
+                "details": "Support page lists 802.11b/g/n and WPA2/WPA3; no inference of additional PHY modes.",
+                "sources": [
+                  "https://ring.com/support/products/cameras/ring-drone-cam?page=1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "component": "Published model communications",
+                "details": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and cloud-assisted AI Pilot. Radio chipset and model-specific MAC prefix unconfirmed.",
+                "sources": [
+                  "https://ring.com/products/drone-cam",
+                  "https://ring.com/support/products/cameras/ring-drone-cam?page=1",
+                  "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam",
+                  "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+                ],
+                "evidence": "existing-catalog-reference"
+              }
+            ]
+          },
+          "sensors": {
+            "title": "Sensors & navigation",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera and lighting",
+                "details": "1920 × 1920 video; 148° horizontal and vertical view; two LED spotlights, no infrared night vision.",
+                "sources": [
+                  "https://ring.com/products/drone-cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "section": "sensors",
+                "component": "Navigation and obstacle sensing",
+                "details": "Safety documentation identifies Class 1 laser navigation/obstacle sensors, without part numbers.",
+                "sources": [
+                  "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              }
+            ]
+          },
+          "power": {
+            "title": "Power & mobility",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Flight and charging",
+                "details": "Built-in rechargeable battery; USB-C AC charging dock; up to eight minutes per flight under manufacturer test conditions. Automatically returns to charge.",
+                "sources": [
+                  "https://ring.com/products/drone-cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "section": "power",
+                "component": "Electrical ratings",
+                "details": "Drone and dock: 15 V, 2 A. Adapter input 100–240 VAC; selectable outputs 5 V/3 A, 9 V/3 A, 15 V/2 A or 20 V/1.5 A.",
+                "sources": [
+                  "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "section": "power",
+                "component": "Mass and indoor use",
+                "details": "165 g including battery; single-floor operation at launch. Product page gives 5–35 °C, safety document 0–35 °C; discrepancy retained for review.",
+                "sources": [
+                  "https://ring.com/support/products/cameras/ring-drone-cam?page=1",
+                  "https://ring.com/products/drone-cam",
+                  "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              }
+            ]
+          },
+          "interfaces": {
+            "title": "Ports & expansion",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "App, audio and privacy",
+                "details": "Ring app controls and viewing. No microphone, speaker, two-way talk or siren. Recording occurs only during flight.",
+                "sources": [
+                  "https://ring.com/products/drone-cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              }
+            ]
+          },
+          "software": {
+            "title": "Software & control",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "AI Pilot",
+                "details": "Camera/sensor input and cloud processing support mapping, patrol planning and obstacle avoidance.",
+                "sources": [
+                  "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "section": "software",
+                "component": "Service and update requirements",
+                "details": "Compatible subscription for scheduled patrols and stored video. Support page promises security updates for at least four years after last new sale.",
+                "sources": [
+                  "https://ring.com/products/drone-cam",
+                  "https://ring.com/support/products/cameras/ring-drone-cam?page=1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              }
+            ]
+          },
+          "identification": {
+            "title": "Identification & scanning",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "identification",
+                "component": "Hardware identity",
+                "details": "Drone 5CFYB9; dock 6GFYA3; adapter 6PNXA2. These are hardware model numbers, not FCC IDs. No model-specific MAC allocation established.",
+                "sources": [
+                  "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-drone-cam-2026",
+                "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "component": "Manufacturer MAC allocations",
+                "details": "00:B4:63 · 18:7F:88 · 24:2B:D6 · 34:3E:A4 · 50:E4:67 · 54:E0:19 · 5C:47:5E · 64:9A:63 · 90:48:6C · 9C:76:13 · AC:9F:C3 · C4:DB:AD · CC:3B:FB",
+                "configuration": "Manufacturer registrant only; use on this model is not established.",
+                "sources": [
+                  "https://standards-oui.ieee.org/oui/oui.csv"
+                ],
+                "evidence": "manufacturer-only"
+              }
+            ]
+          },
+          "other": {
+            "title": "Other published specifications",
+            "status": "not-established",
+            "facts": []
+          }
+        },
+        "missing_sections": [
+          "compute",
+          "memory"
+        ],
+        "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
+      }
+    },
+    {
+      "vendor": "ring",
+      "group": "ring",
+      "manufacturer_aliases": [
+        "Ring",
+        "Ring LLC",
+        "Ring Robotics"
+      ],
+      "manufacturer_url": "https://ring.com/",
+      "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+      "id": "ring-rover-cam",
+      "model": "Rover Cam",
+      "aliases": [
+        "Rover Cam",
+        "Ring Rover Cam"
+      ],
+      "name": "Ring Rover Cam",
+      "kinds": [
+        "ground"
+      ],
+      "category": "Ground robot",
+      "url": "https://ring.com/products/rover-cam",
+      "source": "https://ring.com/products/rover-cam",
+      "sources": [
+        "https://ring.com/products/rover-cam",
+        "https://ring.com/support/products/cameras/ring-rover-cam?page=1",
+        "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+      ],
+      "description": "Announced 2026-11-10; US shipping planned 2026-12-16 at $999.99. Autonomous business-security rover.",
+      "connection": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and AI Pilot. WPA2 required, WPA3 where available. Radio chipset and model-specific MAC prefix unconfirmed.",
+      "maker": "Ring",
+      "records": 0,
+      "record_types": {},
+      "operators": [],
+      "reference": true,
+      "links": {
+        "product": "https://ring.com/products/rover-cam",
+        "manufacturer": "https://ring.com/",
+        "library": "/devices?vendor=Ring&model=Ring%20Rover%20Cam",
+        "cloud": "/cloud-surface?vendor=Ring",
+        "galaxy": "/galaxy?vendor=Ring"
+      },
+      "catalog_evidence": "curated-reference",
+      "cloud_service_ids": [
+        "ring-robotics",
+        "ring-take"
+      ],
+      "cloud_association_scope": "Vendor-level documentation; not proof this model uses every vendor service.",
+      "catalog_id": "device-0b4d8bc14c868b3ddda1dcc0",
+      "kind": "catalog-device-or-program",
+      "remote_id_rule_ids": [],
+      "mac_allocations": [
+        {
+          "device": "Ring devices",
+          "prefix": "00B463",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "187F88",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "242BD6",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "343EA4",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "50E467",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "54E019",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "5C475E",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "649A63",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "90486C",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "9C7613",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "AC9FC3",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "C4DBAD",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        },
+        {
+          "device": "Ring devices",
+          "prefix": "CC3BFB",
+          "prefix_bits": 24,
+          "registrant": "Ring LLC",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv",
+          "registry": "MA-L",
+          "evidence_scope": "manufacturer-only",
+          "scope": "manufacturer-allocation; not verified for this particular model"
+        }
+      ],
+      "rf_information": [
+        {
+          "kind": "model-communications-reference",
+          "model": "Ring Rover Cam",
+          "communications": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and AI Pilot. WPA2 required, WPA3 where available. Radio chipset and model-specific MAC prefix unconfirmed.",
+          "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+          "sources": [
+            "https://ring.com/products/rover-cam",
+            "https://ring.com/support/products/cameras/ring-rover-cam?page=1",
+            "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+          ],
+          "catalog": "security-device-references",
+          "scope": "Referenced model or explicitly listed alias only; not a received observation"
+        },
+        {
+          "kind": "system-radio-reference",
+          "section": "radios",
+          "component": "Dual-band Wi-Fi",
+          "details": "2.4/5 GHz Wi-Fi; recommended upload speed 15 Mbps. WPA2 required; WPA3 where available.",
+          "sources": [
+            "https://ring.com/products/rover-cam",
+            "https://ring.com/support/products/cameras/ring-rover-cam?page=1"
+          ],
+          "evidence": "reviewed-primary-source",
+          "profile_id": "ring-rover-cam-2026",
+          "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+          "reviewed_on": "2026-11-11",
+          "scope": "Published configuration only; not a received observation or a unique scanner signature"
+        }
+      ],
+      "scanner_signatures": [],
+      "system_breakdown": {
+        "schema_version": 1,
+        "record_scope": "device-or-configuration",
+        "complete_bill_of_materials": false,
+        "status": "reviewed-components",
+        "configurations": [
+          {
+            "id": "ring-rover-cam-2026",
+            "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+            "reviewed_on": "2026-11-11"
+          }
+        ],
+        "sections": {
+          "compute": {
+            "title": "Processors & controllers",
+            "status": "not-established",
+            "facts": []
+          },
+          "memory": {
+            "title": "Memory & storage",
+            "status": "not-established",
+            "facts": []
+          },
+          "radios": {
+            "title": "Radios & data links",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "radios",
+                "component": "Dual-band Wi-Fi",
+                "details": "2.4/5 GHz Wi-Fi; recommended upload speed 15 Mbps. WPA2 required; WPA3 where available.",
+                "sources": [
+                  "https://ring.com/products/rover-cam",
+                  "https://ring.com/support/products/cameras/ring-rover-cam?page=1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-rover-cam-2026",
+                "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "component": "Published model communications",
+                "details": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and AI Pilot. WPA2 required, WPA3 where available. Radio chipset and model-specific MAC prefix unconfirmed.",
+                "sources": [
+                  "https://ring.com/products/rover-cam",
+                  "https://ring.com/support/products/cameras/ring-rover-cam?page=1",
+                  "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+                ],
+                "evidence": "existing-catalog-reference"
+              }
+            ]
+          },
+          "sensors": {
+            "title": "Sensors & navigation",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "sensors",
+                "component": "Camera and night vision",
+                "details": "Up to 4K video, 152° diagonal view, infrared night vision and person detection; mobile periscope camera.",
+                "sources": [
+                  "https://ring.com/products/rover-cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-rover-cam-2026",
+                "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+                "reviewed_on": "2026-11-11"
+              }
+            ]
+          },
+          "power": {
+            "title": "Power & mobility",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "power",
+                "component": "Battery and charger",
+                "details": "Rechargeable lithium-ion battery; approximately 45-minute charging time. Support page rates charger 18 V, 9 A.",
+                "sources": [
+                  "https://ring.com/products/rover-cam",
+                  "https://ring.com/support/products/cameras/ring-rover-cam?page=1"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-rover-cam-2026",
+                "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "section": "power",
+                "component": "Size and mobility",
+                "details": "424 × 250 × 440 mm; 9.35 kg. Dry indoor single-floor use, 0–35 °C; advertised mapping coverage up to 5,000 square feet.",
+                "sources": [
+                  "https://ring.com/products/rover-cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-rover-cam-2026",
+                "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+                "reviewed_on": "2026-11-11"
+              }
+            ]
+          },
+          "interfaces": {
+            "title": "Ports & expansion",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "interfaces",
+                "component": "Operator controls",
+                "details": "Ring app with two-way talk, remotely activated siren and LED light tower. Privacy mode retracts the camera mast.",
+                "sources": [
+                  "https://ring.com/products/rover-cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-rover-cam-2026",
+                "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+                "reviewed_on": "2026-11-11"
+              }
+            ]
+          },
+          "software": {
+            "title": "Software & control",
+            "status": "documented",
+            "facts": [
+              {
+                "section": "software",
+                "component": "AI Pilot",
+                "details": "Autonomous mapping and patrol planning; Ring events can trigger investigation.",
+                "sources": [
+                  "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-rover-cam-2026",
+                "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+                "reviewed_on": "2026-11-11"
+              },
+              {
+                "section": "software",
+                "component": "Recording and subscription",
+                "details": "Records during motion and on person detection while docked; scheduled patrols and stored cloud video require a compatible subscription.",
+                "sources": [
+                  "https://ring.com/products/rover-cam"
+                ],
+                "evidence": "reviewed-primary-source",
+                "profile_id": "ring-rover-cam-2026",
+                "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+                "reviewed_on": "2026-11-11"
+              }
+            ]
+          },
+          "identification": {
+            "title": "Identification & scanning",
+            "status": "reference-only",
+            "facts": [
+              {
+                "component": "Manufacturer MAC allocations",
+                "details": "00:B4:63 · 18:7F:88 · 24:2B:D6 · 34:3E:A4 · 50:E4:67 · 54:E0:19 · 5C:47:5E · 64:9A:63 · 90:48:6C · 9C:76:13 · AC:9F:C3 · C4:DB:AD · CC:3B:FB",
+                "configuration": "Manufacturer registrant only; use on this model is not established.",
+                "sources": [
+                  "https://standards-oui.ieee.org/oui/oui.csv"
+                ],
+                "evidence": "manufacturer-only"
+              }
+            ]
+          },
+          "other": {
+            "title": "Other published specifications",
+            "status": "not-established",
+            "facts": []
+          }
+        },
+        "missing_sections": [
+          "compute",
+          "memory"
+        ],
+        "identification_note": "Processors, sensors and shared radio bands are component references, not unique passive detection signatures. Model-specific firmware patterns and supported decoders are separate evidence."
+      }
+    },
+    {
       "name": "RoboBurger Kiosk",
       "maker": "RoboBurger",
       "category": "ground-robot",
@@ -258597,6 +260117,15 @@
       "evidence_scope": "manufacturer-only"
     },
     {
+      "device": "AM General devices",
+      "prefix": "943EFD5",
+      "prefix_bits": 28,
+      "registrant": "AM General LLC",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv",
+      "registry": "MA-M",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
       "device": "AeroVironment devices",
       "prefix": "001AF9",
       "prefix_bits": 24,
@@ -258628,15 +260157,6 @@
       "prefix": "58AD08C",
       "prefix_bits": 28,
       "registrant": "Also, Inc.",
-      "source": "https://standards-oui.ieee.org/oui28/mam.csv",
-      "registry": "MA-M",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
-      "device": "AM General devices",
-      "prefix": "943EFD5",
-      "prefix_bits": 28,
-      "registrant": "AM General LLC",
       "source": "https://standards-oui.ieee.org/oui28/mam.csv",
       "registry": "MA-M",
       "evidence_scope": "manufacturer-only"
@@ -258876,15 +260396,6 @@
       "evidence_scope": "manufacturer-only"
     },
     {
-      "device": "DeLaval devices",
-      "prefix": "A48E0A",
-      "prefix_bits": 24,
-      "registrant": "DeLaval International AB",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
       "device": "DJI devices",
       "prefix": "04A85A",
       "prefix_bits": 24,
@@ -259006,6 +260517,15 @@
       "prefix": "EC72F7",
       "prefix_bits": 24,
       "registrant": "DJI BAIWANG TECHNOLOGY CO LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "DeLaval devices",
+      "prefix": "A48E0A",
+      "prefix_bits": 24,
+      "registrant": "DeLaval International AB",
       "source": "https://standards-oui.ieee.org/oui/oui.csv",
       "registry": "MA-L",
       "evidence_scope": "manufacturer-only"
@@ -259173,6 +260693,15 @@
       "evidence_scope": "manufacturer-only"
     },
     {
+      "device": "FORT Robotics devices",
+      "prefix": "0411190",
+      "prefix_bits": 28,
+      "registrant": "FORT Robotics Inc.",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv",
+      "registry": "MA-M",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
       "device": "Flirtey devices",
       "prefix": "70B3D52AA",
       "prefix_bits": 36,
@@ -259188,15 +260717,6 @@
       "registrant": "Flock Safety",
       "source": "https://standards-oui.ieee.org/oui/oui.csv",
       "registry": "MA-L",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
-      "device": "FORT Robotics devices",
-      "prefix": "0411190",
-      "prefix_bits": 28,
-      "registrant": "FORT Robotics Inc.",
-      "source": "https://standards-oui.ieee.org/oui28/mam.csv",
-      "registry": "MA-M",
       "evidence_scope": "manufacturer-only"
     },
     {
@@ -259407,33 +260927,6 @@
       "evidence_scope": "manufacturer-only"
     },
     {
-      "device": "iRobot devices",
-      "prefix": "4CB9EA",
-      "prefix_bits": 24,
-      "registrant": "iRobot Corporation",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
-      "device": "iRobot devices",
-      "prefix": "501479",
-      "prefix_bits": 24,
-      "registrant": "iRobot Corporation ",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
-      "device": "iRobot devices",
-      "prefix": "ACF473",
-      "prefix_bits": 24,
-      "registrant": "iRobot Corporation",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
       "device": "Israel Aerospace Industries devices",
       "prefix": "70B3D5E4C",
       "prefix_bits": 36,
@@ -259461,6 +260954,15 @@
       "evidence_scope": "manufacturer-only"
     },
     {
+      "device": "KUKA Robotics devices",
+      "prefix": "0060C8",
+      "prefix_bits": 24,
+      "registrant": "KUKA WELDING SYSTEMS & ROBOTS",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
       "device": "Karcher devices",
       "prefix": "A409CB",
       "prefix_bits": 24,
@@ -259483,15 +260985,6 @@
       "prefix": "CC3F8A",
       "prefix_bits": 24,
       "registrant": "KOMATSU LTD.",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
-      "device": "KUKA Robotics devices",
-      "prefix": "0060C8",
-      "prefix_bits": 24,
-      "registrant": "KUKA WELDING SYSTEMS & ROBOTS",
       "source": "https://standards-oui.ieee.org/oui/oui.csv",
       "registry": "MA-L",
       "evidence_scope": "manufacturer-only"
@@ -259731,6 +261224,15 @@
       "evidence_scope": "manufacturer-only"
     },
     {
+      "device": "ROBOTIS devices",
+      "prefix": "B863BC",
+      "prefix_bits": 24,
+      "registrant": "ROBOTIS, Co, Ltd",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
       "device": "Rafael devices",
       "prefix": "7C051E",
       "prefix_bits": 24,
@@ -259764,6 +261266,123 @@
       "registrant": "Rheinmetall Electronics UK Ltd",
       "source": "https://standards-oui.ieee.org/oui28/mam.csv",
       "registry": "MA-M",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "00B463",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "187F88",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "242BD6",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "343EA4",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "50E467",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "54E019",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "5C475E",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "649A63",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "90486C",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "9C7613",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "AC9FC3",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "C4DBAD",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "CC3BFB",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
       "evidence_scope": "manufacturer-only"
     },
     {
@@ -259812,21 +261431,21 @@
       "evidence_scope": "manufacturer-only"
     },
     {
-      "device": "ROBOTIS devices",
-      "prefix": "B863BC",
-      "prefix_bits": 24,
-      "registrant": "ROBOTIS, Co, Ltd",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
       "device": "Robotize devices",
       "prefix": "3805258",
       "prefix_bits": 28,
       "registrant": "Robotize ApS",
       "source": "https://standards-oui.ieee.org/oui28/mam.csv",
       "registry": "MA-M",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "SIYI devices",
+      "prefix": "5CD5B5",
+      "prefix_bits": 24,
+      "registrant": "Shenzhen WiSiYiLink Technology Co.,Ltd",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
       "evidence_scope": "manufacturer-only"
     },
     {
@@ -259870,15 +261489,6 @@
       "prefix": "14DD48",
       "prefix_bits": 24,
       "registrant": "Shield AI",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
-      "device": "SIYI devices",
-      "prefix": "5CD5B5",
-      "prefix_bits": 24,
-      "registrant": "Shenzhen WiSiYiLink Technology Co.,Ltd",
       "source": "https://standards-oui.ieee.org/oui/oui.csv",
       "registry": "MA-L",
       "evidence_scope": "manufacturer-only"
@@ -260172,6 +261782,15 @@
       "evidence_scope": "manufacturer-only"
     },
     {
+      "device": "ZF Friedrichshafen devices",
+      "prefix": "7C9763",
+      "prefix_bits": 24,
+      "registrant": "ZF Friedrichshafen AG",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
       "device": "Zero Zero Robotics devices",
       "prefix": "848319",
       "prefix_bits": 24,
@@ -260187,15 +261806,6 @@
       "registrant": "Shenzhen Zero Zero Infinity Technology Co.，Ltd.",
       "source": "https://standards-oui.ieee.org/oui28/mam.csv",
       "registry": "MA-M",
-      "evidence_scope": "manufacturer-only"
-    },
-    {
-      "device": "ZF Friedrichshafen devices",
-      "prefix": "7C9763",
-      "prefix_bits": 24,
-      "registrant": "ZF Friedrichshafen AG",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L",
       "evidence_scope": "manufacturer-only"
     },
     {
@@ -260215,11 +261825,38 @@
       "source": "https://standards-oui.ieee.org/oui28/mam.csv",
       "registry": "MA-M",
       "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "iRobot devices",
+      "prefix": "4CB9EA",
+      "prefix_bits": 24,
+      "registrant": "iRobot Corporation",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "iRobot devices",
+      "prefix": "501479",
+      "prefix_bits": 24,
+      "registrant": "iRobot Corporation ",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
+    },
+    {
+      "device": "iRobot devices",
+      "prefix": "ACF473",
+      "prefix_bits": 24,
+      "registrant": "iRobot Corporation",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L",
+      "evidence_scope": "manufacturer-only"
     }
   ],
   "radio_allocation_provenance": {
     "schema_version": 1,
-    "reviewed_on": "2026-11-03",
+    "reviewed_on": "2026-11-11",
     "scope": "Selected drone, autonomous-vehicle, robot and associated equipment manufacturers only. Allocations are manufacturer-level references, not model-specific detection signatures.",
     "sources": [
       {
@@ -260267,12 +261904,16 @@
       "FIMI X8 SE 2022 Drone": "FIMI",
       "FIMI X8 Tele Drone": "FIMI",
       "Kärcher": "Karcher",
-      "Aurora": "Aurora Innovation"
+      "Aurora": "Aurora Innovation",
+      "Ring LLC": "Ring",
+      "Ring Robotics": "Ring"
     },
     "alias_evidence": {
       "FIMI X8 SE 2022 Drone": "https://www.fimi.com/about-fimi.html",
       "FIMI X8 Tele Drone": "https://www.fimi.com/about-fimi.html",
-      "Kärcher": "https://www.kaercher.com/au/home-garden/robot-vacuums-and-mops/privacy-statement-home-robots-app.html"
+      "Kärcher": "https://www.kaercher.com/au/home-garden/robot-vacuums-and-mops/privacy-statement-home-robots-app.html",
+      "Ring LLC": "https://fccid.io/2AEUPBHAZU001",
+      "Ring Robotics": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
     }
   },
   "remote_id_rules": [
@@ -319268,6 +320909,153 @@
       "system_profile_ids": "parrot-anafi-ukr-gov-8501"
     },
     {
+      "id": "model-ring-bhazu001-ble",
+      "band": "Ring BHAZU001 · Bluetooth LE",
+      "system": "Ring Always Home Cam · Bluetooth LE",
+      "frequency_mhz": null,
+      "range_start_mhz": 2402,
+      "range_end_mhz": 2480,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled Ring model-identity decoder",
+      "observation_kind": "channel-center-range",
+      "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+      "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "reviewed_on": "2026-11-11",
+      "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.0073 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+    },
+    {
+      "id": "model-ring-bhazu001-bt-br",
+      "band": "Ring BHAZU001 · Bluetooth BR",
+      "system": "Ring Always Home Cam · Bluetooth BR",
+      "frequency_mhz": null,
+      "range_start_mhz": 2402,
+      "range_end_mhz": 2480,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled Ring model-identity decoder",
+      "observation_kind": "channel-center-range",
+      "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+      "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "reviewed_on": "2026-11-11",
+      "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.0195 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+    },
+    {
+      "id": "model-ring-bhazu001-wifi-24",
+      "band": "Ring BHAZU001 · Wi-Fi 2.4 GHz",
+      "system": "Ring Always Home Cam · Wi-Fi 2.4 GHz",
+      "frequency_mhz": null,
+      "range_start_mhz": 2412,
+      "range_end_mhz": 2462,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled Ring model-identity decoder",
+      "observation_kind": "channel-center-range",
+      "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+      "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "reviewed_on": "2026-11-11",
+      "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.6353 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+    },
+    {
+      "id": "model-ring-bhazu001-wifi-u1",
+      "band": "Ring BHAZU001 · Wi-Fi U-NII-1",
+      "system": "Ring Always Home Cam · Wi-Fi U-NII-1",
+      "frequency_mhz": null,
+      "range_start_mhz": 5180,
+      "range_end_mhz": 5240,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled Ring model-identity decoder",
+      "observation_kind": "channel-center-range",
+      "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+      "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "reviewed_on": "2026-11-11",
+      "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.1355 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+    },
+    {
+      "id": "model-ring-bhazu001-wifi-u2a",
+      "band": "Ring BHAZU001 · Wi-Fi U-NII-2A",
+      "system": "Ring Always Home Cam · Wi-Fi U-NII-2A",
+      "frequency_mhz": null,
+      "range_start_mhz": 5260,
+      "range_end_mhz": 5320,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled Ring model-identity decoder",
+      "observation_kind": "channel-center-range",
+      "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+      "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "reviewed_on": "2026-11-11",
+      "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.1047 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+    },
+    {
+      "id": "model-ring-bhazu001-wifi-u2c",
+      "band": "Ring BHAZU001 · Wi-Fi U-NII-2C",
+      "system": "Ring Always Home Cam · Wi-Fi U-NII-2C",
+      "frequency_mhz": null,
+      "range_start_mhz": 5500,
+      "range_end_mhz": 5720,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled Ring model-identity decoder",
+      "observation_kind": "channel-center-range",
+      "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+      "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "reviewed_on": "2026-11-11",
+      "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.0885 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+    },
+    {
+      "id": "model-ring-bhazu001-wifi-u3",
+      "band": "Ring BHAZU001 · Wi-Fi U-NII-3",
+      "system": "Ring Always Home Cam · Wi-Fi U-NII-3",
+      "frequency_mhz": null,
+      "range_start_mhz": 5745,
+      "range_end_mhz": 5825,
+      "bandwidth_mhz": null,
+      "bandwidth_basis": "unspecified",
+      "channel": "",
+      "decoder": "none",
+      "decoder_scope": "No bundled Ring model-identity decoder",
+      "observation_kind": "channel-center-range",
+      "identity_scope": "Historical BHAZU001 equipment only; frequency does not identify a device",
+      "receiver": "Compatible Wi-Fi / Bluetooth receiver; HackRF spectrum only",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "reviewed_on": "2026-11-11",
+      "notes": "2021-09-28 FCC grant reproduction; maximum combined conducted output 0.1291 W. Range is a channel span, not occupied bandwidth. Not verified for 2026 Drone Cam or Rover Cam.",
+      "channel_spacing_mhz": null,
+      "system_profile_ids": "ring-always-home-cam-bhazu001-2021"
+    },
+    {
       "id": "model-skydio-2-plus-5180-5240",
       "band": "Published model radio",
       "system": "Skydio Skydio 2+ · Wi-Fi / Skydio Link",
@@ -320566,7 +322354,7 @@
   },
   "cloud_services": {
     "schema_version": 1,
-    "reviewed_on": "2026-11-02",
+    "reviewed_on": "2026-11-11",
     "scope": "Public documentation; not live observations",
     "services": [
       {
@@ -343602,6 +345390,160 @@
             "direction": "forward",
             "source": "https://www.microdrones.com/en/content/drone-lidar-data-processing-made-easy-mdinfinity/",
             "boundary": "Authorized software user with access to the recorded dataset."
+          }
+        ]
+      },
+      {
+        "id": "ring-robotics",
+        "vendor": "Ring",
+        "name": "Ring Robotics · AI Pilot / app / event response",
+        "category": "Drones and ground robots",
+        "hosting": "Device and cloud",
+        "path": [
+          "Ring Drone Cam / Rover Cam",
+          "AI Pilot · sensors and cloud processing",
+          "Ring app / authorized account",
+          "Ring cameras / sensors / alarms"
+        ],
+        "protocols": [
+          "Vendor-documented workflow; wire protocols undisclosed"
+        ],
+        "data": "Mapping, patrol commands, sensor-triggered response and video. Product announcement, not a public telemetry feed.",
+        "access": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features.",
+        "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+        "gap": "No public robot telemetry API or verified mapping from CT hostnames to these products. Both new models document 2.4/5 GHz Wi-Fi; chipset and model-specific MAC prefixes remain unconfirmed.",
+        "evidence": "Manufacturer announcement · 2026-11-10",
+        "connector": "Research reference — no live Ring connector enabled",
+        "reviewed_on": "2026-11-11",
+        "useful": "Compare the two announced products with historical BHAZU001; collect owner-authorized model-specific evidence before proposing scanner rules.",
+        "related": [
+          {
+            "name": "Drone Cam specifications",
+            "url": "https://ring.com/products/drone-cam"
+          },
+          {
+            "name": "Drone hardware and dock identifiers",
+            "url": "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+          },
+          {
+            "name": "Rover Cam specifications",
+            "url": "https://ring.com/products/rover-cam"
+          },
+          {
+            "name": "Contributed Ring hostname research",
+            "url": "https://dronemapper.churchofmalware.org/downloads/ring-cloud-observations.json"
+          },
+          {
+            "name": "Reviewed update and collection gaps",
+            "url": "https://dronemapper.churchofmalware.org/downloads/ring-research.json"
+          }
+        ],
+        "links": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "label": "Published AI Pilot workflow",
+            "data": "Camera/sensor input supports cloud-assisted navigation; wire protocol and hostname mapping undisclosed.",
+            "direction": "both",
+            "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+            "boundary": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features."
+          },
+          {
+            "from_index": 2,
+            "to_index": 0,
+            "label": "Owner control and video",
+            "data": "App control and viewing workflow; intermediaries not enumerated.",
+            "direction": "both",
+            "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+            "boundary": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features."
+          },
+          {
+            "from_index": 3,
+            "to_index": 0,
+            "label": "Configured event response",
+            "data": "Connected Ring events trigger preset patrol points; backend routing not published.",
+            "direction": "forward",
+            "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+            "boundary": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features."
+          }
+        ]
+      },
+      {
+        "id": "ring-take",
+        "vendor": "Ring",
+        "name": "Ring TAKE · video and key-management boundaries",
+        "category": "Vendor cloud platform",
+        "hosting": "Ring cloud / AWS Nitro Enclaves",
+        "path": [
+          "Supported Ring camera / encryption ingress",
+          "Encrypted video storage",
+          "Ring feature-processing service",
+          "CMMS · AWS Nitro Enclaves",
+          "Enrolled Ring app / Shared Users"
+        ],
+        "protocols": [
+          "MLS encryption groups",
+          "TAKE / optional E2EE"
+        ],
+        "data": "Encrypted video and temporary content keys. TAKE retains cloud key access for 24 hours; E2EE removes the cloud member.",
+        "access": "Account, enrolled devices and per-camera encryption settings; feature-dependent authorization.",
+        "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+        "gap": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified.",
+        "evidence": "Manufacturer technical white paper · 2026-08-26, sections 3–4",
+        "connector": "Research reference — no customer video or key access",
+        "reviewed_on": "2026-11-11",
+        "useful": "Trace storage, processing and key-management boundaries separately from radio identity.",
+        "related": [
+          {
+            "name": "Ring encryption announcement",
+            "url": "https://www.aboutamazon.com/news/devices/ring-take-encryption"
+          }
+        ],
+        "links": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "label": "Encrypted recordings",
+            "data": "Encryption occurs on capable cameras or at cloud ingress for older hardware.",
+            "direction": "forward",
+            "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+            "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
+          },
+          {
+            "from_index": 1,
+            "to_index": 2,
+            "label": "Enabled feature processing",
+            "data": "Stored video can be processed for enabled features under TAKE.",
+            "direction": "forward",
+            "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+            "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
+          },
+          {
+            "from_index": 3,
+            "to_index": 2,
+            "label": "Scoped content keys",
+            "data": "CMMS supplies authorized feature services with temporary keys; root material stays enclave-bound.",
+            "direction": "forward",
+            "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+            "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
+          },
+          {
+            "from_index": 1,
+            "to_index": 4,
+            "label": "Playback",
+            "data": "Authorized enrolled clients receive encrypted recordings.",
+            "direction": "forward",
+            "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+            "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
+          },
+          {
+            "from_index": 4,
+            "to_index": 2,
+            "label": "User-triggered processing",
+            "data": "App can supply keys for older content; processing keys are discarded afterward.",
+            "direction": "forward",
+            "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+            "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified."
           }
         ]
       }
@@ -369906,6 +371848,202 @@
       "complete": false
     },
     {
+      "vendor": "Ring",
+      "service_ids": [
+        "ring-robotics",
+        "ring-take"
+      ],
+      "nodes": [
+        {
+          "id": "0:0",
+          "name": "Ring Drone Cam / Rover Cam",
+          "x": 480,
+          "y": 100,
+          "zone": "Documented component",
+          "service_id": "ring-robotics"
+        },
+        {
+          "id": "0:1",
+          "name": "AI Pilot · sensors and cloud processing",
+          "x": 780,
+          "y": 400,
+          "zone": "Documented component",
+          "service_id": "ring-robotics"
+        },
+        {
+          "id": "0:2",
+          "name": "Ring app / authorized account",
+          "x": 480,
+          "y": 700,
+          "zone": "Documented component",
+          "service_id": "ring-robotics"
+        },
+        {
+          "id": "0:3",
+          "name": "Ring cameras / sensors / alarms",
+          "x": 180,
+          "y": 400.00000000000006,
+          "zone": "Documented component",
+          "service_id": "ring-robotics"
+        },
+        {
+          "id": "1:0",
+          "name": "Supported Ring camera / encryption ingress",
+          "x": 480,
+          "y": 1000,
+          "zone": "Documented component",
+          "service_id": "ring-take"
+        },
+        {
+          "id": "1:1",
+          "name": "Encrypted video storage",
+          "x": 765.316954888546,
+          "y": 1207.2949016875157,
+          "zone": "Documented component",
+          "service_id": "ring-take"
+        },
+        {
+          "id": "1:2",
+          "name": "Ring feature-processing service",
+          "x": 656.335575687742,
+          "y": 1542.7050983124843,
+          "zone": "Documented component",
+          "service_id": "ring-take"
+        },
+        {
+          "id": "1:3",
+          "name": "CMMS · AWS Nitro Enclaves",
+          "x": 303.6644243122581,
+          "y": 1542.7050983124843,
+          "zone": "Documented component",
+          "service_id": "ring-take"
+        },
+        {
+          "id": "1:4",
+          "name": "Enrolled Ring app / Shared Users",
+          "x": 194.6830451114539,
+          "y": 1207.294901687516,
+          "zone": "Documented component",
+          "service_id": "ring-take"
+        }
+      ],
+      "edges": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Published AI Pilot workflow",
+          "data": "Camera/sensor input supports cloud-assisted navigation; wire protocol and hostname mapping undisclosed.",
+          "direction": "both",
+          "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+          "boundary": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features.",
+          "bidirectional": true,
+          "directionUnverified": false,
+          "from": "0:0",
+          "to": "0:1",
+          "service_id": "ring-robotics"
+        },
+        {
+          "from_index": 2,
+          "to_index": 0,
+          "label": "Owner control and video",
+          "data": "App control and viewing workflow; intermediaries not enumerated.",
+          "direction": "both",
+          "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+          "boundary": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features.",
+          "bidirectional": true,
+          "directionUnverified": false,
+          "from": "0:2",
+          "to": "0:0",
+          "service_id": "ring-robotics"
+        },
+        {
+          "from_index": 3,
+          "to_index": 0,
+          "label": "Configured event response",
+          "data": "Connected Ring events trigger preset patrol points; backend routing not published.",
+          "direction": "forward",
+          "source": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+          "boundary": "Owner-configured Ring account and devices; compatible Ring Protect plan required for specified scheduled/video features.",
+          "bidirectional": false,
+          "directionUnverified": false,
+          "from": "0:3",
+          "to": "0:0",
+          "service_id": "ring-robotics"
+        },
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "label": "Encrypted recordings",
+          "data": "Encryption occurs on capable cameras or at cloud ingress for older hardware.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified.",
+          "bidirectional": false,
+          "directionUnverified": false,
+          "from": "1:0",
+          "to": "1:1",
+          "service_id": "ring-take"
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "label": "Enabled feature processing",
+          "data": "Stored video can be processed for enabled features under TAKE.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified.",
+          "bidirectional": false,
+          "directionUnverified": false,
+          "from": "1:1",
+          "to": "1:2",
+          "service_id": "ring-take"
+        },
+        {
+          "from_index": 3,
+          "to_index": 2,
+          "label": "Scoped content keys",
+          "data": "CMMS supplies authorized feature services with temporary keys; root material stays enclave-bound.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified.",
+          "bidirectional": false,
+          "directionUnverified": false,
+          "from": "1:3",
+          "to": "1:2",
+          "service_id": "ring-take"
+        },
+        {
+          "from_index": 1,
+          "to_index": 4,
+          "label": "Playback",
+          "data": "Authorized enrolled clients receive encrypted recordings.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified.",
+          "bidirectional": false,
+          "directionUnverified": false,
+          "from": "1:1",
+          "to": "1:4",
+          "service_id": "ring-take"
+        },
+        {
+          "from_index": 4,
+          "to_index": 2,
+          "label": "User-triggered processing",
+          "data": "App can supply keys for older content; processing keys are discarded afterward.",
+          "direction": "forward",
+          "source": "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf",
+          "boundary": "Ring platform architecture; new Drone Cam/Rover Cam enrollment and encryption-path compatibility not independently verified.",
+          "bidirectional": false,
+          "directionUnverified": false,
+          "from": "1:4",
+          "to": "1:2",
+          "service_id": "ring-take"
+        }
+      ],
+      "complete": false
+    },
+    {
       "vendor": "RoboBurger",
       "service_ids": [
         "roboburger-cloud"
@@ -378230,6 +380368,16 @@
       ],
       "fcc_grantee": "2A98R",
       "input": "data/fcc/nuro.json"
+    },
+    {
+      "id": "ring",
+      "name": "Ring",
+      "aliases": [
+        "Ring LLC",
+        "Ring Robotics"
+      ],
+      "fcc_grantee": "2AEUP",
+      "input": "data/fcc/us-drones.json"
     }
   ],
   "equipment_product_relationships": [
@@ -378359,8 +380507,8 @@
     },
     {
       "path": "data/fcc/us-drones.json",
-      "sha256": "4e38f5dbfe627b5d02b76f20737633cfeba97dd5f8c89783586d23452cc73dbf",
-      "provenance": "User-contributed research snapshot; no automatic assertion of primary-source verification."
+      "sha256": "a43b43d95b466183ce30aa4d550f3adecad200af97dd7da29632ed08a02f020b",
+      "provenance": "Contributed 2026-11-11 snapshot; Ring BHAZU001 reviewed against the published FCC grant reproduction. Other contributed rows retain their previous review status."
     },
     {
       "path": "data/fcc/skydio.json",
@@ -386213,7 +388361,7 @@
     },
     "security-device-references": {
       "schema_version": 1,
-      "reviewed_on": "2026-10-25",
+      "reviewed_on": "2026-11-11",
       "vendors": [
         {
           "id": "verkada",
@@ -386275,6 +388423,32 @@
           "prefixes": [],
           "evidence": "Published product references. No drone-specific radio allocation verified.",
           "source": "https://www.flocksafety.com/products/flock-dfr"
+        },
+        {
+          "id": "ring",
+          "name": "Ring",
+          "aliases": [
+            "Ring LLC",
+            "Ring Robotics"
+          ],
+          "url": "https://ring.com/",
+          "prefixes": [
+            "00B463",
+            "187F88",
+            "242BD6",
+            "343EA4",
+            "50E467",
+            "54E019",
+            "5C475E",
+            "649A63",
+            "90486C",
+            "9C7613",
+            "AC9FC3",
+            "C4DBAD",
+            "CC3BFB"
+          ],
+          "evidence": "IEEE MA-L snapshot from 2026-11-03. Shared across Ring products; a match establishes neither a drone nor a robot model.",
+          "source": "https://standards-oui.ieee.org/oui/oui.csv"
         }
       ],
       "models": [
@@ -387176,6 +389350,100 @@
               "url": "https://www.flocksafety.com/products/flock-dfr"
             }
           ]
+        },
+        {
+          "vendor": "ring",
+          "group": "ring",
+          "manufacturer_aliases": [
+            "Ring",
+            "Ring LLC",
+            "Ring Robotics"
+          ],
+          "manufacturer_url": "https://ring.com/",
+          "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+          "id": "ring-drone-cam",
+          "model": "Drone Cam",
+          "aliases": [
+            "Drone Cam",
+            "Ring Drone Cam",
+            "5CFYB9"
+          ],
+          "name": "Ring Drone Cam",
+          "kinds": [
+            "drone"
+          ],
+          "category": "Indoor drone",
+          "url": "https://ring.com/products/drone-cam",
+          "source": "https://ring.com/products/drone-cam",
+          "sources": [
+            "https://ring.com/products/drone-cam",
+            "https://ring.com/support/products/cameras/ring-drone-cam?page=1",
+            "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam",
+            "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+          ],
+          "description": "Announced 2026-11-10; US shipping planned 2027-01-27 at $249.99, subject to FCC authorization. Indoor flying security camera.",
+          "connection": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and cloud-assisted AI Pilot. Radio chipset and model-specific MAC prefix unconfirmed."
+        },
+        {
+          "vendor": "ring",
+          "group": "ring",
+          "manufacturer_aliases": [
+            "Ring",
+            "Ring LLC",
+            "Ring Robotics"
+          ],
+          "manufacturer_url": "https://ring.com/",
+          "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+          "id": "ring-rover-cam",
+          "model": "Rover Cam",
+          "aliases": [
+            "Rover Cam",
+            "Ring Rover Cam"
+          ],
+          "name": "Ring Rover Cam",
+          "kinds": [
+            "ground"
+          ],
+          "category": "Ground robot",
+          "url": "https://ring.com/products/rover-cam",
+          "source": "https://ring.com/products/rover-cam",
+          "sources": [
+            "https://ring.com/products/rover-cam",
+            "https://ring.com/support/products/cameras/ring-rover-cam?page=1",
+            "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+          ],
+          "description": "Announced 2026-11-10; US shipping planned 2026-12-16 at $999.99. Autonomous business-security rover.",
+          "connection": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and AI Pilot. WPA2 required, WPA3 where available. Radio chipset and model-specific MAC prefix unconfirmed."
+        },
+        {
+          "vendor": "ring",
+          "group": "ring",
+          "manufacturer_aliases": [
+            "Ring",
+            "Ring LLC",
+            "Ring Robotics"
+          ],
+          "manufacturer_url": "https://ring.com/",
+          "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+          "id": "ring-always-home-cam",
+          "model": "Always Home Cam",
+          "aliases": [
+            "Always Home Cam",
+            "Ring Always Home Cam",
+            "BHAZU001"
+          ],
+          "name": "Ring Always Home Cam",
+          "kinds": [
+            "drone"
+          ],
+          "category": "Indoor drone · historical model",
+          "url": "https://fccid.io/2AEUPBHAZU001",
+          "source": "https://fccid.io/2AEUPBHAZU001",
+          "sources": [
+            "https://fccid.io/2AEUPBHAZU001"
+          ],
+          "description": "Historical BHAZU001 equipment; FCC grant dated 2021-09-28. Separate from the 2026 Drone Cam.",
+          "connection": "BHAZU001 grant: Bluetooth BR/LE and 2.4/5 GHz WLAN. Frequencies apply only to this certified equipment."
         }
       ],
       "notice": "Published product references are separate from received observations. A manufacturer allocation cannot identify a model, operator, location, or active platform connection."
@@ -387281,7 +389549,7 @@
   },
   "system_profiles": {
     "schema_version": 1,
-    "reviewed_on": "2026-11-03",
+    "reviewed_on": "2026-11-11",
     "scope": "Source-backed model/configuration references; not a complete bill of materials, observed hardware identity, or new scanner signature.",
     "profiles": [
       {
@@ -435468,24 +437736,235 @@
             ]
           }
         ]
+      },
+      {
+        "id": "ring-drone-cam-2026",
+        "manufacturer": "Ring",
+        "models": [
+          "Drone Cam",
+          "Ring Drone Cam",
+          "5CFYB9"
+        ],
+        "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+        "reviewed_on": "2026-11-11",
+        "facts": [
+          {
+            "section": "identification",
+            "component": "Hardware identity",
+            "details": "Drone 5CFYB9; dock 6GFYA3; adapter 6PNXA2. These are hardware model numbers, not FCC IDs. No model-specific MAC allocation established.",
+            "sources": [
+              "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Dual-band Wi-Fi",
+            "details": "2.4 and 5 GHz Wi-Fi. Channel limits, transmit power, radio chipset and antennas are not specified on the product page.",
+            "sources": [
+              "https://ring.com/products/drone-cam"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "Wireless security",
+            "details": "Support page lists 802.11b/g/n and WPA2/WPA3; no inference of additional PHY modes.",
+            "sources": [
+              "https://ring.com/support/products/cameras/ring-drone-cam?page=1"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera and lighting",
+            "details": "1920 × 1920 video; 148° horizontal and vertical view; two LED spotlights, no infrared night vision.",
+            "sources": [
+              "https://ring.com/products/drone-cam"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Navigation and obstacle sensing",
+            "details": "Safety documentation identifies Class 1 laser navigation/obstacle sensors, without part numbers.",
+            "sources": [
+              "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Flight and charging",
+            "details": "Built-in rechargeable battery; USB-C AC charging dock; up to eight minutes per flight under manufacturer test conditions. Automatically returns to charge.",
+            "sources": [
+              "https://ring.com/products/drone-cam"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Electrical ratings",
+            "details": "Drone and dock: 15 V, 2 A. Adapter input 100–240 VAC; selectable outputs 5 V/3 A, 9 V/3 A, 15 V/2 A or 20 V/1.5 A.",
+            "sources": [
+              "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Mass and indoor use",
+            "details": "165 g including battery; single-floor operation at launch. Product page gives 5–35 °C, safety document 0–35 °C; discrepancy retained for review.",
+            "sources": [
+              "https://ring.com/support/products/cameras/ring-drone-cam?page=1",
+              "https://ring.com/products/drone-cam",
+              "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "App, audio and privacy",
+            "details": "Ring app controls and viewing. No microphone, speaker, two-way talk or siren. Recording occurs only during flight.",
+            "sources": [
+              "https://ring.com/products/drone-cam"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "AI Pilot",
+            "details": "Camera/sensor input and cloud processing support mapping, patrol planning and obstacle avoidance.",
+            "sources": [
+              "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Service and update requirements",
+            "details": "Compatible subscription for scheduled patrols and stored video. Support page promises security updates for at least four years after last new sale.",
+            "sources": [
+              "https://ring.com/products/drone-cam",
+              "https://ring.com/support/products/cameras/ring-drone-cam?page=1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ring-rover-cam-2026",
+        "manufacturer": "Ring",
+        "models": [
+          "Rover Cam",
+          "Ring Rover Cam"
+        ],
+        "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+        "reviewed_on": "2026-11-11",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Dual-band Wi-Fi",
+            "details": "2.4/5 GHz Wi-Fi; recommended upload speed 15 Mbps. WPA2 required; WPA3 where available.",
+            "sources": [
+              "https://ring.com/products/rover-cam",
+              "https://ring.com/support/products/cameras/ring-rover-cam?page=1"
+            ]
+          },
+          {
+            "section": "sensors",
+            "component": "Camera and night vision",
+            "details": "Up to 4K video, 152° diagonal view, infrared night vision and person detection; mobile periscope camera.",
+            "sources": [
+              "https://ring.com/products/rover-cam"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Battery and charger",
+            "details": "Rechargeable lithium-ion battery; approximately 45-minute charging time. Support page rates charger 18 V, 9 A.",
+            "sources": [
+              "https://ring.com/products/rover-cam",
+              "https://ring.com/support/products/cameras/ring-rover-cam?page=1"
+            ]
+          },
+          {
+            "section": "power",
+            "component": "Size and mobility",
+            "details": "424 × 250 × 440 mm; 9.35 kg. Dry indoor single-floor use, 0–35 °C; advertised mapping coverage up to 5,000 square feet.",
+            "sources": [
+              "https://ring.com/products/rover-cam"
+            ]
+          },
+          {
+            "section": "interfaces",
+            "component": "Operator controls",
+            "details": "Ring app with two-way talk, remotely activated siren and LED light tower. Privacy mode retracts the camera mast.",
+            "sources": [
+              "https://ring.com/products/rover-cam"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "AI Pilot",
+            "details": "Autonomous mapping and patrol planning; Ring events can trigger investigation.",
+            "sources": [
+              "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+            ]
+          },
+          {
+            "section": "software",
+            "component": "Recording and subscription",
+            "details": "Records during motion and on person detection while docked; scheduled patrols and stored cloud video require a compatible subscription.",
+            "sources": [
+              "https://ring.com/products/rover-cam"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ring-always-home-cam-bhazu001-2021",
+        "manufacturer": "Ring",
+        "models": [
+          "Always Home Cam",
+          "Ring Always Home Cam",
+          "BHAZU001"
+        ],
+        "configuration": "Historical BHAZU001 FCC grant reproduction. No transfer of its bands, power limits or components to Drone Cam (2026), Rover Cam or other Ring devices.",
+        "reviewed_on": "2026-11-11",
+        "facts": [
+          {
+            "section": "radios",
+            "component": "Bluetooth BR and LE",
+            "details": "BHAZU001: 2402–2480 MHz; grant-listed conducted maxima 0.0195 W (BR) and 0.0073 W (LE).",
+            "sources": [
+              "https://fccid.io/2AEUPBHAZU001"
+            ]
+          },
+          {
+            "section": "radios",
+            "component": "WLAN",
+            "details": "BHAZU001: 2412–2462, 5180–5240, 5260–5320, 5500–5720 and 5745–5825 MHz channel ranges. Detailed per-band limits are in the RF catalog.",
+            "sources": [
+              "https://fccid.io/2AEUPBHAZU001"
+            ]
+          },
+          {
+            "section": "identification",
+            "component": "FCC equipment identity",
+            "details": "2AEUPBHAZU001; grant 2021-09-28. Application date 2021-09-23 is not the grant date.",
+            "sources": [
+              "https://fccid.io/2AEUPBHAZU001"
+            ]
+          }
+        ]
       }
     ]
   },
   "counts": {
-    "devices": 1324,
-    "radio_allocations": 182,
+    "devices": 1328,
+    "radio_allocations": 195,
     "remote_id_rules": 3738,
-    "rf_channels": 195,
-    "vendor_flows": 442,
+    "rf_channels": 202,
+    "vendor_flows": 443,
     "equipment_product_relationships": 7,
-    "cloud_services": 457,
+    "cloud_services": 459,
     "robot_signatures": 9,
-    "fcc_equipment": 20,
-    "devices_with_mac_allocations": 321,
-    "devices_with_rf_information": 741,
+    "fcc_equipment": 21,
+    "devices_with_mac_allocations": 324,
+    "devices_with_rf_information": 745,
     "devices_with_scanner_signatures": 12,
-    "system_profiles": 926,
-    "devices_with_system_profiles": 1237,
+    "system_profiles": 929,
+    "devices_with_system_profiles": 1240,
     "devices_with_documented_compute": 600
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-03",
+  "reviewed_on": "2026-11-11",
   "scope": "Selected drone, autonomous-vehicle, robot and associated equipment manufacturers only. Allocations are manufacturer-level references, not model-specific detection signatures.",
   "sources": [
     {
@@ -50,6 +50,14 @@
       "registry": "MA-S"
     },
     {
+      "device": "AM General devices",
+      "prefix": "943EFD5",
+      "prefix_bits": 28,
+      "registrant": "AM General LLC",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv",
+      "registry": "MA-M"
+    },
+    {
       "device": "AeroVironment devices",
       "prefix": "001AF9",
       "prefix_bits": 24,
@@ -78,14 +86,6 @@
       "prefix": "58AD08C",
       "prefix_bits": 28,
       "registrant": "Also, Inc.",
-      "source": "https://standards-oui.ieee.org/oui28/mam.csv",
-      "registry": "MA-M"
-    },
-    {
-      "device": "AM General devices",
-      "prefix": "943EFD5",
-      "prefix_bits": 28,
-      "registrant": "AM General LLC",
       "source": "https://standards-oui.ieee.org/oui28/mam.csv",
       "registry": "MA-M"
     },
@@ -298,14 +298,6 @@
       "registry": "MA-L"
     },
     {
-      "device": "DeLaval devices",
-      "prefix": "A48E0A",
-      "prefix_bits": 24,
-      "registrant": "DeLaval International AB",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L"
-    },
-    {
       "device": "DJI devices",
       "prefix": "04A85A",
       "prefix_bits": 24,
@@ -414,6 +406,14 @@
       "prefix": "EC72F7",
       "prefix_bits": 24,
       "registrant": "DJI BAIWANG TECHNOLOGY CO LTD",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "DeLaval devices",
+      "prefix": "A48E0A",
+      "prefix_bits": 24,
+      "registrant": "DeLaval International AB",
       "source": "https://standards-oui.ieee.org/oui/oui.csv",
       "registry": "MA-L"
     },
@@ -562,6 +562,14 @@
       "registry": "MA-M"
     },
     {
+      "device": "FORT Robotics devices",
+      "prefix": "0411190",
+      "prefix_bits": 28,
+      "registrant": "FORT Robotics Inc.",
+      "source": "https://standards-oui.ieee.org/oui28/mam.csv",
+      "registry": "MA-M"
+    },
+    {
       "device": "Flirtey devices",
       "prefix": "70B3D52AA",
       "prefix_bits": 36,
@@ -576,14 +584,6 @@
       "registrant": "Flock Safety",
       "source": "https://standards-oui.ieee.org/oui/oui.csv",
       "registry": "MA-L"
-    },
-    {
-      "device": "FORT Robotics devices",
-      "prefix": "0411190",
-      "prefix_bits": 28,
-      "registrant": "FORT Robotics Inc.",
-      "source": "https://standards-oui.ieee.org/oui28/mam.csv",
-      "registry": "MA-M"
     },
     {
       "device": "Fortem Technologies devices",
@@ -770,30 +770,6 @@
       "registry": "MA-S"
     },
     {
-      "device": "iRobot devices",
-      "prefix": "4CB9EA",
-      "prefix_bits": 24,
-      "registrant": "iRobot Corporation",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L"
-    },
-    {
-      "device": "iRobot devices",
-      "prefix": "501479",
-      "prefix_bits": 24,
-      "registrant": "iRobot Corporation ",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L"
-    },
-    {
-      "device": "iRobot devices",
-      "prefix": "ACF473",
-      "prefix_bits": 24,
-      "registrant": "iRobot Corporation",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L"
-    },
-    {
       "device": "Israel Aerospace Industries devices",
       "prefix": "70B3D5E4C",
       "prefix_bits": 36,
@@ -818,6 +794,14 @@
       "registry": "MA-L"
     },
     {
+      "device": "KUKA Robotics devices",
+      "prefix": "0060C8",
+      "prefix_bits": 24,
+      "registrant": "KUKA WELDING SYSTEMS & ROBOTS",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
       "device": "Karcher devices",
       "prefix": "A409CB",
       "prefix_bits": 24,
@@ -838,14 +822,6 @@
       "prefix": "CC3F8A",
       "prefix_bits": 24,
       "registrant": "KOMATSU LTD.",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L"
-    },
-    {
-      "device": "KUKA Robotics devices",
-      "prefix": "0060C8",
-      "prefix_bits": 24,
-      "registrant": "KUKA WELDING SYSTEMS & ROBOTS",
       "source": "https://standards-oui.ieee.org/oui/oui.csv",
       "registry": "MA-L"
     },
@@ -1058,6 +1034,14 @@
       "registry": "MA-M"
     },
     {
+      "device": "ROBOTIS devices",
+      "prefix": "B863BC",
+      "prefix_bits": 24,
+      "registrant": "ROBOTIS, Co, Ltd",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
       "device": "Rafael devices",
       "prefix": "7C051E",
       "prefix_bits": 24,
@@ -1088,6 +1072,110 @@
       "registrant": "Rheinmetall Electronics UK Ltd",
       "source": "https://standards-oui.ieee.org/oui28/mam.csv",
       "registry": "MA-M"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "00B463",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "187F88",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "242BD6",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "343EA4",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "50E467",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "54E019",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "5C475E",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "649A63",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "90486C",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "9C7613",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "AC9FC3",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "C4DBAD",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "Ring devices",
+      "prefix": "CC3BFB",
+      "prefix_bits": 24,
+      "registrant": "Ring LLC",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
     },
     {
       "device": "Roborock devices",
@@ -1130,20 +1218,20 @@
       "registry": "MA-S"
     },
     {
-      "device": "ROBOTIS devices",
-      "prefix": "B863BC",
-      "prefix_bits": 24,
-      "registrant": "ROBOTIS, Co, Ltd",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L"
-    },
-    {
       "device": "Robotize devices",
       "prefix": "3805258",
       "prefix_bits": 28,
       "registrant": "Robotize ApS",
       "source": "https://standards-oui.ieee.org/oui28/mam.csv",
       "registry": "MA-M"
+    },
+    {
+      "device": "SIYI devices",
+      "prefix": "5CD5B5",
+      "prefix_bits": 24,
+      "registrant": "Shenzhen WiSiYiLink Technology Co.,Ltd",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
     },
     {
       "device": "Saab Seaeye devices",
@@ -1182,14 +1270,6 @@
       "prefix": "14DD48",
       "prefix_bits": 24,
       "registrant": "Shield AI",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L"
-    },
-    {
-      "device": "SIYI devices",
-      "prefix": "5CD5B5",
-      "prefix_bits": 24,
-      "registrant": "Shenzhen WiSiYiLink Technology Co.,Ltd",
       "source": "https://standards-oui.ieee.org/oui/oui.csv",
       "registry": "MA-L"
     },
@@ -1450,6 +1530,14 @@
       "registry": "MA-M"
     },
     {
+      "device": "ZF Friedrichshafen devices",
+      "prefix": "7C9763",
+      "prefix_bits": 24,
+      "registrant": "ZF Friedrichshafen AG",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
       "device": "Zero Zero Robotics devices",
       "prefix": "848319",
       "prefix_bits": 24,
@@ -1466,14 +1554,6 @@
       "registry": "MA-M"
     },
     {
-      "device": "ZF Friedrichshafen devices",
-      "prefix": "7C9763",
-      "prefix_bits": 24,
-      "registrant": "ZF Friedrichshafen AG",
-      "source": "https://standards-oui.ieee.org/oui/oui.csv",
-      "registry": "MA-L"
-    },
-    {
       "device": "Zipline devices",
       "prefix": "74B80F",
       "prefix_bits": 24,
@@ -1488,6 +1568,30 @@
       "registrant": "Zoox",
       "source": "https://standards-oui.ieee.org/oui28/mam.csv",
       "registry": "MA-M"
+    },
+    {
+      "device": "iRobot devices",
+      "prefix": "4CB9EA",
+      "prefix_bits": 24,
+      "registrant": "iRobot Corporation",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "iRobot devices",
+      "prefix": "501479",
+      "prefix_bits": 24,
+      "registrant": "iRobot Corporation ",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
+    },
+    {
+      "device": "iRobot devices",
+      "prefix": "ACF473",
+      "prefix_bits": 24,
+      "registrant": "iRobot Corporation",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv",
+      "registry": "MA-L"
     }
   ],
   "manufacturer_aliases": {
@@ -1506,11 +1610,15 @@
     "FIMI X8 SE 2022 Drone": "FIMI",
     "FIMI X8 Tele Drone": "FIMI",
     "Kärcher": "Karcher",
-    "Aurora": "Aurora Innovation"
+    "Aurora": "Aurora Innovation",
+    "Ring LLC": "Ring",
+    "Ring Robotics": "Ring"
   },
   "alias_evidence": {
     "FIMI X8 SE 2022 Drone": "https://www.fimi.com/about-fimi.html",
     "FIMI X8 Tele Drone": "https://www.fimi.com/about-fimi.html",
-    "Kärcher": "https://www.kaercher.com/au/home-garden/robot-vacuums-and-mops/privacy-statement-home-robots-app.html"
+    "Kärcher": "https://www.kaercher.com/au/home-garden/robot-vacuums-and-mops/privacy-statement-home-robots-app.html",
+    "Ring LLC": "https://fccid.io/2AEUPBHAZU001",
+    "Ring Robotics": "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
   }
 }

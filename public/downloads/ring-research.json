@@ -1,0 +1,166 @@
+{
+  "reviewed_on": "2026-11-11",
+  "input_commit": "62a001d9067af0675c376c3ef2a78ab301b1815f",
+  "previous_review_commit": "a8c5c9b",
+  "tracked_files": 171,
+  "changed_files": 76,
+  "integrated": {
+    "product_references": [
+      "Ring Drone Cam",
+      "Ring Rover Cam",
+      "Ring Always Home Cam"
+    ],
+    "system_profiles": 3,
+    "manufacturer_allocations": 13,
+    "historical_equipment_rf_rows": 7,
+    "cloud_workflows": 2,
+    "new_remote_id_rules": 0,
+    "new_model_detection_rules": 0,
+    "new_map_observations": 0,
+    "confirmed_new_model_wifi_bands": [
+      "2.4 GHz",
+      "5 GHz"
+    ],
+    "new_drone_specific_ouis": 0,
+    "drone_oui_rows": 72,
+    "full_oui_rows": 195,
+    "retained_ring_hostnames": 957
+  },
+  "decisions": [
+    "All non-Ring FAA/FCC JSON refreshes differ only in fetched/enriched timestamps; no new model or serial-range evidence.",
+    "Ring zero-result FAA snapshot is a search observation, not proof of absent radio hardware or all possible future declarations.",
+    "All 13 Ring LLC allocations independently match the saved IEEE MA-L snapshot dated 2026-11-03 (SHA256 e3a8c3a77347ce9c675c72dfb44faebbf916c2370a426ba2dba57e1f570761c1). A fresh IEEE request returned HTTP 418. Snapshot dates are not advanced.",
+    "205 Amazon allocations excluded from the scoped CSV. Ring allocations are manufacturer-only and also cover fixed cameras; no drone presence inferred.",
+    "No imported SSID guesses, assumed MAC randomization, BLE cadence, inferred radio-cycle rules, domain-based drone identity or Remote-ID disqualifiers.",
+    "No verified device locations in this refresh; product announcements and company domains create no live or historical map pins.",
+    "The 135-row Ring grantee index contains many unrelated cameras. Only the specifically identified Always Home Cam record is added to the drone/robot equipment catalog.",
+    "Domain-list omissions are not proof of decommissioning; CT/DNS lists do not establish service roles, exposure or vulnerabilities.",
+    "Collector pagination can overwrite prior data with a partial result after a later-page failure and deduplicates revisions by FCC ID; preserve per-application identity and complete-fetch status before treating counts as authoritative.",
+    "Ring excluded from drone-only CSV: the 13 verified vendor allocations are shared camera/device context, not documented drone allocations.",
+    "5CFYB9 is the new Drone Cam hardware model, not an FCC identifier. No new-model grant or MAC binding established.",
+    "The manufacturer confirms 2.4/5 GHz Wi-Fi on both new products. Exact channel limits and chipsets remain unspecified; no speculative RF channel rows added.",
+    "Historical label mirror offers a machine-decoded QR identifier, but direct FCC/PDF retrieval failed. It is not accepted as model-specific OUI evidence without viewing and validating the actual exhibit.",
+    "Ring TAKE white paper provides platform data/key flow; it does not identify the new drone’s precise enrollment path or hosts."
+  ],
+  "domain_review": [
+    {
+      "path": "data/domains/acsl.txt",
+      "added_count": 0,
+      "omitted_count": 9,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/aeryon.txt",
+      "added_count": 1,
+      "omitted_count": 14,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/ageagle.txt",
+      "added_count": 4,
+      "omitted_count": 4,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/autel.txt",
+      "added_count": 0,
+      "omitted_count": 17,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/baykar.txt",
+      "added_count": 2,
+      "omitted_count": 6,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/carbonix.txt",
+      "added_count": 1,
+      "omitted_count": 0,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/delair.txt",
+      "added_count": 1,
+      "omitted_count": 0,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/flyability.txt",
+      "added_count": 0,
+      "omitted_count": 2,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/freefly.txt",
+      "added_count": 3,
+      "omitted_count": 1,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/ideaforge.txt",
+      "added_count": 1,
+      "omitted_count": 5,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/kodiak.txt",
+      "added_count": 1,
+      "omitted_count": 0,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/microdrones.txt",
+      "added_count": 1,
+      "omitted_count": 0,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/quantum-systems.txt",
+      "added_count": 49,
+      "omitted_count": 1,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/ring.txt",
+      "added_count": 957,
+      "omitted_count": 0,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/skydio.txt",
+      "added_count": 1,
+      "omitted_count": 6,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/tekever.txt",
+      "added_count": 0,
+      "omitted_count": 12,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    },
+    {
+      "path": "data/domains/xmobots.txt",
+      "added_count": 1,
+      "omitted_count": 1,
+      "evidence": "Contributed CT/DNS list delta; per-host certificate evidence and device usage unverified"
+    }
+  ],
+  "next_evidence": [
+    "Review actual 5CFYB9 physical label and eventual FCC exhibits; distinguish drone, dock and power adapter.",
+    "Obtain and visually validate historical BHAZU001 label/internal photographs before interpreting any sample MAC or component markings.",
+    "Owner-authorized Drone Cam/Rover Cam captures and exact hardware revisions for any model recognition rule.",
+    "Verify each proposed hostname role using primary documentation or owner-authorized device traffic."
+  ],
+  "sources": [
+    "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+    "https://fccid.io/2AEUPBHAZU001",
+    "https://standards-oui.ieee.org/oui/oui.csv",
+    "https://ring.com/products/drone-cam",
+    "https://ring.com/products/rover-cam",
+    "https://ring.com/support/products/cameras/ring-drone-cam?page=1",
+    "https://ring.com/support/products/cameras/ring-rover-cam?page=1",
+    "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam",
+    "https://assets.aboutamazon.com/e8/64/d5c572c74f11b5e55bcb93b63bd8/ring-ae-e2ee-whitepaper-august-26-2026.pdf"
+  ]
+}

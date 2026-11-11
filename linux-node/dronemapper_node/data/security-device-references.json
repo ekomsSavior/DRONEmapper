@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-25",
+  "reviewed_on": "2026-11-11",
   "vendors": [
     {
       "id": "verkada",
@@ -62,6 +62,32 @@
       "prefixes": [],
       "evidence": "Published product references. No drone-specific radio allocation verified.",
       "source": "https://www.flocksafety.com/products/flock-dfr"
+    },
+    {
+      "id": "ring",
+      "name": "Ring",
+      "aliases": [
+        "Ring LLC",
+        "Ring Robotics"
+      ],
+      "url": "https://ring.com/",
+      "prefixes": [
+        "00B463",
+        "187F88",
+        "242BD6",
+        "343EA4",
+        "50E467",
+        "54E019",
+        "5C475E",
+        "649A63",
+        "90486C",
+        "9C7613",
+        "AC9FC3",
+        "C4DBAD",
+        "CC3BFB"
+      ],
+      "evidence": "IEEE MA-L snapshot from 2026-11-03. Shared across Ring products; a match establishes neither a drone nor a robot model.",
+      "source": "https://standards-oui.ieee.org/oui/oui.csv"
     }
   ],
   "models": [
@@ -963,6 +989,100 @@
           "url": "https://www.flocksafety.com/products/flock-dfr"
         }
       ]
+    },
+    {
+      "vendor": "ring",
+      "group": "ring",
+      "manufacturer_aliases": [
+        "Ring",
+        "Ring LLC",
+        "Ring Robotics"
+      ],
+      "manufacturer_url": "https://ring.com/",
+      "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+      "id": "ring-drone-cam",
+      "model": "Drone Cam",
+      "aliases": [
+        "Drone Cam",
+        "Ring Drone Cam",
+        "5CFYB9"
+      ],
+      "name": "Ring Drone Cam",
+      "kinds": [
+        "drone"
+      ],
+      "category": "Indoor drone",
+      "url": "https://ring.com/products/drone-cam",
+      "source": "https://ring.com/products/drone-cam",
+      "sources": [
+        "https://ring.com/products/drone-cam",
+        "https://ring.com/support/products/cameras/ring-drone-cam?page=1",
+        "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam",
+        "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+      ],
+      "description": "Announced 2026-11-10; US shipping planned 2027-01-27 at $249.99, subject to FCC authorization. Indoor flying security camera.",
+      "connection": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and cloud-assisted AI Pilot. Radio chipset and model-specific MAC prefix unconfirmed."
+    },
+    {
+      "vendor": "ring",
+      "group": "ring",
+      "manufacturer_aliases": [
+        "Ring",
+        "Ring LLC",
+        "Ring Robotics"
+      ],
+      "manufacturer_url": "https://ring.com/",
+      "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+      "id": "ring-rover-cam",
+      "model": "Rover Cam",
+      "aliases": [
+        "Rover Cam",
+        "Ring Rover Cam"
+      ],
+      "name": "Ring Rover Cam",
+      "kinds": [
+        "ground"
+      ],
+      "category": "Ground robot",
+      "url": "https://ring.com/products/rover-cam",
+      "source": "https://ring.com/products/rover-cam",
+      "sources": [
+        "https://ring.com/products/rover-cam",
+        "https://ring.com/support/products/cameras/ring-rover-cam?page=1",
+        "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+      ],
+      "description": "Announced 2026-11-10; US shipping planned 2026-12-16 at $999.99. Autonomous business-security rover.",
+      "connection": "Dual-band 2.4/5 GHz Wi-Fi; Ring app and AI Pilot. WPA2 required, WPA3 where available. Radio chipset and model-specific MAC prefix unconfirmed."
+    },
+    {
+      "vendor": "ring",
+      "group": "ring",
+      "manufacturer_aliases": [
+        "Ring",
+        "Ring LLC",
+        "Ring Robotics"
+      ],
+      "manufacturer_url": "https://ring.com/",
+      "reception": "No verified model-specific broadcast pattern. Ring MAC allocations and domain names also occur on fixed cameras and other products; they do not identify this model.",
+      "id": "ring-always-home-cam",
+      "model": "Always Home Cam",
+      "aliases": [
+        "Always Home Cam",
+        "Ring Always Home Cam",
+        "BHAZU001"
+      ],
+      "name": "Ring Always Home Cam",
+      "kinds": [
+        "drone"
+      ],
+      "category": "Indoor drone · historical model",
+      "url": "https://fccid.io/2AEUPBHAZU001",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "sources": [
+        "https://fccid.io/2AEUPBHAZU001"
+      ],
+      "description": "Historical BHAZU001 equipment; FCC grant dated 2021-09-28. Separate from the 2026 Drone Cam.",
+      "connection": "BHAZU001 grant: Bluetooth BR/LE and 2.4/5 GHz WLAN. Frequencies apply only to this certified equipment."
     }
   ],
   "notice": "Published product references are separate from received observations. A manufacturer allocation cannot identify a model, operator, location, or active platform connection."

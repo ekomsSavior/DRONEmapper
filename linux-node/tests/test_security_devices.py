@@ -34,6 +34,22 @@ def beacon(mac=MAC,ssid=b'Fixture',subtype=0x80):
     return bytes(frame)+bytes([0,len(ssid)])+ssid
 
 class ReferenceTests(unittest.TestCase):
+    def test_ring_is_local_manufacturer_context_not_a_drone_identity(self):
+        ring=next(v for v in REFERENCES['vendors'] if v['id']=='ring')
+        self.assertEqual(len(ring['prefixes']),13)
+        for prefix in ring['prefixes']:
+            mac=':'.join(bytes.fromhex(prefix+'000001').hex()[i:i+2] for i in range(0,12,2))
+            hint=vendor_hint(mac)
+            self.assertEqual(hint['vendor_name'],'Ring')
+            self.assertNotIn('model',hint)
+            match=wifi_frame(beacon(mac=mac,ssid=b'Ring-Drone-Setup'))[0]
+            self.assertTrue(match['vendor_only'])
+            self.assertNotIn('signature',match)
+            self.assertNotIn('payload',match)
+        for mac in ('56:E0:19:00:00:01','55:E0:19:00:00:01'):
+            self.assertIsNone(vendor_hint(mac))
+            self.assertEqual(wifi_frame(beacon(mac=mac,ssid=b'Ring-Drone-Setup')),[])
+
     def test_anduril_allocation_width_and_unknown_model(self):
         for mac,name in [('E8:B4:70:C0:00:01','Anduril Industries'),('E8:B4:70:CF:FF:FF','Anduril Industries'),('8C:1F:64:76:30:01','Anduril Imaging'),('8C:1F:64:76:3F:FF','Anduril Imaging')]:
             hint=vendor_hint(mac)

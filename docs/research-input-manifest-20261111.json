@@ -1,0 +1,1134 @@
+{
+  "commit": "62a001d9067af0675c376c3ef2a78ab301b1815f",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 224,
+      "sha256": "db557f8e4e33c9e10a2451ad3ee58b0a8c6d9701806afb01863673f5ebad1cdc",
+      "changed_since_review": false
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 510,
+      "sha256": "f54268e32dc61c4588ef0b6459d085d20bb2c8465600c9a1a979df6d7a8c0ee4",
+      "changed_since_review": false
+    },
+    {
+      "path": "README.md",
+      "bytes": 7057,
+      "sha256": "ab71831051db7470e70fe3e3982dd9e3bb447b0f94e6077a7c25d50a4f071a98",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/cuas-sites.csv",
+      "bytes": 786,
+      "sha256": "49c72a67e328beb13167ba92a7af91767744ba137c72a3d9582808863de27ac9",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/acsl.txt",
+      "bytes": 60,
+      "sha256": "a8f869f5195a1ae60de2aa250675ae8f7df922d6c2a90b74d6eba06c9f31f5cd",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/aerovironment.txt",
+      "bytes": 328,
+      "sha256": "d8afc3e71b56d9d212555281e5dbfde077df73deefdeaa98d2b296e613a108c0",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/aeryon.txt",
+      "bytes": 11,
+      "sha256": "33c4ef14c814a094d8513e6741fee558dffbfa6ced32e518677273c8acd37397",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/ageagle.txt",
+      "bytes": 152,
+      "sha256": "caa5e47384333e7776d00e1181f85986eddb50d85dc7874e8c3dd3ce57f9cd9b",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/autel.txt",
+      "bytes": 68,
+      "sha256": "24db534469677db07eb6f51c98064cca6cc5417158eb6d2f3cdf704606c4f262",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/baykar.txt",
+      "bytes": 107,
+      "sha256": "52c6ada23cfed552c093d12bb019c395a9afb62766df1c32cd12be7a26c5db6f",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/carbonix.txt",
+      "bytes": 36,
+      "sha256": "f925dc98eeef04acedad5cda9ecc0b0d2c40110756f3b4a01a52c36d68612689",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/delair.txt",
+      "bytes": 526,
+      "sha256": "837ad4b0285bf185d585b13d9b3e26a8d8fbeb90f3f83ae5b588388dc6930ef0",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/dji.txt",
+      "bytes": 667,
+      "sha256": "124346881163a442575b93b544de6c6819a88131a688f4929670777478399209",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/elbit.txt",
+      "bytes": 399,
+      "sha256": "a7b2f00fa02a5a481e101a94d0a42ced05fc64c65d01a8d904c683668f0fa416",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/flyability.txt",
+      "bytes": 355,
+      "sha256": "19c769c5bf7f2311fdd237888484c37cbac39bb7da5632a4ac23c3285b73b16d",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/freefly.txt",
+      "bytes": 310,
+      "sha256": "6815a6b1226ed8ea630b4ffe811d4bfe71c522c997d855cd471ecf08a7261275",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/gatik.txt",
+      "bytes": 891,
+      "sha256": "35d8a6ec6b550b7fc421a8375a2eedd34bc68ed5cae069eed045f038e026c080",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/iai.txt",
+      "bytes": 304,
+      "sha256": "c0654da4cbd1c0b7711bb272500fc2566e3c6fab77d535c29be0246dee151cc6",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/ideaforge.txt",
+      "bytes": 40,
+      "sha256": "b917961639c0acd8e2d21d582f4f63665b5edb1286eead7faf1b4413657ed3b9",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/kodiak.txt",
+      "bytes": 1741,
+      "sha256": "812abf043d63e2cd2b225f77c9346206b52989035937d23c4a2fb37606a1c740",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/microdrones.txt",
+      "bytes": 391,
+      "sha256": "1f07175a66e28d92bc070bf009f26c4c1f59dcc572a9977971530ffd0f4ddbf1",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/nuro.txt",
+      "bytes": 190,
+      "sha256": "92bce1b0fde2723d8256e51f8cb4ecf34bead791bbbd2942c74e1da02c0af0d7",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/pabloair.txt",
+      "bytes": 336,
+      "sha256": "be5e398c997cda97e49b26d3f44139a5e8045f490ff3c0151d9136b8f4300963",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/parrot.txt",
+      "bytes": 750,
+      "sha256": "7fdb6e02278c2ae96b50f6cf8172a5efa15eed8981c8f9a9b5a8b455674596ef",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/primoco.txt",
+      "bytes": 53,
+      "sha256": "3472f02ff6901d8303966bf2adb5fd9e94eac9414fc3c4c79fd8300ba4e824d4",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/quantum-systems.txt",
+      "bytes": 1835,
+      "sha256": "f2a511b204023bd73a541602fa34e486ffd7f1fe67229870a11bc714668c2d98",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/rafael.txt",
+      "bytes": 1550,
+      "sha256": "9f6f8e51ca1b10da6be40fc0ced9262a0e140c0e93cd5ee01efdca649b5bf403",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/ring.txt",
+      "bytes": 30243,
+      "sha256": "6dcbced43c5a5b033f130b9b980a4409674fef9d4392b9784a3d5d5fd01ca31c",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/skydio.txt",
+      "bytes": 2484,
+      "sha256": "6dd9c30c2360c1f6d5020a7bde7fecf77ff1972344fdb11b73f12166abfcfb9c",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/teal.txt",
+      "bytes": 140,
+      "sha256": "f09520e3977c81380fdc8f94d80944c76ce6ec438a0ba3e93fb662401e6cf1a2",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/tekever.txt",
+      "bytes": 6331,
+      "sha256": "268e3a90986659417fdfb540e669a576bcd8ee1d27b60ede00d65f7fa20089df",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/waymo.txt",
+      "bytes": 214,
+      "sha256": "bf94faf09835a6125d11698016bca080b0c1a74dbcb88e71238006021416bf9d",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/wingtra.txt",
+      "bytes": 1125,
+      "sha256": "fb85d2ed07add12962f46db71fbd2daf0b782ba39f4433489d0b4fc81013dfb9",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/xmobots.txt",
+      "bytes": 137,
+      "sha256": "7e3c71d355392f121235cb525e3825d667494b5f2ecb2b617a2a65cb5d972fbd",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/domains/zero-zero.txt",
+      "bytes": 159,
+      "sha256": "5cc8decec0163162dbf586e982ddee2876cfb84f8e13328379fd63338361302a",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/zipline.txt",
+      "bytes": 278,
+      "sha256": "75714886e85adfc21375a4abdd6d3e18b08acf6b0e9a1c56f8fd3cb4dd8ab571",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/domains/zoox.txt",
+      "bytes": 988,
+      "sha256": "678ba7b16e264d9f307695f2228bfa49285ace09030cea54124e92b2db62ca02",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/faa-rid/SUMMARY.csv",
+      "bytes": 25809,
+      "sha256": "585d3f74371c29f7aed8b6bd7d6f4007028869b9c69e1318831f2cd7d2f8315f",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/faa-rid/acsl.json",
+      "bytes": 356,
+      "sha256": "4584a40699e2078eab3784e839cc8e7c66fe349f00923466e028a39e7b6e3178",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/ageagle.json",
+      "bytes": 6753,
+      "sha256": "a00dab944a1ee16712a0ec129b3937675a9415303458436c4c583556a4560787",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/airobotics.json",
+      "bytes": 381,
+      "sha256": "c183ef9a41a1dd04ca33554b5f9ac0afdaa29a5abfec1790c3c2cb0a606cbd07",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/amazon-prime-air.json",
+      "bytes": 646,
+      "sha256": "45b1c65e13fc89d2e718f462d9649fb0b82a718abe37fe414d254f7e3e685331",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/autel.json",
+      "bytes": 8402,
+      "sha256": "435b102cc9d0963a3d9463e567cf1e7f081886ce8dd24df7f249f63db1f36254",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/brinc.json",
+      "bytes": 894,
+      "sha256": "64246fe628c33e687ede5d6ad1775979ba133ce803e7fca5e5aadadccd2f7bef",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/deltaquad.json",
+      "bytes": 368,
+      "sha256": "aa27dd207bb38fda83b9ae1a9201a241ba3e52ce7c1ac3a4006345afd8c66d0c",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/dji.json",
+      "bytes": 21840,
+      "sha256": "024465b5304036f6313055eca0a7c3729737bceb8b6ab1cf810fe373903dc3e7",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/draganfly.json",
+      "bytes": 677,
+      "sha256": "2cdd16e1f45031539c3251aea2e154966a618cb6a76f08c28e96761492b1a9ca",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/fimi.json",
+      "bytes": 654,
+      "sha256": "38eceabc72ca0d6fd8f4f5c4c1b3f18449bb3bd02dfe3cec49787b58c293985d",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/flytrex.json",
+      "bytes": 617,
+      "sha256": "2577411733e712341daa4948e5785ab760dcb2d487b0a604a5cd158a4d59abf4",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/freefly.json",
+      "bytes": 1198,
+      "sha256": "6c5af5408d64f29ee9198b179d4657abef051fea152a22d6bc7d44fdc2fa417e",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/harris-aerial.json",
+      "bytes": 951,
+      "sha256": "4e63c737677639f0d09f1f3b4462790b5110cc33766984c8a82b99370b043a7b",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/inspired-flight.json",
+      "bytes": 933,
+      "sha256": "682657ec0aac3b0ace2299c1af8d794a4625edebc7a5073945f4c9e59c4782f3",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/matternet.json",
+      "bytes": 622,
+      "sha256": "c64c073249cf88cb4fbcf11fd532652778032140e62df69688a4ac1d21f5dac2",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/microdrones.json",
+      "bytes": 2022,
+      "sha256": "754c4cd4946bf1d8bce3113acd3d4e98f31f6614c0de6b9a75ed163578658c80",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/parrot.json",
+      "bytes": 1750,
+      "sha256": "bfa88e8240147a1a32ab0055e06b3dc023dc8d3812fd6cda6b36e59f8d87d846",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/percepto.json",
+      "bytes": 8174,
+      "sha256": "0ccf29c1d632e6fc1d2667da54f2b4eb2131687a8e4d1fab16cde59899138386",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/quantum-systems.json",
+      "bytes": 1477,
+      "sha256": "9bdf84b17b1ad2d27439fd83d9b3fc2d6d29c01267cd25fc826b0cf4616b3977",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/ring.json",
+      "bytes": 287,
+      "sha256": "e7f76a648f8ee9b0fa6dc18498bd8727e8ba6e09ef397b8788c719f366f3df0c",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": true
+    },
+    {
+      "path": "data/faa-rid/sensefly.json",
+      "bytes": 6754,
+      "sha256": "b908a3dbb19b5fa9da6bf2fc477d4d5e91bfdf6dff252b7e3b5873b187aebda3",
+      "changed_since_review": false,
+      "json_valid": true
+    },
+    {
+      "path": "data/faa-rid/skydio.json",
+      "bytes": 4482,
+      "sha256": "6a5e4a980430ec29188487efd1d5cf129db324213d519c5cd11a149ded2a781c",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/swoop-aero.json",
+      "bytes": 367,
+      "sha256": "1336e3a29dc01fb9265b49927de9339308de3f01cdfa87bd2cc42de7652abd8b",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/teal.json",
+      "bytes": 373,
+      "sha256": "b654f5b016e6a9101d908e99f0359abcbba76b4ce90bfc1060f6e738f63471d3",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/wing.json",
+      "bytes": 923,
+      "sha256": "4640b975994c7749c4055741693a09a383763f39c22d0fbf1691074742886824",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/wingtra.json",
+      "bytes": 1223,
+      "sha256": "da89eb300798cec5313fc37859074bc24cbb7f9db3b6fe19c65798e6ca52e022",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/xag.json",
+      "bytes": 2127,
+      "sha256": "04cba5bd88f54526e8054f0dfd762bacebffdc1afc6f9bb91b9260d9ea14452a",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/zero-zero.json",
+      "bytes": 671,
+      "sha256": "8e379c0e20067780b960fd8c4b144a19ea222a3e4e0924eb548442a7f20bec40",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/faa-rid/zipline.json",
+      "bytes": 628,
+      "sha256": "50f3774dfa339cfa11a12e4a53d7af2d0313850c02ca56637a1a653a1c3da113",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2A98R.json",
+      "bytes": 419,
+      "sha256": "1d5e3cef93a24fff5adaa20ca28caf076654e2f9c8c46769ede92c0624122cc6",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2A9Z7.json",
+      "bytes": 252,
+      "sha256": "ca686fc5a47017d918fb1467ad9f4047fb79eb8cbcf1974e3441417a32248f4b",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2AAT2.json",
+      "bytes": 259,
+      "sha256": "b694a4d931d6d4862b24aeade4c802e54fc347a0dc20f741b5d36b3e1ccc1b5a",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2ABB5.json",
+      "bytes": 821,
+      "sha256": "62952d9403e28242a36e0723b3b966b7208b06163a5b45140bad6f9e5a3199e7",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2ACS5.json",
+      "bytes": 5806,
+      "sha256": "6f7b2cd92341941d4784df10f66b7a2afad40ae7403eeada41b4c96adbd961ec",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2AEUP.json",
+      "bytes": 19925,
+      "sha256": "ff29065cb640d4b5cf372cfad5913207e45b2219ab47083aeea7216a8809b144",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": true
+    },
+    {
+      "path": "data/fcc-registry/2AEXY.json",
+      "bytes": 2561,
+      "sha256": "cfc0327b829de4883391ac5518a0fac4c40657094a68f2a7a0d123cd5f3b34ff",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2AG53.json",
+      "bytes": 1719,
+      "sha256": "51a8c7fb0ebee01b4cd2ec7ba1f78d83ca38e72aefb0098b1c9f7b4dac1e626a",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2AG6I.json",
+      "bytes": 3474,
+      "sha256": "5a21d9b87f671ba7c8cc9cbea27e435108b95834eb331d9905a2425efafcb875",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2AGNT.json",
+      "bytes": 7703,
+      "sha256": "7459e13455d73398b0010b4640a719e22a5437422c1352efeb8affc57b790327",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2AL7M.json",
+      "bytes": 1642,
+      "sha256": "727d5e677a237e34e68596f24ca5877b0bab887dede673ac282b37705cb9e86d",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2ANDR.json",
+      "bytes": 9077,
+      "sha256": "f6e1a70f1da7fbd2fb8b1ecca05dbc672d6e4401ebf0fbd123270bb5b56defdf",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2ATQR.json",
+      "bytes": 1346,
+      "sha256": "9aacb8a2440236d18312b211878c409161167d872131b8ce11cc6574b4a3eb64",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2AVC8.json",
+      "bytes": 254,
+      "sha256": "6e185e1e941dfbfbd8d4c2ef92420b04c760ad57632b15b4a4a3e6a789049e8a",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2AYVY.json",
+      "bytes": 1740,
+      "sha256": "b817345e04f650acb04d91834b9075dcddce9017a755346efa5113fc361db269",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2AZKT.json",
+      "bytes": 723,
+      "sha256": "edbf39ada3abc4fc22876e5c49206c1219d387ed0d1e97aeef287228e84b1a13",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2BF4L.json",
+      "bytes": 301,
+      "sha256": "69310ad262bf46ca701509e95d5aa8d381f996bdee95b0e084418027a95520e6",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2BHDH.json",
+      "bytes": 238,
+      "sha256": "af2b458120a164ff4c91c4bea1b1da88a1814bbde46a436a137138898d4d568d",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/2BML6.json",
+      "bytes": 399,
+      "sha256": "891f1a663da8b5c435672f5b03828bd94aba732c0b105275a797bbac248854f8",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc-registry/PZR.json",
+      "bytes": 411,
+      "sha256": "998e2ce0c8a027c5b15f723e38d96db03fba03cc2387050e9fc5373195bdc44d",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": false
+    },
+    {
+      "path": "data/fcc/nuro.json",
+      "bytes": 944,
+      "sha256": "614033fcf7dc7d059cf52625418d2c5496a1f5ef67ac477a836624f0a0d4a8c0",
+      "changed_since_review": false,
+      "json_valid": true
+    },
+    {
+      "path": "data/fcc/skydio.json",
+      "bytes": 5465,
+      "sha256": "b50e14b8cb129918f81cfa00623b07257b50db524754852c283a7c75d6500213",
+      "changed_since_review": false,
+      "json_valid": true
+    },
+    {
+      "path": "data/fcc/us-drones.json",
+      "bytes": 7739,
+      "sha256": "a43b43d95b466183ce30aa4d550f3adecad200af97dd7da29632ed08a02f020b",
+      "changed_since_review": true,
+      "json_valid": true,
+      "semantic_change": true
+    },
+    {
+      "path": "data/fcc/waymo.json",
+      "bytes": 1521,
+      "sha256": "372524b5f2e4cd6ed38eaff8c554a86585f76140e05688a62078bc4729ff94db",
+      "changed_since_review": false,
+      "json_valid": true
+    },
+    {
+      "path": "data/oui-global.csv",
+      "bytes": 2206,
+      "sha256": "8903f05e682bb63d6daa6fb413fad1817aa12b62eac70808d46a4f2040fb5c1e",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/oui-ring.csv",
+      "bytes": 13291,
+      "sha256": "7cffdb18445346b68991e803f70482d98add072a05b189ca96308159a63a30f8",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/registry-sources.csv",
+      "bytes": 1349,
+      "sha256": "2e68190ad7d875c916c9804421920cd2450f56112ce34eb6f213e1a8e8c85e0a",
+      "changed_since_review": false
+    },
+    {
+      "path": "data/rf-channels.csv",
+      "bytes": 5449,
+      "sha256": "ee18c615642d5ade48d6264ce29a35d8a9227a998b230668b8969aff70d63195",
+      "changed_since_review": true
+    },
+    {
+      "path": "data/rid-prefixes.csv",
+      "bytes": 2237,
+      "sha256": "c739b99ec176c16e9e4472048af0d39b527a96c124adab85c4706a45f8367a30",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/ads-b.md",
+      "bytes": 2187,
+      "sha256": "b214446e6d77e65532aac6137c5f0bd878dadfec51fbe3bb4a00fd84df40663c",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/av-network-architecture.md",
+      "bytes": 2840,
+      "sha256": "963ebeabb840bdc34df69f422db998e18d9cb4fa535bbe2d9990efbc28f75011",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/av-sensors.md",
+      "bytes": 6002,
+      "sha256": "a674f8d3fb5378f7946f280da5818b53f766c42b136eabb093f3ce406273257a",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/collection-playbook.md",
+      "bytes": 4338,
+      "sha256": "103c92e2c5fd5bedc7e93c237afea717c2493ed8590a974e074d52c5ac6e0a7b",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/counter-uas.md",
+      "bytes": 3443,
+      "sha256": "de64277f8b043b8b5443cc3c648faf46cb7f4303717aa50c06c93d66374f2e6d",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/cuas-site-survey.md",
+      "bytes": 8043,
+      "sha256": "47b2ae3caf258cbb14ef7477d8a8de24b797eea97ac0b1fb352dc25cba09dd25",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/cv2x.md",
+      "bytes": 2023,
+      "sha256": "abfa0314119c1472a2e8665874257f7be7f943345f66b60183c68df055fb0f5e",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/droneid-capture.md",
+      "bytes": 6809,
+      "sha256": "4dd64ddff750015ae2466a39d73e4af88c0fc80fe45eb206b431dc7ba7964e1f",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/droneid.md",
+      "bytes": 2595,
+      "sha256": "8ce4db383997298ae6e24d3f89295b2300db924cc2e25c4ecf2d6016628409a0",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/fpv-and-proprietary-links.md",
+      "bytes": 3734,
+      "sha256": "20d3e757240a5cfa19958a3eb0e583253e24def119aa7cde7bb8110a29c50255",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/global-scope.md",
+      "bytes": 3795,
+      "sha256": "a6dbedf13e722c57cfb7ed1c3c28357bc1fd613f15d8d1061caa85efadcd926d",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/legal-and-ethics.md",
+      "bytes": 2065,
+      "sha256": "db5e23d684bae55d33856cc93a8d7519eda99b7fea25de70f6d7d501a84e73e6",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/regulatory-databases.md",
+      "bytes": 4635,
+      "sha256": "1c92d026b2e03ae2c3cc72c869878026da878095945905565770bd1e6ebc8ca9",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/remote-id.md",
+      "bytes": 4067,
+      "sha256": "e949a0546be669a3e63a1ff945eee93d1b1ac1f7e1f4fdf3890692bfd75aef56",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/rid-serial-prefixes.md",
+      "bytes": 5921,
+      "sha256": "b09b5ce4892a20b3592bd8b7ff63d4f516ad9b42c1f473874d2083738a1f3625",
+      "changed_since_review": false
+    },
+    {
+      "path": "docs/spectrum.md",
+      "bytes": 3970,
+      "sha256": "23fb72eafc7056b35ce08a7a9420202eb857ed85feb17435de892a0622cf2e4a",
+      "changed_since_review": false
+    },
+    {
+      "path": "intel/last-refresh.md",
+      "bytes": 1453,
+      "sha256": "6cd9f5f6b0f20db76979db2ebcfb984f93bfeae91c5047b7dc0baddf1830c347",
+      "changed_since_review": true
+    },
+    {
+      "path": "intel/research-queue.md",
+      "bytes": 7390,
+      "sha256": "33fffff765cd7c8099be968d18129d75e6053d67bfae1b3886dbdebd29b32faf",
+      "changed_since_review": true
+    },
+    {
+      "path": "intel/ring-drone-cam-2026-11-11.md",
+      "bytes": 3468,
+      "sha256": "0ca218fd2d9b82dc400d07018f02df18ba818a410faf6d102ac935e64203cfaa",
+      "changed_since_review": true
+    },
+    {
+      "path": "scanner/global-signatures.yaml",
+      "bytes": 15257,
+      "sha256": "d95bd50880df38bdfd0a5a29b591297affbcaa27884cdf444560b7e6fa17c4b8",
+      "changed_since_review": false
+    },
+    {
+      "path": "scanner/ring-signatures.yaml",
+      "bytes": 6496,
+      "sha256": "03e98310842687db4f97605a0cdbc006474551ffe8eb826f7ad2c058f28a4460",
+      "changed_since_review": true
+    },
+    {
+      "path": "scanner/robot-signatures.yaml",
+      "bytes": 6014,
+      "sha256": "a37b7229a065d57f5e6e3258291240c893d6aa88d6510363e1fbcc195e29ee97",
+      "changed_since_review": false
+    },
+    {
+      "path": "scanner/signatures.yaml",
+      "bytes": 15374,
+      "sha256": "445e9e96fac8cc25263f5769c8b05799e0904fed7bc4398885b00fa824c8044a",
+      "changed_since_review": true
+    },
+    {
+      "path": "scanner/skydio-signatures.yaml",
+      "bytes": 5425,
+      "sha256": "79e3d6a26407f215ba34f945a5dde72ce5fb753a5ee1e1a09ca6b46dc0b73f19",
+      "changed_since_review": false
+    },
+    {
+      "path": "scanner/skydio_rid.py",
+      "bytes": 9970,
+      "sha256": "e5d1a8f9bb3f7a7e850e1a2b30f53b8686d600bdc476865c18eccf692b37e284",
+      "changed_since_review": false
+    },
+    {
+      "path": "scanner/us-drone-signatures.yaml",
+      "bytes": 6912,
+      "sha256": "9e01fb500d27a061add44ff8e0724f809848600a5a6aefc48088659580fc970d",
+      "changed_since_review": false
+    },
+    {
+      "path": "scripts/build_rid_prefixes.py",
+      "bytes": 2095,
+      "sha256": "63df7ddbb976e6d042c48ebae401a98743fae3a93a95c14bb205ea47dc3992a4",
+      "changed_since_review": false
+    },
+    {
+      "path": "scripts/faa_detail.py",
+      "bytes": 5099,
+      "sha256": "8c87fb299eeb1b5819cd263dd6e8e419af77bc9f5db1a995a1d6129789f97882",
+      "changed_since_review": false
+    },
+    {
+      "path": "scripts/refresh.py",
+      "bytes": 17083,
+      "sha256": "35ada117200c52c3b205a53d845b6a2126f37d01105f855bcae64a603f74e504",
+      "changed_since_review": true
+    },
+    {
+      "path": "scripts/refresh.sh",
+      "bytes": 978,
+      "sha256": "97e88c00098731eed09f4be0d77f081ecbcb7858a5412846b172a61b2167accb",
+      "changed_since_review": false
+    },
+    {
+      "path": "sources.md",
+      "bytes": 6919,
+      "sha256": "7e267ee69e1355a2d10b756410baf6df5e9dfc20b673bed8acb1eb04ff7ab521",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/av/global.md",
+      "bytes": 3297,
+      "sha256": "05e924f959754bbb59c6b716ae22bb50624abf12e682ec1edb8b8fcbec6e65ef",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/av/nuro.md",
+      "bytes": 1064,
+      "sha256": "196aa6af9659300e5ab5119f7803c2cd60d95a428ef06561f93a8b525676512e",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/av/others.md",
+      "bytes": 2603,
+      "sha256": "35683d7e9eec91bedc94fcc51c618ab634523b9d928a0df03bcec66d418d0212",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/av/tesla.md",
+      "bytes": 1156,
+      "sha256": "bd43617f2886d00f6b35ff7aedd0db25942b7d66a8141991820925f61fd33b3a",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/av/trucking.md",
+      "bytes": 1568,
+      "sha256": "9c8f6f50ec622f233ac1bbc67b1e6112c56ea948ce18d0dc9e3e18eec312add9",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/av/waymo-network-telemetry.md",
+      "bytes": 4172,
+      "sha256": "b9e6cde1b5dda3a9cde44c7f719ab0d62100f7f6d884fc0af27d271743b4aae0",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/av/waymo.md",
+      "bytes": 1280,
+      "sha256": "3f1ce1c59bf0547e06667af2a2be1f0882afb6f8ddf8457552d77fc1dd311fdd",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/av/zoox.md",
+      "bytes": 976,
+      "sha256": "874669e313962107e18fc444abca78fc3a6d83e214bc2a673584025a85eb8e34",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/aerovironment/aerovironment-dossier.md",
+      "bytes": 5498,
+      "sha256": "84d67c5c8079e424e090acf6d18db7d1c977e0ff8be1673749812646c6279923",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/dji.md",
+      "bytes": 2867,
+      "sha256": "578f52a8f55ea2998f8392942115fd8635329fbdce01f896f3c504f172185ddb",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/americas.md",
+      "bytes": 1180,
+      "sha256": "29878c9c3f2eb37af8aba360a0486b9f3dfcc785a257391dd585a225eb82472d",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/asia-pacific.md",
+      "bytes": 2213,
+      "sha256": "8fcbe019b8ba0bd07602cb2ee198cd6e8cadccf1efe0ff9e772590ad0f0ba98f",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/baykar.md",
+      "bytes": 2534,
+      "sha256": "95ea4ff67691b7e025eeb35c9d9079a1c33855501b09bc539fe69825deac6865",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/carbonix.md",
+      "bytes": 2012,
+      "sha256": "c6331c89b1b2cd6b87489c7616dd42321629e2856ec97e15725d02bc5d364833",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/china.md",
+      "bytes": 2541,
+      "sha256": "fabaa8e01612b720e08eddd5d95ad9c523fabf9195613e85ecc0bae60316eda8",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/delair.md",
+      "bytes": 3470,
+      "sha256": "9ea1825736262e43509a9cd5816a53fde061bcfd178e6b3d7c6e8d5358a267bd",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/europe.md",
+      "bytes": 3076,
+      "sha256": "2e0530afd372ef97f6c00acf26b848b42905ba31e50bb2b7a40012ef760e2ea6",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/ideaforge.md",
+      "bytes": 2138,
+      "sha256": "63435e3a5ecfe1aee2e9c0907fa979831d6f28cc6bcd5dc4d75ba408e72f9743",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/israel.md",
+      "bytes": 2036,
+      "sha256": "d044232e279d1e31aa87f353778584da23eb48ca45c56b685b8bcb786058d283",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/primoco.md",
+      "bytes": 2238,
+      "sha256": "8985d7e34fbb3b9ede6eb1ff441e46bef2627ce335f186895548fa47d692a2f7",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/quantum-systems.md",
+      "bytes": 3650,
+      "sha256": "ecc75d4e7333cd7231c43ea5877bc443a103a07f1da6bb482c21d9682d2ac1d4",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/tai.md",
+      "bytes": 1888,
+      "sha256": "6e1e4866b61fe579dbfaec5093a7ce6edb4c2e97b761ec31d4f40148c1bf80fe",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/tekever.md",
+      "bytes": 2961,
+      "sha256": "4d37727feb231dff2ba6f8b390e66ef8cd4d0f1136a569e7e887bd6b251a74e3",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/global/turkey.md",
+      "bytes": 1260,
+      "sha256": "160bd9ee23e6f60203d7dfecbb7608b8485bf7b8e79f7a88db197ff8d55f35b2",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/other-oems.md",
+      "bytes": 2779,
+      "sha256": "49174995c1b6aa755e4a22e6109801430fe704fe788eda5a0a11ea117c4eedeb",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/others.md",
+      "bytes": 3020,
+      "sha256": "114858b22f302bd8a2ad203368c3ddf87c362b5f2705dbf3db8b205affb80ef8",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/ring/README.md",
+      "bytes": 10619,
+      "sha256": "21826da77d1b37554d573ec01b58786a49c3a5de8e859f9c43fde5b9428a66aa",
+      "changed_since_review": true
+    },
+    {
+      "path": "vendors/drones/skydio/README.md",
+      "bytes": 3113,
+      "sha256": "91edc350de0ea8d8f752e59277384a8746875a5fabd4890a599b631fdbb26ed2",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/skydio/data/skydio-domains.txt",
+      "bytes": 2796,
+      "sha256": "894c9c573f54d22be7afa699ecf1438f49ef66f5d65453cc4903ee665be1aeed",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/skydio/data/skydio-fcc.json",
+      "bytes": 5465,
+      "sha256": "b50e14b8cb129918f81cfa00623b07257b50db524754852c283a7c75d6500213",
+      "changed_since_review": false,
+      "json_valid": true
+    },
+    {
+      "path": "vendors/drones/skydio/scanner/skydio-signatures.yaml",
+      "bytes": 5425,
+      "sha256": "79e3d6a26407f215ba34f945a5dde72ce5fb753a5ee1e1a09ca6b46dc0b73f19",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/skydio/scanner/skydio_rid.py",
+      "bytes": 9970,
+      "sha256": "e5d1a8f9bb3f7a7e850e1a2b30f53b8686d600bdc476865c18eccf692b37e284",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/skydio/skydio-rf-dossier.md",
+      "bytes": 18965,
+      "sha256": "b4e007652300592e2a85186e2cd961ec45a3a9420c3b194f65c954d0ecb1e415",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/teal/teal-dossier.md",
+      "bytes": 5425,
+      "sha256": "72602b9cef72dac22cf5a6f6d43bf211c7862b3a322a715fef09851001bec081",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/drones/zipline/zipline-dossier.md",
+      "bytes": 5927,
+      "sha256": "b15080a351d6415940ca7e09a1afc97f2d54415cd54234efecd478e491fb4a9b",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/robots/README.md",
+      "bytes": 2180,
+      "sha256": "9b99868fc4d923adbeb9c437edf5566ff208a8e91d87aaa214a28a4e9ef04df5",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/robots/anybotics.md",
+      "bytes": 1611,
+      "sha256": "7c74b2e6d15c6b788a68c42ca72e96affdf7bda4931d70480fef62fb48ccd10c",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/robots/boston-dynamics-spot.md",
+      "bytes": 1999,
+      "sha256": "c325c9cd187dd89018666a7f08fac95a3e4b574aafec9d38f2d4833d68ae25b1",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/robots/deep-robotics.md",
+      "bytes": 1271,
+      "sha256": "2c9dc843a39a2181aa57913d82b72ff1fdb8361e51ed84d11db20679049c17dd",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/robots/ghost-robotics.md",
+      "bytes": 2182,
+      "sha256": "361addc4870fcebe67cafa6493eb9edfed4db613488559ca2fe42d5403a761f5",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/robots/inffni-rover-x1.md",
+      "bytes": 1548,
+      "sha256": "411de7a4276e547c7eec3e084e27f53c2d2cd373de55be01e70da9f95e10b5b5",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/robots/other-quadrupeds.md",
+      "bytes": 1654,
+      "sha256": "b8e9cc20e7171df06af622dbf75380cc58d371a6c26e0fa10538b4ee5edb46b4",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/robots/unitree.md",
+      "bytes": 2119,
+      "sha256": "bb0d939fef7a34640f8a7357b6506629efbdcdf357ded4d130affe3f5dbe7366",
+      "changed_since_review": false
+    },
+    {
+      "path": "vendors/robots/xiaomi-cyberdog.md",
+      "bytes": 1739,
+      "sha256": "d589fea95937192a1afdc795b0ddc30a59873e4bf14323b3ee9599639b44ab17",
+      "changed_since_review": false
+    }
+  ]
+}

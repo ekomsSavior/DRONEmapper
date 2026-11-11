@@ -84,7 +84,7 @@ protocol decoders. [Setup and hardware test steps](../docs/android-hackrf.md).
 Download the latest APK from [Android nodes](https://dronemapper.churchofmalware.org/nodes.html)
 and install it over the existing app; do not uninstall first. Official releases
 use the same signing key to preserve your pairing and settings. Check **Phone
-capabilities** for version **0.9.1**. Updates are manual for now.
+capabilities** for version **0.9.2**. Updates are manual for now.
 
 Start listening again, reconnect your USB adapter, and enable your preferred
 **Sharing choices** if you want reports on the map. For a test report, connect
@@ -105,3 +105,13 @@ General Atomics: shared [aircraft references](../docs/aircraft-references.md), w
 ## Robot scanner test release
 
 Android 0.9.1 / Desktop 0.7.2 include nine published Wi-Fi/Bluetooth patterns and 25 researched robot references. Matches remain possible robot signals; reference entries alone do not enable detection. See the [patterns, primary sources and field-test guide](../docs/robot-signals.md).
+
+## Ring reference update — 2026-11-11
+
+Android **0.9.2** and Desktop **0.7.3** bundle Ring Drone Cam, Rover Cam and
+historical Always Home Cam references, plus 13 verified Ring manufacturer MAC
+allocations. Observed matches stay local with the model unknown; fixed Ring
+cameras share these allocations. The historical BHAZU001 radio ranges are
+restricted to that equipment. This update adds no Ring model decoder or public
+Ring telemetry connector. See [Device Library](https://dronemapper.churchofmalware.org/devices?vendor=Ring)
+and the [review evidence](https://dronemapper.churchofmalware.org/downloads/ring-research.json).

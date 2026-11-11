@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-03",
+  "reviewed_on": "2026-11-11",
   "scope": "Source-backed model/configuration references; not a complete bill of materials, observed hardware identity, or new scanner signature.",
   "profiles": [
     {
@@ -48184,6 +48184,217 @@
           "details": "Initial US service plan includes an onboard safety driver. The announcement does not establish a deployed fully driverless service.",
           "sources": [
             "https://moveez-inc.com/en/2025/09/page404/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ring-drone-cam-2026",
+      "manufacturer": "Ring",
+      "models": [
+        "Drone Cam",
+        "Ring Drone Cam",
+        "5CFYB9"
+      ],
+      "configuration": "2026 Drone Cam / 5CFYB9; manufacturer product, support and safety documentation. CPU, RAM, battery capacity and radio chip part numbers undisclosed. Separate from historical BHAZU001.",
+      "reviewed_on": "2026-11-11",
+      "facts": [
+        {
+          "section": "identification",
+          "component": "Hardware identity",
+          "details": "Drone 5CFYB9; dock 6GFYA3; adapter 6PNXA2. These are hardware model numbers, not FCC IDs. No model-specific MAC allocation established.",
+          "sources": [
+            "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Dual-band Wi-Fi",
+          "details": "2.4 and 5 GHz Wi-Fi. Channel limits, transmit power, radio chipset and antennas are not specified on the product page.",
+          "sources": [
+            "https://ring.com/products/drone-cam"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "Wireless security",
+          "details": "Support page lists 802.11b/g/n and WPA2/WPA3; no inference of additional PHY modes.",
+          "sources": [
+            "https://ring.com/support/products/cameras/ring-drone-cam?page=1"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera and lighting",
+          "details": "1920 × 1920 video; 148° horizontal and vertical view; two LED spotlights, no infrared night vision.",
+          "sources": [
+            "https://ring.com/products/drone-cam"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Navigation and obstacle sensing",
+          "details": "Safety documentation identifies Class 1 laser navigation/obstacle sensors, without part numbers.",
+          "sources": [
+            "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Flight and charging",
+          "details": "Built-in rechargeable battery; USB-C AC charging dock; up to eight minutes per flight under manufacturer test conditions. Automatically returns to charge.",
+          "sources": [
+            "https://ring.com/products/drone-cam"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Electrical ratings",
+          "details": "Drone and dock: 15 V, 2 A. Adapter input 100–240 VAC; selectable outputs 5 V/3 A, 9 V/3 A, 15 V/2 A or 20 V/1.5 A.",
+          "sources": [
+            "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Mass and indoor use",
+          "details": "165 g including battery; single-floor operation at launch. Product page gives 5–35 °C, safety document 0–35 °C; discrepancy retained for review.",
+          "sources": [
+            "https://ring.com/support/products/cameras/ring-drone-cam?page=1",
+            "https://ring.com/products/drone-cam",
+            "https://ring.com/support/articles/ks7h3/Safety-and-compliance-information-for-the-Ring-Drone-Cam"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "App, audio and privacy",
+          "details": "Ring app controls and viewing. No microphone, speaker, two-way talk or siren. Recording occurs only during flight.",
+          "sources": [
+            "https://ring.com/products/drone-cam"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "AI Pilot",
+          "details": "Camera/sensor input and cloud processing support mapping, patrol planning and obstacle avoidance.",
+          "sources": [
+            "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Service and update requirements",
+          "details": "Compatible subscription for scheduled patrols and stored video. Support page promises security updates for at least four years after last new sale.",
+          "sources": [
+            "https://ring.com/products/drone-cam",
+            "https://ring.com/support/products/cameras/ring-drone-cam?page=1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ring-rover-cam-2026",
+      "manufacturer": "Ring",
+      "models": [
+        "Rover Cam",
+        "Ring Rover Cam"
+      ],
+      "configuration": "2026 Rover Cam, indoor single-floor configuration. CPU, RAM, battery capacity, named sensor chips and radio chip part numbers undisclosed. Historical Always Home Cam components are not transferred.",
+      "reviewed_on": "2026-11-11",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Dual-band Wi-Fi",
+          "details": "2.4/5 GHz Wi-Fi; recommended upload speed 15 Mbps. WPA2 required; WPA3 where available.",
+          "sources": [
+            "https://ring.com/products/rover-cam",
+            "https://ring.com/support/products/cameras/ring-rover-cam?page=1"
+          ]
+        },
+        {
+          "section": "sensors",
+          "component": "Camera and night vision",
+          "details": "Up to 4K video, 152° diagonal view, infrared night vision and person detection; mobile periscope camera.",
+          "sources": [
+            "https://ring.com/products/rover-cam"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Battery and charger",
+          "details": "Rechargeable lithium-ion battery; approximately 45-minute charging time. Support page rates charger 18 V, 9 A.",
+          "sources": [
+            "https://ring.com/products/rover-cam",
+            "https://ring.com/support/products/cameras/ring-rover-cam?page=1"
+          ]
+        },
+        {
+          "section": "power",
+          "component": "Size and mobility",
+          "details": "424 × 250 × 440 mm; 9.35 kg. Dry indoor single-floor use, 0–35 °C; advertised mapping coverage up to 5,000 square feet.",
+          "sources": [
+            "https://ring.com/products/rover-cam"
+          ]
+        },
+        {
+          "section": "interfaces",
+          "component": "Operator controls",
+          "details": "Ring app with two-way talk, remotely activated siren and LED light tower. Privacy mode retracts the camera mast.",
+          "sources": [
+            "https://ring.com/products/rover-cam"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "AI Pilot",
+          "details": "Autonomous mapping and patrol planning; Ring events can trigger investigation.",
+          "sources": [
+            "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot"
+          ]
+        },
+        {
+          "section": "software",
+          "component": "Recording and subscription",
+          "details": "Records during motion and on person detection while docked; scheduled patrols and stored cloud video require a compatible subscription.",
+          "sources": [
+            "https://ring.com/products/rover-cam"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ring-always-home-cam-bhazu001-2021",
+      "manufacturer": "Ring",
+      "models": [
+        "Always Home Cam",
+        "Ring Always Home Cam",
+        "BHAZU001"
+      ],
+      "configuration": "Historical BHAZU001 FCC grant reproduction. No transfer of its bands, power limits or components to Drone Cam (2026), Rover Cam or other Ring devices.",
+      "reviewed_on": "2026-11-11",
+      "facts": [
+        {
+          "section": "radios",
+          "component": "Bluetooth BR and LE",
+          "details": "BHAZU001: 2402–2480 MHz; grant-listed conducted maxima 0.0195 W (BR) and 0.0073 W (LE).",
+          "sources": [
+            "https://fccid.io/2AEUPBHAZU001"
+          ]
+        },
+        {
+          "section": "radios",
+          "component": "WLAN",
+          "details": "BHAZU001: 2412–2462, 5180–5240, 5260–5320, 5500–5720 and 5745–5825 MHz channel ranges. Detailed per-band limits are in the RF catalog.",
+          "sources": [
+            "https://fccid.io/2AEUPBHAZU001"
+          ]
+        },
+        {
+          "section": "identification",
+          "component": "FCC equipment identity",
+          "details": "2AEUPBHAZU001; grant 2021-09-28. Application date 2021-09-23 is not the grant date.",
+          "sources": [
+            "https://fccid.io/2AEUPBHAZU001"
           ]
         }
       ]

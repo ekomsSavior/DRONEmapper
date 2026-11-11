@@ -4,7 +4,7 @@ Turn a Windows, macOS or Linux computer into a scanner node with a local radar, 
 
 ## Start
 
-[Download Desktop 0.7.2 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
+[Download Desktop 0.7.3 for Windows, macOS or Linux](https://dronemapper.churchofmalware.org/desktop).
 
 **Windows:** install [Python 3.10+](https://www.python.org/downloads/windows/), extract the source, then double-click `Start-DRONEmapper.cmd` in this folder.
 
@@ -64,3 +64,13 @@ Axon Air / Fusus model references: Skydio X10, X2/X2E and R10, with official lin
 General Atomics: shared [aircraft references](../docs/aircraft-references.md), with official model links and reviewed specifications. References do not add proprietary radio decoders.
 
 [Anduril & Warhound device library](https://dronemapper.churchofmalware.org/anduril): 32 reviewed references and exact IEEE manufacturer hints. Hints stay local; they do not establish a drone model or location.
+
+## Ring reference update — 2026-11-11
+
+Android **0.9.2** and Desktop **0.7.3** bundle Ring Drone Cam, Rover Cam and
+historical Always Home Cam references, plus 13 verified Ring manufacturer MAC
+allocations. Observed matches stay local with the model unknown; fixed Ring
+cameras share these allocations. The historical BHAZU001 radio ranges are
+restricted to that equipment. This update adds no Ring model decoder or public
+Ring telemetry connector. See [Device Library](https://dronemapper.churchofmalware.org/devices?vendor=Ring)
+and the [review evidence](https://dronemapper.churchofmalware.org/downloads/ring-research.json).

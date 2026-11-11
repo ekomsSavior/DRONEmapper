@@ -1,6 +1,6 @@
 import {libraryModels} from './device-library-model.mjs?v=20261101-robots';
 import {deviceReferences} from './security-device-references.mjs';
-import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261102-research';
+import {cloudSurfaces} from './cloud-surface-data.mjs?v=20261111-ring';
 import {companyWebsite,modelWebsite} from './company-links.mjs';
 export async function loadMapInventory(){
  let r=await fetch('/api/device-library');if(!r.ok)r=await fetch('/device-inventory.json');

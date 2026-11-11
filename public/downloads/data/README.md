@@ -1,6 +1,6 @@
 # DRONEmapper research data
 
-One combined JSON and three focused CSVs. These are reproducible exports of the
+One combined JSON, three full CSVs and a drone-only OUI subset. These are reproducible exports of the
 catalogs used by DRONEmapper, with reviewed additions from contributed research.
 They cover drones, aircraft, autonomous vehicles, robot dogs, other ground robots,
 and related equipment. They are not a claim to contain every product worldwide.
@@ -9,7 +9,7 @@ Preview and download from [Device Library](https://dronemapper.churchofmalware.o
 Source and history: [GitHub](https://github.com/ekomsSavior/DRONEmapper/tree/main/public/downloads/data)
 or [Gitea](https://git.churchofmalware.org/ek0mssavi0r/DRONEmapper/src/branch/main/public/downloads/data).
 `manifest.json` gives the release, exact record counts, column names, byte sizes,
-input hashes and SHA-256 hashes. `SHA256SUMS.txt` verifies all four data files and
+input hashes and SHA-256 hashes. `SHA256SUMS.txt` verifies all five data files and
 the manifest. No account or token is needed to download them.
 
 ## Files and scope
@@ -213,3 +213,21 @@ Retain source links, review dates, evidence scope and this attribution when shar
 The RF table now has 195 entries, including 47 model-specific frequency ranges from reviewed manuals. `system_profile_ids` is a semicolon-separated list of exact hardware profile IDs; it is empty on protocol-wide rows. `channel-center-range` denotes channel centers and spacing, not occupied band edges. Region, accessory and hardware revision restrictions remain in the notes and linked profile.
 
 The global JSON now includes `system-radio-reference` and `model-frequency-reference` records under each matching device’s `rf_information`, with evidence and configuration boundaries. The OUI and RID lists remain restricted to verified allocations; hardware research does not create new MAC assignments or serial ranges.
+
+### Ring research update — 2026-11-11
+
+The catalogs include the announced Ring Drone Cam and Rover Cam and the separate
+historical Always Home Cam (BHAZU001). The scoped OUI lists now contain 195 full
+allocations and 72 drone-related allocations. The 13 Ring LLC entries remain
+only in the full list: they cover cameras and other Ring products, without a
+verified drone-model binding. The RF table has
+202 rows, including seven historical BHAZU001 grant ranges. Those ranges are not
+assigned to the new Drone Cam or Rover Cam. No new Remote ID or model detection
+rules are established by this update.
+
+[Review scope, sources and remaining evidence](../ring-research.json).
+
+Both new Ring models have manufacturer-confirmed 2.4/5 GHz Wi-Fi, included in
+their global JSON and offline radio references. Exact channel spans and chipsets
+are unconfirmed. The cloud catalog includes AI Pilot and the separately scoped
+Ring TAKE platform architecture, with links to contributed hostname research.

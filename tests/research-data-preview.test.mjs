@@ -20,8 +20,8 @@ test('all published CSV rows and JSON collections can be browsed without clippin
  const data=JSON.parse(readFileSync(new URL('../public/downloads/data/devices-global.json',import.meta.url)));
  const collections=jsonCollections(data);
  for(const name of ['devices','radio_allocations','remote_id_rules','rf_channels','vendor_flows'])assert.equal(collections.find(c=>c.id===name).rows.length,data[name].length);
- assert.equal(collections.find(c=>c.id==='cloud_services.services').rows.length,457);
- assert.equal(collections.find(c=>c.id==='robot_signatures.rules').rows.length,9);
+ assert.equal(collections.find(c=>c.id==='cloud_services.services').rows.length,data.cloud_services.services.length);
+ assert.equal(collections.find(c=>c.id==='robot_signatures.rules').rows.length,data.robot_signatures.rules.length);
  const found=pageRecords(collections.find(c=>c.id==='devices').rows,'Skydio',0,10);assert.ok(found.total>0);assert.ok(found.rows.every(r=>JSON.stringify(r).toLowerCase().includes('skydio')));
  assert.equal(pageRecords(data.devices,'never-a-matching-device-12345678',99,10).page,0);
 });

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "2026-11-04",
+  "release": "2026-11-11",
   "encoding": "UTF-8",
   "line_endings": "CRLF",
   "delimiter": ",",
@@ -9,9 +9,9 @@
     {
       "file": "oui-global.csv",
       "url": "/downloads/data/oui-global.csv",
-      "rows": 182,
-      "bytes": 6443,
-      "sha256": "34703dc1a13bc2598b31b1d132ef5fe3e17c42688c7df37bb482d032954b53dc",
+      "rows": 195,
+      "bytes": 6742,
+      "sha256": "7d87bcaa28469d60f944526221e52a93d21b8af0b4b588468081e5a4b0683ec9",
       "columns": [
         "device",
         "oui"
@@ -42,9 +42,9 @@
     {
       "file": "rf-channels.csv",
       "url": "/downloads/data/rf-channels.csv",
-      "rows": 195,
-      "bytes": 95786,
-      "sha256": "b5b1129f582d46fbe74d7ff833765aa39e451c12611a982f0ff55c1994a2c32d",
+      "rows": 202,
+      "bytes": 99807,
+      "sha256": "69e04b2bfaf6f21cddee01a1f1eee6204a663f580622ca2d77b4596f559b3d44",
       "columns": [
         "id",
         "band",
@@ -81,24 +81,24 @@
     {
       "file": "devices-global.json",
       "url": "/downloads/data/devices-global.json",
-      "rows": 1324,
-      "bytes": 19037451,
-      "sha256": "142341bb2b868090661dfce7958756492c00b6d7dceead7dbc7d49560f19cbbb",
+      "rows": 1328,
+      "bytes": 19147290,
+      "sha256": "dc88c70bcf2b990b5a05cd27ffe3ed6d355ec1f3f18329d8f005146fb07cba82",
       "collections": {
-        "devices": 1324,
-        "radio_allocations": 182,
+        "devices": 1328,
+        "radio_allocations": 195,
         "remote_id_rules": 3738,
-        "rf_channels": 195,
-        "vendor_flows": 442,
+        "rf_channels": 202,
+        "vendor_flows": 443,
         "equipment_product_relationships": 7,
-        "cloud_services": 457,
+        "cloud_services": 459,
         "robot_signatures": 9,
-        "fcc_equipment": 20,
-        "devices_with_mac_allocations": 321,
-        "devices_with_rf_information": 741,
+        "fcc_equipment": 21,
+        "devices_with_mac_allocations": 324,
+        "devices_with_rf_information": 745,
         "devices_with_scanner_signatures": 12,
-        "system_profiles": 926,
-        "devices_with_system_profiles": 1237,
+        "system_profiles": 929,
+        "devices_with_system_profiles": 1240,
         "devices_with_documented_compute": 600
       }
     }
@@ -106,7 +106,7 @@
   "inputs": [
     {
       "path": "integration/device-oui.json",
-      "sha256": "b529c9b2403827a1be1af0e059aa433a9ac7640f3c3cd05b4a63a41a245cf4f9"
+      "sha256": "76102025413045c5719c1a6116a13b5cb82af293a7dba2a9f468f7065fd15ac1"
     },
     {
       "path": "worker/rid-catalog.mjs",
@@ -114,15 +114,15 @@
     },
     {
       "path": "integration/security-device-references.json",
-      "sha256": "2e85da6995b299f86fa2abc04077ac73d7575fc10cfdbbd9f3ddd3320b46500e"
+      "sha256": "cb8b4572a6f3659b142b2665ade15a0611e446894677b96dd285b5780840e2c2"
     },
     {
       "path": "integration/rf-channels.json",
-      "sha256": "6580b2f3110a8684d8bf2f7aeb8283bc912f7d4ca79d3c03f030da2ceddfd083"
+      "sha256": "08b54dd89605e9848ecda0c8f7b85719a0b810a690e7ec192a12ee1130e2cb6b"
     },
     {
       "path": "integration/fcc-references.json",
-      "sha256": "bdd3f961bc54e49bda5cab906aee379777bf1e730a39cd199ac0644f6b70a63a"
+      "sha256": "6ad370acf1cdaf6d3594ccef3651532537b7bbff0f6c4f8d27d4eac72ee3d8c3"
     },
     {
       "path": "integration/robot-platforms.json",
@@ -142,7 +142,7 @@
     },
     {
       "path": "integration/cloud-surfaces.json",
-      "sha256": "6474bffa216b114a315d7456510bd198864545c9c41b703cf66fb601be726ebe"
+      "sha256": "9adf9dbe670324bf9536fd0656e980d0a32dbc41536aa52b184a33f1785961ab"
     },
     {
       "path": "public/device-inventory.json",
@@ -166,11 +166,11 @@
     },
     {
       "path": "integration/device-systems.json",
-      "sha256": "cf45b9bc9dee51526c214cd39a2be01e253fc5fc15fb1544aa3ff91105087ea5"
+      "sha256": "2d8f750ec9efe7c6cce8d414c1813d6e46f91c3abd397ea1546d16ec1dd3fecc"
     },
     {
       "path": "public/device-system-model.mjs",
-      "sha256": "db2189b0bfddab51760cd3fb32a4dac90302683a4ca7a37a9f9d3f6fe58666d2"
+      "sha256": "38c405cb0ebead0f8ebaaf4c5fb09da13b185d80df87b34f2fa72c12a08beb10"
     },
     {
       "path": "public/device-profile-match.mjs",
@@ -182,7 +182,7 @@
     },
     {
       "path": "public/device-system-data.mjs",
-      "sha256": "ad9b85dfbd82c308fc4ce31ec953f8c5c09e072230e3f01b2fef1a0bbf590ed4"
+      "sha256": "6134a85aee6a60953b7587a2cc7cb0f4408d5da9285a11ef865c7b5fac04beb4"
     },
     {
       "path": "scripts/enrich_device_systems.mjs",
@@ -194,7 +194,7 @@
     },
     {
       "path": "integration/drone-oui-subset.json",
-      "sha256": "a1727679210c3d1124854a89b4cec4edebc6fe92566d96601d4f230bafcb8e50"
+      "sha256": "0005f46a58aabe1c55259e618d3c89c72decd6445b0b63702d511b68b1f99cdc"
     }
   ],
   "upstream_rights": "See README.md and upstream sources; no blanket relicensing of third-party material."

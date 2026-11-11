@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-02",
+  "reviewed_on": "2026-11-11",
   "scope": "Equipment reference index; imported claims are not scanner signatures. Only fields with primary evidence are marked verified.",
   "inputs": [
     {
@@ -10,8 +10,8 @@
     },
     {
       "path": "data/fcc/us-drones.json",
-      "sha256": "4e38f5dbfe627b5d02b76f20737633cfeba97dd5f8c89783586d23452cc73dbf",
-      "provenance": "User-contributed research snapshot; no automatic assertion of primary-source verification."
+      "sha256": "a43b43d95b466183ce30aa4d550f3adecad200af97dd7da29632ed08a02f020b",
+      "provenance": "Contributed 2026-11-11 snapshot; Ring BHAZU001 reviewed against the published FCC grant reproduction. Other contributed rows retain their previous review status."
     },
     {
       "path": "data/fcc/skydio.json",
@@ -80,6 +80,16 @@
       ],
       "fcc_grantee": "2A98R",
       "input": "data/fcc/nuro.json"
+    },
+    {
+      "id": "ring",
+      "name": "Ring",
+      "aliases": [
+        "Ring LLC",
+        "Ring Robotics"
+      ],
+      "fcc_grantee": "2AEUP",
+      "input": "data/fcc/us-drones.json"
     }
   ],
   "devices": [
@@ -695,6 +705,50 @@
       "evidence_status": "manufacturer lists FCC identifier; frequency grant not reviewed",
       "frequencies_mhz": [],
       "scanner_signature": false
+    },
+    {
+      "id": "fcc-2aeupbhazu001",
+      "fcc_id": "2AEUPBHAZU001",
+      "product": "Always Home Cam",
+      "maker": "Ring",
+      "vendor_id": "ring",
+      "kind": "regulatory-equipment",
+      "input": "data/fcc/us-drones.json",
+      "evidence_status": "published FCC grant reproduction reviewed; historical BHAZU001 only",
+      "source": "https://fccid.io/2AEUPBHAZU001",
+      "lookup_url": "https://fccid.io/2AEUPBHAZU001",
+      "frequencies_mhz": [
+        [
+          2402,
+          2480
+        ],
+        [
+          2412,
+          2462
+        ],
+        [
+          5180,
+          5240
+        ],
+        [
+          5260,
+          5320
+        ],
+        [
+          5500,
+          5720
+        ],
+        [
+          5745,
+          5825
+        ]
+      ],
+      "latest_action": "2021-09-28",
+      "original_grant": "2021-09-28",
+      "application_date": "2021-09-23",
+      "application_purpose": "Original Equipment",
+      "scanner_signature": false,
+      "scope": "Not the 2026 Drone Cam; no successor component assignment."
     }
   ],
   "product_relationships": [
